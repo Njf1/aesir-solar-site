@@ -178,3 +178,7 @@
 
 /* the simulator headline is long — don't let it swallow the first screen */
 .sim-head h1.h2{font-size:clamp(26px,3.4vw,42px);max-width:24ch}
+
+@media (max-width:900px){
+  .pick button,.modes button{min-height:44px}
+}

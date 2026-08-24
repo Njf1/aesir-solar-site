@@ -767,3 +767,41 @@ body.inner{padding-top:0}
   .rr-cta{flex-direction:column;align-items:stretch}
   .rr-cta .btn{width:100%}
 }
+
+/* ============================================================
+   CONSISTENCY PASS
+   Measured across all 9 pages; these fix real collisions rather
+   than adding new opinions.
+   ============================================================ */
+
+/* 1. Inner-page headings were rendering at 84px, not 53px.
+      `h1.display` (0,1,1) was beating `.h2` (0,1,0), so every legal,
+      FAQ and apply page had a hero-sized heading. `.display.h2` is
+      (0,2,0) and wins cleanly without !important. */
+.display.h2{font-size:clamp(28px,4.3vw,53px)}
+
+/* 2. `.btn-ghost` came after `.btn-sm` and clobbered its padding, which
+      made the header 10px taller on the one page using a ghost CTA. */
+.btn-sm.btn-ghost{padding:11px 18px}
+
+/* 3. One card radius, not three (14 / 15 / 16 were all in use). */
+:root{--r-card:15px}
+.controls-card,.price-card,.panel-box,.cash,.calib,.contact-card,
+.flow,.stakes,.steps,.res,.rr-grid,.faq,.out{border-radius:var(--r-card)}
+
+/* 4. Eyebrow spacing is a token, so section openings line up. */
+.eyebrow{margin-bottom:18px}
+.calib .eyebrow,.realroof .eyebrow{margin-bottom:18px}
+
+/* 5. A bordered button was 2px taller than a solid one, so the header
+      height shifted between pages. Give every button the same box. */
+.btn{border:1px solid transparent}
+.btn-ghost{border-color:var(--line-2)}
+
+/* 6. Page titles and section headings now share one margin. */
+.page h1.h2{margin-bottom:20px}
+
+/* 7. Segmented and pick controls were 36–39px tall; on touch they need 44. */
+@media (max-width:900px){
+  .seg button,.pick button,.modes button{min-height:44px}
+}
