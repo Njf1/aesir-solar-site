@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar simulator — Aesir Solar</title>
+<meta name="description" content="Size a solar array on your roof and see what it generates, saves and costs — calibrated against a real 126-module array in Lincolnshire.">
+<link rel="canonical" href="https://aesirsolar.co.uk/simulator">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#07090C">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aesir Solar">
+<meta property="og:title" content="Every solar calculator is a guess. This one is a measurement.">
+<meta property="og:description" content="Size a system on your roof, calibrated against a real array we monitor module by module.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sim.css">
+</head>
+<body class="inner">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav stuck solid">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Aesir Solar home">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
+        <path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/>
+      </svg>
+      <span class="brand-txt">AESIR<em>SOLAR</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html#gate">Why it matters</a>
+      <a href="index.html#check">Check eligibility</a>
+      <a href="simulator.html">Simulator</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="btn btn-sm nav-cta" href="apply.html"><span class="cta-long">Start your application</span><span class="cta-short">Apply</span></a>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap">
+
+    <div class="sim-head">
+      <p class="eyebrow">The simulator</p>
+      <h1 class="display h2">Every solar calculator is a guess. This one is a measurement.</h1>
+      <p class="lede">
+        Most tools multiply your roof by an average. We lay real modules onto your roof with real
+        setbacks and real row spacing, then check the answer against an array we actually monitor —
+        module by module, every day, in Lincolnshire.
+      </p>
+    </div>
+
+    <div class="modes" role="group" aria-label="How to size the system">
+      <button id="modeRoof" aria-pressed="true">I know my roof size</button>
+      <button id="modeBill" aria-pressed="false">I know my electricity bill</button>
+    </div>
+
+    <div class="sim-grid">
+      <div class="controls-card">
+        <div id="roofCtls">
+          <div class="ctl">
+            <label for="w">Roof width</label>
+            <div class="num"><span id="wOut">20.0</span><small>m</small></div>
+            <input id="w" type="range" min="5" max="120" step="0.5" value="20">
+          </div>
+          <div class="ctl">
+            <label for="l">Roof depth</label>
+            <div class="num"><span id="lOut">40.0</span><small>m</small></div>
+            <input id="l" type="range" min="5" max="120" step="0.5" value="40">
+          </div>
+          <div class="ctl">
+            <label>How clear is the roof?</label>
+            <div class="pick" role="group">
+              <button id="obsClean" aria-pressed="false">Clear</button>
+              <button id="obsTypical" aria-pressed="true">Typical</button>
+              <button id="obsClutter" aria-pressed="false">Cluttered</button>
+            </div>
+            <p class="hint">Rooflights, plant and walkways take modules off the roof.</p>
+          </div>
+        </div>
+
+        <div id="billCtls" hidden>
+          <div class="ctl">
+            <label for="spend">Annual electricity spend</label>
+            <div class="money-input"><span>£</span><input id="spend" type="number" min="0" step="500" value="40000"></div>
+            <p class="hint">Excluding VAT — you reclaim it.</p>
+          </div>
+          <div class="ctl">
+            <label for="rate">Your unit rate</label>
+            <div class="num" id="rateOut">29.0<small>p/kWh</small></div>
+            <input id="rate" type="range" min="18" max="40" step="0.5" value="29">
+            <p class="hint">DESNZ Q1 2026: micro 35p, small 28.8p, medium 25p.</p>
+          </div>
+        </div>
+
+        <div class="ctl">
+          <label>Array layout</label>
+          <div class="pick" role="group">
+            <button id="layEW" aria-pressed="true">East&ndash;west</button>
+            <button id="layS" aria-pressed="false">South rows</button>
+            <button id="layPitch" aria-pressed="false">Pitched</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <label>Module</label>
+          <div class="pick" role="group">
+            <button id="modL" aria-pressed="true">580 W</button>
+            <button id="modM" aria-pressed="false">450 W</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="stage" id="stage">
+          <div class="sky"></div>
+          <div class="sun3" id="sun3"></div>
+          <div class="ground"></div>
+          <div class="roof" id="roof"><div class="slab"></div></div>
+          <div class="hud" id="hud"></div>
+          <div class="timebar">
+            <span id="clock">13:00</span>
+            <input id="time" type="range" min="5" max="21" step="0.25" value="13" aria-label="Time of day">
+          </div>
+        </div>
+
+        <div class="res">
+          <div><div class="k">Modules</div><div class="v" id="rMods">&mdash;</div></div>
+          <div><div class="k">System size</div><div class="v gold" id="rKwp">&mdash;</div></div>
+          <div><div class="k">Generation</div><div class="v" id="rGen">&mdash;</div></div>
+          <div><div class="k">Current per phase</div><div class="v live" id="rAmps">&mdash;</div></div>
+        </div>
+
+        <div class="gate-line" id="gateLine"></div>
+      </div>
+    </div>
+
+    <!-- ================= THE MONEY ================= -->
+    <section class="money">
+      <p class="eyebrow">What it's worth</p>
+      <h2 class="display h2">Two numbers decide this. Not the ones you'd expect.</h2>
+      <p class="lede">
+        Panel efficiency and degradation barely move the answer. <strong>How much you use on site</strong>
+        and <strong>what you pay for the install</strong> decide almost everything. So those are the two
+        you get to drag.
+      </p>
+
+      <div class="money-grid">
+        <div class="controls-card">
+          <div class="ctl">
+            <label for="sc">Used on site, not exported</label>
+            <div class="num"><span id="scOut">60</span><small>%</small></div>
+            <input id="sc" type="range" min="10" max="95" step="1" value="60">
+            <p class="hint" id="scNote"></p>
+          </div>
+          <div class="ctl">
+            <label for="capex">Installed cost</label>
+            <div class="num" id="capexOut">&mdash;</div>
+            <input id="capex" type="range" min="0" max="100" step="1" value="50">
+            <p class="hint">Sourced band for this system size, ex VAT.</p>
+          </div>
+        </div>
+
+        <div class="cash">
+          <div class="cash-head">
+            <div><div class="k">Installed cost</div><div class="v" id="mCapex">&mdash;</div></div>
+            <div><div class="k">Net saving</div><div class="v" id="mSaving">&mdash;</div></div>
+            <div><div class="k">Pays for itself in</div><div class="v range" id="mPayback">&mdash;</div></div>
+            <div><div class="k">Carbon avoided</div><div class="v" id="mCo2">&mdash;</div></div>
+          </div>
+          <div class="curve" id="curve"></div>
+          <div class="curve-x"><span>year 1</span><span>year 25</span></div>
+          <p class="cfoot" id="breakdown"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALIBRATION ================= -->
+    <section class="calib">
+      <div class="calib-head">
+        <div>
+          <p class="eyebrow" style="margin-bottom:8px">Checked against a real roof</p>
+          <h3>Premier Composites, Lincolnshire</h3>
+          <p class="csub">126 modules &middot; 8 strings &middot; Solis S5-GC30K + Solis Hybrid &middot; Tigo TS4 module-level monitoring</p>
+        </div>
+        <div class="cstats">
+          <div><span class="k">Generated at the panels</span><b>206.41<small>kWh</small></b></div>
+          <div><span class="k">Attributed to optimisation</span><b class="live">4.10<small>kWh</small></b></div>
+          <div><span class="k">Best / worst module</span><b>1723<small>/1585 Wh</small></b></div>
+        </div>
+      </div>
+      <div class="daychart">
+          <div class="dbar" title="06:00 — 0.5 kWh"><i style="--h:1.7%"></i><span>6</span></div>
+          <div class="dbar" title="07:00 — 4.0 kWh"><i style="--h:13.8%"></i><span>7</span></div>
+          <div class="dbar" title="08:00 — 7.2 kWh"><i style="--h:24.8%"></i><span>8</span></div>
+          <div class="dbar" title="09:00 — 7.7 kWh"><i style="--h:26.6%"></i><span>9</span></div>
+          <div class="dbar" title="10:00 — 16.3 kWh"><i style="--h:56.2%"></i><span>10</span></div>
+          <div class="dbar" title="11:00 — 25.5 kWh"><i style="--h:87.9%"></i><span>11</span></div>
+          <div class="dbar" title="12:00 — 24.2 kWh"><i style="--h:83.4%"></i><span>12</span></div>
+          <div class="dbar" title="13:00 — 29.0 kWh"><i style="--h:100.0%"></i><span>13</span></div>
+          <div class="dbar" title="14:00 — 25.9 kWh"><i style="--h:89.3%"></i><span>14</span></div>
+          <div class="dbar" title="15:00 — 25.4 kWh"><i style="--h:87.6%"></i><span>15</span></div>
+          <div class="dbar" title="16:00 — 20.7 kWh"><i style="--h:71.4%"></i><span>16</span></div>
+          <div class="dbar" title="17:00 — 15.4 kWh"><i style="--h:53.1%"></i><span>17</span></div>
+          <div class="dbar" title="18:00 — 2.9 kWh"><i style="--h:10.0%"></i><span>18</span></div>
+          <div class="dbar" title="19:00 — 0.4 kWh"><i style="--h:1.4%"></i><span>19</span></div>
+          <div class="dbar" title="20:00 — 0.05 kWh"><i style="--h:0.2%"></i><span>20</span></div>
+      </div>
+      <p class="cfoot">
+        Measured 24 August 2026 &mdash; 14 hours of daylight, 7% cloud, 15&deg;C. Peak hour reached
+        <b>29.0 kWh</b>, which is the 30&nbsp;kW inverter's ceiling: this array is <b>clipping at midday</b>.
+        That is exactly the kind of thing a brochure never shows you, and exactly what we design around.
+      </p>
+      <p class="cfoot" style="padding-top:0;color:var(--muted-2);font-size:12px">
+        Figures are DC measured at the modules by Tigo Energy's monitoring platform, and typically read
+        2&ndash;5% above the inverter's AC output. The 4.10&nbsp;kWh attributed to optimisation is Tigo's
+        own modelled estimate of energy recovered from shading and mismatch, not a directly measured
+        quantity. Monitoring data courtesy of Tigo Energy.
+      </p>
+    </section>
+
+    <!-- ================= SOURCES ================= -->
+    <section class="sources">
+      <h3>Where these numbers come from</h3>
+      <ul>
+        <li><b>Yield</b> &mdash; PVGIS 5.3 (SARAH3, 2005&ndash;2023), Lincoln 53.2307&nbsp;&minus;0.5406, 14% system loss. South pitched 35&deg; 1,015 kWh/kWp; flat south 10&deg; 908; flat east&ndash;west 10&deg; 824. A given year varies about &plusmn;7%.</li>
+        <li><b>Module geometry</b> &mdash; 2278 &times; 1134&nbsp;mm, 580&nbsp;W, 22.45% (Jinko Tiger Neo datasheet, Nov 2025). Flat roofs assume landscape ballasted modules at 10&deg;.</li>
+        <li><b>Electricity price</b> &mdash; DESNZ Quarterly Energy Prices, June 2026 (Q1 2026 data), including CCL and excluding VAT.</li>
+        <li><b>Export</b> &mdash; 8p/kWh planning assumption. Ofgem's SEG Year 5 report shows a realised blend of 12.9p, but tied tariffs pay roughly 3.3&times; untied ones, so 8p is deliberately cautious.</li>
+        <li><b>Installed cost</b> &mdash; DESNZ Solar PV cost data, May 2026 for 10&ndash;50&nbsp;kW; larger bands extrapolated. Great British Energy's published 2025 rooftop projects ran to a median &pound;1,766/kW, so treat the upper end of each band seriously.</li>
+        <li><b>Degradation</b> &mdash; 0.5%/yr, the median for crystalline silicon (Jordan et&nbsp;al., <em>Progress in Photovoltaics</em>, 2016). One inverter replacement is modelled at year 13.</li>
+        <li><b>Carbon</b> &mdash; 0.131&nbsp;kgCO&#8322;e/kWh, DESNZ conversion factors 2026, Scope&nbsp;2 location-based.</li>
+        <li><b>Tax</b> &mdash; the Annual Investment Allowance gives 100% relief on the first &pound;1m. Solar is special-rate expenditure, so full expensing does <em>not</em> apply. Figures shown are pre-tax; talk to your accountant.</li>
+        <li><b>No price escalation is assumed.</b> Savings are held at today's unit rate for 25 years, which is deliberately conservative.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="brand-txt">AESIR<em>SOLAR</em></span>
+      <p>G99 connection applications and solar installation for UK businesses.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Service</h4>
+      <a href="index.html#gate">Why it matters</a>
+      <a href="index.html#check">Check eligibility</a>
+      <a href="simulator.html">Simulator</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="contact.html">Contact us</a>
+      <a href="mailto:hello@aesirsolar.co.uk">hello@aesirsolar.co.uk</a>
+    </div>
+    <div class="foot-col">
+      <h4>Legal</h4>
+      <a href="terms.html">Terms of service</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="refunds.html">Refund policy</a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <p><span class="todo">Company no. &mdash; &middot; VAT no. &mdash;</span> &nbsp;&middot;&nbsp; Estimates only, and not a quotation. Actual output depends on shading, roof structure, orientation and your network operator's decision.</p>
+    <p class="cr">&copy; <span id="yr">2026</span> Aesir Solar.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script type="module" src="sim.js"></script>
+</body>
+</html>

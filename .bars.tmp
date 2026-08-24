@@ -1,0 +1,15 @@
+<div class="dbar" title="06:00 — 0.5 kWh"><i style="--h:1.7%"></i><span>6</span></div>
+          <div class="dbar" title="07:00 — 4.0 kWh"><i style="--h:13.8%"></i><span>7</span></div>
+          <div class="dbar" title="08:00 — 7.2 kWh"><i style="--h:24.8%"></i><span>8</span></div>
+          <div class="dbar" title="09:00 — 7.7 kWh"><i style="--h:26.6%"></i><span>9</span></div>
+          <div class="dbar" title="10:00 — 16.3 kWh"><i style="--h:56.2%"></i><span>10</span></div>
+          <div class="dbar" title="11:00 — 25.5 kWh"><i style="--h:87.9%"></i><span>11</span></div>
+          <div class="dbar" title="12:00 — 24.2 kWh"><i style="--h:83.4%"></i><span>12</span></div>
+          <div class="dbar" title="13:00 — 29.0 kWh"><i style="--h:100.0%"></i><span>13</span></div>
+          <div class="dbar" title="14:00 — 25.9 kWh"><i style="--h:89.3%"></i><span>14</span></div>
+          <div class="dbar" title="15:00 — 25.4 kWh"><i style="--h:87.6%"></i><span>15</span></div>
+          <div class="dbar" title="16:00 — 20.7 kWh"><i style="--h:71.4%"></i><span>16</span></div>
+          <div class="dbar" title="17:00 — 15.4 kWh"><i style="--h:53.1%"></i><span>17</span></div>
+          <div class="dbar" title="18:00 — 2.9 kWh"><i style="--h:10.0%"></i><span>18</span></div>
+          <div class="dbar" title="19:00 — 0.4 kWh"><i style="--h:1.4%"></i><span>19</span></div>
+          <div class="dbar" title="20:00 — 0.05 kWh"><i style="--h:0.2%"></i><span>20</span></div>

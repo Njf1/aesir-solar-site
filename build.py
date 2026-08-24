@@ -9,6 +9,7 @@ NAV_LINKS = [
     ("index.html#gate", "Why it matters"),
     ("index.html#check", "Check eligibility"),
     ("index.html#work", "What we do"),
+    ("simulator.html", "Simulator"),
     ("faq.html", "FAQ"),
 ]
 
@@ -76,6 +77,7 @@ def shell(slug, title, desc, body, cta=("apply.html", "Start your application"))
       <a href="index.html#gate">Why it matters</a>
       <a href="index.html#check">Check eligibility</a>
       <a href="index.html#work">What we do</a>
+      <a href="simulator.html">Simulator</a>
       <a href="faq.html">FAQ</a>
     </div>
     <div class="foot-col">
