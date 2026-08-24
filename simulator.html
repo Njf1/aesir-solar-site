@@ -181,47 +181,28 @@
       </div>
     </section>
 
-    <!-- ================= CALIBRATION ================= -->
-    <section class="calib">
+    <!-- ================= CALIBRATION (live) ================= -->
+    <section class="calib" id="calib">
       <div class="calib-head">
         <div>
-          <p class="eyebrow" style="margin-bottom:8px">Checked against a real roof</p>
+          <p class="eyebrow" style="margin-bottom:8px">Checked against a real roof &mdash; live</p>
           <h3>Premier Composites, Lincolnshire</h3>
-          <p class="csub">126 modules &middot; 8 strings &middot; Solis S5-GC30K + Solis Hybrid &middot; Tigo TS4 module-level monitoring</p>
+          <p class="csub" id="cSub">126 modules &middot; 8 strings &middot; Solis S5-GC30K + Solis Hybrid &middot; Tigo TS4 module-level monitoring</p>
         </div>
         <div class="cstats">
-          <div><span class="k">Generated at the panels</span><b>206.41<small>kWh</small></b></div>
-          <div><span class="k">Attributed to optimisation</span><b class="live">4.10<small>kWh</small></b></div>
-          <div><span class="k">Best / worst module</span><b>1723<small>/1585 Wh</small></b></div>
+          <div><span class="k">Generated since 2024</span><b id="cLife">&mdash;</b></div>
+          <div><span class="k">Today, at the panels</span><b id="cToday">&mdash;</b></div>
+          <div><span class="k">Recovered by optimisers</span><b class="live" id="cRec">&mdash;</b></div>
         </div>
       </div>
-      <div class="daychart">
-          <div class="dbar" title="06:00 — 0.5 kWh"><i style="--h:1.7%"></i><span>6</span></div>
-          <div class="dbar" title="07:00 — 4.0 kWh"><i style="--h:13.8%"></i><span>7</span></div>
-          <div class="dbar" title="08:00 — 7.2 kWh"><i style="--h:24.8%"></i><span>8</span></div>
-          <div class="dbar" title="09:00 — 7.7 kWh"><i style="--h:26.6%"></i><span>9</span></div>
-          <div class="dbar" title="10:00 — 16.3 kWh"><i style="--h:56.2%"></i><span>10</span></div>
-          <div class="dbar" title="11:00 — 25.5 kWh"><i style="--h:87.9%"></i><span>11</span></div>
-          <div class="dbar" title="12:00 — 24.2 kWh"><i style="--h:83.4%"></i><span>12</span></div>
-          <div class="dbar" title="13:00 — 29.0 kWh"><i style="--h:100.0%"></i><span>13</span></div>
-          <div class="dbar" title="14:00 — 25.9 kWh"><i style="--h:89.3%"></i><span>14</span></div>
-          <div class="dbar" title="15:00 — 25.4 kWh"><i style="--h:87.6%"></i><span>15</span></div>
-          <div class="dbar" title="16:00 — 20.7 kWh"><i style="--h:71.4%"></i><span>16</span></div>
-          <div class="dbar" title="17:00 — 15.4 kWh"><i style="--h:53.1%"></i><span>17</span></div>
-          <div class="dbar" title="18:00 — 2.9 kWh"><i style="--h:10.0%"></i><span>18</span></div>
-          <div class="dbar" title="19:00 — 0.4 kWh"><i style="--h:1.4%"></i><span>19</span></div>
-          <div class="dbar" title="20:00 — 0.05 kWh"><i style="--h:0.2%"></i><span>20</span></div>
-      </div>
-      <p class="cfoot">
-        Measured 24 August 2026 &mdash; 14 hours of daylight, 7% cloud, 15&deg;C. Peak hour reached
-        <b>29.0 kWh</b>, which is the 30&nbsp;kW inverter's ceiling: this array is <b>clipping at midday</b>.
-        That is exactly the kind of thing a brochure never shows you, and exactly what we design around.
-      </p>
+      <div class="daychart" id="cChart"></div>
+      <p class="cfoot" id="cFoot">Loading live production data&hellip;</p>
       <p class="cfoot" style="padding-top:0;color:var(--muted-2);font-size:12px">
         Figures are DC measured at the modules by Tigo Energy's monitoring platform, and typically read
-        2&ndash;5% above the inverter's AC output. The 4.10&nbsp;kWh attributed to optimisation is Tigo's
-        own modelled estimate of energy recovered from shading and mismatch, not a directly measured
-        quantity. Monitoring data courtesy of Tigo Energy.
+        2&ndash;5% above the inverter's AC output &mdash; so this is what the panels made, not what was
+        exported. The energy attributed to optimisation is Tigo's own modelled estimate of what was
+        recovered from shading and mismatch, not a directly measured quantity. Tigo batches data every
+        ten minutes or so, so readings run a little behind. Monitoring data courtesy of Tigo Energy.
       </p>
     </section>
 

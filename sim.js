@@ -322,3 +322,62 @@ group(['modeRoof', 'modeBill'], id => {
 });
 
 render();
+
+/* ---------------------------------------------------------------
+   LIVE — real production from the array we monitor
+   --------------------------------------------------------------- */
+(async function live() {
+  const chart = document.getElementById('cChart');
+  if (!chart) return;
+
+  const setFoot = (html, dim) => {
+    const f = document.getElementById('cFoot');
+    f.innerHTML = html;
+    if (dim) f.style.color = 'var(--muted-2)';
+  };
+
+  try {
+    const r = await fetch('/api/tigo');
+    if (!r.ok) throw new Error('feed unavailable');
+    const d = await r.json();
+
+    const kwh = n => n.toLocaleString('en-GB');
+    document.getElementById('cLife').innerHTML  = kwh(d.lifetime.kwh) + '<small>kWh</small>';
+    document.getElementById('cToday').innerHTML = d.today.kwh.toFixed(1) + '<small>kWh</small>';
+    document.getElementById('cRec').innerHTML   = kwh(d.lifetime.reclaimedKwh) + '<small>kWh</small>';
+
+    document.getElementById('cSub').innerHTML =
+      `${d.site.modules} modules &middot; ${d.site.acRatingKw} kW inverters &middot; ` +
+      `commissioned ${new Date(d.site.commissioned).toLocaleDateString('en-GB',{month:'long',year:'numeric'})} ` +
+      `&middot; ${d.site.postcodeArea}, ${d.site.county}`;
+
+    const hrs = d.today.hourly.filter(h => h.kwh > 0);
+    if (hrs.length) {
+      const mx = Math.max(...hrs.map(h => h.kwh));
+      chart.innerHTML = hrs.map(h =>
+        `<div class="dbar" title="${String(h.hour).padStart(2,'0')}:00 — ${h.kwh} kWh">` +
+        `<i style="--h:${(h.kwh / mx * 100).toFixed(1)}%"></i><span>${h.hour}</span></div>`).join('');
+    } else {
+      chart.innerHTML = '<p class="cfoot" style="padding:0">No generation recorded yet today.</p>';
+    }
+
+    const stamp = new Date(d.meta.fetchedAt)
+      .toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    const peakPct = d.today.peakHourKw && d.site.acRatingKw
+      ? Math.round(d.today.peakHourKw / d.site.acRatingKw * 100) : null;
+
+    setFoot(
+      `<b>${kwh(d.lifetime.kwh)} kWh</b> generated since March 2024 &mdash; about ` +
+      `<b>${kwh(d.lifetime.kwhPerYear)} kWh a year</b> from one roof in Lincolnshire. ` +
+      (peakPct ? `Today peaked at <b>${d.today.peakHourKw} kW</b>, ${peakPct}% of the ` +
+                 `${d.site.acRatingKw} kW inverter capacity. ` : '') +
+      `Read at ${stamp}.`);
+  } catch (e) {
+    // The page must still make sense if Tigo is down.
+    document.getElementById('cLife').innerHTML  = '100,661<small>kWh</small>';
+    document.getElementById('cToday').innerHTML = '206.4<small>kWh</small>';
+    document.getElementById('cRec').innerHTML   = '2,561<small>kWh</small>';
+    setFoot('Live feed unavailable just now &mdash; showing the last figures we recorded ' +
+            'on 24 August 2026.', true);
+  }
+})();
