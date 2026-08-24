@@ -9,8 +9,23 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- where the paid application lives (existing WooCommerce + Tyl rail) ---- */
-  var CHECKOUT_URL = 'https://aesirsolar.co.uk/cart/?add-to-cart=308';
+  /* ---- where the paid application lives (existing WooCommerce + Tyl rail) ----
+     WooCommerce increments quantity on every ?add-to-cart hit, so a customer who
+     goes back and resubmits would be billed twice. We only add once per 30-minute
+     window and otherwise send them to the existing cart.
+     The permanent fix is "Sold individually" on product 308 in WooCommerce. */
+  var CART_URL   = 'https://aesirsolar.co.uk/cart/';
+  var ADD_TO_CART = CART_URL + '?add-to-cart=308';
+  var ADD_TTL_MS = 30 * 60 * 1000;
+
+  function checkoutUrl() {
+    try {
+      var last = parseInt(localStorage.getItem('aesir.addedAt') || '0', 10);
+      if (last && (Date.now() - last) < ADD_TTL_MS) return CART_URL;
+      localStorage.setItem('aesir.addedAt', String(Date.now()));
+    } catch (e) {}
+    return ADD_TO_CART;
+  }
 
   /* ---- optional: POST the technical details somewhere before payment ----
      Set this to a webhook/endpoint URL and the form will send the answers
@@ -302,7 +317,7 @@
 
       try { localStorage.setItem('aesir.application', JSON.stringify(data)); } catch (e) {}
 
-      function go() { window.location.href = CHECKOUT_URL; }
+      function go() { window.location.href = checkoutUrl(); }
 
       if (FORM_ENDPOINT) {
         fetch(FORM_ENDPOINT, {
