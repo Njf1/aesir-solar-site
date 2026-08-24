@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start your G99 application — Aesir Solar</title>
+<meta name="description" content="Tell us about the installation and pay the £250 + VAT application fee. We prepare and submit your G99 Form A1-2 to your DNO.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://aesirsolar.co.uk/apply.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#07090C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="inner">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav stuck solid">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Aesir Solar home">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
+        <path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/>
+      </svg>
+      <span class="brand-txt">AESIR<em>SOLAR</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#gate">Why it matters</a>
+      <a href="index.html#check">Check eligibility</a>
+      <a href="index.html#work">What we do</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <a class="btn btn-sm btn-ghost" href="contact.html">Talk to us first</a>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap">
+
+    <ol class="progress" aria-label="Progress">
+      <li aria-current="step"><span class="pn">1</span> Your installation details</li>
+      <li><span class="pn">2</span> Secure card payment</li>
+      <li><span class="pn">3</span> We submit to your DNO</li>
+    </ol>
+
+    <div class="apply-grid">
+
+      <div class="apply-main">
+        <p class="eyebrow">Step 1 of 2</p>
+        <h1 class="display h2">Tell us about the installation.</h1>
+        <p class="lede">
+          Everything here goes onto Form A1-2. The more you can give us now, the faster it moves —
+          anything you don't have yet, leave blank and we'll come back to you.
+        </p>
+
+        <form class="form" id="applyForm" novalidate>
+          <fieldset>
+            <legend>Who's applying</legend>
+            <div class="grid2">
+              <p class="f"><label for="coName">Company</label><input id="coName" name="company" autocomplete="organization"></p>
+              <p class="f"><label for="contact">Contact name <b aria-hidden="true">*</b></label><input id="contact" name="contact" required autocomplete="name"></p>
+              <p class="f"><label for="email">Email <b aria-hidden="true">*</b></label><input id="email" name="email" type="email" required autocomplete="email"></p>
+              <p class="f"><label for="phone">Phone <b aria-hidden="true">*</b></label><input id="phone" name="phone" type="tel" required autocomplete="tel"></p>
+              <p class="f span2"><label for="accred">Installer accreditation / qualification <span class="opt">(goes on the form)</span></label><input id="accred" name="accreditation" placeholder="e.g. MCS number, NICEIC, NAPIT"></p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>The site</legend>
+            <div class="grid2">
+              <p class="f span2"><label for="addr">Installation address <b aria-hidden="true">*</b></label><input id="addr" name="address" required autocomplete="street-address"></p>
+              <p class="f"><label for="pc">Postcode <b aria-hidden="true">*</b></label><input id="pc" name="postcode" required autocomplete="postal-code"></p>
+              <p class="f"><label for="mpan">MPAN <span class="opt">(bottom line, 13 digits)</span></label><input id="mpan" name="mpan" inputmode="numeric" placeholder="e.g. 1012345678345"></p>
+            </div>
+            <p class="hint">The first two digits of the MPAN tell us which network operator — or independent network — the application goes to.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>The system</legend>
+            <div class="grid2">
+              <p class="f"><label for="make">Inverter make &amp; model <b aria-hidden="true">*</b></label><input id="make" name="inverter" required></p>
+              <p class="f"><label for="ref">ENA type-test reference</label><input id="ref" name="typetest" placeholder="e.g. SUNSY/05864/V2/A1"></p>
+              <p class="f"><label for="fkw">Total output (kW) <b aria-hidden="true">*</b></label><input id="fkw" name="kw" type="number" step="0.01" min="0" required></p>
+              <p class="f"><label for="fph">Supply <b aria-hidden="true">*</b></label>
+                <select id="fph" name="phases"><option value="1">Single phase 230 V</option><option value="3">Three phase 400 V</option></select>
+              </p>
+              <p class="f"><label for="stor">Storage capacity (kWh)</label><input id="stor" name="storage" type="number" step="0.1" min="0"></p>
+              <p class="f"><label for="target">Target commissioning date</label><input id="target" name="target" type="date"></p>
+            </div>
+            <div class="checks inline">
+              <label class="chk"><input type="checkbox" name="g100" id="fg100"><span>A <strong>G100 export limitation scheme</strong> is fitted</span></label>
+              <label class="chk"><input type="checkbox" name="eps" id="feps"><span>The system can run in <strong>island / EPS backup mode</strong></span></label>
+            </div>
+            <p class="f"><label for="notes">Anything else we should know</label><textarea id="notes" name="notes" rows="3" placeholder="Existing generation on site, unusual kit, deadlines…"></textarea></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Before you pay</legend>
+            <div class="checks stack">
+              <label class="chk"><input type="checkbox" id="agree" name="agree" required><span>I've read and accept the <a href="terms.html">terms of service</a> and <a href="refunds.html">refund policy</a>. <b aria-hidden="true">*</b></span></label>
+              <label class="chk"><input type="checkbox" id="privacy" name="privacy" required><span>I understand how my data will be used, as set out in the <a href="privacy.html">privacy policy</a>, including sharing it with the relevant network operator to make this application. <b aria-hidden="true">*</b></span></label>
+            </div>
+          </fieldset>
+
+          <button class="btn btn-lg btn-block" type="submit" id="submitBtn">
+            Continue to secure payment <span class="amt">£300.00 inc VAT</span>
+          </button>
+          <p class="form-note" id="formNote" role="status">
+            Card payment is handled off-site by Tyl by NatWest. We never see or store your card details.
+          </p>
+        </form>
+      </div>
+
+      <aside class="apply-side">
+        <div class="price-card">
+          <h2 class="side-h">Your order</h2>
+          <p class="side-item">G99 Form A1-2 application<br><span>prepared, submitted and chased to a decision</span></p>
+          <div class="pc-row"><span>Application fee</span><b>£250.00</b></div>
+          <div class="pc-row"><span>VAT at 20%</span><b>£50.00</b></div>
+          <div class="pc-row total"><span>Total payable</span><b>£300.00</b></div>
+          <ul class="side-list">
+            <li>Eligibility checked against G99 Issue&nbsp;2</li>
+            <li>ENA register and type-test reference verified</li>
+            <li>Form A1-2 submitted in your name</li>
+            <li>Single-line diagram and G100 evidence</li>
+            <li>We deal with the DNO until there's a decision</li>
+            <li>A3-2 commissioning notification after install</li>
+          </ul>
+          <p class="side-note">
+            <strong>Not sure you need this?</strong>
+            <a href="index.html#check">Check your eligibility first</a> — if you're at or below 16&nbsp;A per phase
+            you can usually connect and notify, and we'll say so.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="brand-txt">AESIR<em>SOLAR</em></span>
+      <p>G99 connection applications, prepared and submitted for UK solar and storage installers.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Service</h4>
+      <a href="index.html#gate">Why it matters</a>
+      <a href="index.html#check">Check eligibility</a>
+      <a href="index.html#work">What we do</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="contact.html">Contact us</a>
+      <a href="mailto:hello@aesirsolar.co.uk">hello@aesirsolar.co.uk</a>
+      <a href="https://aesirsolar.co.uk/my-account/">Your orders</a>
+    </div>
+    <div class="foot-col">
+      <h4>Legal</h4>
+      <a href="terms.html">Terms of service</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="refunds.html">Refund policy</a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <p><span class="todo">Company no. — · VAT no. —</span> &nbsp;·&nbsp; Aesir Solar is an application service. We are not a DNO, and we are not affiliated with or endorsed by the Energy Networks Association.</p>
+    <p class="cr">© <span id="yr">2026</span> Aesir Solar. Guidance reflects ENA EREC G99 Issue&nbsp;2 (10 March 2025).</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

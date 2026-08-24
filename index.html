@@ -64,8 +64,9 @@
       <a href="#check">Check eligibility</a>
       <a href="#work">What we do</a>
       <a href="#price">Price</a>
+      <a href="faq.html">FAQ</a>
     </nav>
-    <a class="btn btn-sm" href="#apply">Start your application</a>
+    <a class="btn btn-sm" href="apply.html">Start your application</a>
   </div>
 </header>
 
@@ -99,7 +100,7 @@
     </div>
 
     <div class="cta-row">
-      <a class="btn" href="#apply">Start your application <span class="amt">£250 + VAT</span></a>
+      <a class="btn" href="apply.html">Start your application <span class="amt">£250 + VAT</span></a>
       <a class="btn btn-ghost" href="#check">Check if you even need us</a>
     </div>
 
@@ -256,7 +257,7 @@
         </div>
         <div class="side">
           <p class="note" id="verdictNote">At 32.0 A per phase you're inside the Form A1-2 band, so the DNO must approve before you connect.</p>
-          <a class="btn btn-sm" id="verdictCta" href="#apply">Start your application</a>
+          <a class="btn btn-sm" id="verdictCta" href="apply.html">Start your application</a>
         </div>
       </div>
     </div>
@@ -356,73 +357,29 @@
       <div class="pc-row"><span>Application fee</span><b>£250.00</b></div>
       <div class="pc-row"><span>VAT at 20%</span><b>£50.00</b></div>
       <div class="pc-row total"><span>Total payable</span><b>£300.00</b></div>
-      <a class="btn btn-block" href="#apply">Start your application</a>
+      <a class="btn btn-block" href="apply.html">Start your application</a>
       <p class="pc-note">Card payment handled by Tyl by NatWest. You'll be asked for the technical details before you pay.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ APPLY ============ -->
-<section class="sect apply" id="apply">
-  <div class="wrap">
-    <p class="eyebrow">Step 1 of 2</p>
-    <h2 class="display h2">Tell us about the installation.</h2>
+<!-- ============ START ============ -->
+<section class="sect start" id="apply">
+  <div class="wrap start-in">
+    <p class="eyebrow">Ready when you are</p>
+    <h2 class="display h2">Start your application.</h2>
     <p class="lede">
-      Everything here goes straight onto Form A1-2, so the more you can give us now the faster it moves.
-      Anything you don't have yet, leave blank — we'll come back to you.
+      Two steps. Tell us about the installation, pay the £250 + VAT, and we take it from there —
+      eligibility checked, Form A1-2 prepared and submitted in your name, and chased until the DNO decides.
     </p>
-
-    <form class="form" id="applyForm" novalidate>
-      <fieldset>
-        <legend>Who's applying</legend>
-        <div class="grid2">
-          <p class="f"><label for="coName">Company</label><input id="coName" name="company" autocomplete="organization"></p>
-          <p class="f"><label for="contact">Contact name <b aria-hidden="true">*</b></label><input id="contact" name="contact" required autocomplete="name"></p>
-          <p class="f"><label for="email">Email <b aria-hidden="true">*</b></label><input id="email" name="email" type="email" required autocomplete="email"></p>
-          <p class="f"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></p>
-          <p class="f span2"><label for="accred">Installer accreditation / qualification</label><input id="accred" name="accreditation" placeholder="e.g. MCS number, NICEIC, NAPIT"></p>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>The site</legend>
-        <div class="grid2">
-          <p class="f span2"><label for="addr">Installation address <b aria-hidden="true">*</b></label><input id="addr" name="address" required autocomplete="street-address"></p>
-          <p class="f"><label for="pc">Postcode <b aria-hidden="true">*</b></label><input id="pc" name="postcode" required autocomplete="postal-code"></p>
-          <p class="f"><label for="mpan">MPAN <span class="opt">(bottom line, 13 digits)</span></label><input id="mpan" name="mpan" inputmode="numeric" placeholder="e.g. 1012345678345"></p>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>The system</legend>
-        <div class="grid2">
-          <p class="f"><label for="make">Inverter make &amp; model <b aria-hidden="true">*</b></label><input id="make" name="inverter" required></p>
-          <p class="f"><label for="ref">ENA type-test reference</label><input id="ref" name="typetest" placeholder="e.g. SUNSY/05864/V2/A1"></p>
-          <p class="f"><label for="fkw">Total output (kW) <b aria-hidden="true">*</b></label><input id="fkw" name="kw" type="number" step="0.01" min="0" required></p>
-          <p class="f"><label for="fph">Supply</label>
-            <select id="fph" name="phases"><option value="1">Single phase</option><option value="3">Three phase</option></select>
-          </p>
-          <p class="f"><label for="stor">Storage capacity (kWh)</label><input id="stor" name="storage" type="number" step="0.1" min="0"></p>
-          <p class="f"><label for="target">Target commissioning date</label><input id="target" name="target" type="date"></p>
-        </div>
-        <div class="checks inline">
-          <label class="chk"><input type="checkbox" name="g100" id="fg100"><span>G100 export limitation scheme fitted</span></label>
-          <label class="chk"><input type="checkbox" name="eps" id="feps"><span>System can run in island / EPS backup mode</span></label>
-        </div>
-        <p class="f"><label for="notes">Anything else we should know</label><textarea id="notes" name="notes" rows="3" placeholder="Existing generation on site, unusual kit, deadlines…"></textarea></p>
-      </fieldset>
-
-      <div class="submit-row">
-        <div class="sum">
-          <div class="sum-k">Total payable</div>
-          <div class="sum-v">£300.00 <span>inc. £50.00 VAT</span></div>
-        </div>
-        <button class="btn btn-lg" type="submit" id="submitBtn">Continue to payment</button>
-      </div>
-      <p class="form-note" id="formNote" role="status">
-        Card payment is handled by Tyl by NatWest. We'll email you a copy of everything you've entered.
-      </p>
-    </form>
+    <div class="cta-row">
+      <a class="btn btn-lg" href="apply.html">Start your application <span class="amt">£250 + VAT</span></a>
+      <a class="btn btn-ghost" href="contact.html">Talk to us first</a>
+    </div>
+    <p class="start-note">
+      Card payment is handled by Tyl by NatWest. Not sure you need us?
+      <a href="#check">Check your eligibility</a> — if you're at or below 16&nbsp;A per phase we'll tell you so.
+    </p>
   </div>
 </section>
 
@@ -441,18 +398,19 @@
       <a href="#check">Check eligibility</a>
       <a href="#work">What we do</a>
       <a href="#price">Price</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <a href="mailto:hello@aesirsolar.co.uk" data-fill="email">hello@aesirsolar.co.uk</a>
-      <a href="tel:" data-fill="phone" class="todo">Phone number</a>
-      <span class="todo" data-fill="address">Registered address</span>
+      <a href="contact.html">Contact us</a>
+      <a href="mailto:hello@aesirsolar.co.uk">hello@aesirsolar.co.uk</a>
+      <a href="https://aesirsolar.co.uk/my-account/">Your orders</a>
     </div>
     <div class="foot-col">
       <h4>Legal</h4>
-      <a href="/terms/" class="todo">Terms &amp; conditions</a>
-      <a href="/privacy/" class="todo">Privacy policy</a>
-      <a href="/refunds/" class="todo">Refund policy</a>
+      <a href="terms.html">Terms of service</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="refunds.html">Refund policy</a>
     </div>
   </div>
   <div class="wrap foot-legal">

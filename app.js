@@ -48,25 +48,33 @@
     host.appendChild(frag);
   }
 
-  /* ============ scroll reveal (additive only) ============ */
+  /* ============ scroll reveal ============
+     Decorative only. Nothing interactive is ever hidden, and a failsafe
+     reveals everything after 1.2s no matter what the observer does — a
+     visitor must never meet an invisible page. */
   if (!reduced && 'IntersectionObserver' in window) {
     var targets = document.querySelectorAll(
-      '.sect .eyebrow, .sect .h2, .sect .lede, .flow, .stakes, .quote, .meter, ' +
-      '.proof-note, .panel-box, .small-print, .steps, .honest, .price-copy, ' +
-      '.price-card, .form'
+      '.sect .eyebrow, .sect .h2, .sect .lede, .flow, .stakes, .quote, ' +
+      '.meter, .proof-note, .small-print, .steps, .honest, .price-copy'
     );
+    var revealAll = function () {
+      Array.prototype.forEach.call(targets, function (el) { el.classList.add('in'); });
+    };
+
     Array.prototype.forEach.call(targets, function (el) { el.classList.add('rv'); });
 
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.04 });
 
     Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+
+    /* failsafe + anyone arriving on a deep link */
+    setTimeout(revealAll, 1200);
+    if (location.hash) revealAll();
+    window.addEventListener('hashchange', revealAll);
   }
 
   /* ============================================================
@@ -205,20 +213,39 @@
 
     render();
 
-    /* carry the instrument's answers into the application form */
+    /* carry the instrument's answers across to the application page */
     if (vCta) {
       vCta.addEventListener('click', function () {
-        var fkw = document.getElementById('fkw'),
-            fph = document.getElementById('fph'),
-            fg100 = document.getElementById('fg100'),
-            feps = document.getElementById('feps');
-        if (fkw && !fkw.value) fkw.value = parseFloat(kw.value).toFixed(2);
-        if (fph) fph.value = String(phases);
-        if (fg100) fg100.checked = g100.checked;
-        if (feps) feps.checked = eps.checked;
+        try {
+          localStorage.setItem('aesir.prefill', JSON.stringify({
+            kw: parseFloat(kw.value).toFixed(2),
+            phases: phases,
+            g100: g100.checked,
+            eps: eps.checked
+          }));
+        } catch (e) {}
       });
     }
   }
+
+  /* ---- receive those answers on the application page ---- */
+  (function prefill() {
+    var fkw = document.getElementById('fkw');
+    if (!fkw) return;
+    var raw;
+    try { raw = localStorage.getItem('aesir.prefill'); } catch (e) { return; }
+    if (!raw) return;
+    try {
+      var d = JSON.parse(raw);
+      var fph = document.getElementById('fph'),
+          fg = document.getElementById('fg100'),
+          fe = document.getElementById('feps');
+      if (d.kw && !fkw.value) fkw.value = d.kw;
+      if (fph && d.phases) fph.value = String(d.phases);
+      if (fg) fg.checked = !!d.g100;
+      if (fe) fe.checked = !!d.eps;
+    } catch (e) {}
+  })();
 
   /* ============================================================
      APPLICATION FORM → existing checkout
@@ -231,20 +258,31 @@
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
 
-      /* validate */
+      /* validate — checkboxes are checked, everything else has a value */
       var invalid = null;
       Array.prototype.forEach.call(form.querySelectorAll('[required]'), function (el) {
-        var ok = el.value.trim() !== '' &&
-                 (el.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()));
+        var ok;
+        if (el.type === 'checkbox') {
+          ok = el.checked;
+        } else if (el.type === 'email') {
+          ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim());
+        } else {
+          ok = el.value.trim() !== '';
+        }
         el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+        var row = el.closest('.chk');
+        if (row) row.classList.toggle('invalid', !ok);
         if (!ok && !invalid) invalid = el;
       });
 
       if (invalid) {
-        note.textContent = 'Please check the highlighted fields — we need those to start the application.';
+        note.textContent = invalid.type === 'checkbox'
+          ? 'Please tick both boxes to confirm you accept the terms and understand the privacy policy.'
+          : 'Please check the highlighted fields — we need those to start the application.';
         note.classList.add('err');
         invalid.focus();
-        invalid.scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' });
+        (invalid.closest('.chk') || invalid)
+          .scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' });
         return;
       }
 
@@ -255,9 +293,12 @@
       /* collect */
       var data = {};
       new FormData(form).forEach(function (v, k) { data[k] = v; });
-      data.g100 = document.getElementById('fg100').checked;
-      data.eps = document.getElementById('feps').checked;
+      data.g100 = !!(document.getElementById('fg100') || {}).checked;
+      data.eps = !!(document.getElementById('feps') || {}).checked;
+      data.acceptedTerms = !!(document.getElementById('agree') || {}).checked;
+      data.acceptedPrivacy = !!(document.getElementById('privacy') || {}).checked;
       data.submittedAt = new Date().toISOString();
+      data.amountGBP = '300.00';
 
       try { localStorage.setItem('aesir.application', JSON.stringify(data)); } catch (e) {}
 
