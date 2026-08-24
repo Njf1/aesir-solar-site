@@ -47,6 +47,52 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+
+  /* ============ mobile menu ============ */
+  (function menu() {
+    var btn = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    var header = document.querySelector('.nav');
+    if (!btn || !links) return;
+
+    function setHeight() {
+      if (header) {
+        document.documentElement.style.setProperty(
+          '--navh', header.getBoundingClientRect().height + 'px');
+      }
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
+
+    function close() {
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+      document.body.classList.remove('nav-open');
+    }
+    function open() {
+      setHeight();
+      links.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'Close menu');
+      document.body.classList.add('nav-open');
+    }
+
+    btn.addEventListener('click', function () {
+      links.classList.contains('open') ? close() : open();
+    });
+    /* tapping a link, pressing escape, or growing past the breakpoint all close it */
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && links.classList.contains('open')) { close(); btn.focus(); }
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900) close();
+    });
+  })();
+
   /* ============ photons ============ */
   var host = document.getElementById('photons');
   if (host && !reduced) {

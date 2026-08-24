@@ -579,3 +579,160 @@ body.inner{padding-top:0}
 }
 .chk.invalid span{color:#FF7A8C}
 .chk.invalid input{outline:2px solid var(--block);outline-offset:2px}
+
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+.nav-toggle{
+  display:none;margin-left:auto;width:44px;height:44px;flex:0 0 auto;
+  background:transparent;border:1px solid var(--line-2);border-radius:9px;cursor:pointer;
+  padding:0;place-items:center;gap:4px;
+}
+.nav-toggle span{display:block;width:17px;height:1.5px;background:var(--ink);border-radius:2px;
+  transition:transform .26s cubic-bezier(.3,.8,.3,1.1),opacity .18s}
+.nav-toggle[aria-expanded=true]{border-color:var(--amber)}
+.nav-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.nav-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+@media (max-width:900px){
+  .nav-toggle{display:grid}
+  .nav-in{gap:12px}
+  .nav-in .btn{margin-left:0;order:3}
+  .nav-toggle{order:2;margin-left:auto}
+
+  .nav-links{
+    position:fixed;inset:var(--navh,64px) 0 auto 0;margin:0;
+    flex-direction:column;gap:0;align-items:stretch;
+    background:rgba(7,9,12,.98);backdrop-filter:blur(18px) saturate(1.4);
+    border-bottom:1px solid var(--line);
+    padding:6px 0 14px;
+    transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;
+    transition:opacity .22s ease,transform .22s cubic-bezier(.3,.8,.3,1.05),visibility .22s;
+    max-height:calc(100dvh - var(--navh,64px));overflow-y:auto;
+    box-shadow:0 24px 50px -20px rgba(0,0,0,.9);
+  }
+  .nav-links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto}
+  .nav-links a{
+    display:flex;align-items:center;min-height:52px;padding:0 max(18px,calc((100vw - var(--page))/2));
+    font-size:16px;color:var(--ink-2);border-bottom:1px solid rgba(33,42,54,.6);
+  }
+  .nav-links a:last-child{border-bottom:0}
+  .nav-links a:active{background:rgba(255,201,75,.08);color:var(--gold)}
+  body.nav-open{overflow:hidden}
+}
+
+/* ============================================================
+   MOBILE + TABLET POLISH
+   ============================================================ */
+
+/* the scale legend replaces in-zone labels on narrow screens */
+.scale-legend{display:none;list-style:none;margin-top:16px;gap:8px}
+.scale-legend li{display:flex;align-items:center;gap:9px;font-family:var(--mono);
+  font-size:11px;color:var(--muted);line-height:1.4}
+.scale-legend i{width:13px;height:13px;border-radius:3px;flex:0 0 auto;border:1px solid var(--line-2)}
+.scale-legend .s1{background:repeating-linear-gradient(135deg,rgba(133,147,164,.22) 0 3px,transparent 3px 6px)}
+.scale-legend .s2{background:linear-gradient(180deg,rgba(255,201,75,.5),rgba(255,138,31,.24));border-color:rgba(255,201,75,.4)}
+.scale-legend .s3{background:linear-gradient(180deg,rgba(255,201,75,.3),rgba(255,138,31,.14));border-color:rgba(255,179,63,.34)}
+.scale-legend .s4{background:repeating-linear-gradient(135deg,rgba(133,147,164,.22) 0 3px,transparent 3px 6px)}
+
+@media (max-width:760px){
+  /* the comparison bars must never wrap their own labels */
+  .bar{padding:14px 16px;font-size:11.5px}
+  .bar.good{width:100%}
+  .meter{gap:10px}
+  .bar .lbl{flex:1 1 auto}
+  .bar .num{flex:0 0 auto;white-space:nowrap}
+
+  /* zone text moves out of the zones and into the legend */
+  .zone b,.zone i{display:none}
+  .scale{height:52px}
+  .scale-legend{display:grid}
+  .ticks .tick-last{display:none}
+  .ticks{font-size:10.5px}
+
+  /* readings stack more comfortably */
+  .controls{grid-template-columns:1fr;gap:24px;padding:24px 20px}
+  .field .val{font-size:24px}
+  .field .val.big{font-size:30px}
+  .seg{width:100%}
+  .seg button{flex:1 1 0;padding:13px 8px;font-size:11px}
+  .checks{padding:0 20px 22px;gap:13px}
+
+  /* progress rail scrolls sideways instead of stacking three deep */
+  .progress{flex-wrap:nowrap;overflow-x:auto;gap:8px;padding-bottom:6px;
+    margin-bottom:32px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .progress::-webkit-scrollbar{display:none}
+  .progress li{flex:0 0 auto;white-space:nowrap;font-size:11px;padding:8px 14px 8px 8px}
+
+  /* generous touch targets everywhere */
+  .btn{min-height:50px}
+  .btn-sm{min-height:42px}
+  .chk input{width:19px;height:19px;margin-top:1px}
+  .faq summary{padding:18px 20px;min-height:56px}
+  .f input,.f select,.f textarea{font-size:16px;padding:13px 14px} /* 16px stops iOS zooming on focus */
+
+  /* tighten the vertical rhythm so the page isn't endless */
+  .sect{padding:64px 0}
+  .f{margin-bottom:15px}
+  .grid2{gap:14px 18px}
+  fieldset{padding:20px 18px 6px;margin-bottom:18px}
+  .stakes article{padding:24px 20px}
+  .steps li{padding:26px 20px}
+  .honest{padding:24px 20px}
+}
+
+@media (max-width:520px){
+  /* the hero must not push its own CTA off the first screen */
+  .hero{min-height:auto;padding:98px 0 58px}
+  h1.display{font-size:clamp(32px,8.6vw,42px)}
+  .hero .lede{font-size:15.5px}
+  .hero-foot{font-size:10.5px}
+  .cue{display:none}
+  .plane{height:34vh}
+  .hero::before{bottom:16vh}
+
+  .h2{font-size:clamp(25px,7.4vw,34px)}
+  .quote .q{font-size:clamp(19px,5.6vw,25px)}
+  .verdict .v{font-size:19px}
+  .pc-row.total b{font-size:23px}
+
+  /* the flow diagram reads top-to-bottom on a phone */
+  .barrier{height:72px;gap:14px}
+  .node{padding:24px 20px}
+  .node .n{font-size:16px}
+
+  .foot-in{grid-template-columns:1fr;gap:26px}
+  .foot-legal{flex-direction:column;gap:8px}
+}
+
+/* very small phones */
+@media (max-width:380px){
+  :root{--page:min(1200px,94vw)}
+  .brand-txt{font-size:14px}
+  .nav-in .btn{padding:9px 11px;font-size:11.5px}
+  .receipt{font-size:10.5px}
+  .seg button{font-size:10px;padding:12px 5px}
+}
+
+/* landscape phones: don't let a 100svh hero eat the whole screen */
+@media (max-height:520px) and (orientation:landscape){
+  .hero{min-height:auto;padding:92px 0 48px}
+  .cue{display:none}
+}
+
+/* header CTA shortens rather than overflowing */
+.cta-short{display:none}
+@media (max-width:620px){
+  .cta-long{display:none}
+  .cta-short{display:inline}
+  .nav-cta{padding:11px 15px}
+}
+
+/* the price receipt reads as a real receipt on a phone: two items, then the total */
+@media (max-width:520px){
+  .receipt .tot{grid-column:1/-1;justify-content:space-between}
+  .receipt .note{grid-column:1/-1;justify-content:center;color:var(--muted-2);font-size:10.5px}
+  .receipt>div{border-right:1px solid var(--line)}
+  .receipt>div:nth-child(2){border-right:0}
+}

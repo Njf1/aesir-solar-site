@@ -49,10 +49,13 @@ def shell(slug, title, desc, body, cta=("apply.html", "Start your application"))
       {BRAND_SVG}
       <span class="brand-txt">AESIR<em>SOLAR</em></span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
       {links}
     </nav>
-    <a class="btn btn-sm" href="{cta[0]}">{cta[1]}</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="btn btn-sm nav-cta" href="{cta[0]}"><span class="cta-long">{cta[1]}</span><span class="cta-short">Apply</span></a>
   </div>
 </header>
 
