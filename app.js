@@ -394,3 +394,26 @@
     });
   }
 })();
+
+/* ---------------------------------------------------------------
+   Live production figures on the homepage.
+   Enhancement only — sensible values are already in the markup.
+   --------------------------------------------------------------- */
+(function realRoof() {
+  var life = document.getElementById('rrLife');
+  if (!life) return;
+  fetch('/api/tigo')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (d) {
+      var n = function (v) { return v.toLocaleString('en-GB'); };
+      life.innerHTML = n(d.lifetime.kwh) + '<small>kWh</small>';
+      document.getElementById('rrSub').textContent =
+        'about ' + n(d.lifetime.kwhPerYear) + ' kWh a year, from one roof';
+      document.getElementById('rrToday').innerHTML = d.today.kwh.toFixed(1) + '<small>kWh</small>';
+      document.getElementById('rrRec').innerHTML = n(d.lifetime.reclaimedKwh) + '<small>kWh</small>';
+    })
+    .catch(function () {
+      document.getElementById('rrToday').innerHTML = '206.4<small>kWh</small>';
+      document.getElementById('rrRec').innerHTML = '2,561<small>kWh</small>';
+    });
+})();
