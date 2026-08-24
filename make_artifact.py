@@ -8,7 +8,7 @@ Generated from the real source, so the preview can never drift from what ships.
 import pathlib, re
 
 HERE = pathlib.Path(__file__).parent
-LIVE = "https://njf1.github.io/aesir-solar-site/"
+LIVE = "https://aesir-solar.vercel.app/"
 OUT = pathlib.Path("/private/tmp/claude-501/-Users-nick-Projects-Aesir-Solar/"
                    "350ca28e-81e3-4610-b87f-f37a68d4861a/scratchpad/concept.html")
 
