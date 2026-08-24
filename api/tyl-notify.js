@@ -10,7 +10,7 @@
  * rather than rejecting, so a format difference cannot silently lose an order.
  * To be confirmed with Tyl integration support during test.
  */
-import { responseHash, safeEqual } from '../lib/tyl.js';
+import { responseHash, legacyNotificationHash, safeEqual } from '../lib/tyl.js';
 
 function parseBody(req) {
   if (!req.body) return {};
@@ -37,8 +37,13 @@ export default async function handler(req, res) {
       txndatetime: b.txndatetime,
       storename: store
     }, secret);
+    const legacy = legacyNotificationHash({
+      chargetotal: b.chargetotal, currency: b.currency, txndatetime: b.txndatetime,
+      storename: store, approval_code: b.approval_code
+    }, secret);
     verified = safeEqual(expected, b.notification_hash) ||
-               safeEqual(expected, b.response_hash);
+               safeEqual(expected, b.response_hash) ||
+               safeEqual(legacy, b.notification_hash);
   }
 
   console.log('tyl notification', {
