@@ -1,0 +1,89 @@
+{
+  "_note": "Real measured data read from the Tigo EI portal (build v2026.06.3) for the Premier Composites array. Values marked measured were read directly from the portal UI. Values marked derived are computed from those. Anything inferred is flagged and must be confirmed against the Tigo API before it is published as fact.",
+
+  "site": {
+    "name": "Premier Composites",
+    "location": "Lincolnshire, England",
+    "source": "measured",
+    "monitoring": "Tigo Energy Intelligence (EI)"
+  },
+
+  "hardware": {
+    "modules_total": 126,
+    "source": "measured — counted from System View module grid",
+    "strings": [
+      { "id": "A", "modules": 9,  "inverter": "Solis Hybrid" },
+      { "id": "B", "modules": 9,  "inverter": "Solis Hybrid" },
+      { "id": "C", "modules": 18, "inverter": "Solis S5-GC30K" },
+      { "id": "D", "modules": 18, "inverter": "Solis S5-GC30K" },
+      { "id": "E", "modules": 18, "inverter": "Solis S5-GC30K" },
+      { "id": "F", "modules": 18, "inverter": "Solis S5-GC30K" },
+      { "id": "G", "modules": 18, "inverter": "Solis S5-GC30K" },
+      { "id": "H", "modules": 18, "inverter": "Solis S5-GC30K" }
+    ],
+    "inverters": [
+      { "model": "Solis Hybrid", "strings": ["A", "B"], "rating_kw": null, "_todo": "exact model + kW rating needed" },
+      { "model": "Solis S5-GC30K", "strings": ["C","D","E","F","G","H"], "rating_kw": 30, "_note": "30 kW three-phase, inferred from model number — confirm" }
+    ],
+    "optimisers": "Tigo TS4 (module-level; the source of the Reclaimed Energy figure)",
+    "gateways_seen": ["30350", "176061", "CCA"],
+    "module_watts": null,
+    "_todo_module_watts": "NOT KNOWN. Needed to state system kWp. 126 modules at 400 W = 50.4 kWp; at 450 W = 56.7 kWp. Must confirm before publishing a system size."
+  },
+
+  "day_sample": {
+    "date": "2026-08-24",
+    "source": "measured",
+    "weather": { "temp_c": 15, "sunlight_hours": 14, "cloud_pct": 7 },
+    "sunrise": "05:53",
+    "sunset": "20:12",
+    "pv_production_kwh": 206.41,
+    "solar_base_kwh": 202.31,
+    "solar_reclaimed_kwh": 4.10,
+    "reclaimed_pct": 1.99,
+    "income_equivalent_usd": 0.00,
+    "_income_note": "Portal shows US$0.00 — tariff simply not configured in Tigo, not a real zero.",
+
+    "hourly_kwh": {
+      "_source": "read off the Solar Production bar chart; approximate to ~0.2 kWh",
+      "06": 0.5, "07": 4.0, "08": 7.2, "09": 7.7, "10": 16.3, "11": 25.5,
+      "12": 24.2, "13": 29.0, "14": 25.9, "15": 25.4, "16": 20.7, "17": 15.4,
+      "18": 2.9, "19": 0.4, "20": 0.05
+    },
+    "peak_hour": "13",
+    "peak_hour_kwh": 29.0,
+
+    "per_module_wh": {
+      "_source": "measured — module tile readings in Energy display mode",
+      "min": 1585,
+      "max": 1723,
+      "approx_mean": 1640,
+      "spread_pct": 8.7,
+      "_consistency_check": "126 modules x 1640 Wh = 206.6 kWh, against the portal's 206.41 kWh total. Internally consistent, so the mean is sound."
+    }
+  },
+
+  "lifetime_equivalents": {
+    "_source": "measured — Tigo's own Lifetime Energy Equivalents panel",
+    "_caution": "These are Tigo's conversions using their own factors, and are reported in US units. Recompute from kWh with UK DESNZ carbon factors before publishing anything in our own voice.",
+    "coal_not_burned_lbs": 78900,
+    "gas_not_consumed_gal": 8000,
+    "distance_not_driven_miles": 179300,
+    "trees_planted": 1200
+  },
+
+  "derived": {
+    "_note": "computed here, not read from the portal",
+    "mean_module_kwh_day": 1.64,
+    "generating_window_hours": 14.3,
+    "_lifetime_kwh_estimate": "Not derivable from these screenshots. Pull from the Tigo API rather than back-calculating from the equivalents."
+  },
+
+  "open_questions": [
+    "Module make/model and Wp rating — needed for system kWp",
+    "Solis Hybrid exact model and rating",
+    "Commissioning date, for lifetime yield and a real payback curve",
+    "Roof area and array orientation/tilt, to derive W per m2 of roof",
+    "Whether the site exports, and on what tariff, for a real savings figure"
+  ]
+}

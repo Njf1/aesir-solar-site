@@ -136,11 +136,14 @@ TERMS = f'''    <p class="eyebrow">Legal</p>
 
       <h2>3. What we are not</h2>
       <p>We are not a Distribution Network Operator, and we are not affiliated with or endorsed by the
-      Energy Networks Association. We do not hold MCS, NICEIC, NAPIT or any electrical contracting
-      accreditation, and we do not carry out electrical work, design or commissioning.</p>
-      <p>The application is made <strong>in your name and under your accreditation</strong>. You remain
-      the installer or generator for all regulatory purposes, including your duties under the
-      Electricity Safety, Quality and Continuity Regulations 2002.</p>
+      Energy Networks Association. Nothing on this site should be read as an endorsement by any network
+      operator or by the ENA.</p>
+      <p>These terms cover <strong>the connection application only</strong>. Where we also carry out the
+      installation, that is a separate contract on separate terms, and paying this fee does not commit
+      you to using us for the installation.</p>
+      <p>Where you are an installer instructing us, the application is made <strong>in your name and
+      under your accreditation</strong>, and you remain responsible for the installation and for your
+      duties under the Electricity Safety, Quality and Continuity Regulations 2002.</p>
 
       <h2>4. What we need from you</h2>
       <p>We can only work from what you give us. You agree that the information you provide — including
@@ -390,9 +393,12 @@ FAQS = [
      you straight away.</p>"""),
 
     ("Whose name goes on the application?",
-     """<p>Yours. Form A1-2 has a mandatory installer block covering your name, accreditation and
-     contact details, and that's what we complete. We prepare and lodge the application on your behalf —
-     we don't replace you on it, and your accreditation still stands behind the work.</p>"""),
+     """<p>It depends who is instructing us. Form A1-2 has a mandatory installer block covering name,
+     accreditation and contact details.</p>
+     <p><strong>If you're an installer</strong>, that's you. We prepare and lodge the application on your
+     behalf — we don't replace you on it, and your accreditation still stands behind the work.</p>
+     <p><strong>If you're a property owner</strong> and we're doing the installation too, then it's us.
+     Either way you'll see the form before it goes anywhere.</p>"""),
 
     ("What if my system can run in backup / island mode?",
      """<p>Tell us. The ENA's connection guide says systems designed to operate in island mode during an
@@ -425,6 +431,14 @@ FAQS = [
      """<p>Not currently. Northern Ireland sits outside the GB framework — NIE Networks is the sole
      operator and uses its own G99/NI variant, with a different process. We cover the 14 GB licence
      areas and independent networks within them.</p>"""),
+
+    ("Do you install as well, or only the paperwork?",
+     """<p>Both. The G99 application is genuinely the first step — you cannot legally connect and run a
+     system above 16&nbsp;A per phase until the network operator has agreed to it — so that's where we
+     start, and it's the only thing you pay for up front.</p>
+     <p>If you want us to design and install the system as well, we do that. Paying the £250 doesn't
+     commit you to it, and we'll do your application perfectly happily if you've already got an
+     installer.</p>"""),
 
     ("What does the £250 include?",
      """<p>£250 plus VAT at 20%, so <strong>£300.00 in total</strong>, once, per application. It covers
