@@ -363,34 +363,64 @@
 
       try { localStorage.setItem('aesir.application', JSON.stringify(data)); } catch (e) {}
 
-      /* Stripe first. If it isn't configured yet, fall back to the existing
-         checkout so a customer trying to pay us never hits a dead end. */
-      function fallback() { window.location.href = checkoutUrl(); }
+      /* Payment routes, in order of preference:
+           1. Tyl by NatWest  — settles direct to the company account
+           2. Stripe          — built and dormant, ready if Tyl stalls
+           3. the old checkout — so nobody trying to pay is ever stranded  */
+      function fallbackCheckout() { window.location.href = checkoutUrl(); }
 
-      fetch('/api/checkout', {
+      function postForm(action, fields) {
+        var f = document.createElement('form');
+        f.method = 'POST';
+        f.action = action;
+        f.style.display = 'none';
+        Object.keys(fields).forEach(function (k) {
+          var i = document.createElement('input');
+          i.type = 'hidden'; i.name = k; i.value = fields[k];
+          f.appendChild(i);
+        });
+        document.body.appendChild(f);
+        f.submit();
+      }
+
+      function payFailed() {
+        note.textContent =
+          'We couldn\u2019t open the payment page. Please try again, or email ' +
+          'hello@aesirsolar.co.uk and we\u2019ll take it from there.';
+        note.classList.add('err');
+        btn.disabled = false;
+      }
+
+      function tryStripe() {
+        return fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
+          .then(function (r) {
+            if (r.ok && r.body && r.body.url) { window.location.href = r.body.url; return; }
+            if (r.body && r.body.error === 'stripe_not_configured') { fallbackCheckout(); return; }
+            payFailed();
+          })
+          .catch(fallbackCheckout);
+      }
+
+      fetch('/api/tyl-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
         .then(function (r) {
-          return r.json().then(function (j) { return { ok: r.ok, body: j }; });
-        })
-        .then(function (r) {
-          if (r.ok && r.body && r.body.url) {
-            window.location.href = r.body.url;
+          if (r.ok && r.body && r.body.action && r.body.fields) {
+            try { localStorage.setItem('aesir.orderId', r.body.orderId); } catch (e) {}
+            postForm(r.body.action, r.body.fields);
             return;
           }
-          if (r.body && r.body.error === 'stripe_not_configured') {
-            fallback();
-            return;
-          }
-          note.textContent =
-            'We couldn\u2019t open the payment page. Please try again, or email ' +
-            'hello@aesirsolar.co.uk and we\u2019ll take it from there.';
-          note.classList.add('err');
-          btn.disabled = false;
+          return tryStripe();
         })
-        .catch(fallback);
+        .catch(function () { return tryStripe(); });
     });
   }
 })();
@@ -416,4 +446,33 @@
       document.getElementById('rrToday').innerHTML = '206.4<small>kWh</small>';
       document.getElementById('rrRec').innerHTML = '2,561<small>kWh</small>';
     });
+})();
+
+/* ---------------------------------------------------------------
+   Payment outcome, when the gateway sends the customer back.
+   --------------------------------------------------------------- */
+(function payStatus() {
+  var slot = document.getElementById('payStatus');
+  if (!slot) return;
+  var q = new URLSearchParams(location.search);
+  var p = q.get('payment');
+  if (!p) return;
+
+  var msgs = {
+    declined: ['bad', 'That payment didn\u2019t go through',
+      'Your card was declined and you have not been charged. Check the details and try again, ' +
+      'or email hello@aesirsolar.co.uk and we\u2019ll sort it out with you.'],
+    pending: ['', 'Your bank is still checking that payment',
+      'It hasn\u2019t completed yet. Give it a minute and check your email before trying again \u2014 ' +
+      'we don\u2019t want to take it twice.'],
+    unverified: ['bad', 'We couldn\u2019t confirm that payment',
+      'For your protection we haven\u2019t treated it as complete. Please don\u2019t re-enter your card. ' +
+      'Email hello@aesirsolar.co.uk with the time you tried and we\u2019ll check it against our records.']
+  };
+  var m = msgs[p];
+  if (!m) return;
+  var reason = q.get('reason');
+  slot.innerHTML = '<div class="pay-msg ' + m[0] + '"><b>' + m[1] + '</b>' + m[2] +
+    (reason ? ' <span style="color:var(--muted-2)">(' + reason.replace(/[<>]/g, '') + ')</span>' : '') + '</div>';
+  slot.scrollIntoView({ block: 'center', behavior: 'smooth' });
 })();

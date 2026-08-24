@@ -805,3 +805,10 @@ body.inner{padding-top:0}
 @media (max-width:900px){
   .seg button,.pick button,.modes button{min-height:44px}
 }
+
+/* payment outcome messages returning from the gateway */
+.pay-msg{border:1px solid var(--line);border-left:2px solid var(--amber);border-radius:0 12px 12px 0;
+  padding:18px 22px;margin-bottom:26px;background:rgba(255,201,75,.05);font-size:14.5px;line-height:1.65}
+.pay-msg.bad{border-left-color:var(--block);background:rgba(224,36,63,.06)}
+.pay-msg b{color:var(--gold);display:block;margin-bottom:5px}
+.pay-msg.bad b{color:#FF7A8C}
