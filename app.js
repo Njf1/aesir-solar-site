@@ -363,17 +363,34 @@
 
       try { localStorage.setItem('aesir.application', JSON.stringify(data)); } catch (e) {}
 
-      function go() { window.location.href = checkoutUrl(); }
+      /* Stripe first. If it isn't configured yet, fall back to the existing
+         checkout so a customer trying to pay us never hits a dead end. */
+      function fallback() { window.location.href = checkoutUrl(); }
 
-      if (FORM_ENDPOINT) {
-        fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        }).then(go).catch(go);
-      } else {
-        setTimeout(go, 350);
-      }
+      fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) {
+          return r.json().then(function (j) { return { ok: r.ok, body: j }; });
+        })
+        .then(function (r) {
+          if (r.ok && r.body && r.body.url) {
+            window.location.href = r.body.url;
+            return;
+          }
+          if (r.body && r.body.error === 'stripe_not_configured') {
+            fallback();
+            return;
+          }
+          note.textContent =
+            'We couldn\u2019t open the payment page. Please try again, or email ' +
+            'hello@aesirsolar.co.uk and we\u2019ll take it from there.';
+          note.classList.add('err');
+          btn.disabled = false;
+        })
+        .catch(fallback);
     });
   }
 })();

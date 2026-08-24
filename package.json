@@ -1,0 +1,7 @@
+{
+  "name": "aesir-solar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Aesir Solar — G99 connection application service"
+}

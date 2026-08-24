@@ -481,6 +481,57 @@ def _json(s):
     return json.dumps(s)
 
 
+# --------------------------------------------------------------- SUCCESS
+SUCCESS = '''    <p class="eyebrow">Payment received</p>
+    <h1 class="display h2">That\u2019s the hard part done.</h1>
+    <p class="lede">Your application is with us. Here is exactly what happens next, and roughly when.</p>
+
+    <div class="callout" style="margin-top:30px">
+      <p><strong>Check your email.</strong> Stripe has sent your receipt, and we\u2019ve got your
+      installation details. If anything on Form A1-2 is missing we\u2019ll come back to you before we
+      submit \u2014 we won\u2019t send an incomplete form and burn your ten working days.</p>
+    </div>
+
+    <ol class="steps" style="margin-top:34px">
+      <li>
+        <span class="idx">01</span>
+        <h3>We check eligibility</h3>
+        <p>Within one working day we confirm which procedure applies, check the ENA register for the
+        current type-test reference, and flag anything that would get the form returned.</p>
+      </li>
+      <li>
+        <span class="idx">02</span>
+        <h3>We submit to your operator</h3>
+        <p>We prepare Form A1-2 in your name and lodge it with the correct DNO or independent network,
+        with the single-line diagram and G100 evidence attached.</p>
+      </li>
+      <li>
+        <span class="idx">03</span>
+        <h3>They respond</h3>
+        <p>The published target for a fast-track application is ten working days. We chase it and keep
+        you posted, and tell you straight away if they escalate it off the fast track.</p>
+      </li>
+      <li>
+        <span class="idx">04</span>
+        <h3>You commission, we close it out</h3>
+        <p>Once installed, tell us the commissioning date and we file the A3-2 notification inside the
+        28-day window so the record is closed properly.</p>
+      </li>
+    </ol>
+
+    <div class="honest" style="margin-top:34px">
+      <h3>If we find you didn\u2019t need us</h3>
+      <p>Our eligibility check sometimes shows an installation sits at or below 16&nbsp;A per phase and
+      can be handled under the notification route instead. If that\u2019s you, we\u2019ll tell you and
+      <strong>refund the full \u00a3300</strong>. See the <a href="refunds.html">refund policy</a>.</p>
+    </div>
+
+    <div class="cta-row" style="margin-top:34px">
+      <a class="btn" href="index.html">Back to the site</a>
+      <a class="btn btn-ghost" href="contact.html">Ask us something</a>
+    </div>
+'''
+
 PAGES = [
     ("terms.html", "Terms of service",
      "The terms on which Aesir Solar prepares and submits your G99 Form A1-2 application.", TERMS),
@@ -492,6 +543,8 @@ PAGES = [
      "Get in touch with Aesir Solar about a G99 connection application.", CONTACT),
     ("faq.html", "Frequently asked questions",
      "Common questions about G99 Form A1-2, DNO approval, timescales and our fee.", faq_page()),
+    ("success.html", "Application received",
+     "Your G99 application payment went through. Here is what happens next.", SUCCESS),
 ]
 
 if __name__ == "__main__":
