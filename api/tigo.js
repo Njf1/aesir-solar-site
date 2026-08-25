@@ -45,26 +45,43 @@ async function api(path, token) {
   return r.json();
 }
 
-const today = () => new Date().toISOString().slice(0, 10);
+const dayStr = (offset = 0) => {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - offset);
+  return d.toISOString().slice(0, 10);
+};
+
+/** Hourly series for one day, Wh -> kWh, nulls dropped. */
+async function hourlyFor(date, token) {
+  const chart = await api(
+    `/api/v4/data/aggregate?systemId=${SYSTEM_ID}&view=solar&type=bar&agg=hour` +
+    `&start=${date}&end=${date}&output=echart&reclaimed=true`, token);
+  const total = (chart.series || []).find(s => s.id === 'solar_total');
+  return (total?.data || [])
+    .filter(([, v]) => v !== null && v !== undefined && v > 0)
+    .map(([t, v]) => ({ hour: Number(String(t).slice(11, 13)), kwh: +(v / 1000).toFixed(2) }));
+}
 
 export default async function handler(req, res) {
   try {
     const token = await getToken();
-    const d = today();
+    const d = dayStr();
 
-    const [lifetime, day, chart, view] = await Promise.all([
+    const [lifetime, day, view] = await Promise.all([
       api(`/api/v4/fleet/system/overview/data-lifetime?sysid=${SYSTEM_ID}&range=lifetime`, token),
       api(`/api/v4/fleet/system/overview/data-lifetime?sysid=${SYSTEM_ID}&range=day`, token),
-      api(`/api/v4/data/aggregate?systemId=${SYSTEM_ID}&view=solar&type=bar&agg=hour` +
-          `&start=${d}&end=${d}&output=echart&reclaimed=true`, token),
       api(`/api/v4/systems/view/${SYSTEM_ID}?includes=details`, token)
     ]);
 
-    // hourly series, Wh → kWh, nulls dropped
-    const total = (chart.series || []).find(s => s.id === 'solar_total');
-    const hourly = (total?.data || [])
-      .filter(([, v]) => v !== null && v !== undefined)
-      .map(([t, v]) => ({ hour: Number(String(t).slice(11, 13)), kwh: +(v / 1000).toFixed(2) }));
+    // Before sunrise there is nothing to show for today, and an empty chart
+    // reads as broken. Walk back to the most recent day that actually generated.
+    let chartDate = d;
+    let hourly = await hourlyFor(chartDate, token);
+    for (let back = 1; hourly.length === 0 && back <= 3; back++) {
+      chartDate = dayStr(back);
+      hourly = await hourlyFor(chartDate, token);
+    }
+    const showingToday = chartDate === d;
 
     const commissioned = view?.turn_on_date || view?.comissioned || null;
     let years = null, perYear = null;
@@ -98,7 +115,10 @@ export default async function handler(req, res) {
         kwh: +(day.energy / 1000).toFixed(2),
         reclaimedKwh: +(day.reclaimed / 1000).toFixed(2),
         peakHourKw: hourly.length ? Math.max(...hourly.map(h => h.kwh)) : null,
-        hourly
+        hourly,
+        chartDate,
+        showingToday,
+        chartTotalKwh: +hourly.reduce((a, h) => a + h.kwh, 0).toFixed(2)
       },
       meta: {
         source: 'Tigo Energy Intelligence, public view',

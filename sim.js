@@ -343,7 +343,14 @@ render();
 
     const kwh = n => n.toLocaleString('en-GB');
     document.getElementById('cLife').innerHTML  = kwh(d.lifetime.kwh) + '<small>kWh</small>';
-    document.getElementById('cToday').innerHTML = d.today.kwh.toFixed(1) + '<small>kWh</small>';
+    // Before sunrise "today" is legitimately zero, so show the last real day instead.
+    var shownKwh = d.today.showingToday ? d.today.kwh : d.today.chartTotalKwh;
+    document.getElementById('cToday').innerHTML = shownKwh.toFixed(1) + '<small>kWh</small>';
+    var todayLabel = document.querySelector('.cstats .k');
+    if (todayLabel && !d.today.showingToday) {
+      var labels = document.querySelectorAll('.cstats .k');
+      if (labels[1]) labels[1].textContent = 'Last full day, at the panels';
+    }
     document.getElementById('cRec').innerHTML   = kwh(d.lifetime.reclaimedKwh) + '<small>kWh</small>';
 
     document.getElementById('cSub').innerHTML =
@@ -366,11 +373,18 @@ render();
     const peakPct = d.today.peakHourKw && d.site.acRatingKw
       ? Math.round(d.today.peakHourKw / d.site.acRatingKw * 100) : null;
 
+    var dayWord = d.today.showingToday
+      ? 'Today'
+      : new Date(d.today.chartDate + 'T12:00:00Z')
+          .toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+
     setFoot(
       `<b>${kwh(d.lifetime.kwh)} kWh</b> generated since March 2024 &mdash; about ` +
       `<b>${kwh(d.lifetime.kwhPerYear)} kWh a year</b> from one roof in Lincolnshire. ` +
-      (peakPct ? `Today peaked at <b>${d.today.peakHourKw} kW</b>, ${peakPct}% of the ` +
+      (peakPct ? `${dayWord} peaked at <b>${d.today.peakHourKw} kW</b>, ${peakPct}% of the ` +
                  `${d.site.acRatingKw} kW inverter capacity. ` : '') +
+      (d.today.showingToday ? '' : 'The array hasn\u2019t started generating yet this morning, ' +
+        'so the chart shows the last full day. ') +
       `Read at ${stamp}.`);
   } catch (e) {
     // The page must still make sense if Tigo is down.

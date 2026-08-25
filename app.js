@@ -439,7 +439,12 @@
       life.innerHTML = n(d.lifetime.kwh) + '<small>kWh</small>';
       document.getElementById('rrSub').textContent =
         'about ' + n(d.lifetime.kwhPerYear) + ' kWh a year, from one roof';
-      document.getElementById('rrToday').innerHTML = d.today.kwh.toFixed(1) + '<small>kWh</small>';
+      var shown = d.today.showingToday ? d.today.kwh : d.today.chartTotalKwh;
+      document.getElementById('rrToday').innerHTML = shown.toFixed(1) + '<small>kWh</small>';
+      if (!d.today.showingToday) {
+        var lab = document.querySelectorAll('.rr-stats .k');
+        if (lab[0]) lab[0].textContent = 'Last full day, at the panels';
+      }
       document.getElementById('rrRec').innerHTML = n(d.lifetime.reclaimedKwh) + '<small>kWh</small>';
     })
     .catch(function () {
