@@ -1,0 +1,46 @@
+{
+  "measuredAt": "2026-09-08T15:48:19.632Z",
+  "files": [
+    {
+      "file": "experience-B4ceNA3g.css",
+      "bytes": 9225,
+      "gzip": 2751,
+      "sha256": "4d254388054e0f56149cfe0bed8fdbc16cd5949dd86773f18e28bb1850269fb0"
+    },
+    {
+      "file": "experience-CT1Vf8wC.js",
+      "bytes": 119875,
+      "gzip": 46915,
+      "sha256": "4565a220400eef38f1dc10c1472dda3d4d69c50f059e186c458e66f86ee245e9"
+    },
+    {
+      "file": "experience-poster-2apZrVuk.webp",
+      "bytes": 138054,
+      "gzip": 137076,
+      "sha256": "ff57b7d0ccef8d2aac20d1de69b9eaa0337219258ed4a7b789144c7a9ccfa9c3"
+    },
+    {
+      "file": "experience-poster-mobile-DhtopdsF.webp",
+      "bytes": 60052,
+      "gzip": 59559,
+      "sha256": "5ead650dfdf98b4b0546fee4b3eccf86743829f2c7aaea35877bf1069a1e265e"
+    },
+    {
+      "file": "favicon-NywgcjmD.svg",
+      "bytes": 332,
+      "gzip": 243,
+      "sha256": "98881d0ac23cc0f160c7958dda01a03af6e65d608d9f45cad804e21518d9c7f3"
+    },
+    {
+      "file": "scene-64PLyKwf.js",
+      "bytes": 538961,
+      "gzip": 135067,
+      "sha256": "f06845004a3f0f5fd76cc3e77c3c988c2fe0343069cff4ec145c161e87cf01b7"
+    }
+  ],
+  "newJavaScriptGzipBytes": 181982,
+  "budgetBytes": 750000,
+  "newMediaBytes": 198106,
+  "mediaBudgetBytes": 2000000,
+  "pass": true
+}

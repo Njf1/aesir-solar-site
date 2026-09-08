@@ -1,0 +1,72 @@
+{
+  "browser": "151.0.7922.34",
+  "hardware": "MacBook Air, Apple M4 10-core CPU / 10-core GPU, 16 GB RAM",
+  "renderer": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)"
+  },
+  "method": "4-second requestAnimationFrame sample at each settled chapter, headless Chromium on Metal. Frame intervals are not GPU timer queries.",
+  "realMobileTested": false,
+  "rows": [
+    {
+      "viewport": "desktop",
+      "chapter": "opening",
+      "frames": 246,
+      "meanFPS": 59.99,
+      "medianMs": 16.7,
+      "p95Ms": 17.4,
+      "drawCalls": 15,
+      "triangles": 23878
+    },
+    {
+      "viewport": "desktop",
+      "chapter": "sun",
+      "frames": 250,
+      "meanFPS": 60,
+      "medianMs": 16.7,
+      "p95Ms": 17.3,
+      "drawCalls": 15,
+      "triangles": 23878
+    },
+    {
+      "viewport": "desktop",
+      "chapter": "departure",
+      "frames": 245,
+      "meanFPS": 60,
+      "medianMs": 16.7,
+      "p95Ms": 17.4,
+      "drawCalls": 16,
+      "triangles": 24226
+    },
+    {
+      "viewport": "mobile",
+      "chapter": "opening",
+      "frames": 246,
+      "meanFPS": 60,
+      "medianMs": 16.7,
+      "p95Ms": 17.4,
+      "drawCalls": 15,
+      "triangles": 11046
+    },
+    {
+      "viewport": "mobile",
+      "chapter": "sun",
+      "frames": 246,
+      "meanFPS": 60,
+      "medianMs": 16.7,
+      "p95Ms": 17.4,
+      "drawCalls": 12,
+      "triangles": 10086
+    },
+    {
+      "viewport": "mobile",
+      "chapter": "departure",
+      "frames": 246,
+      "meanFPS": 60,
+      "medianMs": 16.7,
+      "p95Ms": 17.3,
+      "drawCalls": 5,
+      "triangles": 352
+    }
+  ]
+}

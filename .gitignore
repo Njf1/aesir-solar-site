@@ -1,1 +1,6 @@
 .vercel
+node_modules/
+.preview-build/
+.release/
+test-results/
+playwright-report/

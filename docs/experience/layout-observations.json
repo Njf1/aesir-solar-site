@@ -1,0 +1,25 @@
+[
+  {
+    "name": "desktop",
+    "overflow": false,
+    "focus": "application-details"
+  },
+  {
+    "name": "desktop-fallback",
+    "loaded": true
+  },
+  {
+    "name": "mobile",
+    "overflow": false,
+    "focus": "application-details"
+  },
+  {
+    "name": "mobile-fallback",
+    "loaded": true
+  },
+  {
+    "name": "200-percent-equivalent-layout",
+    "overflow": false,
+    "ctaCount": 2
+  }
+]
