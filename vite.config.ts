@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
+import {recordedGenerationPlugin} from './scripts/recorded-generation.mjs';
 export default defineConfig({
   appType: 'mpa',
   publicDir: false,
-  plugins: [{
+  plugins: [recordedGenerationPlugin(),{
     name: 'existing-static-routes',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {

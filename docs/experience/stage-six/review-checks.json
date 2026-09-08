@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "command": "npm run build",
+      "startedAt": "2026-09-08T20:36:37.761Z",
+      "elapsedMs": 533,
+      "exitCode": 0,
+      "log": "review-1.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "startedAt": "2026-09-08T20:36:38.294Z",
+      "elapsedMs": 281,
+      "exitCode": 0,
+      "log": "review-2.log"
+    },
+    {
+      "command": "npm test",
+      "startedAt": "2026-09-08T20:36:38.575Z",
+      "elapsedMs": 971,
+      "exitCode": 0,
+      "log": "review-3.log"
+    },
+    {
+      "command": "npm run test:browser",
+      "startedAt": "2026-09-08T20:36:39.546Z",
+      "elapsedMs": 243649,
+      "exitCode": 0,
+      "log": "review-4.log"
+    },
+    {
+      "command": "node scripts/capture-stage-six.mjs",
+      "startedAt": "2026-09-08T20:40:43.195Z",
+      "elapsedMs": 25440,
+      "exitCode": 0,
+      "log": "review-5.log"
+    },
+    {
+      "command": "node scripts/inspect-stage-six.mjs",
+      "startedAt": "2026-09-08T20:41:08.635Z",
+      "elapsedMs": 353921,
+      "exitCode": 0,
+      "log": "review-6.log"
+    },
+    {
+      "command": "node scripts/verify-stage-six.mjs",
+      "startedAt": "2026-09-08T20:47:02.556Z",
+      "elapsedMs": 92743,
+      "exitCode": 0,
+      "log": "review-7.log"
+    }
+  ]
+}

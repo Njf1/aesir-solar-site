@@ -1,0 +1,38 @@
+{
+  name: 'laptop',
+  errors: [],
+  warnings: [],
+  paused: true,
+  offscreen: true
+}
+{
+  name: 'desktop',
+  errors: [],
+  warnings: [],
+  paused: true,
+  offscreen: true
+}
+{
+  name: 'mobile',
+  errors: [],
+  warnings: [],
+  paused: true,
+  offscreen: true
+}
+{
+  name: 'intermediate',
+  errors: [],
+  warnings: [],
+  paused: true,
+  offscreen: true
+}
+{
+  name: 'short',
+  errors: [],
+  warnings: [],
+  paused: true,
+  offscreen: true
+}
+{ name: 'text-200-mobile', errors: [], warnings: [] }
+{ name: 'text-200-laptop', errors: [], warnings: [] }
+{ name: 'zoom-200', errors: [], warnings: [] }

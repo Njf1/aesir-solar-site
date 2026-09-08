@@ -1,0 +1,75 @@
+{
+  name: 'laptop',
+  frames: [
+    { label: 'Sun', p50: 16.699999999999818, p95: 17.299999999999955 },
+    {
+      label: 'Business',
+      p50: 16.699999999999818,
+      p95: 16.800000000000182
+    },
+    { label: 'Brand', p50: 16.69999999999891, p95: 17.299999999999272 }
+  ],
+  frozen: true,
+  errors: [],
+  warnings: []
+}
+{
+  name: 'desktop',
+  frames: [
+    { label: 'Sun', p50: 16.699999999999818, p95: 17.399999999999977 },
+    {
+      label: 'Business',
+      p50: 16.699999999999818,
+      p95: 17.399999999999636
+    },
+    { label: 'Brand', p50: 16.69999999999891, p95: 17.399999999999636 }
+  ],
+  frozen: true,
+  errors: [],
+  warnings: []
+}
+{
+  name: 'mobile',
+  frames: [
+    { label: 'Sun', p50: 16.699999999999818, p95: 17.5 },
+    {
+      label: 'Business',
+      p50: 16.699999999999818,
+      p95: 17.200000000000728
+    },
+    { label: 'Brand', p50: 16.69999999999891, p95: 17.100000000000364 }
+  ],
+  frozen: true,
+  errors: [],
+  warnings: []
+}
+{
+  name: 'intermediate',
+  frames: [
+    { label: 'Sun', p50: 16.699999999999818, p95: 17.5 },
+    {
+      label: 'Business',
+      p50: 16.699999999999818,
+      p95: 17.199999999999818
+    },
+    { label: 'Brand', p50: 16.69999999999891, p95: 17.399999999999636 }
+  ],
+  frozen: true,
+  errors: [],
+  warnings: []
+}
+{
+  name: 'short',
+  frames: [
+    { label: 'Sun', p50: 16.699999999999818, p95: 17.299999999999955 },
+    {
+      label: 'Business',
+      p50: 16.699999999999818,
+      p95: 17.400000000000546
+    },
+    { label: 'Brand', p50: 16.69999999999891, p95: 17.399999999999636 }
+  ],
+  frozen: true,
+  errors: [],
+  warnings: []
+}

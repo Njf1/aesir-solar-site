@@ -1,0 +1,3242 @@
+{
+  "recordedAt": "2026-09-08T20:47:03.030Z",
+  "hardware": {
+    "model": "Mac16,13",
+    "cpu": "Apple M4",
+    "cores": 10,
+    "memoryGiB": 16,
+    "platform": "darwin",
+    "release": "25.6.0",
+    "arch": "arm64",
+    "browser": "151.0.7922.34",
+    "node": "v24.15.0"
+  },
+  "delivery": {
+    "javascriptGzip": 242212,
+    "javascriptDelta": 59,
+    "media": 1844085,
+    "mediaDelta": 0,
+    "cssGzip": 7550,
+    "cssGzipDelta": 3406,
+    "documentBytes": 40450,
+    "documentGzip": 11649,
+    "pass": true
+  },
+  "views": [
+    {
+      "name": "laptop",
+      "width": 1280,
+      "height": 720,
+      "requestedDpr": 1,
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "scenes": [
+        {
+          "label": "Sun",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.299999999999955,
+          "p99": 17.40000000000009,
+          "max": 17.5,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 20,
+            "triangles": 30042,
+            "geometries": 21,
+            "textures": 2,
+            "ambientTime": 4.283299999999997,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {}
+          }
+        },
+        {
+          "label": "Business",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182,
+          "p99": 17.299999999999272,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 65,
+            "triangles": 116216,
+            "geometries": 61,
+            "textures": 8,
+            "ambientTime": 8.866700000000021,
+            "onscreen": true,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              }
+            }
+          }
+        },
+        {
+          "label": "Brand",
+          "frames": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.299999999999272,
+          "p99": 17.5,
+          "max": 17.69999999999891,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.183399999999976,
+            "onscreen": true,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              },
+              "storage": {
+                "requestedAt": 9078.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 11.300000011920929,
+                "compileMs": 11.399999976158142,
+                "totalMs": 22.69999998807907
+              }
+            }
+          }
+        }
+      ],
+      "editorial": [
+        {
+          "id": "application-details",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.216699999999975,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              },
+              "storage": {
+                "requestedAt": 9078.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 11.300000011920929,
+                "compileMs": 11.399999976158142,
+                "totalMs": 22.69999998807907
+              }
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.216699999999975,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              },
+              "storage": {
+                "requestedAt": 9078.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 11.300000011920929,
+                "compileMs": 11.399999976158142,
+                "totalMs": 22.69999998807907
+              }
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.216699999999975,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              },
+              "storage": {
+                "requestedAt": 9078.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 11.300000011920929,
+                "compileMs": 11.399999976158142,
+                "totalMs": 22.69999998807907
+              }
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.216699999999975,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              },
+              "storage": {
+                "requestedAt": 9078.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 11.300000011920929,
+                "compileMs": 11.399999976158142,
+                "totalMs": 22.69999998807907
+              }
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1280,
+              "height": 720,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.216699999999975,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4429.399999976158,
+                "status": "ready",
+                "totalMs": 61.10000002384186
+              },
+              "site": {
+                "requestedAt": 4490.5,
+                "status": "ready",
+                "totalMs": 82.5
+              },
+              "cell": {
+                "requestedAt": 4573,
+                "status": "ready",
+                "totalMs": 94.39999997615814
+              },
+              "electrical": {
+                "requestedAt": 4667.399999976158,
+                "status": "ready",
+                "totalMs": 18.69999998807907
+              },
+              "business": {
+                "requestedAt": 4686.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 4.800000011920929,
+                "compileMs": 27.30000001192093,
+                "totalMs": 32.10000002384186
+              },
+              "storage": {
+                "requestedAt": 9078.099999964237,
+                "status": "ready",
+                "importAndBuildMs": 11.300000011920929,
+                "compileMs": 11.399999976158142,
+                "totalMs": 22.69999998807907
+              }
+            }
+          }
+        }
+      ],
+      "openingObservedReadyMs": 136,
+      "openingTransfer": {
+        "requests": 11,
+        "encodedBodyBytes": 957053,
+        "transferBytes": 960353,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+            "encodedBodyBytes": 138054,
+            "transferBytes": 138354
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          }
+        ]
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "completeTransfer": {
+        "requests": 21,
+        "encodedBodyBytes": 2439190,
+        "transferBytes": 2445490,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+            "encodedBodyBytes": 138054,
+            "transferBytes": 138354
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-day-4096-BO1QlKRh.webp",
+            "encodedBodyBytes": 566958,
+            "transferBytes": 567258
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-2048-CxNnPLJI.webp",
+            "encodedBodyBytes": 336230,
+            "transferBytes": 336530
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+            "encodedBodyBytes": 3473,
+            "transferBytes": 3773
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+            "encodedBodyBytes": 503245,
+            "transferBytes": 503545
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+            "encodedBodyBytes": 20983,
+            "transferBytes": 21283
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+            "encodedBodyBytes": 12633,
+            "transferBytes": 12933
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+            "encodedBodyBytes": 1384,
+            "transferBytes": 1684
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+            "encodedBodyBytes": 9683,
+            "transferBytes": 9983
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+            "encodedBodyBytes": 14923,
+            "transferBytes": 15223
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+            "encodedBodyBytes": 12625,
+            "transferBytes": 12925
+          }
+        ]
+      },
+      "reversal": {
+        "geometries": [
+          66,
+          66
+        ],
+        "textures": [
+          8,
+          8
+        ],
+        "requests": [
+          21,
+          21
+        ],
+        "singleCanvas": true
+      }
+    },
+    {
+      "name": "desktop",
+      "width": 1600,
+      "height": 1000,
+      "requestedDpr": 1,
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "scenes": [
+        {
+          "label": "Sun",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.399999999999977,
+          "p99": 17.600000000000364,
+          "max": 17.700000000000045,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 20,
+            "triangles": 30042,
+            "geometries": 21,
+            "textures": 2,
+            "ambientTime": 4.2666999999999975,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {}
+          }
+        },
+        {
+          "label": "Business",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.399999999999636,
+          "p99": 17.600000000000364,
+          "max": 17.699999999999818,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 65,
+            "triangles": 116216,
+            "geometries": 61,
+            "textures": 8,
+            "ambientTime": 8.882600000000027,
+            "onscreen": true,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              }
+            }
+          }
+        },
+        {
+          "label": "Brand",
+          "frames": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.399999999999636,
+          "p99": 17.5,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.215899999999985,
+            "onscreen": true,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9044,
+                "status": "ready",
+                "importAndBuildMs": 14.300000011920929,
+                "compileMs": 11.199999988079071,
+                "totalMs": 25.5
+              }
+            }
+          }
+        }
+      ],
+      "editorial": [
+        {
+          "id": "application-details",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.249199999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9044,
+                "status": "ready",
+                "importAndBuildMs": 14.300000011920929,
+                "compileMs": 11.199999988079071,
+                "totalMs": 25.5
+              }
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.249199999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9044,
+                "status": "ready",
+                "importAndBuildMs": 14.300000011920929,
+                "compileMs": 11.199999988079071,
+                "totalMs": 25.5
+              }
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.249199999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9044,
+                "status": "ready",
+                "importAndBuildMs": 14.300000011920929,
+                "compileMs": 11.199999988079071,
+                "totalMs": 25.5
+              }
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.249199999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9044,
+                "status": "ready",
+                "importAndBuildMs": 14.300000011920929,
+                "compileMs": 11.199999988079071,
+                "totalMs": 25.5
+              }
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1600,
+              "height": 1000,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.249199999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4410.5,
+                "status": "ready",
+                "totalMs": 64.10000002384186
+              },
+              "site": {
+                "requestedAt": 4474.600000023842,
+                "status": "ready",
+                "totalMs": 65.89999997615814
+              },
+              "cell": {
+                "requestedAt": 4540.5,
+                "status": "ready",
+                "totalMs": 96
+              },
+              "electrical": {
+                "requestedAt": 4636.600000023842,
+                "status": "ready",
+                "totalMs": 40.09999996423721
+              },
+              "business": {
+                "requestedAt": 4676.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.100000023841858,
+                "compileMs": 24.19999998807907,
+                "totalMs": 32.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9044,
+                "status": "ready",
+                "importAndBuildMs": 14.300000011920929,
+                "compileMs": 11.199999988079071,
+                "totalMs": 25.5
+              }
+            }
+          }
+        }
+      ],
+      "openingObservedReadyMs": 129,
+      "openingTransfer": {
+        "requests": 11,
+        "encodedBodyBytes": 957053,
+        "transferBytes": 960353,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+            "encodedBodyBytes": 138054,
+            "transferBytes": 138354
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          }
+        ]
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "completeTransfer": {
+        "requests": 21,
+        "encodedBodyBytes": 2439190,
+        "transferBytes": 2445490,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+            "encodedBodyBytes": 138054,
+            "transferBytes": 138354
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-day-4096-BO1QlKRh.webp",
+            "encodedBodyBytes": 566958,
+            "transferBytes": 567258
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-2048-CxNnPLJI.webp",
+            "encodedBodyBytes": 336230,
+            "transferBytes": 336530
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+            "encodedBodyBytes": 3473,
+            "transferBytes": 3773
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+            "encodedBodyBytes": 503245,
+            "transferBytes": 503545
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+            "encodedBodyBytes": 20983,
+            "transferBytes": 21283
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+            "encodedBodyBytes": 12633,
+            "transferBytes": 12933
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+            "encodedBodyBytes": 1384,
+            "transferBytes": 1684
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+            "encodedBodyBytes": 9683,
+            "transferBytes": 9983
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+            "encodedBodyBytes": 14923,
+            "transferBytes": 15223
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+            "encodedBodyBytes": 12625,
+            "transferBytes": 12925
+          }
+        ]
+      },
+      "reversal": {
+        "geometries": [
+          66,
+          66
+        ],
+        "textures": [
+          8,
+          8
+        ],
+        "requests": [
+          21,
+          21
+        ],
+        "singleCanvas": true
+      }
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "requestedDpr": 3,
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "scenes": [
+        {
+          "label": "Sun",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.5,
+          "p99": 17.700000000000045,
+          "max": 17.700000000000273,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 10,
+            "triangles": 11802,
+            "geometries": 21,
+            "textures": 2,
+            "ambientTime": 4.2833000000000006,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {}
+          }
+        },
+        {
+          "label": "Business",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.200000000000728,
+          "p99": 17.5,
+          "max": 17.699999999999818,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 63,
+            "triangles": 104158,
+            "geometries": 59,
+            "textures": 8,
+            "ambientTime": 8.849900000000032,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              }
+            }
+          }
+        },
+        {
+          "label": "Brand",
+          "frames": 239,
+          "p50": 16.69999999999891,
+          "p95": 17.100000000000364,
+          "p99": 17.600000000000364,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.166599999999981,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9038.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 14.799999952316284,
+                "compileMs": 11.700000047683716,
+                "totalMs": 26.5
+              }
+            }
+          }
+        }
+      ],
+      "editorial": [
+        {
+          "id": "application-details",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21659999999998,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9038.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 14.799999952316284,
+                "compileMs": 11.700000047683716,
+                "totalMs": 26.5
+              }
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21659999999998,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9038.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 14.799999952316284,
+                "compileMs": 11.700000047683716,
+                "totalMs": 26.5
+              }
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21659999999998,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9038.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 14.799999952316284,
+                "compileMs": 11.700000047683716,
+                "totalMs": 26.5
+              }
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21659999999998,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9038.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 14.799999952316284,
+                "compileMs": 11.700000047683716,
+                "totalMs": 26.5
+              }
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21659999999998,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4421.100000023842,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 4485,
+                "status": "ready",
+                "totalMs": 60.69999998807907
+              },
+              "cell": {
+                "requestedAt": 4545.699999988079,
+                "status": "ready",
+                "totalMs": 79.80000001192093
+              },
+              "electrical": {
+                "requestedAt": 4625.600000023842,
+                "status": "ready",
+                "totalMs": 18.799999952316284
+              },
+              "business": {
+                "requestedAt": 4644.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 4.100000023841858,
+                "compileMs": 26.19999998807907,
+                "totalMs": 30.30000001192093
+              },
+              "storage": {
+                "requestedAt": 9038.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 14.799999952316284,
+                "compileMs": 11.700000047683716,
+                "totalMs": 26.5
+              }
+            }
+          }
+        }
+      ],
+      "openingObservedReadyMs": 128,
+      "openingTransfer": {
+        "requests": 11,
+        "encodedBodyBytes": 879051,
+        "transferBytes": 882351,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+            "encodedBodyBytes": 60052,
+            "transferBytes": 60352
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          }
+        ]
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "completeTransfer": {
+        "requests": 21,
+        "encodedBodyBytes": 1697546,
+        "transferBytes": 1703846,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+            "encodedBodyBytes": 60052,
+            "transferBytes": 60352
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-day-2048-DtZ8Fp4V.webp",
+            "encodedBodyBytes": 137856,
+            "transferBytes": 138156
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-1024-BKjMs3Vz.webp",
+            "encodedBodyBytes": 101690,
+            "transferBytes": 101990
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+            "encodedBodyBytes": 3473,
+            "transferBytes": 3773
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+            "encodedBodyBytes": 503245,
+            "transferBytes": 503545
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+            "encodedBodyBytes": 20983,
+            "transferBytes": 21283
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+            "encodedBodyBytes": 12633,
+            "transferBytes": 12933
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+            "encodedBodyBytes": 1384,
+            "transferBytes": 1684
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+            "encodedBodyBytes": 9683,
+            "transferBytes": 9983
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+            "encodedBodyBytes": 14923,
+            "transferBytes": 15223
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+            "encodedBodyBytes": 12625,
+            "transferBytes": 12925
+          }
+        ]
+      },
+      "reversal": {
+        "geometries": [
+          66,
+          66
+        ],
+        "textures": [
+          8,
+          8
+        ],
+        "requests": [
+          21,
+          21
+        ],
+        "singleCanvas": true
+      }
+    },
+    {
+      "name": "intermediate",
+      "width": 740,
+      "height": 900,
+      "requestedDpr": 1,
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "scenes": [
+        {
+          "label": "Sun",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.5,
+          "p99": 17.600000000000364,
+          "max": 17.699999999999818,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 20,
+            "triangles": 17210,
+            "geometries": 21,
+            "textures": 2,
+            "ambientTime": 4.266800000000002,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {}
+          }
+        },
+        {
+          "label": "Business",
+          "frames": 240,
+          "p50": 16.699999999999818,
+          "p95": 17.199999999999818,
+          "p99": 17.5,
+          "max": 17.600000000000364,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 66,
+            "triangles": 104340,
+            "geometries": 59,
+            "textures": 8,
+            "ambientTime": 8.866700000000025,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              }
+            }
+          }
+        },
+        {
+          "label": "Brand",
+          "frames": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.399999999999636,
+          "p99": 17.600000000000364,
+          "max": 17.69999999999891,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.18339999999997,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              },
+              "storage": {
+                "requestedAt": 8999.899999976158,
+                "status": "ready",
+                "importAndBuildMs": 14,
+                "compileMs": 11.900000035762787,
+                "totalMs": 25.900000035762787
+              }
+            }
+          }
+        }
+      ],
+      "editorial": [
+        {
+          "id": "application-details",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21669999999997,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              },
+              "storage": {
+                "requestedAt": 8999.899999976158,
+                "status": "ready",
+                "importAndBuildMs": 14,
+                "compileMs": 11.900000035762787,
+                "totalMs": 25.900000035762787
+              }
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21669999999997,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              },
+              "storage": {
+                "requestedAt": 8999.899999976158,
+                "status": "ready",
+                "importAndBuildMs": 14,
+                "compileMs": 11.900000035762787,
+                "totalMs": 25.900000035762787
+              }
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21669999999997,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              },
+              "storage": {
+                "requestedAt": 8999.899999976158,
+                "status": "ready",
+                "importAndBuildMs": 14,
+                "compileMs": 11.900000035762787,
+                "totalMs": 25.900000035762787
+              }
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21669999999997,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              },
+              "storage": {
+                "requestedAt": 8999.899999976158,
+                "status": "ready",
+                "importAndBuildMs": 14,
+                "compileMs": 11.900000035762787,
+                "totalMs": 25.900000035762787
+              }
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 740,
+              "height": 900,
+              "pixelRatio": 1,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 86,
+            "triangles": 106508,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.21669999999997,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 4400.300000011921,
+                "status": "ready",
+                "totalMs": 50.299999952316284
+              },
+              "site": {
+                "requestedAt": 4450.699999988079,
+                "status": "ready",
+                "totalMs": 70.19999998807907
+              },
+              "cell": {
+                "requestedAt": 4521,
+                "status": "ready",
+                "totalMs": 76.59999996423721
+              },
+              "electrical": {
+                "requestedAt": 4597.599999964237,
+                "status": "ready",
+                "totalMs": 20.700000047683716
+              },
+              "business": {
+                "requestedAt": 4618.399999976158,
+                "status": "ready",
+                "importAndBuildMs": 3.600000023841858,
+                "compileMs": 35.69999998807907,
+                "totalMs": 39.30000001192093
+              },
+              "storage": {
+                "requestedAt": 8999.899999976158,
+                "status": "ready",
+                "importAndBuildMs": 14,
+                "compileMs": 11.900000035762787,
+                "totalMs": 25.900000035762787
+              }
+            }
+          }
+        }
+      ],
+      "openingObservedReadyMs": 119,
+      "openingTransfer": {
+        "requests": 11,
+        "encodedBodyBytes": 879051,
+        "transferBytes": 882351,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+            "encodedBodyBytes": 60052,
+            "transferBytes": 60352
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          }
+        ]
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "completeTransfer": {
+        "requests": 21,
+        "encodedBodyBytes": 1697546,
+        "transferBytes": 1703846,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+            "encodedBodyBytes": 60052,
+            "transferBytes": 60352
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-day-2048-DtZ8Fp4V.webp",
+            "encodedBodyBytes": 137856,
+            "transferBytes": 138156
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-1024-BKjMs3Vz.webp",
+            "encodedBodyBytes": 101690,
+            "transferBytes": 101990
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+            "encodedBodyBytes": 3473,
+            "transferBytes": 3773
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+            "encodedBodyBytes": 503245,
+            "transferBytes": 503545
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+            "encodedBodyBytes": 20983,
+            "transferBytes": 21283
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+            "encodedBodyBytes": 12633,
+            "transferBytes": 12933
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+            "encodedBodyBytes": 1384,
+            "transferBytes": 1684
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+            "encodedBodyBytes": 9683,
+            "transferBytes": 9983
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+            "encodedBodyBytes": 14923,
+            "transferBytes": 15223
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+            "encodedBodyBytes": 12625,
+            "transferBytes": 12925
+          }
+        ]
+      },
+      "reversal": {
+        "geometries": [
+          66,
+          66
+        ],
+        "textures": [
+          8,
+          8
+        ],
+        "requests": [
+          21,
+          21
+        ],
+        "singleCanvas": true
+      }
+    },
+    {
+      "name": "short",
+      "width": 1000,
+      "height": 500,
+      "requestedDpr": 1,
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "scenes": [
+        {
+          "label": "Sun",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.299999999999955,
+          "p99": 17.699999999999818,
+          "max": 17.700000000000045,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 20,
+            "triangles": 30042,
+            "geometries": 21,
+            "textures": 2,
+            "ambientTime": 4.2665999999999995,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {}
+          }
+        },
+        {
+          "label": "Business",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.400000000000546,
+          "p99": 17.599999999999454,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 66,
+            "triangles": 116536,
+            "geometries": 61,
+            "textures": 8,
+            "ambientTime": 8.899900000000025,
+            "onscreen": true,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              }
+            }
+          }
+        },
+        {
+          "label": "Brand",
+          "frames": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.399999999999636,
+          "p99": 17.600000000000364,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.233199999999973,
+            "onscreen": true,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              },
+              "storage": {
+                "requestedAt": 9051.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 15.899999976158142,
+                "compileMs": 11.699999988079071,
+                "totalMs": 27.599999964237213
+              }
+            }
+          }
+        }
+      ],
+      "editorial": [
+        {
+          "id": "application-details",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.266499999999972,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              },
+              "storage": {
+                "requestedAt": 9051.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 15.899999976158142,
+                "compileMs": 11.699999988079071,
+                "totalMs": 27.599999964237213
+              }
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.266499999999972,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              },
+              "storage": {
+                "requestedAt": 9051.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 15.899999976158142,
+                "compileMs": 11.699999988079071,
+                "totalMs": 27.599999964237213
+              }
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.266499999999972,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              },
+              "storage": {
+                "requestedAt": 9051.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 15.899999976158142,
+                "compileMs": 11.699999988079071,
+                "totalMs": 27.599999964237213
+              }
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.266499999999972,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              },
+              "storage": {
+                "requestedAt": 9051.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 15.899999976158142,
+                "compileMs": 11.699999988079071,
+                "totalMs": 27.599999964237213
+              }
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "desktop",
+              "width": 1000,
+              "height": 500,
+              "pixelRatio": 1,
+              "detail": 5,
+              "segments": 128
+            },
+            "drawCalls": 86,
+            "triangles": 120088,
+            "geometries": 66,
+            "textures": 8,
+            "ambientTime": 13.266499999999972,
+            "onscreen": false,
+            "shadowEstimatedBytes": 33554432,
+            "readiness": {
+              "region": {
+                "requestedAt": 4402.100000023842,
+                "status": "ready",
+                "totalMs": 64.39999997615814
+              },
+              "site": {
+                "requestedAt": 4466.5,
+                "status": "ready",
+                "totalMs": 65
+              },
+              "cell": {
+                "requestedAt": 4531.5,
+                "status": "ready",
+                "totalMs": 96.19999998807907
+              },
+              "electrical": {
+                "requestedAt": 4627.699999988079,
+                "status": "ready",
+                "totalMs": 38.60000002384186
+              },
+              "business": {
+                "requestedAt": 4666.300000011921,
+                "status": "ready",
+                "importAndBuildMs": 8.099999964237213,
+                "compileMs": 34.30000001192093,
+                "totalMs": 42.39999997615814
+              },
+              "storage": {
+                "requestedAt": 9051.800000011921,
+                "status": "ready",
+                "importAndBuildMs": 15.899999976158142,
+                "compileMs": 11.699999988079071,
+                "totalMs": 27.599999964237213
+              }
+            }
+          }
+        }
+      ],
+      "openingObservedReadyMs": 129,
+      "openingTransfer": {
+        "requests": 11,
+        "encodedBodyBytes": 957053,
+        "transferBytes": 960353,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+            "encodedBodyBytes": 138054,
+            "transferBytes": 138354
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          }
+        ]
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "completeTransfer": {
+        "requests": 21,
+        "encodedBodyBytes": 2439190,
+        "transferBytes": 2445490,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 40450,
+            "transferBytes": 40750
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+            "encodedBodyBytes": 131885,
+            "transferBytes": 132185
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+            "encodedBodyBytes": 223308,
+            "transferBytes": 223608
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+            "encodedBodyBytes": 7519,
+            "transferBytes": 7819
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+            "encodedBodyBytes": 33818,
+            "transferBytes": 34118
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+            "encodedBodyBytes": 138054,
+            "transferBytes": 138354
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+            "encodedBodyBytes": 378446,
+            "transferBytes": 378746
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-day-4096-BO1QlKRh.webp",
+            "encodedBodyBytes": 566958,
+            "transferBytes": 567258
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-2048-CxNnPLJI.webp",
+            "encodedBodyBytes": 336230,
+            "transferBytes": 336530
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+            "encodedBodyBytes": 3473,
+            "transferBytes": 3773
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+            "encodedBodyBytes": 503245,
+            "transferBytes": 503545
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+            "encodedBodyBytes": 20983,
+            "transferBytes": 21283
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+            "encodedBodyBytes": 1384,
+            "transferBytes": 1684
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+            "encodedBodyBytes": 12633,
+            "transferBytes": 12933
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+            "encodedBodyBytes": 9683,
+            "transferBytes": 9983
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+            "encodedBodyBytes": 14923,
+            "transferBytes": 15223
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+            "encodedBodyBytes": 12625,
+            "transferBytes": 12925
+          }
+        ]
+      },
+      "reversal": {
+        "geometries": [
+          66,
+          66
+        ],
+        "textures": [
+          8,
+          8
+        ],
+        "requests": [
+          21,
+          21
+        ],
+        "singleCanvas": true
+      }
+    }
+  ]
+}

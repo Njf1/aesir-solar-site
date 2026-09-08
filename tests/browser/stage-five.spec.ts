@@ -136,7 +136,7 @@ for(const [name,viewport]of[['desktop',{width:1280,height:720}],['portrait',{wid
    const s=await snapshot(page);expect(s.progress).toBe(p);expect(s.ambientTime).toBe(time);expect(s.failed).toBe(false);expect(s.copyOpacities.filter((n:number)=>n>.5)).toHaveLength(1);
    if(p>4.14){expect(s.shot.pulseOpacity).toBe(0);await expect(page.locator('#inverter-annotations')).toBeHidden();}
    if(still==='storage'){expect(s.shot.operation.charge).toBeGreaterThan(0);expect(s.shot.operation.discharge).toBe(0);await expect(page.locator('[data-copy="13"]')).toContainText('OPTIONAL');}
-   if(still==='connected'){expect(s.shot.operation.importFlow).toBeGreaterThan(0);expect(s.shot.operation.exportFlow).toBe(0);await expect(page.locator('[data-copy="15"]')).toContainText('IMPORT');}
+   if(still==='connected'){expect(s.shot.operation.importFlow).toBeGreaterThan(0);expect(s.shot.operation.exportFlow).toBe(0);await expect(page.locator('[data-copy="15"]')).toContainText('WHEN THE GRID SUPPLIES POWER');}
   }
   await expect(page.locator('#pause-motion')).toBeHidden();await expect(page.locator('#journey')).not.toHaveClass(/is-enhanced/);
   await page.locator('.skip-link').focus();await page.keyboard.press('Enter');await expect(page.locator('#application-details')).toBeFocused();await expect(page.locator('.primary-button')).toHaveAttribute('href','/apply.html');

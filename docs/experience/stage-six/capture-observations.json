@@ -1,0 +1,5791 @@
+{
+  "recordedAt": "2026-09-08T20:41:08.580Z",
+  "browser": "151.0.7922.34",
+  "reports": [
+    {
+      "name": "laptop",
+      "width": 1280,
+      "height": 720,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "p": 4.2,
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 16935,
+            "active": "",
+            "copy": [
+              {
+                "copy": "11",
+                "text": "OPERATION, ILLUSTRATED\n\nIllustration of operation after the required permissions and commissioning.",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 223.1875,
+                  "width": 435.1875,
+                  "height": 85.96875,
+                  "top": 223.1875,
+                  "right": 537.578125,
+                  "bottom": 309.15625,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "OPERATION, ILLUSTRATED",
+                    "font": "12px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 223.1875,
+                      "width": 435.1875,
+                      "height": 19.1875,
+                      "top": 223.1875,
+                      "right": 537.578125,
+                      "bottom": 242.375,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 256.375,
+                      "width": 350,
+                      "height": 52.78125,
+                      "top": 256.375,
+                      "right": 452.390625,
+                      "bottom": 309.15625,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": 644,
+              "width": 1152,
+              "height": 38,
+              "top": 644,
+              "right": 1216,
+              "bottom": 682,
+              "left": 64
+            }
+          }
+        },
+        {
+          "label": "business",
+          "p": 4.5,
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 18144,
+            "active": "",
+            "copy": [
+              {
+                "copy": "12",
+                "text": "A WORKING BUSINESS\n\nENERGY,\nPUT TO WORK.\n\nFrom rooftop generation to the places your business needs power.",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 201.59375,
+                  "width": 448,
+                  "height": 222.09375,
+                  "top": 201.59375,
+                  "right": 550.390625,
+                  "bottom": 423.6875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "A WORKING BUSINESS",
+                    "font": "11px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 201.59375,
+                      "width": 448,
+                      "height": 17.59375,
+                      "top": 201.59375,
+                      "right": 550.390625,
+                      "bottom": 219.1875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "ENERGY,PUT TO WORK.",
+                    "font": "52.48px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 244.1875,
+                      "width": 448,
+                      "height": 106,
+                      "top": 244.1875,
+                      "right": 550.390625,
+                      "bottom": 350.1875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "From rooftop generation to the places your business needs power.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 374.1875,
+                      "width": 295,
+                      "height": 49.5,
+                      "top": 374.1875,
+                      "right": 397.390625,
+                      "bottom": 423.6875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 0,
+                      "height": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": 644,
+              "width": 1152,
+              "height": 38,
+              "top": 644,
+              "right": 1216,
+              "bottom": 682,
+              "left": 64
+            }
+          }
+        },
+        {
+          "label": "grid",
+          "p": 5.53,
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 22297,
+            "active": "",
+            "copy": [
+              {
+                "copy": "15",
+                "text": "WHEN THE GRID SUPPLIES POWER.\n\nPART OF A\nCONNECTED\nSYSTEM.\n\nGeneration, storage and the grid work within the agreed connection.",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 201.59375,
+                  "width": 448,
+                  "height": 275.09375,
+                  "top": 201.59375,
+                  "right": 550.390625,
+                  "bottom": 476.6875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "WHEN THE GRID SUPPLIES POWER.",
+                    "font": "11px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 201.59375,
+                      "width": 448,
+                      "height": 17.59375,
+                      "top": 201.59375,
+                      "right": 550.390625,
+                      "bottom": 219.1875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "PART OF ACONNECTEDSYSTEM.",
+                    "font": "52.48px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 244.1875,
+                      "width": 448,
+                      "height": 159,
+                      "top": 244.1875,
+                      "right": 550.390625,
+                      "bottom": 403.1875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Generation, storage and the grid work within the agreed connection.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 427.1875,
+                      "width": 295,
+                      "height": 49.5,
+                      "top": 427.1875,
+                      "right": 397.390625,
+                      "bottom": 476.6875,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": 644,
+              "width": 1152,
+              "height": 38,
+              "top": 644,
+              "right": 1216,
+              "bottom": 682,
+              "left": 64
+            }
+          }
+        },
+        {
+          "label": "connection",
+          "p": 5.86,
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 23628,
+            "active": "",
+            "copy": [
+              {
+                "copy": "17",
+                "text": "A CONNECTION\nWORTH GETTING\nRIGHT.",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 201.59375,
+                  "width": 448,
+                  "height": 159,
+                  "top": 201.59375,
+                  "right": 550.390625,
+                  "bottom": 360.59375,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "A CONNECTIONWORTH GETTINGRIGHT.",
+                    "font": "52.48px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 201.59375,
+                      "width": 448,
+                      "height": 159,
+                      "top": 201.59375,
+                      "right": 550.390625,
+                      "bottom": 360.59375,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": 644,
+              "width": 1152,
+              "height": 38,
+              "top": 644,
+              "right": 1216,
+              "bottom": 682,
+              "left": 64
+            }
+          }
+        },
+        {
+          "label": "brand",
+          "p": 6.03,
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 24313,
+            "active": "",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 187.1875,
+                  "width": 448,
+                  "height": 341.59375,
+                  "top": 187.1875,
+                  "right": 550.390625,
+                  "bottom": 528.78125,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 187.1875,
+                      "width": 76,
+                      "height": 76,
+                      "top": 187.1875,
+                      "right": 178.390625,
+                      "bottom": 263.1875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "57.6px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 289.1875,
+                      "width": 448,
+                      "height": 89.59375,
+                      "top": 289.1875,
+                      "right": 550.390625,
+                      "bottom": 378.78125,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 406.78125,
+                      "width": 390,
+                      "height": 54,
+                      "top": 406.78125,
+                      "right": 492.390625,
+                      "bottom": 460.78125,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": 482.78125,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": 482.78125,
+                      "right": 284.3125,
+                      "bottom": 528.78125,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": 644,
+              "width": 1152,
+              "height": 38,
+              "top": 644,
+              "right": 1216,
+              "bottom": 682,
+              "left": 64
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "id": "application-details",
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 25135,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 102.390625,
+                  "y": -433.265625,
+                  "width": 448,
+                  "height": 341.59375,
+                  "top": -433.265625,
+                  "right": 550.390625,
+                  "bottom": -91.671875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -433.265625,
+                      "width": 76,
+                      "height": 76,
+                      "top": -433.265625,
+                      "right": 178.390625,
+                      "bottom": -357.265625,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "57.6px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -331.265625,
+                      "width": 448,
+                      "height": 89.59375,
+                      "top": -331.265625,
+                      "right": 550.390625,
+                      "bottom": -241.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -213.671875,
+                      "width": 390,
+                      "height": 54,
+                      "top": -213.671875,
+                      "right": 492.390625,
+                      "bottom": -159.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -137.671875,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -137.671875,
+                      "right": 284.3125,
+                      "bottom": -91.671875,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": 23.546875,
+              "width": 1152,
+              "height": 38,
+              "top": 23.546875,
+              "right": 1216,
+              "bottom": 61.546875,
+              "left": 64
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 26174,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 102.390625,
+                  "y": -1472.265625,
+                  "width": 448,
+                  "height": 341.59375,
+                  "top": -1472.265625,
+                  "right": 550.390625,
+                  "bottom": -1130.671875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -1472.265625,
+                      "width": 76,
+                      "height": 76,
+                      "top": -1472.265625,
+                      "right": 178.390625,
+                      "bottom": -1396.265625,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "57.6px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -1370.265625,
+                      "width": 448,
+                      "height": 89.59375,
+                      "top": -1370.265625,
+                      "right": 550.390625,
+                      "bottom": -1280.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -1252.671875,
+                      "width": 390,
+                      "height": 54,
+                      "top": -1252.671875,
+                      "right": 492.390625,
+                      "bottom": -1198.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -1176.671875,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -1176.671875,
+                      "right": 284.3125,
+                      "bottom": -1130.671875,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": -1015.453125,
+              "width": 1152,
+              "height": 38,
+              "top": -1015.453125,
+              "right": 1216,
+              "bottom": -977.453125,
+              "left": 64
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 28678,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 102.390625,
+                  "y": -3976.265625,
+                  "width": 448,
+                  "height": 341.59375,
+                  "top": -3976.265625,
+                  "right": 550.390625,
+                  "bottom": -3634.671875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -3976.265625,
+                      "width": 76,
+                      "height": 76,
+                      "top": -3976.265625,
+                      "right": 178.390625,
+                      "bottom": -3900.265625,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "57.6px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -3874.265625,
+                      "width": 448,
+                      "height": 89.59375,
+                      "top": -3874.265625,
+                      "right": 550.390625,
+                      "bottom": -3784.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -3756.671875,
+                      "width": 390,
+                      "height": 54,
+                      "top": -3756.671875,
+                      "right": 492.390625,
+                      "bottom": -3702.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -3680.671875,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -3680.671875,
+                      "right": 284.3125,
+                      "bottom": -3634.671875,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": -3519.453125,
+              "width": 1152,
+              "height": 38,
+              "top": -3519.453125,
+              "right": 1216,
+              "bottom": -3481.453125,
+              "left": 64
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 30255,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 102.390625,
+                  "y": -5553.265625,
+                  "width": 448,
+                  "height": 341.59375,
+                  "top": -5553.265625,
+                  "right": 550.390625,
+                  "bottom": -5211.671875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -5553.265625,
+                      "width": 76,
+                      "height": 76,
+                      "top": -5553.265625,
+                      "right": 178.390625,
+                      "bottom": -5477.265625,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "57.6px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -5451.265625,
+                      "width": 448,
+                      "height": 89.59375,
+                      "top": -5451.265625,
+                      "right": 550.390625,
+                      "bottom": -5361.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -5333.671875,
+                      "width": 390,
+                      "height": 54,
+                      "top": -5333.671875,
+                      "right": 492.390625,
+                      "bottom": -5279.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -5257.671875,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -5257.671875,
+                      "right": 284.3125,
+                      "bottom": -5211.671875,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": -5096.453125,
+              "width": 1152,
+              "height": 38,
+              "top": -5096.453125,
+              "right": 1216,
+              "bottom": -5058.453125,
+              "left": 64
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "layout": {
+            "width": 1280,
+            "scrollWidth": 1280,
+            "scrollY": 31827,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 102.390625,
+                  "y": -7125.265625,
+                  "width": 448,
+                  "height": 341.59375,
+                  "top": -7125.265625,
+                  "right": 550.390625,
+                  "bottom": -6783.671875,
+                  "left": 102.390625
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -7125.265625,
+                      "width": 76,
+                      "height": 76,
+                      "top": -7125.265625,
+                      "right": 178.390625,
+                      "bottom": -7049.265625,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "57.6px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -7023.265625,
+                      "width": 448,
+                      "height": 89.59375,
+                      "top": -7023.265625,
+                      "right": 550.390625,
+                      "bottom": -6933.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -6905.671875,
+                      "width": 390,
+                      "height": 54,
+                      "top": -6905.671875,
+                      "right": 492.390625,
+                      "bottom": -6851.671875,
+                      "left": 102.390625
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 102.390625,
+                      "y": -6829.671875,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -6829.671875,
+                      "right": 284.3125,
+                      "bottom": -6783.671875,
+                      "left": 102.390625
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 108,
+              "top": 0,
+              "right": 1280,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 64,
+              "y": -6668.453125,
+              "width": 1152,
+              "height": 38,
+              "top": -6668.453125,
+              "right": 1216,
+              "bottom": -6630.453125,
+              "left": 64
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/experience?inspect=1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-day-4096-BO1QlKRh.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-2048-CxNnPLJI.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        }
+      ],
+      "offscreen": {
+        "onscreen": false,
+        "ambientFrozen": true
+      },
+      "still": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "scrollY": 0,
+        "active": "",
+        "copy": [
+          {
+            "copy": "18",
+            "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+            "rect": {
+              "x": 102.390625,
+              "y": 187.1875,
+              "width": 448,
+              "height": 341.59375,
+              "top": 187.1875,
+              "right": 550.390625,
+              "bottom": 528.78125,
+              "left": 102.390625
+            },
+            "children": [
+              {
+                "text": "",
+                "font": "16px",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 187.1875,
+                  "width": 76,
+                  "height": 76,
+                  "top": 187.1875,
+                  "right": 178.390625,
+                  "bottom": 263.1875,
+                  "left": 102.390625
+                }
+              },
+              {
+                "text": "AESIRSOLAR",
+                "font": "57.6px",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 289.1875,
+                  "width": 448,
+                  "height": 89.59375,
+                  "top": 289.1875,
+                  "right": 550.390625,
+                  "bottom": 378.78125,
+                  "left": 102.390625
+                }
+              },
+              {
+                "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                "font": "15px",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 406.78125,
+                  "width": 390,
+                  "height": 54,
+                  "top": 406.78125,
+                  "right": 492.390625,
+                  "bottom": 460.78125,
+                  "left": 102.390625
+                }
+              },
+              {
+                "text": "Start your application ↗",
+                "font": "15px",
+                "rect": {
+                  "x": 102.390625,
+                  "y": 482.78125,
+                  "width": 181.921875,
+                  "height": 46,
+                  "top": 482.78125,
+                  "right": 284.3125,
+                  "bottom": 528.78125,
+                  "left": 102.390625
+                }
+              }
+            ]
+          }
+        ],
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 108,
+          "top": 0,
+          "right": 1280,
+          "bottom": 108,
+          "left": 0
+        },
+        "footer": {
+          "x": 64,
+          "y": 587,
+          "width": 1152,
+          "height": 95,
+          "top": 587,
+          "right": 1216,
+          "bottom": 682,
+          "left": 64
+        }
+      }
+    },
+    {
+      "name": "desktop",
+      "width": 1600,
+      "height": 1000,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "p": 4.2,
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 23520,
+            "active": "",
+            "copy": [
+              {
+                "copy": "11",
+                "text": "OPERATION, ILLUSTRATED\n\nIllustration of operation after the required permissions and commissioning.",
+                "rect": {
+                  "x": 128,
+                  "y": 310,
+                  "width": 544,
+                  "height": 85.96875,
+                  "top": 310,
+                  "right": 672,
+                  "bottom": 395.96875,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "OPERATION, ILLUSTRATED",
+                    "font": "12px",
+                    "rect": {
+                      "x": 128,
+                      "y": 310,
+                      "width": 544,
+                      "height": 19.1875,
+                      "top": 310,
+                      "right": 672,
+                      "bottom": 329.1875,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": 343.1875,
+                      "width": 350,
+                      "height": 52.78125,
+                      "top": 343.1875,
+                      "right": 478,
+                      "bottom": 395.96875,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": 924,
+              "width": 1440,
+              "height": 38,
+              "top": 924,
+              "right": 1520,
+              "bottom": 962,
+              "left": 80
+            }
+          }
+        },
+        {
+          "label": "business",
+          "p": 4.5,
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 25200,
+            "active": "",
+            "copy": [
+              {
+                "copy": "12",
+                "text": "A WORKING BUSINESS\n\nENERGY,\nPUT TO WORK.\n\nFrom rooftop generation to the places your business needs power.",
+                "rect": {
+                  "x": 128,
+                  "y": 280,
+                  "width": 560,
+                  "height": 248.5625,
+                  "top": 280,
+                  "right": 688,
+                  "bottom": 528.5625,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "A WORKING BUSINESS",
+                    "font": "11px",
+                    "rect": {
+                      "x": 128,
+                      "y": 280,
+                      "width": 560,
+                      "height": 17.59375,
+                      "top": 280,
+                      "right": 688,
+                      "bottom": 297.59375,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "ENERGY,PUT TO WORK.",
+                    "font": "65.6px",
+                    "rect": {
+                      "x": 128,
+                      "y": 322.59375,
+                      "width": 560,
+                      "height": 132.46875,
+                      "top": 322.59375,
+                      "right": 688,
+                      "bottom": 455.0625,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "From rooftop generation to the places your business needs power.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": 479.0625,
+                      "width": 295,
+                      "height": 49.5,
+                      "top": 479.0625,
+                      "right": 423,
+                      "bottom": 528.5625,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 0,
+                      "height": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": 924,
+              "width": 1440,
+              "height": 38,
+              "top": 924,
+              "right": 1520,
+              "bottom": 962,
+              "left": 80
+            }
+          }
+        },
+        {
+          "label": "grid",
+          "p": 5.53,
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 30968,
+            "active": "",
+            "copy": [
+              {
+                "copy": "15",
+                "text": "WHEN THE GRID SUPPLIES POWER.\n\nPART OF A\nCONNECTED\nSYSTEM.\n\nGeneration, storage and the grid work within the agreed connection.",
+                "rect": {
+                  "x": 128,
+                  "y": 280,
+                  "width": 560,
+                  "height": 314.796875,
+                  "top": 280,
+                  "right": 688,
+                  "bottom": 594.796875,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "WHEN THE GRID SUPPLIES POWER.",
+                    "font": "11px",
+                    "rect": {
+                      "x": 128,
+                      "y": 280,
+                      "width": 560,
+                      "height": 17.59375,
+                      "top": 280,
+                      "right": 688,
+                      "bottom": 297.59375,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "PART OF ACONNECTEDSYSTEM.",
+                    "font": "65.6px",
+                    "rect": {
+                      "x": 128,
+                      "y": 322.59375,
+                      "width": 560,
+                      "height": 198.703125,
+                      "top": 322.59375,
+                      "right": 688,
+                      "bottom": 521.296875,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Generation, storage and the grid work within the agreed connection.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": 545.296875,
+                      "width": 295,
+                      "height": 49.5,
+                      "top": 545.296875,
+                      "right": 423,
+                      "bottom": 594.796875,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": 924,
+              "width": 1440,
+              "height": 38,
+              "top": 924,
+              "right": 1520,
+              "bottom": 962,
+              "left": 80
+            }
+          }
+        },
+        {
+          "label": "connection",
+          "p": 5.86,
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 32816,
+            "active": "",
+            "copy": [
+              {
+                "copy": "17",
+                "text": "A CONNECTION\nWORTH GETTING\nRIGHT.",
+                "rect": {
+                  "x": 128,
+                  "y": 280,
+                  "width": 560,
+                  "height": 198.703125,
+                  "top": 280,
+                  "right": 688,
+                  "bottom": 478.703125,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "A CONNECTIONWORTH GETTINGRIGHT.",
+                    "font": "65.6px",
+                    "rect": {
+                      "x": 128,
+                      "y": 280,
+                      "width": 560,
+                      "height": 198.703125,
+                      "top": 280,
+                      "right": 688,
+                      "bottom": 478.703125,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": 924,
+              "width": 1440,
+              "height": 38,
+              "top": 924,
+              "right": 1520,
+              "bottom": 962,
+              "left": 80
+            }
+          }
+        },
+        {
+          "label": "brand",
+          "p": 6.03,
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 33768,
+            "active": "",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 128,
+                  "y": 260,
+                  "width": 560,
+                  "height": 356,
+                  "top": 260,
+                  "right": 688,
+                  "bottom": 616,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": 260,
+                      "width": 76,
+                      "height": 76,
+                      "top": 260,
+                      "right": 204,
+                      "bottom": 336,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "72px",
+                    "rect": {
+                      "x": 128,
+                      "y": 362,
+                      "width": 560,
+                      "height": 104,
+                      "top": 362,
+                      "right": 688,
+                      "bottom": 466,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": 494,
+                      "width": 390,
+                      "height": 54,
+                      "top": 494,
+                      "right": 518,
+                      "bottom": 548,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": 570,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": 570,
+                      "right": 309.921875,
+                      "bottom": 616,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": 924,
+              "width": 1440,
+              "height": 38,
+              "top": 924,
+              "right": 1520,
+              "bottom": 962,
+              "left": 80
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "id": "application-details",
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 34948,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 128,
+                  "y": -640,
+                  "width": 560,
+                  "height": 356,
+                  "top": -640,
+                  "right": 688,
+                  "bottom": -284,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": -640,
+                      "width": 76,
+                      "height": 76,
+                      "top": -640,
+                      "right": 204,
+                      "bottom": -564,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "72px",
+                    "rect": {
+                      "x": 128,
+                      "y": -538,
+                      "width": 560,
+                      "height": 104,
+                      "top": -538,
+                      "right": 688,
+                      "bottom": -434,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -406,
+                      "width": 390,
+                      "height": 54,
+                      "top": -406,
+                      "right": 518,
+                      "bottom": -352,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -330,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -330,
+                      "right": 309.921875,
+                      "bottom": -284,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": 24,
+              "width": 1440,
+              "height": 38,
+              "top": 24,
+              "right": 1520,
+              "bottom": 62,
+              "left": 80
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 35992,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 128,
+                  "y": -1684,
+                  "width": 560,
+                  "height": 356,
+                  "top": -1684,
+                  "right": 688,
+                  "bottom": -1328,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": -1684,
+                      "width": 76,
+                      "height": 76,
+                      "top": -1684,
+                      "right": 204,
+                      "bottom": -1608,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "72px",
+                    "rect": {
+                      "x": 128,
+                      "y": -1582,
+                      "width": 560,
+                      "height": 104,
+                      "top": -1582,
+                      "right": 688,
+                      "bottom": -1478,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -1450,
+                      "width": 390,
+                      "height": 54,
+                      "top": -1450,
+                      "right": 518,
+                      "bottom": -1396,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -1374,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -1374,
+                      "right": 309.921875,
+                      "bottom": -1328,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": -1020,
+              "width": 1440,
+              "height": 38,
+              "top": -1020,
+              "right": 1520,
+              "bottom": -982,
+              "left": 80
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 38527,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 128,
+                  "y": -4219,
+                  "width": 560,
+                  "height": 356,
+                  "top": -4219,
+                  "right": 688,
+                  "bottom": -3863,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": -4219,
+                      "width": 76,
+                      "height": 76,
+                      "top": -4219,
+                      "right": 204,
+                      "bottom": -4143,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "72px",
+                    "rect": {
+                      "x": 128,
+                      "y": -4117,
+                      "width": 560,
+                      "height": 104,
+                      "top": -4117,
+                      "right": 688,
+                      "bottom": -4013,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -3985,
+                      "width": 390,
+                      "height": 54,
+                      "top": -3985,
+                      "right": 518,
+                      "bottom": -3931,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -3909,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -3909,
+                      "right": 309.921875,
+                      "bottom": -3863,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": -3555,
+              "width": 1440,
+              "height": 38,
+              "top": -3555,
+              "right": 1520,
+              "bottom": -3517,
+              "left": 80
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 40133,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 128,
+                  "y": -5825,
+                  "width": 560,
+                  "height": 356,
+                  "top": -5825,
+                  "right": 688,
+                  "bottom": -5469,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": -5825,
+                      "width": 76,
+                      "height": 76,
+                      "top": -5825,
+                      "right": 204,
+                      "bottom": -5749,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "72px",
+                    "rect": {
+                      "x": 128,
+                      "y": -5723,
+                      "width": 560,
+                      "height": 104,
+                      "top": -5723,
+                      "right": 688,
+                      "bottom": -5619,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -5591,
+                      "width": 390,
+                      "height": 54,
+                      "top": -5591,
+                      "right": 518,
+                      "bottom": -5537,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -5515,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -5515,
+                      "right": 309.921875,
+                      "bottom": -5469,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": -5161,
+              "width": 1440,
+              "height": 38,
+              "top": -5161,
+              "right": 1520,
+              "bottom": -5123,
+              "left": 80
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "layout": {
+            "width": 1600,
+            "scrollWidth": 1600,
+            "scrollY": 41625,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 128,
+                  "y": -7317,
+                  "width": 560,
+                  "height": 356,
+                  "top": -7317,
+                  "right": 688,
+                  "bottom": -6961,
+                  "left": 128
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 128,
+                      "y": -7317,
+                      "width": 76,
+                      "height": 76,
+                      "top": -7317,
+                      "right": 204,
+                      "bottom": -7241,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "72px",
+                    "rect": {
+                      "x": 128,
+                      "y": -7215,
+                      "width": 560,
+                      "height": 104,
+                      "top": -7215,
+                      "right": 688,
+                      "bottom": -7111,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -7083,
+                      "width": 390,
+                      "height": 54,
+                      "top": -7083,
+                      "right": 518,
+                      "bottom": -7029,
+                      "left": 128
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "15px",
+                    "rect": {
+                      "x": 128,
+                      "y": -7007,
+                      "width": 181.921875,
+                      "height": 46,
+                      "top": -7007,
+                      "right": 309.921875,
+                      "bottom": -6961,
+                      "left": 128
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 108,
+              "top": 0,
+              "right": 1600,
+              "bottom": 108,
+              "left": 0
+            },
+            "footer": {
+              "x": 80,
+              "y": -6653,
+              "width": 1440,
+              "height": 38,
+              "top": -6653,
+              "right": 1520,
+              "bottom": -6615,
+              "left": 80
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/experience?inspect=1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-day-4096-BO1QlKRh.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-2048-CxNnPLJI.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        }
+      ],
+      "offscreen": {
+        "onscreen": false,
+        "ambientFrozen": true
+      },
+      "still": {
+        "width": 1600,
+        "scrollWidth": 1600,
+        "scrollY": 0,
+        "active": "",
+        "copy": [
+          {
+            "copy": "18",
+            "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+            "rect": {
+              "x": 128,
+              "y": 260,
+              "width": 560,
+              "height": 356,
+              "top": 260,
+              "right": 688,
+              "bottom": 616,
+              "left": 128
+            },
+            "children": [
+              {
+                "text": "",
+                "font": "16px",
+                "rect": {
+                  "x": 128,
+                  "y": 260,
+                  "width": 76,
+                  "height": 76,
+                  "top": 260,
+                  "right": 204,
+                  "bottom": 336,
+                  "left": 128
+                }
+              },
+              {
+                "text": "AESIRSOLAR",
+                "font": "72px",
+                "rect": {
+                  "x": 128,
+                  "y": 362,
+                  "width": 560,
+                  "height": 104,
+                  "top": 362,
+                  "right": 688,
+                  "bottom": 466,
+                  "left": 128
+                }
+              },
+              {
+                "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                "font": "15px",
+                "rect": {
+                  "x": 128,
+                  "y": 494,
+                  "width": 390,
+                  "height": 54,
+                  "top": 494,
+                  "right": 518,
+                  "bottom": 548,
+                  "left": 128
+                }
+              },
+              {
+                "text": "Start your application ↗",
+                "font": "15px",
+                "rect": {
+                  "x": 128,
+                  "y": 570,
+                  "width": 181.921875,
+                  "height": 46,
+                  "top": 570,
+                  "right": 309.921875,
+                  "bottom": 616,
+                  "left": 128
+                }
+              }
+            ]
+          }
+        ],
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 108,
+          "top": 0,
+          "right": 1600,
+          "bottom": 108,
+          "left": 0
+        },
+        "footer": {
+          "x": 80,
+          "y": 867,
+          "width": 1440,
+          "height": 95,
+          "top": 867,
+          "right": 1520,
+          "bottom": 962,
+          "left": 80
+        }
+      }
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "p": 4.2,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 19851,
+            "active": "",
+            "copy": [
+              {
+                "copy": "11",
+                "text": "OPERATION, ILLUSTRATED\n\nIllustration of operation after the required permissions and commissioning.",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 168.796875,
+                  "width": 327.59375,
+                  "height": 88.375,
+                  "top": 168.796875,
+                  "right": 358.78125,
+                  "bottom": 257.171875,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "OPERATION, ILLUSTRATED",
+                    "font": "12px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 168.796875,
+                      "width": 327.59375,
+                      "height": 19.1875,
+                      "top": 168.796875,
+                      "right": 358.78125,
+                      "bottom": 187.984375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 205.984375,
+                      "width": 327.59375,
+                      "height": 51.1875,
+                      "top": 205.984375,
+                      "right": 358.78125,
+                      "bottom": 257.171875,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": 779,
+              "width": 335.40625,
+              "height": 37,
+              "top": 779,
+              "right": 362.703125,
+              "bottom": 816,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "label": "business",
+          "p": 4.5,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 21269,
+            "active": "",
+            "copy": [
+              {
+                "copy": "12",
+                "text": "A WORKING BUSINESS\n\nENERGY,\nPUT TO WORK.\n\nFrom rooftop generation to the places your business needs power.",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 168.796875,
+                  "width": 327.59375,
+                  "height": 164.3125,
+                  "top": 168.796875,
+                  "right": 358.78125,
+                  "bottom": 333.109375,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "A WORKING BUSINESS",
+                    "font": "10px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 168.796875,
+                      "width": 327.59375,
+                      "height": 16,
+                      "top": 168.796875,
+                      "right": 358.78125,
+                      "bottom": 184.796875,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "ENERGY,PUT TO WORK.",
+                    "font": "34px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 202.796875,
+                      "width": 327.59375,
+                      "height": 70.71875,
+                      "top": 202.796875,
+                      "right": 358.78125,
+                      "bottom": 273.515625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "From rooftop generation to the places your business needs power.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 291.515625,
+                      "width": 275,
+                      "height": 41.59375,
+                      "top": 291.515625,
+                      "right": 306.1875,
+                      "bottom": 333.109375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 0,
+                      "height": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": 779,
+              "width": 335.40625,
+              "height": 37,
+              "top": 779,
+              "right": 362.703125,
+              "bottom": 816,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "label": "grid",
+          "p": 5.53,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 26137,
+            "active": "",
+            "copy": [
+              {
+                "copy": "15",
+                "text": "WHEN THE GRID SUPPLIES POWER.\n\nPART OF A\nCONNECTED\nSYSTEM.\n\nGeneration, storage and the grid work within the agreed connection.",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 168.796875,
+                  "width": 327.59375,
+                  "height": 199.671875,
+                  "top": 168.796875,
+                  "right": 358.78125,
+                  "bottom": 368.46875,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "WHEN THE GRID SUPPLIES POWER.",
+                    "font": "10px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 168.796875,
+                      "width": 327.59375,
+                      "height": 16,
+                      "top": 168.796875,
+                      "right": 358.78125,
+                      "bottom": 184.796875,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "PART OF ACONNECTEDSYSTEM.",
+                    "font": "34px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 202.796875,
+                      "width": 327.59375,
+                      "height": 106.078125,
+                      "top": 202.796875,
+                      "right": 358.78125,
+                      "bottom": 308.875,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Generation, storage and the grid work within the agreed connection.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 326.875,
+                      "width": 275,
+                      "height": 41.59375,
+                      "top": 326.875,
+                      "right": 306.1875,
+                      "bottom": 368.46875,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": 779,
+              "width": 335.40625,
+              "height": 37,
+              "top": 779,
+              "right": 362.703125,
+              "bottom": 816,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "label": "connection",
+          "p": 5.86,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 27697,
+            "active": "",
+            "copy": [
+              {
+                "copy": "17",
+                "text": "A CONNECTION\nWORTH GETTING\nRIGHT.",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 168.796875,
+                  "width": 327.59375,
+                  "height": 106.078125,
+                  "top": 168.796875,
+                  "right": 358.78125,
+                  "bottom": 274.875,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "A CONNECTIONWORTH GETTINGRIGHT.",
+                    "font": "34px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 168.796875,
+                      "width": 327.59375,
+                      "height": 106.078125,
+                      "top": 168.796875,
+                      "right": 358.78125,
+                      "bottom": 274.875,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": 779,
+              "width": 335.40625,
+              "height": 37,
+              "top": 779,
+              "right": 362.703125,
+              "bottom": 816,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "label": "brand",
+          "p": 6.03,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 28501,
+            "active": "",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 143.46875,
+                  "width": 327.59375,
+                  "height": 259.796875,
+                  "top": 143.46875,
+                  "right": 358.78125,
+                  "bottom": 403.265625,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 143.46875,
+                      "width": 52,
+                      "height": 52,
+                      "top": 143.46875,
+                      "right": 83.1875,
+                      "bottom": 195.46875,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 215.46875,
+                      "width": 327.59375,
+                      "height": 66.015625,
+                      "top": 215.46875,
+                      "right": 358.78125,
+                      "bottom": 281.484375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 298.484375,
+                      "width": 327.59375,
+                      "height": 46.78125,
+                      "top": 298.484375,
+                      "right": 358.78125,
+                      "bottom": 345.265625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": 359.265625,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": 359.265625,
+                      "right": 202.71875,
+                      "bottom": 403.265625,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": 779,
+              "width": 335.40625,
+              "height": 37,
+              "top": 779,
+              "right": 362.703125,
+              "bottom": 816,
+              "left": 27.296875
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "id": "application-details",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 29501,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 31.1875,
+                  "y": -621.03125,
+                  "width": 327.59375,
+                  "height": 259.796875,
+                  "top": -621.03125,
+                  "right": 358.78125,
+                  "bottom": -361.234375,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -621.03125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -621.03125,
+                      "right": 83.1875,
+                      "bottom": -569.03125,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -549.03125,
+                      "width": 327.59375,
+                      "height": 66.015625,
+                      "top": -549.03125,
+                      "right": 358.78125,
+                      "bottom": -483.015625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -466.015625,
+                      "width": 327.59375,
+                      "height": 46.78125,
+                      "top": -466.015625,
+                      "right": 358.78125,
+                      "bottom": -419.234375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -405.234375,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -405.234375,
+                      "right": 202.71875,
+                      "bottom": -361.234375,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": 14.5,
+              "width": 335.40625,
+              "height": 37,
+              "top": 14.5,
+              "right": 362.703125,
+              "bottom": 51.5,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 31205,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 31.1875,
+                  "y": -2325.03125,
+                  "width": 327.59375,
+                  "height": 259.796875,
+                  "top": -2325.03125,
+                  "right": 358.78125,
+                  "bottom": -2065.234375,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -2325.03125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -2325.03125,
+                      "right": 83.1875,
+                      "bottom": -2273.03125,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -2253.03125,
+                      "width": 327.59375,
+                      "height": 66.015625,
+                      "top": -2253.03125,
+                      "right": 358.78125,
+                      "bottom": -2187.015625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -2170.015625,
+                      "width": 327.59375,
+                      "height": 46.78125,
+                      "top": -2170.015625,
+                      "right": 358.78125,
+                      "bottom": -2123.234375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -2109.234375,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -2109.234375,
+                      "right": 202.71875,
+                      "bottom": -2065.234375,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": -1689.5,
+              "width": 335.40625,
+              "height": 37,
+              "top": -1689.5,
+              "right": 362.703125,
+              "bottom": -1652.5,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 35194,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 31.1875,
+                  "y": -6314.03125,
+                  "width": 327.59375,
+                  "height": 259.796875,
+                  "top": -6314.03125,
+                  "right": 358.78125,
+                  "bottom": -6054.234375,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -6314.03125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -6314.03125,
+                      "right": 83.1875,
+                      "bottom": -6262.03125,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -6242.03125,
+                      "width": 327.59375,
+                      "height": 66.015625,
+                      "top": -6242.03125,
+                      "right": 358.78125,
+                      "bottom": -6176.015625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -6159.015625,
+                      "width": 327.59375,
+                      "height": 46.78125,
+                      "top": -6159.015625,
+                      "right": 358.78125,
+                      "bottom": -6112.234375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -6098.234375,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -6098.234375,
+                      "right": 202.71875,
+                      "bottom": -6054.234375,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": -5678.5,
+              "width": 335.40625,
+              "height": 37,
+              "top": -5678.5,
+              "right": 362.703125,
+              "bottom": -5641.5,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 37246,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 31.1875,
+                  "y": -8366.03125,
+                  "width": 327.59375,
+                  "height": 259.796875,
+                  "top": -8366.03125,
+                  "right": 358.78125,
+                  "bottom": -8106.234375,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -8366.03125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -8366.03125,
+                      "right": 83.1875,
+                      "bottom": -8314.03125,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -8294.03125,
+                      "width": 327.59375,
+                      "height": 66.015625,
+                      "top": -8294.03125,
+                      "right": 358.78125,
+                      "bottom": -8228.015625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -8211.015625,
+                      "width": 327.59375,
+                      "height": 46.78125,
+                      "top": -8211.015625,
+                      "right": 358.78125,
+                      "bottom": -8164.234375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -8150.234375,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -8150.234375,
+                      "right": 202.71875,
+                      "bottom": -8106.234375,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": -7730.5,
+              "width": 335.40625,
+              "height": 37,
+              "top": -7730.5,
+              "right": 362.703125,
+              "bottom": -7693.5,
+              "left": 27.296875
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "scrollY": 39559,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 31.1875,
+                  "y": -10679.03125,
+                  "width": 327.59375,
+                  "height": 259.796875,
+                  "top": -10679.03125,
+                  "right": 358.78125,
+                  "bottom": -10419.234375,
+                  "left": 31.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -10679.03125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -10679.03125,
+                      "right": 83.1875,
+                      "bottom": -10627.03125,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -10607.03125,
+                      "width": 327.59375,
+                      "height": 66.015625,
+                      "top": -10607.03125,
+                      "right": 358.78125,
+                      "bottom": -10541.015625,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -10524.015625,
+                      "width": 327.59375,
+                      "height": 46.78125,
+                      "top": -10524.015625,
+                      "right": 358.78125,
+                      "bottom": -10477.234375,
+                      "left": 31.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 31.1875,
+                      "y": -10463.234375,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -10463.234375,
+                      "right": 202.71875,
+                      "bottom": -10419.234375,
+                      "left": 31.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 85,
+              "top": 0,
+              "right": 390,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 27.296875,
+              "y": -10043.5,
+              "width": 335.40625,
+              "height": 37,
+              "top": -10043.5,
+              "right": 362.703125,
+              "bottom": -10006.5,
+              "left": 27.296875
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/experience?inspect=1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-day-2048-DtZ8Fp4V.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-1024-BKjMs3Vz.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        }
+      ],
+      "offscreen": {
+        "onscreen": false,
+        "ambientFrozen": true
+      },
+      "still": {
+        "width": 390,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "active": "",
+        "copy": [
+          {
+            "copy": "18",
+            "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+            "rect": {
+              "x": 31.1875,
+              "y": 143.46875,
+              "width": 327.59375,
+              "height": 259.796875,
+              "top": 143.46875,
+              "right": 358.78125,
+              "bottom": 403.265625,
+              "left": 31.1875
+            },
+            "children": [
+              {
+                "text": "",
+                "font": "16px",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 143.46875,
+                  "width": 52,
+                  "height": 52,
+                  "top": 143.46875,
+                  "right": 83.1875,
+                  "bottom": 195.46875,
+                  "left": 31.1875
+                }
+              },
+              {
+                "text": "AESIRSOLAR",
+                "font": "39px",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 215.46875,
+                  "width": 327.59375,
+                  "height": 66.015625,
+                  "top": 215.46875,
+                  "right": 358.78125,
+                  "bottom": 281.484375,
+                  "left": 31.1875
+                }
+              },
+              {
+                "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                "font": "13px",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 298.484375,
+                  "width": 327.59375,
+                  "height": 46.78125,
+                  "top": 298.484375,
+                  "right": 358.78125,
+                  "bottom": 345.265625,
+                  "left": 31.1875
+                }
+              },
+              {
+                "text": "Start your application ↗",
+                "font": "14px",
+                "rect": {
+                  "x": 31.1875,
+                  "y": 359.265625,
+                  "width": 171.53125,
+                  "height": 44,
+                  "top": 359.265625,
+                  "right": 202.71875,
+                  "bottom": 403.265625,
+                  "left": 31.1875
+                }
+              }
+            ]
+          }
+        ],
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 85,
+          "top": 0,
+          "right": 390,
+          "bottom": 85,
+          "left": 0
+        },
+        "footer": {
+          "x": 27.296875,
+          "y": 670,
+          "width": 335.40625,
+          "height": 146,
+          "top": 670,
+          "right": 362.703125,
+          "bottom": 816,
+          "left": 27.296875
+        }
+      }
+    },
+    {
+      "name": "intermediate",
+      "width": 740,
+      "height": 900,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "p": 4.2,
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 21168,
+            "active": "",
+            "copy": [
+              {
+                "copy": "11",
+                "text": "OPERATION, ILLUSTRATED\n\nIllustration of operation after the required permissions and commissioning.",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 180,
+                  "width": 621.59375,
+                  "height": 88.375,
+                  "top": 180,
+                  "right": 680.78125,
+                  "bottom": 268.375,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "OPERATION, ILLUSTRATED",
+                    "font": "12px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 180,
+                      "width": 621.59375,
+                      "height": 19.1875,
+                      "top": 180,
+                      "right": 680.78125,
+                      "bottom": 199.1875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 217.1875,
+                      "width": 330,
+                      "height": 51.1875,
+                      "top": 217.1875,
+                      "right": 389.1875,
+                      "bottom": 268.375,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": 835,
+              "width": 636.40625,
+              "height": 37,
+              "top": 835,
+              "right": 688.203125,
+              "bottom": 872,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "label": "business",
+          "p": 4.5,
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 22680,
+            "active": "",
+            "copy": [
+              {
+                "copy": "12",
+                "text": "A WORKING BUSINESS\n\nENERGY,\nPUT TO WORK.\n\nFrom rooftop generation to the places your business needs power.",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 180,
+                  "width": 621.59375,
+                  "height": 205.90625,
+                  "top": 180,
+                  "right": 680.78125,
+                  "bottom": 385.90625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "A WORKING BUSINESS",
+                    "font": "10px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 180,
+                      "width": 621.59375,
+                      "height": 16,
+                      "top": 180,
+                      "right": 680.78125,
+                      "bottom": 196,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "ENERGY,PUT TO WORK.",
+                    "font": "54px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 214,
+                      "width": 520,
+                      "height": 112.3125,
+                      "top": 214,
+                      "right": 579.1875,
+                      "bottom": 326.3125,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "From rooftop generation to the places your business needs power.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 344.3125,
+                      "width": 275,
+                      "height": 41.59375,
+                      "top": 344.3125,
+                      "right": 334.1875,
+                      "bottom": 385.90625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 0,
+                      "height": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": 835,
+              "width": 636.40625,
+              "height": 37,
+              "top": 835,
+              "right": 688.203125,
+              "bottom": 872,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "label": "grid",
+          "p": 5.53,
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 27871,
+            "active": "",
+            "copy": [
+              {
+                "copy": "15",
+                "text": "WHEN THE GRID SUPPLIES POWER.\n\nPART OF A\nCONNECTED\nSYSTEM.\n\nGeneration, storage and the grid work within the agreed connection.",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 180,
+                  "width": 621.59375,
+                  "height": 262.0625,
+                  "top": 180,
+                  "right": 680.78125,
+                  "bottom": 442.0625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "WHEN THE GRID SUPPLIES POWER.",
+                    "font": "10px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 180,
+                      "width": 621.59375,
+                      "height": 16,
+                      "top": 180,
+                      "right": 680.78125,
+                      "bottom": 196,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "PART OF ACONNECTEDSYSTEM.",
+                    "font": "54px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 214,
+                      "width": 520,
+                      "height": 168.46875,
+                      "top": 214,
+                      "right": 579.1875,
+                      "bottom": 382.46875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Generation, storage and the grid work within the agreed connection.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 400.46875,
+                      "width": 275,
+                      "height": 41.59375,
+                      "top": 400.46875,
+                      "right": 334.1875,
+                      "bottom": 442.0625,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": 835,
+              "width": 636.40625,
+              "height": 37,
+              "top": 835,
+              "right": 688.203125,
+              "bottom": 872,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "label": "connection",
+          "p": 5.86,
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 29534,
+            "active": "",
+            "copy": [
+              {
+                "copy": "17",
+                "text": "A CONNECTION\nWORTH GETTING\nRIGHT.",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 180,
+                  "width": 621.59375,
+                  "height": 168.46875,
+                  "top": 180,
+                  "right": 680.78125,
+                  "bottom": 348.46875,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "A CONNECTIONWORTH GETTINGRIGHT.",
+                    "font": "54px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 180,
+                      "width": 520,
+                      "height": 168.46875,
+                      "top": 180,
+                      "right": 579.1875,
+                      "bottom": 348.46875,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": 835,
+              "width": 636.40625,
+              "height": 37,
+              "top": 835,
+              "right": 688.203125,
+              "bottom": 872,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "label": "brand",
+          "p": 6.03,
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 30391,
+            "active": "",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 153,
+                  "width": 621.59375,
+                  "height": 259.796875,
+                  "top": 153,
+                  "right": 680.78125,
+                  "bottom": 412.796875,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 153,
+                      "width": 52,
+                      "height": 52,
+                      "top": 153,
+                      "right": 111.1875,
+                      "bottom": 205,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 225,
+                      "width": 520,
+                      "height": 66.015625,
+                      "top": 225,
+                      "right": 579.1875,
+                      "bottom": 291.015625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 308.015625,
+                      "width": 390,
+                      "height": 46.78125,
+                      "top": 308.015625,
+                      "right": 449.1875,
+                      "bottom": 354.796875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": 368.796875,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": 368.796875,
+                      "right": 230.71875,
+                      "bottom": 412.796875,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": 835,
+              "width": 636.40625,
+              "height": 37,
+              "top": 835,
+              "right": 688.203125,
+              "bottom": 872,
+              "left": 51.796875
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "id": "application-details",
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 31463,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 59.1875,
+                  "y": -666.8125,
+                  "width": 621.59375,
+                  "height": 259.796875,
+                  "top": -666.8125,
+                  "right": 680.78125,
+                  "bottom": -407.015625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -666.8125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -666.8125,
+                      "right": 111.1875,
+                      "bottom": -614.8125,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -594.8125,
+                      "width": 520,
+                      "height": 66.015625,
+                      "top": -594.8125,
+                      "right": 579.1875,
+                      "bottom": -528.796875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -511.796875,
+                      "width": 390,
+                      "height": 46.78125,
+                      "top": -511.796875,
+                      "right": 449.1875,
+                      "bottom": -465.015625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -451.015625,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -451.015625,
+                      "right": 230.71875,
+                      "bottom": -407.015625,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": 15.1875,
+              "width": 636.40625,
+              "height": 37,
+              "top": 15.1875,
+              "right": 688.203125,
+              "bottom": 52.1875,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 33011,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 59.1875,
+                  "y": -2214.8125,
+                  "width": 621.59375,
+                  "height": 259.796875,
+                  "top": -2214.8125,
+                  "right": 680.78125,
+                  "bottom": -1955.015625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -2214.8125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -2214.8125,
+                      "right": 111.1875,
+                      "bottom": -2162.8125,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -2142.8125,
+                      "width": 520,
+                      "height": 66.015625,
+                      "top": -2142.8125,
+                      "right": 579.1875,
+                      "bottom": -2076.796875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -2059.796875,
+                      "width": 390,
+                      "height": 46.78125,
+                      "top": -2059.796875,
+                      "right": 449.1875,
+                      "bottom": -2013.015625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -1999.015625,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -1999.015625,
+                      "right": 230.71875,
+                      "bottom": -1955.015625,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": -1532.8125,
+              "width": 636.40625,
+              "height": 37,
+              "top": -1532.8125,
+              "right": 688.203125,
+              "bottom": -1495.8125,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 36368,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 59.1875,
+                  "y": -5571.8125,
+                  "width": 621.59375,
+                  "height": 259.796875,
+                  "top": -5571.8125,
+                  "right": 680.78125,
+                  "bottom": -5312.015625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -5571.8125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -5571.8125,
+                      "right": 111.1875,
+                      "bottom": -5519.8125,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -5499.8125,
+                      "width": 520,
+                      "height": 66.015625,
+                      "top": -5499.8125,
+                      "right": 579.1875,
+                      "bottom": -5433.796875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -5416.796875,
+                      "width": 390,
+                      "height": 46.78125,
+                      "top": -5416.796875,
+                      "right": 449.1875,
+                      "bottom": -5370.015625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -5356.015625,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -5356.015625,
+                      "right": 230.71875,
+                      "bottom": -5312.015625,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": -4889.8125,
+              "width": 636.40625,
+              "height": 37,
+              "top": -4889.8125,
+              "right": 688.203125,
+              "bottom": -4852.8125,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 38025,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 59.1875,
+                  "y": -7228.8125,
+                  "width": 621.59375,
+                  "height": 259.796875,
+                  "top": -7228.8125,
+                  "right": 680.78125,
+                  "bottom": -6969.015625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -7228.8125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -7228.8125,
+                      "right": 111.1875,
+                      "bottom": -7176.8125,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -7156.8125,
+                      "width": 520,
+                      "height": 66.015625,
+                      "top": -7156.8125,
+                      "right": 579.1875,
+                      "bottom": -7090.796875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -7073.796875,
+                      "width": 390,
+                      "height": 46.78125,
+                      "top": -7073.796875,
+                      "right": 449.1875,
+                      "bottom": -7027.015625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -7013.015625,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -7013.015625,
+                      "right": 230.71875,
+                      "bottom": -6969.015625,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": -6546.8125,
+              "width": 636.40625,
+              "height": 37,
+              "top": -6546.8125,
+              "right": 688.203125,
+              "bottom": -6509.8125,
+              "left": 51.796875
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "layout": {
+            "width": 740,
+            "scrollWidth": 740,
+            "scrollY": 39911,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 59.1875,
+                  "y": -9114.8125,
+                  "width": 621.59375,
+                  "height": 259.796875,
+                  "top": -9114.8125,
+                  "right": 680.78125,
+                  "bottom": -8855.015625,
+                  "left": 59.1875
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -9114.8125,
+                      "width": 52,
+                      "height": 52,
+                      "top": -9114.8125,
+                      "right": 111.1875,
+                      "bottom": -9062.8125,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "39px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -9042.8125,
+                      "width": 520,
+                      "height": 66.015625,
+                      "top": -9042.8125,
+                      "right": 579.1875,
+                      "bottom": -8976.796875,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -8959.796875,
+                      "width": 390,
+                      "height": 46.78125,
+                      "top": -8959.796875,
+                      "right": 449.1875,
+                      "bottom": -8913.015625,
+                      "left": 59.1875
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 59.1875,
+                      "y": -8899.015625,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -8899.015625,
+                      "right": 230.71875,
+                      "bottom": -8855.015625,
+                      "left": 59.1875
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 740,
+              "height": 85,
+              "top": 0,
+              "right": 740,
+              "bottom": 85,
+              "left": 0
+            },
+            "footer": {
+              "x": 51.796875,
+              "y": -8432.8125,
+              "width": 636.40625,
+              "height": 37,
+              "top": -8432.8125,
+              "right": 688.203125,
+              "bottom": -8395.8125,
+              "left": 51.796875
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/experience?inspect=1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-day-2048-DtZ8Fp4V.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-1024-BKjMs3Vz.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        }
+      ],
+      "offscreen": {
+        "onscreen": false,
+        "ambientFrozen": true
+      },
+      "still": {
+        "width": 740,
+        "scrollWidth": 740,
+        "scrollY": 0,
+        "active": "",
+        "copy": [
+          {
+            "copy": "18",
+            "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+            "rect": {
+              "x": 59.1875,
+              "y": 153,
+              "width": 621.59375,
+              "height": 259.796875,
+              "top": 153,
+              "right": 680.78125,
+              "bottom": 412.796875,
+              "left": 59.1875
+            },
+            "children": [
+              {
+                "text": "",
+                "font": "16px",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 153,
+                  "width": 52,
+                  "height": 52,
+                  "top": 153,
+                  "right": 111.1875,
+                  "bottom": 205,
+                  "left": 59.1875
+                }
+              },
+              {
+                "text": "AESIRSOLAR",
+                "font": "39px",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 225,
+                  "width": 520,
+                  "height": 66.015625,
+                  "top": 225,
+                  "right": 579.1875,
+                  "bottom": 291.015625,
+                  "left": 59.1875
+                }
+              },
+              {
+                "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                "font": "13px",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 308.015625,
+                  "width": 390,
+                  "height": 46.78125,
+                  "top": 308.015625,
+                  "right": 449.1875,
+                  "bottom": 354.796875,
+                  "left": 59.1875
+                }
+              },
+              {
+                "text": "Start your application ↗",
+                "font": "14px",
+                "rect": {
+                  "x": 59.1875,
+                  "y": 368.796875,
+                  "width": 171.53125,
+                  "height": 44,
+                  "top": 368.796875,
+                  "right": 230.71875,
+                  "bottom": 412.796875,
+                  "left": 59.1875
+                }
+              }
+            ]
+          }
+        ],
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 740,
+          "height": 85,
+          "top": 0,
+          "right": 740,
+          "bottom": 85,
+          "left": 0
+        },
+        "footer": {
+          "x": 51.796875,
+          "y": 726,
+          "width": 636.40625,
+          "height": 146,
+          "top": 726,
+          "right": 688.203125,
+          "bottom": 872,
+          "left": 51.796875
+        }
+      }
+    },
+    {
+      "name": "short",
+      "width": 1000,
+      "height": 500,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "p": 4.2,
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 11760,
+            "active": "",
+            "copy": [
+              {
+                "copy": "11",
+                "text": "OPERATION, ILLUSTRATED\n\nIllustration of operation after the required permissions and commissioning.",
+                "rect": {
+                  "x": 80,
+                  "y": 140,
+                  "width": 390,
+                  "height": 84.375,
+                  "top": 140,
+                  "right": 470,
+                  "bottom": 224.375,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "OPERATION, ILLUSTRATED",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": 140,
+                      "width": 390,
+                      "height": 19.1875,
+                      "top": 140,
+                      "right": 470,
+                      "bottom": 159.1875,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": 173.1875,
+                      "width": 330,
+                      "height": 51.1875,
+                      "top": 173.1875,
+                      "right": 410,
+                      "bottom": 224.375,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": 444,
+              "width": 900,
+              "height": 38,
+              "top": 444,
+              "right": 950,
+              "bottom": 482,
+              "left": 50
+            }
+          }
+        },
+        {
+          "label": "business",
+          "p": 4.5,
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 12600,
+            "active": "",
+            "copy": [
+              {
+                "copy": "12",
+                "text": "A WORKING BUSINESS\n\nENERGY,\nPUT TO WORK.\n\nFrom rooftop generation to the places your business needs power.",
+                "rect": {
+                  "x": 80,
+                  "y": 140,
+                  "width": 390,
+                  "height": 171.859375,
+                  "top": 140,
+                  "right": 470,
+                  "bottom": 311.859375,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "A WORKING BUSINESS",
+                    "font": "9px",
+                    "rect": {
+                      "x": 80,
+                      "y": 140,
+                      "width": 390,
+                      "height": 14.390625,
+                      "top": 140,
+                      "right": 470,
+                      "bottom": 154.390625,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "ENERGY,PUT TO WORK.",
+                    "font": "44px",
+                    "rect": {
+                      "x": 80,
+                      "y": 168.390625,
+                      "width": 390,
+                      "height": 88.875,
+                      "top": 168.390625,
+                      "right": 470,
+                      "bottom": 257.265625,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "From rooftop generation to the places your business needs power.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": 272.265625,
+                      "width": 295,
+                      "height": 39.59375,
+                      "top": 272.265625,
+                      "right": 375,
+                      "bottom": 311.859375,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Illustration of operation after the required permissions and commissioning.",
+                    "font": "13px",
+                    "rect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 0,
+                      "height": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": 444,
+              "width": 900,
+              "height": 38,
+              "top": 444,
+              "right": 950,
+              "bottom": 482,
+              "left": 50
+            }
+          }
+        },
+        {
+          "label": "grid",
+          "p": 5.53,
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 15484,
+            "active": "",
+            "copy": [
+              {
+                "copy": "15",
+                "text": "WHEN THE GRID SUPPLIES POWER.\n\nPART OF A\nCONNECTED\nSYSTEM.\n\nGeneration, storage and the grid work within the agreed connection.",
+                "rect": {
+                  "x": 80,
+                  "y": 140,
+                  "width": 390,
+                  "height": 216.296875,
+                  "top": 140,
+                  "right": 470,
+                  "bottom": 356.296875,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "WHEN THE GRID SUPPLIES POWER.",
+                    "font": "9px",
+                    "rect": {
+                      "x": 80,
+                      "y": 140,
+                      "width": 390,
+                      "height": 14.390625,
+                      "top": 140,
+                      "right": 470,
+                      "bottom": 154.390625,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "PART OF ACONNECTEDSYSTEM.",
+                    "font": "44px",
+                    "rect": {
+                      "x": 80,
+                      "y": 168.390625,
+                      "width": 390,
+                      "height": 133.3125,
+                      "top": 168.390625,
+                      "right": 470,
+                      "bottom": 301.703125,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Generation, storage and the grid work within the agreed connection.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": 316.703125,
+                      "width": 295,
+                      "height": 39.59375,
+                      "top": 316.703125,
+                      "right": 375,
+                      "bottom": 356.296875,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": 444,
+              "width": 900,
+              "height": 38,
+              "top": 444,
+              "right": 950,
+              "bottom": 482,
+              "left": 50
+            }
+          }
+        },
+        {
+          "label": "connection",
+          "p": 5.86,
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 16408,
+            "active": "",
+            "copy": [
+              {
+                "copy": "17",
+                "text": "A CONNECTION\nWORTH GETTING\nRIGHT.",
+                "rect": {
+                  "x": 80,
+                  "y": 140,
+                  "width": 390,
+                  "height": 133.3125,
+                  "top": 140,
+                  "right": 470,
+                  "bottom": 273.3125,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "A CONNECTIONWORTH GETTINGRIGHT.",
+                    "font": "44px",
+                    "rect": {
+                      "x": 80,
+                      "y": 140,
+                      "width": 390,
+                      "height": 133.3125,
+                      "top": 140,
+                      "right": 470,
+                      "bottom": 273.3125,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": 444,
+              "width": 900,
+              "height": 38,
+              "top": 444,
+              "right": 950,
+              "bottom": 482,
+              "left": 50
+            }
+          }
+        },
+        {
+          "label": "brand",
+          "p": 6.03,
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 16884,
+            "active": "",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 80,
+                  "y": 120,
+                  "width": 390,
+                  "height": 211.1875,
+                  "top": 120,
+                  "right": 470,
+                  "bottom": 331.1875,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": 120,
+                      "width": 32,
+                      "height": 32,
+                      "top": 120,
+                      "right": 112,
+                      "bottom": 152,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "37px",
+                    "rect": {
+                      "x": 80,
+                      "y": 164,
+                      "width": 390,
+                      "height": 58,
+                      "top": 164,
+                      "right": 470,
+                      "bottom": 222,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": 234,
+                      "width": 390,
+                      "height": 43.1875,
+                      "top": 234,
+                      "right": 470,
+                      "bottom": 277.1875,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 80,
+                      "y": 287.1875,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": 287.1875,
+                      "right": 251.53125,
+                      "bottom": 331.1875,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": 444,
+              "width": 900,
+              "height": 38,
+              "top": 444,
+              "right": 950,
+              "bottom": 482,
+              "left": 50
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "id": "application-details",
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 17454,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 80,
+                  "y": -310,
+                  "width": 390,
+                  "height": 211.1875,
+                  "top": -310,
+                  "right": 470,
+                  "bottom": -98.8125,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": -310,
+                      "width": 32,
+                      "height": 32,
+                      "top": -310,
+                      "right": 112,
+                      "bottom": -278,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "37px",
+                    "rect": {
+                      "x": 80,
+                      "y": -266,
+                      "width": 390,
+                      "height": 58,
+                      "top": -266,
+                      "right": 470,
+                      "bottom": -208,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": -196,
+                      "width": 390,
+                      "height": 43.1875,
+                      "top": -196,
+                      "right": 470,
+                      "bottom": -152.8125,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 80,
+                      "y": -142.8125,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -142.8125,
+                      "right": 251.53125,
+                      "bottom": -98.8125,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": 14,
+              "width": 900,
+              "height": 38,
+              "top": 14,
+              "right": 950,
+              "bottom": 52,
+              "left": 50
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 18501,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 80,
+                  "y": -1357,
+                  "width": 390,
+                  "height": 211.1875,
+                  "top": -1357,
+                  "right": 470,
+                  "bottom": -1145.8125,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": -1357,
+                      "width": 32,
+                      "height": 32,
+                      "top": -1357,
+                      "right": 112,
+                      "bottom": -1325,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "37px",
+                    "rect": {
+                      "x": 80,
+                      "y": -1313,
+                      "width": 390,
+                      "height": 58,
+                      "top": -1313,
+                      "right": 470,
+                      "bottom": -1255,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": -1243,
+                      "width": 390,
+                      "height": 43.1875,
+                      "top": -1243,
+                      "right": 470,
+                      "bottom": -1199.8125,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 80,
+                      "y": -1189.8125,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -1189.8125,
+                      "right": 251.53125,
+                      "bottom": -1145.8125,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": -1033,
+              "width": 900,
+              "height": 38,
+              "top": -1033,
+              "right": 950,
+              "bottom": -995,
+              "left": 50
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 21040,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 80,
+                  "y": -3896,
+                  "width": 390,
+                  "height": 211.1875,
+                  "top": -3896,
+                  "right": 470,
+                  "bottom": -3684.8125,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": -3896,
+                      "width": 32,
+                      "height": 32,
+                      "top": -3896,
+                      "right": 112,
+                      "bottom": -3864,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "37px",
+                    "rect": {
+                      "x": 80,
+                      "y": -3852,
+                      "width": 390,
+                      "height": 58,
+                      "top": -3852,
+                      "right": 470,
+                      "bottom": -3794,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": -3782,
+                      "width": 390,
+                      "height": 43.1875,
+                      "top": -3782,
+                      "right": 470,
+                      "bottom": -3738.8125,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 80,
+                      "y": -3728.8125,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -3728.8125,
+                      "right": 251.53125,
+                      "bottom": -3684.8125,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": -3572,
+              "width": 900,
+              "height": 38,
+              "top": -3572,
+              "right": 950,
+              "bottom": -3534,
+              "left": 50
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 22673,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 80,
+                  "y": -5529,
+                  "width": 390,
+                  "height": 211.1875,
+                  "top": -5529,
+                  "right": 470,
+                  "bottom": -5317.8125,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": -5529,
+                      "width": 32,
+                      "height": 32,
+                      "top": -5529,
+                      "right": 112,
+                      "bottom": -5497,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "37px",
+                    "rect": {
+                      "x": 80,
+                      "y": -5485,
+                      "width": 390,
+                      "height": 58,
+                      "top": -5485,
+                      "right": 470,
+                      "bottom": -5427,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": -5415,
+                      "width": 390,
+                      "height": 43.1875,
+                      "top": -5415,
+                      "right": 470,
+                      "bottom": -5371.8125,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 80,
+                      "y": -5361.8125,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -5361.8125,
+                      "right": 251.53125,
+                      "bottom": -5317.8125,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": -5205,
+              "width": 900,
+              "height": 38,
+              "top": -5205,
+              "right": 950,
+              "bottom": -5167,
+              "left": 50
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "layout": {
+            "width": 1000,
+            "scrollWidth": 1000,
+            "scrollY": 24345,
+            "active": "application-details",
+            "copy": [
+              {
+                "copy": "18",
+                "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+                "rect": {
+                  "x": 80,
+                  "y": -7201,
+                  "width": 390,
+                  "height": 211.1875,
+                  "top": -7201,
+                  "right": 470,
+                  "bottom": -6989.8125,
+                  "left": 80
+                },
+                "children": [
+                  {
+                    "text": "",
+                    "font": "16px",
+                    "rect": {
+                      "x": 80,
+                      "y": -7201,
+                      "width": 32,
+                      "height": 32,
+                      "top": -7201,
+                      "right": 112,
+                      "bottom": -7169,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "AESIRSOLAR",
+                    "font": "37px",
+                    "rect": {
+                      "x": 80,
+                      "y": -7157,
+                      "width": 390,
+                      "height": 58,
+                      "top": -7157,
+                      "right": 470,
+                      "bottom": -7099,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                    "font": "12px",
+                    "rect": {
+                      "x": 80,
+                      "y": -7087,
+                      "width": 390,
+                      "height": 43.1875,
+                      "top": -7087,
+                      "right": 470,
+                      "bottom": -7043.8125,
+                      "left": 80
+                    }
+                  },
+                  {
+                    "text": "Start your application ↗",
+                    "font": "14px",
+                    "rect": {
+                      "x": 80,
+                      "y": -7033.8125,
+                      "width": 171.53125,
+                      "height": 44,
+                      "top": -7033.8125,
+                      "right": 251.53125,
+                      "bottom": -6989.8125,
+                      "left": 80
+                    }
+                  }
+                ]
+              }
+            ],
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 1000,
+              "height": 65,
+              "top": 0,
+              "right": 1000,
+              "bottom": 65,
+              "left": 0
+            },
+            "footer": {
+              "x": 50,
+              "y": -6877,
+              "width": 900,
+              "height": 38,
+              "top": -6877,
+              "right": 950,
+              "bottom": -6839,
+              "left": 50
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/experience?inspect=1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-mTJMheZB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/three.core-isatdiS8.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-layout-DNLUEQrg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-path-Hh8lSnZn.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-journey-BnmYoXLK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BXPptB1D.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-Dk4yyRWh.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/experience-poster-2apZrVuk.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/scene-0sWWKTBK.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-day-4096-BO1QlKRh.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-2048-CxNnPLJI.webp",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-ykuhfQQI.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/site-CWAhKuIy.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/cell-Bzxvuxui.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/energy-flow-BhHzgrDc.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/electrical-HXYY0N7K.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/business-BlH1hB1y.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/storage-DRh_X_NB.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+          "method": "GET"
+        }
+      ],
+      "offscreen": {
+        "onscreen": false,
+        "ambientFrozen": true
+      },
+      "still": {
+        "width": 1000,
+        "scrollWidth": 1000,
+        "scrollY": 0,
+        "active": "",
+        "copy": [
+          {
+            "copy": "18",
+            "text": "AESIR\nSOLAR\n\nYour G99 application.\nPrepared. Submitted. Followed through.\n\nStart your application\n↗",
+            "rect": {
+              "x": 80,
+              "y": 100,
+              "width": 390,
+              "height": 160.1875,
+              "top": 100,
+              "right": 470,
+              "bottom": 260.1875,
+              "left": 80
+            },
+            "children": [
+              {
+                "text": "",
+                "font": "16px",
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0,
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                }
+              },
+              {
+                "text": "AESIRSOLAR",
+                "font": "30px",
+                "rect": {
+                  "x": 80,
+                  "y": 100,
+                  "width": 390,
+                  "height": 51,
+                  "top": 100,
+                  "right": 470,
+                  "bottom": 151,
+                  "left": 80
+                }
+              },
+              {
+                "text": "Your G99 application.Prepared. Submitted. Followed through.",
+                "font": "12px",
+                "rect": {
+                  "x": 80,
+                  "y": 163,
+                  "width": 390,
+                  "height": 43.1875,
+                  "top": 163,
+                  "right": 470,
+                  "bottom": 206.1875,
+                  "left": 80
+                }
+              },
+              {
+                "text": "Start your application ↗",
+                "font": "14px",
+                "rect": {
+                  "x": 80,
+                  "y": 216.1875,
+                  "width": 171.53125,
+                  "height": 44,
+                  "top": 216.1875,
+                  "right": 251.53125,
+                  "bottom": 260.1875,
+                  "left": 80
+                }
+              }
+            ]
+          }
+        ],
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1000,
+          "height": 65,
+          "top": 0,
+          "right": 1000,
+          "bottom": 65,
+          "left": 0
+        },
+        "footer": {
+          "x": 50,
+          "y": 389,
+          "width": 900,
+          "height": 93,
+          "top": 389,
+          "right": 950,
+          "bottom": 482,
+          "left": 50
+        }
+      }
+    }
+  ]
+}

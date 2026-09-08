@@ -1,0 +1,30 @@
+{
+  name: 'laptop',
+  errors: [],
+  warnings: [],
+  offscreen: { onscreen: false, ambientFrozen: true }
+}
+{
+  name: 'desktop',
+  errors: [],
+  warnings: [],
+  offscreen: { onscreen: false, ambientFrozen: true }
+}
+{
+  name: 'mobile',
+  errors: [],
+  warnings: [],
+  offscreen: { onscreen: false, ambientFrozen: true }
+}
+{
+  name: 'intermediate',
+  errors: [],
+  warnings: [],
+  offscreen: { onscreen: false, ambientFrozen: true }
+}
+{
+  name: 'short',
+  errors: [],
+  warnings: [],
+  offscreen: { onscreen: false, ambientFrozen: true }
+}

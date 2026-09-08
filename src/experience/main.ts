@@ -31,7 +31,7 @@ function updateCopy(p:number) {
   for(let i=0;i<panels.length;i++) {
     panels[i].style.opacity=String(opacity[i]);panels[i].style.visibility=opacity[i]>.005?'visible':'hidden';
     panels[i].style.transform=`translateY(${(1-opacity[i])*10}px)`;
-    panels[i].setAttribute('aria-hidden',String(opacity[i]<.15));
+    panels[i].setAttribute('aria-hidden',String(opacity[i]<.15));panels[i].inert=opacity[i]<.15;
   }
   stage.style.setProperty('--read-shade',String(Math.max(...opacity.slice(5))));stage.style.setProperty('--visible-copy',String(Math.max(...opacity)));
   bar.style.transform=`scaleX(${p/JOURNEY_END})`;
@@ -106,8 +106,11 @@ async function init() {
     const {SolarScene}=await import('./scene');if(failed||disposed)return;
     scene=new SolarScene(host,fallback,()=>{if(!ready)return;updateCopy(scene?.displayedProgress()??progress);if(paused||reduced.matches)scene?.render(0);});
     await scene.prepare();if(failed||disposed){scene.dispose();return;}
-    const atDetails=location.hash==='#application-details';ready=true;configureMotion();stage.classList.add('is-ready');
-    if(atDetails)document.querySelector('#application-details')?.scrollIntoView();
+    let anchorId=location.hash.slice(1);
+    try{anchorId=decodeURIComponent(anchorId);}catch{/* An unknown or malformed fragment is not a rendering failure. */}
+    const anchor=document.getElementById(anchorId);
+    const contentAnchor=anchor&&!journey.contains(anchor)?anchor:undefined;ready=true;configureMotion();stage.classList.add('is-ready');
+    if(contentAnchor)contentAnchor.scrollIntoView();
     observer=new IntersectionObserver(entries=>{onscreen=entries[0].isIntersecting;document.body.classList.toggle('at-details',!onscreen);if(!onscreen)stop();else resume();},{threshold:.01,rootMargin:'-110px 0px 0px 0px'});observer.observe(stage);
     resizeObserver=new ResizeObserver(()=>{if(!scene||failed)return;frameLayout();scene.resize();if(paused||reduced.matches)scene.render(0);});resizeObserver.observe(host);for(const panel of panels)resizeObserver.observe(panel);
     pauseButton.addEventListener('click',togglePause);stillViews.addEventListener('click',changeStill);document.addEventListener('visibilitychange',visibility);reduced.addEventListener('change',configureMotion);window.addEventListener('pagehide',onPageHide);window.addEventListener('pageshow',onPageShow);
