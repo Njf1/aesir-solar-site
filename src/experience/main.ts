@@ -2,7 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { framingFor, smooth } from './progress';
 import {journeyCopy} from './journey';
-import {CHAPTERS,JOURNEY_END,SCROLL_VIEWPORTS_PER_UNIT,STILL_VIEWS,chapterAt} from './timeline';
+import {CHAPTERS,JOURNEY_END,SCROLL_VIEWPORTS_PER_UNIT,STILL_VIEWS,CELL_SWITCH,CELL_EXIT,chapterAt} from './timeline';
 gsap.registerPlugin(ScrollTrigger);
 const journey=document.querySelector<HTMLElement>('#journey')!;
 const stage=document.querySelector<HTMLElement>('#stage')!;
@@ -13,6 +13,7 @@ const status=document.querySelector<HTMLElement>('#fallback-status')!;
 const bar=document.querySelector<HTMLElement>('#progress-bar')!;
 const panels=Array.from(document.querySelectorAll<HTMLElement>('[data-copy]'));
 const note=document.querySelector<HTMLElement>('.journey-note')!;
+const processNote=document.querySelector<HTMLElement>('#process-note')!;
 const scrollLabel=document.querySelector<HTMLElement>('#scroll-label')!;
 journey.style.setProperty('--journey-height',`${(1+SCROLL_VIEWPORTS_PER_UNIT*JOURNEY_END)*100}svh`);
 journey.dataset.duration=String(JOURNEY_END);
@@ -31,11 +32,12 @@ function updateCopy(p:number) {
     panels[i].style.transform=`translateY(${(1-opacity[i])*10}px)`;
     panels[i].setAttribute('aria-hidden',String(opacity[i]<.15));
   }
-  stage.style.setProperty('--read-shade',String(Math.max(opacity[5],opacity[6])));
+  stage.style.setProperty('--read-shade',String(Math.max(...opacity.slice(5))));stage.style.setProperty('--visible-copy',String(Math.max(...opacity)));
   bar.style.transform=`scaleX(${p/JOURNEY_END})`;
   note.style.opacity=String(smooth((p-.83)/.05)*(1-smooth((p-1.05)/.08)));
   stage.dataset.chapter=CHAPTERS[chapterAt(p)].id;
-  document.body.dataset.scene=p>=1.55?'site':p>=1.30?'region':'space';
+  document.body.dataset.scene=p>=CELL_SWITCH&&p<CELL_EXIT?'cell':p>=1.55?'site':p>=1.30?'region':'space';
+  const processOpacity=smooth((p-2.43)/.04)*(1-smooth((p-2.94)/.06));processNote.style.opacity=String(processOpacity);processNote.style.visibility=processOpacity>.005?'visible':'hidden';processNote.setAttribute('aria-hidden',String(processOpacity<.15));
   chapterLabel.textContent=CHAPTERS[chapterAt(p)].label;
 }
 function frameLayout() {

@@ -98,7 +98,7 @@ uniform vec3 uLight;uniform float uOpacity;varying vec3 vWorld;varying vec3 vNor
 void main(){vec3 n=normalize(vNormal),v=normalize(cameraPosition-vWorld);float rim=pow(max(0.,1.-abs(dot(n,v))),4.5);float day=smoothstep(-.2,.5,dot(n,normalize(uLight)));float a=rim*day*.46*uOpacity;gl_FragColor=vec4(vec3(.10,.40,1.)*a,a);}`;
 
 export const cloudTransitionFragment=/* glsl */`
-uniform float uTime;uniform float uOpacity;varying vec2 vUv;
+uniform float uTime;uniform float uOpacity;uniform float uKind;varying vec2 vUv;
 #define DETAIL 4
 ${noise}
-void main(){vec2 uv=vUv+vec2(uTime*.002,0.);float n=fbm(vec3(uv*5.,uTime*.009));float billow=smoothstep(.18,.8,n);float a=smoothstep(0.,.85,uOpacity)*(mix(.35,1.,billow));a=mix(a,1.,smoothstep(.80,.98,uOpacity));vec3 color=mix(vec3(.58,.72,.81),vec3(.92,.95,.94),billow);gl_FragColor=vec4(color,a);}`;
+void main(){if(uKind>.5){float sweep=exp(-pow((vUv.x+vUv.y*.35-.35-uOpacity*.50)/.22,2.));vec3 c=uKind<1.5?mix(vec3(.12,.23,.32),vec3(.80,.90,.97),sweep):mix(vec3(.045,.07,.09),vec3(.19,.26,.30),sweep*.35);float alpha=mix(uOpacity,1.,smoothstep(.80,.98,uOpacity));gl_FragColor=vec4(c,alpha);return;}vec2 uv=vUv+vec2(uTime*.002,0.);float n=fbm(vec3(uv*5.,uTime*.009));float billow=smoothstep(.18,.8,n);float a=smoothstep(0.,.85,uOpacity)*(mix(.35,1.,billow));a=mix(a,1.,smoothstep(.80,.98,uOpacity));vec3 color=mix(vec3(.58,.72,.81),vec3(.92,.95,.94),billow);gl_FragColor=vec4(color,a);}`;

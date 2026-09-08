@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import {sampleJourney,sampleGuide,guideTangent,journeyCopy} from '../src/experience/journey.ts';
 import {EARTH_POSITION} from '../src/experience/progress.ts';
 import {latLonToEarth,earthToLatLon,earthToRegion,directionToRegion,regionToSite,LOCAL_UP,LOCAL_EAST,LOCAL_SOUTH,SUN_LOCAL} from '../src/experience/geography.ts';
-import {CHAPTERS,JOURNEY_END,SCROLL_VIEWPORTS_PER_UNIT,STILL_VIEWS} from '../src/experience/timeline.ts';
+import {CHAPTERS,JOURNEY_END,STAGE_THREE_END,SCROLL_VIEWPORTS_PER_UNIT,STILL_VIEWS} from '../src/experience/timeline.ts';
 import {HERO_ANCHOR,HERO_NORMAL,ROOF_Y} from '../src/experience/site-layout.ts';
 import {createCommercialSite} from '../src/experience/commercial.ts';
 const modes=['landscape','portrait','short'],v=a=>new THREE.Vector3(...a);
@@ -14,10 +14,10 @@ const near=(a,b,epsilon,label)=>assert.ok(a.distanceTo(b)<=epsilon,`${label}: ${
 function rightFrame(point,p){return p===.735?point.clone().sub(v(EARTH_POSITION)):p===1.3?earthToRegion(point):p===1.55?regionToSite(point):point;}
 
 test('new chapters extend the scroll distance while retaining the accepted first unit',()=>{
- assert.equal(SCROLL_VIEWPORTS_PER_UNIT,5.6);assert.equal(JOURNEY_END,2.25);
+ assert.equal(SCROLL_VIEWPORTS_PER_UNIT,5.6);assert.equal(STAGE_THREE_END,2.25);
  assert.deepEqual(CHAPTERS.slice(0,5).map(({start,end})=>[start,end]),[[0,.16],[.16,.39],[.39,.51],[.51,.75],[.75,1]]);
  for(let i=1;i<CHAPTERS.length;i++)assert.equal(CHAPTERS[i].start,CHAPTERS[i-1].end);
- assert.deepEqual(Object.keys(STILL_VIEWS),['sun','earth','britain','roof','panel']);
+ assert.deepEqual(Object.keys(STILL_VIEWS).slice(0,5),['sun','earth','britain','roof','panel']);
  for(const p of Object.values(STILL_VIEWS)){
   const s=sampleJourney(p);assert.ok(s.cloudOpacity<.01,'still must not be an opaque transition');
   assert.equal(journeyCopy(p,true).filter(o=>o>.5).length,1,'each still has exactly one readable HTML chapter');
@@ -47,7 +47,7 @@ test('all chapters reconstruct identical finite shots in reverse and attach the 
    assert.ok(Math.abs(guideTangent(s,0).length()-1)<1e-9);
   }
   assert.deepEqual(sampleJourney(-1,mode),sampleJourney(0,mode));
-  assert.deepEqual(sampleJourney(3,mode),sampleJourney(JOURNEY_END,mode));
+  assert.deepEqual(sampleJourney(JOURNEY_END+1,mode),sampleJourney(JOURNEY_END,mode));
   assert.deepEqual(sampleJourney(NaN,mode),sampleJourney(0,mode));
  }
 });
@@ -89,7 +89,7 @@ test('the approach, roof entry and array glide occupy authored scroll landmarks'
  ];
  for(const [p,camera,guide] of landmarks){const s=sampleJourney(p);near(v(s.camera),v(camera),1e-9,`camera landmark ${p}`);near(v(s.pulse),v(guide),1e-9,`guide landmark ${p}`);}
  let last=-1;for(let i=15500;i<=22500;i++){const s=sampleJourney(i/10000);assert.ok(s.guideU>=last,'guide reverses along the roof');last=s.guideU;}
- for(const mode of modes){const end=sampleJourney(JOURNEY_END,mode);near(v(end.pulse),HERO_ANCHOR.clone().addScaledVector(HERO_NORMAL,.045),1e-9,'guide stops above glass');assert.ok(v(end.camera).sub(HERO_ANCHOR).dot(HERO_NORMAL)>.7);}
+ for(const mode of modes){const end=sampleJourney(STAGE_THREE_END,mode);near(v(end.pulse),HERO_ANCHOR.clone().addScaledVector(HERO_NORMAL,.045),1e-9,'guide stops above glass');assert.ok(v(end.camera).sub(HERO_ANCHOR).dot(HERO_NORMAL)>.7);}
 });
 
 test('the exposed guide stays in frame and clear of the Earth and roof at every sampled step',()=>{
@@ -114,7 +114,7 @@ test('authored geometry leaves the camera-to-guide sightline clear and agrees wi
   asset=createCommercialSite('desktop');asset.group.updateMatrixWorld(true);
   near(asset.heroAnchor,HERO_ANCHOR,1e-6,'live mesh anchor');near(asset.heroNormal,HERO_NORMAL,1e-6,'live mesh normal');
   const ray=new THREE.Raycaster();for(const mode of modes)for(let i=0;i<=180;i++){
-   const p=1.635+(JOURNEY_END-1.635)*i/180,s=sampleJourney(p,mode),from=v(s.camera),delta=v(s.pulse).sub(from);
+   const p=1.635+(STAGE_THREE_END-1.635)*i/180,s=sampleJourney(p,mode),from=v(s.camera),delta=v(s.pulse).sub(from);
    ray.set(from,delta.clone().normalize());ray.near=.001;ray.far=delta.length()-.002;
    const hit=ray.intersectObject(asset.group,true)[0];assert.equal(hit,undefined,`${mode} p=${p}: guide hidden by ${hit?.object.name}`);
   }

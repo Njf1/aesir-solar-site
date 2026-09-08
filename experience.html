@@ -17,7 +17,7 @@
     <a class="apply-link" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>
   </header>
   <main id="main">
-    <section class="journey" id="journey" aria-label="Follow solar energy from the Sun to a working roof">
+    <section class="journey" id="journey" aria-label="Follow sunlight through a solar cell to useful electrical energy">
       <div class="stage" id="stage">
         <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:759px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>
         <div class="canvas-host" id="canvas-host" aria-hidden="true"></div>
@@ -53,12 +53,30 @@
           <div class="chapter-copy copy-panel" data-copy="6" aria-hidden="true">
             <p class="eyebrow">AT THE SURFACE</p><h2>LIGHT MEETS<br>SILICON.</h2>
           </div>
+          <div class="chapter-copy copy-glass" data-copy="7" aria-hidden="true">
+            <p class="eyebrow">THE SAME CELL, ENLARGED</p><h2>BENEATH<br>THE GLASS.</h2>
+            <p class="chapter-description">Through protective glass<br>to the silicon cell.</p>
+          </div>
+          <div class="chapter-copy copy-cell" data-copy="8" aria-hidden="true">
+            <p class="eyebrow">ABSORPTION AND COLLECTION</p><h2>LIGHT BECOMES<br>POWER.</h2>
+            <p class="chapter-description">The silicon absorbs light and transfers its energy to charge carriers.</p>
+          </div>
+          <div class="chapter-copy copy-dc" data-copy="9" aria-hidden="true">
+            <p class="eyebrow">COLLECTED AT THE CONTACTS</p><h2>DIRECT<br>CURRENT.</h2>
+            <p class="chapter-description">The array and inverter details<br>shape the application.</p>
+          </div>
+          <div class="chapter-copy copy-inverter" data-copy="10" aria-hidden="true">
+            <p class="eyebrow">AT THE INVERTER</p><h2>DC BECOMES<br>AC.</h2>
+            <p class="chapter-description">The inverter converts the array’s direct current into alternating current.</p>
+          </div>
         </div>
         <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>
+        <p class="process-note" id="process-note">Illustrative layers and motion, enlarged.<br>Continuing light and a connected circuit.</p>
+        <div id="inverter-annotations" hidden><span data-inverter-label="dcLabel">DC input</span><span data-inverter-label="acLabel">AC output</span><span data-inverter-label="timeLabel">Voltage ↕ · Time →</span></div>
         <div class="chapter-footer">
           <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>
-          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span>10</span></div>
-          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button></div>
+          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span>16</span></div>
+          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button></div>
           <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>
         </div>
         <p class="fallback-status" id="fallback-status" role="status"></p>
@@ -84,6 +102,12 @@
           <p class="scope-note">Not sure Form A1-2 fits your installation? Discuss suitability with us before paying.</p>
         </div>
       </div>
+      <details class="energy-explanation"><summary>How light becomes electrical energy</summary><div>
+        <p><strong>Absorb and collect.</strong> Silicon absorbs light and transfers its energy to charge carriers. The cell’s structure enables charge separation and current extraction through metal contacts. The photon does not become an electron.</p>
+        <p><strong>Direct current to alternating current.</strong> Module interconnections and a connected DC circuit carry electrical energy from the illuminated array to an inverter, which converts DC to AC.</p>
+        <p>The blue moving bands illustrate energy flow, not individual electrons or a measured speed. The inverter graph shows voltage changing over time; its curve is not the shape of a cable. Generation requires continuing illumination and a connected circuit.</p>
+        <p>The generic module, enlarged cell layers and inverter are original educational illustrations. They do not identify a manufacturer, complete string design, equipment rating or live output. Learn more from the <a href="https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics">DOE cell explanation</a> and <a href="https://www.energy.gov/cmei/systems/solar-integration-inverters-and-grid-services-basics">inverter explanation</a>.</p>
+      </div></details>
       <footer class="site-footer"><span>AESIR SOLAR <span class="footer-location">/ GREAT BRITAIN</span></span><nav aria-label="Further information"><a href="/faq.html">FAQ</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a></nav><a href="#main">Back to the light ↑</a></footer>
       <p class="image-credit">Earth imagery: <a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/">NASA Earth Observatory</a> / NASA Goddard Space Flight Center. Reto Stöckli; cloud enhancements by Robert Simmon. Coastline: <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> (public domain). The commercial site and equipment are original illustrations.</p>
     </section>

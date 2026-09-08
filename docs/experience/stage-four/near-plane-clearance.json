@@ -1,0 +1,158 @@
+{
+  "note": "Actual triangle/near-plane intersections. Transparent aperture cuts and full transition coverage are explicitly tagged; not silently counted as passes. Current-front offscreen spans are composition indicators, not photon failures.",
+  "joins": [
+    {
+      "mode": "landscape",
+      "p": 2.25,
+      "camera": 6.3461732238567545e-12,
+      "target": 1.8199640570192545e-13,
+      "optical": 1.654913560206007e-12,
+      "transitionBefore": 0,
+      "transitionAfter": 0
+    },
+    {
+      "mode": "landscape",
+      "p": 2.38,
+      "camera": 9.0817315958171e-11,
+      "target": 6.309524642116676e-12,
+      "optical": 9.543665587655315e-12,
+      "transitionBefore": 1,
+      "transitionAfter": 1
+    },
+    {
+      "mode": "landscape",
+      "p": 3.08,
+      "camera": 1.0017446374210388e-11,
+      "target": 2.2979714456173958e-12,
+      "optical": "photon already absorbed; electrical cue is separate",
+      "transitionBefore": 1,
+      "transitionAfter": 1
+    },
+    {
+      "mode": "portrait",
+      "p": 2.25,
+      "camera": 6.3461732238567545e-12,
+      "target": 1.5376613099512535e-12,
+      "optical": 1.654913560206007e-12,
+      "transitionBefore": 0,
+      "transitionAfter": 0
+    },
+    {
+      "mode": "portrait",
+      "p": 2.38,
+      "camera": 8.999241163189415e-11,
+      "target": 7.235073289073342e-12,
+      "optical": 9.543665587655315e-12,
+      "transitionBefore": 1,
+      "transitionAfter": 1
+    },
+    {
+      "mode": "portrait",
+      "p": 3.08,
+      "camera": 1.2574148010904393e-11,
+      "target": 2.2984499361693e-12,
+      "optical": "photon already absorbed; electrical cue is separate",
+      "transitionBefore": 1,
+      "transitionAfter": 1
+    },
+    {
+      "mode": "short",
+      "p": 2.25,
+      "camera": 9.424169876712681e-12,
+      "target": 1.8199640570192545e-13,
+      "optical": 1.654913560206007e-12,
+      "transitionBefore": 0,
+      "transitionAfter": 0
+    },
+    {
+      "mode": "short",
+      "p": 2.38,
+      "camera": 9.04542480546347e-11,
+      "target": 6.309524642116676e-12,
+      "optical": 9.543665587655315e-12,
+      "transitionBefore": 1,
+      "transitionAfter": 1
+    },
+    {
+      "mode": "short",
+      "p": 3.08,
+      "camera": 1.0075255154796148e-11,
+      "target": 2.2979714456173958e-12,
+      "optical": "photon already absorbed; electrical cue is separate",
+      "transitionBefore": 1,
+      "transitionAfter": 1
+    }
+  ],
+  "trailSwitch": {
+    "beforeLength": 0.10000182540366347,
+    "afterLength": 0.10000182540332746,
+    "tailWorldJump": 1.987700441669786e-12
+  },
+  "views": [
+    {
+      "mode": "landscape",
+      "aspect": 1.6,
+      "samples": 18301,
+      "minAimDistance": 0.1345379532659638,
+      "minGuideDepth": 0.11817204396077591,
+      "cuts": [],
+      "contained": [],
+      "photonOffscreen": [],
+      "currentOffscreen": [],
+      "waveformOffscreen": [],
+      "cabinetOffscreen": []
+    },
+    {
+      "mode": "portrait",
+      "aspect": 0.46208530805687204,
+      "samples": 18301,
+      "minAimDistance": 0.13453792293405192,
+      "minGuideDepth": 0.11817204667554654,
+      "cuts": [],
+      "contained": [],
+      "photonOffscreen": [],
+      "currentOffscreen": [],
+      "waveformOffscreen": [],
+      "cabinetOffscreen": []
+    },
+    {
+      "mode": "short",
+      "aspect": 2,
+      "samples": 18301,
+      "minAimDistance": 0.1345379532659638,
+      "minGuideDepth": 0.11817204396077591,
+      "cuts": [],
+      "contained": [],
+      "photonOffscreen": [],
+      "currentOffscreen": [],
+      "waveformOffscreen": [],
+      "cabinetOffscreen": []
+    },
+    {
+      "mode": "portrait",
+      "aspect": 0.8222222222222222,
+      "samples": 18301,
+      "minAimDistance": 0.13453792293405192,
+      "minGuideDepth": 0.11817204667554654,
+      "cuts": [],
+      "contained": [],
+      "photonOffscreen": [],
+      "currentOffscreen": [],
+      "waveformOffscreen": [],
+      "cabinetOffscreen": []
+    },
+    {
+      "mode": "landscape",
+      "aspect": 1.7777777777777777,
+      "samples": 18301,
+      "minAimDistance": 0.1345379532659638,
+      "minGuideDepth": 0.11817204396077591,
+      "cuts": [],
+      "contained": [],
+      "photonOffscreen": [],
+      "currentOffscreen": [],
+      "waveformOffscreen": [],
+      "cabinetOffscreen": []
+    }
+  ]
+}

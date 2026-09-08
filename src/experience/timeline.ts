@@ -1,7 +1,9 @@
 /** Authoring units retain stage two's 5.6 viewport-heights per unit. Extending the end
  * adds scroll distance; it never rescales the accepted Sun/flight/Earth choreography. */
 export const SCROLL_VIEWPORTS_PER_UNIT = 5.6;
-export const JOURNEY_END = 2.25;
+export const STAGE_THREE_END=2.25;
+export const JOURNEY_END=4.08;
+export const CELL_SWITCH=2.38,CELL_EXIT=3.08;
 export const CHAPTERS = [
   {id:'source',label:'Source',start:0,end:.16},
   {id:'sun',label:'Sun',start:.16,end:.39},
@@ -12,8 +14,14 @@ export const CHAPTERS = [
   {id:'atmosphere',label:'Through the atmosphere',start:1.49,end:1.65},
   {id:'building',label:'A working roof',start:1.65,end:1.84},
   {id:'array',label:'Across the array',start:1.84,end:2.06},
-  {id:'panel',label:'Light meets silicon',start:2.06,end:JOURNEY_END},
+  {id:'panel',label:'Light meets silicon',start:2.06,end:STAGE_THREE_END},
+  {id:'glass',label:'Through the glass',start:2.25,end:2.46},
+  {id:'cell',label:'Light becomes power',start:2.46,end:2.82},
+  {id:'contacts',label:'Collecting charge',start:2.82,end:3.08},
+  {id:'dc',label:'Direct current',start:3.08,end:3.54},
+  {id:'inverter',label:'At the inverter',start:3.54,end:3.84},
+  {id:'ac',label:'Alternating current',start:3.84,end:JOURNEY_END},
 ] as const;
 export const chapterAt=(p:number)=>CHAPTERS.findIndex(c=>p<c.end)===-1?CHAPTERS.length-1:CHAPTERS.findIndex(c=>p<c.end);
-export const STILL_VIEWS={sun:.285,earth:.925,britain:1.40,roof:1.76,panel:2.23} as const;
+export const STILL_VIEWS={sun:.285,earth:.925,britain:1.40,roof:1.76,panel:2.23,cell:2.76,dc:3.40,inverter:4.02} as const;
 export const REGION_SWITCH=1.30, SITE_SWITCH=1.55;

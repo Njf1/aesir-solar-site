@@ -1,0 +1,1109 @@
+{
+  "recordedAt": "2026-09-08T18:52:35.808Z",
+  "browser": "151.0.7922.34",
+  "viewport": "740×900",
+  "purpose": "Independent repeat of uniform 30 fps cadence in the full suite. Fresh browser, unchanged application.",
+  "errors": [],
+  "warnings": [],
+  "measures": [
+    {
+      "label": "Sun",
+      "samples": 120,
+      "p50": 33.30000000000018,
+      "p95": 34.09999999999991,
+      "appP50": 33.30000000000018,
+      "appP95": 34.09999999999991,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 0.3599241355833293,
+        "ambientTime": 4.666699999999997,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            -1.1094971892983958,
+            0,
+            43.52363214529466
+          ],
+          "target": [
+            -0.7485523729902969,
+            8.206734274445699,
+            0.3548051710127418
+          ],
+          "pulse": [
+            -8.65,
+            3,
+            4.1
+          ],
+          "tangent": [
+            -0.6297199167276917,
+            0.26430685180842484,
+            0.7304756769144256
+          ],
+          "flight": 0,
+          "chapter": 1,
+          "scene": "solar",
+          "earthVisibility": 0,
+          "pulseOpacity": 0,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "solar",
+          "guideU": 0,
+          "trailLength": 7,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 1
+        },
+        "dcFlow": null,
+        "trailHeadError": 0,
+        "cellStatus": "idle",
+        "electricalStatus": "idle",
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0,
+        "regionStatus": "idle",
+        "siteStatus": "idle",
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 20,
+        "triangles": 17210,
+        "shadowEstimatedBytes": 0,
+        "geometries": 21,
+        "textures": 2,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "label": "Earth",
+      "samples": 121,
+      "p50": 33.30000000000018,
+      "p95": 33.80000000000018,
+      "appP50": 33.30000000000018,
+      "appP95": 33.80000000000018,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 0.9349297281525069,
+        "ambientTime": 9.366700000000012,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            4.94873370314387,
+            4.969014779119846,
+            -39.38918942007306
+          ],
+          "target": [
+            0.020482775044276067,
+            8.448455826810658,
+            -0.739182017257576
+          ],
+          "pulse": [
+            1.0050387511877275,
+            6.8179617864141795,
+            -14.619511945637042
+          ],
+          "tangent": [
+            -0.018991324369770662,
+            0.27602943762487514,
+            0.9609615388573974
+          ],
+          "flight": 0.96,
+          "chapter": 4,
+          "scene": "earth",
+          "earthVisibility": 1,
+          "pulseOpacity": 1,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "orbital",
+          "guideU": 0.9329357759603913,
+          "trailLength": 2.7550303233208124,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 1
+        },
+        "dcFlow": null,
+        "trailHeadError": 3.5416644864389733e-7,
+        "cellStatus": "idle",
+        "electricalStatus": "idle",
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0,
+        "regionStatus": "ready",
+        "siteStatus": "idle",
+        "region": {
+          "transferBytes": 503245,
+          "triangles": 20350,
+          "geometryBytes": 960176,
+          "textures": 0
+        },
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 8,
+        "triangles": 31370,
+        "shadowEstimatedBytes": 0,
+        "geometries": 26,
+        "textures": 2,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "label": "Panel",
+      "samples": 120,
+      "p50": 33.30000000000109,
+      "p95": 34.19999999999891,
+      "appP50": 33.30000000000109,
+      "appP95": 34.19999999999891,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 2.234942372221952,
+        "ambientTime": 14.033300000000006,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            -9.539500515435785,
+            12.13886066333369,
+            10.965245274095471
+          ],
+          "target": [
+            -9.964639855142552,
+            11.50053991036521,
+            10.015605266691612
+          ],
+          "pulse": [
+            -9.961564870519418,
+            11.503471336059782,
+            10.015904138910203
+          ],
+          "tangent": [
+            -0.9556545670585193,
+            -0.29444353258829853,
+            0.005230160333831348
+          ],
+          "flight": 0.96,
+          "chapter": 9,
+          "scene": "site",
+          "earthVisibility": 1,
+          "pulseOpacity": 0.95,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "site",
+          "guideU": 0.9996033579497846,
+          "trailLength": 0.11080916756674686,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 0.9
+        },
+        "dcFlow": null,
+        "trailHeadError": 3.254098946262001e-7,
+        "cellStatus": "ready",
+        "electricalStatus": "idle",
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3762,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 158,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 0,
+            "absorption": 0,
+            "extraction": 0,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0,
+        "regionStatus": "ready",
+        "siteStatus": "ready",
+        "region": {
+          "transferBytes": 503245,
+          "triangles": 20350,
+          "geometryBytes": 960176,
+          "textures": 0
+        },
+        "site": {
+          "drawCalls": 38,
+          "triangles": 91102,
+          "instances": 8049,
+          "instancedMeshes": 35,
+          "panelCount": 879,
+          "panelAreaM2": 2270.678508,
+          "arrayCoverage": 0.591322528125,
+          "textureBytes": 524288,
+          "textureBytesWithMipmaps": 699051,
+          "geometryBytes": 533128,
+          "extraTextureBytes": 1048576,
+          "environmentEstimatedBytes": 2359296
+        },
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 35,
+        "triangles": 91230,
+        "shadowEstimatedBytes": 8388608,
+        "geometries": 39,
+        "textures": 8,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "label": "Cell absorption",
+      "samples": 121,
+      "p50": 33.30000000000291,
+      "p95": 33.79999999999927,
+      "appP50": 33.30000000000291,
+      "appP95": 33.79999999999927,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 2.6799863833098283,
+        "ambientTime": 18.733200000000032,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            11.842079527472071,
+            4.147849109782122,
+            11.472313774275632
+          ],
+          "target": [
+            -3.0061996987536053,
+            2.1439319569331965,
+            7.216555221875056e-19
+          ],
+          "pulse": [
+            -0.9000000000000001,
+            -1.1102230246251565e-16,
+            -6.938893903907228e-18
+          ],
+          "tangent": [
+            -0.4136678474660992,
+            -0.9100893237999138,
+            -0.02482608866052128
+          ],
+          "flight": 0.96,
+          "chapter": 11,
+          "scene": "cell",
+          "earthVisibility": 1,
+          "pulseOpacity": 0.539944154491559,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "cell",
+          "guideU": 1,
+          "trailLength": 0.8,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 0.9,
+          "conversion": {
+            "section": 1,
+            "absorption": 0.4316377321141485,
+            "extraction": 0,
+            "incident": 0.5683622678858515,
+            "energyU": 0,
+            "ac": 0,
+            "transition": 0,
+            "transitionKind": "glass"
+          }
+        },
+        "dcFlow": null,
+        "trailHeadError": 2.3841858043383013e-8,
+        "cellStatus": "ready",
+        "electricalStatus": "idle",
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 0.4316377321141485,
+            "extraction": 0,
+            "incident": 0.5683622678858515
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0,
+        "regionStatus": "ready",
+        "siteStatus": "ready",
+        "region": {
+          "transferBytes": 503245,
+          "triangles": 20350,
+          "geometryBytes": 960176,
+          "textures": 0
+        },
+        "site": {
+          "drawCalls": 38,
+          "triangles": 91102,
+          "instances": 8049,
+          "instancedMeshes": 35,
+          "panelCount": 879,
+          "panelAreaM2": 2270.678508,
+          "arrayCoverage": 0.591322528125,
+          "textureBytes": 524288,
+          "textureBytesWithMipmaps": 699051,
+          "geometryBytes": 533128,
+          "extraTextureBytes": 1048576,
+          "environmentEstimatedBytes": 2359296
+        },
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 20,
+        "triangles": 4004,
+        "shadowEstimatedBytes": 8388608,
+        "geometries": 45,
+        "textures": 8,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "label": "Contacts",
+      "samples": 121,
+      "p50": 33.30000000000291,
+      "p95": 34.19999999999709,
+      "appP50": 33.30000000000291,
+      "appP95": 34.19999999999709,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 2.8799883285512817,
+        "ambientTime": 23.433300000000074,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            7.963670016147918,
+            4.7264215474396485,
+            12.411100736500247
+          ],
+          "target": [
+            -1.0000905570768444,
+            1.3060182389774142,
+            0.00011045206760029735
+          ],
+          "pulse": [
+            -0.9000000000000001,
+            -1.1102230246251565e-16,
+            -6.938893903907228e-18
+          ],
+          "tangent": [
+            -0.4136678474660992,
+            -0.9100893237999138,
+            -0.02482608866052128
+          ],
+          "flight": 0.96,
+          "chapter": 12,
+          "scene": "cell",
+          "earthVisibility": 1,
+          "pulseOpacity": 0,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "cell",
+          "guideU": 1,
+          "trailLength": 0.8,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 0.9,
+          "conversion": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0,
+            "energyU": 0,
+            "ac": 0,
+            "transition": 0,
+            "transitionKind": "contact"
+          }
+        },
+        "dcFlow": {
+          "visible": false,
+          "travel": 0,
+          "opacity": 0
+        },
+        "trailHeadError": 2.3841858043383013e-8,
+        "cellStatus": "ready",
+        "electricalStatus": "ready",
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "electricalOverlayBytes": 60864,
+        "regionStatus": "ready",
+        "siteStatus": "ready",
+        "region": {
+          "transferBytes": 503245,
+          "triangles": 20350,
+          "geometryBytes": 960176,
+          "textures": 0
+        },
+        "site": {
+          "drawCalls": 38,
+          "triangles": 91102,
+          "instances": 8049,
+          "instancedMeshes": 35,
+          "panelCount": 879,
+          "panelAreaM2": 2270.678508,
+          "arrayCoverage": 0.591322528125,
+          "textureBytes": 524288,
+          "textureBytesWithMipmaps": 699051,
+          "geometryBytes": 533128,
+          "extraTextureBytes": 1048576,
+          "environmentEstimatedBytes": 2359296
+        },
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 18,
+        "triangles": 3834,
+        "shadowEstimatedBytes": 8388608,
+        "geometries": 46,
+        "textures": 8,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "label": "DC route",
+      "samples": 120,
+      "p50": 33.30000000000291,
+      "p95": 34.099999999998545,
+      "appP50": 33.30000000000291,
+      "appP95": 34.099999999998545,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 3.329992705344551,
+        "ambientTime": 28.099900000000115,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            -10.158318827599306,
+            15.82268905305353,
+            23.610487277534475
+          ],
+          "target": [
+            -18.059917912757697,
+            11.338410739469694,
+            23.25310597370159
+          ],
+          "pulse": [
+            -16.861007148428456,
+            11.305,
+            23.335
+          ],
+          "tangent": [
+            -1,
+            0,
+            0
+          ],
+          "flight": 0.96,
+          "chapter": 13,
+          "scene": "site",
+          "earthVisibility": 1,
+          "pulseOpacity": 0,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "site",
+          "guideU": 1,
+          "trailLength": 0.09999999999999964,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 0.9,
+          "conversion": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0,
+            "energyU": 0.3299795110812081,
+            "ac": 0,
+            "transition": 0,
+            "transitionKind": "contact"
+          }
+        },
+        "dcFlow": {
+          "visible": true,
+          "travel": 0.3299795110812081,
+          "opacity": 0.8
+        },
+        "trailHeadError": 2.3841858043383013e-8,
+        "cellStatus": "ready",
+        "electricalStatus": "ready",
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "electricalOverlayBytes": 60864,
+        "regionStatus": "ready",
+        "siteStatus": "ready",
+        "region": {
+          "transferBytes": 503245,
+          "triangles": 20350,
+          "geometryBytes": 960176,
+          "textures": 0
+        },
+        "site": {
+          "drawCalls": 38,
+          "triangles": 91102,
+          "instances": 8049,
+          "instancedMeshes": 35,
+          "panelCount": 879,
+          "panelAreaM2": 2270.678508,
+          "arrayCoverage": 0.591322528125,
+          "textureBytes": 524288,
+          "textureBytesWithMipmaps": 699051,
+          "geometryBytes": 533128,
+          "extraTextureBytes": 1048576,
+          "environmentEstimatedBytes": 2359296
+        },
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 42,
+        "triangles": 96810,
+        "shadowEstimatedBytes": 8388608,
+        "geometries": 55,
+        "textures": 8,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "label": "Inverter",
+      "samples": 121,
+      "p50": 33.30000000000291,
+      "p95": 34.19999999999709,
+      "appP50": 33.30000000000291,
+      "appP95": 34.19999999999709,
+      "state": {
+        "ready": true,
+        "failed": false,
+        "paused": false,
+        "onscreen": true,
+        "reduced": false,
+        "framing": "portrait",
+        "duration": 4.08,
+        "progress": 3.9599591499294853,
+        "ambientTime": 32.799900000000136,
+        "quality": {
+          "tier": "mobile",
+          "width": 740,
+          "height": 900,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "shot": {
+          "camera": [
+            -53,
+            4.3,
+            17.3
+          ],
+          "target": [
+            -40.6,
+            3.1,
+            16.95
+          ],
+          "pulse": [
+            -40.425,
+            1.567,
+            17.76
+          ],
+          "tangent": [
+            0,
+            1,
+            0
+          ],
+          "flight": 0.96,
+          "chapter": 15,
+          "scene": "site",
+          "earthVisibility": 1,
+          "pulseOpacity": 0,
+          "sourceGlint": 0,
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "guidePath": "site",
+          "guideU": 1,
+          "trailLength": 0.09999999999999964,
+          "cloudOpacity": 0,
+          "regionEmphasis": 0,
+          "guideScale": 0.9,
+          "conversion": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0,
+            "energyU": 1,
+            "ac": 0.9655718412065477,
+            "transition": 0,
+            "transitionKind": "contact"
+          }
+        },
+        "dcFlow": {
+          "visible": true,
+          "travel": 1,
+          "opacity": 0.8
+        },
+        "trailHeadError": 2.3841858043383013e-8,
+        "cellStatus": "ready",
+        "electricalStatus": "ready",
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "electricalOverlayBytes": 60864,
+        "regionStatus": "ready",
+        "siteStatus": "ready",
+        "region": {
+          "transferBytes": 503245,
+          "triangles": 20350,
+          "geometryBytes": 960176,
+          "textures": 0
+        },
+        "site": {
+          "drawCalls": 38,
+          "triangles": 91102,
+          "instances": 8049,
+          "instancedMeshes": 35,
+          "panelCount": 879,
+          "panelAreaM2": 2270.678508,
+          "arrayCoverage": 0.591322528125,
+          "textureBytes": 524288,
+          "textureBytesWithMipmaps": 699051,
+          "geometryBytes": 533128,
+          "extraTextureBytes": 1048576,
+          "environmentEstimatedBytes": 2359296
+        },
+        "earthStatus": "ready",
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "drawCalls": 53,
+        "triangles": 98596,
+        "shadowEstimatedBytes": 8388608,
+        "geometries": 57,
+        "textures": 8,
+        "copyOpacities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "blankBefore": {
+    "label": "Empty document before",
+    "samples": 120,
+    "p50": 33.30000000000018,
+    "p95": 33.70000000000027
+  },
+  "environment": {
+    "visibility": "visible",
+    "cores": 10,
+    "dpr": 1,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36"
+  },
+  "paused": {
+    "label": "Scene paused",
+    "samples": 120,
+    "p50": 33.30000000000291,
+    "p95": 34.099999999998545
+  },
+  "blankAfter": {
+    "label": "Empty document after",
+    "samples": 120,
+    "p50": 33.30000000000018,
+    "p95": 33.90000000000009
+  }
+}

@@ -1,0 +1,1902 @@
+[
+  {
+    "viewport": "1600×1000",
+    "dpr": 1,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "warnings": [],
+    "problems": [],
+    "initialResourceTotals": {
+      "requests": 7,
+      "encoded": 886928,
+      "decodedBody": 886928,
+      "transfer": 889028
+    },
+    "finalResourceTotals": {
+      "requests": 15,
+      "encoded": 2337192,
+      "decodedBody": 2337192,
+      "transfer": 2341692
+    },
+    "reverseResourceStable": true,
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 18.200000000000045,
+        "drawCalls": 17,
+        "triangles": 28482,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 18,
+        "drawCalls": 8,
+        "triangles": 49514,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Panel",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 18,
+        "drawCalls": 37,
+        "triangles": 99988,
+        "geometries": 40,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4210,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 158,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 0,
+            "absorption": 0,
+            "extraction": 0,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Cell absorption",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 18.100000000002183,
+        "drawCalls": 20,
+        "triangles": 4452,
+        "geometries": 46,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 0.43200601051841686,
+            "extraction": 0,
+            "incident": 0.5679939894815831
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Contacts",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 18.19999999999709,
+        "drawCalls": 18,
+        "triangles": 4282,
+        "geometries": 47,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "DC route",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 18,
+        "drawCalls": 42,
+        "triangles": 108114,
+        "geometries": 55,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "Inverter",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 18,
+        "drawCalls": 53,
+        "triangles": 110188,
+        "geometries": 57,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      }
+    ]
+  },
+  {
+    "viewport": "1280×720",
+    "dpr": 1,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "warnings": [],
+    "problems": [],
+    "initialResourceTotals": {
+      "requests": 7,
+      "encoded": 886928,
+      "decodedBody": 886928,
+      "transfer": 889028
+    },
+    "finalResourceTotals": {
+      "requests": 15,
+      "encoded": 2337192,
+      "decodedBody": 2337192,
+      "transfer": 2341692
+    },
+    "reverseResourceStable": true,
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 18,
+        "drawCalls": 20,
+        "triangles": 30042,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 18.199999999999818,
+        "drawCalls": 8,
+        "triangles": 49514,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Panel",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.899999999999636,
+        "drawCalls": 37,
+        "triangles": 99988,
+        "geometries": 40,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4210,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 158,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 0,
+            "absorption": 0,
+            "extraction": 0,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Cell absorption",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 18,
+        "drawCalls": 20,
+        "triangles": 4452,
+        "geometries": 46,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 0.4316772009022292,
+            "extraction": 0,
+            "incident": 0.5683227990977708
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Contacts",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 18.30000000000291,
+        "drawCalls": 18,
+        "triangles": 4282,
+        "geometries": 47,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "DC route",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 18,
+        "drawCalls": 42,
+        "triangles": 108114,
+        "geometries": 55,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "Inverter",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 18.299999999999272,
+        "drawCalls": 53,
+        "triangles": 110188,
+        "geometries": 57,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      }
+    ]
+  },
+  {
+    "viewport": "390×844",
+    "dpr": 3,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "warnings": [],
+    "problems": [],
+    "initialResourceTotals": {
+      "requests": 7,
+      "encoded": 808926,
+      "decodedBody": 808926,
+      "transfer": 811026
+    },
+    "finalResourceTotals": {
+      "requests": 15,
+      "encoded": 1595548,
+      "decodedBody": 1595548,
+      "transfer": 1600048
+    },
+    "reverseResourceStable": true,
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.600000000000364,
+        "drawCalls": 17,
+        "triangles": 15650,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.600000000000364,
+        "drawCalls": 8,
+        "triangles": 31370,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Panel",
+        "samples": 240,
+        "p50": 16.69999999999891,
+        "p95": 17.600000000000364,
+        "drawCalls": 35,
+        "triangles": 91230,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3762,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 158,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 0,
+            "absorption": 0,
+            "extraction": 0,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Cell absorption",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.600000000002183,
+        "drawCalls": 19,
+        "triangles": 3992,
+        "geometries": 45,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 0.43234264341241874,
+            "extraction": 0,
+            "incident": 0.5676573565875813
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Contacts",
+        "samples": 240,
+        "p50": 16.700000000000728,
+        "p95": 17.600000000002183,
+        "drawCalls": 18,
+        "triangles": 3834,
+        "geometries": 46,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "DC route",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.599999999998545,
+        "drawCalls": 42,
+        "triangles": 96810,
+        "geometries": 55,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "Inverter",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 17.599999999998545,
+        "drawCalls": 51,
+        "triangles": 98400,
+        "geometries": 57,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      }
+    ]
+  },
+  {
+    "viewport": "740×900",
+    "dpr": 1,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "warnings": [],
+    "problems": [],
+    "initialResourceTotals": {
+      "requests": 7,
+      "encoded": 808926,
+      "decodedBody": 808926,
+      "transfer": 811026
+    },
+    "finalResourceTotals": {
+      "requests": 15,
+      "encoded": 1595548,
+      "decodedBody": 1595548,
+      "transfer": 1600048
+    },
+    "reverseResourceStable": true,
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 119,
+        "p50": 33.30000000000018,
+        "p95": 34.19999999999982,
+        "drawCalls": 20,
+        "triangles": 17210,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 119,
+        "p50": 33.30000000000018,
+        "p95": 34.100000000000364,
+        "drawCalls": 8,
+        "triangles": 31370,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Panel",
+        "samples": 119,
+        "p50": 33.29999999999927,
+        "p95": 34.100000000000364,
+        "drawCalls": 35,
+        "triangles": 91230,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3762,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 158,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 0,
+            "absorption": 0,
+            "extraction": 0,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Cell absorption",
+        "samples": 119,
+        "p50": 33.29999999999927,
+        "p95": 34.100000000000364,
+        "drawCalls": 20,
+        "triangles": 4004,
+        "geometries": 45,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 0.4316377321141485,
+            "extraction": 0,
+            "incident": 0.5683622678858515
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Contacts",
+        "samples": 119,
+        "p50": 33.29999999999927,
+        "p95": 33.70000000000073,
+        "drawCalls": 18,
+        "triangles": 3834,
+        "geometries": 46,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "DC route",
+        "samples": 119,
+        "p50": 33.30000000000291,
+        "p95": 34,
+        "drawCalls": 42,
+        "triangles": 96810,
+        "geometries": 55,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "Inverter",
+        "samples": 119,
+        "p50": 33.30000000000291,
+        "p95": 33.900000000001455,
+        "drawCalls": 53,
+        "triangles": 98596,
+        "geometries": 57,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608,
+        "earth": {
+          "variant": "mobile",
+          "decodedImageBytes": 10485760,
+          "textureBytesWithMipmaps": 13981013
+        },
+        "cell": {
+          "variant": "mobile",
+          "geometryBytes": 33556,
+          "triangles": 3834,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 5282,
+          "geometryBytes": 103060,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      }
+    ]
+  },
+  {
+    "viewport": "1000×500",
+    "dpr": 1,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "warnings": [],
+    "problems": [],
+    "initialResourceTotals": {
+      "requests": 7,
+      "encoded": 886928,
+      "decodedBody": 886928,
+      "transfer": 889028
+    },
+    "finalResourceTotals": {
+      "requests": 15,
+      "encoded": 2337192,
+      "decodedBody": 2337192,
+      "transfer": 2341692
+    },
+    "reverseResourceStable": true,
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.40000000000009,
+        "drawCalls": 20,
+        "triangles": 30042,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.399999999999636,
+        "drawCalls": 8,
+        "triangles": 49514,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cellOverlayBytes": 0,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Panel",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "drawCalls": 37,
+        "triangles": 99988,
+        "geometries": 40,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4210,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 158,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 0,
+            "absorption": 0,
+            "extraction": 0,
+            "incident": 0
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Cell absorption",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 17.299999999999272,
+        "drawCalls": 20,
+        "triangles": 4452,
+        "geometries": 46,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 0.43200601051841686,
+            "extraction": 0,
+            "incident": 0.5679939894815831
+          }
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 0
+      },
+      {
+        "chapter": "Contacts",
+        "samples": 240,
+        "p50": 16.69999999999709,
+        "p95": 17.200000000000728,
+        "drawCalls": 18,
+        "triangles": 4282,
+        "geometries": 47,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "DC route",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.200000000000728,
+        "drawCalls": 42,
+        "triangles": 108114,
+        "geometries": 55,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      },
+      {
+        "chapter": "Inverter",
+        "samples": 240,
+        "p50": 16.69999999999709,
+        "p95": 17.5,
+        "drawCalls": 54,
+        "triangles": 110428,
+        "geometries": 57,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432,
+        "earth": {
+          "variant": "desktop",
+          "decodedImageBytes": 41943040,
+          "textureBytesWithMipmaps": 55924053
+        },
+        "cell": {
+          "variant": "desktop",
+          "geometryBytes": 44500,
+          "triangles": 4282,
+          "drawCalls": 18,
+          "baseDrawCalls": 18,
+          "instances": 164,
+          "textureBytes": 0,
+          "textureBytesWithMipmaps": 0,
+          "selectedCell": {
+            "row": 11,
+            "col": 3,
+            "width": 8.475,
+            "length": 4.318750000000001
+          },
+          "absorptionPoint": [
+            -0.9,
+            0,
+            0
+          ],
+          "frontCollection": [
+            0,
+            0.09,
+            -2.4593750000000005
+          ],
+          "rearCollection": [
+            4.1175,
+            -0.62,
+            1.7706875000000004
+          ],
+          "junction": [
+            -4.387499999999999,
+            -3.1,
+            -11.465625000000014
+          ],
+          "state": {
+            "section": 1,
+            "absorption": 1,
+            "extraction": 1,
+            "incident": 0
+          }
+        },
+        "electrical": {
+          "drawCalls": 12,
+          "triangles": 7866,
+          "geometryBytes": 176164,
+          "textureBytes": 0,
+          "instances": 237
+        },
+        "cellOverlayBytes": 24384,
+        "electricalOverlayBytes": 60864
+      }
+    ]
+  }
+]

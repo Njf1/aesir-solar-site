@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-09-08T18:53:55.405Z",
+  "commands": {
+    "npm run typecheck": "pass",
+    "npm run build": "pass",
+    "npm test": {
+      "pass": 38,
+      "fail": 0
+    },
+    "npm run test:browser": {
+      "pass": 48,
+      "fail": 0
+    }
+  },
+  "browser": "Chrome for Testing 151.0.7922.34",
+  "hardware": "Apple M4 MacBook Air, 16 GiB, ANGLE Metal",
+  "viewports": [
+    [
+      1280,
+      720
+    ],
+    [
+      1600,
+      1000
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      740,
+      900
+    ],
+    [
+      1000,
+      500
+    ]
+  ],
+  "physicalPhone": false,
+  "providers": "blocked local preview; mocked checks; no submission or payment",
+  "warningFixes": {
+    "PMREM": "sigma0.04, supported sample count",
+    "shadow": "explicit PCFShadowMap",
+    "dependencyUpgrade": false
+  },
+  "denseGeometrySamples": 91505,
+  "frozenStageThreePoses": 1353,
+  "openingUsefulViewportHeights": 12.6,
+  "extendedUsefulViewportHeights": 22.848,
+  "performance": "Final verification.json and performance-summary.json: all five views, zero errors/warnings/problems, stable one renderer/57 geometries/8 textures. Independent cadence-repeat.json preserves the 740×900 30fps result and its same-rate empty-page baseline. Cold shader warmup latency was not separately benchmarked."
+}

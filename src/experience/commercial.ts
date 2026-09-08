@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import {PANEL,cellLayout,PANEL_ROTATION,PANEL_NORMAL} from './panel-layout.ts';
+import {HERO_ANCHOR,ROOF_Y} from './site-layout.ts';
 
 /**
  * Original, unbranded architectural illustration; metres, +Y up, south = +Z.
@@ -38,13 +40,13 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   const leafGeometry = ownGeometry(new THREE.IcosahedronGeometry(1, mobile ? 0 : 1));
   let decodedBytes = 0;
   let panelCount = 0;
-  const roofY = 11.06;
-  const panelWidth = 1.134, panelLength = 2.278, panelTilt = THREE.MathUtils.degToRad(9);
-  const panelRotation = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), panelTilt);
+  const roofY = ROOF_Y;
+  const panelWidth = PANEL.width, panelLength = PANEL.length, panelTilt = Math.atan2(PANEL_NORMAL.z,PANEL_NORMAL.y);
+  const panelRotation = PANEL_ROTATION;
   const glassRotation = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2 + panelTilt, 0, 0));
-  const heroNormal = new THREE.Vector3(0, Math.cos(panelTilt), Math.sin(panelTilt));
-  const heroPanelCentre = new THREE.Vector3(-10, roofY + .33, 10);
-  const heroAnchor = heroPanelCentre.clone().addScaledVector(heroNormal, .058);
+  const heroNormal = PANEL_NORMAL.clone();
+  const heroAnchor = HERO_ANCHOR.clone();
+  const heroPanelCentre = heroAnchor.clone().addScaledVector(heroNormal,-.058);
 
   function ownGeometry<T extends THREE.BufferGeometry>(g: T): T { geometries.add(g); return g; }
   function ownMaterial<T extends THREE.Material>(m: T): T { materials.add(m); return m; }
@@ -102,22 +104,17 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   const moduleTexture = canvasTexture(mobile ? 256 : 512, mobile ? 512 : 1024, ctx => {
     const w = ctx.canvas.width, h = ctx.canvas.height;
     ctx.fillStyle = '#101f2c'; ctx.fillRect(0, 0, w, h);
-    const marginX = w * .021, marginY = h * .009, dx = (w - marginX * 2) / 6, dy = (h - marginY * 2) / 24;
-    for (let row = 0; row < 24; row++) for (let col = 0; col < 6; col++) {
-      const x = marginX + col * dx, y = marginY + row * dy;
-      const variation = ((row * 19 + col * 31) % 7) * 1.1;
-      ctx.fillStyle = `rgb(${15 + variation},${34 + variation},${53 + variation})`;
-      ctx.fillRect(x + 1, y + .8, dx - 2, dy - 1.6);
-      ctx.strokeStyle = '#3a5469'; ctx.lineWidth = .45; ctx.strokeRect(x + 1.4, y + 1, dx - 2.8, dy - 2);
-      ctx.strokeStyle = '#577082'; ctx.lineWidth = mobile ? .3 : .42;
-      for (let finger = 1; finger < 9; finger++) {
-        const fy = y + dy * finger / 9; ctx.beginPath(); ctx.moveTo(x + 2, fy); ctx.lineTo(x + dx - 2, fy); ctx.stroke();
-      }
-      ctx.strokeStyle = '#8095a1'; ctx.lineWidth = mobile ? .35 : .65;
-      for (let bus = 1; bus <= 3; bus++) { const bx = x + dx * bus / 4; ctx.beginPath(); ctx.moveTo(bx, y + 1); ctx.lineTo(bx, y + dy - 1); ctx.stroke(); }
+    const px=(x:number)=>(.5+x/PANEL.glassWidth)*w,py=(z:number)=>(.5+z/PANEL.glassLength)*h;
+    // Mipmapped single contact layer: no second grid floating above the glass.
+    for(let row=0;row<PANEL.rows;row++)for(let col=0;col<PANEL.cols;col++){
+      const cell=cellLayout(row,col),x=px(cell.x-cell.width/2),y=py(cell.z-cell.length/2),cw=cell.width/PANEL.glassWidth*w,ch=cell.length/PANEL.glassLength*h;
+      const variation=((row*19+col*31)%7)*.55;
+      ctx.fillStyle=`rgb(${14+variation},${31+variation},${47+variation})`;ctx.fillRect(x,y,cw,ch);
+      ctx.strokeStyle='#718391';ctx.lineWidth=Math.max(.45,w*.00085);
+      for(const bx of cell.busXs){ctx.beginPath();ctx.moveTo(px(bx),y+.5);ctx.lineTo(px(bx),y+ch-.5);ctx.stroke();}
+      ctx.strokeStyle='#42586a';ctx.lineWidth=Math.max(.22,h*.00021);
+      for(const fz of cell.fingerZs){ctx.beginPath();ctx.moveTo(x+.5,py(fz));ctx.lineTo(x+cw-.5,py(fz));ctx.stroke();}
     }
-    // Unbranded glass edge and the wider centre split of a half-cell module.
-    ctx.fillStyle = '#12232e'; ctx.fillRect(marginX, h / 2 - h * .002, w - marginX * 2, h * .004);
   });
   const panelGlass = ownMaterial(new THREE.MeshPhysicalMaterial({ color: 0xd6e3ef, map: moduleTexture, roughness: .24, metalness: .06, clearcoat: .60, clearcoatRoughness: .18, side: THREE.FrontSide }));
 
@@ -271,22 +268,11 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
     }
   }
 
-  // Close hero contact detail: fine original metallic geometry, distance-culled by Three's LOD.
-  const hero = new THREE.LOD(); hero.name = 'Hero module fine electrical contacts';
-  hero.position.copy(heroPanelCentre); hero.quaternion.copy(panelRotation);
-  const fine = new THREE.Group(); fine.name = 'Original half-cell contacts';
-  const contactMaterial = standard(0x9bacb3, .4, .78);
-  const contactCount = 144 * (mobile ? 3 : 9);
-  const contacts = new THREE.InstancedMesh(boxGeometry, contactMaterial, contactCount);
-  contacts.name = 'Half-cell busbars and contact fingers'; contacts.castShadow = false; contacts.receiveShadow = false;
-  const tmp = new THREE.Object3D(); let ci = 0;
-  const cw = (panelWidth - .062) / 6, ch = (panelLength - .055) / 24;
-  for (let row = 0; row < 24; row++) for (let col = 0; col < 6; col++) {
-    const x = -(panelWidth - .062) / 2 + cw * (col + .5), z = -(panelLength - .055) / 2 + ch * (row + .5);
-    for (const bx of [-.25, 0, .25]) { tmp.position.set(x + bx * cw, .0605, z); tmp.scale.set(.0012, .0004, ch * .91); tmp.updateMatrix(); contacts.setMatrixAt(ci++, tmp.matrix); }
-    if (!mobile) for (let line = 0; line < 6; line++) { tmp.position.set(x, .0607, z + (line / 5 - .5) * ch * .79); tmp.scale.set(cw * .91, .0003, .00035); tmp.updateMatrix(); contacts.setMatrixAt(ci++, tmp.matrix); }
-  }
-  fine.add(contacts); hero.addLevel(fine, 0); hero.addLevel(new THREE.Group(), mobile ? 3 : 4.5); group.add(hero);
+  // Only the cutaway owns enlarged contact geometry. The exterior has one aligned,
+  // mipmapped contact pattern and therefore no abrupt or doubled contact LOD.
+  const hero=new THREE.Group();hero.name='Selected module junction and leads';
+  hero.position.copy(heroPanelCentre);hero.quaternion.copy(panelRotation);group.add(hero);
+  const contactCount=0;
   // Junction box and two original cable loops under the hero panel, ready for a future descent.
   const junction = new THREE.Mesh(ownGeometry(new THREE.BoxGeometry(.14, .035, .105)), panelBacking);
   junction.position.set(0, -.020, -.28); hero.add(junction);
@@ -386,7 +372,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   // Instance matrices are now on the meshes; release the temporary placement objects.
   batches.clear();
   // Statistics conservatively include fine hero detail even when its LOD is hidden.
-  drawCalls += 4; instancedMeshes++; instances += contactCount;
+  drawCalls += 3; instances += contactCount;
   triangles += contactCount * 12 + 12 + cableTriangles;
   group.updateMatrixWorld(true);
   const bounds = new THREE.Box3().setFromObject(group);

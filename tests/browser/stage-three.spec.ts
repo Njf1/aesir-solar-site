@@ -14,7 +14,7 @@ function deferred(){let release!:()=>void;const gate=new Promise<void>(resolve=>
 async function allReady(page:Page){await page.waitForFunction(()=>{const s=(window as any).__experience.snapshot();return s.siteStatus==='ready'&&s.regionStatus==='ready'&&s.earthStatus==='ready';});}
 test.beforeEach(async({page})=>{await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());});
 
-for(const [kind,asset,heldScene] of [['region','**/region-land-*.json','earth'],['site','**/site-*.js','region']] as const){
+for(const [kind,asset,heldScene] of [['region','**/region-land-*.json','earth'],['site',/\/site-(?!layout-)[^/]+\.js$/,'region']] as const){
  test(`delayed ${kind} assets hold a truthful earlier view then resume without another scroll`,async({page})=>{
   const load=deferred(),requests:string[]=[];
   await page.route(asset,async route=>{requests.push(route.request().url());await load.gate;await route.continue().catch(()=>{});});
@@ -59,7 +59,7 @@ test('all five reduced-motion stills have matching readable HTML and no advancin
  await page.locator('.skip-link').click();await expect(page.locator('#application-details')).toBeFocused();await expect(page.locator('.primary-button')).toHaveAttribute('href','/apply.html');
 });
 
-for(const [kind,asset,message] of [['region','**/region-land-*.json','regional view'],['site','**/site-*.js','roof view']] as const){
+for(const [kind,asset,message] of [['region','**/region-land-*.json','regional view'],['site',/\/site-(?!layout-)[^/]+\.js$/,'roof view']] as const){
  test(`failed ${kind} assets preserve the service and cannot restart after preferences change`,async({page})=>{
   const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));await page.route(asset,route=>route.abort());
   await ready(page);await scroll(page,2.12);await page.waitForFunction(()=>(window as any).__experience.snapshot().failed);
@@ -78,7 +78,7 @@ test('rapid keyboard skip stays at the application while regional loading finish
   await expect(page.locator('#application-details')).toBeInViewport();expect((await snapshot(page)).ambientTime).toBe(time);expect((await snapshot(page)).onscreen).toBe(false);
  }finally{load.release();}
 });
-for(const [kind,asset]of [['region','**/region-land-*.json'],['site','**/site-*.js']]as const){
+for(const [kind,asset]of [['region','**/region-land-*.json'],['site',/\/site-(?!layout-)[^/]+\.js$/]]as const){
  test(`${kind} loading is bounded and late completion cannot resurrect disposed resources`,async({page})=>{
   const load=deferred();await page.route(asset,async route=>{await load.gate;await route.continue().catch(()=>{});});
   try{await ready(page);await move(page,2.12);await page.waitForFunction(()=>(window as any).__experience.snapshot().failed,{},{timeout:15000});
