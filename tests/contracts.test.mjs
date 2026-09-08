@@ -9,7 +9,7 @@ test('camera and guide retrace identically, including boundaries',()=>{
   for(const mobile of [false,true]){
     const forwards=Array.from({length:101},(_,i)=>sampleJourney(i/100,mobile));
     for(let i=100;i>=0;i--)assert.deepEqual(sampleJourney(i/100,mobile),forwards[i]);
-    for(const boundary of [.15,.6,.8]){
+    for(const boundary of [.16,.33,.39,.45,.51,.6,.75,.95]){
       const before=sampleJourney(boundary-.000001,mobile),after=sampleJourney(boundary+.000001,mobile);
       for(let i=0;i<3;i++)assert.ok(Math.abs(before.camera[i]-after.camera[i])<.01);
     }

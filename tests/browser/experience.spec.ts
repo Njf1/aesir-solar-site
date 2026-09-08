@@ -4,9 +4,9 @@ const scrollTo=async(page:any,p:number)=>{await page.evaluate((p:number)=>{const
 test.beforeEach(async({page})=>{await page.route('**/*',route=>route.request().url().startsWith('http://127.0.0.1:4173/')?route.continue():route.abort());});
 test('opening, reverse, pause, resize, skip and browser Back preserve access',async({page})=>{
  await gotoReady(page);await expect(page.locator('header a.apply-link')).toBeVisible();
- await scrollTo(page,.68);const before=await page.evaluate(()=>window.__experience.snapshot());await expect(page.locator('#chapter-title')).toContainText('A star.');
- await scrollTo(page,.98);await expect(page.locator('#chapter-title')).toContainText('One pulse.');
- await scrollTo(page,.68);const back=await page.evaluate(()=>window.__experience.snapshot());expect(Math.abs(back.progress-before.progress)).toBeLessThan(.002);
+ await scrollTo(page,.55);const before=await page.evaluate(()=>window.__experience.snapshot());await expect(page.locator('[data-copy="2"]')).toHaveAttribute('aria-hidden','false');
+ await scrollTo(page,.925);await page.waitForFunction(()=>window.__experience.snapshot().earthStatus==='ready');await expect(page.locator('[data-copy="3"]')).toHaveAttribute('aria-hidden','false');
+ await scrollTo(page,.55);const back=await page.evaluate(()=>window.__experience.snapshot());expect(Math.abs(back.progress-before.progress)).toBeLessThan(.002);
  await page.locator('#pause-motion').click();const a=await page.evaluate(()=>window.__experience.snapshot().ambientTime);await page.waitForTimeout(300);expect(await page.evaluate(()=>window.__experience.snapshot().ambientTime)).toBe(a);
  await scrollTo(page,.85);expect(await page.evaluate(()=>window.__experience.snapshot().ambientTime)).toBe(a);
  await page.setViewportSize({width:390,height:844});expect(await page.locator('header a.apply-link').isVisible()).toBe(true);

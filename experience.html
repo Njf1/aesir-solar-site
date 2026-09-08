@@ -19,19 +19,35 @@
   <main id="main">
     <section class="journey" id="journey" aria-label="The source of solar energy">
       <div class="stage" id="stage">
-        <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:700px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>
+        <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:759px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>
         <div class="canvas-host" id="canvas-host" aria-hidden="true"></div>
         <div class="cinema-shade" aria-hidden="true"></div>
         <a class="skip-link" href="#application-details">Skip to application details <span aria-hidden="true">↓</span></a>
-        <div class="chapter-copy" id="chapter-copy">
-          <p class="eyebrow" id="chapter-label">01 — THE SOURCE</p>
-          <h1 id="chapter-title">ENERGY<br>BEGINS HERE.</h1>
-          <p class="chapter-description" id="chapter-description">An extraordinary journey.<br>A connection worth getting right.</p>
+        <div class="copy-stack" id="copy-stack">
+          <div class="chapter-copy copy-opening" data-copy="0">
+            <p class="eyebrow">A JOURNEY THROUGH SOLAR ENERGY</p>
+            <h1 id="chapter-title">ENERGY<br>BEGINS HERE.</h1>
+          </div>
+          <div class="chapter-copy copy-sun" data-copy="1" aria-hidden="true">
+            <p class="eyebrow">THE SOURCE</p>
+            <h2>OUR NEAREST<br>STAR.</h2>
+            <p class="chapter-description">A living surface. Light in every direction.</p>
+          </div>
+          <div class="chapter-copy copy-flight" data-copy="2" aria-hidden="true">
+            <p class="eyebrow">FROM THE SUN</p>
+            <h2>FOLLOW<br>THE LIGHT.</h2>
+          </div>
+          <div class="chapter-copy copy-earth" data-copy="3" aria-hidden="true">
+            <p class="eyebrow">TO THE PLACES WE WORK</p>
+            <h2>SUNLIGHT<br>REACHES US.</h2>
+
+          </div>
         </div>
-        <div class="scene-caption" id="scene-caption" aria-hidden="true"><span>SOL</span><span>OUR NEAREST STAR</span></div>
+        <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>
         <div class="chapter-footer">
           <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>
-          <div class="chapter-track" aria-hidden="true"><span>01</span><div><i id="progress-bar"></i></div><span>03</span></div>
+          <div class="chapter-track" aria-hidden="true"><span>01</span><div><i id="progress-bar"></i></div><span>04</span></div>
+          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button></div>
           <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>
         </div>
         <p class="fallback-status" id="fallback-status" role="status"></p>
@@ -58,6 +74,7 @@
         </div>
       </div>
       <footer class="site-footer"><span>AESIR SOLAR <span class="footer-location">/ GREAT BRITAIN</span></span><nav aria-label="Further information"><a href="/faq.html">FAQ</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a></nav><a href="#main">Back to the light ↑</a></footer>
+      <p class="image-credit">Earth imagery: <a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/">NASA Earth Observatory</a> / NASA Goddard Space Flight Center. Reto Stöckli; cloud enhancements by Robert Simmon.</p>
     </section>
   </main>
   <script type="module" src="/src/experience/main.ts"></script>

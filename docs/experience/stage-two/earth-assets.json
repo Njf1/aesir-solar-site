@@ -1,0 +1,133 @@
+{
+  "retrieved_on": "2026-09-08",
+  "prepared_at_utc": "2026-09-08T16:07:47Z",
+  "purpose": "Cinematic scientific illustration, Sun-to-Earth chapter; historical visual references rather than live observation.",
+  "general_usage_policy": {
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "verified_live_on": "2026-09-08",
+    "summary": "NASA media is generally not subject to US copyright unless a third-party copyright owner is identified; credit NASA. Commercial uses must not imply NASA endorsement. NASA logos, employee likenesses and other protected identifiers have separate rules. These texture files contain geography/clouds, not NASA logos or people. No NASA endorsement is claimed."
+  },
+  "sources": {
+    "day": {
+      "title": "Blue Marble: Next Generation, July 2004 base map",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x5400x2700.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "description_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/",
+      "source_file": "sources/world.200407.3x5400x2700.jpg",
+      "creator": "Reto Stöckli, NASA Earth Observatory (NASA Goddard Space Flight Center)",
+      "credit": "NASA Earth Observatory",
+      "acquisition_period": "July 2004 monthly composite; MODIS land observations",
+      "dimensions": [
+        5400,
+        2700
+      ],
+      "image_specific_terms": "BMNG project page requests NASA Earth Observatory credit for use or republication. No third-party copyright exception is identified for this selected base-map image in the project/download record.",
+      "factual_limits": "Historical composite, not current satellite imagery. Cloud removal and polar fill are composite processing. Deep ocean uses a uniform authored blue in the NASA source, not measured bathymetry or an observation of every water pixel. Base variant selected to avoid pre-baked topographic shading.",
+      "bytes": 1617810,
+      "sha256": "f55226d46d27e05511f2118dc6aa24f5dbf9b6b2cddc87cc6e0e7dd067c00b11"
+    },
+    "clouds": {
+      "title": "Blue Marble: Clouds (2002 release)",
+      "source_url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg",
+      "source_page": "https://visibleearth.nasa.gov/images/57747/blue-marble-clouds/77558l",
+      "source_file": "sources/cloud_combined_2048.jpg",
+      "creator": "Reto Stöckli, NASA Goddard Space Flight Center; enhancements credited to Robert Simmon",
+      "credit": "NASA Goddard Space Flight Center / Reto Stöckli; enhancements by Robert Simmon",
+      "acquisition_period": "Historical Blue Marble cloud composite; publication February 11, 2002. Source description says two days of visible imagery with a third day of thermal infrared imagery over the poles; exact observation dates not specified in the selected record.",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "image_specific_terms": "The NASA Visible Earth record describes these images as freely available to educators, scientists, museums and the public. The selected record credits NASA creators and identifies no third-party copyright restriction.",
+      "verification_limit": "The former Visible Earth content now redirects to the Earth Observatory home page. Image-specific description/credit were verified from the search-index copy of the official NASA record on 2026-09-08; the exact image itself remains accessible on the official eoimages.gsfc.nasa.gov host and was downloaded successfully. Generic NASA usage policy was verified live.",
+      "factual_limits": "Independent historical cloud composite, not the weather for July 2004 and not live weather. This layer is used illustratively and can be gently rotated by the renderer; do not describe the full rendered globe as a single dated observation.",
+      "bytes": 829367,
+      "sha256": "daddaad84d7a33bbbc86cdda3f591099f57cee8607b7bcf3b67eb7e4f7a1c793"
+    }
+  },
+  "delivery_assets": [
+    {
+      "filename": "earth-day-4096.webp",
+      "source": "day",
+      "dimensions": [
+        4096,
+        2048
+      ],
+      "webp_quality": 88,
+      "transforms": "RGB, Lanczos resize from 5400×2700 to 4096×2048; WebP quality 88, method 6; no crop, flip, color grade or geography changes; metadata stripped.",
+      "texture_color_space": "sRGB",
+      "decoded_rgba8_bytes": 33554432,
+      "estimated_rgba8_gpu_mipmapped_bytes": 44739244,
+      "bytes": 566958,
+      "sha256": "0d543059f30485c1cf20fa62a506987e7eb5a5e7a43cf929f911cd4fb2eaf9dc"
+    },
+    {
+      "filename": "earth-day-2048.webp",
+      "source": "day",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "webp_quality": 84,
+      "transforms": "RGB, Lanczos resize from 5400×2700 to 2048×1024; WebP quality 84, method 6; no crop, flip, color grade or geography changes; metadata stripped.",
+      "texture_color_space": "sRGB",
+      "decoded_rgba8_bytes": 8388608,
+      "estimated_rgba8_gpu_mipmapped_bytes": 11184812,
+      "bytes": 137856,
+      "sha256": "7a84187278adb3565983f5e11848327bc8e47fc235ecc56a0178b5064d22301e"
+    },
+    {
+      "filename": "earth-clouds-2048.webp",
+      "source": "clouds",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "webp_quality": 70,
+      "transforms": "Convert RGB to luminance density; same 2048×1024 dimensions; WebP quality 70, method 6; metadata stripped. Use RGB luminance as density/alpha; file does not have an alpha channel.",
+      "texture_color_space": "none / linear density",
+      "decoded_rgba8_bytes": 8388608,
+      "estimated_rgba8_gpu_mipmapped_bytes": 11184812,
+      "bytes": 336230,
+      "sha256": "7146780031e5f85a8699dc4e0313b572cd4f27bd47669e6d57eb0914333c3323"
+    },
+    {
+      "filename": "earth-clouds-1024.webp",
+      "source": "clouds",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "webp_quality": 70,
+      "transforms": "Convert RGB to luminance density; Lanczos resize from 2048×1024 to 1024×512; WebP quality 70, method 6; metadata stripped. Use RGB luminance as density/alpha; file does not have an alpha channel.",
+      "texture_color_space": "none / linear density",
+      "decoded_rgba8_bytes": 2097152,
+      "estimated_rgba8_gpu_mipmapped_bytes": 2796204,
+      "bytes": 101690,
+      "sha256": "3979004f4ffb462cac688c74a7f89d169b1b7cdbe9ab4aaef72f0ccb47dcf9a4"
+    }
+  ],
+  "selected_variant_totals": {
+    "desktop": {
+      "files": [
+        "earth-day-4096.webp",
+        "earth-clouds-2048.webp"
+      ],
+      "bytes": 903188,
+      "decoded_rgba8_bytes": 41943040,
+      "estimated_rgba8_gpu_mipmapped_bytes": 55924056
+    },
+    "mobile": {
+      "files": [
+        "earth-day-2048.webp",
+        "earth-clouds-1024.webp"
+      ],
+      "bytes": 239546,
+      "decoded_rgba8_bytes": 10485760,
+      "estimated_rgba8_gpu_mipmapped_bytes": 13981016
+    }
+  },
+  "memory_notes": "Estimates assume browser RGBA8 decoded images and Three.js RGBA8 textures with a full generated mip chain. They exclude driver overhead, render targets, geometry, copies and browser cache. WebP is transfer compression, not GPU block compression; actual allocations must be measured in target runtime.",
+  "coordinate_notes": "Both image rasters are north-up full equirectangular: left -180°, center Greenwich 0°, right +180°; top +90°, bottom -90°. No image rotation/flip has been baked. With standard Three SphereGeometry and TextureLoader flipY=true, Greenwich maps to local +X, 90°E to local -Z, north to +Y. Britain near lon -2°, lat 54° is approximately direction (0.587, 0.809, 0.0205) before mesh rotation. If camera is on +Z, rotate globe Y=-pi/2 to bring Greenwich front; camera elevation/tilt then brings Europe into view. Confirm with an actual rendered frame.",
+  "delivery": "Copy only four root .webp files into served assets. Keep sources/ outside served build. Copy provenance files into project documentation. Optimization script is reproducible with Pillow WebP support."
+}

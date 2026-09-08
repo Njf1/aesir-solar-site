@@ -1,0 +1,181 @@
+{
+  "measuredAt": "2026-09-08T16:38:04.032Z",
+  "browser": "151.0.7922.34",
+  "device": "Apple M4 MacBook Air, 16 GB; ANGLE Metal",
+  "realPhoneMeasured": false,
+  "units": "milliseconds between browser animation frames",
+  "samplesPerView": "four seconds after settling",
+  "reports": [
+    {
+      "viewport": "desktop",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "dpr": 1,
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "sun": {
+        "samples": 239,
+        "mean": 16.6665271966527,
+        "p50": 16.699999999999818,
+        "p95": 17.600000000000364,
+        "p99": 17.700000000000273,
+        "over33": 0
+      },
+      "earth": {
+        "samples": 239,
+        "mean": 16.66694560669456,
+        "p50": 16.699999999999818,
+        "p95": 17.600000000000364,
+        "p99": 17.699999999999818,
+        "over33": 0
+      },
+      "initialSubresourceTransferBytes": 822232,
+      "finalSubresourceTransferBytes": 1726020,
+      "earthMemory": {
+        "variant": "desktop",
+        "decodedImageBytes": 41943040,
+        "textureBytesWithMipmaps": 55924053
+      },
+      "maxMeasuredTrailHeadError": 4.684596281350622e-06,
+      "errors": []
+    },
+    {
+      "viewport": "laptop",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "dpr": 1,
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "sun": {
+        "samples": 239,
+        "mean": 16.66569037656901,
+        "p50": 16.699999999999818,
+        "p95": 17.59999999999991,
+        "p99": 17.600000000000136,
+        "over33": 0
+      },
+      "earth": {
+        "samples": 239,
+        "mean": 16.667782426778246,
+        "p50": 16.699999999999818,
+        "p95": 17.599999999999454,
+        "p99": 17.600000000000364,
+        "over33": 0
+      },
+      "initialSubresourceTransferBytes": 822232,
+      "finalSubresourceTransferBytes": 1726020,
+      "earthMemory": {
+        "variant": "desktop",
+        "decodedImageBytes": 41943040,
+        "textureBytesWithMipmaps": 55924053
+      },
+      "maxMeasuredTrailHeadError": 4.500126427306579e-06,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "dimensions": [
+        390,
+        844
+      ],
+      "dpr": 3,
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "sun": {
+        "samples": 239,
+        "mean": 16.666527196652694,
+        "p50": 16.699999999999818,
+        "p95": 17.59999999999991,
+        "p99": 17.600000000000364,
+        "over33": 0
+      },
+      "earth": {
+        "samples": 239,
+        "mean": 16.666527196652723,
+        "p50": 16.699999999999818,
+        "p95": 17.599999999999454,
+        "p99": 17.600000000000364,
+        "over33": 0
+      },
+      "initialSubresourceTransferBytes": 744230,
+      "finalSubresourceTransferBytes": 984376,
+      "earthMemory": {
+        "variant": "mobile",
+        "decodedImageBytes": 10485760,
+        "textureBytesWithMipmaps": 13981013
+      },
+      "maxMeasuredTrailHeadError": 7.322024747324818e-06,
+      "errors": []
+    },
+    {
+      "viewport": "intermediate",
+      "dimensions": [
+        740,
+        900
+      ],
+      "dpr": 1,
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "sun": {
+        "samples": 240,
+        "mean": 16.667499999999972,
+        "p50": 16.699999999999818,
+        "p95": 17.59999999999991,
+        "p99": 17.700000000000045,
+        "over33": 0
+      },
+      "earth": {
+        "samples": 240,
+        "mean": 16.664166666666667,
+        "p50": 16.699999999999818,
+        "p95": 17.300000000000182,
+        "p99": 17.600000000000364,
+        "over33": 0
+      },
+      "initialSubresourceTransferBytes": 744230,
+      "finalSubresourceTransferBytes": 984376,
+      "earthMemory": {
+        "variant": "mobile",
+        "decodedImageBytes": 10485760,
+        "textureBytesWithMipmaps": 13981013
+      },
+      "maxMeasuredTrailHeadError": 4.262389210804288e-06,
+      "errors": []
+    },
+    {
+      "viewport": "short",
+      "dimensions": [
+        1000,
+        500
+      ],
+      "dpr": 1,
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "sun": {
+        "samples": 240,
+        "mean": 16.666249999999966,
+        "p50": 16.699999999999818,
+        "p95": 17.299999999999955,
+        "p99": 17.59999999999991,
+        "over33": 0
+      },
+      "earth": {
+        "samples": 240,
+        "mean": 16.674999999999997,
+        "p50": 16.699999999999818,
+        "p95": 17.5,
+        "p99": 18.100000000000364,
+        "over33": 0
+      },
+      "initialSubresourceTransferBytes": 822232,
+      "finalSubresourceTransferBytes": 1726020,
+      "earthMemory": {
+        "variant": "desktop",
+        "decodedImageBytes": 41943040,
+        "textureBytesWithMipmaps": 55924053
+      },
+      "maxMeasuredTrailHeadError": 4.684596281350622e-06,
+      "errors": []
+    }
+  ],
+  "transferNote": "Local preview serves uncompressed JS/CSS. Resource Timing transfer sums exclude the HTML navigation; gzip release budgets are separately measured in ../asset-sizes.json."
+}

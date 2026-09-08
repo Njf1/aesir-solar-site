@@ -1,17 +1,41 @@
 {
-  "measuredAt": "2026-09-08T15:48:19.632Z",
+  "measuredAt": "2026-09-08T16:35:21.015Z",
   "files": [
     {
-      "file": "experience-B4ceNA3g.css",
-      "bytes": 9225,
-      "gzip": 2751,
-      "sha256": "4d254388054e0f56149cfe0bed8fdbc16cd5949dd86773f18e28bb1850269fb0"
+      "file": "earth-clouds-1024-BKjMs3Vz.webp",
+      "bytes": 101690,
+      "gzip": 101743,
+      "sha256": "3979004f4ffb462cac688c74a7f89d169b1b7cdbe9ab4aaef72f0ccb47dcf9a4"
     },
     {
-      "file": "experience-CT1Vf8wC.js",
-      "bytes": 119875,
-      "gzip": 46915,
-      "sha256": "4565a220400eef38f1dc10c1472dda3d4d69c50f059e186c458e66f86ee245e9"
+      "file": "earth-clouds-2048-CxNnPLJI.webp",
+      "bytes": 336230,
+      "gzip": 336353,
+      "sha256": "7146780031e5f85a8699dc4e0313b572cd4f27bd47669e6d57eb0914333c3323"
+    },
+    {
+      "file": "earth-day-2048-DtZ8Fp4V.webp",
+      "bytes": 137856,
+      "gzip": 136852,
+      "sha256": "7a84187278adb3565983f5e11848327bc8e47fc235ecc56a0178b5064d22301e"
+    },
+    {
+      "file": "earth-day-4096-BO1QlKRh.webp",
+      "bytes": 566958,
+      "gzip": 560756,
+      "sha256": "0d543059f30485c1cf20fa62a506987e7eb5a5e7a43cf929f911cd4fb2eaf9dc"
+    },
+    {
+      "file": "experience-CB1MQQc-.js",
+      "bytes": 309495,
+      "gzip": 97763,
+      "sha256": "1f7d9f8f1626ba1a3331714b6ed4c66a0e6332a560168a767e3b7c9cdaf3f481"
+    },
+    {
+      "file": "experience-DZfr8_Pr.css",
+      "bytes": 10289,
+      "gzip": 2918,
+      "sha256": "1d6044de9eba4908a891df5b3b0e4de8ab9724b1ad519ac3a4b6c3750f12197a"
     },
     {
       "file": "experience-poster-2apZrVuk.webp",
@@ -32,15 +56,15 @@
       "sha256": "98881d0ac23cc0f160c7958dda01a03af6e65d608d9f45cad804e21518d9c7f3"
     },
     {
-      "file": "scene-64PLyKwf.js",
-      "bytes": 538961,
-      "gzip": 135067,
-      "sha256": "f06845004a3f0f5fd76cc3e77c3c988c2fe0343069cff4ec145c161e87cf01b7"
+      "file": "scene-LPNruH82.js",
+      "bytes": 362562,
+      "gzip": 88861,
+      "sha256": "d4f99dcdeab2e71debbf54c1741b2c100c5a63d1d0177c7d9d89091d5f0a9385"
     }
   ],
-  "newJavaScriptGzipBytes": 181982,
+  "newJavaScriptGzipBytes": 186624,
   "budgetBytes": 750000,
-  "newMediaBytes": 198106,
+  "newMediaBytes": 1340840,
   "mediaBudgetBytes": 2000000,
   "pass": true
 }
