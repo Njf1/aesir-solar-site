@@ -1,0 +1,5472 @@
+{
+  "hardware": {
+    "platform": "darwin",
+    "osRelease": "25.6.0",
+    "architecture": "arm64",
+    "cpuModel": "Apple M4",
+    "logicalCpus": 10,
+    "memoryBytes": 17179869184,
+    "node": "v24.15.0",
+    "modelIdentifier": "Mac16,13"
+  },
+  "browser": "151.0.7922.34",
+  "measurement": "Four-second settled requestAnimationFrame intervals, not isolated GPU execution times. Each viewport uses a fresh incognito context with HTTP cache disabled by routing. Cold means the first owner load in that context; OS, browser-process and GPU-driver caches are not purged. Mobile viewport/DPR is desktop emulation, not a physical phone measurement. decodedBody bytes describe HTTP bodies, not decoded texture memory.",
+  "reports": [
+    {
+      "viewport": "1600×1000",
+      "dpr": 1,
+      "environment": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 10,
+        "deviceMemoryGiB": 16,
+        "devicePixelRatio": 1,
+        "visibility": "visible"
+      },
+      "errors": [],
+      "warnings": [],
+      "problems": [],
+      "initialResourceTotals": {
+        "requests": 11,
+        "encoded": 915302,
+        "decodedBody": 915302,
+        "transfer": 918602
+      },
+      "finalResourceTotals": {
+        "requests": 21,
+        "encoded": 2397439,
+        "decodedBody": 2397439,
+        "transfer": 2403739
+      },
+      "reverseResourceStable": true,
+      "ownerReadinessStable": true,
+      "coldOwners": [
+        {
+          "owner": "earth",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 140.4000000357628,
+          "nativeTiming": null
+        },
+        {
+          "owner": "region",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 63.60000002384186,
+          "nativeTiming": {
+            "requestedAt": 291.9000000357628,
+            "status": "ready",
+            "totalMs": 42.799999952316284
+          }
+        },
+        {
+          "owner": "site",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80.10000002384186,
+          "nativeTiming": {
+            "requestedAt": 358.4000000357628,
+            "status": "ready",
+            "totalMs": 63
+          }
+        },
+        {
+          "owner": "cell",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 113.19999998807907,
+          "nativeTiming": {
+            "requestedAt": 441.60000002384186,
+            "status": "ready",
+            "totalMs": 97.80000001192093
+          }
+        },
+        {
+          "owner": "electrical",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 81,
+          "nativeTiming": {
+            "requestedAt": 558.4000000357628,
+            "status": "ready",
+            "totalMs": 57
+          }
+        },
+        {
+          "owner": "business",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 64.5,
+          "nativeTiming": {
+            "requestedAt": 641.6999999880791,
+            "status": "ready",
+            "importAndBuildMs": 11.300000011920929,
+            "compileMs": 22.900000035762787,
+            "totalMs": 34.200000047683716
+          }
+        },
+        {
+          "owner": "storage",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 114,
+          "nativeTiming": {
+            "requestedAt": 708.3000000119209,
+            "status": "ready",
+            "importAndBuildMs": 79.80000001192093,
+            "compileMs": 12.099999964237213,
+            "totalMs": 91.89999997615814
+          }
+        }
+      ],
+      "chapters": [
+        {
+          "chapter": "Sun",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.600000000000364,
+          "p99": 17.700000000000728,
+          "maximum": 17.700000000000728,
+          "drawCalls": 17,
+          "triangles": 28482,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Earth",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.600000000000364,
+          "p99": 17.700000000000728,
+          "maximum": 17.700000000000728,
+          "drawCalls": 8,
+          "triangles": 49514,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Panel",
+          "samples": 239,
+          "p50": 16.700000000000728,
+          "p95": 17.599999999998545,
+          "p99": 17.600000000002183,
+          "maximum": 17.700000000000728,
+          "drawCalls": 38,
+          "triangles": 100120,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Cell absorption",
+          "samples": 239,
+          "p50": 16.700000000000728,
+          "p95": 17.599999999998545,
+          "p99": 17.600000000002183,
+          "maximum": 17.700000000000728,
+          "drawCalls": 20,
+          "triangles": 4452,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 0.43200601051840487,
+              "extraction": 0,
+              "incident": 0.5679939894815951
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Inverter",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.599999999998545,
+          "p99": 17.700000000000728,
+          "maximum": 17.700000000000728,
+          "drawCalls": 54,
+          "triangles": 110320,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Business",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.599999999998545,
+          "p99": 17.600000000002183,
+          "maximum": 17.700000000004366,
+          "drawCalls": 64,
+          "triangles": 114456,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Storage",
+          "samples": 240,
+          "p50": 16.69999999999709,
+          "p95": 17.599999999998545,
+          "p99": 17.599999999998545,
+          "maximum": 17.700000000004366,
+          "drawCalls": 61,
+          "triangles": 115492,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Later",
+          "samples": 240,
+          "p50": 16.69999999999709,
+          "p95": 17.599999999998545,
+          "p99": 17.69999999999709,
+          "maximum": 17.799999999995634,
+          "drawCalls": 71,
+          "triangles": 118408,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Grid",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.60000000000582,
+          "p99": 17.700000000004366,
+          "maximum": 17.799999999995634,
+          "drawCalls": 87,
+          "triangles": 120904,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Brand",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.69999999999709,
+          "p99": 17.799999999995634,
+          "maximum": 17.80000000000291,
+          "drawCalls": 86,
+          "triangles": 120088,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        }
+      ]
+    },
+    {
+      "viewport": "1280×720",
+      "dpr": 1,
+      "environment": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 10,
+        "deviceMemoryGiB": 16,
+        "devicePixelRatio": 1,
+        "visibility": "visible"
+      },
+      "errors": [],
+      "warnings": [],
+      "problems": [],
+      "initialResourceTotals": {
+        "requests": 11,
+        "encoded": 915302,
+        "decodedBody": 915302,
+        "transfer": 918602
+      },
+      "finalResourceTotals": {
+        "requests": 21,
+        "encoded": 2397439,
+        "decodedBody": 2397439,
+        "transfer": 2403739
+      },
+      "reverseResourceStable": true,
+      "ownerReadinessStable": true,
+      "coldOwners": [
+        {
+          "owner": "earth",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 125.69999998807907,
+          "nativeTiming": null
+        },
+        {
+          "owner": "region",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 64,
+          "nativeTiming": {
+            "requestedAt": 273.9000000357628,
+            "status": "ready",
+            "totalMs": 39.69999998807907
+          }
+        },
+        {
+          "owner": "site",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 81.10000002384186,
+          "nativeTiming": {
+            "requestedAt": 340,
+            "status": "ready",
+            "totalMs": 59.19999998807907
+          }
+        },
+        {
+          "owner": "cell",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 115.19999998807907,
+          "nativeTiming": {
+            "requestedAt": 423.30000001192093,
+            "status": "ready",
+            "totalMs": 89
+          }
+        },
+        {
+          "owner": "electrical",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80.5,
+          "nativeTiming": {
+            "requestedAt": 539.9000000357628,
+            "status": "ready",
+            "totalMs": 61.799999952316284
+          }
+        },
+        {
+          "owner": "business",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 47.90000003576279,
+          "nativeTiming": {
+            "requestedAt": 623.1999999880791,
+            "status": "ready",
+            "importAndBuildMs": 10.300000011920929,
+            "compileMs": 22.80000001192093,
+            "totalMs": 33.10000002384186
+          }
+        },
+        {
+          "owner": "storage",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 97,
+          "nativeTiming": {
+            "requestedAt": 673.1999999880791,
+            "status": "ready",
+            "importAndBuildMs": 67.70000004768372,
+            "compileMs": 12.199999988079071,
+            "totalMs": 79.90000003576279
+          }
+        }
+      ],
+      "chapters": [
+        {
+          "chapter": "Sun",
+          "samples": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.30000000000109,
+          "p99": 17.69999999999891,
+          "maximum": 17.700000000000728,
+          "drawCalls": 20,
+          "triangles": 30042,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Earth",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.299999999999272,
+          "p99": 17.600000000000364,
+          "maximum": 17.69999999999891,
+          "drawCalls": 8,
+          "triangles": 49514,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Panel",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.299999999999272,
+          "p99": 17.600000000002183,
+          "maximum": 17.69999999999709,
+          "drawCalls": 38,
+          "triangles": 100120,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Cell absorption",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.400000000001455,
+          "p99": 17.600000000002183,
+          "maximum": 17.69999999999709,
+          "drawCalls": 20,
+          "triangles": 4452,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 0.43231494550035454,
+              "extraction": 0,
+              "incident": 0.5676850544996455
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Inverter",
+          "samples": 239,
+          "p50": 16.700000000000728,
+          "p95": 17.30000000000291,
+          "p99": 17.600000000002183,
+          "maximum": 17.700000000000728,
+          "drawCalls": 54,
+          "triangles": 110320,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Business",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.400000000001455,
+          "p99": 17.600000000002183,
+          "maximum": 17.700000000000728,
+          "drawCalls": 64,
+          "triangles": 114456,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864,
+          "capture": "docs/experience/stage-five/performance-captures/laptop-business.png"
+        },
+        {
+          "chapter": "Storage",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.599999999998545,
+          "maximum": 17.599999999998545,
+          "drawCalls": 63,
+          "triangles": 115564,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864,
+          "capture": "docs/experience/stage-five/performance-captures/laptop-storage.png"
+        },
+        {
+          "chapter": "Later",
+          "samples": 240,
+          "p50": 16.69999999999709,
+          "p95": 17.400000000001455,
+          "p99": 17.599999999998545,
+          "maximum": 17.69999999999709,
+          "drawCalls": 72,
+          "triangles": 118432,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Grid",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.400000000001455,
+          "p99": 17.60000000000582,
+          "maximum": 17.700000000004366,
+          "drawCalls": 87,
+          "triangles": 120904,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864,
+          "capture": "docs/experience/stage-five/performance-captures/laptop-grid.png"
+        },
+        {
+          "chapter": "Brand",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.30000000000291,
+          "p99": 17.599999999998545,
+          "maximum": 17.60000000000582,
+          "drawCalls": 86,
+          "triangles": 120088,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        }
+      ]
+    },
+    {
+      "viewport": "390×844",
+      "dpr": 3,
+      "environment": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 10,
+        "deviceMemoryGiB": 16,
+        "devicePixelRatio": 3,
+        "visibility": "visible"
+      },
+      "errors": [],
+      "warnings": [],
+      "problems": [],
+      "initialResourceTotals": {
+        "requests": 11,
+        "encoded": 837300,
+        "decodedBody": 837300,
+        "transfer": 840600
+      },
+      "finalResourceTotals": {
+        "requests": 21,
+        "encoded": 1655795,
+        "decodedBody": 1655795,
+        "transfer": 1662095
+      },
+      "reverseResourceStable": true,
+      "ownerReadinessStable": true,
+      "coldOwners": [
+        {
+          "owner": "earth",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 55.299999952316284,
+          "nativeTiming": null
+        },
+        {
+          "owner": "region",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 65.60000002384186,
+          "nativeTiming": {
+            "requestedAt": 208.30000001192093,
+            "status": "ready",
+            "totalMs": 41.80000001192093
+          }
+        },
+        {
+          "owner": "site",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80,
+          "nativeTiming": {
+            "requestedAt": 275.5,
+            "status": "ready",
+            "totalMs": 61.30000001192093
+          }
+        },
+        {
+          "owner": "cell",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 114.79999995231628,
+          "nativeTiming": {
+            "requestedAt": 358.30000001192093,
+            "status": "ready",
+            "totalMs": 95.39999997615814
+          }
+        },
+        {
+          "owner": "electrical",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 81.09999996423721,
+          "nativeTiming": {
+            "requestedAt": 474.9000000357628,
+            "status": "ready",
+            "totalMs": 55.39999997615814
+          }
+        },
+        {
+          "owner": "business",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 47.700000047683716,
+          "nativeTiming": {
+            "requestedAt": 558.1000000238419,
+            "status": "ready",
+            "importAndBuildMs": 10.800000011920929,
+            "compileMs": 22.5,
+            "totalMs": 33.30000001192093
+          }
+        },
+        {
+          "owner": "storage",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 114.19999998807907,
+          "nativeTiming": {
+            "requestedAt": 608.1999999880791,
+            "status": "ready",
+            "importAndBuildMs": 77,
+            "compileMs": 11.400000035762787,
+            "totalMs": 88.40000003576279
+          }
+        }
+      ],
+      "chapters": [
+        {
+          "chapter": "Sun",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.200000000000728,
+          "p99": 17.600000000000364,
+          "maximum": 17.69999999999891,
+          "drawCalls": 17,
+          "triangles": 15650,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Earth",
+          "samples": 239,
+          "p50": 16.69999999999891,
+          "p95": 17.399999999999636,
+          "p99": 17.600000000000364,
+          "maximum": 17.69999999999891,
+          "drawCalls": 8,
+          "triangles": 31370,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Panel",
+          "samples": 240,
+          "p50": 16.700000000000728,
+          "p95": 17.099999999998545,
+          "p99": 17.5,
+          "maximum": 17.700000000000728,
+          "drawCalls": 36,
+          "triangles": 91362,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Cell absorption",
+          "samples": 240,
+          "p50": 16.700000000000728,
+          "p95": 17,
+          "p99": 17.5,
+          "maximum": 17.5,
+          "drawCalls": 19,
+          "triangles": 3992,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 0.432194255357597,
+              "extraction": 0,
+              "incident": 0.567805744642403
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Inverter",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.700000000000728,
+          "maximum": 17.700000000000728,
+          "drawCalls": 52,
+          "triangles": 98532,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Business",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.200000000000728,
+          "p99": 17.5,
+          "maximum": 17.700000000004366,
+          "drawCalls": 60,
+          "triangles": 102340,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864,
+          "capture": "docs/experience/stage-five/performance-captures/mobile-business.png"
+        },
+        {
+          "chapter": "Storage",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.400000000001455,
+          "p99": 17.599999999998545,
+          "maximum": 17.700000000004366,
+          "drawCalls": 61,
+          "triangles": 102494,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864,
+          "capture": "docs/experience/stage-five/performance-captures/mobile-storage.png"
+        },
+        {
+          "chapter": "Later",
+          "samples": 240,
+          "p50": 16.69999999999709,
+          "p95": 17.30000000000291,
+          "p99": 17.599999999998545,
+          "maximum": 17.80000000000291,
+          "drawCalls": 61,
+          "triangles": 102494,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Grid",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.30000000000291,
+          "p99": 17.69999999999709,
+          "maximum": 17.700000000004366,
+          "drawCalls": 77,
+          "triangles": 105816,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864,
+          "capture": "docs/experience/stage-five/performance-captures/mobile-grid.png"
+        },
+        {
+          "chapter": "Brand",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.39999999999418,
+          "p99": 17.69999999999709,
+          "maximum": 17.69999999999709,
+          "drawCalls": 86,
+          "triangles": 106508,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1.25,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        }
+      ]
+    },
+    {
+      "viewport": "740×900",
+      "dpr": 1,
+      "environment": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 10,
+        "deviceMemoryGiB": 16,
+        "devicePixelRatio": 1,
+        "visibility": "visible"
+      },
+      "errors": [],
+      "warnings": [],
+      "problems": [],
+      "initialResourceTotals": {
+        "requests": 11,
+        "encoded": 837300,
+        "decodedBody": 837300,
+        "transfer": 840600
+      },
+      "finalResourceTotals": {
+        "requests": 21,
+        "encoded": 1655795,
+        "decodedBody": 1655795,
+        "transfer": 1662095
+      },
+      "reverseResourceStable": true,
+      "ownerReadinessStable": true,
+      "coldOwners": [
+        {
+          "owner": "earth",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 56.5,
+          "nativeTiming": null
+        },
+        {
+          "owner": "region",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 65.69999998807907,
+          "nativeTiming": {
+            "requestedAt": 207.69999998807907,
+            "status": "ready",
+            "totalMs": 42.60000002384186
+          }
+        },
+        {
+          "owner": "site",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80.30000001192093,
+          "nativeTiming": {
+            "requestedAt": 274.80000001192093,
+            "status": "ready",
+            "totalMs": 61.5
+          }
+        },
+        {
+          "owner": "cell",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 114.79999995231628,
+          "nativeTiming": {
+            "requestedAt": 357.69999998807907,
+            "status": "ready",
+            "totalMs": 86.5
+          }
+        },
+        {
+          "owner": "electrical",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80.80000001192093,
+          "nativeTiming": {
+            "requestedAt": 474.19999998807907,
+            "status": "ready",
+            "totalMs": 62
+          }
+        },
+        {
+          "owner": "business",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 64.39999997615814,
+          "nativeTiming": {
+            "requestedAt": 557.6000000238419,
+            "status": "ready",
+            "importAndBuildMs": 10.899999976158142,
+            "compileMs": 23.30000001192093,
+            "totalMs": 34.299999952316284
+          }
+        },
+        {
+          "owner": "storage",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 113.89999997615814,
+          "nativeTiming": {
+            "requestedAt": 624.3000000119209,
+            "status": "ready",
+            "importAndBuildMs": 68.19999998807907,
+            "compileMs": 22.69999998807907,
+            "totalMs": 90.89999997615814
+          }
+        }
+      ],
+      "chapters": [
+        {
+          "chapter": "Sun",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.5,
+          "p99": 17.600000000000364,
+          "maximum": 17.700000000000728,
+          "drawCalls": 20,
+          "triangles": 17210,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Earth",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.5,
+          "p99": 17.600000000000364,
+          "maximum": 17.700000000000728,
+          "drawCalls": 8,
+          "triangles": 31370,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Panel",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.700000000000728,
+          "maximum": 17.700000000000728,
+          "drawCalls": 36,
+          "triangles": 91362,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Cell absorption",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.299999999999272,
+          "p99": 17.599999999998545,
+          "maximum": 17.600000000002183,
+          "drawCalls": 20,
+          "triangles": 4004,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 0.43140584663666187,
+              "extraction": 0,
+              "incident": 0.5685941533633381
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Inverter",
+          "samples": 239,
+          "p50": 16.700000000000728,
+          "p95": 17.299999999999272,
+          "p99": 17.69999999999709,
+          "maximum": 17.700000000000728,
+          "drawCalls": 54,
+          "triangles": 98728,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Business",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.200000000000728,
+          "p99": 17.600000000002183,
+          "maximum": 17.600000000002183,
+          "drawCalls": 63,
+          "triangles": 102556,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Storage",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.69999999999709,
+          "maximum": 17.700000000004366,
+          "drawCalls": 73,
+          "triangles": 105430,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Later",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.30000000000291,
+          "p99": 17.5,
+          "maximum": 17.60000000000582,
+          "drawCalls": 74,
+          "triangles": 105454,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Grid",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.30000000000291,
+          "p99": 17.60000000000582,
+          "maximum": 17.60000000000582,
+          "drawCalls": 86,
+          "triangles": 106810,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Brand",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.69999999999709,
+          "maximum": 17.700000000004366,
+          "drawCalls": 86,
+          "triangles": 106508,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 8388608,
+          "quality": {
+            "tier": "mobile",
+            "width": 740,
+            "height": 900,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "earth": {
+            "variant": "mobile",
+            "decodedImageBytes": 10485760,
+            "textureBytesWithMipmaps": 13981013
+          },
+          "cell": {
+            "variant": "mobile",
+            "geometryBytes": 33556,
+            "triangles": 3834,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 7430,
+            "geometryBytes": 60924,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 3764,
+            "geometryBytes": 51552,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 5282,
+            "geometryBytes": 103060,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        }
+      ]
+    },
+    {
+      "viewport": "1000×500",
+      "dpr": 1,
+      "environment": {
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "hardwareConcurrency": 10,
+        "deviceMemoryGiB": 16,
+        "devicePixelRatio": 1,
+        "visibility": "visible"
+      },
+      "errors": [],
+      "warnings": [],
+      "problems": [],
+      "initialResourceTotals": {
+        "requests": 11,
+        "encoded": 915302,
+        "decodedBody": 915302,
+        "transfer": 918602
+      },
+      "finalResourceTotals": {
+        "requests": 21,
+        "encoded": 2397439,
+        "decodedBody": 2397439,
+        "transfer": 2403739
+      },
+      "reverseResourceStable": true,
+      "ownerReadinessStable": true,
+      "coldOwners": [
+        {
+          "owner": "earth",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 141.60000002384186,
+          "nativeTiming": null
+        },
+        {
+          "owner": "region",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 64.70000004768372,
+          "nativeTiming": {
+            "requestedAt": 292.80000001192093,
+            "status": "ready",
+            "totalMs": 40.39999997615814
+          }
+        },
+        {
+          "owner": "site",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80.09999996423721,
+          "nativeTiming": {
+            "requestedAt": 359.69999998807907,
+            "status": "ready",
+            "totalMs": 57.69999998807907
+          }
+        },
+        {
+          "owner": "cell",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 115.19999998807907,
+          "nativeTiming": {
+            "requestedAt": 443,
+            "status": "ready",
+            "totalMs": 86.80000001192093
+          }
+        },
+        {
+          "owner": "electrical",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 80.60000002384186,
+          "nativeTiming": {
+            "requestedAt": 559.6000000238419,
+            "status": "ready",
+            "totalMs": 63.09999996423721
+          }
+        },
+        {
+          "owner": "business",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 64.80000001192093,
+          "nativeTiming": {
+            "requestedAt": 643.1000000238419,
+            "status": "ready",
+            "importAndBuildMs": 11.099999964237213,
+            "compileMs": 24.100000023841858,
+            "totalMs": 35.19999998807907
+          }
+        },
+        {
+          "owner": "storage",
+          "beforeStatus": "idle",
+          "afterStatus": "ready",
+          "observedRequestToReadyMs": 113.80000001192093,
+          "nativeTiming": {
+            "requestedAt": 709.5,
+            "status": "ready",
+            "importAndBuildMs": 69.80000001192093,
+            "compileMs": 22,
+            "totalMs": 91.80000001192093
+          }
+        }
+      ],
+      "chapters": [
+        {
+          "chapter": "Sun",
+          "samples": 240,
+          "p50": 16.699999999999818,
+          "p95": 17.5,
+          "p99": 17.600000000000364,
+          "maximum": 17.69999999999891,
+          "drawCalls": 20,
+          "triangles": 30042,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Earth",
+          "samples": 240,
+          "p50": 16.69999999999891,
+          "p95": 17.400000000001455,
+          "p99": 17.600000000000364,
+          "maximum": 17.700000000000728,
+          "drawCalls": 8,
+          "triangles": 49514,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Panel",
+          "samples": 239,
+          "p50": 16.700000000000728,
+          "p95": 17.5,
+          "p99": 17.600000000002183,
+          "maximum": 17.700000000000728,
+          "drawCalls": 38,
+          "triangles": 100120,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Cell absorption",
+          "samples": 240,
+          "p50": 16.700000000000728,
+          "p95": 17.400000000001455,
+          "p99": 17.600000000002183,
+          "maximum": 17.600000000002183,
+          "drawCalls": 20,
+          "triangles": 4452,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 0.43200601051840487,
+              "extraction": 0,
+              "incident": 0.5679939894815951
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Inverter",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.399999999997817,
+          "p99": 17.69999999999709,
+          "maximum": 17.700000000000728,
+          "drawCalls": 55,
+          "triangles": 110560,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Business",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.30000000000291,
+          "p99": 17.599999999998545,
+          "maximum": 17.700000000000728,
+          "drawCalls": 65,
+          "triangles": 114776,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Storage",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.599999999998545,
+          "maximum": 17.599999999998545,
+          "drawCalls": 64,
+          "triangles": 116092,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Later",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.60000000000582,
+          "maximum": 17.69999999999709,
+          "drawCalls": 72,
+          "triangles": 118432,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Grid",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.599999999998545,
+          "maximum": 17.69999999999709,
+          "drawCalls": 87,
+          "triangles": 120904,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        },
+        {
+          "chapter": "Brand",
+          "samples": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.5,
+          "p99": 17.60000000000582,
+          "maximum": 17.69999999999709,
+          "drawCalls": 86,
+          "triangles": 120088,
+          "geometries": 68,
+          "textures": 8,
+          "shadowEstimatedBytes": 33554432,
+          "quality": {
+            "tier": "desktop",
+            "width": 1000,
+            "height": 500,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "earth": {
+            "variant": "desktop",
+            "decodedImageBytes": 41943040,
+            "textureBytesWithMipmaps": 55924053
+          },
+          "cell": {
+            "variant": "desktop",
+            "geometryBytes": 44500,
+            "triangles": 4282,
+            "drawCalls": 18,
+            "baseDrawCalls": 18,
+            "instances": 164,
+            "textureBytes": 0,
+            "textureBytesWithMipmaps": 0,
+            "selectedCell": {
+              "row": 11,
+              "col": 3,
+              "width": 8.475,
+              "length": 4.318750000000001
+            },
+            "absorptionPoint": [
+              -0.9,
+              0,
+              0
+            ],
+            "frontCollection": [
+              0,
+              0.09,
+              -2.4593750000000005
+            ],
+            "rearCollection": [
+              4.1175,
+              -0.62,
+              1.7706875000000004
+            ],
+            "junction": [
+              -4.387499999999999,
+              -3.1,
+              -11.465625000000014
+            ],
+            "state": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0
+            }
+          },
+          "business": {
+            "drawCalls": 22,
+            "triangles": 8342,
+            "geometryBytes": 67932,
+            "instances": 437,
+            "textureBytes": 0,
+            "pointLights": 2,
+            "shadowLights": 0,
+            "state": {
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1
+            }
+          },
+          "storage": {
+            "drawCalls": 13,
+            "triangles": 5122,
+            "geometryBytes": 77588,
+            "textureBytes": 0,
+            "instances": 158
+          },
+          "electrical": {
+            "drawCalls": 12,
+            "triangles": 7866,
+            "geometryBytes": 176164,
+            "textureBytes": 0,
+            "instances": 237
+          },
+          "cellOverlayBytes": 24384,
+          "electricalOverlayBytes": 60864
+        }
+      ]
+    }
+  ]
+}

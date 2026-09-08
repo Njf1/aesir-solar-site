@@ -15,6 +15,7 @@ export interface CommercialSite {
   heroNormal: THREE.Vector3;
   roofY: number;
   bounds: THREE.Box3;
+  setOperation(section:number,activity:number,dusk:number):void;
   stats: {
     drawCalls: number; triangles: number; instances: number; instancedMeshes: number;
     panelCount: number; panelAreaM2: number; arrayCoverage: number;
@@ -23,7 +24,7 @@ export interface CommercialSite {
   dispose(): void;
 }
 
-type Placement = { position: THREE.Vector3; scale: THREE.Vector3; rotation: THREE.Quaternion; color?: THREE.Color };
+type Placement = { position: THREE.Vector3; scale: THREE.Vector3; rotation: THREE.Quaternion; color?: THREE.Color; section?:boolean };
 type Batch = { geometry: THREE.BufferGeometry; material: THREE.Material; items: Placement[]; name: string; shadow: boolean };
 
 export function createCommercialSite(quality: CommercialQuality): CommercialSite {
@@ -33,6 +34,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   const materials = new Set<THREE.Material>();
   const textures = new Set<THREE.Texture>();
   const batches = new Map<string, Batch>();
+  const sectionInstances:{mesh:THREE.InstancedMesh;index:number;item:Placement}[]=[];
   const identity = new THREE.Quaternion();
   const boxGeometry = ownGeometry(new THREE.BoxGeometry(1, 1, 1));
   const planeGeometry = ownGeometry(new THREE.PlaneGeometry(1, 1));
@@ -68,10 +70,10 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
     const batchKey = `${geometry.uuid}:${material.uuid}:${shadow ? 1 : 0}`;
     let batch = batches.get(batchKey);
     if (!batch) { batch = { geometry, material, items: [], name: `${key} — material batch`, shadow }; batches.set(batchKey, batch); }
-    batch.items.push({ position: new THREE.Vector3(x, y, z), scale: new THREE.Vector3(sx, sy, sz), rotation: rotation.clone(), color });
+    const item:Placement={ position: new THREE.Vector3(x, y, z), scale: new THREE.Vector3(sx, sy, sz), rotation: rotation.clone(), color };batch.items.push(item);return item;
   }
   function box(key: string, mat: THREE.Material, x: number, y: number, z: number, sx: number, sy: number, sz: number, rotation = identity, color?: THREE.Color, shadow = true) {
-    place(key, boxGeometry, mat, x, y, z, sx, sy, sz, rotation, color, shadow);
+    return place(key, boxGeometry, mat, x, y, z, sx, sy, sz, rotation, color, shadow);
   }
   function cylinder(key: string, mat: THREE.Material, x: number, y: number, z: number, radius: number, height: number, rotation = identity, color?: THREE.Color) {
     place(key, cylinderGeometry, mat, x, y, z, radius, height, radius, rotation, color);
@@ -94,6 +96,61 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   const darkMetal = standard(0x49555a, .43, .57);
   const timber = standard(0x93775a, .88);
   const window = ownMaterial(new THREE.MeshPhysicalMaterial({ color: 0x22383e, metalness: .36, roughness: .2, clearcoat: .7, clearcoatRoughness: .15 }));
+  const officeWindow=ownMaterial(window.clone());officeWindow.emissive.setHex(0xffb55e);officeWindow.emissiveIntensity=0;
+  // Original office-room light modulation. Only emission changes; daytime glass,
+  // reflections, roughness, clearcoat and opacity retain their accepted values.
+  officeWindow.customProgramCacheKey=()=> 'aesir-office-room-emission-v1';
+  officeWindow.onBeforeCompile=shader=>{
+    shader.vertexShader=shader.vertexShader
+      .replace('#include <common>',`#include <common>
+        varying vec3 vOfficePosition;
+        varying vec3 vOfficeBand;
+      `)
+      .replace('#include <begin_vertex>',`#include <begin_vertex>
+        vec4 officePosition=vec4(transformed,1.0);
+        float officeFloor=0.0;
+        #ifdef USE_INSTANCING
+          officePosition=instanceMatrix*officePosition;
+          officeFloor=floor(instanceMatrix[3].y/3.75);
+        #endif
+        vOfficePosition=(modelMatrix*officePosition).xyz;
+        // Unit box geometry: its Y coordinate supplies a consistent glass height.
+        vOfficeBand=vec3(position.y+.5,abs(normal.x),officeFloor);
+      `);
+    shader.fragmentShader=shader.fragmentShader
+      .replace('#include <common>',`#include <common>
+        varying vec3 vOfficePosition;
+        varying vec3 vOfficeBand;
+      `)
+      .replace('#include <emissivemap_fragment>',`#include <emissivemap_fragment>
+        // South mullions start at x=-36.7 every 2.4m; a room spans two bays.
+        // West windows are individually spaced every 2m from z=24.
+        float officeAcross=mix((vOfficePosition.x+36.7)/4.8,
+                               (vOfficePosition.z-23.0)/2.0,vOfficeBand.y);
+        float officeRoom=floor(officeAcross);
+        float officeU=fract(officeAcross);
+        float officeY=clamp(vOfficeBand.x,0.0,1.0);
+        float officeSeed=fract(sin(dot(vec2(officeRoom,vOfficeBand.z),
+                                      vec2(127.1,311.7)))*43758.5453);
+        float officeActivity=mix(.06,.58+.42*officeSeed,step(.15,officeSeed));
+        // A small bounded parallax hint belongs only to the ceiling source.
+        // The room edges remain aligned with the physical glazing/mullions.
+        vec3 officeView=normalize(cameraPosition-vOfficePosition);
+        float officeViewAcross=mix(officeView.x,-officeView.z,vOfficeBand.y);
+        float officeViewNormal=mix(abs(officeView.z),abs(officeView.x),vOfficeBand.y);
+        float officeLightU=officeU+clamp(officeViewAcross/max(.25,officeViewNormal),-1.5,1.5)*.028;
+        float officeEdges=smoothstep(.012,.085,officeU)*(1.0-smoothstep(.915,.988,officeU));
+        float officeCeiling=smoothstep(.70,.77,officeY)*(1.0-smoothstep(.85,.93,officeY));
+        officeCeiling*=smoothstep(.10,.22,officeLightU)*(1.0-smoothstep(.76,.88,officeLightU));
+        float officeBounce=.12+.24*smoothstep(.18,.78,officeY);
+        float officeDesk=(1.0-smoothstep(.20,.31,officeY))*smoothstep(.14,.24,officeU)*(1.0-smoothstep(.76,.86,officeU));
+        float officeLight=officeEdges*(.018+officeActivity*(officeBounce+.55*officeCeiling))*(1.0-.60*officeDesk);
+        // At emissiveIntensity=0, Three supplies zero totalEmissiveRadiance.
+        // Multiplication by this finite bounded value therefore changes nothing.
+        totalEmissiveRadiance*=clamp(officeLight,0.0,1.0);
+      `);
+  };
+
   const rubber = standard(0x252a2b, .95);
   const vehiclePaint = standard(0xa8b4b3, .35, .22);
   const whiteMetal = standard(0xd5d6d0, .55, .26);
@@ -138,8 +195,17 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   for (let i = 0; i < 5; i++) cylinder('entrance bollards', charcoal, -2 + i * 1.65, .52, 36.1, .075, .8);
 
   // Warehouse mass with a darker base, layered parapet and continuous clerestory band.
-  box('warehouse cladding', shell, 0, 5.35, 0, 80, 10.7, 48);
-  box('warehouse plinth', charcoal, 0, .7, 0, 80.2, 1.4, 48.2);
+  // Identical outer envelope with an actual hollow interior. The west architectural
+  // section retracts within its opening; the camera never passes through a solid mass.
+  for(const z of[-23.85,23.85])box('warehouse cladding',shell,0,5.35,z,80,10.7,.3);
+  box('warehouse cladding',shell,39.85,5.35,0,.3,10.7,47.4);
+  for(const[z,d]of[[-9.5,29],[20.25,7.5]])box('warehouse cladding',shell,-39.85,5.35,z,.3,10.7,d);
+  box('warehouse cladding',shell,-39.85,10.15,10.75,.3,1.1,11.5);
+  box('west architectural section',shell,-39.85,4.8,10.75,.3,9.6,11.5).section=true;
+  for(const z of[-23.95,23.95])box('warehouse plinth',charcoal,0,.7,z,80.2,1.4,.3);
+  box('warehouse plinth',charcoal,39.95,.7,0,.3,1.4,47.6);
+  for(const[z,d]of[[-9.5,29],[20.25,7.5]])box('warehouse plinth',charcoal,-39.95,.7,z,.3,1.4,d);
+  box('west section plinth',charcoal,-39.95,.7,10.75,.3,1.4,11.5).section=true;
   box('warehouse roof', roof, 0, roofY - .18, 0, 79.9, .36, 47.9);
   box('clerestory glazing', window, 0, 9.8, 24.035, 72, .92, .08);
   for (let x = -36; x <= 36; x += 3) box('clerestory mullions', aluminium, x, 9.8, 24.09, .07, 1.02, .08);
@@ -159,7 +225,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
     if (x > 13 || x < -38) box('cladding ribs', ribs, x, 5.05, 24.055, .045, 7.1, .09);
   }
   for (let z = -23.5; z <= 23.5; z += ribStep) {
-    box('cladding ribs', ribs, -40.055, 5.65, z, .09, 8.7, .045);
+    const rib=box('cladding ribs', ribs, -40.055, 5.65, z, .09, 8.7, .045);if(z>5&&z<16.5)rib.section=true;
     if (z < -19 || z > 17) box('cladding ribs', ribs, 40.055, 5.65, z, .09, 8.7, .045);
   }
   for (const x of [-37.2, -17, 14, 37.2]) for (const z of [-24.2, 24.2]) cylinder('downpipes', darkMetal, x, 5.4, z, .07, 10.3);
@@ -180,13 +246,13 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   box('canopy soffit', timber, 3.6, 4.34, 34.75, 15.8, .08, 5.55);
   for (const x of [-3.6, 10.8]) cylinder('canopy columns', darkMetal, x, 2.15, 36.9, .10, 4.3);
   for (const floor of [2.28, 6.02]) {
-    box('office glazing', window, -17.5, floor, 33.66, 38.8, 2.6, .08);
+    box('office glazing', officeWindow, -17.5, floor, 33.66, 38.8, 2.6, .08);
     box('office window reveals', charcoal, -17.5, floor - 1.37, 33.73, 39.15, .12, .23);
     box('office window reveals', charcoal, -17.5, floor + 1.37, 33.73, 39.15, .12, .23);
     for (let x = -36.7; x <= 2; x += 2.4) box('office mullions', aluminium, x, floor, 33.77, .065, 2.73, .17);
   }
   for (let x = -34.5; x <= 0; x += 6.9) box('office solar fins', charcoal, x, 5.32, 34.08, .18, 5.9, .64);
-  for (let z = 24; z <= 32; z += 2) box('office west glazing', window, -38.045, 5.6, z, .08, 4.7, 1.65);
+  for (let z = 24; z <= 32; z += 2) box('office west glazing', officeWindow, -38.045, 5.6, z, .08, 4.7, 1.65);
   // Occupied terrace on the office roof: planters, service door and screened equipment.
   box('office roof deck', concrete, -17, 8.83, 28.4, 40.6, .08, 9.7);
   for (const x of [-35, -1]) box('roof terrace planters', soil, x, 9.12, 29.5, 2.4, .6, 5.2);
@@ -363,7 +429,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   for (const batch of batches.values()) {
     const mesh = new THREE.InstancedMesh(batch.geometry, batch.material, batch.items.length);
     mesh.name = batch.name; mesh.castShadow = batch.shadow; mesh.receiveShadow = true;
-    batch.items.forEach((item, index) => { matrix.compose(item.position, item.rotation, item.scale); mesh.setMatrixAt(index, matrix); if (item.color) mesh.setColorAt(index, item.color); });
+    batch.items.forEach((item, index) => { matrix.compose(item.position, item.rotation, item.scale); mesh.setMatrixAt(index, matrix); if (item.color) mesh.setColorAt(index, item.color);if(item.section)sectionInstances.push({mesh,index,item}); });
     mesh.instanceMatrix.needsUpdate = true; if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
     mesh.computeBoundingBox(); mesh.computeBoundingSphere(); group.add(mesh);
     drawCalls++; instancedMeshes++; instances += batch.items.length;
@@ -378,8 +444,14 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   const bounds = new THREE.Box3().setFromObject(group);
   const stats = { drawCalls, triangles, instances, instancedMeshes, panelCount, panelAreaM2: panelCount * panelWidth * panelLength, arrayCoverage: panelCount * panelWidth * panelLength / (80 * 48), textureBytes: decodedBytes, textureBytesWithMipmaps: Math.ceil(decodedBytes * 4 / 3) };
   let disposed = false;
+  let lastSection=-1;const sectionPosition=new THREE.Vector3(),sectionScale=new THREE.Vector3();
   return {
     group, heroAnchor, heroNormal, roofY, bounds, stats,
+    setOperation(section,activity,dusk){
+      if(disposed)return;officeWindow.emissiveIntensity=activity*(.12+dusk*.62);
+      if(section===lastSection)return;lastSection=section;
+      for(const{mesh,index,item}of sectionInstances){sectionPosition.copy(item.position);sectionScale.copy(item.scale);sectionPosition.y+=item.scale.y*section*.5;sectionScale.y=Math.max(.00001,item.scale.y*(1-section));matrix.compose(sectionPosition,item.rotation,sectionScale);mesh.setMatrixAt(index,matrix);mesh.instanceMatrix.needsUpdate=true;}
+    },
     dispose() {
       if (disposed) return; disposed = true;
       group.traverse(object => { if (object instanceof THREE.InstancedMesh) object.dispose(); });

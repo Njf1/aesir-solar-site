@@ -1,0 +1,59 @@
+
+> aesir-solar@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ camera and guide retrace identically, including boundaries (13.110959ms)
+✔ resolution obeys DPR and total-pixel caps (0.287583ms)
+✔ all original business files are byte-identical to the audited commit (525.915791ms)
+✔ assembled pages, anchors, functions and no-SPA routing survive (6.809583ms)
+✔ all framings reverse the same world camera, target and guide, including origin rebasing (49.096208ms)
+✔ arrival begins and settles with continuous camera and target velocity (0.324208ms)
+✔ camera stays outside the photosphere and Earth during acquisition and arrival (7.08425ms)
+✔ distance-based trail begins at the guide and measures seven units behind it (1.633333ms)
+✔ framing includes short landscape and copy windows remain readable (1.27925ms)
+✔ the acquired guide stays on screen at every intermediate flight position (11.766542ms)
+✔ preserved payment contracts with dummy credentials and no network (12.35275ms)
+✔ all stage-four camera and guide fields retain their exact accepted scroll positions (11.866333ms)
+✔ new camera joins the settled inverter smoothly and every operation pose reverses exactly (68.990959ms)
+✔ activation and the storage/grid conditions have ordered, mutually consistent phases (4.260541ms)
+✔ the same AC entry connects the working bay and separately converted optional battery branch (0.572875ms)
+✔ the facade opens a real clearance while retaining the inverter mounting wall and reverses exactly (38.233916ms)
+✔ new owners count all owned buffers and release every geometry/material/instance once (11.893667ms)
+✔ lights, equipment, screen, storage level and flow uniforms reconstruct from state and frozen time (6.270542ms)
+✔ all twelve still views expose one HTML statement and the ending has no resurrected photon (0.601083ms)
+✔ camera and finite near-plane remain clear of actual campus, interior and service equipment (523.990625ms)
+✔ all exterior raster cells and their UVs register to the actual hero glass (34.039375ms)
+✔ selected cell, neighbours, protective glass and underside junction share exterior coordinates (2.466375ms)
+✔ the teaching aperture reveals only the selected absorber and reverses without moving the stack (1.893375ms)
+✔ absorption finishes before extraction and the optical guide never travels down the circuit (18.907166ms)
+✔ new chapter states and HTML stills reconstruct identically in reverse (52.953625ms)
+✔ camera and aim are continuous through both scale joins and the original panel stop (1.742791ms)
+✔ incoming optical trail remains attached and keeps its prefix at the new glass path (3.440958ms)
+✔ cell and electrical allocations fit actual buffer budgets and release every owned resource once (13.499458ms)
+✔ electrical paths meet the authored source and distinct inverter ports without geometric cable waves (2.5875ms)
+✔ new near planes do not cut visible cell/campus solids in five framings (135.5715ms)
+✔ the complete inverter cabinet and voltage-versus-time overlay fit the late views (8.634333ms)
+✔ the independent current reveal remains visible while the camera follows DC routing (24.880792ms)
+✔ the extension preserves every captured old pose at the same scroll unit (27.359084ms)
+✔ new duration adds scroll while old chapters and stills retain their positions (11.528333ms)
+✔ new chapters extend the scroll distance while retaining the accepted first unit (9.963042ms)
+✔ geographic convention and directional sunlight agree across coordinate systems (0.493042ms)
+✔ all chapters reconstruct identical finite shots in reverse and attach the trail head exactly (112.623208ms)
+✔ guide, camera, aim and up stay continuous through rebasing and obscured scale handoffs (0.305333ms)
+✔ camera, aim and guide settle continuously at handoffs without pauses at new interior landmarks (1.410708ms)
+✔ the approach, roof entry and array glide occupy authored scroll landmarks (23.990459ms)
+✔ the exposed guide stays in frame and clear of the Earth and roof at every sampled step (202.015958ms)
+✔ authored geometry leaves the camera-to-guide sightline clear and agrees with the landing anchor (313.918666ms)
+✔ accepted Sun, flight and Earth camera poses retain their physical scroll positions (8.77025ms)
+✔ known landmarks and the illustrative origin land on Britain, with Ireland kept separate (5.191667ms)
+✔ commercial resources fit incremental budgets and each owned object disposes exactly once (17.026375ms)
+✔ shader warmup stops its timer before material disposal after a timeout or context loss (91.3605ms)
+✔ warmup resolves after readiness, rejects compile errors and never starts after disposal (45.195375ms)
+ℹ tests 47
+ℹ suites 0
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 867.539125

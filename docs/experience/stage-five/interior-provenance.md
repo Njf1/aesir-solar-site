@@ -1,0 +1,23 @@
+# Original business interior and AC distribution
+
+Authored **8 September 2026** for the existing Aesir Solar campus with Codex assistance. Integrated source: [`interior.ts`](../../../src/experience/interior.ts), [`business.ts`](../../../src/experience/business.ts), [`business-journey.ts`](../../../src/experience/business-journey.ts) and the selective facade operation in [`commercial.ts`](../../../src/experience/commercial.ts). Scene ownership and lifecycle are in [`scene.ts`](../../../src/experience/scene.ts).
+
+The geometry, generic equipment, materials, abstract office interface and containment are original procedural artwork. No external photograph, model, texture, font, HDRI, manufacturer drawing, product rating, customer information or source diagram is incorporated in these new assets. They use pinned Three.js **0.185.1** and the existing campus, AC-entry and shared-flow contracts. Earlier campus/region/Earth source records remain applicable; this asset is not a replacement for their provenance.
+
+## Integrated arrangement
+
+The work bay shares the warehouse's **metres, +Y up, south +Z**. Its floor top is Y=0.30; interior bounds are X −38..−5, Y 0.24..10.455, Z 3..22. There is no duplicate warehouse, ground or office shell. A real selective opening in the existing west facade admits the camera while the existing inverter mounting wall remains present. The original electrical `buildingEntry` at **(−40.14, 0.74, 13.7)** continues through supported containment into the bay.
+
+Visible uses comprise twin suspended luminaires and task lighting; a supported conveyor/packaging head with guarding, drive and control pedestal; packing bench, supply bins, shelves, cartons and pallet truck; and a desk with keyboard, mouse, chair and monitor. The screen contains an abstract document/list interface, without numerical solar output, savings, approval status or customer data. The equipment and circulation details are educational set dressing, not a workplace or electrical compliance design.
+
+Two finite-range **shadowless PointLights** illuminate actual surfaces. Their renderer intensities are artistic parameters, not luminaire photometry. They add no shadow map or render target. Lighting, equipment and screen activate sequentially from authored progress after the HTML operating note. Daylight already exists; useful activity belongs to continued generation and the wider connected system, not one module or guaranteed solar-only supply.
+
+## State, resources and provenance boundary
+
+`render(state, time)` reconstructs light/emission values and preallocated instance transforms from the supplied state/time. The interior has no accumulated simulation, own animation loop, request or timer. The owner freezes ambient time for pause, hidden/offscreen and still viewing. `BusinessScene` adds one electrical-energy overlay and supported containment; its accounting includes those buffers, triangles and draws in addition to the interior. Each owner disposes its geometries, materials and instances once and clears/detaches its group.
+
+The integrated business budget is **420,000 B geometry/instance buffers, 22,000 triangles, 27 base draw calls, zero texture bytes, two shadowless practical lights and 12,000 B gzip lazy code**. These supersede isolated-interior draft limits. Shadow-pass/driver/shared-campus costs are reported separately. Exact final desktop/mobile counts, source SHA-256 values and delivered chunk bytes: **67,932 / 60,924 B desktop/mobile**, **8,342 / 7,430 triangles**, **22 base calls**, **437 interior instances**, **0 texture bytes** and **2 shadowless lights**. The final lazy business chunk is **6,423 B gzip**. The shared facade/office refinement remains in the site chunk. [Source/build hashes](checksums.json) and [integrated measurements](README.md) identify the delivery.
+
+Earlier isolated studio captures and the temporary source hash were preparation evidence only; they do not identify the final integrated source or prove final lighting, clearance, performance or accessibility. Current regression source checks the real shell opening, shared AC entry, deterministic activation, finite non-shadow lights, actual owned resources and exactly-once disposal. Final executed results and captures are recorded in the [stage-five handoff](README.md).
+
+The final office glazing modulates only existing emissive radiance with an original deterministic room pattern: upper practical-light bands, dimmer desk zones and varied rooms. It adds no texture, geometry, light, per-frame allocation or draw. At zero emission the earlier physical glass, reflections and material parameters are unchanged. Pinned Three 0.185.1 shader chunks and GPU compilation are verified by the local first-entry/re-entry checks.

@@ -1,0 +1,73 @@
+
+> aesir-solar@1.0.0 build
+> vite build && node scripts/assemble.mjs
+
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 44 modules transformed.
+rendering chunks...
+computing gzip size...
+.preview-build/experience-assets/favicon-NywgcjmD.svg                      0.33 kB │ gzip:   0.24 kB
+.preview-build/experience.html                                            15.64 kB │ gzip:   4.97 kB
+.preview-build/experience-assets/experience-poster-mobile-DhtopdsF.webp   60.05 kB
+.preview-build/experience-assets/earth-clouds-1024-BKjMs3Vz.webp         101.69 kB
+.preview-build/experience-assets/earth-day-2048-DtZ8Fp4V.webp            137.85 kB
+.preview-build/experience-assets/experience-poster-2apZrVuk.webp         138.05 kB
+.preview-build/experience-assets/earth-clouds-2048-CxNnPLJI.webp         336.23 kB
+.preview-build/experience-assets/region-land-FEWFx3vP.json               503.24 kB │ gzip: 176.90 kB
+.preview-build/experience-assets/earth-day-4096-BO1QlKRh.webp            566.95 kB
+.preview-build/experience-assets/experience-D5PlbR4P.css                  16.92 kB │ gzip:   4.17 kB
+.preview-build/experience-assets/site-layout-DNLUEQrg.js                   0.13 kB │ gzip:   0.13 kB
+.preview-build/experience-assets/panel-layout-BXPptB1D.js                  1.24 kB │ gzip:   0.68 kB
+.preview-build/experience-assets/energy-flow-BhHzgrDc.js                   1.38 kB │ gzip:   0.78 kB
+.preview-build/experience-assets/electrical-path-Hh8lSnZn.js               1.86 kB │ gzip:   0.85 kB
+.preview-build/experience-assets/region-BLk9uRMB.js                        3.47 kB │ gzip:   1.59 kB
+.preview-build/experience-assets/business-journey-BnmYoXLK.js              7.51 kB │ gzip:   3.59 kB
+.preview-build/experience-assets/electrical-HXYY0N7K.js                    9.68 kB │ gzip:   4.30 kB
+.preview-build/experience-assets/storage-DRh_X_NB.js                      12.62 kB │ gzip:   5.32 kB
+.preview-build/experience-assets/cell-Bzxvuxui.js                         12.63 kB │ gzip:   4.72 kB
+.preview-build/experience-assets/business-sZM-gWID.js                     14.92 kB │ gzip:   6.46 kB
+.preview-build/experience-assets/site-FTSNFC4G.js                         20.98 kB │ gzip:   9.00 kB
+.preview-build/experience-assets/experience-BE5r0OVo.js                  131.82 kB │ gzip:  51.49 kB
+.preview-build/experience-assets/three.core-isatdiS8.js                  223.30 kB │ gzip:  60.93 kB
+.preview-build/experience-assets/scene-CyPhgKRZ.js                       378.44 kB │ gzip:  93.92 kB
+
+✓ built in 149ms
+{
+  "release": ".release",
+  "measuredAt": "2026-09-08T19:44:39.370Z",
+  "newJavaScriptGzipBytes": 242153,
+  "budgetBytes": 750000,
+  "newMediaBytes": 1844085,
+  "mediaBudgetBytes": 2000000,
+  "incremental": {
+    "businessCodeGzipBytes": 6423,
+    "storageCodeGzipBytes": 5288,
+    "cellCodeGzipBytes": 4708,
+    "electricalCodeGzipBytes": 4288,
+    "flowCodeGzipBytes": 785,
+    "regionRawBytes": 503245,
+    "regionGzipBytes": 173539,
+    "regionCodeGzipBytes": 1588,
+    "siteCodeGzipBytes": 8955,
+    "budgets": {
+      "businessCodeGzip": 12000,
+      "storageCodeGzip": 10000,
+      "cellCodeGzip": 8000,
+      "electricalCodeGzip": 8000,
+      "flowCodeGzip": 2000,
+      "regionRaw": 550000,
+      "regionGzip": 180000,
+      "regionCodeGzip": 10000,
+      "siteCodeGzip": 20000
+    }
+  },
+  "pass": true
+}
+[
+  { name: 'desktop', messages: [] },
+  { name: 'laptop', messages: [] },
+  { name: 'mobile', messages: [] },
+  { name: 'intermediate', messages: [] },
+  { name: 'short', messages: [] }
+]

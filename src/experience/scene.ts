@@ -3,7 +3,7 @@ import { framingFor, EARTH_POSITION, smooth } from './progress';
 import {sampleJourney,sampleGuide,guideTangent,type JourneyShot} from './journey';
 import {SUN_LOCAL} from './geography';
 import {compileReady} from './warmup';
-import {CELL_BUDGET,ELECTRICAL_BUDGET,assertBudget} from './budgets';
+import {CELL_BUDGET,ELECTRICAL_BUDGET,STORAGE_BUDGET,assertBudget} from './budgets';
 import {CELL_SWITCH,CELL_EXIT} from './timeline';
 import {siteToCell,siteDirectionToCell} from './panel-layout';
 import {ELECTRICAL_PATHS,ELECTRICAL_ANCHORS} from './electrical-path';
@@ -29,13 +29,21 @@ export class SolarScene {
   private site?:import('./site').SiteScene;
   private cell?:import('./cell').CellScene;
   private electrical?:import('./electrical').ElectricalScene;
+  private business?:import('./business').BusinessScene;
+  private storage?:ReturnType<typeof import('./storage').createStorageScene>;
+  private businessStatus:'idle'|'loading'|'ready'|'failed'='idle';
+  private storageStatus:'idle'|'loading'|'ready'|'failed'='idle';
+  private readiness:Record<string,{requestedAt:number;importAndBuildMs?:number;compileMs?:number;totalMs?:number;status:string}>={};
+  private shadowOperationKey='';
+  private shadowInvalidations=0;
   private cellModuleFlow?:import('./energy-flow').EnergyFlow;
   private dcFlow?:import('./energy-flow').EnergyFlow;
   private acFlow?:import('./energy-flow').EnergyFlow;
   private cellStatus:'idle'|'loading'|'ready'|'failed'='idle';
   private electricalStatus:'idle'|'loading'|'ready'|'failed'='idle';
-  private lastShadowScene='';
   private annotationHost=document.querySelector<HTMLElement>('#inverter-annotations');
+  private storageAnnotationHost=document.querySelector<HTMLElement>('#storage-annotations');
+  private storageLabelNodes=Array.from(document.querySelectorAll<HTMLElement>('[data-storage-label]'));
   private labelNodes=Array.from(document.querySelectorAll<HTMLElement>('[data-inverter-label]'));
   private cellSun=siteDirectionToCell(SUN_LOCAL);
   private regionStatus:'idle'|'loading'|'ready'|'failed'='idle';
@@ -44,7 +52,7 @@ export class SolarScene {
   private warmupLifetime=new AbortController();
   private sunlight=new THREE.DirectionalLight(0xffefd7,2.5);
   private hemisphere=new THREE.HemisphereLight(0xbfd9eb,0x43523e,.85);
-  private black=new THREE.Color('#050608');private sky=new THREE.Color('#bfd1dd');private sea=new THREE.Color('#183e52');private wasSite=false;
+  private duskSky=new THREE.Color('#25374c');private black=new THREE.Color('#050608');private sky=new THREE.Color('#bfd1dd');private sea=new THREE.Color('#183e52');private wasSite=false;
   private siteFog=new THREE.FogExp2('#bfd1dd',.0018);
   private cloud:THREE.Mesh;
   private lastTrailKey='';
@@ -209,9 +217,9 @@ export class SolarScene {
     }).catch(()=>{if(!this.disposed){this.earthStatus='failed';this.onFailure('Earth could not load. Application details are ready below.');}})
       .finally(()=>clearTimeout(this.earthDeadline));
   }
-  private async loadNext(kind:'region'|'site'|'cell'|'electrical') {
+  private async loadNext(kind:'region'|'site'|'cell'|'electrical'|'business'|'storage') {
     if(this[`${kind}Status`]!=='idle'||this.disposed)return;this[`${kind}Status`]='loading';
-    let deadline=0;
+    let deadline=0;const timing={requestedAt:performance.now(),status:'loading'} as {requestedAt:number;importAndBuildMs?:number;compileMs?:number;totalMs?:number;status:string};this.readiness[kind]=timing;
     const prepare=(async()=>{
       if(kind==='region'){
         const {RegionScene}=await import('./region');if(this.disposed)return;
@@ -232,20 +240,33 @@ export class SolarScene {
         this.cellModuleFlow=new EnergyFlow(path,.055,96,true);cell.group.add(this.cellModuleFlow.mesh);
         assertBudget('cell buffers with collection overlay',cell.snapshot().geometryBytes+this.cellModuleFlow.geometryBytes,CELL_BUDGET.geometryBytes);
         this.scene.environment=this.site?.env??null;await compileReady(this.renderer,cell.group,this.camera,this.scene,this.warmupLifetime.signal);if(this.disposed)return;this.scene.add(cell.group);
-      }else{
+      }else if(kind==='electrical'){
         const [{createElectricalScene},{EnergyFlow}]=await Promise.all([import('./electrical'),import('./energy-flow')]);if(this.disposed)return;
         const electrical=createElectricalScene(this.quality.tier==='mobile'?'mobile':'desktop');this.electrical=electrical;
         this.dcFlow=new EnergyFlow(ELECTRICAL_PATHS.dcPositive,.035,176,false);this.acFlow=new EnergyFlow(ELECTRICAL_PATHS.acOutput,.021,64,false);electrical.group.add(this.dcFlow.mesh,this.acFlow.mesh);
         assertBudget('electrical buffers with flow overlays',electrical.stats.geometryBytes+this.dcFlow.geometryBytes+this.acFlow.geometryBytes,ELECTRICAL_BUDGET.geometryBytes);assertBudget('electrical base draws',electrical.stats.drawCalls+2,ELECTRICAL_BUDGET.baseDrawCalls);assertBudget('electrical triangles',electrical.stats.triangles+2400,ELECTRICAL_BUDGET.triangles);
         this.scene.environment=this.site?.env??null;await compileReady(this.renderer,electrical.group,this.camera,this.scene,this.warmupLifetime.signal);if(this.disposed)return;this.scene.add(electrical.group);
+      }else if(kind==='business'){
+        const {BusinessScene}=await import('./business');if(this.disposed)return;
+        const business=new BusinessScene(this.quality.tier==='mobile');this.business=business;this.scene.add(business.group);
+        timing.importAndBuildMs=performance.now()-timing.requestedAt;const compileStart=performance.now();
+        this.scene.environment=this.site?.env??null;await compileReady(this.renderer,business.group,this.camera,this.scene,this.warmupLifetime.signal);
+        if(this.disposed)return;await compileReady(this.renderer,this.site!.group,this.camera,this.scene,this.warmupLifetime.signal);timing.compileMs=performance.now()-compileStart;
+      }else{
+        const {createStorageScene}=await import('./storage');if(this.disposed)return;
+        const storage=createStorageScene(this.quality.tier);this.storage=storage;
+        assertBudget('storage buffers',storage.stats.geometryBytes,STORAGE_BUDGET.geometryBytes);assertBudget('storage draws',storage.stats.drawCalls,STORAGE_BUDGET.baseDrawCalls);assertBudget('storage triangles',storage.stats.triangles,STORAGE_BUDGET.triangles);assertBudget('storage texture bytes',storage.stats.textureBytes,0);
+        timing.importAndBuildMs=performance.now()-timing.requestedAt;const compileStart=performance.now();
+        this.scene.environment=this.site?.env??null;await compileReady(this.renderer,storage.group,this.camera,this.scene,this.warmupLifetime.signal);timing.compileMs=performance.now()-compileStart;
+        if(this.disposed)return;this.scene.add(storage.group);
       }
     })();
     try{await Promise.race([prepare,new Promise((_,reject)=>{deadline=window.setTimeout(()=>reject(new Error('chapter-timeout')),8000);this.nextDeadlines.add(deadline);})]);
-      if(this.disposed)return;this[`${kind}Status`]='ready';this.setProgress(this.progress);this.onAssetReady();
-    }catch{if(!this.disposed){this[`${kind}Status`]='failed';this.onFailure(`${kind==='region'?'The regional view':kind==='site'?'The roof view':kind==='cell'?'The cell view':'The inverter view'} could not load. Application details are ready below.`);}}
+      if(this.disposed)return;timing.totalMs=performance.now()-timing.requestedAt;timing.status='ready';this[`${kind}Status`]='ready';this.setProgress(this.progress);this.onAssetReady();
+    }catch{if(!this.disposed){timing.totalMs=performance.now()-timing.requestedAt;timing.status='failed';this[`${kind}Status`]='failed';this.onFailure(`${kind==='region'?'The regional view':kind==='site'?'The roof view':kind==='cell'?'The cell view':kind==='electrical'?'The inverter view':kind==='business'?'The business view':'The storage view'} could not load. Application details are ready below.`);}}
     finally{clearTimeout(deadline);this.nextDeadlines.delete(deadline);}
   }
-  setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();if(value>.88&&this.earthStatus==='ready')void this.loadNext('region');if(value>1.37&&this.regionStatus==='ready')void this.loadNext('site');if(value>2.08&&this.siteStatus==='ready')void this.loadNext('cell');if(value>2.83&&this.cellStatus==='ready')void this.loadNext('electrical');}
+  setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();if(value>.88&&this.earthStatus==='ready')void this.loadNext('region');if(value>1.37&&this.regionStatus==='ready')void this.loadNext('site');if(value>2.08&&this.siteStatus==='ready')void this.loadNext('cell');if(value>2.83&&this.cellStatus==='ready')void this.loadNext('electrical');if(value>4.04&&this.electricalStatus==='ready')void this.loadNext('business');if(value>4.70&&this.businessStatus==='ready')void this.loadNext('storage');}
   resize() {
     this.width=this.host.clientWidth;this.height=this.host.clientHeight;
     const next=selectQuality(this.width,this.height,devicePixelRatio,navigator.hardwareConcurrency);
@@ -261,11 +282,12 @@ export class SolarScene {
     if(this.disposed)return;
     this.ambientTime+=Math.min(delta,.05);
     const p=this.displayedProgress();
-    const shot=sampleJourney(p,framingFor(this.width,this.height));this.lastShot=shot;
+    const shot=sampleJourney(p,framingFor(this.width,this.height));this.lastShot=shot;const operation=shot.operation,dusk=operation?.dusk??0;
     const offset=shot.scene==='solar'?[0,0,0]:EARTH_POSITION;
     const ground=shot.scene==='region'||shot.scene==='site'||shot.scene==='cell';this.solar.visible=!ground;this.stars.visible=!ground;
     this.scene.background=shot.scene==='site'?this.sky:shot.scene==='region'?this.sea:this.black;
     this.scene.environment=shot.scene==='site'||shot.scene==='cell'?this.site?.env??null:null;this.scene.environmentRotation.set(shot.scene==='cell'?-Math.atan2(.156434,.987688):0,0,0);this.sunlight.position.copy(shot.scene==='cell'?this.cellSun:SUN_LOCAL).multiplyScalar(210);this.scene.fog=shot.scene==='site'?this.siteFog:null;this.scene.environmentIntensity=shot.scene==='site'?.48:.10;this.siteFog.density=.0018/(framingFor(this.width,this.height)==='portrait'?2.6:1);
+    this.sky.set('#bfd1dd').lerp(this.duskSky,dusk);this.siteFog.color.copy(this.sky);this.sunlight.intensity=2.5*(1-.82*dusk);this.hemisphere.intensity=.85*(1-.56*dusk);this.sunlight.position.y*=1-.48*dusk;if(shot.scene==='site')this.scene.environmentIntensity=.48*(1-.57*dusk);
     this.solar.position.set(-offset[0],-offset[1],-offset[2]);
     this.camera.position.set(...shot.camera);this.camera.up.set(...shot.up);this.camera.lookAt(...shot.target);this.camera.updateMatrixWorld();
     // A distant aerial camera needs metre-scale depth precision; keep the macro glass
@@ -298,30 +320,42 @@ export class SolarScene {
       this.earth.render(this.ambientTime,shot.earthVisibility);
     }
     if(this.region){this.region.group.visible=shot.scene==='region'&&this.regionStatus==='ready';this.region.globeOutline.visible=shot.scene==='earth';this.region.emphasize(shot.regionEmphasis);}
-    if(this.site)this.site.group.visible=shot.scene==='site'&&this.siteStatus==='ready';
+    if(this.site){this.site.group.visible=shot.scene==='site'&&this.siteStatus==='ready';this.site.setOperation(operation?.section??0,operation?.screen??0,dusk);}
+    if(this.business){this.business.group.visible=shot.scene==='site'&&p>4.18&&this.businessStatus==='ready';if(operation)this.business.render(operation,this.ambientTime);}
+    if(this.storage){this.storage.group.visible=shot.scene==='site'&&p>4.92&&this.storageStatus==='ready';if(operation)this.storage.render(operation,this.ambientTime);}
     if(this.cell){this.cell.group.visible=shot.scene==='cell'&&this.cellStatus==='ready';if(shot.conversion)this.cell.render(shot.conversion,this.ambientTime);this.cellModuleFlow?.render(smooth((p-2.845)/.22),this.ambientTime,.65*smooth((p-2.845)/.04));}
-    if(this.electrical){this.electrical.group.visible=shot.scene==='site'&&p>=CELL_EXIT&&this.electricalStatus==='ready';this.electrical.setProgress(shot.conversion?.ac??0);this.dcFlow?.render(shot.conversion?.energyU??0,this.ambientTime,p>=CELL_EXIT?.8:0);this.acFlow?.render(shot.conversion?.ac??0,this.ambientTime,.85);}
-    const shadowScene=shot.scene==='site'||shot.scene==='cell'?shot.scene:'';if(shadowScene&&shadowScene!==this.lastShadowScene)this.renderer.shadowMap.needsUpdate=true;this.lastShadowScene=shadowScene;
-    this.updateAnnotations(p,shot.conversion?.ac??0);
+    if(this.electrical){this.electrical.group.visible=shot.scene==='site'&&p>=CELL_EXIT&&this.electricalStatus==='ready';this.electrical.setProgress(shot.conversion?.ac??0,operation?.graphOpacity??1);this.dcFlow?.render(shot.conversion?.energyU??0,this.ambientTime,p>=CELL_EXIT?.8*(1-dusk)*(operation?1-smooth((p-4.45)/.15):1):0);this.acFlow?.render(shot.conversion?.ac??0,this.ambientTime,.85*(operation?1-smooth((p-4.7)/.16):1));}
+    // A cached map must follow visible caster owners, including an owner that
+    // finishes loading while scroll is stationary. Quantize only continuous light
+    // and facade movement; settled operation does not redraw shadows every frame.
+    const shadowScene=shot.scene==='site'||shot.scene==='cell'?shot.scene:'';
+    const shadowKey=`${shadowScene}:${Math.round((operation?.section??0)*24)}:${Math.round(dusk*16)}:${this.business?.group.visible?1:0}:${this.storage?.group.visible?1:0}`;
+    if(shadowKey!==this.shadowOperationKey){this.renderer.shadowMap.needsUpdate=true;this.shadowOperationKey=shadowKey;this.shadowInvalidations++;}
+    this.updateAnnotations(p,shot.conversion?.ac??0);this.updateStorageAnnotations(p);
     const transition=Math.max(shot.cloudOpacity,shot.conversion?.transition??0);this.cloud.visible=transition>.001;(this.cloud.material as THREE.ShaderMaterial).uniforms.uKind.value=shot.conversion?(shot.conversion.transitionKind==='glass'?1:2):0;(this.cloud.material as THREE.ShaderMaterial).uniforms.uTime.value=this.ambientTime;(this.cloud.material as THREE.ShaderMaterial).uniforms.uOpacity.value=transition;
     this.renderer.render(this.scene,this.camera);
     if(!this.shaderOK)this.onFailure('The live scene is unavailable. Application details are ready below.');
   }
   private updateAnnotations(p:number,ac:number){
-    if(!this.annotationHost)return;const visible=p>3.80&&ac>.02&&this.electricalStatus==='ready';this.annotationHost.hidden=!visible;if(!visible)return;
+    if(!this.annotationHost)return;const visible=p>3.80&&p<4.14&&ac>.02&&this.electricalStatus==='ready';this.annotationHost.hidden=!visible;this.annotationHost.style.opacity=String(p>4.085?1-smooth((p-4.085)/.055):1);if(!visible)return;
     for(const node of this.labelNodes){const key=node.dataset.inverterLabel as keyof typeof ELECTRICAL_ANCHORS;const anchor=ELECTRICAL_ANCHORS[key];if(!anchor)continue;this.projectionHead.copy(anchor).project(this.camera);node.style.left=`${(this.projectionHead.x*.5+.5)*100}%`;node.style.top=`${(-this.projectionHead.y*.5+.5)*100}%`;}
   }
-  displayedProgress(){let p=this.progress;if(this.earthStatus!=='ready'&&p>.635)p=.635;if(this.regionStatus!=='ready'&&p>1.235)p=1.235;if(this.siteStatus!=='ready'&&p>1.49)p=1.49;if(this.cellStatus!=='ready'&&p>2.34)p=2.34;if(this.electricalStatus!=='ready'&&p>3.05)p=3.05;return p;}
+  private updateStorageAnnotations(p:number){
+    if(!this.storageAnnotationHost)return;const visible=p>4.985&&p<5.38&&this.storageStatus==='ready';this.storageAnnotationHost.hidden=!visible;if(!visible||!this.storage)return;
+    this.storageAnnotationHost.style.opacity=String(smooth((p-4.985)/.03)*(1-smooth((p-5.35)/.03)));
+    for(const node of this.storageLabelNodes){const key=node.dataset.storageLabel as keyof typeof this.storage.anchors;this.projectionHead.copy(this.storage.anchors[key]).project(this.camera);node.style.left=`clamp(7rem, ${(this.projectionHead.x*.5+.5)*100}%, calc(100% - 7rem))`;node.style.top=`${(-this.projectionHead.y*.5+.5)*100}%`;}
+  }
+  displayedProgress(){let p=this.progress;if(this.earthStatus!=='ready'&&p>.635)p=.635;if(this.regionStatus!=='ready'&&p>1.235)p=1.235;if(this.siteStatus!=='ready'&&p>1.49)p=1.49;if(this.cellStatus!=='ready'&&p>2.34)p=2.34;if(this.electricalStatus!=='ready'&&p>3.05)p=3.05;if(this.businessStatus!=='ready'&&p>4.18)p=4.18;if(this.storageStatus!=='ready'&&p>4.96)p=4.96;return p;}
   snapshot() {
-    return {progress:this.progress,ambientTime:this.ambientTime,quality:this.quality,shot:this.lastShot,
+    return {shadowCasterKey:this.shadowOperationKey,shadowInvalidations:this.shadowInvalidations,businessStatus:this.businessStatus,storageStatus:this.storageStatus,business:this.business?.snapshot(),storage:this.storage?.stats,readiness:this.readiness,progress:this.progress,ambientTime:this.ambientTime,quality:this.quality,shot:this.lastShot,
       dcFlow:this.dcFlow?{visible:this.dcFlow.mesh.visible,travel:this.dcFlow.mesh.material.uniforms.uTravel.value,opacity:this.dcFlow.mesh.material.uniforms.uOpacity.value}:null,trailHeadError:this.trailHeadError,cellStatus:this.cellStatus,electricalStatus:this.electricalStatus,cell:this.cell?.snapshot(),cellOverlayBytes:this.cellModuleFlow?.geometryBytes??0,electrical:this.electrical?.stats,electricalOverlayBytes:(this.dcFlow?.geometryBytes??0)+(this.acFlow?.geometryBytes??0),regionStatus:this.regionStatus,siteStatus:this.siteStatus,region:this.region?.snapshot(),site:this.site?.snapshot(),earthStatus:this.earthStatus,earth:this.earth?.snapshot(),
       drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,shadowEstimatedBytes:this.sunlight.shadow.map?this.sunlight.shadow.map.width*this.sunlight.shadow.map.height*8:0,
       geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures};
   }
   private contextLost=(event:Event)=>{event.preventDefault();this.onFailure('The live scene is unavailable. Application details are ready below.');};
   dispose() {
-    if(this.disposed)return;this.disposed=true;if(this.annotationHost)this.annotationHost.hidden=true;this.warmupLifetime.abort();this.renderer.domElement.removeEventListener('webglcontextlost',this.contextLost);
-    clearTimeout(this.earthDeadline);for(const d of this.nextDeadlines)clearTimeout(d);this.cellModuleFlow?.dispose();this.dcFlow?.dispose();this.acFlow?.dispose();this.cell?.dispose();this.electrical?.dispose();this.earth?.dispose();this.region?.dispose();this.site?.dispose();this.sunlight.shadow.dispose();for(const m of this.materials)m.dispose();for(const g of this.geometries)g.dispose();
+    if(this.disposed)return;this.disposed=true;if(this.annotationHost)this.annotationHost.hidden=true;if(this.storageAnnotationHost)this.storageAnnotationHost.hidden=true;this.warmupLifetime.abort();this.renderer.domElement.removeEventListener('webglcontextlost',this.contextLost);
+    clearTimeout(this.earthDeadline);for(const d of this.nextDeadlines)clearTimeout(d);this.cellModuleFlow?.dispose();this.dcFlow?.dispose();this.acFlow?.dispose();this.cell?.dispose();this.electrical?.dispose();this.business?.dispose();this.storage?.dispose();this.earth?.dispose();this.region?.dispose();this.site?.dispose();this.sunlight.shadow.dispose();for(const m of this.materials)m.dispose();for(const g of this.geometries)g.dispose();
     this.scene.clear();this.renderer.renderLists.dispose();this.renderer.dispose();this.renderer.domElement.remove();
   }
 }

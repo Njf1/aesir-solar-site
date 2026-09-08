@@ -31,6 +31,7 @@ export class SiteScene{
   return this;
  }
  get env(){return this.environment?.texture??null;}
+ setOperation(section:number,activity:number,dusk:number){this.asset?.setOperation(section,activity,dusk);}
  snapshot(){return{...this.asset?.stats,geometryBytes:this.geometryBytes(),extraTextureBytes:this.textures.reduce((n,t)=>n+(t.image as {width:number;height:number}).width*(t.image as {width:number;height:number}).height*4,0),environmentEstimatedBytes:this.environment?this.environment.width*this.environment.height*12:0};}
  private geometryBytes(){
   let bytes=0;const seen=new Set<THREE.BufferGeometry>();

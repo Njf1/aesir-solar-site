@@ -18,6 +18,7 @@ const scrollLabel=document.querySelector<HTMLElement>('#scroll-label')!;
 journey.style.setProperty('--journey-height',`${(1+SCROLL_VIEWPORTS_PER_UNIT*JOURNEY_END)*100}svh`);
 journey.dataset.duration=String(JOURNEY_END);
 const chapterLabel=document.querySelector<HTMLElement>('#chapter-label')!;
+document.querySelector('#chapter-count')!.textContent=String(CHAPTERS.length);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let scene:import('./scene').SolarScene|undefined;
 let trigger:ScrollTrigger|undefined,observer:IntersectionObserver|undefined,resizeObserver:ResizeObserver|undefined;
@@ -39,6 +40,7 @@ function updateCopy(p:number) {
   document.body.dataset.scene=p>=CELL_SWITCH&&p<CELL_EXIT?'cell':p>=1.55?'site':p>=1.30?'region':'space';
   const processOpacity=smooth((p-2.43)/.04)*(1-smooth((p-2.94)/.06));processNote.style.opacity=String(processOpacity);processNote.style.visibility=processOpacity>.005?'visible':'hidden';processNote.setAttribute('aria-hidden',String(processOpacity<.15));
   chapterLabel.textContent=CHAPTERS[chapterAt(p)].label;
+  if(!reduced.matches)scrollLabel.textContent=p>=5.67?'SCROLL TO APPLICATION DETAILS':p>=2.71?'SCROLL TO FOLLOW THE ENERGY':'SCROLL TO FOLLOW THE LIGHT';
 }
 function frameLayout() {
   const width=stage.clientWidth,mode=framingFor(width,stage.clientHeight);

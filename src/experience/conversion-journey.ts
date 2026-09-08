@@ -1,6 +1,6 @@
 import {Vector3,CatmullRomCurve3} from 'three';
 import {clamp,smooth,mix,fadeWindow,type Framing,type Vec3} from './progress.ts';
-import {STAGE_THREE_END,JOURNEY_END,CELL_SWITCH,CELL_EXIT,chapterAt} from './timeline.ts';
+import {STAGE_THREE_END,STAGE_FOUR_END as JOURNEY_END,CELL_SWITCH,CELL_EXIT,chapterAt} from './timeline.ts';
 import {HERO_ANCHOR,HERO_NORMAL} from './site-layout.ts';
 import {PANEL_ROTATION,PANEL_NORMAL,PANEL_DOWN,TARGET_CELL_WORLD,siteToCell,cellToSite,siteDirectionToCell} from './panel-layout.ts';
 import {ELECTRICAL_PATHS,ELECTRICAL_ANCHORS} from './electrical-path.ts';
@@ -80,4 +80,3 @@ export function conversionGuideTangent(shot:JourneyShot,behind:number,target=new
  if(distance<0&&shot.guidePath==='cell')return siteDirectionToCell(glassPath.getTangentAt(clamp(1+distance/50/glassPath.getLength()),target),target);
  return path.getTangentAt(clamp(distance/path.getLength()),target);
 }
-

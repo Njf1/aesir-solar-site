@@ -59,6 +59,8 @@ body:has(#application-details:target) .site-header,.at-details .site-header{back
 [data-framing="short"] .journey-note{font-size:10px}
 /* Enlarged text retains its requested size and reflows into a wider, dark reading area. */
 [data-large-type="true"] .chapter-copy{top:20%;width:84%}
+#storage-annotations{position:absolute;inset:0;z-index:2;pointer-events:none}#storage-annotations[hidden]{display:none}
+#storage-annotations span{position:absolute;transform:translate(-50%,-50%);font-size:11px;white-space:nowrap;color:#dae5e7;text-shadow:0 1px 6px #000;background:#0a141bb3;padding:4px 6px;border-radius:2px}
 [data-large-type="true"] .chapter-description{max-width:600px}
 [data-large-type="true"] .copy-stack:before{background:linear-gradient(90deg,#050608f0,#050608bf 78%,#05060877);opacity:var(--visible-copy,0)}
 [data-large-type="true"] .chapter-copy h1,[data-large-type="true"] .chapter-copy h2{overflow-wrap:anywhere;max-width:none}
@@ -97,3 +99,33 @@ body:has(#application-details:target) .site-header,.at-details .site-header{back
 [data-framing="short"] .process-note{bottom:74px;font-size:10px;max-width:285px}
 [data-framing="short"] .still-views{gap:5px}.still-views button{padding:10px 12px}
 [data-large-type="true"] .copy-glass,[data-large-type="true"] .copy-cell,[data-large-type="true"] .copy-dc,[data-large-type="true"] .copy-inverter{top:20%;width:84%}
+
+/* Operating scenes share the original typography and reversible copy windows. */
+.copy-operation-note,.copy-business,.copy-storage,.copy-later,.copy-grid,.copy-long,.copy-connection,.copy-payoff{top:28%;width:35%}
+.copy-business h2,.copy-storage h2,.copy-later h2,.copy-grid h2,.copy-connection h2{font-size:clamp(34px,4.1vw,66px)}
+.operation-context{font-size:clamp(23px,2.6vw,40px);line-height:1.22;letter-spacing:-.03em;max-width:500px;margin:0}
+.copy-business .chapter-description,.copy-storage .chapter-description,.copy-later .chapter-description,.copy-grid .chapter-description{color:#e0ded6}
+.copy-payoff{top:26%}.payoff-mark{width:76px;height:76px;color:var(--gold);margin-bottom:22px}
+.copy-payoff h2{font-size:clamp(42px,4.5vw,72px);font-weight:500;letter-spacing:.19em;line-height:1}
+.copy-payoff h2 span{display:block;font-size:15px;font-weight:400;letter-spacing:.55em;margin:17px 0 0 3px}
+.copy-payoff .chapter-description{margin-top:28px;max-width:390px;line-height:1.8;color:#e5e1d8}
+.still-views{display:grid;grid-template-columns:repeat(6,1fr);max-width:850px}
+[data-framing="portrait"] .copy-operation-note,[data-framing="portrait"] .copy-business,[data-framing="portrait"] .copy-storage,[data-framing="portrait"] .copy-later,[data-framing="portrait"] .copy-grid,[data-framing="portrait"] .copy-long,[data-framing="portrait"] .copy-connection,[data-framing="portrait"] .copy-payoff{top:20%;width:84%}
+[data-framing="portrait"] .copy-payoff{top:18%}[data-framing="portrait"] .payoff-mark{width:52px;height:52px;margin-bottom:16px}
+[data-framing="portrait"] .copy-payoff h2{font-size:39px;letter-spacing:.18em}[data-framing="portrait"] .copy-payoff h2 span{font-size:12px;margin-top:13px}
+[data-framing="portrait"] .copy-payoff .chapter-description{margin-top:22px;font-size:13px}
+[data-framing="portrait"] .still-views button{font-size:11px;padding:8px 4px;min-width:0}
+[data-framing="portrait"] .is-static .process-note{bottom:232px}
+[data-framing="short"] .copy-operation-note,[data-framing="short"] .copy-business,[data-framing="short"] .copy-storage,[data-framing="short"] .copy-later,[data-framing="short"] .copy-grid,[data-framing="short"] .copy-long,[data-framing="short"] .copy-connection,[data-framing="short"] .copy-payoff{top:28%;width:39%}
+[data-framing="short"] .payoff-mark{width:42px;height:42px;margin-bottom:12px}[data-framing="short"] .copy-payoff h2{font-size:37px}
+[data-framing="short"] .copy-payoff h2 span{font-size:11px;margin-top:10px}[data-framing="short"] .copy-payoff .chapter-description{margin-top:16px;font-size:12px}
+[data-framing="short"] .is-static .chapter-copy{top:23%}[data-framing="short"] .is-static .chapter-copy .eyebrow{margin-bottom:10px}
+[data-large-type="true"] .chapter-copy{top:20%;width:84%}
+
+.is-static .fallback-status{bottom:154px;pointer-events:none}
+[data-framing="portrait"] .is-static .fallback-status{bottom:202px}
+[data-framing="short"] .is-static .fallback-status{bottom:140px}
+/* In still mode the scientific notes clear the expanded control grid too. */
+.is-static .journey-note{bottom:174px}
+[data-framing="portrait"] .is-static .journey-note,[data-framing="portrait"] .is-static .process-note{bottom:252px}
+[data-framing="short"] .is-static .journey-note,[data-framing="short"] .is-static .process-note{bottom:158px}

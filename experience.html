@@ -69,14 +69,23 @@
             <p class="eyebrow">AT THE INVERTER</p><h2>DC BECOMES<br>AC.</h2>
             <p class="chapter-description">The inverter converts the array’s direct current into alternating current.</p>
           </div>
+          <div class="chapter-copy copy-operation-note" data-copy="11" aria-hidden="true"><p class="eyebrow">THE OPERATING VIEW</p><p class="operation-context">Illustration of operation after the required permissions and commissioning.</p></div>
+          <div class="chapter-copy copy-business" data-copy="12" aria-hidden="true"><p class="eyebrow">A WORKING BUSINESS</p><h2>ENERGY,<br>PUT TO WORK.</h2><p class="chapter-description">From rooftop generation to the places your business needs power.</p></div>
+          <div class="chapter-copy copy-storage" data-copy="13" aria-hidden="true"><p class="eyebrow">OPTIONAL STORAGE · CHARGING</p><h2>KEEP SOME<br>FOR LATER.</h2><p class="chapter-description">Optional storage can shift when stored energy is used.</p></div>
+          <div class="chapter-copy copy-later" data-copy="14" aria-hidden="true"><p class="eyebrow">LATER · STORED ENERGY</p><h2>WHEN IT’S<br>NEEDED.</h2><p class="chapter-description">Stored energy can help supply the business.</p></div>
+          <div class="chapter-copy copy-grid" data-copy="15" aria-hidden="true"><p class="eyebrow">AN ILLUSTRATIVE IMPORT CONDITION</p><h2>PART OF A<br>CONNECTED<br>SYSTEM.</h2><p class="chapter-description">Generation, storage and the grid work within the agreed connection.</p></div>
+          <div class="chapter-copy copy-long" data-copy="16" aria-hidden="true"><h2>A LONG<br>JOURNEY.</h2></div>
+          <div class="chapter-copy copy-connection" data-copy="17" aria-hidden="true"><h2>A CONNECTION<br>WORTH GETTING<br>RIGHT.</h2></div>
+          <div class="chapter-copy copy-payoff" data-copy="18" aria-hidden="true"><svg class="payoff-mark" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><h2>AESIR<span>SOLAR</span></h2><p class="chapter-description">Your G99 application.<br>Prepared. Submitted. Followed through.</p></div>
         </div>
         <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>
         <p class="process-note" id="process-note">Illustrative layers and motion, enlarged.<br>Continuing light and a connected circuit.</p>
         <div id="inverter-annotations" hidden><span data-inverter-label="dcLabel">DC input</span><span data-inverter-label="acLabel">AC output</span><span data-inverter-label="timeLabel">Voltage ↕ · Time →</span></div>
+        <div id="storage-annotations" hidden><span data-storage-label="batteryLabel">Optional battery</span><span data-storage-label="converterLabel">Storage converter</span></div>
         <div class="chapter-footer">
           <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>
-          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span>16</span></div>
-          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button></div>
+          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span id="chapter-count"></span></div>
+          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button><button type="button" data-still="business" aria-pressed="false">Business</button><button type="button" data-still="storage" aria-pressed="false">Storage</button><button type="button" data-still="connected" aria-pressed="false">Grid</button><button type="button" data-still="aesir" aria-pressed="false">Aesir</button></div>
           <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>
         </div>
         <p class="fallback-status" id="fallback-status" role="status"></p>
@@ -84,7 +93,7 @@
       </div>
     </section>
     <section class="conversion" id="application-details" tabindex="-1" aria-labelledby="conversion-title">
-      <div class="bridge-intro"><p class="eyebrow">FROM SOLAR ENERGY TO GRID PERMISSION</p><h2 id="conversion-title">The energy is extraordinary.<br><span>Let’s get the connection right.</span></h2></div>
+      <div class="bridge-intro"><p class="eyebrow">FROM SOLAR ENERGY TO GRID PERMISSION</p><h2 id="conversion-title">Your next step.<br><span>A considered application.</span></h2></div>
       <div class="service-grid">
         <div class="service-explanation">
           <h3>Your G99 application.<br>Prepared. Submitted. Followed through.</h3>
@@ -99,7 +108,7 @@
           <a class="primary-button" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>
           <a class="secondary-link" href="/index.html#check">Check eligibility <span aria-hidden="true">↗</span></a>
           <a class="secondary-link" href="/contact.html">Talk to us first <span aria-hidden="true">↗</span></a>
-          <p class="scope-note">Not sure Form A1-2 fits your installation? Discuss suitability with us before paying.</p>
+          <p class="scope-note">The campus is illustrative, not a verified eligible Form A1-2 design. Check your installation’s suitability with us before paying.</p>
         </div>
       </div>
       <details class="energy-explanation"><summary>How light becomes electrical energy</summary><div>
@@ -107,6 +116,10 @@
         <p><strong>Direct current to alternating current.</strong> Module interconnections and a connected DC circuit carry electrical energy from the illuminated array to an inverter, which converts DC to AC.</p>
         <p>The blue moving bands illustrate energy flow, not individual electrons or a measured speed. The inverter graph shows voltage changing over time; its curve is not the shape of a cable. Generation requires continuing illumination and a connected circuit.</p>
         <p>The generic module, enlarged cell layers and inverter are original educational illustrations. They do not identify a manufacturer, complete string design, equipment rating or live output. Learn more from the <a href="https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics">DOE cell explanation</a> and <a href="https://www.energy.gov/cmei/systems/solar-integration-inverters-and-grid-services-basics">inverter explanation</a>.</p>
+        <p><strong>Energy put to work.</strong> Lighting, equipment and screens illustrate operation after the required permissions and commissioning. Ambient daylight is already present; continuing generation and the wider connected system supply useful activity, not one photon or one module.</p>
+        <p><strong>Optional storage.</strong> The example uses a separate bidirectional converter on an AC branch. Available solar energy can charge the battery; later, stored energy can help supply the business. Charging and discharge are separate moments. Storage has finite capacity and power, and conversion incurs losses. Adding a battery does not automatically provide backup: that needs a specifically designed system. Read the <a href="https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics">DOE storage explanation</a>.</p>
+        <p><strong>The grid relationship.</strong> The later scene illustrates imported supply. Possible export is a different condition; design and the agreed connection determine operation. The illustration does not promise export permission, earnings, complete independence or uninterrupted supply. See <a href="https://connections.nationalgrid.co.uk/g99-connection-procedures">National Grid’s G99 procedures</a> for network-specific guidance; project suitability still needs review.</p>
+        <p>The commercial campus and its 879 modules are illustrative, not a customer case study or a verified eligible A1-2 design. The £300 total covers one suitable Form A1-2 application service, not installation or every commercial project.</p>
       </div></details>
       <footer class="site-footer"><span>AESIR SOLAR <span class="footer-location">/ GREAT BRITAIN</span></span><nav aria-label="Further information"><a href="/faq.html">FAQ</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a></nav><a href="#main">Back to the light ↑</a></footer>
       <p class="image-credit">Earth imagery: <a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/">NASA Earth Observatory</a> / NASA Goddard Space Flight Center. Reto Stöckli; cloud enhancements by Robert Simmon. Coastline: <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> (public domain). The commercial site and equipment are original illustrations.</p>

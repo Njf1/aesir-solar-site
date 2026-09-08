@@ -6,3 +6,7 @@ export function assertBudget(name:string,measured:number,maximum:number){if(!Num
 
 export const CELL_BUDGET={geometryBytes:250000,triangles:15000,baseDrawCalls:25,gpuTextureBytes:0};
 export const ELECTRICAL_BUDGET={geometryBytes:350000,triangles:20000,baseDrawCalls:25,gpuTextureBytes:0};
+// Stage five budgets are incremental; shared campus, environment and shadow targets
+// remain single owned resources. All three routes/effects are included in the totals.
+export const BUSINESS_BUDGET={geometryBytes:420000,triangles:22000,baseDrawCalls:27,gpuTextureBytes:0,practicalLights:2,codeGzip:12000};
+export const STORAGE_BUDGET={geometryBytes:220000,triangles:14000,baseDrawCalls:20,gpuTextureBytes:0,practicalLights:0,codeGzip:10000};

@@ -5,7 +5,7 @@ import {sampleJourney,sampleGuide,journeyCopy} from '../src/experience/journey.t
 import {conversionState,ABSORPTION_POINT,MODULE_RETURN_CAMERA,MODULE_JUNCTION} from '../src/experience/conversion-journey.ts';
 import {PANEL,SELECTED_CELL,CELL_SCALE,PANEL_NORMAL,PANEL_RIGHT,PANEL_DOWN,TARGET_CELL_WORLD,cellLayout,moduleUV,panelPoint,siteToCell,cellToSite,siteDirectionToCell} from '../src/experience/panel-layout.ts';
 import {HERO_ANCHOR} from '../src/experience/site-layout.ts';
-import {STILL_VIEWS,CELL_SWITCH,CELL_EXIT,STAGE_THREE_END,JOURNEY_END,CHAPTERS} from '../src/experience/timeline.ts';
+import {STILL_VIEWS,CELL_SWITCH,CELL_EXIT,STAGE_THREE_END,STAGE_FOUR_END as JOURNEY_END,CHAPTERS} from '../src/experience/timeline.ts';
 import {CellScene} from '../src/experience/cell.ts';
 import {createCommercialSite} from '../src/experience/commercial.ts';
 import {createElectricalScene} from '../src/experience/electrical.ts';

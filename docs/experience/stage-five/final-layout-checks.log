@@ -1,0 +1,11 @@
+
+Running 4 tests using 1 worker
+
+(node:68023) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/stage-five.spec.ts:183:1 › enlarged storage labels fit the viewport and stay separate from the main statement (1.0s)
+  ✓  2 tests/browser/stage-five.spec.ts:191:1 › portrait still controls remain clear of the status message and retain real hit targets (267ms)
+  ✓  3 tests/browser/stage-five.spec.ts:220:107 › portrait: scientific still notes clear the expanded controls (749ms)
+  ✓  4 tests/browser/stage-five.spec.ts:220:107 › short: scientific still notes clear the expanded controls (836ms)
+
+  4 passed (3.6s)

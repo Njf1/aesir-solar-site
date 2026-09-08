@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "command": "npm run typecheck",
+      "startedAt": "2026-09-08T19:40:39.338Z",
+      "elapsedMs": 280,
+      "exitCode": 0,
+      "log": "review-1.log"
+    },
+    {
+      "command": "npm test",
+      "startedAt": "2026-09-08T19:40:39.620Z",
+      "elapsedMs": 964,
+      "exitCode": 0,
+      "log": "review-2.log"
+    },
+    {
+      "command": "npm run test:browser",
+      "startedAt": "2026-09-08T19:40:40.584Z",
+      "elapsedMs": 238123,
+      "exitCode": 0,
+      "log": "review-3.log"
+    },
+    {
+      "command": "node scripts/capture-stage-five.mjs",
+      "startedAt": "2026-09-08T19:44:38.708Z",
+      "elapsedMs": 42121,
+      "exitCode": 0,
+      "log": "review-4.log"
+    },
+    {
+      "command": "node scripts/inspect-stage-five.mjs",
+      "startedAt": "2026-09-08T19:45:20.830Z",
+      "elapsedMs": 188165,
+      "exitCode": 0,
+      "log": "review-5.log"
+    },
+    {
+      "command": "node scripts/inspect-stage-five-responsive-motion.mjs",
+      "startedAt": "2026-09-08T19:48:28.996Z",
+      "elapsedMs": 173169,
+      "exitCode": 0,
+      "log": "review-6.log"
+    },
+    {
+      "command": "node scripts/verify-stage-five.mjs",
+      "startedAt": "2026-09-08T19:51:22.166Z",
+      "elapsedMs": 349133,
+      "exitCode": 0,
+      "log": "review-7.log"
+    }
+  ]
+}

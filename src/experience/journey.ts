@@ -1,8 +1,9 @@
 import {extendConversion,conversionGuideDistance,conversionGuideTangent,sampleConversionGuide,conversionCopy,type ConversionState} from './conversion-journey.ts';
+import {extendBusiness,operationCopy,type OperationState} from './business-journey.ts';
 import {CatmullRomCurve3,Vector3} from 'three';
 import {sampleJourney as sampleAccepted,clamp,smooth,mix,copyOpacities as acceptedCopy,fadeWindow,EARTH_POSITION,type Vec3,type Framing,type Shot} from './progress.ts';
 import {pointOnLightPath,tangentOnLightPath,FLIGHT_LENGTH} from './path.ts';
-import {REGION_SWITCH,SITE_SWITCH,JOURNEY_END,STAGE_THREE_END,STILL_VIEWS,chapterAt} from './timeline.ts';
+import {REGION_SWITCH,SITE_SWITCH,JOURNEY_END,STAGE_THREE_END,STAGE_FOUR_END,STILL_VIEWS,chapterAt} from './timeline.ts';
 import {LOCAL_UP,LOCAL_SOUTH,LOCAL_EAST,REGION_ORIGIN,earthToRegion,directionToRegion,SITE_ORIGIN,SITE_TRANSITION_SCALE,regionToSite} from './geography.ts';
 import {HERO_ANCHOR,HERO_NORMAL} from './site-layout.ts';
 const v=(a:Vec3)=>new Vector3(...a),arr=(v:Vector3)=>v.toArray() as Vec3;
@@ -35,14 +36,14 @@ function distanceSchedule(path:CatmullRomCurve3){
   if(p>=STAGE_THREE_END)return 1;const span=siteKnots[i+1]-siteKnots[i];return hermite(ys[i],ys[i+1],ms[i]*span,ms[i+1]*span,clamp((p-siteKnots[i])/span));};
 }
 const cameraDistance=distanceSchedule(siteCameraPath),aimDistance=distanceSchedule(siteAimPath),guideDistance=distanceSchedule(siteGuidePath);
-export type JourneyShot=Omit<Shot,'scene'> & {scene:'solar'|'earth'|'region'|'site'|'cell';up:Vec3;guidePath:'solar'|'orbital'|'region'|'site'|'glass'|'cell';guideU:number;trailLength:number;cloudOpacity:number;regionEmphasis:number;guideScale:number;conversion?:ConversionState};
+export type JourneyShot=Omit<Shot,'scene'> & {scene:'solar'|'earth'|'region'|'site'|'cell';up:Vec3;guidePath:'solar'|'orbital'|'region'|'site'|'glass'|'cell';guideU:number;trailLength:number;cloudOpacity:number;regionEmphasis:number;guideScale:number;conversion?:ConversionState;operation?:OperationState};
 function hermite(a:number,b:number,m0:number,m1:number,t:number){return(2*t*t*t-3*t*t+1)*a+(-2*t*t*t+3*t*t)*b+(t*t*t-2*t*t+t)*m0+(t*t*t-t*t)*m1;}
 function orbitalU(p:number){if(p<=.95)return clamp(hermite(0,.94,incomingGuideSpeed/orbitalLength*.215,.025,clamp((p-GUIDE_JOIN)/.215)));const t=clamp((p-.95)/.35);return hermite(.94,1,.025/.215*.35,0,t);}
 export function journeyCopy(p:number,still=false){
- if(still){const index=Object.values(STILL_VIEWS).findIndex(value=>value===p);if(index>=0){const values=Array(11).fill(0);values[[1,3,4,5,6,8,9,10][index]]=1;return values;}}
+ if(still){const index=Object.values(STILL_VIEWS).findIndex(value=>value===p);if(index>=0){const values=Array(19).fill(0);values[[1,3,4,5,6,8,9,10,12,13,15,18][index]]=1;return values;}}
  const first=acceptedCopy(p);return [...first,
  Math.max(fadeWindow(p,1.025,1.07,1.20,1.24),fadeWindow(p,1.345,1.375,1.40,1.43)),
- fadeWindow(p,1.65,1.69,1.77,1.83),fadeWindow(p,2.06,2.10,2.16,2.21),...conversionCopy(p)];
+ fadeWindow(p,1.65,1.69,1.77,1.83),fadeWindow(p,2.06,2.10,2.16,2.21),...conversionCopy(p),...operationCopy(p)];
 }
 export function sampleJourney(progress:number,mode:Framing='landscape'):JourneyShot{
  const p=clamp(progress,0,STAGE_THREE_END),accepted=sampleAccepted(Math.min(1,p),mode);
@@ -80,6 +81,7 @@ export function sampleJourney(progress:number,mode:Framing='landscape'):JourneyS
  const cloud=(p:number,a:number,b:number,c:number,d:number)=>fadeWindow(p,a,b,c,d);
  shot.cloudOpacity=Math.max(cloud(p,1.235,1.29,1.31,1.36),cloud(p,1.485,1.54,1.56,1.635));
  if(p>=SITE_SWITCH)shot.pulseOpacity=.95;
+ if(progress>STAGE_FOUR_END)return extendBusiness(progress,mode,extendConversion(STAGE_FOUR_END,mode,shot));
  return progress>STAGE_THREE_END?extendConversion(progress,mode,shot):shot;
 }
 export function sampleGuide(shot:JourneyShot,behind:number,target=new Vector3()){

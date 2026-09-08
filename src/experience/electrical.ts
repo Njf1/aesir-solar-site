@@ -14,7 +14,7 @@ export interface ElectricalScene {
   anchors: typeof ELECTRICAL_ANCHORS;
   bounds: THREE.Box3;
   stats: { drawCalls: number; triangles: number; geometryBytes: number; textureBytes: number; instances: number };
-  setProgress(progress: number): void;
+  setProgress(progress: number, opacity?:number): void;
   dispose(): void;
 }
 
@@ -163,7 +163,9 @@ export function createElectricalScene(tier: ElectricalTier): ElectricalScene {
     vertexShader: 'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
     fragmentShader: `
       uniform float uProgress;uniform float uOpacity;varying vec2 vUv;
-      float line(float distance,float width){return 1.-smoothstep(width,width+.006,abs(distance));}
+      // Distance derivatives follow projected canvas pixels, including the steep
+      // parts of the sine. A bounded pixel floor prevents subpixel dotted lines.
+      float line(float distance,float width){float pixel=max(length(vec2(dFdx(distance),dFdy(distance))),.00001);float halfWidth=max(width,pixel*.85);return 1.-smoothstep(halfWidth-pixel*.5,halfWidth+pixel*.5,abs(distance));}
       void main(){
         vec2 p=vUv;float edge=smoothstep(0.,.018,min(min(p.x,1.-p.x),min(p.y,1.-p.y)));
         float left=smoothstep(.065,.08,p.x)*(1.-smoothstep(.44,.455,p.x));
@@ -208,10 +210,10 @@ export function createElectricalScene(tier: ElectricalTier): ElectricalScene {
   let disposed = false;
   return {
     group, overlay, paths: ELECTRICAL_PATHS, ports: ELECTRICAL_PORTS, anchors: ELECTRICAL_ANCHORS, bounds, stats,
-    setProgress(progress: number) {
+    setProgress(progress: number, opacity=1) {
       if (disposed) return;
       const p = clamp(progress); overlayMaterial.uniforms.uProgress.value = p;
-      overlayMaterial.uniforms.uOpacity.value = smooth(p / .16); overlay.visible = p > .001;
+      overlayMaterial.uniforms.uOpacity.value = smooth(p / .16)*opacity; overlay.visible = p > .001&&opacity>.001;
       indicator.emissiveIntensity = .25 + .20 * smooth(p);
     },
     dispose() {

@@ -1,0 +1,322 @@
+desktop {
+  coldOwners: [
+    { owner: 'earth', native: null, observed: 140.4000000357628 },
+    {
+      owner: 'region',
+      native: 42.799999952316284,
+      observed: 63.60000002384186
+    },
+    { owner: 'site', native: 63, observed: 80.10000002384186 },
+    {
+      owner: 'cell',
+      native: 97.80000001192093,
+      observed: 113.19999998807907
+    },
+    { owner: 'electrical', native: 57, observed: 81 },
+    { owner: 'business', native: 34.200000047683716, observed: 64.5 },
+    { owner: 'storage', native: 91.89999997615814, observed: 114 }
+  ],
+  settled: [
+    { chapter: 'Sun', p50: 16.69999999999891, p95: 17.600000000000364 },
+    {
+      chapter: 'Earth',
+      p50: 16.69999999999891,
+      p95: 17.600000000000364
+    },
+    {
+      chapter: 'Panel',
+      p50: 16.700000000000728,
+      p95: 17.599999999998545
+    },
+    {
+      chapter: 'Cell absorption',
+      p50: 16.700000000000728,
+      p95: 17.599999999998545
+    },
+    {
+      chapter: 'Inverter',
+      p50: 16.69999999999709,
+      p95: 17.599999999998545
+    },
+    {
+      chapter: 'Business',
+      p50: 16.69999999999709,
+      p95: 17.599999999998545
+    },
+    {
+      chapter: 'Storage',
+      p50: 16.69999999999709,
+      p95: 17.599999999998545
+    },
+    {
+      chapter: 'Later',
+      p50: 16.69999999999709,
+      p95: 17.599999999998545
+    },
+    { chapter: 'Grid', p50: 16.69999999999709, p95: 17.60000000000582 },
+    {
+      chapter: 'Brand',
+      p50: 16.69999999999709,
+      p95: 17.69999999999709
+    }
+  ],
+  errors: 0,
+  warnings: 0,
+  problems: []
+}
+laptop {
+  coldOwners: [
+    { owner: 'earth', native: null, observed: 125.69999998807907 },
+    { owner: 'region', native: 39.69999998807907, observed: 64 },
+    {
+      owner: 'site',
+      native: 59.19999998807907,
+      observed: 81.10000002384186
+    },
+    { owner: 'cell', native: 89, observed: 115.19999998807907 },
+    { owner: 'electrical', native: 61.799999952316284, observed: 80.5 },
+    {
+      owner: 'business',
+      native: 33.10000002384186,
+      observed: 47.90000003576279
+    },
+    { owner: 'storage', native: 79.90000003576279, observed: 97 }
+  ],
+  settled: [
+    { chapter: 'Sun', p50: 16.699999999999818, p95: 17.30000000000109 },
+    {
+      chapter: 'Earth',
+      p50: 16.69999999999891,
+      p95: 17.299999999999272
+    },
+    {
+      chapter: 'Panel',
+      p50: 16.69999999999709,
+      p95: 17.299999999999272
+    },
+    {
+      chapter: 'Cell absorption',
+      p50: 16.69999999999709,
+      p95: 17.400000000001455
+    },
+    {
+      chapter: 'Inverter',
+      p50: 16.700000000000728,
+      p95: 17.30000000000291
+    },
+    {
+      chapter: 'Business',
+      p50: 16.69999999999709,
+      p95: 17.400000000001455
+    },
+    { chapter: 'Storage', p50: 16.69999999999709, p95: 17.5 },
+    {
+      chapter: 'Later',
+      p50: 16.69999999999709,
+      p95: 17.400000000001455
+    },
+    {
+      chapter: 'Grid',
+      p50: 16.69999999999709,
+      p95: 17.400000000001455
+    },
+    {
+      chapter: 'Brand',
+      p50: 16.69999999999709,
+      p95: 17.30000000000291
+    }
+  ],
+  errors: 0,
+  warnings: 0,
+  problems: []
+}
+mobile {
+  coldOwners: [
+    { owner: 'earth', native: null, observed: 55.299999952316284 },
+    {
+      owner: 'region',
+      native: 41.80000001192093,
+      observed: 65.60000002384186
+    },
+    { owner: 'site', native: 61.30000001192093, observed: 80 },
+    {
+      owner: 'cell',
+      native: 95.39999997615814,
+      observed: 114.79999995231628
+    },
+    {
+      owner: 'electrical',
+      native: 55.39999997615814,
+      observed: 81.09999996423721
+    },
+    {
+      owner: 'business',
+      native: 33.30000001192093,
+      observed: 47.700000047683716
+    },
+    {
+      owner: 'storage',
+      native: 88.40000003576279,
+      observed: 114.19999998807907
+    }
+  ],
+  settled: [
+    { chapter: 'Sun', p50: 16.69999999999891, p95: 17.200000000000728 },
+    {
+      chapter: 'Earth',
+      p50: 16.69999999999891,
+      p95: 17.399999999999636
+    },
+    {
+      chapter: 'Panel',
+      p50: 16.700000000000728,
+      p95: 17.099999999998545
+    },
+    { chapter: 'Cell absorption', p50: 16.700000000000728, p95: 17 },
+    { chapter: 'Inverter', p50: 16.69999999999709, p95: 17.5 },
+    {
+      chapter: 'Business',
+      p50: 16.69999999999709,
+      p95: 17.200000000000728
+    },
+    {
+      chapter: 'Storage',
+      p50: 16.69999999999709,
+      p95: 17.400000000001455
+    },
+    {
+      chapter: 'Later',
+      p50: 16.69999999999709,
+      p95: 17.30000000000291
+    },
+    { chapter: 'Grid', p50: 16.69999999999709, p95: 17.30000000000291 },
+    {
+      chapter: 'Brand',
+      p50: 16.69999999999709,
+      p95: 17.39999999999418
+    }
+  ],
+  errors: 0,
+  warnings: 0,
+  problems: []
+}
+intermediate {
+  coldOwners: [
+    { owner: 'earth', native: null, observed: 56.5 },
+    {
+      owner: 'region',
+      native: 42.60000002384186,
+      observed: 65.69999998807907
+    },
+    { owner: 'site', native: 61.5, observed: 80.30000001192093 },
+    { owner: 'cell', native: 86.5, observed: 114.79999995231628 },
+    { owner: 'electrical', native: 62, observed: 80.80000001192093 },
+    {
+      owner: 'business',
+      native: 34.299999952316284,
+      observed: 64.39999997615814
+    },
+    {
+      owner: 'storage',
+      native: 90.89999997615814,
+      observed: 113.89999997615814
+    }
+  ],
+  settled: [
+    { chapter: 'Sun', p50: 16.69999999999891, p95: 17.5 },
+    { chapter: 'Earth', p50: 16.69999999999891, p95: 17.5 },
+    { chapter: 'Panel', p50: 16.69999999999709, p95: 17.5 },
+    {
+      chapter: 'Cell absorption',
+      p50: 16.69999999999709,
+      p95: 17.299999999999272
+    },
+    {
+      chapter: 'Inverter',
+      p50: 16.700000000000728,
+      p95: 17.299999999999272
+    },
+    {
+      chapter: 'Business',
+      p50: 16.69999999999709,
+      p95: 17.200000000000728
+    },
+    { chapter: 'Storage', p50: 16.69999999999709, p95: 17.5 },
+    {
+      chapter: 'Later',
+      p50: 16.69999999999709,
+      p95: 17.30000000000291
+    },
+    { chapter: 'Grid', p50: 16.69999999999709, p95: 17.30000000000291 },
+    { chapter: 'Brand', p50: 16.69999999999709, p95: 17.5 }
+  ],
+  errors: 0,
+  warnings: 0,
+  problems: []
+}
+short {
+  coldOwners: [
+    { owner: 'earth', native: null, observed: 141.60000002384186 },
+    {
+      owner: 'region',
+      native: 40.39999997615814,
+      observed: 64.70000004768372
+    },
+    {
+      owner: 'site',
+      native: 57.69999998807907,
+      observed: 80.09999996423721
+    },
+    {
+      owner: 'cell',
+      native: 86.80000001192093,
+      observed: 115.19999998807907
+    },
+    {
+      owner: 'electrical',
+      native: 63.09999996423721,
+      observed: 80.60000002384186
+    },
+    {
+      owner: 'business',
+      native: 35.19999998807907,
+      observed: 64.80000001192093
+    },
+    {
+      owner: 'storage',
+      native: 91.80000001192093,
+      observed: 113.80000001192093
+    }
+  ],
+  settled: [
+    { chapter: 'Sun', p50: 16.699999999999818, p95: 17.5 },
+    {
+      chapter: 'Earth',
+      p50: 16.69999999999891,
+      p95: 17.400000000001455
+    },
+    { chapter: 'Panel', p50: 16.700000000000728, p95: 17.5 },
+    {
+      chapter: 'Cell absorption',
+      p50: 16.700000000000728,
+      p95: 17.400000000001455
+    },
+    {
+      chapter: 'Inverter',
+      p50: 16.69999999999709,
+      p95: 17.399999999997817
+    },
+    {
+      chapter: 'Business',
+      p50: 16.69999999999709,
+      p95: 17.30000000000291
+    },
+    { chapter: 'Storage', p50: 16.69999999999709, p95: 17.5 },
+    { chapter: 'Later', p50: 16.69999999999709, p95: 17.5 },
+    { chapter: 'Grid', p50: 16.69999999999709, p95: 17.5 },
+    { chapter: 'Brand', p50: 16.69999999999709, p95: 17.5 }
+  ],
+  errors: 0,
+  warnings: 0,
+  problems: []
+}
