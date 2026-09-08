@@ -1,0 +1,77 @@
+{
+  "retrieved_on": "2026-09-08",
+  "credit": "Made with Natural Earth.",
+  "license": {
+    "status": "public domain",
+    "terms_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "verified_live_on": "2026-09-08",
+    "summary": "Natural Earth places all its raster/vector map versions in the public domain; modification and commercial use are allowed without permission. Attribution is optional; the project supplies a voluntary credit."
+  },
+  "creator": "Natural Earth contributors; primary authors Tom Patterson and Nathaniel Vaughn Kelso",
+  "sources": [
+    {
+      "dataset": "Natural Earth 1:10m physical land",
+      "version": "5.1.1",
+      "version_verified_from": "sources/ne_10m_land/ne_10m_land.VERSION.txt",
+      "source_page": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+      "download_url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_land.zip",
+      "projection": "WGS 1984 longitude/latitude, confirmed from .prj",
+      "local_file": "sources/ne_10m_land.zip",
+      "bytes": 3269070,
+      "sha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc"
+    },
+    {
+      "dataset": "Natural Earth 1:10m populated places simple",
+      "version": "5.1.2",
+      "version_verified_from": "sources/ne_10m_populated_places_simple/ne_10m_populated_places_simple.VERSION.txt",
+      "source_page": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+      "download_url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_populated_places_simple.zip",
+      "local_file": "sources/ne_10m_populated_places_simple.zip",
+      "bytes": 652145,
+      "sha256": "2963ee08f7743f13f37d5243acd77a2f7a510e26a36c7e04b920f1b381f2b251"
+    }
+  ],
+  "prepared_on": "2026-09-08",
+  "parent_asset": "region-land.json",
+  "purpose": "Expanded neighboring land prevents the former -14..12 /45..62-degree crop edges entering the broad Great Britain composition.",
+  "bounds": [
+    -24,
+    35,
+    25,
+    72
+  ],
+  "processing": [
+    "Reuse original official Natural Earth source downloads and their recorded hashes; no new source geography or licenses introduced.",
+    "Clip source land to longitude -24..25, latitude 35..72; dissolve contiguous source pieces.",
+    "Copy id=great-britain and id=ireland directly from the first delivery with exact rings/coordinates/properties preserved. Their earlier 100 m approximate topology-preserving simplification remains unchanged.",
+    "For other polygons, use approximate local kilometres x=lon*111.32*cos(54 degrees), y=lat*111.32. Remove islands below 15 square kilometres in this approximate projection. Simplify cropped mainland with 700 m tolerance and remaining islands with 1000 m tolerance, preserving topology.",
+    "Return longitude/latitude coordinates, round to six decimals, orient outer rings counterclockwise and holes clockwise, close rings, serialize compact JSON with deterministic gzip -9.",
+    "Verify every rounded polygon valid; verify complete Great Britain and Ireland records exactly equal the original delivery; verify all 10 landmark containment IDs unchanged."
+  ],
+  "statistics": {
+    "source_polygons_after_clip": 1044,
+    "source_vertices_after_clip": 58888,
+    "removed_small_islands": 655,
+    "removed_approximate_area_sq_km": 2912.385,
+    "delivered_polygons": 389,
+    "delivered_vertices": 21519,
+    "great_britain_vertices": 3219,
+    "ireland_vertices": 1956
+  },
+  "files": {
+    "region-land-expanded.json": {
+      "bytes": 503245,
+      "sha256": "6433ed75a89c58fccd98000625e17202cff001ec347e240d9cd5e93ec7a72dbf"
+    },
+    "region-land-expanded.json.gz": {
+      "bytes": 175991,
+      "sha256": "59b72cf394ca9ed6aca363e98c4aee5e43fe74774671a7cb003cba64012e02df"
+    },
+    "landmarks.json": {
+      "bytes": 1115,
+      "sha256": "dbeb2a4d02d7e231c22efa4b75a59e3bde906306428cbc9515480fc397cb33ec"
+    }
+  },
+  "renderer_notes": "Same compact schema as initial delivery. Great Britain and Ireland IDs are unchanged; other context IDs now use context-expanded-NNN. Rectangular clipping still exists at the expanded bounds; do not draw those edge segments as coastline. Do not add both initial and expanded context simultaneously.",
+  "illustration_limits": "Physical coastlines are generalized at 1:10 million source scale. This data has no terrain elevation, parcel geometry, network boundaries or customer site. Any terrain or commercial roof built on top is separately authored, geographically approximate and explicitly illustrative. Do not use as eligibility evidence or infer Northern Ireland service coverage from contextual geography."
+}

@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 const gotoReady=async(page:any)=>{await page.goto('/experience?inspect=1');await page.waitForFunction(()=>window.__experience?.snapshot().ready);};
-const scrollTo=async(page:any,p:number)=>{await page.evaluate((p:number)=>{const j=document.querySelector('#journey') as HTMLElement;scrollTo(0,p*(j.offsetHeight-innerHeight));},p);await page.waitForTimeout(250);};
+const scrollTo=async(page:any,p:number)=>{await page.evaluate((p:number)=>{const j=document.querySelector('#journey') as HTMLElement;scrollTo(0,p/Number(j.dataset.duration)*(j.offsetHeight-innerHeight));},p);await page.waitForTimeout(250);};
 test.beforeEach(async({page})=>{await page.route('**/*',route=>route.request().url().startsWith('http://127.0.0.1:4173/')?route.continue():route.abort());});
 test('opening, reverse, pause, resize, skip and browser Back preserve access',async({page})=>{
  await gotoReady(page);await expect(page.locator('header a.apply-link')).toBeVisible();

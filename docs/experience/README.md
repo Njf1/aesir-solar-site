@@ -1,10 +1,10 @@
 # Aesir Solar — local experience
 
-The current milestone is **Join the light, arrive at Earth**: a tiny source, monumental living Sun, an acquired white-gold guide, continuous flight, a rendered daylight Earth, and the existing HTML application-service section.
+The current milestone is **From Earth to a working roof**: a tiny source, monumental living Sun, an acquired white-gold guide, continuous flight, a rendered daylight Earth, Great Britain, atmospheric descent, a detailed commercial site, roof-array traversal and intimate panel approach, followed by the existing HTML application-service section.
 
-Open [the local preview](http://127.0.0.1:4173/experience). Read the [stage-two implementation and verification report](stage-two/README.md) and [capture gallery](stage-two/captures/index.html).
+Open [the local preview](http://127.0.0.1:4173/experience). Read the [stage-three implementation and verification report](stage-three/README.md), [captures](stage-three/captures/index.html) and [full vision register](stage-three/vision-register.md).
 
-Working project: `/Users/nick/Projects/Aesir Solar/experience-stage1`, branch `experience/stage-two`. The original `site` checkout is untouched. The reviewed first draft is recoverable at tag `experience-stage-one-reviewed` (`9845462`); its [notes](stage-one-notes.md) and original captures are retained.
+Working project: `/Users/nick/Projects/Aesir Solar/experience-stage1`, branch `experience/stage-three`. The original `site` checkout is untouched. The reviewed first draft is recoverable at tag `experience-stage-one-reviewed` (`9845462`); its [notes](stage-one-notes.md) and original captures are retained. Accepted stage two is recoverable at `experience-stage-two-reviewed` (`ecb981d`).
 
 ## Local checks
 
@@ -22,4 +22,4 @@ The preview is loopback-only on port 4173. It deliberately returns JSON `503 loc
 
 Only the experience entry is compiled by Vite; `scripts/assemble.mjs` preserves original pages, forms, functions and routes in `.release/`. The application, consent fields and business files are checked byte for byte against audited baseline `c61643f`.
 
-Great Britain, the building, panel interior and electrical chapters remain [future storyboard work](storyboard.md). The [audited application-storage/payment/fulfilment gaps](backend-blockers.md) remain unresolved by this visual milestone.
+Glass/cell absorption, DC/inverter/AC, optional storage, business activation and the later benefit content remain [future storyboard work](storyboard.md). The [audited application-storage/payment/fulfilment gaps](backend-blockers.md) remain unresolved by this visual milestone.

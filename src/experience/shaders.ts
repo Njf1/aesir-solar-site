@@ -96,3 +96,9 @@ void main(){float density=texture2D(uClouds,vUv+vec2(uTime*.000008,0.)).r;float 
 export const atmosphereFragment = /* glsl */`
 uniform vec3 uLight;uniform float uOpacity;varying vec3 vWorld;varying vec3 vNormal;
 void main(){vec3 n=normalize(vNormal),v=normalize(cameraPosition-vWorld);float rim=pow(max(0.,1.-abs(dot(n,v))),4.5);float day=smoothstep(-.2,.5,dot(n,normalize(uLight)));float a=rim*day*.46*uOpacity;gl_FragColor=vec4(vec3(.10,.40,1.)*a,a);}`;
+
+export const cloudTransitionFragment=/* glsl */`
+uniform float uTime;uniform float uOpacity;varying vec2 vUv;
+#define DETAIL 4
+${noise}
+void main(){vec2 uv=vUv+vec2(uTime*.002,0.);float n=fbm(vec3(uv*5.,uTime*.009));float billow=smoothstep(.18,.8,n);float a=smoothstep(0.,.85,uOpacity)*(mix(.35,1.,billow));a=mix(a,1.,smoothstep(.80,.98,uOpacity));vec3 color=mix(vec3(.58,.72,.81),vec3(.92,.95,.94),billow);gl_FragColor=vec4(color,a);}`;

@@ -1,0 +1,160 @@
+{
+  "meshBounds": 39,
+  "results": [
+    {
+      "mode": "landscape",
+      "aspect": 1.6,
+      "samples": 7001,
+      "failures": 0,
+      "nearMin": 0.05,
+      "nearMax": 1.7363755354185337,
+      "minMesh": {
+        "margin": 0.42335668651877584,
+        "p": 2.25,
+        "name": "PV glass and cells — material batch",
+        "near": 0.05
+      },
+      "minHead": {
+        "margin": 1.097219487311472,
+        "p": 2.25,
+        "depth": 1.1490582243925922,
+        "near": 0.05
+      },
+      "minHero": {
+        "margin": 0.20082087651450714,
+        "p": 2.25,
+        "near": 0.05
+      },
+      "minTrail": {
+        "margin": 1.0520835180250603,
+        "p": 2.25,
+        "along": 1,
+        "near": 0.05
+      }
+    },
+    {
+      "mode": "portrait",
+      "aspect": 0.46208530805687204,
+      "samples": 7001,
+      "failures": 0,
+      "nearMin": 0.05,
+      "nearMax": 3,
+      "minMesh": {
+        "margin": 0.4311496249623547,
+        "p": 2.25,
+        "name": "PV glass and cells — material batch",
+        "near": 0.05
+      },
+      "minHead": {
+        "margin": 1.0973709371879292,
+        "p": 2.25,
+        "depth": 1.1492096742690494,
+        "near": 0.05
+      },
+      "minHero": {
+        "margin": 0.18827030185454252,
+        "p": 2.25,
+        "near": 0.05
+      },
+      "minTrail": {
+        "margin": 1.0521997021750236,
+        "p": 2.25,
+        "along": 1,
+        "near": 0.05
+      }
+    },
+    {
+      "mode": "short",
+      "aspect": 2,
+      "samples": 7001,
+      "failures": 0,
+      "nearMin": 0.05,
+      "nearMax": 1.7363755354185337,
+      "minMesh": {
+        "margin": 0.4190240538326062,
+        "p": 2.25,
+        "name": "PV glass and cells — material batch",
+        "near": 0.05
+      },
+      "minHead": {
+        "margin": 1.097219487311472,
+        "p": 2.25,
+        "depth": 1.1490582243925922,
+        "near": 0.05
+      },
+      "minHero": {
+        "margin": 0.20082087651450714,
+        "p": 2.25,
+        "near": 0.05
+      },
+      "minTrail": {
+        "margin": 1.0520835180250603,
+        "p": 2.25,
+        "along": 1,
+        "near": 0.05
+      }
+    },
+    {
+      "mode": "portrait",
+      "aspect": 0.8222222222222222,
+      "samples": 7001,
+      "failures": 0,
+      "nearMin": 0.05,
+      "nearMax": 3,
+      "minMesh": {
+        "margin": 0.42952783130573663,
+        "p": 2.25,
+        "name": "PV glass and cells — material batch",
+        "near": 0.05
+      },
+      "minHead": {
+        "margin": 1.0973709371879292,
+        "p": 2.25,
+        "depth": 1.1492096742690494,
+        "near": 0.05
+      },
+      "minHero": {
+        "margin": 0.18827030185454252,
+        "p": 2.25,
+        "near": 0.05
+      },
+      "minTrail": {
+        "margin": 1.0521997021750236,
+        "p": 2.25,
+        "along": 1,
+        "near": 0.05
+      }
+    },
+    {
+      "mode": "landscape",
+      "aspect": 1.7777777777777777,
+      "samples": 7001,
+      "failures": 0,
+      "nearMin": 0.05,
+      "nearMax": 1.7363755354185337,
+      "minMesh": {
+        "margin": 0.42151435149516614,
+        "p": 2.25,
+        "name": "PV glass and cells — material batch",
+        "near": 0.05
+      },
+      "minHead": {
+        "margin": 1.097219487311472,
+        "p": 2.25,
+        "depth": 1.1490582243925922,
+        "near": 0.05
+      },
+      "minHero": {
+        "margin": 0.20082087651450714,
+        "p": 2.25,
+        "near": 0.05
+      },
+      "minTrail": {
+        "margin": 1.0520835180250603,
+        "p": 2.25,
+        "along": 1,
+        "near": 0.05
+      }
+    }
+  ]
+}

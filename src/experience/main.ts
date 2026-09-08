@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { clamp, copyOpacities, framingFor, smooth } from './progress';
+import { framingFor, smooth } from './progress';
+import {journeyCopy} from './journey';
+import {CHAPTERS,JOURNEY_END,SCROLL_VIEWPORTS_PER_UNIT,STILL_VIEWS,chapterAt} from './timeline';
 gsap.registerPlugin(ScrollTrigger);
 const journey=document.querySelector<HTMLElement>('#journey')!;
 const stage=document.querySelector<HTMLElement>('#stage')!;
@@ -12,6 +14,9 @@ const bar=document.querySelector<HTMLElement>('#progress-bar')!;
 const panels=Array.from(document.querySelectorAll<HTMLElement>('[data-copy]'));
 const note=document.querySelector<HTMLElement>('.journey-note')!;
 const scrollLabel=document.querySelector<HTMLElement>('#scroll-label')!;
+journey.style.setProperty('--journey-height',`${(1+SCROLL_VIEWPORTS_PER_UNIT*JOURNEY_END)*100}svh`);
+journey.dataset.duration=String(JOURNEY_END);
+const chapterLabel=document.querySelector<HTMLElement>('#chapter-label')!;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let scene:import('./scene').SolarScene|undefined;
 let trigger:ScrollTrigger|undefined,observer:IntersectionObserver|undefined,resizeObserver:ResizeObserver|undefined;
@@ -20,15 +25,18 @@ let progress=0,frame=0,lastTime=0,lastMeasure=0;
 let stillProgress=.285;
 const timings:number[]=[];
 function updateCopy(p:number) {
-  const opacity=copyOpacities(p);
+  const opacity=journeyCopy(p,reduced.matches);
   for(let i=0;i<panels.length;i++) {
     panels[i].style.opacity=String(opacity[i]);panels[i].style.visibility=opacity[i]>.005?'visible':'hidden';
     panels[i].style.transform=`translateY(${(1-opacity[i])*10}px)`;
     panels[i].setAttribute('aria-hidden',String(opacity[i]<.15));
   }
-  bar.style.transform=`scaleX(${p})`;
-  note.style.opacity=String(smooth((p-.83)/.05));
-  stage.dataset.chapter=String(p<.16?0:p<.48?1:p<.79?2:3);
+  stage.style.setProperty('--read-shade',String(Math.max(opacity[5],opacity[6])));
+  bar.style.transform=`scaleX(${p/JOURNEY_END})`;
+  note.style.opacity=String(smooth((p-.83)/.05)*(1-smooth((p-1.05)/.08)));
+  stage.dataset.chapter=CHAPTERS[chapterAt(p)].id;
+  document.body.dataset.scene=p>=1.55?'site':p>=1.30?'region':'space';
+  chapterLabel.textContent=CHAPTERS[chapterAt(p)].label;
 }
 function frameLayout() {
   const width=stage.clientWidth,mode=framingFor(width,stage.clientHeight);
@@ -54,7 +62,7 @@ function fallback(message:string) {
   if(location.hash==='#application-details'||progress>.16)document.querySelector('#application-details')?.scrollIntoView();
 }
 function onProgress(value:number) {
-  if(failed||disposed)return;progress=clamp(value);
+  if(failed||disposed)return;progress=Math.max(0,Math.min(JOURNEY_END,value));
   if(paused||reduced.matches)return;
   scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);resume();
 }
@@ -66,8 +74,8 @@ function configureMotion() {
     status.textContent='Reduced motion: still views. Application details are below.';
   } else {
     journey.classList.add('is-enhanced');journey.classList.remove('is-static');pauseButton.hidden=false;stillViews.hidden=true;status.textContent='';scrollLabel.textContent='SCROLL TO FOLLOW THE LIGHT';
-    trigger=ScrollTrigger.create({trigger:journey,start:'top top',end:'bottom bottom',onUpdate:self=>onProgress(self.progress),onRefresh:self=>onProgress(self.progress)});
-    progress=trigger.progress;scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);scene?.render(0);resume();
+    trigger=ScrollTrigger.create({trigger:journey,start:'top top',end:'bottom bottom',onUpdate:self=>onProgress(self.progress*JOURNEY_END),onRefresh:self=>onProgress(self.progress*JOURNEY_END)});
+    progress=trigger.progress*JOURNEY_END;scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);scene?.render(0);resume();
   }
 }
 function togglePause() {
@@ -77,7 +85,7 @@ function togglePause() {
 }
 function changeStill(event:Event) {
   const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-still]');if(!button||!reduced.matches||failed)return;
-  stillProgress=button.dataset.still==='earth'?.925:.285;
+  stillProgress=STILL_VIEWS[button.dataset.still as keyof typeof STILL_VIEWS]??STILL_VIEWS.sun;
   for(const b of stillViews.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b===button));
   scene?.setProgress(stillProgress);updateCopy(scene?.displayedProgress()??stillProgress);scene?.render(0);
 }
@@ -103,6 +111,6 @@ async function init() {
   finally {clearTimeout(timeout);}
 }
 if(new URLSearchParams(location.search).has('inspect')) {
-  Object.defineProperty(window,'__experience',{value:{snapshot:()=>({ready,failed,paused,onscreen,reduced:reduced.matches,framing:document.body.dataset.framing,...scene?.snapshot(),copyOpacities:copyOpacities(scene?.displayedProgress()??progress),frameIntervals:[...timings]}),resetTiming:()=>{timings.length=0;lastMeasure=0;}}});
+  Object.defineProperty(window,'__experience',{value:{snapshot:()=>({ready,failed,paused,onscreen,reduced:reduced.matches,framing:document.body.dataset.framing,duration:JOURNEY_END,...scene?.snapshot(),copyOpacities:journeyCopy(scene?.displayedProgress()??progress,reduced.matches),frameIntervals:[...timings]}),resetTiming:()=>{timings.length=0;lastMeasure=0;}}});
 }
 void init();

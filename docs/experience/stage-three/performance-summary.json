@@ -1,0 +1,312 @@
+[
+  {
+    "viewport": "1600×1000",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.299999999999955,
+        "drawCalls": 17,
+        "triangles": 28482,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.30000000000109,
+        "drawCalls": 8,
+        "triangles": 49514,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Region",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.299999999999272,
+        "drawCalls": 7,
+        "triangles": 41832,
+        "geometries": 29,
+        "textures": 6,
+        "shadowEstimatedBytes": 33554432
+      },
+      {
+        "chapter": "Building",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.19999999999891,
+        "drawCalls": 44,
+        "triangles": 101294,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432
+      },
+      {
+        "chapter": "Panel",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.5,
+        "drawCalls": 38,
+        "triangles": 115540,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432
+      }
+    ]
+  },
+  {
+    "viewport": "1280×720",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 240,
+        "p50": 16.699999999999818,
+        "p95": 17.300000000000182,
+        "drawCalls": 20,
+        "triangles": 30042,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.399999999999636,
+        "drawCalls": 8,
+        "triangles": 49514,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Region",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.100000000000364,
+        "drawCalls": 7,
+        "triangles": 41832,
+        "geometries": 29,
+        "textures": 6,
+        "shadowEstimatedBytes": 33554432
+      },
+      {
+        "chapter": "Building",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.400000000001455,
+        "drawCalls": 44,
+        "triangles": 101294,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432
+      },
+      {
+        "chapter": "Panel",
+        "samples": 239,
+        "p50": 16.69999999999709,
+        "p95": 17.5,
+        "drawCalls": 38,
+        "triangles": 115540,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432
+      }
+    ]
+  },
+  {
+    "viewport": "390×844",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.300000000000182,
+        "drawCalls": 17,
+        "triangles": 15650,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 240,
+        "p50": 16.699999999999818,
+        "p95": 17.300000000000182,
+        "drawCalls": 8,
+        "triangles": 31370,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Region",
+        "samples": 240,
+        "p50": 16.69999999999891,
+        "p95": 17.30000000000109,
+        "drawCalls": 7,
+        "triangles": 41832,
+        "geometries": 29,
+        "textures": 6,
+        "shadowEstimatedBytes": 8388608
+      },
+      {
+        "chapter": "Building",
+        "samples": 240,
+        "p50": 16.69999999999891,
+        "p95": 17.100000000000364,
+        "drawCalls": 44,
+        "triangles": 92238,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608
+      },
+      {
+        "chapter": "Panel",
+        "samples": 240,
+        "p50": 16.700000000000728,
+        "p95": 17.299999999999272,
+        "drawCalls": 36,
+        "triangles": 96414,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608
+      }
+    ]
+  },
+  {
+    "viewport": "740×900",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.300000000000182,
+        "drawCalls": 20,
+        "triangles": 17210,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.400000000001455,
+        "drawCalls": 8,
+        "triangles": 31370,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Region",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.399999999999636,
+        "drawCalls": 7,
+        "triangles": 41832,
+        "geometries": 29,
+        "textures": 6,
+        "shadowEstimatedBytes": 8388608
+      },
+      {
+        "chapter": "Building",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.700000000000728,
+        "drawCalls": 44,
+        "triangles": 92238,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608
+      },
+      {
+        "chapter": "Panel",
+        "samples": 239,
+        "p50": 16.700000000000728,
+        "p95": 17.700000000000728,
+        "drawCalls": 36,
+        "triangles": 96414,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 8388608
+      }
+    ]
+  },
+  {
+    "viewport": "1000×500",
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "errors": [],
+    "chapters": [
+      {
+        "chapter": "Sun",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.600000000000023,
+        "drawCalls": 20,
+        "triangles": 30042,
+        "geometries": 21,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Earth",
+        "samples": 239,
+        "p50": 16.699999999999818,
+        "p95": 17.600000000000364,
+        "drawCalls": 8,
+        "triangles": 49514,
+        "geometries": 26,
+        "textures": 2,
+        "shadowEstimatedBytes": 0
+      },
+      {
+        "chapter": "Region",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.600000000000364,
+        "drawCalls": 7,
+        "triangles": 41832,
+        "geometries": 29,
+        "textures": 6,
+        "shadowEstimatedBytes": 33554432
+      },
+      {
+        "chapter": "Building",
+        "samples": 239,
+        "p50": 16.69999999999891,
+        "p95": 17.599999999998545,
+        "drawCalls": 44,
+        "triangles": 101294,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432
+      },
+      {
+        "chapter": "Panel",
+        "samples": 240,
+        "p50": 16.69999999999709,
+        "p95": 17.600000000002183,
+        "drawCalls": 38,
+        "triangles": 115540,
+        "geometries": 39,
+        "textures": 8,
+        "shadowEstimatedBytes": 33554432
+      }
+    ]
+  }
+]

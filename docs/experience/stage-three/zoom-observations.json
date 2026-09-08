@@ -1,0 +1,340 @@
+[
+  {
+    "name": "zoom-200",
+    "width": 640,
+    "height": 360,
+    "dpr": 2,
+    "states": [
+      {
+        "progress": 0,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            A JOURNEY THROUGH SOLAR ENERGY\n            ENERGYBEGINS HERE.\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 122.390625,
+              "width": 256,
+              "height": 85.265625,
+              "top": 122.390625,
+              "right": 307.1875,
+              "bottom": 207.65625,
+              "left": 51.1875
+            },
+            "bottom": 207.65625,
+            "footer": 304
+          }
+        ]
+      },
+      {
+        "progress": 0.24007936507936506,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            THE SOURCE\n            OUR NEARESTSTAR.\n            A living surface. Light in every direction.\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 122.390625,
+              "width": 256,
+              "height": 120.0625,
+              "top": 122.390625,
+              "right": 307.1875,
+              "bottom": 242.453125,
+              "left": 51.1875
+            },
+            "bottom": 242.453125,
+            "footer": 304
+          }
+        ]
+      },
+      {
+        "progress": 0.5500992063492064,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            FROM THE SUN\n            FOLLOWTHE LIGHT.\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 100.796875,
+              "width": 256,
+              "height": 85.265625,
+              "top": 100.796875,
+              "right": 307.1875,
+              "bottom": 186.0625,
+              "left": 51.1875
+            },
+            "bottom": 186.0625,
+            "footer": 304
+          }
+        ]
+      },
+      {
+        "progress": 0.9350198412698413,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            TO THE PLACES WE WORK\n            SUNLIGHTREACHES US.\n\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 122.390625,
+              "width": 256,
+              "height": 85.265625,
+              "top": 122.390625,
+              "right": 307.1875,
+              "bottom": 207.65625,
+              "left": 51.1875
+            },
+            "bottom": 207.65625,
+            "footer": 304
+          }
+        ]
+      },
+      {
+        "progress": 1.3998015873015874,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            GREAT BRITAINCLOSERTO HOME.\n            G99 application supportacross Great Britain.\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 100.796875,
+              "width": 256,
+              "height": 139.859375,
+              "top": 100.796875,
+              "right": 307.1875,
+              "bottom": 240.65625,
+              "left": 51.1875
+            },
+            "bottom": 240.65625,
+            "footer": 304
+          }
+        ]
+      },
+      {
+        "progress": 1.7202380952380951,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            AN ILLUSTRATIVE COMMERCIAL SITEA WORKINGROOF.\n            The installation detailsshape the application.\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 100.796875,
+              "width": 256,
+              "height": 139.859375,
+              "top": 100.796875,
+              "right": 307.1875,
+              "bottom": 240.65625,
+              "left": 51.1875
+            },
+            "bottom": 240.65625,
+            "footer": 304
+          }
+        ]
+      },
+      {
+        "progress": 2.120039682539683,
+        "framing": "short",
+        "width": 640,
+        "viewport": 640,
+        "visible": [
+          {
+            "text": "\n            AT THE SURFACELIGHT MEETSSILICON.\n          ",
+            "rect": {
+              "x": 51.1875,
+              "y": 100.796875,
+              "width": 256,
+              "height": 85.265625,
+              "top": 100.796875,
+              "right": 307.1875,
+              "bottom": 186.0625,
+              "left": 51.1875
+            },
+            "bottom": 186.0625,
+            "footer": 304
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "text-200",
+    "width": 1280,
+    "height": 720,
+    "dpr": 1,
+    "states": [
+      {
+        "progress": 0,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            A JOURNEY THROUGH SOLAR ENERGY\n            ENERGYBEGINS HERE.\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144,
+              "width": 1075.1875,
+              "height": 334.25,
+              "top": 144,
+              "right": 1177.578125,
+              "bottom": 478.25,
+              "left": 102.390625
+            },
+            "bottom": 478.25,
+            "footer": 630
+          }
+        ]
+      },
+      {
+        "progress": 0.24007936507936506,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            THE SOURCE\n            OUR NEARESTSTAR.\n            A living surface. Light in every direction.\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144,
+              "width": 1075.1875,
+              "height": 374.15625,
+              "top": 144,
+              "right": 1177.578125,
+              "bottom": 518.15625,
+              "left": 102.390625
+            },
+            "bottom": 518.15625,
+            "footer": 630
+          }
+        ]
+      },
+      {
+        "progress": 0.5500992063492064,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            FROM THE SUN\n            FOLLOWTHE LIGHT.\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144,
+              "width": 1075.1875,
+              "height": 287.71875,
+              "top": 144,
+              "right": 1177.578125,
+              "bottom": 431.71875,
+              "left": 102.390625
+            },
+            "bottom": 431.71875,
+            "footer": 630
+          }
+        ]
+      },
+      {
+        "progress": 0.9350198412698413,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            TO THE PLACES WE WORK\n            SUNLIGHTREACHES US.\n\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144,
+              "width": 1075.1875,
+              "height": 318.71875,
+              "top": 144,
+              "right": 1177.578125,
+              "bottom": 462.71875,
+              "left": 102.390625
+            },
+            "bottom": 462.71875,
+            "footer": 630
+          }
+        ]
+      },
+      {
+        "progress": 1.400049603174603,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            GREAT BRITAINCLOSERTO HOME.\n            G99 application supportacross Great Britain.\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144.0000762939453,
+              "width": 1075.1875,
+              "height": 457.25,
+              "top": 144.0000762939453,
+              "right": 1177.578125,
+              "bottom": 601.2500762939453,
+              "left": 102.390625
+            },
+            "bottom": 601.2500610351562,
+            "footer": 630
+          }
+        ]
+      },
+      {
+        "progress": 1.7199900793650793,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            AN ILLUSTRATIVE COMMERCIAL SITEA WORKINGROOF.\n            The installation detailsshape the application.\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144,
+              "width": 1075.1875,
+              "height": 426.21875,
+              "top": 144,
+              "right": 1177.578125,
+              "bottom": 570.21875,
+              "left": 102.390625
+            },
+            "bottom": 570.21875,
+            "footer": 630
+          }
+        ]
+      },
+      {
+        "progress": 2.120039682539683,
+        "framing": "landscape",
+        "width": 1280,
+        "viewport": 1280,
+        "visible": [
+          {
+            "text": "\n            AT THE SURFACELIGHT MEETSSILICON.\n          ",
+            "rect": {
+              "x": 102.390625,
+              "y": 144,
+              "width": 1075.1875,
+              "height": 303.21875,
+              "top": 144,
+              "right": 1177.578125,
+              "bottom": 447.21875,
+              "left": 102.390625
+            },
+            "bottom": 447.21875,
+            "footer": 630
+          }
+        ]
+      }
+    ]
+  }
+]

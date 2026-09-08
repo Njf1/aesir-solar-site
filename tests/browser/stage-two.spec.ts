@@ -5,7 +5,7 @@ const earthFiles='**/earth-*.webp';
 const snapshot=(page:Page)=>page.evaluate(()=>(window as any).__experience.snapshot());
 const gotoReady=async(page:Page)=>{await page.goto('/experience?inspect=1');await page.waitForFunction(()=>(window as any).__experience?.snapshot().ready);};
 async function move(page:Page,p:number){
- await page.evaluate(p=>{const j=document.querySelector('#journey') as HTMLElement;window.scrollTo(0,j.getBoundingClientRect().top+window.scrollY+p*(j.offsetHeight-window.innerHeight));},p);
+ await page.evaluate(p=>{const j=document.querySelector('#journey') as HTMLElement;window.scrollTo(0,j.getBoundingClientRect().top+window.scrollY+p/Number(j.dataset.duration)*(j.offsetHeight-window.innerHeight));},p);
  await expect.poll(async()=>(await snapshot(page)).progress).toBeCloseTo(p,2);
  // Wait for the owner RAF to render the latest scroll state; never drive a second timeline.
  await page.waitForTimeout(120);
@@ -26,6 +26,7 @@ test('Sun, flight and Earth copy follow the rendered reversible path',async({pag
  await move(page,.925);await page.waitForFunction(()=>{const s=(window as any).__experience.snapshot();return s.earthStatus==='ready'&&s.shot.scene==='earth';});
  await expect(page.locator('[data-copy="3"]')).toHaveAttribute('aria-hidden','false');
  await expect(page.locator('[data-copy="3"] h2')).toContainText('SUNLIGHT');
+ await page.waitForFunction(()=>(window as any).__experience.snapshot().regionStatus==='ready');
  const complete=await snapshot(page);
  for(const p of [.80,.736,.734,.67,.55,.734,.736,.80,.925,.55]){
   await move(page,p);const state=await snapshot(page);
@@ -74,6 +75,7 @@ test('reduced motion switches Sun and Earth stills after delayed decoding withou
   let state=await snapshot(page);expect(state.earth.variant).toBe('mobile');expect(state.earth.decodedImageBytes).toBeGreaterThan(0);expect(state.earth.decodedImageBytes).toBeLessThanOrEqual(10*1024*1024);
   expect(requests.some(url=>url.includes('earth-day-2048'))).toBe(true);expect(requests.some(url=>url.includes('earth-clouds-1024'))).toBe(true);
   expect(requests.some(url=>url.includes('earth-day-4096')||url.includes('earth-clouds-2048'))).toBe(false);
+  await page.waitForFunction(()=>(window as any).__experience.snapshot().regionStatus==='ready');state=await snapshot(page);
   const geometryCount=state.geometries;
   await page.waitForTimeout(300);expect((await snapshot(page)).ambientTime).toBe(time);
   await page.locator('[data-still="sun"]').click();expect((await snapshot(page)).shot.scene).toBe('solar');
@@ -88,7 +90,7 @@ test('failed Earth assets leave a composed fallback and cannot restart after pre
  const pageErrors:string[]=[];page.on('pageerror',error=>pageErrors.push(error.message));
  await page.route(earthFiles,route=>route.abort());
  await gotoReady(page);
- await page.evaluate(()=>{const j=document.querySelector('#journey') as HTMLElement;window.scrollTo(0,.55*(j.offsetHeight-innerHeight));});
+ await page.evaluate(()=>{const j=document.querySelector('#journey') as HTMLElement;window.scrollTo(0,.55/Number(j.dataset.duration)*(j.offsetHeight-innerHeight));});
  await page.waitForFunction(()=>(window as any).__experience.snapshot().failed);
  await expect(page.locator('.scene-fallback img')).toBeVisible();await expect(page.locator('#fallback-status')).toContainText('Earth');
  expect(await page.locator('canvas').count()).toBe(0);await expect(page.locator('#journey')).not.toHaveClass(/is-enhanced/);

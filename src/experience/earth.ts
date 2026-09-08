@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {compileReady} from './warmup';
 import { EARTH_POSITION } from './progress';
 import { surfaceVertex, earthFragment, atmosphereFragment, cloudFragment } from './shaders';
 import dayDesktop from './assets/earth-day-4096.webp?url';
@@ -60,7 +61,7 @@ export class EarthScene {
   async warmup(renderer: THREE.WebGLRenderer, camera: THREE.Camera, scene: THREE.Scene) {
     // Upload and compile during the Sun chapter, before the distant planet enters the frame.
     for(const texture of this.textures)renderer.initTexture(texture);
-    await renderer.compileAsync(this.group,camera,scene);
+    await compileReady(renderer,this.group,camera,scene,this.controller.signal);
   }
   render(time:number, opacity:number) {
     // Very slow independent cloud advection, frozen by the owner's ambient clock.

@@ -1,8 +1,10 @@
 import * as THREE from 'three';
-import { sampleJourney, framingFor, EARTH_POSITION } from './progress';
-import { pointOnLightPath, tangentOnLightPath, TRAIL_LENGTH, FLIGHT_LENGTH } from './path';
+import { framingFor, EARTH_POSITION, smooth } from './progress';
+import {sampleJourney,sampleGuide,guideTangent,type JourneyShot} from './journey';
+import {SUN_LOCAL} from './geography';
+import {compileReady} from './warmup';
 import { selectQuality } from './quality';
-import { surfaceVertex, surfaceFragment, glowVertex, coronaFragment, pulseFragment, prominenceVertex, prominenceFragment, trailVertex, trailFragment } from './shaders';
+import { surfaceVertex, surfaceFragment, glowVertex, coronaFragment, pulseFragment, prominenceVertex, prominenceFragment, trailVertex, trailFragment, cloudTransitionFragment } from './shaders';
 import { EarthScene } from './earth';
 
 const TRAIL_RINGS = 80, TRAIL_SIDES = 6;
@@ -19,6 +21,19 @@ export class SolarScene {
   private trail: THREE.Mesh;
   private stars: THREE.Points;
   private earth?: EarthScene;
+  private region?:import('./region').RegionScene;
+  private site?:import('./site').SiteScene;
+  private regionStatus:'idle'|'loading'|'ready'|'failed'='idle';
+  private siteStatus:'idle'|'loading'|'ready'|'failed'='idle';
+  private nextDeadlines=new Set<number>();
+  private warmupLifetime=new AbortController();
+  private sunlight=new THREE.DirectionalLight(0xffefd7,2.5);
+  private guideReflection=new THREE.PointLight(0xffdfab,0,.7,2);
+  private hemisphere=new THREE.HemisphereLight(0xbfd9eb,0x43523e,.85);
+  private black=new THREE.Color('#050608');private sky=new THREE.Color('#bfd1dd');private sea=new THREE.Color('#183e52');private wasSite=false;
+  private siteFog=new THREE.FogExp2('#bfd1dd',.0018);
+  private cloud:THREE.Mesh;
+  private lastTrailKey='';
   private earthDeadline = 0;
   private earthStatus: 'idle' | 'loading' | 'ready' | 'failed' = 'idle';
   private materials: THREE.Material[] = [];
@@ -30,7 +45,6 @@ export class SolarScene {
   private shaderOK = true;
   private disposed = false;
   private quality;
-  private lastFlight = -1;
   private pathCentre = new THREE.Vector3();
   private pathTangent = new THREE.Vector3();
   private pathRight = new THREE.Vector3();
@@ -77,7 +91,13 @@ export class SolarScene {
     this.trail = new THREE.Mesh(trailGeometry,this.material(new THREE.ShaderMaterial({vertexShader:trailVertex,fragmentShader:trailFragment,
       uniforms:{uOpacity:{value:0}},transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide})));
     this.trail.frustumCulled = false;this.scene.add(this.trail);
-    this.stars = this.makeStars();this.scene.add(this.stars);this.resize();
+    this.stars = this.makeStars();this.scene.add(this.stars);
+    this.sunlight.position.copy(SUN_LOCAL).multiplyScalar(210);this.sunlight.castShadow=true;
+    const shadow=this.sunlight.shadow;shadow.mapSize.setScalar(this.quality.tier==='mobile'?1024:2048);Object.assign(shadow.camera,{left:-95,right:95,top:95,bottom:-95,near:10,far:380});shadow.bias=-.00025;shadow.normalBias=.025;
+    this.scene.add(this.sunlight,this.sunlight.target,this.hemisphere,this.guideReflection);
+    const cloudMat=this.material(new THREE.ShaderMaterial({vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader:cloudTransitionFragment,
+      uniforms:{uTime:{value:0},uOpacity:{value:0}},transparent:true,depthTest:false,depthWrite:false}));
+    this.cloud=new THREE.Mesh(this.geometry(new THREE.PlaneGeometry(2,2)),cloudMat);this.cloud.frustumCulled=false;this.cloud.renderOrder=1000;this.scene.add(this.cloud);this.resize();
   }
   private geometry<T extends THREE.BufferGeometry>(g:T):T {this.geometries.push(g);return g;}
   private material<T extends THREE.Material>(m:T):T {this.materials.push(m);return m;}
@@ -136,27 +156,26 @@ export class SolarScene {
     geometry.setAttribute('position',new THREE.BufferAttribute(positions,3).setUsage(THREE.DynamicDrawUsage));
     geometry.setAttribute('uv',new THREE.BufferAttribute(uv,2));geometry.setAttribute('aAlong',new THREE.BufferAttribute(along,1));geometry.setIndex(indices);return geometry;
   }
-  private updateTrail(head: number) {
-    if(head===this.lastFlight)return;this.lastFlight=head;
+  private updateTrail(shot:JourneyShot,radiusScale:number) {
+    const key=`${shot.guidePath}:${shot.guideU}:${shot.trailLength}:${radiusScale}`;if(key===this.lastTrailKey)return;this.lastTrailKey=key;
     const attribute=this.trail.geometry.getAttribute('position') as THREE.BufferAttribute;
     for(let i=0;i<=TRAIL_RINGS;i++) {
       const along=i/TRAIL_RINGS;
-      const u=Math.max(0,head-along*TRAIL_LENGTH/FLIGHT_LENGTH);
-      pointOnLightPath(u,this.pathCentre);tangentOnLightPath(u,this.pathTangent);
+      sampleGuide(shot,along*shot.trailLength,this.pathCentre);guideTangent(shot,along*shot.trailLength,this.pathTangent);
       this.pathRight.crossVectors(this.pathTangent,this.up).normalize();this.pathNormal.crossVectors(this.pathRight,this.pathTangent).normalize();
       // The leading ring has zero radius at precisely the guide point: no geometry can protrude.
-      const radius=.025*Math.sin(Math.PI*Math.sqrt(along))*Math.pow(1-along,1.2);
+      const radius=.025*radiusScale*Math.sin(Math.PI*Math.sqrt(along))*Math.pow(1-along,1.2);
       for(let j=0;j<=TRAIL_SIDES;j++) {
         const angle=j/TRAIL_SIDES*Math.PI*2,c=Math.cos(angle)*radius,s=Math.sin(angle)*radius;
         attribute.setXYZ(i*(TRAIL_SIDES+1)+j,this.pathCentre.x+this.pathRight.x*c+this.pathNormal.x*s,this.pathCentre.y+this.pathRight.y*c+this.pathNormal.y*s,this.pathCentre.z+this.pathRight.z*c+this.pathNormal.z*s);
       }
     }
     attribute.needsUpdate=true;
-    pointOnLightPath(head,this.pathCentre);
+    sampleGuide(shot,0,this.pathCentre);
     this.trailHeadError=Math.hypot(attribute.getX(0)-this.pathCentre.x,attribute.getY(0)-this.pathCentre.y,attribute.getZ(0)-this.pathCentre.z);
   }
   async prepare() {
-    await this.renderer.compileAsync(this.scene,this.camera);
+    await compileReady(this.renderer,this.scene,this.camera,this.scene,this.warmupLifetime.signal);
     if(this.disposed)return;this.render(0);
     if(!this.shaderOK)throw new Error('shader-compilation');
     this.host.appendChild(this.renderer.domElement);
@@ -172,11 +191,33 @@ export class SolarScene {
     const deadline=new Promise<void>((_,reject)=>{this.earthDeadline=window.setTimeout(()=>reject(new Error('earth-timeout')),8000);});
     void Promise.race([prepare,deadline]).then(()=>{
       if(this.disposed){earth.dispose();return;}
-      this.scene.add(earth.group);this.earthStatus='ready';this.onAssetReady();
+      this.scene.add(earth.group);this.earthStatus='ready';this.setProgress(this.progress);this.onAssetReady();
     }).catch(()=>{if(!this.disposed){this.earthStatus='failed';this.onFailure('Earth could not load. Application details are ready below.');}})
       .finally(()=>clearTimeout(this.earthDeadline));
   }
-  setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();}
+  private async loadNext(kind:'region'|'site') {
+    if(this[`${kind}Status`]!=='idle'||this.disposed)return;this[`${kind}Status`]='loading';
+    let deadline=0;
+    const prepare=(async()=>{
+      if(kind==='region'){
+        const {RegionScene}=await import('./region');if(this.disposed)return;
+        const region=new RegionScene();this.region=region;await region.prepare();if(this.disposed)return;
+        await compileReady(this.renderer,region.group,this.camera,this.scene,this.warmupLifetime.signal);
+        if(this.disposed)return;this.scene.add(region.group,region.globeOutline);
+      }else{
+        const {SiteScene}=await import('./site');if(this.disposed)return;
+        const site=new SiteScene();this.site=site;const mobile=this.quality.tier==='mobile';this.sunlight.shadow.mapSize.setScalar(mobile?1024:2048);await site.prepare(mobile,this.renderer);if(this.disposed)return;
+        this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;this.renderer.shadowMap.autoUpdate=false;this.renderer.shadowMap.needsUpdate=true;
+        this.scene.environment=site.env;await compileReady(this.renderer,site.group,this.camera,this.scene,this.warmupLifetime.signal);this.scene.environment=null;
+        if(this.disposed)return;this.scene.add(site.group);
+      }
+    })();
+    try{await Promise.race([prepare,new Promise((_,reject)=>{deadline=window.setTimeout(()=>reject(new Error('chapter-timeout')),8000);this.nextDeadlines.add(deadline);})]);
+      if(this.disposed)return;this[`${kind}Status`]='ready';this.setProgress(this.progress);this.onAssetReady();
+    }catch{if(!this.disposed){this[`${kind}Status`]='failed';this.onFailure(`${kind==='region'?'The regional view':'The roof view'} could not load. Application details are ready below.`);}}
+    finally{clearTimeout(deadline);this.nextDeadlines.delete(deadline);}
+  }
+  setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();if(value>.88&&this.earthStatus==='ready')void this.loadNext('region');if(value>1.37&&this.regionStatus==='ready')void this.loadNext('site');}
   resize() {
     this.width=this.host.clientWidth;this.height=this.host.clientHeight;
     const next=selectQuality(this.width,this.height,devicePixelRatio,navigator.hardwareConcurrency);
@@ -191,11 +232,18 @@ export class SolarScene {
   render(delta:number) {
     if(this.disposed)return;
     this.ambientTime+=Math.min(delta,.05);
-    const p=this.earthStatus==='loading'?Math.min(this.progress,.635):this.progress;
+    const p=this.displayedProgress();
     const shot=sampleJourney(p,framingFor(this.width,this.height));this.lastShot=shot;
-    const offset=shot.scene==='earth'?EARTH_POSITION:[0,0,0];
+    const offset=shot.scene==='solar'?[0,0,0]:EARTH_POSITION;
+    const ground=shot.scene==='region'||shot.scene==='site';this.solar.visible=!ground;this.stars.visible=!ground;
+    this.scene.background=shot.scene==='site'?this.sky:ground?this.sea:this.black;
+    this.scene.environment=shot.scene==='site'?this.site?.env??null:null;this.scene.fog=shot.scene==='site'?this.siteFog:null;this.scene.environmentIntensity=shot.scene==='site'?.48:1;this.siteFog.density=.0018/(framingFor(this.width,this.height)==='portrait'?2.6:1);
     this.solar.position.set(-offset[0],-offset[1],-offset[2]);
-    this.camera.position.set(...shot.camera);this.camera.up.copy(this.up);this.camera.lookAt(...shot.target);this.camera.updateMatrixWorld();
+    this.camera.position.set(...shot.camera);this.camera.up.set(...shot.up);this.camera.lookAt(...shot.target);this.camera.updateMatrixWorld();
+    // A distant aerial camera needs metre-scale depth precision; keep the macro glass
+    // near plane small as we approach. The celestial rig retains its accepted range.
+    const near=shot.scene==='site'?THREE.MathUtils.clamp(this.camera.position.distanceTo(this.pathCentre.set(...shot.pulse))*.01,.05,3):.1;
+    if(this.camera.near!==near){this.camera.near=near;this.camera.updateProjectionMatrix();}
     this.corona.quaternion.copy(this.camera.quaternion);
     this.sourceGlint.quaternion.copy(this.camera.quaternion);this.sourceGlint.position.set(-offset[0],-offset[1],11-offset[2]);
     this.sourceGlint.scale.setScalar(Math.max(1,shot.camera[2])*.16);
@@ -203,36 +251,43 @@ export class SolarScene {
     this.sourceGlint.visible=shot.sourceGlint>.001;
     for(const material of this.materials)if(material instanceof THREE.ShaderMaterial&&material.uniforms.uTime)material.uniforms.uTime.value=this.ambientTime;
     this.pulse.position.set(...shot.pulse);this.pulseCore.position.copy(this.pulse.position);
+    this.guideReflection.position.copy(this.pulse.position);this.guideReflection.intensity=shot.scene==='site'?.018*smooth((p-2.07)/.13):0;
     this.pulse.quaternion.copy(this.camera.quaternion);
     this.projectionHead.copy(this.pulse.position).project(this.camera);
     this.projectionNext.copy(this.pulse.position).add(this.pathTangent.set(...shot.tangent)).project(this.camera);
     this.pulse.rotateZ(Math.atan2((this.projectionNext.y-this.projectionHead.y)*this.height,(this.projectionNext.x-this.projectionHead.x)*this.width));
-    this.pulse.scale.setScalar(Math.max(.8,this.camera.position.distanceTo(this.pulse.position)*.16));
+    const guideDistance=this.camera.position.distanceTo(this.pulse.position);
+    const guideRadiusScale=shot.guidePath==='solar'?1:THREE.MathUtils.lerp(1,guideDistance/20,smooth((p-.735)/.04));
+    this.pulseCore.scale.setScalar(guideRadiusScale);this.pulse.scale.setScalar(Math.max(.004,guideDistance*.16));
     (this.pulse.material as THREE.ShaderMaterial).uniforms.uOpacity.value=shot.pulseOpacity*2.2;
     this.pulse.visible=shot.pulseOpacity>.001;this.pulseCore.visible=this.pulse.visible;
-    this.updateTrail(shot.flight);this.trail.position.set(-offset[0],-offset[1],-offset[2]);
+    this.updateTrail(shot,guideRadiusScale);this.trail.position.set(0,0,0);
     this.trail.visible=this.pulse.visible;(this.trail.material as THREE.ShaderMaterial).uniforms.uOpacity.value=shot.pulseOpacity*.7;
     // Fixed celestial directions, not nearby star particles moving past the viewer.
     this.stars.position.copy(this.camera.position);
     if(this.earth&&this.earthStatus==='ready') {
       this.earth.group.position.set(EARTH_POSITION[0]-offset[0],0,EARTH_POSITION[2]-offset[2]);
-      this.earth.group.visible=shot.earthVisibility>.001;
+      this.earth.group.visible=!ground&&shot.earthVisibility>.001;
       this.earth.render(this.ambientTime,shot.earthVisibility);
     }
+    if(this.region){this.region.group.visible=shot.scene==='region'&&this.regionStatus==='ready';this.region.globeOutline.visible=shot.scene==='earth';this.region.emphasize(shot.regionEmphasis);}
+    if(this.site)this.site.group.visible=shot.scene==='site'&&this.siteStatus==='ready';
+    const atSite=shot.scene==='site'&&this.siteStatus==='ready';if(atSite&&!this.wasSite)this.renderer.shadowMap.needsUpdate=true;this.wasSite=atSite;
+    this.cloud.visible=shot.cloudOpacity>.001;(this.cloud.material as THREE.ShaderMaterial).uniforms.uTime.value=this.ambientTime;(this.cloud.material as THREE.ShaderMaterial).uniforms.uOpacity.value=shot.cloudOpacity;
     this.renderer.render(this.scene,this.camera);
     if(!this.shaderOK)this.onFailure('The live scene is unavailable. Application details are ready below.');
   }
-  displayedProgress(){return this.earthStatus==='loading'?Math.min(this.progress,.635):this.progress;}
+  displayedProgress(){let p=this.progress;if(this.earthStatus!=='ready'&&p>.635)p=.635;if(this.regionStatus!=='ready'&&p>1.235)p=1.235;if(this.siteStatus!=='ready'&&p>1.49)p=1.49;return p;}
   snapshot() {
     return {progress:this.progress,ambientTime:this.ambientTime,quality:this.quality,shot:this.lastShot,
-      trailHeadError:this.trailHeadError,earthStatus:this.earthStatus,earth:this.earth?.snapshot(),
-      drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,
+      trailHeadError:this.trailHeadError,regionStatus:this.regionStatus,siteStatus:this.siteStatus,region:this.region?.snapshot(),site:this.site?.snapshot(),earthStatus:this.earthStatus,earth:this.earth?.snapshot(),
+      drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,shadowEstimatedBytes:this.sunlight.shadow.map?this.sunlight.shadow.map.width*this.sunlight.shadow.map.height*8:0,
       geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures};
   }
   private contextLost=(event:Event)=>{event.preventDefault();this.onFailure('The live scene is unavailable. Application details are ready below.');};
   dispose() {
-    if(this.disposed)return;this.disposed=true;this.renderer.domElement.removeEventListener('webglcontextlost',this.contextLost);
-    clearTimeout(this.earthDeadline);this.earth?.dispose();for(const m of this.materials)m.dispose();for(const g of this.geometries)g.dispose();
+    if(this.disposed)return;this.disposed=true;this.warmupLifetime.abort();this.renderer.domElement.removeEventListener('webglcontextlost',this.contextLost);
+    clearTimeout(this.earthDeadline);for(const d of this.nextDeadlines)clearTimeout(d);this.earth?.dispose();this.region?.dispose();this.site?.dispose();this.sunlight.shadow.dispose();for(const m of this.materials)m.dispose();for(const g of this.geometries)g.dispose();
     this.scene.clear();this.renderer.renderLists.dispose();this.renderer.dispose();this.renderer.domElement.remove();
   }
 }
