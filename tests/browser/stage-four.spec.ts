@@ -8,7 +8,7 @@ function deferred(){let release!:()=>void;const gate=new Promise<void>(r=>releas
 async function allReady(page:Page){await page.waitForFunction(()=>{const s=(window as any).__experience.snapshot();return ['earth','region','site','cell','electrical'].every(k=>s[`${k}Status`]==='ready');});}
 // electrical-path is an eager, shared data chunk: do not accidentally block it with electrical-*.
 const assets=[
- {kind:'cell',asset:/\/cell-[^/]+\.js$/,requested:2.76,heldScene:'site',heldMaximum:2.34,scene:'cell',copy:'8',message:'cell view'},
+ {kind:'cell',asset:/\/cell-[^/]+\.js$/,requested:2.62,heldScene:'site',heldMaximum:2.34,scene:'cell',copy:'8',message:'cell view'},
  {kind:'electrical',asset:/\/electrical-(?!path-)[^/]+\.js$/,requested:3.72,heldScene:'cell',heldMaximum:3.05,scene:'site',copy:'10',message:'inverter view'},
 ] as const;
 test.beforeEach(async({page})=>{await page.route('**/*',r=>new URL(r.request().url()).origin===origin?r.continue():r.abort());});

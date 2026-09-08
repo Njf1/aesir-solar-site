@@ -1,0 +1,329 @@
+{
+  "scope": "Existing slowPasses arrays only; no new browser execution or frame-rate measurement.",
+  "traces": [
+    {
+      "view": "laptop",
+      "join": "acquisition",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0005323763472914189,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "acquisition",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0006695825673037059,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "earth-arrival",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0005721271124501381,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "earth-arrival",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0007498535110015414,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "earth-britain",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0004441786033670958,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "earth-britain",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.000537367109112008,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "britain-site",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0005003115826249793,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "britain-site",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.000624238985589276,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "glass",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0012110530130686747,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "glass",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.001652083672218918,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "absorption",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0007893307075850231,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "absorption",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0009806357927115705,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "contact-dc",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0005959776114838888,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "contact-dc",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0007727799311147976,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "inverter-entry",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0016368942060873692,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "inverter-entry",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0022375230074684893,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "storage-grid-brand",
+      "direction": "forward",
+      "samples": 88,
+      "maximumProgressDifference": 0.00156318391708421,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "laptop",
+      "join": "storage-grid-brand",
+      "direction": "reverse",
+      "samples": 61,
+      "maximumProgressDifference": 0.002070435537706139,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "acquisition",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.000533408069468222,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "acquisition",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0006743445735958309,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "earth-arrival",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0005651413481950751,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "earth-arrival",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.00073407769165168,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "earth-britain",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0004135977871315699,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "earth-britain",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0005587877242001493,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "britain-site",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.00035259178145663483,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "britain-site",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0006580620157425887,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "glass",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0012346211924905148,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "glass",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.001557155280995648,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "absorption",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0007287593592053554,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "absorption",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0009750403443304911,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "contact-dc",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0005804281404220291,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "contact-dc",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.0007238532867521741,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "inverter-entry",
+      "direction": "forward",
+      "samples": 36,
+      "maximumProgressDifference": 0.0015953225689013806,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "inverter-entry",
+      "direction": "reverse",
+      "samples": 27,
+      "maximumProgressDifference": 0.002049142219425093,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "storage-grid-brand",
+      "direction": "forward",
+      "samples": 88,
+      "maximumProgressDifference": 0.0014030249183853982,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    },
+    {
+      "view": "mobile",
+      "join": "storage-grid-brand",
+      "direction": "reverse",
+      "samples": 61,
+      "maximumProgressDifference": 0.0019872192797061317,
+      "oppositeDirectionStepsOver002": 0,
+      "failedSamples": 0
+    }
+  ]
+}

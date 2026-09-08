@@ -1,0 +1,54 @@
+{
+  "longRouteExactComparisons": 288576,
+  "identicalWhenTravelAtLeast": 0.05,
+  "entries": [
+    {
+      "u": 0.004,
+      "sourceOld": 0.24504044845758777,
+      "sourceNew": 1,
+      "headOld": 0.09788191064415419,
+      "headNew": 0.84375
+    },
+    {
+      "u": 0.004699965407373662,
+      "sourceOld": 0.27516494635454536,
+      "sourceNew": 1,
+      "headOld": 0.09788191064415419,
+      "headNew": 0.8069647384434213
+    },
+    {
+      "u": 0.006770847519344566,
+      "sourceOld": 0.3693089069194726,
+      "sourceNew": 1,
+      "headOld": 0.09788191064415441,
+      "headNew": 0.7035289594734376
+    },
+    {
+      "u": 0.011004238303140658,
+      "sourceOld": 0.5725572198000628,
+      "sourceNew": 1,
+      "headOld": 0.09788191064415419,
+      "headNew": 0.5324442317298795
+    },
+    {
+      "u": 0.031887999999999944,
+      "sourceOld": 1,
+      "sourceNew": 1,
+      "headOld": 0.09788191064415419,
+      "headNew": 0.18339843791475785
+    },
+    {
+      "u": 0.055996912152935674,
+      "sourceOld": 1,
+      "sourceNew": 1,
+      "headOld": 0.09788191064415419,
+      "headNew": 0.09788191064415419
+    }
+  ],
+  "pathLength": 60.92378514949826,
+  "tubeSegments": 176,
+  "segmentLength": 0.34615787016760374,
+  "maxEarlyChordError": 0.004853073069108776,
+  "maxEarlyErrorU": 0.007126666666666667,
+  "caveat": "CPU shader algebra and projection/triangle estimates; no GPU compilation or browser measurement"
+}

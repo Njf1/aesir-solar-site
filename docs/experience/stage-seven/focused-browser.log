@@ -1,0 +1,80 @@
+
+Running 22 tests using 1 worker
+
+(node:16728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/stage-five.spec.ts:197:1 › application navigation and browser Back return to a usable ending (1.9s)
+  ✓   2 tests/browser/stage-five.spec.ts:206:1 › cached shadows refresh for first storage readiness, visibility reversal and then remain settled (2.0s)
+  ✓   3 tests/browser/stage-four.spec.ts:16:2 › delayed cell holds the actual earlier scene and resumes the same scroll (675ms)
+  ✓   4 tests/browser/stage-seven-motion.spec.ts:6:50 › pointer Pause freezes composition and copy through delayed cell readiness (1.2s)
+  ✓   5 tests/browser/stage-seven-motion.spec.ts:6:50 › keyboard Pause freezes composition and copy through delayed cell readiness (1.1s)
+  ✘   6 tests/browser/stage-seven-motion.spec.ts:16:1 › paused contact-to-DC handoff holds the actual view until resumed (5.6s)
+(node:16811) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 tests/browser/stage-seven-motion.spec.ts:21:1 › orientation changes obey pixel caps while cached owners remain bounded and reverseable (1.3s)
+(node:16828) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 tests/browser/stage-seven-routes.spec.ts:42:1 › homepage route forms preserve queries and serve the same experience without a navigation redirect (737ms)
+  ✓   9 tests/browser/stage-seven-routes.spec.ts:52:1 › every legacy fragment is a native no-JS destination with focus and browser Back (752ms)
+  ✓  10 tests/browser/stage-seven-routes.spec.ts:69:1 › supporting routes and clean-URL equivalents contain real content without starting the film (848ms)
+  ✓  11 tests/browser/stage-seven-routes.spec.ts:79:1 › the FAQ bridge works without JavaScript and lands in the complete native FAQ (248ms)
+  ✓  12 tests/browser/stage-seven-routes.spec.ts:88:1 › all nineteen form names, units, options and separate unchecked consent meanings survive the reskin (186ms)
+  ✓  13 tests/browser/stage-seven-routes.spec.ts:103:1 › existing prefill keys keep their meanings and payment submission sends the full dummy contract only to a local fixture (437ms)
+  ✓  14 tests/browser/stage-seven-routes.spec.ts:121:1 › payment return query variants survive and never announce an unverified charge, receipt or received application (504ms)
+  ✓  15 tests/browser/stage-seven-routes.spec.ts:132:1 › no JavaScript leaves a deliberate non-submitting application path and a truthful unverified success page (216ms)
+  ✓  16 tests/browser/stage-seven-routes.spec.ts:144:1 › checker starts unknown and every result leads only to suitability contact (484ms)
+  ✓  17 tests/browser/stage-seven-routes.spec.ts:180:1 › failed or delayed application-controller loading keeps a non-submitting email fallback and preserves return context (247ms)
+  ✓  18 tests/browser/stage-seven-routes.spec.ts:200:1 › untrusted return references are text and ordinary support headings keep the application link (471ms)
+  ✓  19 tests/browser/stage-six.spec.ts:115:1 › all application actions preserve the existing form, consents and browser return without submitting (794ms)
+  ✓  20 tests/browser/stage-six.spec.ts:146:1 › reading every new section suspends rendered work and returning to the journey resumes it (1.5s)
+  ✓  21 tests/browser/stage-six.spec.ts:269:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (1.0s)
+  ✓  22 tests/browser/stage-six.spec.ts:269:2 › 640×360 DPR2 zoom-equivalent short viewport › keeps the operating caption readable and all twelve still labels, payoff and status accessible (1.1s)
+
+
+  1) tests/browser/stage-seven-motion.spec.ts:16:1 › paused contact-to-DC handoff holds the actual view until resumed 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 3.2
+    Received: 3.0741015704670613
+
+    Expected precision:    2
+    Expected difference: < 0.005
+    Received difference:   0.12589842953293884
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      1 | import {test,expect,type Page} from '@playwright/test';
+      2 | const origin='http://127.0.0.1:4173';const snap=(p:Page)=>p.evaluate(()=>(window as any).__experience.snapshot());
+    > 3 | async function move(page:Page,p:number){await page.evaluate(p=>{const j=document.querySelector('#journey') as HTMLElement;scrollTo(0,p/6.08*(j.offsetHeight-innerHeight));},p);await expect.poll(async()=>(await snap(page)).progress).toBeCloseTo(p,2);}
+        |                                                                                                                                                                                                                                        ^
+      4 | async function ready(page:Page){await page.goto('/?inspect=1');await page.waitForFunction(()=>(window as any).__experience?.snapshot().ready);}
+      5 | test.beforeEach(async({page})=>{await page.route('**/*',r=>{const q=r.request(),u=new URL(q.url());return u.origin===origin&&!u.pathname.startsWith('/api/')&&q.method()==='GET'?r.continue():r.abort();});});
+      6 | for(const input of['pointer','keyboard']as const)test(`${input} Pause freezes composition and copy through delayed cell readiness`,async({page})=>{
+        at move (/Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/stage-seven-motion.spec.ts:3:232)
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/stage-seven-motion.spec.ts:18:2
+
+    Error Context: test-results/stage-seven-motion-paused--e7c83-e-actual-view-until-resumed/error-context.md
+
+  2) tests/browser/stage-seven-motion.spec.ts:21:1 › orientation changes obey pixel caps while cached owners remain bounded and reverseable 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 75
+    Received: 74
+
+      21 | test('orientation changes obey pixel caps while cached owners remain bounded and reverseable',async({page})=>{
+      22 |  await page.setViewportSize({width:390,height:844});await ready(page);await move(page,6.03);await page.waitForFunction(()=>(window as any).__experience.snapshot().storageStatus==='ready');const first=await snap(page);
+    > 23 |  for(const size of[{width:900,height:390},{width:740,height:900},{width:1000,height:500},{width:390,height:844}]){await page.setViewportSize(size);await move(page,2.685);await move(page,6.03);await page.waitForTimeout(160);const s=await snap(page);expect(s.failed).toBe(false);expect(s.quality.width*s.quality.height*s.quality.pixelRatio**2).toBeLessThanOrEqual((s.quality.tier==='mobile'?850000:2000000)+1);expect(s.textures).toBe(first.textures);expect(s.geometries).toBe(first.geometries);expect(s.site.textureBytes).toBe(first.site.textureBytes);expect(await page.locator('canvas').count()).toBe(1);}
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+      24 | });
+      25 |
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/stage-seven-motion.spec.ts:23:470
+
+    Error Context: test-results/stage-seven-motion-orienta-07af1-ain-bounded-and-reverseable/error-context.md
+
+  2 failed
+    tests/browser/stage-seven-motion.spec.ts:16:1 › paused contact-to-DC handoff holds the actual view until resumed 
+    tests/browser/stage-seven-motion.spec.ts:21:1 › orientation changes obey pixel caps while cached owners remain bounded and reverseable 
+  20 passed (25.4s)

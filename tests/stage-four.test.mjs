@@ -50,15 +50,19 @@ test('selected cell, neighbours, protective glass and underside junction share e
   near(cellToSite(cell.junction),MODULE_JUNCTION,1e-12,'same underside junction');near(cell.absorptionPoint,ABSORPTION_POINT,1e-12,'sampler and geometry absorption anchor');
   assert.ok(Math.abs(SELECTED_CELL.x)>SELECTED_CELL.width/2,'chosen cell does not cover the central column seam');
   assert.ok(Math.abs(SELECTED_CELL.z)>SELECTED_CELL.length/2+PANEL.centreGap/2,'chosen cell clears the half-cell split');
-  const glass=named(cell.group,'Protective glass with sectional opening'),m=new T.Matrix4();glass.getMatrixAt(0,m);
-  for(const x of [-.5,.5])for(const z of [-.5,.5]){const point=cellToSite(new T.Vector3(x,.5,z).applyMatrix4(m));approx(point.clone().sub(HERO_ANCHOR).dot(PANEL_NORMAL),0,1e-7,'closed glass top is the original exterior plane');}
+  const glass=named(cell.group,'Protective glass with sectional opening'),positions=glass.geometry.attributes.position;glass.geometry.computeBoundingBox();
+  let topVertices=0;for(let i=0;i<positions.count;i++)if(Math.abs(positions.getY(i)-glass.geometry.boundingBox.max.y)<1e-6){
+   const point=cellToSite(new T.Vector3().fromBufferAttribute(positions,i).applyMatrix4(glass.matrixWorld));
+   approx(point.clone().sub(HERO_ANCHOR).dot(PANEL_NORMAL),0,1e-7,'every actual pane top vertex lies on the original exterior plane');topVertices++;
+  }assert.ok(topVertices>=4,'registered physical glass surface exists');
  }finally{cell.dispose();}
 });
 
 test('the teaching aperture reveals only the selected absorber and reverses without moving the stack',()=>{
  const cell=CellScene.prepare(false);try{
   const glass=named(cell.group,'Protective glass with sectional opening'),encap=named(cell.group,'Encapsulant with sectional opening'),body=named(cell.group,'Selected silicon absorber');
-  const before={glass:Array.from(glass.instanceMatrix.array),encap:Array.from(encap.instanceMatrix.array),body:body.position.toArray(),scale:body.scale.toArray()};
+  const before={glass:Array.from(glass.geometry.attributes.position.array),encap:Array.from(encap.geometry.attributes.position.array),body:body.position.toArray(),scale:body.scale.toArray()};
+  const buffers=[glass,encap].map(o=>({geometry:o.geometry,position:o.geometry.attributes.position,index:o.geometry.index,normal:o.geometry.attributes.normal,uv:o.geometry.attributes.uv}));
   const ray=new T.Raycaster(ABSORPTION_POINT.clone().add(new T.Vector3(0,5,0)),new T.Vector3(0,-1,0));cell.group.updateMatrixWorld(true);
   const closed=ray.intersectObjects([glass,encap,body],false);assert.equal(closed[0]?.object,glass,'closed layer lies above the cell');
   cell.render({section:1,absorption:1,extraction:1,incident:0},0);cell.group.updateMatrixWorld(true);
@@ -66,7 +70,65 @@ test('the teaching aperture reveals only the selected absorber and reverses with
   body.geometry.computeBoundingBox();const local=ABSORPTION_POINT.clone().applyMatrix4(body.matrixWorld.clone().invert());assert.ok(body.geometry.boundingBox.containsPoint(local),'optical endpoint remains in selected silicon');
   assert.equal(cell.snapshot().state.incident,0);
   cell.render({section:0,absorption:0,extraction:0,incident:1},0);
-  assert.deepEqual(Array.from(glass.instanceMatrix.array),before.glass);assert.deepEqual(Array.from(encap.instanceMatrix.array),before.encap);assert.deepEqual(body.position.toArray(),before.body);assert.deepEqual(body.scale.toArray(),before.scale);
+  assert.deepEqual(Array.from(glass.geometry.attributes.position.array),before.glass);assert.deepEqual(Array.from(encap.geometry.attributes.position.array),before.encap);assert.deepEqual(body.position.toArray(),before.body);assert.deepEqual(body.scale.toArray(),before.scale);
+  for(const [i,pane]of[glass,encap].entries()){assert.equal(pane.geometry,buffers[i].geometry);for(const key of['position','normal','uv'])assert.equal(pane.geometry.attributes[key],buffers[i][key],'reversal reuses GPU attributes');assert.equal(pane.geometry.index,buffers[i].index);}
+ }finally{cell.dispose();}
+});
+
+test('connected panes retain their outer bounds and have only real aperture walls at every section',()=>{
+ const cell=CellScene.prepare(false);try{
+  const panes=[named(cell.group,'Protective glass with sectional opening'),named(cell.group,'Encapsulant with sectional opening')];
+  const W=SELECTED_CELL.width*CELL_SCALE,D=SELECTED_CELL.length*CELL_SCALE,outerArea=PANEL.glassWidth*PANEL.glassLength*CELL_SCALE**2;
+  const original=panes.map(p=>({geometry:p.geometry,position:p.geometry.attributes.position,index:p.geometry.index,normal:p.geometry.attributes.normal,uv:p.geometry.attributes.uv,box:p.geometry.boundingBox.clone()}));
+  const baselineBytes=cell.snapshot().geometryBytes,frames=[];
+  for(const section of[0,.001,.1,.3,.6,1]){
+   cell.render({section,absorption:0,extraction:0,incident:1},0);cell.group.updateMatrixWorld(true);
+   const eased=section*section*(3-2*section),hw=(W+.20)*eased/2,hd=(D+.28)*eased/2;
+   for(const[paneIndex,pane]of panes.entries()){
+    const g=pane.geometry,pos=g.attributes.position,idx=g.index,box=g.boundingBox;let topArea=0;
+    assert.equal(g,original[paneIndex].geometry);assert.deepEqual(box,original[paneIndex].box);assert.equal(g.attributes.position,original[paneIndex].position);assert.equal(g.index,original[paneIndex].index);
+    for(let f=0;f<idx.count;f+=3){
+     const points=[0,1,2].map(j=>new T.Vector3().fromBufferAttribute(pos,idx.getX(f+j))),cross=points[1].clone().sub(points[0]).cross(points[2].clone().sub(points[0])),area=cross.length()/2;
+     if(area<1e-8)continue;
+     assert.ok(points.every(q=>box.clone().expandByScalar(1e-5).containsPoint(q)),'pane vertices remain bounded');
+     if(points.every(q=>Math.abs(q.y-box.max.y)<1e-6)){topArea+=area;assert.ok(cross.y>0,'glass top faces the incoming light');}
+     else if(points.every(q=>Math.abs(q.y-box.min.y)<1e-6))assert.ok(cross.y<0,'pane underside winding is outward');
+     else{
+      const outer=['x','z'].some(axis=>[box.min[axis],box.max[axis]].some(edge=>points.every(q=>Math.abs(q[axis]-edge)<1e-5)));
+      const innerX=[-hw,hw].some(edge=>points.every(q=>Math.abs(q.x-edge)<1e-5&&Math.abs(q.z)<=hd+1e-5));
+      const innerZ=[-hd,hd].some(edge=>points.every(q=>Math.abs(q.z-edge)<1e-5&&Math.abs(q.x)<=hw+1e-5));
+      assert.ok(outer||innerX||innerZ,'no internal box-joining faces remain inside the connected pane');
+     }
+    }
+    approx(topArea,outerArea-4*hw*hd,.001,'top triangles cover the pane exactly once outside its aperture');
+   }
+   // Every neighbour centre remains covered, including at the fully open section.
+   for(let row=0;row<PANEL.rows;row++)for(let col=0;col<PANEL.cols;col++){
+    if(row===SELECTED_CELL.row&&col===SELECTED_CELL.col)continue;const layout=cellLayout(row,col);
+    const ray=new T.Raycaster(new T.Vector3((layout.x-SELECTED_CELL.x)*CELL_SCALE,2,(layout.z-SELECTED_CELL.z)*CELL_SCALE),new T.Vector3(0,-1,0));
+    assert.equal(ray.intersectObject(panes[0],false)[0]?.object,panes[0],'selected aperture never uncovers another cell');
+   }
+   assert.equal(cell.snapshot().geometryBytes,baselineBytes);frames.push({section,vertices:panes.map(p=>Array.from(p.geometry.attributes.position.array))});
+  }
+  for(const frame of frames.reverse()){cell.render({section:frame.section,absorption:1,extraction:.5,incident:0},37);assert.deepEqual(panes.map(p=>Array.from(p.geometry.attributes.position.array)),frame.vertices,'each intermediate pane reconstructs exactly on reversal');}
+ }finally{cell.dispose();}
+});
+
+test('macro detail preserves contact registration, explicit shadow roles and one output conversion',()=>{
+ const cell=CellScene.prepare(false);try{
+  const glasses=['Protective glass with sectional opening','Encapsulant with sectional opening'];
+  for(const name of[...glasses,'Selected cell contact fingers']){const o=named(cell.group,name);assert.equal(o.castShadow,false);assert.equal(o.receiveShadow,false);}
+  for(const name of['Full module backing','Selected silicon absorber','Selected cell front busbars','Front collection continuation'])assert.equal(named(cell.group,name).castShadow,true);
+  for(const name of['Selected silicon absorber','143 neighboring silicon cells']){
+   const material=named(cell.group,name).material,shader={vertexShader:T.ShaderLib.standard.vertexShader,fragmentShader:T.ShaderLib.standard.fragmentShader,uniforms:{}};
+   const key=material.customProgramCacheKey();material.onBeforeCompile(shader,{});
+   assert.match(shader.fragmentShader,/fwidth\(finePhaseX\)/);assert.match(shader.fragmentShader,/float fineGrain=[^;]*fineWeight;/);assert.ok(shader.fragmentShader.includes('cellContactMask'),'the existing surface/contact material hook remains active');
+   assert.equal(material.customProgramCacheKey(),key);assert.match(key,/aesir-cell-detail-filter-v1/);
+  }
+  for(const name of['Local absorption response — illustrative','Front current collection overlay','Rear current collection overlay']){
+   const material=named(cell.group,name).material;assert.equal((material.fragmentShader.match(/#include <colorspace_fragment>/g)||[]).length,1);assert.equal(material.premultipliedAlpha,false);assert.equal(material.blending,T.AdditiveBlending);
+  }
+  assert.equal(named(cell.group,'Front current collection overlay').material.depthTest,true);assert.equal(named(cell.group,'Rear current collection overlay').material.depthTest,false,'through-section rear channel remains explicitly illustrative');
  }finally{cell.dispose();}
 });
 
@@ -81,6 +143,9 @@ test('absorption finishes before extraction and the optical guide never travels 
   if(state.ac>0)assert.equal(state.energyU,1,'AC cue follows arrival at the inverter');
   prior=state;
  }
+ const prefix=conversionState(CELL_EXIT).energyU;assert.ok(prefix>0,'return exposes an initial DC prefix');
+ assert.ok(ELECTRICAL_PATHS.dcPositive.getPointAt(prefix).distanceTo(ELECTRICAL_ANCHORS.dcSourcePositive)<PANEL.width/2,'initial prefix stays at the registered module lead');
+ assert.equal(conversionState(CELL_EXIT-1e-6).energyU,0,'DC prefix begins only after the macro chapter');
  assert.equal(sampleJourney(2.71).pulseOpacity,0);near(v(sampleJourney(2.71).pulse),ABSORPTION_POINT,1e-10,'photon ends at the absorber');
 });
 
@@ -103,7 +168,8 @@ test('camera and aim are continuous through both scale joins and the original pa
    near(left,right,.005*Math.max(1,left.length(),right.length()),`${mode} ${key} C1 ${p}`);
   }
   if(p===CELL_SWITCH){const before=sampleJourney(p-h,mode),after=sampleJourney(p+h,mode);near(siteToCell(v(before.pulse)),v(after.pulse),.001,'same optical point through glass rebase');near(siteDirectionToCell(v(before.up)),v(after.up),1e-6,'same orientation through glass rebase');}
-  if(p!==STAGE_THREE_END)assert.equal(conversionState(p).transition,1,'scale handoff is explicitly covered');
+  if(p===CELL_SWITCH)assert.equal(conversionState(p).transition,1,'glass handoff remains covered');
+  if(p===CELL_EXIT)approx(conversionState(p).transition,.24,1e-12,'registered contact handoff uses the intentional lighter cover');
  }
  near(v(sampleJourney(CELL_EXIT).camera),MODULE_RETURN_CAMERA,1e-10,'exact macro return camera');near(v(sampleJourney(CELL_EXIT).target),MODULE_JUNCTION,1e-10,'exact macro return aim');
 });
@@ -155,6 +221,22 @@ function planeCuts(record,item,camera,near){const pos=record.geometry.attributes
  }return cuts;}
 
 
+// The connected pane is no longer BoxGeometry; test its actual closed volume,
+// including the aperture, rather than silently losing camera-inside coverage.
+function actualSolidContains(record,item,worldPoint){
+ const point=worldPoint.clone().applyMatrix4(item.matrix.clone().invert()),g=record.geometry;
+ if(!g.boundingBox.containsPoint(point)||g.type==='PlaneGeometry')return false;
+ if(g.type==='BoxGeometry')return true;
+ const pos=g.attributes.position,index=g.index,count=index?index.count:pos.count;let votes=0;
+ for(const vector of[[1,.317,.173],[.127,1,.379],[.293,.157,1]]){
+  const ray=new T.Ray(point,new T.Vector3(...vector).normalize()),hits=[],at=new T.Vector3();
+  for(let f=0;f<count;f+=3){const q=[0,1,2].map(j=>new T.Vector3().fromBufferAttribute(pos,index?index.getX(f+j):f+j));
+   if(ray.intersectTriangle(q[0],q[1],q[2],false,at)){const distance=at.distanceTo(point);if(distance<1e-8)return true;hits.push(distance);}
+  }
+  hits.sort((a,b)=>a-b);let unique=0,last=-Infinity;for(const distance of hits)if(distance-last>1e-7){unique++;last=distance;}if(unique%2)votes++;
+ }return votes>=2;
+}
+
 test('new near planes do not cut visible cell/campus solids in five framings',()=>withCanvas(()=>{
  const campus=createCommercialSite('desktop'),electrical=createElectricalScene('desktop'),cell=CellScene.prepare(false);
  try{
@@ -169,9 +251,10 @@ test('new near planes do not cut visible cell/campus solids in five framings',()
     if(s.scene==='cell'&&state.section!==lastSection){cell.render(state,0);interior=records(cell.group);lastSection=state.section;}
     for(const record of s.scene==='cell'?interior:exterior){if(record.broad.distanceToPoint(from)>clipRadius)continue;for(const item of record.items){
      if(item.box.distanceToPoint(from)>clipRadius)continue;
-     const local=from.clone().applyMatrix4(item.matrix.clone().invert());
-     assert.ok(!(record.geometry.type==='BoxGeometry'&&record.geometry.boundingBox.containsPoint(local)),`${mode} ${p}: camera inside ${record.name} (transparent=${record.transparent}; transition=${state.transition})`);
+     assert.ok(!actualSolidContains(record,item,from),`${mode} ${p}: camera inside ${record.name} (transparent=${record.transparent}; transition=${state.transition})`);
      assert.equal(planeCuts(record,item,camera,nearPlane),0,`${mode} ${p}: near plane cuts ${record.name} (transparent=${record.transparent}; transition=${state.transition})`);
+     const nearCentre=new T.Vector3(0,0,-nearPlane).applyMatrix4(camera.matrixWorld);
+     assert.ok(!actualSolidContains(record,item,nearCentre),`${mode} ${p}: near plane enclosed by ${record.name}`);
     }}
     if(s.pulseOpacity>.01&&state.transition<.98){const head=v(s.pulse).project(camera);assert.ok(Math.abs(head.x)<1&&Math.abs(head.y)<1&&head.z> -1&&head.z<1,`${mode} ${p}: incident photon left the frame`);}
    }

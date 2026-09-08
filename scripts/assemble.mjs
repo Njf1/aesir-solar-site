@@ -1,17 +1,29 @@
-import { cp, mkdir, readdir, readFile, writeFile, rm } from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import { cp, mkdir, readdir, readFile, writeFile, rm, rename, lstat } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
-// Stage a separate deployment proposal. Never remove or overwrite the source site.
-const root=new URL('../',import.meta.url), release=new URL('.release/',root);
-await mkdir(release,{recursive:true});
-await rm(new URL("experience-assets/",release),{recursive:true,force:true});
-const staticFiles=['index.html','apply.html','simulator.html','faq.html','contact.html','terms.html','privacy.html','refunds.html','success.html','style.css','sim.css','app.js','sim.js','favicon.svg','robots.txt','sitemap.xml','data','api','lib','package.json','package-lock.json'];
-for(const file of staticFiles)await cp(new URL(file,root),new URL(file,release),{recursive:true});
-await cp(new URL('.preview-build/',root),release,{recursive:true});
+// Generated candidate only. Stage from an allowlist, then atomically replace the
+// known output directory. Source, original checkout and neighbouring paths survive.
+const root=new URL('../',import.meta.url),release=new URL('.release/',root),staging=new URL('.release-staging/',root),previous=new URL('.release-previous/',root);
+execFileSync('python3',[fileURLToPath(new URL('build.py',root))],{cwd:fileURLToPath(root),stdio:'inherit'});
+for(const location of [release,staging,previous]){try{if((await lstat(location)).isSymbolicLink())throw Error('Generated output must not be a symlink');}catch(e){if(e.code!=='ENOENT')throw e;}}
+await rm(staging,{recursive:true,force:true});await mkdir(staging,{recursive:true});
+const staticFiles=['apply.html','simulator.html','faq.html','contact.html','terms.html','privacy.html','refunds.html','success.html','style.css','site.css','site.js','app.js','favicon.svg','data','api','lib','package.json','package-lock.json'];
+for(const file of staticFiles)await cp(new URL(file,root),new URL(file,staging),{recursive:true});
+await cp(new URL('.preview-build/',root),staging,{recursive:true});
+await cp(new URL('experience.html',staging),new URL('index.html',staging));
+await writeFile(new URL('robots.txt',staging),'User-agent: *\nDisallow: /\n');
+const manifest=[];async function inventory(dir,prefix=''){for(const e of await readdir(dir,{withFileTypes:true})){const rel=prefix+e.name;if(e.isDirectory())await inventory(new URL(e.name+'/',dir),rel+'/');else manifest.push(rel);}}
 const config=JSON.parse(await readFile(new URL('vercel.json',root),'utf8'));
 // This file is a reviewable proposal only; the checked-in Vercel config remains unchanged.
 config.buildCommand='';config.outputDirectory='.';
-await writeFile(new URL('vercel.json',release),JSON.stringify(config,null,2)+'\n');
+await writeFile(new URL('vercel.json',staging),JSON.stringify(config,null,2)+'\n');
+await inventory(staging);await writeFile(new URL('output-manifest.json',staging),JSON.stringify({owner:'scripts/assemble.mjs',localCandidate:true,files:manifest.sort()},null,2)+'\n');
+await rm(previous,{recursive:true,force:true});
+try{await rename(release,previous);}catch(e){if(e.code!=='ENOENT')throw e;}
+try{await rename(staging,release);}catch(e){try{await rename(previous,release);}catch{}throw e;}
+await rm(previous,{recursive:true,force:true});
 const sizes=[];for(const file of await readdir(new URL('experience-assets/',release))){const data=await readFile(new URL(`experience-assets/${file}`,release));sizes.push({file,bytes:data.length,gzip:gzipSync(data).length,sha256:createHash('sha256').update(data).digest('hex')});}
 const mediaBytes=sizes.filter(x=>/\.(webp|png|jpg|glb|ktx2|json)$/.test(x.file)).reduce((n,x)=>n+x.bytes,0);
 const totalJS=sizes.filter(x=>x.file.endsWith('.js')).reduce((n,x)=>n+x.gzip,0);

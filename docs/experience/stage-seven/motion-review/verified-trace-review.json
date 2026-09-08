@@ -1,0 +1,76 @@
+{
+  "recordedAt": "2026-09-08T23:26:34.175Z",
+  "views": [
+    {
+      "name": "laptop",
+      "samples": 63,
+      "progress": 3.0850140730165205,
+      "ambientDelta": 5.216700000000007,
+      "failed": 0,
+      "oppositeSteps": 0,
+      "maxRequestedError": 0.0009362620892208184,
+      "cameraHeld": true,
+      "copyHeld": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "desktop",
+      "samples": 63,
+      "progress": 3.085,
+      "ambientDelta": 5.218300000000006,
+      "failed": 0,
+      "oppositeSteps": 0,
+      "maxRequestedError": 0.0008809375005340847,
+      "cameraHeld": true,
+      "copyHeld": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "mobile",
+      "samples": 63,
+      "progress": 3.0849594599297077,
+      "ambientDelta": 5.202000000000005,
+      "failed": 0,
+      "oppositeSteps": 0,
+      "maxRequestedError": 0.0009281720865081944,
+      "cameraHeld": true,
+      "copyHeld": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "intermediate",
+      "samples": 63,
+      "progress": 3.084940769506902,
+      "ambientDelta": 5.2176000000000045,
+      "failed": 0,
+      "oppositeSteps": 0,
+      "maxRequestedError": 0.0009321176747616455,
+      "cameraHeld": true,
+      "copyHeld": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "name": "short",
+      "samples": 63,
+      "progress": 3.085,
+      "ambientDelta": 5.214700000000006,
+      "failed": 0,
+      "oppositeSteps": 0,
+      "maxRequestedError": 0.0007349107137515354,
+      "cameraHeld": true,
+      "copyHeld": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "sourceHashesMatch": {
+    "src/experience/render-detail.ts": true,
+    "src/experience/scene.ts": true,
+    "src/experience/energy-flow.ts": true,
+    "scripts/record-stage-seven-terminal.mjs": true
+  }
+}

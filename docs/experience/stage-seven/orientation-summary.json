@@ -1,0 +1,959 @@
+{
+  "instrumentation": "Response-local WebGLGeometries registration/disposal hooks; no source edits, no screenshot/performance measurement. One Chromium context. Providers blocked.",
+  "errors": [],
+  "snapshots": [
+    {
+      "label": "initial warm",
+      "p": 6.03006855273689,
+      "quality": {
+        "tier": "mobile",
+        "width": 390,
+        "height": 844,
+        "pixelRatio": 1,
+        "detail": 4,
+        "segments": 80
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": [
+        {
+          "kind": "register",
+          "id": 2,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 1,
+          "segments": [
+            80,
+            52
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 3,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 2
+        },
+        {
+          "kind": "register",
+          "id": 4,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 3
+        },
+        {
+          "kind": "register",
+          "id": 5,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 4
+        },
+        {
+          "kind": "register",
+          "id": 6,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 5
+        },
+        {
+          "kind": "register",
+          "id": 7,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 6
+        },
+        {
+          "kind": "register",
+          "id": 8,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 7
+        },
+        {
+          "kind": "register",
+          "id": 9,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 8
+        },
+        {
+          "kind": "register",
+          "id": 10,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 9
+        },
+        {
+          "kind": "register",
+          "id": 11,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 10
+        },
+        {
+          "kind": "register",
+          "id": 12,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 11
+        },
+        {
+          "kind": "register",
+          "id": 13,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 12
+        },
+        {
+          "kind": "register",
+          "id": 14,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 13
+        },
+        {
+          "kind": "register",
+          "id": 15,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 14
+        },
+        {
+          "kind": "register",
+          "id": 16,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 15
+        },
+        {
+          "kind": "register",
+          "id": 17,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 16
+        },
+        {
+          "kind": "register",
+          "id": 18,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 17
+        },
+        {
+          "kind": "register",
+          "id": 19,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 18
+        },
+        {
+          "kind": "register",
+          "id": 20,
+          "type": "TubeGeometry",
+          "owner": "",
+          "count": 19
+        },
+        {
+          "kind": "register",
+          "id": 21,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 20
+        },
+        {
+          "kind": "register",
+          "id": 25,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 21
+        },
+        {
+          "kind": "register",
+          "id": 22,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 22
+        },
+        {
+          "kind": "register",
+          "id": 23,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 23,
+          "segments": [
+            12,
+            8
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 24,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 24
+        },
+        {
+          "kind": "register",
+          "id": 27,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 25,
+          "segments": [
+            80,
+            64
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 54,
+          "type": "BoxGeometry",
+          "owner": "",
+          "count": 26
+        },
+        {
+          "kind": "register",
+          "id": 42,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 27,
+          "segments": [
+            24,
+            12
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 43,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 28
+        },
+        {
+          "kind": "register",
+          "id": 44,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 29
+        },
+        {
+          "kind": "register",
+          "id": 45,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 30
+        },
+        {
+          "kind": "register",
+          "id": 46,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 31
+        },
+        {
+          "kind": "register",
+          "id": 47,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 32
+        },
+        {
+          "kind": "register",
+          "id": 48,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 33
+        },
+        {
+          "kind": "register",
+          "id": 49,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 34
+        },
+        {
+          "kind": "register",
+          "id": 50,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 35
+        },
+        {
+          "kind": "register",
+          "id": 51,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 36
+        },
+        {
+          "kind": "register",
+          "id": 52,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 37
+        },
+        {
+          "kind": "register",
+          "id": 53,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 38
+        },
+        {
+          "kind": "dispose",
+          "id": 44,
+          "type": "BufferGeometry",
+          "count": 37
+        },
+        {
+          "kind": "dispose",
+          "id": 45,
+          "type": "BufferGeometry",
+          "count": 36
+        },
+        {
+          "kind": "dispose",
+          "id": 46,
+          "type": "BufferGeometry",
+          "count": 35
+        },
+        {
+          "kind": "dispose",
+          "id": 47,
+          "type": "BufferGeometry",
+          "count": 34
+        },
+        {
+          "kind": "dispose",
+          "id": 48,
+          "type": "BufferGeometry",
+          "count": 33
+        },
+        {
+          "kind": "dispose",
+          "id": 49,
+          "type": "BufferGeometry",
+          "count": 32
+        },
+        {
+          "kind": "dispose",
+          "id": 50,
+          "type": "BufferGeometry",
+          "count": 31
+        },
+        {
+          "kind": "dispose",
+          "id": 51,
+          "type": "BufferGeometry",
+          "count": 30
+        },
+        {
+          "kind": "dispose",
+          "id": 52,
+          "type": "BufferGeometry",
+          "count": 29
+        },
+        {
+          "kind": "dispose",
+          "id": 53,
+          "type": "BufferGeometry",
+          "count": 28
+        },
+        {
+          "kind": "dispose",
+          "id": 54,
+          "type": "BoxGeometry",
+          "count": 27
+        },
+        {
+          "kind": "dispose",
+          "id": 42,
+          "type": "SphereGeometry",
+          "count": 26,
+          "segments": [
+            24,
+            12
+          ]
+        },
+        {
+          "kind": "dispose",
+          "id": 43,
+          "type": "PlaneGeometry",
+          "count": 25
+        },
+        {
+          "kind": "register",
+          "id": 26,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 26
+        },
+        {
+          "kind": "register",
+          "id": 28,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 27
+        },
+        {
+          "kind": "register",
+          "id": 30,
+          "type": "BufferGeometry",
+          "owner": "",
+          "count": 28
+        },
+        {
+          "kind": "register",
+          "id": 31,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 29
+        },
+        {
+          "kind": "register",
+          "id": 37,
+          "type": "BoxGeometry",
+          "owner": "",
+          "count": 30
+        },
+        {
+          "kind": "register",
+          "id": 38,
+          "type": "TubeGeometry",
+          "owner": "Hero module DC lead",
+          "count": 31
+        },
+        {
+          "kind": "register",
+          "id": 39,
+          "type": "TubeGeometry",
+          "owner": "Hero module DC lead",
+          "count": 32
+        },
+        {
+          "kind": "register",
+          "id": 32,
+          "type": "BoxGeometry",
+          "owner": "landscape \u2014 material batch",
+          "count": 33
+        },
+        {
+          "kind": "register",
+          "id": 34,
+          "type": "CylinderGeometry",
+          "owner": "downpipes \u2014 material batch",
+          "count": 34
+        },
+        {
+          "kind": "register",
+          "id": 33,
+          "type": "PlaneGeometry",
+          "owner": "PV glass and cells \u2014 material batch",
+          "count": 35
+        },
+        {
+          "kind": "register",
+          "id": 35,
+          "type": "IcosahedronGeometry",
+          "owner": "tree canopies \u2014 material batch",
+          "count": 36
+        },
+        {
+          "kind": "register",
+          "id": 40,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 37
+        },
+        {
+          "kind": "register",
+          "id": 55,
+          "type": "BoxGeometry",
+          "owner": "Full module backing",
+          "count": 38
+        },
+        {
+          "kind": "register",
+          "id": 56,
+          "type": "BufferGeometry",
+          "owner": "Protective glass with sectional opening",
+          "count": 39
+        },
+        {
+          "kind": "register",
+          "id": 57,
+          "type": "BufferGeometry",
+          "owner": "Encapsulant with sectional opening",
+          "count": 40
+        },
+        {
+          "kind": "register",
+          "id": 58,
+          "type": "PlaneGeometry",
+          "owner": "Local absorption response \u2014 illustrative",
+          "count": 41
+        },
+        {
+          "kind": "register",
+          "id": 59,
+          "type": "TubeGeometry",
+          "owner": "Front current collection overlay",
+          "count": 42
+        },
+        {
+          "kind": "register",
+          "id": 60,
+          "type": "TubeGeometry",
+          "owner": "Rear current collection overlay",
+          "count": 43
+        },
+        {
+          "kind": "register",
+          "id": 61,
+          "type": "TubeGeometry",
+          "owner": "Same module underside lead proxy",
+          "count": 44
+        },
+        {
+          "kind": "register",
+          "id": 62,
+          "type": "TubeGeometry",
+          "owner": "Same module underside lead proxy",
+          "count": 45
+        },
+        {
+          "kind": "register",
+          "id": 63,
+          "type": "TubeGeometry",
+          "owner": "Illustrative electrical energy flow",
+          "count": 46
+        },
+        {
+          "kind": "register",
+          "id": 41,
+          "type": "PlaneGeometry",
+          "owner": "",
+          "count": 47
+        },
+        {
+          "kind": "register",
+          "id": 66,
+          "type": "BufferGeometry",
+          "owner": "Representative array DC positive lead",
+          "count": 48
+        },
+        {
+          "kind": "register",
+          "id": 67,
+          "type": "BufferGeometry",
+          "owner": "Representative array DC return lead",
+          "count": 49
+        },
+        {
+          "kind": "register",
+          "id": 68,
+          "type": "BufferGeometry",
+          "owner": "Distinct AC output cable to building entry",
+          "count": 50
+        },
+        {
+          "kind": "register",
+          "id": 64,
+          "type": "BoxGeometry",
+          "owner": "Perimeter tray rails",
+          "count": 51
+        },
+        {
+          "kind": "register",
+          "id": 65,
+          "type": "CylinderGeometry",
+          "owner": "Gland compression collars",
+          "count": 52
+        },
+        {
+          "kind": "register",
+          "id": 75,
+          "type": "TubeGeometry",
+          "owner": "Illustrative electrical energy flow",
+          "count": 53
+        },
+        {
+          "kind": "register",
+          "id": 76,
+          "type": "TubeGeometry",
+          "owner": "Illustrative electrical energy flow",
+          "count": 54
+        },
+        {
+          "kind": "register",
+          "id": 36,
+          "type": "CylinderGeometry",
+          "owner": "HVAC fans \u2014 material batch",
+          "count": 55
+        },
+        {
+          "kind": "register",
+          "id": 69,
+          "type": "ExtrudeGeometry",
+          "owner": "Generic closed inverter enclosure",
+          "count": 56
+        },
+        {
+          "kind": "register",
+          "id": 78,
+          "type": "BoxGeometry",
+          "owner": "Selective concrete bay floor \u2014 material batch",
+          "count": 57
+        },
+        {
+          "kind": "register",
+          "id": 80,
+          "type": "CylinderGeometry",
+          "owner": "Column hold-down heads \u2014 material batch",
+          "count": 58
+        },
+        {
+          "kind": "register",
+          "id": 83,
+          "type": "PlaneGeometry",
+          "owner": "Selective interior support and attached carton contacts",
+          "count": 59
+        },
+        {
+          "kind": "register",
+          "id": 77,
+          "type": "BoxGeometry",
+          "owner": "Supported interior illustrative AC containment",
+          "count": 60
+        },
+        {
+          "kind": "register",
+          "id": 70,
+          "type": "ExtrudeGeometry",
+          "owner": "Unbranded inverter front cover",
+          "count": 61
+        },
+        {
+          "kind": "register",
+          "id": 72,
+          "type": "BufferGeometry",
+          "owner": "Chamfered lips and handle rims",
+          "count": 62
+        },
+        {
+          "kind": "register",
+          "id": 74,
+          "type": "CylinderGeometry",
+          "owner": "Hexagonal fasteners and gland nuts",
+          "count": 63
+        },
+        {
+          "kind": "register",
+          "id": 73,
+          "type": "BoxGeometry",
+          "owner": "Recessed seams and fastener slots",
+          "count": 64
+        },
+        {
+          "kind": "register",
+          "id": 79,
+          "type": "BufferGeometry",
+          "owner": "Packaging gantry columns \u2014 material batch",
+          "count": 65
+        },
+        {
+          "kind": "register",
+          "id": 81,
+          "type": "PlaneGeometry",
+          "owner": "Screen face \u2014 material batch",
+          "count": 66
+        },
+        {
+          "kind": "register",
+          "id": 82,
+          "type": "ExtrudeGeometry",
+          "owner": "Chair rounded seat \u2014 material batch",
+          "count": 67
+        },
+        {
+          "kind": "register",
+          "id": 90,
+          "type": "PlaneGeometry",
+          "owner": "Small finite stored-energy indication",
+          "count": 68
+        },
+        {
+          "kind": "register",
+          "id": 85,
+          "type": "BoxGeometry",
+          "owner": "Raised concrete equipment pads",
+          "count": 69
+        },
+        {
+          "kind": "register",
+          "id": 87,
+          "type": "ExtrudeGeometry",
+          "owner": "Battery inset front doors",
+          "count": 70
+        },
+        {
+          "kind": "register",
+          "id": 86,
+          "type": "CylinderGeometry",
+          "owner": "Sealed bottom cable glands",
+          "count": 71
+        },
+        {
+          "kind": "register",
+          "id": 91,
+          "type": "BufferGeometry",
+          "owner": "Chamfered lips and handle rims",
+          "count": 72
+        },
+        {
+          "kind": "register",
+          "id": 93,
+          "type": "CylinderGeometry",
+          "owner": "Hexagonal fasteners and gland nuts",
+          "count": 73
+        },
+        {
+          "kind": "register",
+          "id": 92,
+          "type": "BoxGeometry",
+          "owner": "Recessed seams and fastener slots",
+          "count": 74
+        },
+        {
+          "kind": "register",
+          "id": 88,
+          "type": "BufferGeometry",
+          "owner": "Supported AC branches, battery DC pair and grid descent",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "label": "900x390 Sun",
+      "p": 0.32004819640033133,
+      "quality": {
+        "tier": "desktop",
+        "width": 900,
+        "height": 390,
+        "pixelRatio": 1,
+        "detail": 5,
+        "segments": 128
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": [
+        {
+          "kind": "dispose",
+          "id": 2,
+          "type": "SphereGeometry",
+          "count": 74,
+          "segments": [
+            80,
+            52
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 94,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 75,
+          "segments": [
+            128,
+            83
+          ]
+        }
+      ]
+    },
+    {
+      "label": "900x390 operation",
+      "p": 6.030092627456887,
+      "quality": {
+        "tier": "desktop",
+        "width": 900,
+        "height": 390,
+        "pixelRatio": 1,
+        "detail": 5,
+        "segments": 128
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": []
+    },
+    {
+      "label": "740x900 Sun",
+      "p": 0.32004177136703327,
+      "quality": {
+        "tier": "mobile",
+        "width": 740,
+        "height": 900,
+        "pixelRatio": 1,
+        "detail": 4,
+        "segments": 80
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": [
+        {
+          "kind": "dispose",
+          "id": 94,
+          "type": "SphereGeometry",
+          "count": 74,
+          "segments": [
+            128,
+            83
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 95,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 75,
+          "segments": [
+            80,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "label": "740x900 operation",
+      "p": 6.0299996736611945,
+      "quality": {
+        "tier": "mobile",
+        "width": 740,
+        "height": 900,
+        "pixelRatio": 1,
+        "detail": 4,
+        "segments": 80
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": []
+    },
+    {
+      "label": "1000x500 Sun",
+      "p": 0.32,
+      "quality": {
+        "tier": "desktop",
+        "width": 1000,
+        "height": 500,
+        "pixelRatio": 1,
+        "detail": 5,
+        "segments": 128
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": [
+        {
+          "kind": "dispose",
+          "id": 95,
+          "type": "SphereGeometry",
+          "count": 74,
+          "segments": [
+            80,
+            52
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 96,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 75,
+          "segments": [
+            128,
+            83
+          ]
+        }
+      ]
+    },
+    {
+      "label": "1000x500 operation",
+      "p": 6.03,
+      "quality": {
+        "tier": "desktop",
+        "width": 1000,
+        "height": 500,
+        "pixelRatio": 1,
+        "detail": 5,
+        "segments": 128
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": []
+    },
+    {
+      "label": "390x844 Sun",
+      "p": 0.31989978077043535,
+      "quality": {
+        "tier": "mobile",
+        "width": 390,
+        "height": 844,
+        "pixelRatio": 1,
+        "detail": 4,
+        "segments": 80
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": [
+        {
+          "kind": "dispose",
+          "id": 96,
+          "type": "SphereGeometry",
+          "count": 74,
+          "segments": [
+            128,
+            83
+          ]
+        },
+        {
+          "kind": "register",
+          "id": 97,
+          "type": "SphereGeometry",
+          "owner": "",
+          "count": 75,
+          "segments": [
+            80,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "label": "390x844 operation",
+      "p": 6.03006855273689,
+      "quality": {
+        "tier": "mobile",
+        "width": 390,
+        "height": 844,
+        "pixelRatio": 1,
+        "detail": 4,
+        "segments": 80
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": []
+    },
+    {
+      "label": "opening after orientations",
+      "p": 0,
+      "quality": {
+        "tier": "mobile",
+        "width": 390,
+        "height": 844,
+        "pixelRatio": 1,
+        "detail": 4,
+        "segments": 80
+      },
+      "geometries": 75,
+      "textures": 8,
+      "events": []
+    }
+  ]
+}

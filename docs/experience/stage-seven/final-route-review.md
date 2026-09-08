@@ -1,0 +1,16 @@
+# Final stage-seven route/form review — 8 September 2026
+
+**No concrete remaining consolidation defect found in the reviewed routes, form/consent contract, suitability guide, no-JavaScript markup or return wording.** This was a fresh read-only review of the current source and `.release` output. No browser, provider request, checkout edit or build mutation was performed.
+
+Checks completed:
+
+- `python3 build.py --check` passes. All eight generated supporting pages exactly match their current source outputs. Source index equals authoritative experience; delivered index equals compiled experience.
+- All **183 local link targets** in the ten delivered HTML files resolve, including referenced fragments. `#main`, `#top`, `#gate`, `#check`, `#work`, `#price`, `#apply` and `#realroof` are unique native destinations. No duplicate IDs were found. The FAQ bridge and visible fallback link reach `/#application-faqs`; the simulator reaches a purposeful retirement page.
+- All **19 named application controls and their complete parsed attributes** match `dbb8197`. Required flags, phase options, numeric units/defaults and the two distinct unchecked consents remain. The process copy now correctly distinguishes terms/refunds acceptance from privacy acknowledgement.
+- The disabled default submit button, load/failure guard and native email alternative remain present. Supporting navigation/help/policies do not depend on JavaScript. No supporting page starts the film; compiled homepage module-preloads are disabled, so no-JavaScript HTML does not eagerly preload Three.
+- Direct success HTML is unverified. Return parameters are preserved; bounded reference values become text, never HTML or proof of payment. Cancellation/pending/declined/unknown messages do not claim a charge, receipt, received application or completed work. The refund FAQ no longer introduces an unsupported blanket post-submission cutoff.
+- Suitability remains tentative and contact-only for every result, with distinct missing/zero/inconsistent/out-of-scope handling, conservative 32/60 A boundaries and explicit equipment/design review. It does not derive AC current from the illustrative campus or panel DC capacity.
+- The full policy sections and their qualifications remain. The static recorded example still says **24 August 2026 / 206.41 kWh**, carries Premier Composites/Tigo attribution and explicit historical/unverified/approximate limits, and includes its native readings table.
+- `output-manifest.json` exactly matches delivered files (excluding itself). Retired `sim.js`, `sim.css` and the stale sitemap are absent. All 12 protected source files checked—including production `vercel.json`—match `dbb8197`; the 11 applicable API/helper/data/app/package files also match delivered bytes. The original `site` checkout is clean. Local API handlers remain isolated rather than captured by marketing routes.
+
+The known public-rollout gates remain separate, not newly discovered route defects: complete durable application/consent intake, correct verified payment and one actionable work item; server suitability enforcement/recovery; verified legal identity and the operation of retained privacy/cancellation commitments. Static return honesty does not repair those systems. Final browser/motion/performance results and visual acceptance remain with the main task.

@@ -1,0 +1,6138 @@
+{
+  "date": "2026-09-08T21:24:32.104Z",
+  "phase": "before",
+  "views": [
+    {
+      "name": "laptop",
+      "width": 1280,
+      "height": 720,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "p": 0,
+          "shot": {
+            "camera": [
+              0,
+              0,
+              1200.000073715244
+            ],
+            "target": [
+              -312,
+              0.7,
+              0
+            ],
+            "pulse": [
+              -8.65,
+              3,
+              4.1
+            ],
+            "tangent": [
+              -0.6297199167276917,
+              0.26430685180842484,
+              0.7304756769144256
+            ],
+            "flight": 0,
+            "chapter": 0,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 0,
+            "sourceGlint": 1,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 21,
+          "triangles": 30044,
+          "shadow": 0
+        },
+        {
+          "p": 0.285,
+          "shot": {
+            "camera": [
+              0,
+              0,
+              28.650903623898692
+            ],
+            "target": [
+              -7.447781352021892,
+              0.7,
+              0
+            ],
+            "pulse": [
+              -8.65,
+              3,
+              4.1
+            ],
+            "tangent": [
+              -0.6297199167276917,
+              0.26430685180842484,
+              0.7304756769144256
+            ],
+            "flight": 0,
+            "chapter": 1,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 30042,
+          "shadow": 0
+        },
+        {
+          "p": 0.39,
+          "shot": {
+            "camera": [
+              -1.500658012495525,
+              0.0000038271918705207956,
+              24.70732507836252
+            ],
+            "target": [
+              -7.6532341596307125,
+              1.697408276790135,
+              1.777988667321545
+            ],
+            "pulse": [
+              -8.65,
+              3,
+              4.1
+            ],
+            "tangent": [
+              -0.6297199167276917,
+              0.26430685180842484,
+              0.7304756769144256
+            ],
+            "flight": 0,
+            "chapter": 2,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 0.05797974532227836,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 29612,
+          "shadow": 0
+        },
+        {
+          "p": 0.435,
+          "shot": {
+            "camera": [
+              -18.731139535693263,
+              0.4205966413807857,
+              14.393054038511115
+            ],
+            "target": [
+              -9.43067757327984,
+              3.241253781791749,
+              4.787360774261479
+            ],
+            "pulse": [
+              -9.56619042386543,
+              3.376797365776493,
+              5.042705613026015
+            ],
+            "tangent": [
+              -0.6982800733449203,
+              0.28323730551680615,
+              0.6574051779024804
+            ],
+            "flight": 0.0063162400706273675,
+            "chapter": 2,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0.0063162400706273675,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 29612,
+          "shadow": 0
+        },
+        {
+          "p": 0.485,
+          "shot": {
+            "camera": [
+              -20.74030962949916,
+              5.030695004975111,
+              -0.13986759774448693
+            ],
+            "target": [
+              -13.983854713285009,
+              5.444942819397716,
+              14.365204284206454
+            ],
+            "pulse": [
+              -13.61616642250896,
+              5.187502613235929,
+              11.890053819722844
+            ],
+            "tangent": [
+              -0.19552643076863624,
+              0.1177006266200828,
+              0.9736097664691524
+            ],
+            "flight": 0.045003360156351056,
+            "chapter": 2,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0.045003360156351056,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 5,
+          "triangles": 1132,
+          "shadow": 0
+        },
+        {
+          "p": 0.55,
+          "shot": {
+            "camera": [
+              -19.32976244564939,
+              8.302222684504152,
+              21.89334742560693
+            ],
+            "target": [
+              -10.000491034430919,
+              6.759548737465057,
+              38.516783504216505
+            ],
+            "pulse": [
+              -11.460488566649559,
+              6.598265178399766,
+              33.73747042924215
+            ],
+            "tangent": [
+              0.2822169027507829,
+              0.0365857426222556,
+              0.9586527542538712
+            ],
+            "flight": 0.14761780851330356,
+            "chapter": 3,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0.14761780851330356,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 5,
+          "triangles": 1132,
+          "shadow": 0
+        },
+        {
+          "p": 0.75,
+          "shot": {
+            "camera": [
+              -5.375848660699505,
+              4.823487293648544,
+              -130.59539282604206
+            ],
+            "target": [
+              -0.6174025579123885,
+              1.6961524469880422,
+              -113.77527460723098
+            ],
+            "pulse": [
+              -0.21926796756404773,
+              1.8402685390150724,
+              -119.51316553493848
+            ],
+            "tangent": [
+              0.09385580655427243,
+              -0.062302637929107216,
+              0.9936344744840134
+            ],
+            "flight": 0.8345879000050185,
+            "chapter": 3,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.11407865798714414,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 7,
+          "triangles": 49514,
+          "shadow": 0
+        },
+        {
+          "p": 0.925,
+          "shot": {
+            "camera": [
+              1.8606146618740342,
+              4.840101228888253,
+              -29.567918696581213
+            ],
+            "target": [
+              8.180879427088376,
+              0.8734524888792878,
+              -2.014256529586132
+            ],
+            "pulse": [
+              1.0212178279946134,
+              6.451088150024059,
+              -15.884604106220808
+            ],
+            "tangent": [
+              -0.006441914480968908,
+              0.2784025369124394,
+              0.9604428817886765
+            ],
+            "flight": 0.96,
+            "chapter": 4,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.9226910747016958,
+            "trailLength": 3.358557835277207,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 8,
+          "triangles": 49514,
+          "shadow": 0
+        },
+        {
+          "p": 1.235,
+          "shot": {
+            "camera": [
+              0.2252519427942444,
+              10.598699170678943,
+              -12.879695954600026
+            ],
+            "target": [
+              1.2018623202896448,
+              7.238200474009463,
+              -5.1684072461202994
+            ],
+            "pulse": [
+              0.2838854394339537,
+              8.477030629368423,
+              -6.764681388148777
+            ],
+            "tangent": [
+              -0.1253172498723967,
+              0.1760829698562225,
+              0.9763659020116547
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              -0.026000545749892596,
+              0.6670510011981201,
+              0.7445582135879593
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.9957154855373964,
+            "trailLength": 0.34999999999999964,
+            "cloudOpacity": 0.000009297132454650662,
+            "regionEmphasis": 1,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 8,
+          "triangles": 49514,
+          "shadow": 0
+        },
+        {
+          "p": 1.275,
+          "shot": {
+            "camera": [
+              0.1040769842334435,
+              10.388044320544793,
+              -11.27268397373515
+            ],
+            "target": [
+              0.368004832587177,
+              7.950953562993161,
+              -5.758929824730264
+            ],
+            "pulse": [
+              0.22761946505159758,
+              8.559708217772469,
+              -6.312163848987504
+            ],
+            "tangent": [
+              -0.11718732835385917,
+              0.18090077184470432,
+              0.976494772550921
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              -0.0279021904932258,
+              0.6006644532290494,
+              0.799014194112174
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.9993195998942637,
+            "trailLength": 0.34999999999999964,
+            "cloudOpacity": 0.8180083091222222,
+            "regionEmphasis": 0.21532704090255228,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 9,
+          "triangles": 49516,
+          "shadow": 0
+        },
+        {
+          "p": 1.3,
+          "shot": {
+            "camera": [
+              1.911300770826246,
+              30.580793043593115,
+              17.838797355882992
+            ],
+            "target": [
+              2.8050352065278175e-8,
+              1.3260402005906181e-7,
+              4.606956074227388e-7
+            ],
+            "pulse": [
+              1.22829038036963e-7,
+              3.822599352355105,
+              -0.0000013588095575511333
+            ],
+            "tangent": [
+              0.08127984379790888,
+              -0.4287460569148108,
+              -0.8997613048315589
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.0000021308609286242374,
+              -0.9999999999977297
+            ],
+            "guidePath": "region",
+            "guideU": 2.7625837512304545e-7,
+            "trailLength": 0.65,
+            "cloudOpacity": 1,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 8,
+          "triangles": 41834,
+          "shadow": 0
+        },
+        {
+          "p": 1.335,
+          "shot": {
+            "camera": [
+              2.06042000528441,
+              29.235049983156703,
+              17.32728298010379
+            ],
+            "target": [
+              0.005426474090539659,
+              0.02565287870459975,
+              0.08912375757306311
+            ],
+            "pulse": [
+              0.014645175878517836,
+              3.7126289665080967,
+              -0.2707188198932554
+            ],
+            "tangent": [
+              0.038738537932092164,
+              -0.3563999233074347,
+              -0.9335300853991471
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.4527937229228936,
+              -0.8916153007220243
+            ],
+            "guidePath": "region",
+            "guideU": 0.05344349730124948,
+            "trailLength": 0.65,
+            "cloudOpacity": 0.4986355307731849,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 8,
+          "triangles": 41834,
+          "shadow": 0
+        },
+        {
+          "p": 1.4,
+          "shot": {
+            "camera": [
+              2.8938566729134436,
+              21.71360839414635,
+              14.468397348462705
+            ],
+            "target": [
+              0.03575521820752713,
+              0.16902767071775934,
+              0.5872394019267696
+            ],
+            "pulse": [
+              0.26216584923740255,
+              3.510526002191055,
+              0.5554533946707747
+            ],
+            "tangent": [
+              0.13824461671523147,
+              0.05039931948061969,
+              0.9891149248419766
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.35214098066199867,
+            "trailLength": 0.65,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 7,
+          "triangles": 41832,
+          "shadow": 33554432
+        },
+        {
+          "p": 1.485,
+          "shot": {
+            "camera": [
+              4.2349489154603805,
+              9.610772798387035,
+              9.868132575099864
+            ],
+            "target": [
+              0.08455753881719219,
+              0.39973364852483734,
+              1.3887628439351587
+            ],
+            "pulse": [
+              0.6622250521376888,
+              3.5132177471630457,
+              3.1505752729921115
+            ],
+            "tangent": [
+              0.23285901924644223,
+              -0.24940984608030137,
+              0.939984790214068
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.8327784344267445,
+            "trailLength": 0.65,
+            "cloudOpacity": 0.000008456328603692849,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 7,
+          "triangles": 41832,
+          "shadow": 33554432
+        },
+        {
+          "p": 1.535,
+          "shot": {
+            "camera": [
+              4.6723906378680615,
+              5.663031486446183,
+              8.367603616577616
+            ],
+            "target": [
+              0.10047603458333006,
+              0.47498605630106405,
+              1.6502063031534469
+            ],
+            "pulse": [
+              0.8870728346837149,
+              2.850681294037816,
+              3.089809924955053
+            ],
+            "tangent": [
+              0.24221662736013663,
+              -0.8724518915992375,
+              -0.42445117772859703
+            ],
+            "flight": 0.96,
+            "chapter": 6,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.9895542839605501,
+            "trailLength": 0.65,
+            "cloudOpacity": 0.976189867312805,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 8,
+          "triangles": 41834,
+          "shadow": 33554432
+        },
+        {
+          "p": 1.55,
+          "shot": {
+            "camera": [
+              114.99998902017863,
+              134.9999797039648,
+              164.99998003668807
+            ],
+            "target": [
+              -5.704106277313077e-14,
+              11.999999571290292,
+              -3.5102192475772803e-14
+            ],
+            "pulse": [
+              20.000003595868773,
+              69.99998777404866,
+              34.999995325371906
+            ],
+            "tangent": [
+              0.2649795039547679,
+              -0.9006754041677727,
+              -0.34433948192315156
+            ],
+            "flight": 0.96,
+            "chapter": 6,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1.3403356519305766e-7,
+            "trailLength": 7.999999753546471,
+            "cloudOpacity": 1,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 46,
+          "triangles": 101428,
+          "shadow": 33554432
+        },
+        {
+          "p": 1.595,
+          "shot": {
+            "camera": [
+              111.2390922154579,
+              127.8594768661035,
+              158.12175057817603
+            ],
+            "target": [
+              -0.007240599313578486,
+              11.836585827492986,
+              -0.004455753423740609
+            ],
+            "pulse": [
+              21.306699674425186,
+              65.80736422880734,
+              33.432660551990196
+            ],
+            "tangent": [
+              0.29300675823586336,
+              -0.8976678499210261,
+              -0.32914961772159584
+            ],
+            "flight": 0.96,
+            "chapter": 6,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.04602362577376423,
+            "trailLength": 7.906410668412402,
+            "cloudOpacity": 0.5506934029047585,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 46,
+          "triangles": 101428,
+          "shadow": 33554432
+        },
+        {
+          "p": 1.65,
+          "shot": {
+            "camera": [
+              99.94599989059472,
+              105.3012094611296,
+              137.22966619315994
+            ],
+            "target": [
+              -0.09931334331962474,
+              11.24007859943248,
+              -0.06111590358130758
+            ],
+            "pulse": [
+              25.60077410861709,
+              53.24963158051273,
+              28.922844300065343
+            ],
+            "tangent": [
+              0.30273367180314664,
+              -0.8963993685865723,
+              -0.3237599356841098
+            ],
+            "flight": 0.96,
+            "chapter": 7,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.18437036174603186,
+            "trailLength": 7.562224927315181,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 45,
+          "triangles": 101426,
+          "shadow": 33554432
+        },
+        {
+          "p": 1.76,
+          "shot": {
+            "camera": [
+              70.58409251785729,
+              59.54020306883353,
+              84.76109734718901
+            ],
+            "target": [
+              3.1022170595879945,
+              9.827191624151405,
+              1.5932566754099926
+            ],
+            "pulse": [
+              30.678689766033553,
+              28.45298944274016,
+              17.96997819961083
+            ],
+            "tangent": [
+              0.051100251256988916,
+              -0.864634841869318,
+              -0.49979531265018073
+            ],
+            "flight": 0.96,
+            "chapter": 7,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.45804507438820435,
+            "trailLength": 6.295177506005736,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 45,
+          "triangles": 101426,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.06,
+          "shot": {
+            "camera": [
+              -0.304493173937332,
+              15.136044664427892,
+              15.80199365906479
+            ],
+            "target": [
+              -8.316374413789596,
+              11.446999262942988,
+              10.063688670835399
+            ],
+            "pulse": [
+              -4.273048844175579,
+              12.61269835226224,
+              9.996412345234544
+            ],
+            "tangent": [
+              -0.9994664059283987,
+              -0.032658716126892785,
+              0.0005582844368024059
+            ],
+            "flight": 0.96,
+            "chapter": 8,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.9419835765531693,
+            "trailLength": 1.530336712011204,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 37,
+          "triangles": 100084,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.23,
+          "shot": {
+            "camera": [
+              -9.481429893863478,
+              12.161820981910866,
+              11.006298912653149
+            ],
+            "target": [
+              -10.000006557246117,
+              11.466671569326685,
+              10.012143406714339
+            ],
+            "pulse": [
+              -9.933540951740026,
+              11.512160128343409,
+              10.015749730161087
+            ],
+            "tangent": [
+              -0.9546055905194253,
+              -0.2978256685516329,
+              0.005295063817594549
+            ],
+            "flight": 0.96,
+            "chapter": 9,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.9993137752894488,
+            "trailLength": 0.11875597618755496,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 38,
+          "triangles": 100120,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.348,
+          "shot": {
+            "camera": [
+              -9.86765390774205,
+              11.626484921051487,
+              10.192568854953509
+            ],
+            "target": [
+              -9.925640272354611,
+              11.457019620709596,
+              9.967126435047213
+            ],
+            "pulse": [
+              -9.92414725602674,
+              11.48262350845499,
+              9.970308512740482
+            ],
+            "tangent": [
+              0.7194314755738653,
+              -0.48466471482946644,
+              -0.4975122773890941
+            ],
+            "flight": 0.96,
+            "chapter": 10,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "glass",
+            "guideU": 0.847404303651152,
+            "trailLength": 0.04491872026267512,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 38,
+          "triangles": 100120,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.38,
+          "shot": {
+            "camera": [
+              -9.912249647917482,
+              11.539905709811304,
+              10.063545925420751
+            ],
+            "target": [
+              -9.91225010571511,
+              11.4552152658646,
+              9.959009608098727
+            ],
+            "pulse": [
+              -9.912250097318664,
+              11.474969073501464,
+              9.962138290733108
+            ],
+            "tangent": [
+              0.7542455225817916,
+              -0.4170178208860955,
+              -0.507158583412262
+            ],
+            "flight": 0.96,
+            "chapter": 10,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "glass",
+            "guideU": 0.9999987952694013,
+            "trailLength": 0.03500007830748893,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 1,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 38,
+          "triangles": 100120,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.416,
+          "shot": {
+            "camera": [
+              1.0465481434956525,
+              5.481122103477862,
+              5.016895076878133
+            ],
+            "target": [
+              -0.4885248498679833,
+              0.676137124896324,
+              -1.6882270246282244e-15
+            ],
+            "pulse": [
+              -0.04246385433000203,
+              1.7265223094265638,
+              0.003435005425970387
+            ],
+            "tangent": [
+              -0.5036739602902123,
+              -0.8628048438863409,
+              0.04336292300848903
+            ],
+            "flight": 0.96,
+            "chapter": 10,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.9938478645893601,
+              -0.11075388052420135
+            ],
+            "guidePath": "cell",
+            "guideU": 0.04213346700691703,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0.04789719916493938,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0.000045392942266353487,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 4452,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.48,
+          "shot": {
+            "camera": [
+              5.3138510139163735,
+              4.313098438617504,
+              7.158475484868626
+            ],
+            "target": [
+              -2.412975213322631,
+              0.2083244942643206,
+              -3.9460120039143537e-16
+            ],
+            "pulse": [
+              -0.2802228875517133,
+              1.3217486697179128,
+              0.024658333446401788
+            ],
+            "tangent": [
+              -0.49258049448886504,
+              -0.8695757943384388,
+              0.03467555839173188
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 0.2752480265229943,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0.7420088973880893,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 4452,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.6,
+          "shot": {
+            "camera": [
+              6.62144878877193,
+              2.9117234338413374,
+              7.462369499898818
+            ],
+            "target": [
+              -3.010626212254991,
+              -0.02374317320629429,
+              3.943103632806608e-18
+            ],
+            "pulse": [
+              -0.7794202045322007,
+              0.27060797977854445,
+              0.008834516652883678
+            ],
+            "tangent": [
+              -0.4022809037905635,
+              -0.9149174938058914,
+              -0.03310670586745157
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 0.8529706304481044,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 4452,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.655,
+          "shot": {
+            "camera": [
+              6.4485569124681135,
+              2.7017226568142916,
+              7.293697087864531
+            ],
+            "target": [
+              -3.009681545348973,
+              -0.034229180593849926,
+              2.2115932439826234e-18
+            ],
+            "pulse": [
+              -0.8935133602864673,
+              0.014290744400766747,
+              0.00039523949211046905
+            ],
+            "tangent": [
+              -0.4127090687971901,
+              -0.9105051578334794,
+              -0.025526106071766967
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 0.9922122687522336,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 4452,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.7,
+          "shot": {
+            "camera": [
+              6.199150350738535,
+              2.4996354208189993,
+              7.200425029443387
+            ],
+            "target": [
+              -2.9999441748392446,
+              -0.0500570355170313,
+              5.646395774214728e-8
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.08125389629186779,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 0.9144695828506655,
+              "extraction": 0,
+              "incident": 0.08553041714933451,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 20,
+          "triangles": 4452,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.76,
+          "shot": {
+            "camera": [
+              5.97431780253386,
+              2.5723050772444913,
+              7.640265893697151
+            ],
+            "target": [
+              -2.7369634676433683,
+              -0.09418331205181857,
+              0.05592043706428447
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 0.29271781680568254,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 17,
+          "triangles": 3322,
+          "shadow": 33554432
+        },
+        {
+          "p": 2.85,
+          "shot": {
+            "camera": [
+              5.68965200988268,
+              2.985935946545255,
+              8.607152928708935
+            ],
+            "target": [
+              -1.5390327166954871,
+              -0.10329528618364991,
+              0.19795579032728905
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 12,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 0.9999984469448533,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 18,
+          "triangles": 4282,
+          "shadow": 33554432
+        },
+        {
+          "p": 3.03,
+          "shot": {
+            "camera": [
+              -4.509513014982243,
+              3.2422392394500994,
+              -67.12531657973047
+            ],
+            "target": [
+              -4.232625485795411,
+              -1.6015714374667331,
+              -19.434222930341665
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 12,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.9978646486176349,
+              -0.06531571816342613
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 18,
+          "triangles": 4282,
+          "shadow": 33554432
+        },
+        {
+          "p": 3.052,
+          "shot": {
+            "camera": [
+              -3.9955682058648234,
+              -8.777526556572626,
+              -67.27948486332424
+            ],
+            "target": [
+              -4.3815000822793175,
+              -3.055439721289704,
+              -11.67914004053036
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 12,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.9926818952211522,
+              -0.12075866387196094
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0.000004619960629779326,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 18,
+          "triangles": 4282,
+          "shadow": 33554432
+        },
+        {
+          "p": 3.08,
+          "shot": {
+            "camera": [
+              -10.000000000001352,
+              11.32000389079613,
+              8.679999999997356
+            ],
+            "target": [
+              -10,
+              11.414047705211313,
+              9.720319041884705
+            ],
+            "pulse": [
+              -9.910000231437962,
+              11.245956997824534,
+              10.078433456271343
+            ],
+            "tangent": [
+              -0.18456918291415333,
+              -0.15889190985262247,
+              0.9698904977892029
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 2.0585177872649347e-8,
+              "ac": 0,
+              "transition": 1,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 42,
+          "triangles": 105670,
+          "shadow": 33554432
+        },
+        {
+          "p": 3.112,
+          "shot": {
+            "camera": [
+              -10.060776169299661,
+              12.403341951046643,
+              8.56118258901916
+            ],
+            "target": [
+              -10,
+              11.361849928552349,
+              9.92885552668583
+            ],
+            "pulse": [
+              -9.974809531555639,
+              11.19016397046578,
+              10.498463874928568
+            ],
+            "tangent": [
+              -0.018936003781132228,
+              -0.016301626079913256,
+              0.9996877936375694
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0.007052826570100774,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 42,
+          "triangles": 107428,
+          "shadow": 33554432
+        },
+        {
+          "p": 3.17,
+          "shot": {
+            "camera": [
+              -9.00581525905042,
+              14.874702928905593,
+              10.042991296968415
+            ],
+            "target": [
+              -9.82943339071281,
+              11.185911495796402,
+              11.84180470184447
+            ],
+            "pulse": [
+              -9.975,
+              11.190000000000001,
+              13.25443219570831
+            ],
+            "tangent": [
+              0,
+              0,
+              1
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0.05229605258242338,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 40,
+          "triangles": 107414,
+          "shadow": 33554432
+        },
+        {
+          "p": 3.4,
+          "shot": {
+            "camera": [
+              -20.998216581482502,
+              13.999958298904788,
+              28.499394786826105
+            ],
+            "target": [
+              -27.99864304558554,
+              11.30006687625067,
+              23.29991345772226
+            ],
+            "pulse": [
+              -26.513313108587596,
+              11.305,
+              23.335
+            ],
+            "tangent": [
+              -1,
+              0,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0.488436097557395,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 42,
+          "triangles": 108234,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.02,
+          "shot": {
+            "camera": [
+              -46.63688453763456,
+              2.7984930959932552,
+              17.986814589940987
+            ],
+            "target": [
+              -40.6,
+              2.3490849270215937,
+              15.778038248518248
+            ],
+            "pulse": [
+              -40.425,
+              1.567,
+              17.76
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 15,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 54,
+          "triangles": 110320,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.085,
+          "shot": {
+            "camera": [
+              -46.80080531565087,
+              2.8003861148395623,
+              17.986783314764015
+            ],
+            "target": [
+              -40.59865034673667,
+              2.3470044035463404,
+              15.7937738080853
+            ],
+            "pulse": [
+              -40.42407253406072,
+              1.5643087216428613,
+              17.746787678198327
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 16,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 0,
+              "lighting": 0,
+              "equipment": 0,
+              "screen": 0,
+              "entry": 0,
+              "graphOpacity": 1,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 54,
+          "triangles": 110320,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.2,
+          "shot": {
+            "camera": [
+              -46.73621403797989,
+              2.935253761213437,
+              14.357570172134988
+            ],
+            "target": [
+              -39.73479327828548,
+              1.273770684454864,
+              13.497740068199505
+            ],
+            "pulse": [
+              -38.33206959783848,
+              5.990407781289224,
+              14.1203338915035
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 16,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 0.0000016165525694342155,
+              "lighting": 0,
+              "equipment": 0,
+              "screen": 0,
+              "entry": 0.33039654729636037,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 72,
+          "triangles": 118556,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.32,
+          "shot": {
+            "camera": [
+              -41.99432905188955,
+              3.4003159231350306,
+              13.699637023560424
+            ],
+            "target": [
+              -28.994554908825258,
+              2.2000537994056177,
+              13.699920664668166
+            ],
+            "pulse": [
+              -26.26245041239182,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 17,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 0,
+              "equipment": 0,
+              "screen": 0,
+              "entry": 0.9366096745827449,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 72,
+          "triangles": 118176,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.5,
+          "shot": {
+            "camera": [
+              -33.50100781626046,
+              3.5296375787486083,
+              14.603137643163555
+            ],
+            "target": [
+              -21.74798454562354,
+              1.7965827778217893,
+              13.923201919026498
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 17,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 0.5613526364782353,
+              "screen": 0,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 65,
+          "triangles": 116216,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.65,
+          "shot": {
+            "camera": [
+              -31.978923829254192,
+              3.7504091666307375,
+              18.67123240663551
+            ],
+            "target": [
+              -21.845143049669456,
+              1.8776510901956178,
+              16.633776780960005
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 17,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 0.9999996561922931,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 65,
+          "triangles": 114776,
+          "shadow": 33554432
+        },
+        {
+          "p": 4.94,
+          "shot": {
+            "camera": [
+              -43.99325760858321,
+              4.89997490142285,
+              12.006177586728437
+            ],
+            "target": [
+              -38.99255744163972,
+              2.600279700713805,
+              7.010920976984998
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 18,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 68,
+          "triangles": 117248,
+          "shadow": 33554432
+        },
+        {
+          "p": 5.07,
+          "shot": {
+            "camera": [
+              -49.500033668938045,
+              3.199989583199626,
+              -5.400106545988328
+            ],
+            "target": [
+              -40.800014592260425,
+              1.6999927057603617,
+              -8.400124852793157
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 18,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 1,
+              "discharge": 0,
+              "stored": 0.4950062791015886,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 63,
+          "triangles": 115564,
+          "shadow": 33554432
+        },
+        {
+          "p": 5.32,
+          "shot": {
+            "camera": [
+              -51.03441436392369,
+              4.132815468971597,
+              -6.555925255868442
+            ],
+            "target": [
+              -40.8819616831016,
+              1.616693304256437,
+              -7.823997549193872
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 19,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 1,
+              "stored": 0.6154393124046457,
+              "dusk": 1,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 71,
+          "triangles": 118408,
+          "shadow": 33554432
+        },
+        {
+          "p": 5.48,
+          "shot": {
+            "camera": [
+              -68.02351442723106,
+              12.815074581159708,
+              7.360183510016903
+            ],
+            "target": [
+              -28.637827296760673,
+              3.003150366150797,
+              3.325618993337954
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 20,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 1,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 86,
+          "triangles": 120902,
+          "shadow": 33554432
+        },
+        {
+          "p": 5.56,
+          "shot": {
+            "camera": [
+              -80.38702020804014,
+              22.7218521819749,
+              29.95036240041689
+            ],
+            "target": [
+              -16.64945268703949,
+              4.225089419132001,
+              9.101552784033824
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 20,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 1,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 87,
+          "triangles": 120904,
+          "shadow": 33554432
+        },
+        {
+          "p": 5.72,
+          "shot": {
+            "camera": [
+              -98.04622656215186,
+              47.76583834815204,
+              77.50145936932222
+            ],
+            "target": [
+              -6.514929749673948,
+              5.733349613039779,
+              5.684689666185477
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 21,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 86,
+          "triangles": 120088,
+          "shadow": 33554432
+        },
+        {
+          "p": 6.03,
+          "shot": {
+            "camera": [
+              -104.00467101067223,
+              51.00291938167015,
+              94.01284527934861
+            ],
+            "target": [
+              -25.00997900862408,
+              8.001425572660583,
+              -12.010454199510939
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 22,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "desktop",
+            "width": 1280,
+            "height": 720,
+            "pixelRatio": 1,
+            "detail": 5,
+            "segments": 128
+          },
+          "draws": 86,
+          "triangles": 120088,
+          "shadow": 33554432
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "p": 0,
+          "shot": {
+            "camera": [
+              0,
+              0,
+              1200.000073715244
+            ],
+            "target": [
+              0,
+              193.5,
+              0
+            ],
+            "pulse": [
+              -8.65,
+              3,
+              4.1
+            ],
+            "tangent": [
+              -0.6297199167276917,
+              0.26430685180842484,
+              0.7304756769144256
+            ],
+            "flight": 0,
+            "chapter": 0,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 0,
+            "sourceGlint": 1,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 21,
+          "triangles": 17212,
+          "shadow": 0
+        },
+        {
+          "p": 0.285,
+          "shot": {
+            "camera": [
+              0,
+              0,
+              48.11548566035571
+            ],
+            "target": [
+              0,
+              9.198079021152436,
+              0
+            ],
+            "pulse": [
+              -8.65,
+              3,
+              4.1
+            ],
+            "tangent": [
+              -0.6297199167276917,
+              0.26430685180842484,
+              0.7304756769144256
+            ],
+            "flight": 0,
+            "chapter": 1,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 20,
+          "triangles": 17210,
+          "shadow": 0
+        },
+        {
+          "p": 0.39,
+          "shot": {
+            "camera": [
+              -1.500098920971961,
+              0,
+              43.00291562199211
+            ],
+            "target": [
+              -3.728752236642418,
+              6.242903150420602,
+              1.7673854532062327
+            ],
+            "pulse": [
+              -8.65,
+              3,
+              4.1
+            ],
+            "tangent": [
+              -0.6297199167276917,
+              0.26430685180842484,
+              0.7304756769144256
+            ],
+            "flight": 0,
+            "chapter": 1,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 0.05394837281598836,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 20,
+          "triangles": 16780,
+          "shadow": 0
+        },
+        {
+          "p": 0.435,
+          "shot": {
+            "camera": [
+              -18.070282700569074,
+              1.0213351810857214,
+              27.598963758372484
+            ],
+            "target": [
+              -9.079838308629736,
+              3.6465008185436263,
+              4.785929323022956
+            ],
+            "pulse": [
+              -9.565169847521373,
+              3.3763833945149617,
+              5.041744720215847
+            ],
+            "tangent": [
+              -0.6982427945433762,
+              0.2832272820754913,
+              0.6574490904673809
+            ],
+            "flight": 0.006309492411584385,
+            "chapter": 2,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0.006309492411584385,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 20,
+          "triangles": 16780,
+          "shadow": 0
+        },
+        {
+          "p": 0.485,
+          "shot": {
+            "camera": [
+              -18.171191757992723,
+              6.696646508837597,
+              2.4546740408087833
+            ],
+            "target": [
+              -13.97646964286155,
+              5.438478477894647,
+              14.293985149060537
+            ],
+            "pulse": [
+              -13.6074301366444,
+              5.182255132458827,
+              11.846778431643203
+            ],
+            "tangent": [
+              -0.19747819690889978,
+              0.11835890667461232,
+              0.9731359262489494
+            ],
+            "flight": 0.04479810573607099,
+            "chapter": 2,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0.04479810573607099,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 5,
+          "triangles": 1132,
+          "shadow": 0
+        },
+        {
+          "p": 0.55,
+          "shot": {
+            "camera": [
+              -16.451615093298155,
+              10.202926129724828,
+              21.047931875313573
+            ],
+            "target": [
+              -10.24666088582564,
+              6.92444324855357,
+              38.59652332028308
+            ],
+            "pulse": [
+              -11.460130063482001,
+              6.598311651615978,
+              33.7386881995375
+            ],
+            "tangent": [
+              0.28222391252983786,
+              0.0365834412576312,
+              0.9586507784496394
+            ],
+            "flight": 0.14762367413837502,
+            "chapter": 3,
+            "scene": "solar",
+            "earthVisibility": 0,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "solar",
+            "guideU": 0.14762367413837502,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 5,
+          "triangles": 1132,
+          "shadow": 0
+        },
+        {
+          "p": 0.75,
+          "shot": {
+            "camera": [
+              -2.374852066110367,
+              6.721075202713741,
+              -130.6542852356612
+            ],
+            "target": [
+              -1.0472547555506482,
+              2.92849605693165,
+              -113.492665253989
+            ],
+            "pulse": [
+              -0.2154144890121723,
+              1.8377111820010428,
+              -119.47234623633655
+            ],
+            "tangent": [
+              0.09375044077112894,
+              -0.06220201360697437,
+              0.9936507255361196
+            ],
+            "flight": 0.8347961555827409,
+            "chapter": 4,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.11439812661075653,
+            "trailLength": 7,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 7,
+          "triangles": 31370,
+          "shadow": 0
+        },
+        {
+          "p": 0.925,
+          "shot": {
+            "camera": [
+              4.860318392177918,
+              4.9207615663758535,
+              -40.09032818870505
+            ],
+            "target": [
+              0.05245646649463104,
+              8.200633261959975,
+              -2.020003563634766
+            ],
+            "pulse": [
+              1.0213023679936697,
+              6.447406199513057,
+              -15.897307483482818
+            ],
+            "tangent": [
+              -0.006341630768879284,
+              0.278351693739011,
+              0.960458285565706
+            ],
+            "flight": 0.96,
+            "chapter": 4,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.9225882306927139,
+            "trailLength": 3.363611499393891,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 8,
+          "triangles": 31370,
+          "shadow": 0
+        },
+        {
+          "p": 1.235,
+          "shot": {
+            "camera": [
+              0.4368857276219029,
+              12.773402503976152,
+              -15.071302381993377
+            ],
+            "target": [
+              0.18038740370278283,
+              8.151674136410508,
+              -5.165619381480438
+            ],
+            "pulse": [
+              0.2841657540389162,
+              8.476636837200301,
+              -6.766865060438417
+            ],
+            "tangent": [
+              -0.12535175188422504,
+              0.1760624762349315,
+              0.9763651687568436
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              -0.025990750125550216,
+              0.6673643538724378,
+              0.7442777036082265
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.995698095177041,
+            "trailLength": 0.34999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 1,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 8,
+          "triangles": 31370,
+          "shadow": 0
+        },
+        {
+          "p": 1.275,
+          "shot": {
+            "camera": [
+              0.16886199214622047,
+              12.109390174000328,
+              -12.60632873980741
+            ],
+            "target": [
+              0.20108047922307848,
+              8.100244597748013,
+              -5.758191533282125
+            ],
+            "pulse": [
+              0.22768563867331262,
+              8.559606072949776,
+              -6.312715232374411
+            ],
+            "tangent": [
+              -0.11719834586659084,
+              0.18089425797416384,
+              0.976494657004385
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              -0.027900024376495056,
+              0.6007470576283569,
+              0.798952164644832
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.9993152077103618,
+            "trailLength": 0.34999999999999964,
+            "cloudOpacity": 0.8162281424872642,
+            "regionEmphasis": 0.2174001605857755,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 9,
+          "triangles": 31372,
+          "shadow": 0
+        },
+        {
+          "p": 1.3,
+          "shot": {
+            "camera": [
+              0.1238646267325235,
+              11.945689096336569,
+              -12.143120538447452
+            ],
+            "target": [
+              0.20513403963717106,
+              8.090170080703272,
+              -5.874270315997681
+            ],
+            "pulse": [
+              0.21744227653459702,
+              8.575579925893607,
+              -6.226729358865909
+            ],
+            "tangent": [
+              -0.11548001932808147,
+              0.18190968686816997,
+              0.9765107428797241
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "earth",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              -0.028234281469412724,
+              0.5877854281107217,
+              0.8085240354192333
+            ],
+            "guidePath": "orbital",
+            "guideU": 0.99999999083536,
+            "trailLength": 0.34999999999999964,
+            "cloudOpacity": 1,
+            "regionEmphasis": 0,
+            "guideScale": 1
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 9,
+          "triangles": 31372,
+          "shadow": 0
+        },
+        {
+          "p": 1.335,
+          "shot": {
+            "camera": [
+              2.4533534435146174,
+              41.99569185775735,
+              18.030454192444925
+            ],
+            "target": [
+              0.005422365683973035,
+              0.025633456801248816,
+              0.08905628159791862
+            ],
+            "pulse": [
+              0.014636592641521055,
+              3.712707935005932,
+              -0.27051197403140004
+            ],
+            "tangent": [
+              0.03873671707299893,
+              -0.3563967760401449,
+              -0.9335313625040121
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.4524363935581029,
+              -0.8917966751362878
+            ],
+            "guidePath": "region",
+            "guideU": 0.053403035002601705,
+            "trailLength": 0.65,
+            "cloudOpacity": 0.49905522547102965,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 8,
+          "triangles": 41834,
+          "shadow": 0
+        },
+        {
+          "p": 1.4,
+          "shot": {
+            "camera": [
+              5.483288147320852,
+              34.57751000872643,
+              19.101750197970905
+            ],
+            "target": [
+              0.03573194891634097,
+              0.16891766847792897,
+              0.5868572298879887
+            ],
+            "pulse": [
+              0.2619924143955134,
+              3.510462782387475,
+              0.5542125446794256
+            ],
+            "tangent": [
+              0.138254447089507,
+              0.050389002136317966,
+              0.9891140764965792
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.3519118093290187,
+            "trailLength": 0.65,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 7,
+          "triangles": 41832,
+          "shadow": 8388608
+        },
+        {
+          "p": 1.485,
+          "shot": {
+            "camera": [
+              10.361622768408907,
+              22.63389508719219,
+              20.826586177645847
+            ],
+            "target": [
+              0.08453177587217167,
+              0.3996118578938203,
+              1.3883397164258282
+            ],
+            "pulse": [
+              0.6619028889524337,
+              3.51356211276358,
+              3.149273156936914
+            ],
+            "tangent": [
+              0.23240070990422507,
+              -0.24791580075222336,
+              0.9404933097972553
+            ],
+            "flight": 0.96,
+            "chapter": 5,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.832524703945459,
+            "trailLength": 0.65,
+            "cloudOpacity": 0.0000013871805160004388,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 7,
+          "triangles": 41832,
+          "shadow": 8388608
+        },
+        {
+          "p": 1.535,
+          "shot": {
+            "camera": [
+              11.955870682425184,
+              18.730701753106644,
+              21.390265460885274
+            ],
+            "target": [
+              0.10047964094735103,
+              0.47500310487021796,
+              1.650265533642225
+            ],
+            "pulse": [
+              0.8871199696960431,
+              2.850511530038615,
+              3.089727358385193
+            ],
+            "tangent": [
+              0.24227965310734287,
+              -0.8725359045489333,
+              -0.4242424601135069
+            ],
+            "flight": 0.96,
+            "chapter": 6,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.9895898018129541,
+            "trailLength": 0.65,
+            "cloudOpacity": 0.97642766242949,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 8,
+          "triangles": 41834,
+          "shadow": 8388608
+        },
+        {
+          "p": 1.55,
+          "shot": {
+            "camera": [
+              12.061536614668828,
+              18.472000105296857,
+              21.427625834028163
+            ],
+            "target": [
+              0.1015366572467918,
+              0.4799999979661624,
+              1.6676258421685977
+            ],
+            "pulse": [
+              0.9015366515343071,
+              2.8000000208793145,
+              3.0676258572170214
+            ],
+            "tangent": [
+              0.2649291532399175,
+              -0.900618150141673,
+              -0.344527925426911
+            ],
+            "flight": 0.96,
+            "chapter": 6,
+            "scene": "region",
+            "earthVisibility": 1,
+            "pulseOpacity": 1,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "region",
+            "guideU": 0.9999999957628384,
+            "trailLength": 0.65,
+            "cloudOpacity": 1,
+            "regionEmphasis": 0,
+            "guideScale": 6.371
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 8,
+          "triangles": 41834,
+          "shadow": 8388608
+        },
+        {
+          "p": 1.595,
+          "shot": {
+            "camera": [
+              289.1956174507996,
+              431.68890769341294,
+              470.1869263096488
+            ],
+            "target": [
+              -0.0072962845810376755,
+              11.83591471053748,
+              -0.004490021280638572
+            ],
+            "pulse": [
+              21.31199550982981,
+              65.79114200958024,
+              33.42671268786237
+            ],
+            "tangent": [
+              0.293087375396512,
+              -0.8976578176010489,
+              -0.32910520032795937
+            ],
+            "flight": 0.96,
+            "chapter": 6,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.04620199197707472,
+            "trailLength": 7.906026090842683,
+            "cloudOpacity": 0.5488137535750119,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 46,
+          "triangles": 92372,
+          "shadow": 8388608
+        },
+        {
+          "p": 1.65,
+          "shot": {
+            "camera": [
+              259.9902680520208,
+              342.19854844164945,
+              400.0700119808348
+            ],
+            "target": [
+              -0.09943253910698815,
+              11.239431620858108,
+              -0.061189254835069665
+            ],
+            "pulse": [
+              25.604781953512198,
+              53.23776348934462,
+              28.91855767326785
+            ],
+            "tangent": [
+              0.3026947351975558,
+              -0.8964046804515354,
+              -0.3237816334325682
+            ],
+            "flight": 0.96,
+            "chapter": 7,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.18450105283753757,
+            "trailLength": 7.561850969361339,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 45,
+          "triangles": 92370,
+          "shadow": 8388608
+        },
+        {
+          "p": 1.76,
+          "shot": {
+            "camera": [
+              166.14573124568633,
+              168.78141188384657,
+              229.3443473450832
+            ],
+            "target": [
+              10.7581121157742,
+              14.977879165929062,
+              6.132197819511962
+            ],
+            "pulse": [
+              30.680811785350272,
+              28.416939643769492,
+              17.949134390087572
+            ],
+            "tangent": [
+              0.05068456879592544,
+              -0.8645387819658978,
+              -0.5000037689486877
+            ],
+            "flight": 0.96,
+            "chapter": 7,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.45845662512934193,
+            "trailLength": 6.29241226721302,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 45,
+          "triangles": 92370,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.06,
+          "shot": {
+            "camera": [
+              -0.231086223405927,
+              15.357428246797129,
+              16.002256632580934
+            ],
+            "target": [
+              -4.6072473523458966,
+              12.519090153784633,
+              10.001775259231247
+            ],
+            "pulse": [
+              -4.283955810038672,
+              12.612340799347725,
+              9.99641845789416
+            ],
+            "tangent": [
+              -0.9994594623933973,
+              -0.03287046089924403,
+              0.0005619898331696385
+            ],
+            "flight": 0.96,
+            "chapter": 9,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.9420913896986091,
+            "trailLength": 1.528830706558459,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 32,
+          "triangles": 90912,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.23,
+          "shot": {
+            "camera": [
+              -9.479667096521059,
+              12.162544925335105,
+              11.007564367999631
+            ],
+            "target": [
+              -9.938072389649198,
+              11.508765873152264,
+              10.015456803696958
+            ],
+            "pulse": [
+              -9.932686795029978,
+              11.512426665580554,
+              10.015744991311642
+            ],
+            "tangent": [
+              -0.9545735566600266,
+              -0.29792829064125526,
+              0.005297033226867498
+            ],
+            "flight": 0.96,
+            "chapter": 9,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 0.999304949902499,
+            "trailLength": 0.11899870514736222,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 36,
+          "triangles": 91362,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.348,
+          "shot": {
+            "camera": [
+              -9.867962705571552,
+              11.625885413735187,
+              10.191675451223935
+            ],
+            "target": [
+              -9.925547553759097,
+              11.460449613149098,
+              9.967615465918193
+            ],
+            "pulse": [
+              -9.924065858024825,
+              11.482568651928903,
+              9.970252219894896
+            ],
+            "tangent": [
+              0.7192852806214566,
+              -0.4849267882639956,
+              -0.4974682855271064
+            ],
+            "flight": 0.96,
+            "chapter": 10,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "glass",
+            "guideU": 0.8484609258222485,
+            "trailLength": 0.04485003982155385,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0.000009260412463800937,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 36,
+          "triangles": 91362,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.38,
+          "shot": {
+            "camera": [
+              -9.912249998768736,
+              11.53990502866049,
+              10.06354491034944
+            ],
+            "target": [
+              -9.912250000369696,
+              11.455215251764779,
+              9.959009544255792
+            ],
+            "pulse": [
+              -9.912250000340332,
+              11.474969019889649,
+              9.962138225525473
+            ],
+            "tangent": [
+              0.754245841401314,
+              -0.417017147225665,
+              -0.5071586631899251
+            ],
+            "flight": 0.96,
+            "chapter": 10,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "glass",
+            "guideU": 0.9999999957869471,
+            "trailLength": 0.03500000027384845,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 1,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 38,
+          "triangles": 91400,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.416,
+          "shot": {
+            "camera": [
+              1.0756449346080936,
+              5.556803430821083,
+              5.099464579634428
+            ],
+            "target": [
+              -0.49057187580018435,
+              0.7350332586879335,
+              -1.6868510028512719e-15
+            ],
+            "pulse": [
+              -0.04265407214771478,
+              1.7261964748101535,
+              0.0034513857316748604
+            ],
+            "tangent": [
+              -0.5037029428459356,
+              -0.8627867775933294,
+              0.04338573242971412
+            ],
+            "flight": 0.96,
+            "chapter": 10,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.9938679160585604,
+              -0.11057380082738585
+            ],
+            "guidePath": "cell",
+            "guideU": 0.04232081156158916,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0.048377272047172376,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0.000004340662672963624,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 20,
+          "triangles": 4004,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.48,
+          "shot": {
+            "camera": [
+              6.2136918992923516,
+              4.793793683541974,
+              7.993595790572293
+            ],
+            "target": [
+              -2.4118030039642497,
+              0.6421873021505791,
+              -3.9538916578987297e-16
+            ],
+            "pulse": [
+              -0.28001569021529493,
+              1.3221144205741562,
+              0.024643740301423814
+            ],
+            "tangent": [
+              -0.49262971226438046,
+              -0.8695463822362949,
+              0.034713912687637336
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 0.2750393755162178,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 0.7415137005070156,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 19,
+          "triangles": 3992,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.6,
+          "shot": {
+            "camera": [
+              10.781188802189059,
+              4.178852567172967,
+              10.684896079417143
+            ],
+            "target": [
+              -3.0106281948356166,
+              1.5785179865539565,
+              3.940804584716292e-18
+            ],
+            "pulse": [
+              -0.7798144589347904,
+              0.2697113379521003,
+              0.00880207674650436
+            ],
+            "tangent": [
+              -0.4022967184104765,
+              -0.9149109543748122,
+              -0.033095255266157766
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.95,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 0.853456791025054,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 0,
+              "extraction": 0,
+              "incident": 1,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 19,
+          "triangles": 3992,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.655,
+          "shot": {
+            "camera": [
+              11.673195657472974,
+              4.212696522775697,
+              11.322649528253978
+            ],
+            "target": [
+              -3.0096756882631364,
+              2.01512164162717,
+              2.2074638860998612e-18
+            ],
+            "pulse": [
+              -0.893580026553349,
+              0.0141436695475117,
+              0.00039111679626295526
+            ],
+            "tangent": [
+              -0.41271878241610577,
+              -0.9105009535589813,
+              -0.02551901661806242
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.9499983987608581,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 0.9922923967960636,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 0.0000016855148860875089,
+              "extraction": 0,
+              "incident": 0.9999983144851139,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 19,
+          "triangles": 3992,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.7,
+          "shot": {
+            "camera": [
+              11.801653225670623,
+              4.052805214689379,
+              11.582447933248856
+            ],
+            "target": [
+              -3.0000090999267597,
+              2.208277535361328,
+              1.2813059263097168e-24
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0.08442168507622835,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 0.9111350683408123,
+              "extraction": 0,
+              "incident": 0.08886493165918774,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 19,
+          "triangles": 3992,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.76,
+          "shot": {
+            "camera": [
+              11.279365989205793,
+              4.195204163168746,
+              12.256374526593396
+            ],
+            "target": [
+              -2.73808472371888,
+              2.16449178476288,
+              0.055672965753997404
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 11,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 0.2913671539941009,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "glass"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 17,
+          "triangles": 2874,
+          "shadow": 8388608
+        },
+        {
+          "p": 2.85,
+          "shot": {
+            "camera": [
+              8.994165420530162,
+              4.3981740328989085,
+              12.451387582666205
+            ],
+            "target": [
+              -1.5390039568924434,
+              1.5925552733049853,
+              0.1979541162496689
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 12,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 0.9999984952411797,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 18,
+          "triangles": 3834,
+          "shadow": 8388608
+        },
+        {
+          "p": 3.03,
+          "shot": {
+            "camera": [
+              -4.518085983092354,
+              3.394548983641882,
+              -68.59153391091658
+            ],
+            "target": [
+              -4.232569934776061,
+              -1.4869936391473124,
+              -19.436598195592765
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 12,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.9978655449297077,
+              -0.06530202326220494
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 18,
+          "triangles": 3834,
+          "shadow": 8388608
+        },
+        {
+          "p": 3.052,
+          "shot": {
+            "camera": [
+              -3.9923096606306494,
+              -8.800817034748977,
+              -67.82876341516037
+            ],
+            "target": [
+              -4.381264458913997,
+              -3.017337304044165,
+              -11.688264228004332
+            ],
+            "pulse": [
+              -0.9000000000000001,
+              -1.1102230246251565e-16,
+              -6.938893903907228e-18
+            ],
+            "tangent": [
+              -0.4136678474660992,
+              -0.9100893237999138,
+              -0.02482608866052128
+            ],
+            "flight": 0.96,
+            "chapter": 12,
+            "scene": "cell",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              0.9927021157964154,
+              -0.12059232684263119
+            ],
+            "guidePath": "cell",
+            "guideU": 1,
+            "trailLength": 0.8,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 18,
+          "triangles": 3834,
+          "shadow": 8388608
+        },
+        {
+          "p": 3.08,
+          "shot": {
+            "camera": [
+              -10.000000000012157,
+              11.320013980639176,
+              8.679999528969052
+            ],
+            "target": [
+              -10,
+              11.414047430894236,
+              9.720320345647176
+            ],
+            "pulse": [
+              -9.9100006942561,
+              11.245956599393676,
+              10.078435888329103
+            ],
+            "tangent": [
+              -0.18456918291418128,
+              -0.15889190985276022,
+              0.969890497789175
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 6.175039370870458e-8,
+              "ac": 0,
+              "transition": 1,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 39,
+          "triangles": 94682,
+          "shadow": 8388608
+        },
+        {
+          "p": 3.112,
+          "shot": {
+            "camera": [
+              -10.063415131286076,
+              12.677277683425471,
+              8.501137272493372
+            ],
+            "target": [
+              -10,
+              11.36187181649015,
+              9.928776802739044
+            ],
+            "pulse": [
+              -9.974806326787135,
+              11.190166729386746,
+              10.498295374565487
+            ],
+            "tangent": [
+              -0.019095016765084145,
+              -0.016438517170463504,
+              0.9996825273495469
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0.007050059848468137,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 39,
+          "triangles": 96440,
+          "shadow": 8388608
+        },
+        {
+          "p": 3.17,
+          "shot": {
+            "camera": [
+              -8.835812119633706,
+              16.749917594209634,
+              9.659578045528125
+            ],
+            "target": [
+              -9.844741899160747,
+              11.186433887282082,
+              11.976439531342695
+            ],
+            "pulse": [
+              -9.975,
+              11.190000000000001,
+              13.249747534178933
+            ],
+            "tangent": [
+              0,
+              0,
+              1
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0.05221914707633962,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 39,
+          "triangles": 96430,
+          "shadow": 8388608
+        },
+        {
+          "p": 3.4,
+          "shot": {
+            "camera": [
+              -19.248848321138286,
+              15.974958047319953,
+              29.799552237939682
+            ],
+            "target": [
+              -27.256556676470673,
+              11.30252037678326,
+              23.317473629829887
+            ],
+            "pulse": [
+              -26.513940178987532,
+              11.305,
+              23.335
+            ],
+            "tangent": [
+              -1,
+              0,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 13,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 0.48844639182650157,
+              "ac": 0,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 43,
+          "triangles": 96932,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.02,
+          "shot": {
+            "camera": [
+              -53,
+              4.3,
+              17.3
+            ],
+            "target": [
+              -40.6,
+              3.1,
+              16.95
+            ],
+            "pulse": [
+              -40.425,
+              1.567,
+              17.76
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 15,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 52,
+          "triangles": 98532,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.085,
+          "shot": {
+            "camera": [
+              -52.983426849387726,
+              4.294180146084915,
+              17.288789799766526
+            ],
+            "target": [
+              -40.598471635484266,
+              3.0940479336298106,
+              16.939012781634126
+            ],
+            "pulse": [
+              -40.4240454389655,
+              1.5642300983314719,
+              17.7464016919296
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 16,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 0,
+              "lighting": 0,
+              "equipment": 0,
+              "screen": 0,
+              "entry": 0,
+              "graphOpacity": 0.9999952243420583,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 52,
+          "triangles": 98532,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.2,
+          "shot": {
+            "camera": [
+              -48.5627108804628,
+              2.86485195476842,
+              14.446704542571737
+            ],
+            "target": [
+              -39.6413608227399,
+              1.2313322562638442,
+              13.44362104818572
+            ],
+            "pulse": [
+              -38.3407171637228,
+              5.977250473459909,
+              14.123434229278574
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 16,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 0,
+              "lighting": 0,
+              "equipment": 0,
+              "screen": 0,
+              "entry": 0.32974457976091337,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0.9999993672192647
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 64,
+          "triangles": 104850,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.32,
+          "shot": {
+            "camera": [
+              -43.00385803891453,
+              3.399495686101674,
+              13.700263055755661
+            ],
+            "target": [
+              -29.00501086364867,
+              2.199238299381509,
+              13.700069727475658
+            ],
+            "pulse": [
+              -26.27408181689826,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 16,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 0,
+              "equipment": 0,
+              "screen": 0,
+              "entry": 0.9360256365842046,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 66,
+          "triangles": 105146,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.5,
+          "shot": {
+            "camera": [
+              -35.25880283691338,
+              4.729922378126662,
+              14.265952154477104
+            ],
+            "target": [
+              -21.651136740941094,
+              3.850244610618085,
+              14.139416586037154
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 17,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 0.5619319844961645,
+              "screen": 0,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 63,
+          "triangles": 104158,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.65,
+          "shot": {
+            "camera": [
+              -34.029095596809874,
+              4.55667201251865,
+              17.929306021619368
+            ],
+            "target": [
+              -21.786783813552553,
+              3.5871028790073085,
+              18.926670245010285
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 17,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 0.9999997616984758,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 1
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 60,
+          "triangles": 102340,
+          "shadow": 8388608
+        },
+        {
+          "p": 4.94,
+          "shot": {
+            "camera": [
+              -44.00451781702439,
+              4.900243123517042,
+              11.996938640952614
+            ],
+            "target": [
+              -39.002201522603485,
+              2.6000977516253014,
+              6.996883579338143
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 18,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.24,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 47,
+          "triangles": 100800,
+          "shadow": 8388608
+        },
+        {
+          "p": 5.07,
+          "shot": {
+            "camera": [
+              -55.99956884009576,
+              4.600010784088118,
+              -5.399374768251846
+            ],
+            "target": [
+              -40.79992153267858,
+              2.8999869161461485,
+              -4.599494076280179
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 18,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 1,
+              "discharge": 0,
+              "stored": 0.49437778390437453,
+              "dusk": 0,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 61,
+          "triangles": 102494,
+          "shadow": 8388608
+        },
+        {
+          "p": 5.32,
+          "shot": {
+            "camera": [
+              -57.58000518050925,
+              6.21712572576279,
+              -6.593585922872822
+            ],
+            "target": [
+              -40.86660662294616,
+              3.068697272405227,
+              -5.190603293406173
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 19,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 1,
+              "stored": 0.6154971231634617,
+              "dusk": 1,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 61,
+          "triangles": 102494,
+          "shadow": 8388608
+        },
+        {
+          "p": 5.48,
+          "shot": {
+            "camera": [
+              -82.56409437401243,
+              17.277602238416087,
+              8.856893991385627
+            ],
+            "target": [
+              -28.6217419351524,
+              6.088886572903783,
+              2.506139352960316
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 20,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 1,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 74,
+          "triangles": 105454,
+          "shadow": 8388608
+        },
+        {
+          "p": 5.56,
+          "shot": {
+            "camera": [
+              -110.08629244681227,
+              30.88045591907174,
+              40.19886947168407
+            ],
+            "target": [
+              -15.571614716227284,
+              11.95251990917646,
+              8.902794669130378
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 20,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 1,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 77,
+          "triangles": 105816,
+          "shadow": 8388608
+        },
+        {
+          "p": 5.72,
+          "shot": {
+            "camera": [
+              -168.02045578039724,
+              75.58348559761963,
+              127.56253829850402
+            ],
+            "target": [
+              -1.9428493067834254,
+              24.047625577680478,
+              8
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 21,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 85,
+          "triangles": 106324,
+          "shadow": 8388608
+        },
+        {
+          "p": 6.03,
+          "shot": {
+            "camera": [
+              -177.44506713743274,
+              81.24316696089546,
+              155.93393462794003
+            ],
+            "target": [
+              -2,
+              24,
+              8
+            ],
+            "pulse": [
+              -25.000000000000004,
+              6.8,
+              13.7
+            ],
+            "tangent": [
+              0,
+              1,
+              0
+            ],
+            "flight": 0.96,
+            "chapter": 22,
+            "scene": "site",
+            "earthVisibility": 1,
+            "pulseOpacity": 0,
+            "sourceGlint": 0,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "guidePath": "site",
+            "guideU": 1,
+            "trailLength": 0.09999999999999964,
+            "cloudOpacity": 0,
+            "regionEmphasis": 0,
+            "guideScale": 0.9,
+            "conversion": {
+              "section": 1,
+              "absorption": 1,
+              "extraction": 1,
+              "incident": 0,
+              "energyU": 1,
+              "ac": 1,
+              "transition": 0,
+              "transitionKind": "contact"
+            },
+            "operation": {
+              "section": 1,
+              "lighting": 1,
+              "equipment": 1,
+              "screen": 1,
+              "entry": 1,
+              "graphOpacity": 0,
+              "charge": 0,
+              "discharge": 0,
+              "stored": 0.45999999999999996,
+              "dusk": 1,
+              "importFlow": 0,
+              "exportFlow": 0,
+              "routeOpacity": 0
+            }
+          },
+          "quality": {
+            "tier": "mobile",
+            "width": 390,
+            "height": 844,
+            "pixelRatio": 1,
+            "detail": 4,
+            "segments": 80
+          },
+          "draws": 86,
+          "triangles": 106508,
+          "shadow": 8388608
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {filterRegionalTerrain,refineRegionalWater} from './region-material.ts';
 import * as THREE from 'three';
 import {REGION_BUDGET,assertBudget} from './budgets';
 import regionURL from './assets/region-land.json?url';
@@ -37,8 +38,8 @@ float noiseLand(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mi
 `+shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
 float terrain=noiseLand(vGround*1.8)*.55+noiseLand(vGround*7.)*.3+noiseLand(vGround*29.)*.15;
 diffuseColor.rgb*=.80+terrain*.38;diffuseColor.a*=1.-smoothstep(9.,14.,length(vGround));`);
-  };this.materials.push(material);this.group.add(new THREE.Mesh(geometry,material));
-  const waterG=new THREE.PlaneGeometry(120,120),waterM=new THREE.MeshStandardMaterial({color:'#183e52',roughness:.68,metalness:.1});this.geometries.push(waterG);this.materials.push(waterM);const water=new THREE.Mesh(waterG,waterM);water.rotation.x=-Math.PI/2;water.position.y=-.025;this.group.add(water);
+  };filterRegionalTerrain(material);this.materials.push(material);this.group.add(new THREE.Mesh(geometry,material));
+  const waterG=new THREE.PlaneGeometry(120,120),waterM=new THREE.MeshStandardMaterial({color:'#183e52',roughness:.68,metalness:.1});refineRegionalWater(waterM);this.geometries.push(waterG);this.materials.push(waterM);const water=new THREE.Mesh(waterG,waterM);water.rotation.x=-Math.PI/2;water.position.y=-.025;this.group.add(water);
   const stats=this.snapshot();assertBudget('region transfer',stats.transferBytes,REGION_BUDGET.rawBytes);assertBudget('region geometry',stats.geometryBytes,REGION_BUDGET.geometryBytes);assertBudget('region triangles',stats.triangles,REGION_BUDGET.triangles);
   return this;
  }

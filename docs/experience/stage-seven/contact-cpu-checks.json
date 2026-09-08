@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "tier": "mobile",
+      "samples": 3220,
+      "maxAttachmentError": 0,
+      "stats": {
+        "drawCalls": 1,
+        "triangles": 122,
+        "instances": 61,
+        "staticBufferBytes": 1116,
+        "instanceMatrixBytes": 3904,
+        "geometryBytes": 5020,
+        "textures": 0,
+        "targets": 0,
+        "lights": 0
+      },
+      "pause": "stable source matrices",
+      "reverse": "identical",
+      "bufferIdentities": "stable",
+      "disposal": "one per owned resource",
+      "materials": [
+        "structural steel",
+        "bare silver metal",
+        "painted shell"
+      ]
+    },
+    {
+      "tier": "desktop",
+      "samples": 3220,
+      "maxAttachmentError": 0,
+      "stats": {
+        "drawCalls": 1,
+        "triangles": 122,
+        "instances": 61,
+        "staticBufferBytes": 1116,
+        "instanceMatrixBytes": 3904,
+        "geometryBytes": 5020,
+        "textures": 0,
+        "targets": 0,
+        "lights": 0
+      },
+      "pause": "stable source matrices",
+      "reverse": "identical",
+      "bufferIdentities": "stable",
+      "disposal": "one per owned resource",
+      "materials": [
+        "structural steel",
+        "bare silver metal",
+        "painted shell"
+      ]
+    }
+  ],
+  "caveat": "CPU geometry/state checks only; no GPU shader compilation or browser visual claim"
+}

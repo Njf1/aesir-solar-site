@@ -1,0 +1,288 @@
+{
+  "method": "Final footage: 25 fps nearest source frame selected using final slowPasses.startMs performance.now and recorded 6.5 s forward / 4.8 s reverse duration. Source PTS is exact, progress approximate: no independent browser/video clock anchor. Hold timestamps are offsets before recorded slow start; images verified visually. Single-thread sequential ffmpeg, no browser.",
+  "observations": {
+    "path": "docs/experience/stage-seven/final-motion-observations.json",
+    "sha256": "ec1634b563b5142564b96c24902a3dee13488497b16cdf50dc48bfbb0975f6bf"
+  },
+  "views": [
+    {
+      "name": "laptop",
+      "source": "docs/experience/stage-seven/final-motion/laptop-full-forward-reverse.webm",
+      "sha256": "cbf280c92cad0ac5a900867ee29c5d58e37013f1fbfe19cf3999d2096592419a",
+      "groups": [
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-final-contact-dc.jpg",
+          "label": "final-contact-dc",
+          "frames": [
+            {
+              "t": 98.36,
+              "progress": 3.04,
+              "direction": "F"
+            },
+            {
+              "t": 99.16,
+              "progress": 3.066,
+              "direction": "F"
+            },
+            {
+              "t": 99.52,
+              "progress": 3.079,
+              "direction": "F"
+            },
+            {
+              "t": 99.68,
+              "progress": 3.084,
+              "direction": "F"
+            },
+            {
+              "t": 99.92,
+              "progress": 3.092,
+              "direction": "F"
+            },
+            {
+              "t": 100.32,
+              "progress": 3.105,
+              "direction": "F"
+            },
+            {
+              "t": 102.0,
+              "progress": 3.16,
+              "direction": "F"
+            },
+            {
+              "t": 103.8,
+              "progress": 3.22,
+              "direction": "F"
+            },
+            {
+              "t": 104.32,
+              "progress": 3.22,
+              "direction": "R"
+            },
+            {
+              "t": 105.68,
+              "progress": 3.16,
+              "direction": "R"
+            },
+            {
+              "t": 106.88,
+              "progress": 3.105,
+              "direction": "R"
+            },
+            {
+              "t": 107.2,
+              "progress": 3.092,
+              "direction": "R"
+            },
+            {
+              "t": 107.36,
+              "progress": 3.084,
+              "direction": "R"
+            },
+            {
+              "t": 107.48,
+              "progress": 3.079,
+              "direction": "R"
+            },
+            {
+              "t": 107.76,
+              "progress": 3.066,
+              "direction": "R"
+            },
+            {
+              "t": 108.36,
+              "progress": 3.04,
+              "direction": "R"
+            }
+          ],
+          "columns": 4
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-final-held-terminal.jpg",
+          "label": "final-held-terminal",
+          "frames": [
+            {
+              "t": 92.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 4.7
+            },
+            {
+              "t": 93.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 3.7
+            },
+            {
+              "t": 94.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 2.7
+            },
+            {
+              "t": 95.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 1.7
+            },
+            {
+              "t": 96.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 0.7
+            }
+          ],
+          "columns": 5
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "source": "docs/experience/stage-seven/final-motion/mobile-full-forward-reverse.webm",
+      "sha256": "ac487096a6b6d5f3e45a10669a42f5e61b3b29968d38862d03cb0f676bbcd5d2",
+      "groups": [
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-final-contact-dc.jpg",
+          "label": "final-contact-dc",
+          "frames": [
+            {
+              "t": 98.36,
+              "progress": 3.04,
+              "direction": "F"
+            },
+            {
+              "t": 99.16,
+              "progress": 3.066,
+              "direction": "F"
+            },
+            {
+              "t": 99.56,
+              "progress": 3.079,
+              "direction": "F"
+            },
+            {
+              "t": 99.72,
+              "progress": 3.084,
+              "direction": "F"
+            },
+            {
+              "t": 99.96,
+              "progress": 3.092,
+              "direction": "F"
+            },
+            {
+              "t": 100.32,
+              "progress": 3.105,
+              "direction": "F"
+            },
+            {
+              "t": 102.0,
+              "progress": 3.16,
+              "direction": "F"
+            },
+            {
+              "t": 103.8,
+              "progress": 3.22,
+              "direction": "F"
+            },
+            {
+              "t": 104.32,
+              "progress": 3.22,
+              "direction": "R"
+            },
+            {
+              "t": 105.68,
+              "progress": 3.16,
+              "direction": "R"
+            },
+            {
+              "t": 106.92,
+              "progress": 3.105,
+              "direction": "R"
+            },
+            {
+              "t": 107.2,
+              "progress": 3.092,
+              "direction": "R"
+            },
+            {
+              "t": 107.36,
+              "progress": 3.084,
+              "direction": "R"
+            },
+            {
+              "t": 107.48,
+              "progress": 3.079,
+              "direction": "R"
+            },
+            {
+              "t": 107.76,
+              "progress": 3.066,
+              "direction": "R"
+            },
+            {
+              "t": 108.36,
+              "progress": 3.04,
+              "direction": "R"
+            }
+          ],
+          "columns": 4
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-final-held-terminal.jpg",
+          "label": "final-held-terminal",
+          "frames": [
+            {
+              "t": 92.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 4.7
+            },
+            {
+              "t": 93.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 3.7
+            },
+            {
+              "t": 94.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 2.7
+            },
+            {
+              "t": 95.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 1.7
+            },
+            {
+              "t": 96.92,
+              "direction": "Hold",
+              "secondsBeforeSlowStart": 0.7
+            }
+          ],
+          "columns": 5
+        }
+      ]
+    }
+  ],
+  "heldPngs": [
+    {
+      "name": "laptop",
+      "path": "docs/experience/stage-seven/final-motion/laptop-steady-terminal.png",
+      "sha256": "9cb22ec5a0d1f61d87c2a5846964fafa1a612d9cca1fe5f4ea68081e90b53eeb"
+    },
+    {
+      "name": "desktop",
+      "path": "docs/experience/stage-seven/final-motion/desktop-steady-terminal.png",
+      "sha256": "bc46cc3ec3942a0d66acfc48395f1cce2b86f6bb8e442281297b6ab7d7cfac27"
+    },
+    {
+      "name": "mobile",
+      "path": "docs/experience/stage-seven/final-motion/mobile-steady-terminal.png",
+      "sha256": "f99f193e303d9d9ea4c18a442bf74235cbcaf0f17ff082280dfd81f00b2105c8"
+    },
+    {
+      "name": "intermediate",
+      "path": "docs/experience/stage-seven/final-motion/intermediate-steady-terminal.png",
+      "sha256": "9ee8590d46258354ac315b1f9ec1da5f65cac1dc442eeb2ccaa7ee5f3390eb36"
+    },
+    {
+      "name": "short",
+      "path": "docs/experience/stage-seven/final-motion/short-steady-terminal.png",
+      "sha256": "2fe560eb838917f5fff0a423401345df580d1a205b6aa809d748f0b34f7c5b04"
+    }
+  ]
+}

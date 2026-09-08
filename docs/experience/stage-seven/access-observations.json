@@ -1,0 +1,98 @@
+{
+  "recordedAt": "2026-09-08T22:25:15.541Z",
+  "browser": "151.0.7922.34",
+  "views": [],
+  "access": [
+    {
+      "name": "text-200-mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "double": true,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "overflow": 0
+        },
+        {
+          "label": "grid",
+          "overflow": 0
+        },
+        {
+          "label": "brand",
+          "overflow": 0
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": []
+    },
+    {
+      "name": "text-200-laptop",
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "double": true,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "overflow": 0
+        },
+        {
+          "label": "grid",
+          "overflow": 0
+        },
+        {
+          "label": "brand",
+          "overflow": 0
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": []
+    },
+    {
+      "name": "zoom-200",
+      "width": 640,
+      "height": 360,
+      "dpr": 2,
+      "double": false,
+      "frames": [
+        {
+          "label": "entry-caption",
+          "overflow": 0
+        },
+        {
+          "label": "grid",
+          "overflow": 0
+        },
+        {
+          "label": "brand",
+          "overflow": 0
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "blocked": []
+    },
+    {
+      "name": "no-js",
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "canvasCount": 0,
+      "sample": "Recorded generation example\n\nA supplied historical record, separate from the illustrative site in the journey.\n\nSITE\nPremier Composites\nLOCATION\nLincolnshire, England\nRECORDED DATE\n24 August 2026\nSOURCE\nSupplied transcription from Tigo Energy Intelligence (EI)\n\n206.41\nkWh recorded that day\n\nDaily total transcribed from the Tigo portal. Not independently verified. This is a historical record, not a live feed or a forecast. No Aesir installation or customer endorsement is claimed. The 879-module campus is a separate illustration.\n\nkWh\n0\n10\n20\n30\n06:00\n09:00\n12:00\n15:00\n18:00\nApproximate hourly readings transcribed from the portal, in kWh per hour interval. The daily total is supplied separately from these approximate chart readings.\n\nSupplied hourly source note: read off the Solar Production bar chart; approximate to ~0.2 kWh.\n\nApproximate hourly readings\n\nREADING THE RECORD\n\nEnergy over time.\nPower at a moment.\n\nkWh measures energy over a period. The daily total and approximate hour intervals describe recorded generation. kW measures power at a moment. They answer different questions.\n\nGeneration records help an operator see patterns and investigate changes. On their own they do not establish consumption on site, imports, exports, savings or the reason for a change. Compare them with demand records, conditions and the system’s specification."
+    },
+    {
+      "name": "webgl-fallback",
+      "errors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Experience could not start: TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4173/experience-assets/scene-DXNHejP7.js"
+      ],
+      "warnings": [],
+      "blocked": [],
+      "canvasCount": 0,
+      "sample": "Recorded generation example\n\nA supplied historical record, separate from the illustrative site in the journey.\n\nSITE\nPremier Composites\nLOCATION\nLincolnshire, England\nRECORDED DATE\n24 August 2026\nSOURCE\nSupplied transcription from Tigo Energy Intelligence (EI)\n\n206.41\nkWh recorded that day\n\nDaily total transcribed from the Tigo portal. Not independently verified. This is a historical record, not a live feed or a forecast. No Aesir installation or customer endorsement is claimed. The 879-module campus is a separate illustration.\n\nkWh\n0\n10\n20\n30\n06:00\n09:00\n12:00\n15:00\n18:00\nApproximate hourly readings transcribed from the portal, in kWh per hour interval. The daily total is supplied separately from these approximate chart readings.\n\nSupplied hourly source note: read off the Solar Production bar chart; approximate to ~0.2 kWh.\n\nApproximate hourly readings\n\nREADING THE RECORD\n\nEnergy over time.\nPower at a moment.\n\nkWh measures energy over a period. The daily total and approximate hour intervals describe recorded generation. kW measures power at a moment. They answer different questions.\n\nGeneration records help an operator see patterns and investigate changes. On their own they do not establish consumption on site, imports, exports, savings or the reason for a change. Compare them with demand records, conditions and the system’s specification."
+    }
+  ]
+}

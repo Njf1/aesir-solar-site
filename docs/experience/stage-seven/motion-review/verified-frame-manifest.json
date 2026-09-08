@@ -1,0 +1,268 @@
+{
+  "method": "25 fps source video, exact selected frame PTS; approximate progress from saved performance.now starts and travel durations. No independent browser-clock/video-clock anchor. Single-thread sequential ffmpeg; supplementary still states are explicitly asserted to renderedProgress >= 3.08, site scene, ready electrical owner and positive-opacity visible DC mesh.",
+  "observations": {
+    "path": "docs/experience/stage-seven/terminal-verified/observations.json",
+    "sha256": "0e0649478226026cca79d6505e1a5bd8ec41375ad71c3e1e422a74f3c82dbdaf"
+  },
+  "views": [
+    {
+      "name": "laptop",
+      "source": "docs/experience/stage-seven/terminal-verified/laptop-hold-forward-reverse.webm",
+      "sha256": "b9c32b7f0e219f48bedc6098b66c2e9d0fedfca67c80c2469b18f609fc57d8b9",
+      "groups": [
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-verified-contact-dc.jpg",
+          "label": "verified-contact-dc",
+          "frames": [
+            {
+              "t": 7.56,
+              "progress": 3.066,
+              "direction": "F"
+            },
+            {
+              "t": 7.96,
+              "progress": 3.079,
+              "direction": "F"
+            },
+            {
+              "t": 8.08,
+              "progress": 3.084,
+              "direction": "F"
+            },
+            {
+              "t": 8.32,
+              "progress": 3.092,
+              "direction": "F"
+            },
+            {
+              "t": 8.72,
+              "progress": 3.105,
+              "direction": "F"
+            },
+            {
+              "t": 12.2,
+              "progress": 3.22,
+              "direction": "F"
+            },
+            {
+              "t": 12.76,
+              "progress": 3.22,
+              "direction": "R"
+            },
+            {
+              "t": 15.32,
+              "progress": 3.105,
+              "direction": "R"
+            },
+            {
+              "t": 15.64,
+              "progress": 3.092,
+              "direction": "R"
+            },
+            {
+              "t": 15.8,
+              "progress": 3.084,
+              "direction": "R"
+            },
+            {
+              "t": 15.92,
+              "progress": 3.079,
+              "direction": "R"
+            },
+            {
+              "t": 16.2,
+              "progress": 3.066,
+              "direction": "R"
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-verified-held-terminal.jpg",
+          "label": "verified-held-terminal",
+          "frames": [
+            {
+              "t": 1.72,
+              "direction": "Hold",
+              "actualProgress": 3.0850140730165205,
+              "ambientTime": 1.3999
+            },
+            {
+              "t": 2.76,
+              "direction": "Hold",
+              "actualProgress": 3.0850140730165205,
+              "ambientTime": 2.4497999999999984
+            },
+            {
+              "t": 3.84,
+              "direction": "Hold",
+              "actualProgress": 3.0850140730165205,
+              "ambientTime": 3.4998999999999953
+            },
+            {
+              "t": 4.88,
+              "direction": "Hold",
+              "actualProgress": 3.0850140730165205,
+              "ambientTime": 4.5332
+            },
+            {
+              "t": 5.92,
+              "direction": "Hold",
+              "actualProgress": 3.0850140730165205,
+              "ambientTime": 5.583200000000008
+            }
+          ],
+          "columns": 5
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "source": "docs/experience/stage-seven/terminal-verified/mobile-hold-forward-reverse.webm",
+      "sha256": "52b3f2c0f81317cb0d8264df05d76114a8d79b84602998dcadcc72a4c966cb5c",
+      "groups": [
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-verified-contact-dc.jpg",
+          "label": "verified-contact-dc",
+          "frames": [
+            {
+              "t": 7.32,
+              "progress": 3.066,
+              "direction": "F"
+            },
+            {
+              "t": 7.72,
+              "progress": 3.079,
+              "direction": "F"
+            },
+            {
+              "t": 7.88,
+              "progress": 3.084,
+              "direction": "F"
+            },
+            {
+              "t": 8.12,
+              "progress": 3.092,
+              "direction": "F"
+            },
+            {
+              "t": 8.48,
+              "progress": 3.105,
+              "direction": "F"
+            },
+            {
+              "t": 11.96,
+              "progress": 3.22,
+              "direction": "F"
+            },
+            {
+              "t": 12.52,
+              "progress": 3.22,
+              "direction": "R"
+            },
+            {
+              "t": 15.08,
+              "progress": 3.105,
+              "direction": "R"
+            },
+            {
+              "t": 15.36,
+              "progress": 3.092,
+              "direction": "R"
+            },
+            {
+              "t": 15.56,
+              "progress": 3.084,
+              "direction": "R"
+            },
+            {
+              "t": 15.68,
+              "progress": 3.079,
+              "direction": "R"
+            },
+            {
+              "t": 15.96,
+              "progress": 3.066,
+              "direction": "R"
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-verified-held-terminal.jpg",
+          "label": "verified-held-terminal",
+          "frames": [
+            {
+              "t": 1.52,
+              "direction": "Hold",
+              "actualProgress": 3.0849594599297077,
+              "ambientTime": 1.3665999999999998
+            },
+            {
+              "t": 2.56,
+              "direction": "Hold",
+              "actualProgress": 3.0849594599297077,
+              "ambientTime": 2.414599999999998
+            },
+            {
+              "t": 3.6,
+              "direction": "Hold",
+              "actualProgress": 3.0849594599297077,
+              "ambientTime": 3.4646999999999974
+            },
+            {
+              "t": 4.64,
+              "direction": "Hold",
+              "actualProgress": 3.0849594599297077,
+              "ambientTime": 4.499900000000001
+            },
+            {
+              "t": 5.68,
+              "direction": "Hold",
+              "actualProgress": 3.0849594599297077,
+              "ambientTime": 5.533300000000005
+            }
+          ],
+          "columns": 5
+        }
+      ]
+    }
+  ],
+  "heldPngs": [
+    {
+      "name": "laptop",
+      "path": "docs/experience/stage-seven/terminal-verified/laptop-steady-terminal.png",
+      "sha256": "939a2bc4ece72a372fd01feb50b6b7d072d210b9477a406247398f807f1da727",
+      "renderedProgress": 3.0850140730165205,
+      "ambientDelta": 5.216700000000007
+    },
+    {
+      "name": "desktop",
+      "path": "docs/experience/stage-seven/terminal-verified/desktop-steady-terminal.png",
+      "sha256": "c23cfa4ffaf49be92251d422c0f8e8bfd5bae2ece40907fa1fcdf1cbded50ce9",
+      "renderedProgress": 3.085,
+      "ambientDelta": 5.218300000000006
+    },
+    {
+      "name": "mobile",
+      "path": "docs/experience/stage-seven/terminal-verified/mobile-steady-terminal.png",
+      "sha256": "9e275f16096c6281fb2ac9268a73fe273e816129fd9c2948ea27ff138574ccce",
+      "renderedProgress": 3.0849594599297077,
+      "ambientDelta": 5.202000000000005
+    },
+    {
+      "name": "intermediate",
+      "path": "docs/experience/stage-seven/terminal-verified/intermediate-steady-terminal.png",
+      "sha256": "52da5997a096514387aea0de2e05f6c84f67d42ae161ce670db963494f148001",
+      "renderedProgress": 3.084940769506902,
+      "ambientDelta": 5.2176000000000045
+    },
+    {
+      "name": "short",
+      "path": "docs/experience/stage-seven/terminal-verified/short-steady-terminal.png",
+      "sha256": "d1a122ff86005b2e276217dc412a492710bb9272a61b63b92af7c08d9cf7dccd",
+      "renderedProgress": 3.085,
+      "ambientDelta": 5.214700000000006
+    }
+  ]
+}

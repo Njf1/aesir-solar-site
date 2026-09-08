@@ -7,14 +7,15 @@ import {STORAGE_PATHS,STORAGE_PORTS} from '../src/experience/storage-path.ts';
 import {BusinessScene} from '../src/experience/business.ts';import {createStorageScene} from '../src/experience/storage.ts';import {createCommercialSite} from '../src/experience/commercial.ts';
 import {BUSINESS_BUDGET,STORAGE_BUDGET} from '../src/experience/budgets.ts';
 const v=a=>new T.Vector3(...a),near=(a,b,e=1e-8)=>assert.ok(a.distanceTo(b)<e,`${a.toArray()} != ${b.toArray()}`);
+const refined=JSON.parse(readFileSync(new URL('./fixtures/stage-seven-refined-poses.json',import.meta.url)));
 const fixture=JSON.parse(readFileSync(new URL('./fixtures/stage-four-poses.json',import.meta.url)));
 function withCanvas(fn){const old=globalThis.document;globalThis.document={createElement:()=>{const c={tagName:'CANVAS',width:0,height:0};c.getContext=()=>new Proxy({canvas:c},{get:(o,p)=>p in o?o[p]:()=>{}});return c;}};try{return fn();}finally{globalThis.document=old;}}
 function values(group){const r=[];group.traverse(o=>{if(o instanceof T.InstancedMesh)r.push([...o.instanceMatrix.array]);if(o instanceof T.Light)r.push(o.intensity);if(o instanceof T.Mesh)for(const m of[o.material].flat())if(m instanceof T.ShaderMaterial)r.push(JSON.stringify(m.uniforms));});return r;}
 
-test('all stage-four camera and guide fields retain their exact accepted scroll positions',()=>{
+test('unaffected stage-four fields retain exact poses; documented cell and DC refinements use scoped fixtures',()=>{
  assert.equal(STAGE_FOUR_END,4.08);assert.ok(Math.abs(STAGE_FOUR_END*SCROLL_VIEWPORTS_PER_UNIT-22.848)<1e-10);
  assert.equal(CHAPTERS[15].end,4.08);assert.ok(JOURNEY_END>4.08);
- for(const {mode,p,shot}of fixture.records){const current=sampleJourney(p,mode);for(const key of Object.keys(shot)){if(key==='chapter'&&p===4.08)continue;assert.deepEqual(current[key],shot[key],`${mode}/${p}/${key}`);}}
+ for(const {mode,p,shot}of fixture.records){const current=sampleJourney(p,mode);for(const key of Object.keys(shot)){if(key==='chapter'&&p===4.08)continue;const override=refined.records.find(r=>r.mode===mode&&r.p===p)?.fields?.[key];if(override!==undefined){assert.ok((p>2.38&&p<3.08&&['camera','target','conversion'].includes(key))||(p>=3.08&&p<3.74&&['target','pulse','tangent','conversion'].includes(key)),`unapproved fixture change ${mode}/${p}/${key}`);}assert.deepEqual(current[key],override??shot[key],`${mode}/${p}/${key}`);}}
  for(const [name,p]of Object.entries({sun:.285,earth:.925,britain:1.4,roof:1.76,panel:2.23,cell:2.76,dc:3.4,inverter:4.02}))assert.equal(STILL_VIEWS[name],p);
 });
 

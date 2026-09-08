@@ -1,0 +1,569 @@
+{
+  "recordedAt": "2026-09-08T22:09:14.726Z",
+  "owners": [
+    {
+      "name": "campus",
+      "tier": "desktop",
+      "actual": {
+        "geometryBytes": 551848,
+        "triangles": 100388,
+        "drawCalls": 41,
+        "pointLights": 0,
+        "uniqueGeometries": 8,
+        "materials": 28,
+        "textureCount": 1
+      },
+      "reported": {
+        "drawCalls": 41,
+        "triangles": 100388,
+        "instances": 8209,
+        "instancedMeshes": 38,
+        "panelCount": 879,
+        "panelAreaM2": 2270.678508,
+        "arrayCoverage": 0.591322528125,
+        "textureBytes": 2097152,
+        "textureBytesWithMipmaps": 2796203
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 1200000,
+        "baseDrawCalls": 52,
+        "triangles": 140000,
+        "decodedDesktop": 6291456,
+        "decodedMobile": 1572864,
+        "gpuDesktop": 54525952,
+        "gpuMobile": 16777216
+      },
+      "disposalEvents": 74,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "cell",
+      "tier": "desktop",
+      "actual": {
+        "geometryBytes": 48468,
+        "triangles": 3290,
+        "drawCalls": 17,
+        "pointLights": 0,
+        "uniqueGeometries": 8,
+        "materials": 14,
+        "textureCount": 0
+      },
+      "reported": {
+        "variant": "desktop",
+        "geometryBytes": 48468,
+        "triangles": 3290,
+        "drawCalls": 17,
+        "baseDrawCalls": 17,
+        "instances": 156,
+        "textureBytes": 0,
+        "textureBytesWithMipmaps": 0,
+        "selectedCell": {
+          "row": 11,
+          "col": 3,
+          "width": 8.475,
+          "length": 4.318750000000001
+        },
+        "absorptionPoint": [
+          -0.9,
+          0,
+          0
+        ],
+        "frontCollection": [
+          0,
+          0.09,
+          -2.4593750000000005
+        ],
+        "rearCollection": [
+          4.1175,
+          -0.62,
+          1.7706875000000004
+        ],
+        "junction": [
+          -4.387499999999999,
+          -3.1,
+          -11.465625000000014
+        ],
+        "state": {
+          "section": 0,
+          "absorption": 0,
+          "extraction": 0,
+          "incident": 0
+        }
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 250000,
+        "triangles": 15000,
+        "baseDrawCalls": 25,
+        "gpuTextureBytes": 0
+      },
+      "disposalEvents": 26,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "electrical",
+      "tier": "desktop",
+      "actual": {
+        "geometryBytes": 183744,
+        "triangles": 8694,
+        "drawCalls": 15,
+        "pointLights": 0,
+        "uniqueGeometries": 11,
+        "materials": 10,
+        "textureCount": 0
+      },
+      "reported": {
+        "drawCalls": 15,
+        "triangles": 8694,
+        "geometryBytes": 183744,
+        "textureBytes": 0,
+        "instances": 267
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 350000,
+        "triangles": 20000,
+        "baseDrawCalls": 25,
+        "gpuTextureBytes": 0
+      },
+      "disposalEvents": 30,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "business",
+      "tier": "desktop",
+      "actual": {
+        "geometryBytes": 82584,
+        "triangles": 10696,
+        "drawCalls": 24,
+        "pointLights": 2,
+        "uniqueGeometries": 8,
+        "materials": 16,
+        "textureCount": 0
+      },
+      "reported": {
+        "drawCalls": 24,
+        "triangles": 10696,
+        "geometryBytes": 82584,
+        "instances": 599,
+        "textureBytes": 0,
+        "pointLights": 2,
+        "shadowLights": 0,
+        "state": {
+          "lighting": 0,
+          "equipment": 0,
+          "screen": 0
+        }
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 420000,
+        "triangles": 22000,
+        "baseDrawCalls": 27,
+        "gpuTextureBytes": 0,
+        "practicalLights": 2,
+        "codeGzip": 12000
+      },
+      "disposalEvents": 47,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "storage",
+      "tier": "desktop",
+      "actual": {
+        "geometryBytes": 88972,
+        "triangles": 7762,
+        "drawCalls": 16,
+        "pointLights": 0,
+        "uniqueGeometries": 9,
+        "materials": 11,
+        "textureCount": 0
+      },
+      "reported": {
+        "drawCalls": 16,
+        "triangles": 7762,
+        "geometryBytes": 88972,
+        "textureBytes": 0,
+        "instances": 239
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 220000,
+        "triangles": 14000,
+        "baseDrawCalls": 20,
+        "gpuTextureBytes": 0,
+        "practicalLights": 0,
+        "codeGzip": 10000
+      },
+      "disposalEvents": 33,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "electrical overlays",
+      "tier": "desktop",
+      "actual": {
+        "geometryBytes": 61086,
+        "triangles": 2405,
+        "drawCalls": 2
+      }
+    },
+    {
+      "name": "campus",
+      "tier": "mobile",
+      "actual": {
+        "geometryBytes": 534448,
+        "triangles": 91332,
+        "drawCalls": 41,
+        "pointLights": 0,
+        "uniqueGeometries": 8,
+        "materials": 28,
+        "textureCount": 1
+      },
+      "reported": {
+        "drawCalls": 41,
+        "triangles": 91332,
+        "instances": 8074,
+        "instancedMeshes": 38,
+        "panelCount": 879,
+        "panelAreaM2": 2270.678508,
+        "arrayCoverage": 0.591322528125,
+        "textureBytes": 524288,
+        "textureBytesWithMipmaps": 699051
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 1200000,
+        "baseDrawCalls": 52,
+        "triangles": 140000,
+        "decodedDesktop": 6291456,
+        "decodedMobile": 1572864,
+        "gpuDesktop": 54525952,
+        "gpuMobile": 16777216
+      },
+      "disposalEvents": 74,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "cell",
+      "tier": "mobile",
+      "actual": {
+        "geometryBytes": 37524,
+        "triangles": 2842,
+        "drawCalls": 17,
+        "pointLights": 0,
+        "uniqueGeometries": 8,
+        "materials": 14,
+        "textureCount": 0
+      },
+      "reported": {
+        "variant": "mobile",
+        "geometryBytes": 37524,
+        "triangles": 2842,
+        "drawCalls": 17,
+        "baseDrawCalls": 17,
+        "instances": 156,
+        "textureBytes": 0,
+        "textureBytesWithMipmaps": 0,
+        "selectedCell": {
+          "row": 11,
+          "col": 3,
+          "width": 8.475,
+          "length": 4.318750000000001
+        },
+        "absorptionPoint": [
+          -0.9,
+          0,
+          0
+        ],
+        "frontCollection": [
+          0,
+          0.09,
+          -2.4593750000000005
+        ],
+        "rearCollection": [
+          4.1175,
+          -0.62,
+          1.7706875000000004
+        ],
+        "junction": [
+          -4.387499999999999,
+          -3.1,
+          -11.465625000000014
+        ],
+        "state": {
+          "section": 0,
+          "absorption": 0,
+          "extraction": 0,
+          "incident": 0
+        }
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 250000,
+        "triangles": 15000,
+        "baseDrawCalls": 25,
+        "gpuTextureBytes": 0
+      },
+      "disposalEvents": 26,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "electrical",
+      "tier": "mobile",
+      "actual": {
+        "geometryBytes": 110640,
+        "triangles": 6110,
+        "drawCalls": 15,
+        "pointLights": 0,
+        "uniqueGeometries": 11,
+        "materials": 10,
+        "textureCount": 0
+      },
+      "reported": {
+        "drawCalls": 15,
+        "triangles": 6110,
+        "geometryBytes": 110640,
+        "textureBytes": 0,
+        "instances": 267
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 350000,
+        "triangles": 20000,
+        "baseDrawCalls": 25,
+        "gpuTextureBytes": 0
+      },
+      "disposalEvents": 30,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "business",
+      "tier": "mobile",
+      "actual": {
+        "geometryBytes": 75576,
+        "triangles": 9528,
+        "drawCalls": 24,
+        "pointLights": 2,
+        "uniqueGeometries": 8,
+        "materials": 16,
+        "textureCount": 0
+      },
+      "reported": {
+        "drawCalls": 24,
+        "triangles": 9528,
+        "geometryBytes": 75576,
+        "instances": 599,
+        "textureBytes": 0,
+        "pointLights": 2,
+        "shadowLights": 0,
+        "state": {
+          "lighting": 0,
+          "equipment": 0,
+          "screen": 0
+        }
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 420000,
+        "triangles": 22000,
+        "baseDrawCalls": 27,
+        "gpuTextureBytes": 0,
+        "practicalLights": 2,
+        "codeGzip": 12000
+      },
+      "disposalEvents": 47,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "storage",
+      "tier": "mobile",
+      "actual": {
+        "geometryBytes": 62936,
+        "triangles": 6404,
+        "drawCalls": 16,
+        "pointLights": 0,
+        "uniqueGeometries": 9,
+        "materials": 11,
+        "textureCount": 0
+      },
+      "reported": {
+        "drawCalls": 16,
+        "triangles": 6404,
+        "geometryBytes": 62936,
+        "textureBytes": 0,
+        "instances": 239
+      },
+      "mismatch": {},
+      "cap": {
+        "geometryBytes": 220000,
+        "triangles": 14000,
+        "baseDrawCalls": 20,
+        "gpuTextureBytes": 0,
+        "practicalLights": 0,
+        "codeGzip": 10000
+      },
+      "disposalEvents": 33,
+      "disposeExactlyOnce": true
+    },
+    {
+      "name": "electrical overlays",
+      "tier": "mobile",
+      "actual": {
+        "geometryBytes": 61086,
+        "triangles": 2405,
+        "drawCalls": 2
+      }
+    }
+  ],
+  "clearance": {
+    "keys": [
+      "recordedAt",
+      "project",
+      "candidateInterior",
+      "sourceHashes",
+      "sourcesChanged",
+      "method",
+      "entryMatches",
+      "entryPort",
+      "nearJoin",
+      "results",
+      "poseSamples"
+    ],
+    "sourceHashes": [
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/scene.ts",
+        "expected": "1dbf3dee43813cbf28877c3b7b72a5947aca47238e2eae3b1b21ba68739717e6",
+        "actual": "7ec08f32def4e0e20f92c5c4bb46c0eb1eaac8dc65c56f156792e62abf124689"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/journey.ts",
+        "expected": "a184a92a5d759028f632dee0f8e43979be4dcac83d67f9c0ad5620a51b7ca952",
+        "actual": "a184a92a5d759028f632dee0f8e43979be4dcac83d67f9c0ad5620a51b7ca952"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/conversion-journey.ts",
+        "expected": "2a4b638fddb7d311ea85ea1af38619b67713317716bfda2be3cae552fd89e287",
+        "actual": "2a4b638fddb7d311ea85ea1af38619b67713317716bfda2be3cae552fd89e287"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/progress.ts",
+        "expected": "82d693b3ed8d1c7e1be0404420155cd476c10bf1aa7fc4d689f2ee020bd50548",
+        "actual": "82d693b3ed8d1c7e1be0404420155cd476c10bf1aa7fc4d689f2ee020bd50548"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/path.ts",
+        "expected": "065a5b7af139c8b115c7506164bc39a913762626309be4130419eaa4b332b091",
+        "actual": "065a5b7af139c8b115c7506164bc39a913762626309be4130419eaa4b332b091"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/timeline.ts",
+        "expected": "b98c569053f1e96531471a17c7aec8d54a64ae8d837ebe821e308f0a8144dea5",
+        "actual": "b98c569053f1e96531471a17c7aec8d54a64ae8d837ebe821e308f0a8144dea5"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/site-layout.ts",
+        "expected": "58ee727c7753319c8d8a1d9b4035c53ebb1011609a3a544742194d06fee6b609",
+        "actual": "58ee727c7753319c8d8a1d9b4035c53ebb1011609a3a544742194d06fee6b609"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/panel-layout.ts",
+        "expected": "f35e757777170457c1a77c940e2370eeb9a99782a6919672eabf166d14264b3b",
+        "actual": "f35e757777170457c1a77c940e2370eeb9a99782a6919672eabf166d14264b3b"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/electrical-path.ts",
+        "expected": "8b387f578468582df24886c040aa4a8fa76102aef61fb5dd5b62a038abdc379b",
+        "actual": "8b387f578468582df24886c040aa4a8fa76102aef61fb5dd5b62a038abdc379b"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/business-journey.ts",
+        "expected": "46e8b722390b127c112251bea58501e7f1df34ec76fe9a047420de45b99cbda9",
+        "actual": "46e8b722390b127c112251bea58501e7f1df34ec76fe9a047420de45b99cbda9"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/geography.ts",
+        "expected": "2bfd5b243db5b08e8b27d885552dc59259d2dc790d0166471ac1d976e4106c99",
+        "actual": "2bfd5b243db5b08e8b27d885552dc59259d2dc790d0166471ac1d976e4106c99"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/commercial.ts",
+        "expected": "91cb8617d340b774b26b698cf646298f4a3aafdf3a0e6c4811ef30fc6b876c11",
+        "actual": "c92604017d70bb2bd3fba96704823bba6117196ba706a0a42296d2149d3b97e7"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/electrical.ts",
+        "expected": "19f472bc30e8860d1bf1d5c29db1a871afe73b60b5de8cd94e59a66b0cebe956",
+        "actual": "19f472bc30e8860d1bf1d5c29db1a871afe73b60b5de8cd94e59a66b0cebe956"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/equipment-detail.ts",
+        "expected": "9c5081c8c81c787a7d162d80010dfe805d6daffbd7cc1b1f8f084997b2e53134",
+        "actual": "9c5081c8c81c787a7d162d80010dfe805d6daffbd7cc1b1f8f084997b2e53134"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/storage-path.ts",
+        "expected": "385cce18588979d787f65b999b2a1364d72311abc50193e0afcf0ff0c7157ffb",
+        "actual": "385cce18588979d787f65b999b2a1364d72311abc50193e0afcf0ff0c7157ffb"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/business.ts",
+        "expected": "50efb846915bd31a1a1245a86e5dadc2d5ea99be912567d23b369cdc83b98919",
+        "actual": "50efb846915bd31a1a1245a86e5dadc2d5ea99be912567d23b369cdc83b98919"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/interior.ts",
+        "expected": "d3fcc8844b1081119b02d97010736d9bfb75797d28fcf3a7de3746565039d0e2",
+        "actual": "d3fcc8844b1081119b02d97010736d9bfb75797d28fcf3a7de3746565039d0e2"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/interior-contact.ts",
+        "expected": "d2c15d13708d72600875d07a58450d2f8a24ea477cf281307aecfed05e625169",
+        "actual": "d2c15d13708d72600875d07a58450d2f8a24ea477cf281307aecfed05e625169"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/energy-flow.ts",
+        "expected": "9a10104e1d749c5690816eb9dc5dae20cf32c0499d14e19453e6e1ab6df79fe9",
+        "actual": "e379164e8fdd9e9395f9e4576ef7a161d2dd1e5aafb300ccbb305b7e0b5d43bb"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/render-detail.ts",
+        "expected": "bad488176f8bc2e1f36d484c31fe95384f79d191369b24e8ee26b71d030c806c",
+        "actual": "c29556cb5ec933f8102a28da7009f185b900972f0fb10922410377936af72158"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/budgets.ts",
+        "expected": "8810d239edb23a09f56a4132a605349f59596a950a1bd60ff84df97de649cd7d",
+        "actual": "8810d239edb23a09f56a4132a605349f59596a950a1bd60ff84df97de649cd7d"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/storage.ts",
+        "expected": "c79cc6629c4f126fcaa80216b7abbe7fda629fba1b430921874afc5990fad056",
+        "actual": "c79cc6629c4f126fcaa80216b7abbe7fda629fba1b430921874afc5990fad056"
+      }
+    ],
+    "mismatches": [
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/scene.ts",
+        "expected": "1dbf3dee43813cbf28877c3b7b72a5947aca47238e2eae3b1b21ba68739717e6",
+        "actual": "7ec08f32def4e0e20f92c5c4bb46c0eb1eaac8dc65c56f156792e62abf124689"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/commercial.ts",
+        "expected": "91cb8617d340b774b26b698cf646298f4a3aafdf3a0e6c4811ef30fc6b876c11",
+        "actual": "c92604017d70bb2bd3fba96704823bba6117196ba706a0a42296d2149d3b97e7"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/energy-flow.ts",
+        "expected": "9a10104e1d749c5690816eb9dc5dae20cf32c0499d14e19453e6e1ab6df79fe9",
+        "actual": "e379164e8fdd9e9395f9e4576ef7a161d2dd1e5aafb300ccbb305b7e0b5d43bb"
+      },
+      {
+        "path": "/Users/nick/Projects/Aesir Solar/experience-stage1/src/experience/render-detail.ts",
+        "expected": "bad488176f8bc2e1f36d484c31fe95384f79d191369b24e8ee26b71d030c806c",
+        "actual": "c29556cb5ec933f8102a28da7009f185b900972f0fb10922410377936af72158"
+      }
+    ],
+    "evidenceScope": "Historical dense clearance, before the final source closure and pavement detail. Source mismatch entries are retained honestly. Superseded for final clearance by final-clearance.json, which records matching final hashes and 81,405 actual geometry/frustum pairs."
+  }
+}

@@ -1,0 +1,1295 @@
+{
+  "method": "25fps source videos; nearest video frame to slowPasses performance.now timestamps. No independent recording clock anchor was saved, so progress labels are approximate; use video PTS labels for exact frame references. Hidden-copy pass start inferred from preceding completed slow pass and scripted durations. Single-thread ffmpeg decode/filter/output, one video at a time.",
+  "views": [
+    {
+      "name": "laptop",
+      "source": "docs/experience/stage-seven/motion/laptop-full-forward-reverse.webm",
+      "errors": [],
+      "warnings": [],
+      "groups": [
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-acquisition.jpg",
+          "label": "acquisition",
+          "frames": [
+            {
+              "t": 147.72,
+              "progress": 0.395,
+              "direction": "F"
+            },
+            {
+              "t": 149.36,
+              "progress": 0.435,
+              "direction": "F"
+            },
+            {
+              "t": 150.8,
+              "progress": 0.47,
+              "direction": "F"
+            },
+            {
+              "t": 152.4,
+              "progress": 0.51,
+              "direction": "F"
+            },
+            {
+              "t": 153.96,
+              "progress": 0.548,
+              "direction": "F"
+            },
+            {
+              "t": 154.08,
+              "progress": 0.548,
+              "direction": "R"
+            },
+            {
+              "t": 155.24,
+              "progress": 0.51,
+              "direction": "R"
+            },
+            {
+              "t": 156.44,
+              "progress": 0.47,
+              "direction": "R"
+            },
+            {
+              "t": 157.48,
+              "progress": 0.435,
+              "direction": "R"
+            },
+            {
+              "t": 158.68,
+              "progress": 0.395,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-earth-arrival.jpg",
+          "label": "earth-arrival",
+          "frames": [
+            {
+              "t": 159.24,
+              "progress": 0.755,
+              "direction": "F"
+            },
+            {
+              "t": 160.56,
+              "progress": 0.79,
+              "direction": "F"
+            },
+            {
+              "t": 162.04,
+              "progress": 0.83,
+              "direction": "F"
+            },
+            {
+              "t": 163.88,
+              "progress": 0.88,
+              "direction": "F"
+            },
+            {
+              "t": 165.4,
+              "progress": 0.921,
+              "direction": "F"
+            },
+            {
+              "t": 165.68,
+              "progress": 0.921,
+              "direction": "R"
+            },
+            {
+              "t": 166.8,
+              "progress": 0.88,
+              "direction": "R"
+            },
+            {
+              "t": 168.16,
+              "progress": 0.83,
+              "direction": "R"
+            },
+            {
+              "t": 169.28,
+              "progress": 0.79,
+              "direction": "R"
+            },
+            {
+              "t": 170.24,
+              "progress": 0.755,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-earth-britain.jpg",
+          "label": "earth-britain",
+          "frames": [
+            {
+              "t": 170.84,
+              "progress": 1.24,
+              "direction": "F"
+            },
+            {
+              "t": 173.2,
+              "progress": 1.285,
+              "direction": "F"
+            },
+            {
+              "t": 173.96,
+              "progress": 1.3,
+              "direction": "F"
+            },
+            {
+              "t": 175.12,
+              "progress": 1.322,
+              "direction": "F"
+            },
+            {
+              "t": 176.84,
+              "progress": 1.355,
+              "direction": "F"
+            },
+            {
+              "t": 177.28,
+              "progress": 1.355,
+              "direction": "R"
+            },
+            {
+              "t": 178.56,
+              "progress": 1.322,
+              "direction": "R"
+            },
+            {
+              "t": 179.4,
+              "progress": 1.3,
+              "direction": "R"
+            },
+            {
+              "t": 179.96,
+              "progress": 1.285,
+              "direction": "R"
+            },
+            {
+              "t": 181.72,
+              "progress": 1.24,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-britain-site.jpg",
+          "label": "britain-site",
+          "frames": [
+            {
+              "t": 182.32,
+              "progress": 1.49,
+              "direction": "F"
+            },
+            {
+              "t": 184.08,
+              "progress": 1.53,
+              "direction": "F"
+            },
+            {
+              "t": 184.92,
+              "progress": 1.55,
+              "direction": "F"
+            },
+            {
+              "t": 186.0,
+              "progress": 1.575,
+              "direction": "F"
+            },
+            {
+              "t": 188.2,
+              "progress": 1.625,
+              "direction": "F"
+            },
+            {
+              "t": 188.92,
+              "progress": 1.625,
+              "direction": "R"
+            },
+            {
+              "t": 190.52,
+              "progress": 1.575,
+              "direction": "R"
+            },
+            {
+              "t": 191.32,
+              "progress": 1.55,
+              "direction": "R"
+            },
+            {
+              "t": 191.96,
+              "progress": 1.53,
+              "direction": "R"
+            },
+            {
+              "t": 193.24,
+              "progress": 1.49,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-glass.jpg",
+          "label": "glass",
+          "frames": [
+            {
+              "t": 193.8,
+              "progress": 2.07,
+              "direction": "F"
+            },
+            {
+              "t": 197.36,
+              "progress": 2.3,
+              "direction": "F"
+            },
+            {
+              "t": 198.48,
+              "progress": 2.372,
+              "direction": "F"
+            },
+            {
+              "t": 198.8,
+              "progress": 2.395,
+              "direction": "F"
+            },
+            {
+              "t": 199.96,
+              "progress": 2.47,
+              "direction": "F"
+            },
+            {
+              "t": 200.24,
+              "progress": 2.47,
+              "direction": "R"
+            },
+            {
+              "t": 201.12,
+              "progress": 2.395,
+              "direction": "R"
+            },
+            {
+              "t": 201.36,
+              "progress": 2.372,
+              "direction": "R"
+            },
+            {
+              "t": 202.2,
+              "progress": 2.3,
+              "direction": "R"
+            },
+            {
+              "t": 204.8,
+              "progress": 2.07,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-absorption.jpg",
+          "label": "absorption",
+          "frames": [
+            {
+              "t": 205.32,
+              "progress": 2.606,
+              "direction": "F"
+            },
+            {
+              "t": 206.56,
+              "progress": 2.654,
+              "direction": "F"
+            },
+            {
+              "t": 207.44,
+              "progress": 2.688,
+              "direction": "F"
+            },
+            {
+              "t": 208.68,
+              "progress": 2.735,
+              "direction": "F"
+            },
+            {
+              "t": 211.4,
+              "progress": 2.84,
+              "direction": "F"
+            },
+            {
+              "t": 211.84,
+              "progress": 2.84,
+              "direction": "R"
+            },
+            {
+              "t": 213.88,
+              "progress": 2.735,
+              "direction": "R"
+            },
+            {
+              "t": 214.76,
+              "progress": 2.688,
+              "direction": "R"
+            },
+            {
+              "t": 215.44,
+              "progress": 2.654,
+              "direction": "R"
+            },
+            {
+              "t": 216.36,
+              "progress": 2.606,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-contact-dc.jpg",
+          "label": "contact-dc",
+          "frames": [
+            {
+              "t": 216.88,
+              "progress": 3.02,
+              "direction": "F"
+            },
+            {
+              "t": 218.28,
+              "progress": 3.06,
+              "direction": "F"
+            },
+            {
+              "t": 218.92,
+              "progress": 3.078,
+              "direction": "F"
+            },
+            {
+              "t": 219.88,
+              "progress": 3.105,
+              "direction": "F"
+            },
+            {
+              "t": 222.84,
+              "progress": 3.19,
+              "direction": "F"
+            },
+            {
+              "t": 223.48,
+              "progress": 3.19,
+              "direction": "R"
+            },
+            {
+              "t": 225.68,
+              "progress": 3.105,
+              "direction": "R"
+            },
+            {
+              "t": 226.36,
+              "progress": 3.078,
+              "direction": "R"
+            },
+            {
+              "t": 226.84,
+              "progress": 3.06,
+              "direction": "R"
+            },
+            {
+              "t": 227.88,
+              "progress": 3.02,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-inverter-entry.jpg",
+          "label": "inverter-entry",
+          "frames": [
+            {
+              "t": 228.28,
+              "progress": 4.09,
+              "direction": "F"
+            },
+            {
+              "t": 229.32,
+              "progress": 4.18,
+              "direction": "F"
+            },
+            {
+              "t": 230.92,
+              "progress": 4.32,
+              "direction": "F"
+            },
+            {
+              "t": 232.76,
+              "progress": 4.48,
+              "direction": "F"
+            },
+            {
+              "t": 234.56,
+              "progress": 4.635,
+              "direction": "F"
+            },
+            {
+              "t": 234.84,
+              "progress": 4.635,
+              "direction": "R"
+            },
+            {
+              "t": 236.16,
+              "progress": 4.48,
+              "direction": "R"
+            },
+            {
+              "t": 237.52,
+              "progress": 4.32,
+              "direction": "R"
+            },
+            {
+              "t": 238.72,
+              "progress": 4.18,
+              "direction": "R"
+            },
+            {
+              "t": 239.48,
+              "progress": 4.09,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-storage-grid-brand.jpg",
+          "label": "storage-grid-brand",
+          "frames": [
+            {
+              "t": 240.52,
+              "progress": 4.9,
+              "direction": "F"
+            },
+            {
+              "t": 243.52,
+              "progress": 5.13,
+              "direction": "F"
+            },
+            {
+              "t": 247.0,
+              "progress": 5.4,
+              "direction": "F"
+            },
+            {
+              "t": 249.84,
+              "progress": 5.62,
+              "direction": "F"
+            },
+            {
+              "t": 255.32,
+              "progress": 6.045,
+              "direction": "F"
+            },
+            {
+              "t": 256.08,
+              "progress": 6.045,
+              "direction": "R"
+            },
+            {
+              "t": 259.84,
+              "progress": 5.62,
+              "direction": "R"
+            },
+            {
+              "t": 261.8,
+              "progress": 5.4,
+              "direction": "R"
+            },
+            {
+              "t": 264.2,
+              "progress": 5.13,
+              "direction": "R"
+            },
+            {
+              "t": 266.24,
+              "progress": 4.9,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-absorption-no-copy.jpg",
+          "label": "absorption-no-copy",
+          "frames": [
+            {
+              "t": 267.08,
+              "progress": 2.61,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 268.24,
+              "progress": 2.655,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 268.88,
+              "progress": 2.68,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 269.68,
+              "progress": 2.71,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 270.96,
+              "progress": 2.76,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 273.04,
+              "progress": 2.84,
+              "direction": "F",
+              "inferredStart": true
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-dc-no-copy.jpg",
+          "label": "dc-no-copy",
+          "frames": [
+            {
+              "t": 274.12,
+              "progress": 3.04,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 274.96,
+              "progress": 3.068,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 275.4,
+              "progress": 3.082,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 276.08,
+              "progress": 3.105,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 277.76,
+              "progress": 3.16,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 279.56,
+              "progress": 3.22,
+              "direction": "F",
+              "inferredStart": true
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/laptop-moving-machinery.jpg",
+          "label": "moving-machinery",
+          "frames": [
+            {
+              "t": 231.24,
+              "progress": 4.3458,
+              "direction": "F"
+            },
+            {
+              "t": 231.8,
+              "progress": 4.3936,
+              "direction": "F"
+            },
+            {
+              "t": 232.32,
+              "progress": 4.4414,
+              "direction": "F"
+            },
+            {
+              "t": 232.88,
+              "progress": 4.4892,
+              "direction": "F"
+            },
+            {
+              "t": 233.44,
+              "progress": 4.537,
+              "direction": "F"
+            },
+            {
+              "t": 234.0,
+              "progress": 4.5848,
+              "direction": "F"
+            }
+          ],
+          "columns": 3
+        }
+      ],
+      "sourceSHA256": "cabe8b14d239aadf0790247cf657b9ed0677f0b104aa8fb36d1b056feb5207c4"
+    },
+    {
+      "name": "mobile",
+      "source": "docs/experience/stage-seven/motion/mobile-full-forward-reverse.webm",
+      "errors": [],
+      "warnings": [],
+      "groups": [
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-acquisition.jpg",
+          "label": "acquisition",
+          "frames": [
+            {
+              "t": 117.76,
+              "progress": 0.395,
+              "direction": "F"
+            },
+            {
+              "t": 119.36,
+              "progress": 0.435,
+              "direction": "F"
+            },
+            {
+              "t": 120.8,
+              "progress": 0.47,
+              "direction": "F"
+            },
+            {
+              "t": 122.4,
+              "progress": 0.51,
+              "direction": "F"
+            },
+            {
+              "t": 123.96,
+              "progress": 0.548,
+              "direction": "F"
+            },
+            {
+              "t": 124.12,
+              "progress": 0.548,
+              "direction": "R"
+            },
+            {
+              "t": 125.24,
+              "progress": 0.51,
+              "direction": "R"
+            },
+            {
+              "t": 126.44,
+              "progress": 0.47,
+              "direction": "R"
+            },
+            {
+              "t": 127.48,
+              "progress": 0.435,
+              "direction": "R"
+            },
+            {
+              "t": 128.68,
+              "progress": 0.395,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-earth-arrival.jpg",
+          "label": "earth-arrival",
+          "frames": [
+            {
+              "t": 129.28,
+              "progress": 0.755,
+              "direction": "F"
+            },
+            {
+              "t": 130.56,
+              "progress": 0.79,
+              "direction": "F"
+            },
+            {
+              "t": 132.04,
+              "progress": 0.83,
+              "direction": "F"
+            },
+            {
+              "t": 133.92,
+              "progress": 0.88,
+              "direction": "F"
+            },
+            {
+              "t": 135.44,
+              "progress": 0.921,
+              "direction": "F"
+            },
+            {
+              "t": 135.68,
+              "progress": 0.921,
+              "direction": "R"
+            },
+            {
+              "t": 136.8,
+              "progress": 0.88,
+              "direction": "R"
+            },
+            {
+              "t": 138.2,
+              "progress": 0.83,
+              "direction": "R"
+            },
+            {
+              "t": 139.28,
+              "progress": 0.79,
+              "direction": "R"
+            },
+            {
+              "t": 140.24,
+              "progress": 0.755,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-earth-britain.jpg",
+          "label": "earth-britain",
+          "frames": [
+            {
+              "t": 140.88,
+              "progress": 1.24,
+              "direction": "F"
+            },
+            {
+              "t": 143.2,
+              "progress": 1.285,
+              "direction": "F"
+            },
+            {
+              "t": 144.0,
+              "progress": 1.3,
+              "direction": "F"
+            },
+            {
+              "t": 145.12,
+              "progress": 1.322,
+              "direction": "F"
+            },
+            {
+              "t": 146.84,
+              "progress": 1.355,
+              "direction": "F"
+            },
+            {
+              "t": 147.28,
+              "progress": 1.355,
+              "direction": "R"
+            },
+            {
+              "t": 148.56,
+              "progress": 1.322,
+              "direction": "R"
+            },
+            {
+              "t": 149.4,
+              "progress": 1.3,
+              "direction": "R"
+            },
+            {
+              "t": 150.0,
+              "progress": 1.285,
+              "direction": "R"
+            },
+            {
+              "t": 151.72,
+              "progress": 1.24,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-britain-site.jpg",
+          "label": "britain-site",
+          "frames": [
+            {
+              "t": 152.32,
+              "progress": 1.49,
+              "direction": "F"
+            },
+            {
+              "t": 154.08,
+              "progress": 1.53,
+              "direction": "F"
+            },
+            {
+              "t": 154.92,
+              "progress": 1.55,
+              "direction": "F"
+            },
+            {
+              "t": 156.04,
+              "progress": 1.575,
+              "direction": "F"
+            },
+            {
+              "t": 158.2,
+              "progress": 1.625,
+              "direction": "F"
+            },
+            {
+              "t": 158.96,
+              "progress": 1.625,
+              "direction": "R"
+            },
+            {
+              "t": 160.56,
+              "progress": 1.575,
+              "direction": "R"
+            },
+            {
+              "t": 161.36,
+              "progress": 1.55,
+              "direction": "R"
+            },
+            {
+              "t": 162.0,
+              "progress": 1.53,
+              "direction": "R"
+            },
+            {
+              "t": 163.28,
+              "progress": 1.49,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-glass.jpg",
+          "label": "glass",
+          "frames": [
+            {
+              "t": 163.8,
+              "progress": 2.07,
+              "direction": "F"
+            },
+            {
+              "t": 167.36,
+              "progress": 2.3,
+              "direction": "F"
+            },
+            {
+              "t": 168.48,
+              "progress": 2.372,
+              "direction": "F"
+            },
+            {
+              "t": 168.84,
+              "progress": 2.395,
+              "direction": "F"
+            },
+            {
+              "t": 170.0,
+              "progress": 2.47,
+              "direction": "F"
+            },
+            {
+              "t": 170.24,
+              "progress": 2.47,
+              "direction": "R"
+            },
+            {
+              "t": 171.12,
+              "progress": 2.395,
+              "direction": "R"
+            },
+            {
+              "t": 171.36,
+              "progress": 2.372,
+              "direction": "R"
+            },
+            {
+              "t": 172.2,
+              "progress": 2.3,
+              "direction": "R"
+            },
+            {
+              "t": 174.84,
+              "progress": 2.07,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-absorption.jpg",
+          "label": "absorption",
+          "frames": [
+            {
+              "t": 175.32,
+              "progress": 2.606,
+              "direction": "F"
+            },
+            {
+              "t": 176.56,
+              "progress": 2.654,
+              "direction": "F"
+            },
+            {
+              "t": 177.44,
+              "progress": 2.688,
+              "direction": "F"
+            },
+            {
+              "t": 178.68,
+              "progress": 2.735,
+              "direction": "F"
+            },
+            {
+              "t": 181.4,
+              "progress": 2.84,
+              "direction": "F"
+            },
+            {
+              "t": 181.88,
+              "progress": 2.84,
+              "direction": "R"
+            },
+            {
+              "t": 183.88,
+              "progress": 2.735,
+              "direction": "R"
+            },
+            {
+              "t": 184.8,
+              "progress": 2.688,
+              "direction": "R"
+            },
+            {
+              "t": 185.44,
+              "progress": 2.654,
+              "direction": "R"
+            },
+            {
+              "t": 186.36,
+              "progress": 2.606,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-contact-dc.jpg",
+          "label": "contact-dc",
+          "frames": [
+            {
+              "t": 186.88,
+              "progress": 3.02,
+              "direction": "F"
+            },
+            {
+              "t": 188.28,
+              "progress": 3.06,
+              "direction": "F"
+            },
+            {
+              "t": 188.92,
+              "progress": 3.078,
+              "direction": "F"
+            },
+            {
+              "t": 189.84,
+              "progress": 3.105,
+              "direction": "F"
+            },
+            {
+              "t": 192.84,
+              "progress": 3.19,
+              "direction": "F"
+            },
+            {
+              "t": 193.44,
+              "progress": 3.19,
+              "direction": "R"
+            },
+            {
+              "t": 195.64,
+              "progress": 3.105,
+              "direction": "R"
+            },
+            {
+              "t": 196.36,
+              "progress": 3.078,
+              "direction": "R"
+            },
+            {
+              "t": 196.84,
+              "progress": 3.06,
+              "direction": "R"
+            },
+            {
+              "t": 197.84,
+              "progress": 3.02,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-inverter-entry.jpg",
+          "label": "inverter-entry",
+          "frames": [
+            {
+              "t": 198.28,
+              "progress": 4.09,
+              "direction": "F"
+            },
+            {
+              "t": 199.32,
+              "progress": 4.18,
+              "direction": "F"
+            },
+            {
+              "t": 200.92,
+              "progress": 4.32,
+              "direction": "F"
+            },
+            {
+              "t": 202.76,
+              "progress": 4.48,
+              "direction": "F"
+            },
+            {
+              "t": 204.56,
+              "progress": 4.635,
+              "direction": "F"
+            },
+            {
+              "t": 204.84,
+              "progress": 4.635,
+              "direction": "R"
+            },
+            {
+              "t": 206.16,
+              "progress": 4.48,
+              "direction": "R"
+            },
+            {
+              "t": 207.52,
+              "progress": 4.32,
+              "direction": "R"
+            },
+            {
+              "t": 208.72,
+              "progress": 4.18,
+              "direction": "R"
+            },
+            {
+              "t": 209.48,
+              "progress": 4.09,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-storage-grid-brand.jpg",
+          "label": "storage-grid-brand",
+          "frames": [
+            {
+              "t": 210.52,
+              "progress": 4.9,
+              "direction": "F"
+            },
+            {
+              "t": 213.48,
+              "progress": 5.13,
+              "direction": "F"
+            },
+            {
+              "t": 217.0,
+              "progress": 5.4,
+              "direction": "F"
+            },
+            {
+              "t": 219.8,
+              "progress": 5.62,
+              "direction": "F"
+            },
+            {
+              "t": 225.32,
+              "progress": 6.045,
+              "direction": "F"
+            },
+            {
+              "t": 226.08,
+              "progress": 6.045,
+              "direction": "R"
+            },
+            {
+              "t": 229.84,
+              "progress": 5.62,
+              "direction": "R"
+            },
+            {
+              "t": 231.8,
+              "progress": 5.4,
+              "direction": "R"
+            },
+            {
+              "t": 234.2,
+              "progress": 5.13,
+              "direction": "R"
+            },
+            {
+              "t": 236.24,
+              "progress": 4.9,
+              "direction": "R"
+            }
+          ],
+          "columns": 5
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-absorption-no-copy.jpg",
+          "label": "absorption-no-copy",
+          "frames": [
+            {
+              "t": 237.08,
+              "progress": 2.61,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 238.24,
+              "progress": 2.655,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 238.88,
+              "progress": 2.68,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 239.68,
+              "progress": 2.71,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 240.96,
+              "progress": 2.76,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 243.04,
+              "progress": 2.84,
+              "direction": "F",
+              "inferredStart": true
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-dc-no-copy.jpg",
+          "label": "dc-no-copy",
+          "frames": [
+            {
+              "t": 244.12,
+              "progress": 3.04,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 244.96,
+              "progress": 3.068,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 245.4,
+              "progress": 3.082,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 246.08,
+              "progress": 3.105,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 247.76,
+              "progress": 3.16,
+              "direction": "F",
+              "inferredStart": true
+            },
+            {
+              "t": 249.56,
+              "progress": 3.22,
+              "direction": "F",
+              "inferredStart": true
+            }
+          ],
+          "columns": 3
+        },
+        {
+          "sheet": "docs/experience/stage-seven/motion-review/mobile-moving-machinery.jpg",
+          "label": "moving-machinery",
+          "frames": [
+            {
+              "t": 201.24,
+              "progress": 4.3458,
+              "direction": "F"
+            },
+            {
+              "t": 201.76,
+              "progress": 4.3936,
+              "direction": "F"
+            },
+            {
+              "t": 202.32,
+              "progress": 4.4414,
+              "direction": "F"
+            },
+            {
+              "t": 202.88,
+              "progress": 4.4892,
+              "direction": "F"
+            },
+            {
+              "t": 203.44,
+              "progress": 4.537,
+              "direction": "F"
+            },
+            {
+              "t": 203.96,
+              "progress": 4.5848,
+              "direction": "F"
+            }
+          ],
+          "columns": 3
+        }
+      ],
+      "sourceSHA256": "ec181d629ae33ccdd77becd17285f156201b02b752de71409929e42898aa6cbb"
+    }
+  ]
+}

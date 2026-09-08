@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {createEquipmentDetail} from './equipment-detail.ts';
 import {STORAGE_ANCHORS,STORAGE_PATHS,STORAGE_PORTS} from './storage-path.ts';
 
 /** Original unbranded storage/service equipment. No external assets, textures,
@@ -200,6 +201,8 @@ export function createStorageScene(tier:StorageTier):StorageScene{
   let drawCalls=0,triangles=0,geometryBytes=0;
   group.traverse(o=>{if(o instanceof THREE.Mesh){drawCalls++;triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3*(o instanceof THREE.InstancedMesh?o.count:1);}if(o instanceof THREE.InstancedMesh)geometryBytes+=o.instanceMatrix.array.byteLength;});
   for(const g of geometries){for(const attribute of Object.values(g.attributes))geometryBytes+=attribute.array.byteLength;if(g.index)geometryBytes+=g.index.array.byteLength;}
+  const refinement=createEquipmentDetail('storage');equipment.add(refinement.group);bounds.union(refinement.bounds);equipmentBounds.union(refinement.bounds);
+  drawCalls+=refinement.stats.drawCalls;triangles+=refinement.stats.triangles;geometryBytes+=refinement.stats.geometryBytes;instances+=refinement.stats.instances;
   const stats={drawCalls,triangles,geometryBytes,textureBytes:0,instances};let disposed=false;
   if(drawCalls>18||triangles>12000||geometryBytes>180000)throw new Error(`Storage asset budget exceeded: ${JSON.stringify(stats)}`);
   return{group,equipment,paths:STORAGE_PATHS,ports:STORAGE_PORTS,anchors:STORAGE_ANCHORS,bounds,equipmentBounds,stats,
@@ -214,6 +217,6 @@ export function createStorageScene(tier:StorageTier):StorageScene{
       flowMaterial.uniforms.uTime.value=Number.isFinite(time)?time%3600:0;flowMesh.visible=Math.abs(storage)+Math.abs(grid)>.001;
       levelMaterial.uniforms.uStored.value=stored;levelMaterial.uniforms.uDusk.value=clamp(state.dusk);
     },
-    dispose(){if(disposed)return;disposed=true;group.traverse(o=>{if(o instanceof THREE.InstancedMesh)o.dispose();});for(const g of geometries)g.dispose();for(const m of materials)m.dispose();group.clear();group.removeFromParent();},
+    dispose(){if(disposed)return;disposed=true;refinement.dispose();group.traverse(o=>{if(o instanceof THREE.InstancedMesh)o.dispose();});for(const g of geometries)g.dispose();for(const m of materials)m.dispose();group.clear();group.removeFromParent();},
   };
 }

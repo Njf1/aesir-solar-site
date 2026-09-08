@@ -310,6 +310,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   const local = new THREE.Vector3();
   function panelPart(key: string, material: THREE.Material, centre: THREE.Vector3, lx: number, ly: number, lz: number, sx: number, sy: number, sz: number) {
     local.set(lx, ly, lz).applyQuaternion(panelRotation).add(centre);
+    // Recessed back avoids coplanar side faces inside the frame (close-view z fighting).
     // The module back casts the array's footprint; tiny frames/clamps need no extra shadow pass.
     box(key, material, local.x, local.y, local.z, sx, sy, sz, panelRotation, undefined, key !== 'PV aluminium frames' && key !== 'PV clamps');
   }
@@ -322,7 +323,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
       if (isReserved(x, z)) continue;
       panelCount++;
       const centre = new THREE.Vector3(x, roofY + .33, z);
-      panelPart('PV module backs', panelBacking, centre, 0, .012, 0, panelWidth, .030, panelLength);
+      panelPart('PV module backs', panelBacking, centre, 0, .012, 0, panelWidth-.049, .030, panelLength-.049);
       for (const side of [-1, 1]) {
         panelPart('PV aluminium frames', aluminium, centre, side * (panelWidth / 2 - .012), .035, 0, .024, .044, panelLength);
         panelPart('PV aluminium frames', aluminium, centre, 0, .035, side * (panelLength / 2 - .012), panelWidth - .048, .044, .024);
@@ -418,10 +419,24 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   }
   for (let z = -38; z <= 42; z += 4) cylinder('perimeter fence posts', darkMetal, 63.3, 1.05, z, .033, 2.1);
   for (const y of [.46, 1.52]) box('perimeter fence rails', darkMetal, 63.3, y, 2, .026, .028, 83);
+  // Dusk practical sources and finite receiver footprints. The pools belong to
+  // existing pavement/asphalt; no volumetric glow, shadow lights or new textures.
+  const practicalLens=ownMaterial(new THREE.MeshStandardMaterial({color:0xbab6a8,roughness:.6,emissive:0xffcd8a,emissiveIntensity:0}));
+  const practicalMaterial=ownMaterial(new THREE.ShaderMaterial({transparent:true,depthWrite:false,toneMapped:false,
+    uniforms:{uLevel:{value:0},uWarm:{value:new THREE.Color(0xffc77b)}},
+    vertexShader:'varying vec2 vUv;varying vec3 vReceiver;void main(){vUv=uv;vec4 receiver=instanceMatrix*vec4(position,1.);vReceiver=receiver.xyz;gl_Position=projectionMatrix*modelViewMatrix*receiver;}',
+    fragmentShader:`varying vec2 vUv;varying vec3 vReceiver;uniform float uLevel;uniform vec3 uWarm;void main(){if(abs(vReceiver.y-.082)<.001&&(vReceiver.x<42.||vReceiver.x>62.||vReceiver.z< -38.5||vReceiver.z>40.5))discard;vec2 p=(vUv-.5)*2.;float r=length(p);float pool=exp(-dot(p,p)*2.4)*(1.-smoothstep(.65,1.,r));gl_FragColor=vec4(uWarm,pool*uLevel);#include <colorspace_fragment>\n}`.replace(';#include',';\n#include')
+  }));
+  const poolSites=[[-46,.049,34,8.5,8.5],[49,.082,39,8.5,8.5],[58,.082,-30,8.5,8.5],[-42,.049,-35,8.5,8.5],[0,.234,36.9,5.6,3.8],[5,.234,36.9,5.6,3.8],[10,.234,36.9,5.6,3.8]];
+  const pools=new THREE.InstancedMesh(planeGeometry,practicalMaterial,poolSites.length);pools.name='Finite dusk pavement light pools';pools.visible=false;
+  const poolMatrix=new THREE.Matrix4(),poolRotation=new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI/2,0,0));
+  poolSites.forEach(([x,y,z,w,d],i)=>pools.setMatrixAt(i,poolMatrix.compose(new THREE.Vector3(x,y,z),poolRotation,new THREE.Vector3(w,d,1))));pools.instanceMatrix.needsUpdate=true;pools.computeBoundingBox();pools.computeBoundingSphere();group.add(pools);
+  for(const x of[0,5,10])box('canopy light lenses',practicalLens,x,4.285,36.1,.5,.025,.24,identity,undefined,false);
   // Street furniture uses compact cylinders rather than high-polygon imported props.
   for (const [x, z] of [[-46, 34], [49, 39], [58, -30], [-42, -35]]) {
     cylinder('site light poles', darkMetal, x, 3.7, z, .061, 7.4);
     box('site light heads', charcoal, x, 7.43, z + .35, .27, .13, .9);
+    box('practical light lenses',practicalLens,x,7.36,z+.35,.22,.015,.78,identity,undefined,false);
   }
 
   let drawCalls = 0, triangles = 0, instances = 0, instancedMeshes = 0;
@@ -438,7 +453,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
   // Instance matrices are now on the meshes; release the temporary placement objects.
   batches.clear();
   // Statistics conservatively include fine hero detail even when its LOD is hidden.
-  drawCalls += 3; instances += contactCount;
+  drawCalls += 4; instances += contactCount + poolSites.length; triangles += poolSites.length*2; instancedMeshes++;
   triangles += contactCount * 12 + 12 + cableTriangles;
   group.updateMatrixWorld(true);
   const bounds = new THREE.Box3().setFromObject(group);
@@ -449,6 +464,7 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
     group, heroAnchor, heroNormal, roofY, bounds, stats,
     setOperation(section,activity,dusk){
       if(disposed)return;officeWindow.emissiveIntensity=activity*(.12+dusk*.62);
+      const practicalLevel=activity*dusk;practicalLens.emissiveIntensity=practicalLevel*.8;practicalMaterial.uniforms.uLevel.value=practicalLevel*.19;pools.visible=practicalLevel>.001;
       if(section===lastSection)return;lastSection=section;
       for(const{mesh,index,item}of sectionInstances){sectionPosition.copy(item.position);sectionScale.copy(item.scale);sectionPosition.y+=item.scale.y*section*.5;sectionScale.y=Math.max(.00001,item.scale.y*(1-section));matrix.compose(sectionPosition,item.rotation,sectionScale);mesh.setMatrixAt(index,matrix);mesh.instanceMatrix.needsUpdate=true;}
     },

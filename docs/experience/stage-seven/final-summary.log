@@ -1,0 +1,12 @@
+Checked 8 supporting pages and the index compatibility copy; experience.html remains authoritative.
+{
+  "checks": "78 Node /112 browser",
+  "experienceJsGzip": 254502,
+  "allBrowserJsGzip": 262670,
+  "p95Range": [
+    17.299999999999272,
+    17.5
+  ],
+  "sourceHashCount": 134,
+  "releaseFileCount": 52
+}

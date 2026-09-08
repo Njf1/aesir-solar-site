@@ -29,9 +29,9 @@ void main(){
  float basin=smoothstep(.58,.74,fbm(p*9.+warp*1.6));
  float hot=pow(clamp(activity*1.14,0.,1.),12.)*.52+threads*.065;
  float heat=clamp(.17+region*.21+activity*.35+lanes*.14+fine*.055-basin*.31+hot,0.,1.);
- vec3 ember=vec3(.28,.045,.006),gold=vec3(1.16,.34,.066),ivory=vec3(2.6,1.92,1.05);
+ vec3 ember=vec3(.46,.063,.008),gold=vec3(2.15,.66,.12),ivory=vec3(3.9,2.55,1.25);
  vec3 color=mix(ember,gold,smoothstep(.13,.66,heat));
- color=mix(color,ivory,pow(smoothstep(.66,.91,heat),3.));
+ color=mix(color,ivory,pow(smoothstep(.59,.85,heat),2.));
  float facing=max(0.,dot(normalize(vNormal),normalize(cameraPosition-vWorld)));
  color*=.55+.45*pow(facing,.24);
  color+=vec3(1.2,.51,.14)*pow(1.-facing,8.)*.6;
@@ -51,14 +51,17 @@ void main(){
  float rays=pow(strands,3.)*exp(-outer*11.)*broad;
  float glow=exp(-outer*72.)*.5+exp(-outer*14.)*.045;
  float a=(glow+rays*.8)*smoothstep(edge-.006,edge+.006,r)*(1.-smoothstep(.75,1.,r));
- gl_FragColor=vec4(vec3(1.,.63,.23)*a,a);
+ gl_FragColor=vec4(vec3(1.,.34,.055),a*.60);
+ #include <colorspace_fragment>
 }`;
 export const prominenceVertex = /* glsl */`
 uniform float uTime;uniform float uSeed;varying vec2 vUv;
 void main(){vUv=uv;vec3 p=position;float weight=sin(uv.x*3.14159265);p+=normal*sin(uTime*.20+uv.x*8.+uSeed)*.05*weight;gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`;
 export const prominenceFragment = /* glsl */`
 uniform float uTime;uniform float uSeed;uniform float uOpacity;varying vec2 vUv;
-void main(){float flow=.65+.35*sin(vUv.x*24.-uTime*.48+uSeed);float edge=.5+.5*sin(vUv.y*6.283);float a=(.35+.65*flow)*edge*uOpacity;gl_FragColor=vec4(vec3(2.0,.58,.08)*a,a);}`;
+void main(){float flow=.65+.35*sin(vUv.x*24.-uTime*.48+uSeed);float edge=.5+.5*sin(vUv.y*6.283);float a=(.35+.65*flow)*edge*uOpacity;gl_FragColor=vec4(vec3(1.4,.20,.018),a*.68);
+#include <colorspace_fragment>
+}`;
 export const pulseFragment = /* glsl */`
 uniform float uOpacity;varying vec2 vUv;
 void main(){vec2 p=(vUv-.5)*2.;float core=exp(-length(p)*50.);float halo=exp(-length(p)*10.)*.14;float ray=exp(-abs(p.y)*90.)*exp(-abs(p.x)*5.)*.2;float a=(core+halo+ray)*uOpacity;gl_FragColor=vec4(vec3(1.,.89,.64)*a,a);}`;

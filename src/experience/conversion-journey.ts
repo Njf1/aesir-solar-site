@@ -13,13 +13,13 @@ export interface ConversionState{section:number;absorption:number;extraction:num
 export function conversionState(p:number):ConversionState{
  const absorption=smooth((p-2.655)/.055),extraction=smooth((p-2.71)/.14);
  return{section:smooth((p-2.40)/.12),absorption,extraction,incident:1-absorption,
- energyU:smooth((p-CELL_EXIT)/(.65)),ac:smooth((p-3.80)/.18),
- transition:Math.max(fadeWindow(p,2.348,2.375,2.385,2.416),fadeWindow(p,3.052,3.075,3.085,3.112)),
+ energyU:p<CELL_EXIT?0:.004+.996*smooth((p-CELL_EXIT)/(.65)),ac:smooth((p-3.80)/.18),
+ transition:Math.max(fadeWindow(p,2.348,2.375,2.385,2.416),0.24*fadeWindow(p,3.052,3.075,3.085,3.112)),
  transitionKind:p<2.8?'glass':'contact'};
 }
 export const conversionCopy=(p:number)=>[
  fadeWindow(p,2.42,2.455,2.515,2.555),
- fadeWindow(p,2.60,2.635,2.795,2.845),
+ fadeWindow(p,2.565,2.595,2.645,2.685),
  fadeWindow(p,3.17,3.205,3.40,3.47),
  fadeWindow(p,3.62,3.665,3.76,3.80),
 ];
@@ -42,8 +42,8 @@ function authored(points:Vector3[],knots:number[]){
 const CELL_ENTRY_CAMERA=TARGET_CELL_WORLD.clone().addScaledVector(PANEL_NORMAL,.10).addScaledVector(PANEL_DOWN,.09);
 const CELL_ENTRY_AIM=TARGET_CELL_WORLD.clone();
 const cellKnots=[CELL_SWITCH,2.52,2.70,2.88,2.965,3.018,3.055,CELL_EXIT];
-const cellCamera=authored([siteToCell(CELL_ENTRY_CAMERA),new Vector3(6.8,3.5,7.8),new Vector3(6.2,2.5,7.2),new Vector3(5.5,3.4,9),new Vector3(8,12,-28),new Vector3(-4,10,-64),new Vector3(-4,-10,-67),siteToCell(MODULE_RETURN_CAMERA)],cellKnots);
-const cellAim=authored([siteToCell(CELL_ENTRY_AIM),new Vector3(-3,0,0),new Vector3(-3,-.05,0),new Vector3(-1,-.1,0),new Vector3(-3,0,-10),new Vector3(-4,-.4,-24),siteToCell(MODULE_JUNCTION),siteToCell(MODULE_JUNCTION)],cellKnots);
+const cellCamera=authored([siteToCell(CELL_ENTRY_CAMERA),new Vector3(3.8,2.8,4.6),new Vector3(3.7,2.3,4.5),new Vector3(3.8,2.8,5.2),new Vector3(8,12,-28),new Vector3(-4,10,-64),new Vector3(-4,-10,-67),siteToCell(MODULE_RETURN_CAMERA)],cellKnots);
+const cellAim=authored([siteToCell(CELL_ENTRY_AIM),new Vector3(-.9,-.05,0),new Vector3(-.9,-.05,0),new Vector3(-.1,-.15,0),new Vector3(-3,0,-10),new Vector3(-4,-.4,-24),siteToCell(MODULE_JUNCTION),siteToCell(MODULE_JUNCTION)],cellKnots);
 const dcKnots=[CELL_EXIT,3.145,3.25,3.40,3.51,3.63,3.75,3.91,JOURNEY_END];
 const dcCamera=authored([MODULE_RETURN_CAMERA,new Vector3(-10,14.5,8.68),new Vector3(-6,14,16.5),new Vector3(-21,14,28.5),new Vector3(-45,15,28),new Vector3(-48,7,25),new Vector3(-46,3.2,21.5),new Vector3(-45.8,2.8,18),new Vector3(-46.8,2.8,18)],dcKnots);
 const dcAim=authored([MODULE_JUNCTION,new Vector3(-10,11.25,10.5),new Vector3(-10,11.2,21),new Vector3(-28,11.3,23.3),new Vector3(-40.5,10,23.3),new Vector3(-40.5,4,20.3),new Vector3(-40.6,2.4,17),new Vector3(-40.6,2.35,15.8),new Vector3(-40.6,2.35,15.8)],dcKnots);
@@ -57,7 +57,7 @@ export function extendConversion(progress:number,mode:Framing,accepted:JourneySh
  }
  if(p<CELL_EXIT){
   const cam=cellCamera.point(p),aim=cellAim.point(p),adapt=Math.sin(Math.PI*clamp((p-CELL_SWITCH)/(CELL_EXIT-CELL_SWITCH)))**2;
-  if(mode==='portrait'){cam.sub(aim).multiplyScalar(1+adapt*.62).add(aim);aim.y+=adapt*2.3;}
+  if(mode==='portrait'){cam.sub(aim).multiplyScalar(1+adapt*.18).add(aim);aim.x+=adapt*.30;aim.y+=adapt*1.10;}
   if(mode==='short'){cam.y+=adapt*1.2;cam.z+=adapt*1.4;}
   const tiltBlend=smooth((p-CELL_SWITCH)/.10)*(1-smooth((p-2.99)/.09));
   shot.up=a(siteDirectionToCell(new Vector3(0,1,0)).lerp(new Vector3(0,1,0),tiltBlend).normalize());

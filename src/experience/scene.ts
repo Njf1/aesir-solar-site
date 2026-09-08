@@ -1,3 +1,4 @@
+import {refineGeographicTransition,geographicTransitionUniforms,updateGeographicTransition,type GeographicUniforms} from './geographic-transition.ts';
 import * as THREE from 'three';
 import { framingFor, EARTH_POSITION, smooth } from './progress';
 import {sampleJourney,sampleGuide,guideTangent,type JourneyShot} from './journey';
@@ -10,6 +11,8 @@ import {ELECTRICAL_PATHS,ELECTRICAL_ANCHORS} from './electrical-path';
 import { selectQuality } from './quality';
 import { surfaceVertex, surfaceFragment, glowVertex, coronaFragment, pulseFragment, prominenceVertex, prominenceFragment, trailVertex, trailFragment, cloudTransitionFragment } from './shaders';
 import { EarthScene } from './earth';
+import {filterSolarFineDetail,stablePulseFragment,linearTrailFragment,configureLinearAdditive} from './render-detail';
+import {HERO_ANCHOR} from './site-layout';
 
 const TRAIL_RINGS = 80, TRAIL_SIDES = 6;
 export class SolarScene {
@@ -75,6 +78,8 @@ export class SolarScene {
   private projectionHead = new THREE.Vector3();
   private projectionNext = new THREE.Vector3();
   private lastShot = sampleJourney(0);
+  private renderedProgress=0;private frozenProgress:number|null=null;
+  setFrozen(frozen:boolean){this.frozenProgress=frozen?this.renderedProgress:null;}
   private trailHeadError = 0;
 
   constructor(private host: HTMLElement, private onFailure: (reason: string) => void, private onAssetReady: () => void = () => {}) {
@@ -91,7 +96,7 @@ export class SolarScene {
     this.renderer.domElement.addEventListener('webglcontextlost', this.contextLost);
     const sphere = this.geometry(new THREE.SphereGeometry(10, this.quality.segments, Math.round(this.quality.segments*.65)));
     const photosphere = this.material(new THREE.ShaderMaterial({
-      vertexShader: surfaceVertex, fragmentShader: surfaceFragment,
+      vertexShader: surfaceVertex, fragmentShader: filterSolarFineDetail(surfaceFragment),
       defines: { DETAIL: this.quality.detail }, uniforms: { uTime: { value: 0 } },
     }));
     this.photosphere = new THREE.Mesh(sphere, photosphere);this.solar.add(this.photosphere);
@@ -102,23 +107,23 @@ export class SolarScene {
     }));
     this.corona = new THREE.Mesh(this.geometry(new THREE.PlaneGeometry(40,40)),glowMaterial);
     this.solar.add(this.corona);this.scene.add(this.solar);this.makeProminences();
-    const pulseMat = this.material(new THREE.ShaderMaterial({ vertexShader:glowVertex,fragmentShader:pulseFragment,
-      uniforms:{uOpacity:{value:0}},transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,depthTest:false }));
+    const pulseMat = this.material(new THREE.ShaderMaterial({ vertexShader:glowVertex,fragmentShader:stablePulseFragment,
+      uniforms:{uOpacity:{value:0},uTint:{value:new THREE.Color(0xffedca)}},toneMapped:false,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,depthTest:false }));
     this.sourceGlint = new THREE.Mesh(this.geometry(new THREE.PlaneGeometry(1,1)),this.material(pulseMat.clone()));
     this.scene.add(this.sourceGlint);
     this.pulse = new THREE.Mesh(this.geometry(new THREE.PlaneGeometry(1,1)),pulseMat);
     this.pulseCore = new THREE.Mesh(this.geometry(new THREE.SphereGeometry(.032,12,8)),this.material(new THREE.MeshBasicMaterial({color:0xfff8e8,toneMapped:false})));
     this.scene.add(this.pulse,this.pulseCore);
     const trailGeometry = this.makeTrail();
-    this.trail = new THREE.Mesh(trailGeometry,this.material(new THREE.ShaderMaterial({vertexShader:trailVertex,fragmentShader:trailFragment,
-      uniforms:{uOpacity:{value:0}},transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide})));
+    this.trail = new THREE.Mesh(trailGeometry,this.material(new THREE.ShaderMaterial({vertexShader:trailVertex,fragmentShader:linearTrailFragment,
+      uniforms:{uOpacity:{value:0},uTint:{value:new THREE.Color(0xffd99a)}},toneMapped:false,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide})));
     this.trail.frustumCulled = false;this.scene.add(this.trail);
     this.stars = this.makeStars();this.scene.add(this.stars);
     this.sunlight.position.copy(SUN_LOCAL).multiplyScalar(210);this.sunlight.castShadow=true;
     const shadow=this.sunlight.shadow;shadow.mapSize.setScalar(this.quality.tier==='mobile'?1024:2048);Object.assign(shadow.camera,{left:-95,right:95,top:95,bottom:-95,near:10,far:380});shadow.bias=-.00025;shadow.normalBias=.025;
     this.scene.add(this.sunlight,this.sunlight.target,this.hemisphere);
-    const cloudMat=this.material(new THREE.ShaderMaterial({vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader:cloudTransitionFragment,
-      uniforms:{uTime:{value:0},uOpacity:{value:0},uKind:{value:0}},transparent:true,depthTest:false,depthWrite:false}));
+    const cloudMat=this.material(new THREE.ShaderMaterial({vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',fragmentShader:refineGeographicTransition(cloudTransitionFragment),
+      uniforms:{...geographicTransitionUniforms(),uTime:{value:0},uOpacity:{value:0},uKind:{value:0}},transparent:true,depthTest:false,depthWrite:false}));
     this.cloud=new THREE.Mesh(this.geometry(new THREE.PlaneGeometry(2,2)),cloudMat);this.cloud.frustumCulled=false;this.cloud.renderOrder=1000;this.scene.add(this.cloud);this.resize();
   }
   private geometry<T extends THREE.BufferGeometry>(g:T):T {this.geometries.push(g);return g;}
@@ -243,8 +248,8 @@ export class SolarScene {
       }else if(kind==='electrical'){
         const [{createElectricalScene},{EnergyFlow}]=await Promise.all([import('./electrical'),import('./energy-flow')]);if(this.disposed)return;
         const electrical=createElectricalScene(this.quality.tier==='mobile'?'mobile':'desktop');this.electrical=electrical;
-        this.dcFlow=new EnergyFlow(ELECTRICAL_PATHS.dcPositive,.035,176,false);this.acFlow=new EnergyFlow(ELECTRICAL_PATHS.acOutput,.021,64,false);electrical.group.add(this.dcFlow.mesh,this.acFlow.mesh);
-        assertBudget('electrical buffers with flow overlays',electrical.stats.geometryBytes+this.dcFlow.geometryBytes+this.acFlow.geometryBytes,ELECTRICAL_BUDGET.geometryBytes);assertBudget('electrical base draws',electrical.stats.drawCalls+2,ELECTRICAL_BUDGET.baseDrawCalls);assertBudget('electrical triangles',electrical.stats.triangles+2400,ELECTRICAL_BUDGET.triangles);
+        this.dcFlow=new EnergyFlow(ELECTRICAL_PATHS.dcPositive,.035,176,false,true);this.acFlow=new EnergyFlow(ELECTRICAL_PATHS.acOutput,.021,64,false);electrical.group.add(this.dcFlow.mesh,this.acFlow.mesh);
+        assertBudget('electrical buffers with flow overlays',electrical.stats.geometryBytes+this.dcFlow.geometryBytes+this.acFlow.geometryBytes,ELECTRICAL_BUDGET.geometryBytes);assertBudget('electrical base draws',electrical.stats.drawCalls+2,ELECTRICAL_BUDGET.baseDrawCalls);assertBudget('electrical triangles',electrical.stats.triangles+2405,ELECTRICAL_BUDGET.triangles);
         this.scene.environment=this.site?.env??null;await compileReady(this.renderer,electrical.group,this.camera,this.scene,this.warmupLifetime.signal);if(this.disposed)return;this.scene.add(electrical.group);
       }else if(kind==='business'){
         const {BusinessScene}=await import('./business');if(this.disposed)return;
@@ -281,12 +286,12 @@ export class SolarScene {
   render(delta:number) {
     if(this.disposed)return;
     this.ambientTime+=Math.min(delta,.05);
-    const p=this.displayedProgress();
+    const p=this.frozenProgress??this.displayedProgress();this.renderedProgress=p;
     const shot=sampleJourney(p,framingFor(this.width,this.height));this.lastShot=shot;const operation=shot.operation,dusk=operation?.dusk??0;
     const offset=shot.scene==='solar'?[0,0,0]:EARTH_POSITION;
     const ground=shot.scene==='region'||shot.scene==='site'||shot.scene==='cell';this.solar.visible=!ground;this.stars.visible=!ground;
     this.scene.background=shot.scene==='site'?this.sky:shot.scene==='region'?this.sea:this.black;
-    this.scene.environment=shot.scene==='site'||shot.scene==='cell'?this.site?.env??null:null;this.scene.environmentRotation.set(shot.scene==='cell'?-Math.atan2(.156434,.987688):0,0,0);this.sunlight.position.copy(shot.scene==='cell'?this.cellSun:SUN_LOCAL).multiplyScalar(210);this.scene.fog=shot.scene==='site'?this.siteFog:null;this.scene.environmentIntensity=shot.scene==='site'?.48:.10;this.siteFog.density=.0018/(framingFor(this.width,this.height)==='portrait'?2.6:1);
+    this.scene.environment=shot.scene==='site'||shot.scene==='cell'?this.site?.env??null:null;this.scene.environmentRotation.set(shot.scene==='cell'?-Math.atan2(.156434,.987688):0,0,0);this.sunlight.position.copy(shot.scene==='cell'?this.cellSun:SUN_LOCAL).multiplyScalar(210);this.scene.fog=shot.scene==='site'?this.siteFog:null;this.scene.environmentIntensity=shot.scene==='site'?.48:.34;this.siteFog.density=.0018/(framingFor(this.width,this.height)==='portrait'?2.6:1);
     this.sky.set('#bfd1dd').lerp(this.duskSky,dusk);this.siteFog.color.copy(this.sky);this.sunlight.intensity=2.5*(1-.82*dusk);this.hemisphere.intensity=.85*(1-.56*dusk);this.sunlight.position.y*=1-.48*dusk;if(shot.scene==='site')this.scene.environmentIntensity=.48*(1-.57*dusk);
     this.solar.position.set(-offset[0],-offset[1],-offset[2]);
     this.camera.position.set(...shot.camera);this.camera.up.set(...shot.up);this.camera.lookAt(...shot.target);this.camera.updateMatrixWorld();
@@ -324,17 +329,39 @@ export class SolarScene {
     if(this.business){this.business.group.visible=shot.scene==='site'&&p>4.18&&this.businessStatus==='ready';if(operation)this.business.render(operation,this.ambientTime);}
     if(this.storage){this.storage.group.visible=shot.scene==='site'&&p>4.92&&this.storageStatus==='ready';if(operation)this.storage.render(operation,this.ambientTime);}
     if(this.cell){this.cell.group.visible=shot.scene==='cell'&&this.cellStatus==='ready';if(shot.conversion)this.cell.render(shot.conversion,this.ambientTime);this.cellModuleFlow?.render(smooth((p-2.845)/.22),this.ambientTime,.65*smooth((p-2.845)/.04));}
+    // Brief sectional overlay keeps the supported under-module route readable as the
+    // camera rises; depth testing returns once the tray can be seen directly.
+    if(this.dcFlow)this.dcFlow.mesh.material.depthTest=p>=3.23;
     if(this.electrical){this.electrical.group.visible=shot.scene==='site'&&p>=CELL_EXIT&&this.electricalStatus==='ready';this.electrical.setProgress(shot.conversion?.ac??0,operation?.graphOpacity??1);this.dcFlow?.render(shot.conversion?.energyU??0,this.ambientTime,p>=CELL_EXIT?.8*(1-dusk)*(operation?1-smooth((p-4.45)/.15):1):0);this.acFlow?.render(shot.conversion?.ac??0,this.ambientTime,.85*(operation?1-smooth((p-4.7)/.16):1));}
     // A cached map must follow visible caster owners, including an owner that
     // finishes loading while scroll is stationary. Quantize only continuous light
     // and facade movement; settled operation does not redraw shadows every frame.
     const shadowScene=shot.scene==='site'||shot.scene==='cell'?shot.scene:'';
-    const shadowKey=`${shadowScene}:${Math.round((operation?.section??0)*24)}:${Math.round(dusk*16)}:${this.business?.group.visible?1:0}:${this.storage?.group.visible?1:0}`;
+    const focus=this.focusShadows(p,shot);
+    const shadowKey=`${focus}:${shadowScene}:${Math.round((operation?.section??0)*24)}:${Math.round(dusk*16)}:${shot.scene==='cell'?Math.round((shot.conversion?.section??0)*32):0}:${this.business?.group.visible?1:0}:${this.storage?.group.visible?1:0}`;
     if(shadowKey!==this.shadowOperationKey){this.renderer.shadowMap.needsUpdate=true;this.shadowOperationKey=shadowKey;this.shadowInvalidations++;}
     this.updateAnnotations(p,shot.conversion?.ac??0);this.updateStorageAnnotations(p);
+    updateGeographicTransition((this.cloud.material as THREE.ShaderMaterial).uniforms as GeographicUniforms,p,this.width/this.height);
     const transition=Math.max(shot.cloudOpacity,shot.conversion?.transition??0);this.cloud.visible=transition>.001;(this.cloud.material as THREE.ShaderMaterial).uniforms.uKind.value=shot.conversion?(shot.conversion.transitionKind==='glass'?1:2):0;(this.cloud.material as THREE.ShaderMaterial).uniforms.uTime.value=this.ambientTime;(this.cloud.material as THREE.ShaderMaterial).uniforms.uOpacity.value=transition;
     this.renderer.render(this.scene,this.camera);
     if(!this.shaderOK)this.onFailure('The live scene is unavailable. Application details are ready below.');
+  }
+  private focusShadows(p:number,shot:JourneyShot){
+    // Match shadow texel/depth precision to the subject, not a larger texture.
+    // Focus changes happen while approaching an already-dominant roof/cell.
+    const macro=shot.scene==='cell'&&p<2.94;
+    const hero=shot.scene==='site'&&p>=2.18&&p<2.38;
+    const roof=shot.scene==='site'&&p>=1.94&&p<2.18;
+    const span=macro?24:hero?3.6:roof?30:190;
+    const distance=macro?45:hero?10:roof?65:210;
+    this.sunlight.target.position.set(0,0,0);
+    if(macro)this.sunlight.target.position.set(-.9,-.2,0);else if(hero||roof)this.sunlight.target.position.copy(HERO_ANCHOR);
+    this.sunlight.position.copy(shot.scene==='cell'?this.cellSun:SUN_LOCAL);this.sunlight.position.y*=1-.48*(shot.operation?.dusk??0);this.sunlight.position.normalize().multiplyScalar(distance).add(this.sunlight.target.position);
+    const shadow=this.sunlight.shadow,c=shadow.camera;
+    c.left=c.bottom=-span/2;c.right=c.top=span/2;c.near=macro?.1:hero?.1:roof?1:10;c.far=distance*2;c.updateProjectionMatrix();
+    shadow.bias=macro?-.000035:hero?-.000008:roof?-.00004:-.00025;
+    shadow.normalBias=macro?.006:hero?.0007:roof?.006:.025;
+    return macro?'cell':hero?'hero':roof?'roof':'campus';
   }
   private updateAnnotations(p:number,ac:number){
     if(!this.annotationHost)return;const visible=p>3.80&&p<4.14&&ac>.02&&this.electricalStatus==='ready';this.annotationHost.hidden=!visible;this.annotationHost.style.opacity=String(p>4.085?1-smooth((p-4.085)/.055):1);if(!visible)return;
@@ -345,9 +372,9 @@ export class SolarScene {
     this.storageAnnotationHost.style.opacity=String(smooth((p-4.985)/.03)*(1-smooth((p-5.35)/.03)));
     for(const node of this.storageLabelNodes){const key=node.dataset.storageLabel as keyof typeof this.storage.anchors;this.projectionHead.copy(this.storage.anchors[key]).project(this.camera);node.style.left=`clamp(7rem, ${(this.projectionHead.x*.5+.5)*100}%, calc(100% - 7rem))`;node.style.top=`${(-this.projectionHead.y*.5+.5)*100}%`;}
   }
-  displayedProgress(){let p=this.progress;if(this.earthStatus!=='ready'&&p>.635)p=.635;if(this.regionStatus!=='ready'&&p>1.235)p=1.235;if(this.siteStatus!=='ready'&&p>1.49)p=1.49;if(this.cellStatus!=='ready'&&p>2.34)p=2.34;if(this.electricalStatus!=='ready'&&p>3.05)p=3.05;if(this.businessStatus!=='ready'&&p>4.18)p=4.18;if(this.storageStatus!=='ready'&&p>4.96)p=4.96;return p;}
+  displayedProgress(){if(this.frozenProgress!==null)return this.frozenProgress;let p=this.progress;if(this.earthStatus!=='ready'&&p>.635)p=.635;if(this.regionStatus!=='ready'&&p>1.235)p=1.235;if(this.siteStatus!=='ready'&&p>1.49)p=1.49;if(this.cellStatus!=='ready'&&p>2.34)p=2.34;if(this.electricalStatus!=='ready'&&p>3.05)p=3.05;if(this.businessStatus!=='ready'&&p>4.18)p=4.18;if(this.storageStatus!=='ready'&&p>4.96)p=4.96;return p;}
   snapshot() {
-    return {shadowCasterKey:this.shadowOperationKey,shadowInvalidations:this.shadowInvalidations,businessStatus:this.businessStatus,storageStatus:this.storageStatus,business:this.business?.snapshot(),storage:this.storage?.stats,readiness:this.readiness,progress:this.progress,ambientTime:this.ambientTime,quality:this.quality,shot:this.lastShot,
+    return {renderedProgress:this.renderedProgress,frozenProgress:this.frozenProgress,shadowCasterKey:this.shadowOperationKey,shadowInvalidations:this.shadowInvalidations,businessStatus:this.businessStatus,storageStatus:this.storageStatus,business:this.business?.snapshot(),storage:this.storage?.stats,readiness:this.readiness,progress:this.progress,ambientTime:this.ambientTime,quality:this.quality,shot:this.lastShot,
       dcFlow:this.dcFlow?{visible:this.dcFlow.mesh.visible,travel:this.dcFlow.mesh.material.uniforms.uTravel.value,opacity:this.dcFlow.mesh.material.uniforms.uOpacity.value}:null,trailHeadError:this.trailHeadError,cellStatus:this.cellStatus,electricalStatus:this.electricalStatus,cell:this.cell?.snapshot(),cellOverlayBytes:this.cellModuleFlow?.geometryBytes??0,electrical:this.electrical?.stats,electricalOverlayBytes:(this.dcFlow?.geometryBytes??0)+(this.acFlow?.geometryBytes??0),regionStatus:this.regionStatus,siteStatus:this.siteStatus,region:this.region?.snapshot(),site:this.site?.snapshot(),earthStatus:this.earthStatus,earth:this.earth?.snapshot(),
       drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,shadowEstimatedBytes:this.sunlight.shadow.map?this.sunlight.shadow.map.width*this.sunlight.shadow.map.height*8:0,
       geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures};

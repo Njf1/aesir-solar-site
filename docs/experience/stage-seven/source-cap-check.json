@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-08T22:09:35.771Z",
+  "addedBytes": 222,
+  "addedVertices": 6,
+  "addedTriangles": 5,
+  "addedDraws": 0,
+  "maximumPlaneError": 5.556766128483881e-7,
+  "minimumFacing": 0.0011650462707765484,
+  "normalAndUV": "all six vertices match source plane/outward normal and expected soft-coverage UVs",
+  "disposal": [
+    {
+      "kind": "TubeGeometry",
+      "disposed": 1
+    },
+    {
+      "kind": "ShaderMaterial",
+      "disposed": 1
+    },
+    {
+      "kind": "TubeGeometry",
+      "disposed": 1
+    },
+    {
+      "kind": "ShaderMaterial",
+      "disposed": 1
+    }
+  ]
+}

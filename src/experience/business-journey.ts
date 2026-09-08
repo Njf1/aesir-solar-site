@@ -24,7 +24,7 @@ export const operationCopy=(p:number)=>[
  fadeWindow(p,4.39,4.425,4.61,4.67),
  fadeWindow(p,4.985,5.02,5.095,5.14),
  fadeWindow(p,5.20,5.24,5.35,5.405),
- fadeWindow(p,5.435,5.47,5.56,5.61),
+ fadeWindow(p,5.49,5.52,5.56,5.61),
  fadeWindow(p,5.67,5.71,5.755,5.79),
  fadeWindow(p,5.81,5.845,5.885,5.925),
  fadeWindow(p,5.95,6.00,6.10,6.15),
@@ -53,13 +53,13 @@ export function extendBusiness(progress:number,mode:Framing,accepted:JourneyShot
  const p=clamp(progress,STAGE_FOUR_END,JOURNEY_END),state=operationState(p);
  let rig=rigs.get(mode);
  if(!rig){
-  const camera=[new Vector3(...accepted.camera),V(-47,2.9,14.6),V(-42,3.4,13.7),V(-34,3.5,14.1),V(-32,3.8,19),V(-36,4.1,13.8),V(-44,4.9,12),V(-49.5,3.2,-5.4),V(-49.5,3.2,-5.4),V(-55,6.5,-8),V(-76,18,21),V(-96,46,72),V(-104,51,94),V(-104,51,94)];
-  const aim=[new Vector3(...accepted.target),BUSINESS_ENTRY.clone().add(V(0,.6,0)),V(-29,2.2,13.7),V(-22,1.8,13.5),V(-22,1.9,16.8),V(-26,2.3,14.0),V(-39,2.6,7),V(-40.8,1.7,-8.4),V(-40.8,1.7,-8.4),V(-40.7,1.5,-6.5),V(-20,4,8),V(-4,5,10),V(-25,8,-12),V(-25,8,-12)];
+  const camera=[new Vector3(...accepted.camera),V(-47,3.2,11.6),V(-42,3.7,10.4),V(-34,3.8,10.9),V(-32,3.8,19),V(-36,4.1,13.8),V(-44,4.9,12),V(-49.5,3.2,-5.4),V(-49.5,3.2,-5.4),V(-55,6.5,-8),V(-53,6.2,-8.5),V(-96,46,72),V(-104,51,94),V(-104,51,94)];
+  const aim=[new Vector3(...accepted.target),BUSINESS_ENTRY.clone().add(V(0,.7,0)),V(-27,2.4,14.7),V(-22,1.8,13.5),V(-22,1.9,16.8),V(-26,2.3,14.0),V(-39,2.6,7),V(-40.8,1.7,-8.4),V(-40.8,1.7,-8.4),V(-40.7,1.5,-6.5),V(-40.6,1.9,-20.0),V(-4,5,10),V(-25,8,-12),V(-25,8,-12)];
   if(mode==='portrait'){
-   camera[1].x=-49;camera[2].x=-43;camera[3]=V(-35.7,4.7,13.8);aim[3]=V(-22,3.8,13.5);camera[4]=V(-34,4.5,18.2);aim[4]=V(-22,3.5,19.2);
+   camera[1].x=-49;camera[2].x=-43;camera[2].z=10.6;camera[3]=V(-35.7,4.7,10.9);aim[3]=V(-22,3.2,14.0);camera[4]=V(-34,4.5,18.2);aim[4]=V(-22,3.5,19.2);
    for(const i of [7,8]){camera[i].x=-56;camera[i].y=4.6;aim[i].y=2.9;aim[i].z=-4.6;}
    camera[9]=V(-62,10,-8);aim[9].y=3.6;
-   for(let i=10;i<camera.length;i++){if(i>=11)aim[i]=V(-2,9,8);camera[i].sub(aim[i]).multiplyScalar(i>=11?1.72:1.40).add(aim[i]);aim[i].y+=i>=11?15:5;}
+   for(let i=10;i<camera.length;i++){if(i>=11)aim[i]=V(-2,9,8);camera[i].sub(aim[i]).multiplyScalar(i>=11?1.72:1.40).add(aim[i]);aim[i].y+=i>=11?15:1.4;}
   }
   if(mode==='short'){for(const i of[3,4,7,8])camera[i].y+=.5;}
   rig={camera:authored(camera),aim:authored(aim)};rigs.set(mode,rig);

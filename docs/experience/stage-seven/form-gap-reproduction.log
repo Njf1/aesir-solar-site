@@ -1,0 +1,28 @@
+
+Running 1 test using 1 worker
+
+(node:42554) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/browser/stage-seven-routes.spec.ts:211:1 › enlarged application text reflows paired controls and keeps the selected supply readable (415ms)
+
+
+  1) tests/browser/stage-seven-routes.spec.ts:211:1 › enlarged application text reflows paired controls and keeps the selected supply readable 
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 5630.390625
+    Received:    5791.875
+
+      217 |   expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+      218 |   const flow=await page.evaluate(()=>{const main=document.querySelector('main')!.getBoundingClientRect(),order=document.querySelector('.apply-side')!.getBoundingClientRect(),footer=document.querySelector('footer')!.getBoundingClientRect();return{orderBottom:order.bottom,mainBottom:main.bottom,footerTop:footer.top};});
+    > 219 |   expect(flow.orderBottom).toBeLessThanOrEqual(flow.mainBottom);expect(flow.orderBottom).toBeLessThan(flow.footerTop);
+          |                            ^
+      220 |   await expect(page.locator('input[name="target"]')).toHaveAttribute('type','date');await expect(page.locator('input[name="agree"]')).toBeEnabled();await expect(page.locator('input[name="privacy"]')).toBeEnabled();
+      221 |  }
+      222 | });
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/stage-seven-routes.spec.ts:219:28
+
+    Error Context: test-results/stage-seven-routes-enlarge-598b3-he-selected-supply-readable/error-context.md
+
+  1 failed
+    tests/browser/stage-seven-routes.spec.ts:211:1 › enlarged application text reflows paired controls and keeps the selected supply readable 

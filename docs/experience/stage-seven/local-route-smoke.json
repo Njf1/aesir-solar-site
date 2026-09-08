@@ -1,0 +1,263 @@
+{
+  "date": "2026-09-08T22:21:47.877Z",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 46133,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "path": "/index",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 46133,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 46133,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "path": "/experience",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 46133,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "path": "/experience.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 46133,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "path": "/faq",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 2752,
+      "title": "Application questions — Aesir Solar"
+    },
+    {
+      "path": "/faq.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 2752,
+      "title": "Application questions — Aesir Solar"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 4385,
+      "title": "Contact Aesir Solar — Aesir Solar"
+    },
+    {
+      "path": "/contact.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 4385,
+      "title": "Contact Aesir Solar — Aesir Solar"
+    },
+    {
+      "path": "/simulator",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 3703,
+      "title": "Solar planning — Aesir Solar"
+    },
+    {
+      "path": "/simulator.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 3703,
+      "title": "Solar planning — Aesir Solar"
+    },
+    {
+      "path": "/apply?cancelled=1",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 10174,
+      "title": "Start your G99 application — Aesir Solar"
+    },
+    {
+      "path": "/apply.html?order=local-review",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 10174,
+      "title": "Start your G99 application — Aesir Solar"
+    },
+    {
+      "path": "/success?session_id=unverified-local-review",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 3723,
+      "title": "Check your payment and application — Aesir Solar"
+    },
+    {
+      "path": "/success.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 3723,
+      "title": "Check your payment and application — Aesir Solar"
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 8364,
+      "title": "Terms of service — Aesir Solar"
+    },
+    {
+      "path": "/terms.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 8364,
+      "title": "Terms of service — Aesir Solar"
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 6913,
+      "title": "Privacy policy — Aesir Solar"
+    },
+    {
+      "path": "/privacy.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 6913,
+      "title": "Privacy policy — Aesir Solar"
+    },
+    {
+      "path": "/refunds",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 6118,
+      "title": "Refund policy — Aesir Solar"
+    },
+    {
+      "path": "/refunds.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "robots": "noindex, nofollow",
+      "bytes": 6118,
+      "title": "Refund policy — Aesir Solar"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "type": "text/plain",
+      "robots": "noindex, nofollow",
+      "bytes": 26
+    },
+    {
+      "path": "/sim.js",
+      "status": 404,
+      "type": "text/plain",
+      "robots": "noindex, nofollow",
+      "bytes": 9
+    },
+    {
+      "path": "/sim.css",
+      "status": 404,
+      "type": "text/plain",
+      "robots": "noindex, nofollow",
+      "bytes": 9
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 404,
+      "type": "text/plain",
+      "robots": "noindex, nofollow",
+      "bytes": 9
+    },
+    {
+      "path": "/unknown-stage-seven",
+      "status": 404,
+      "type": "text/plain",
+      "robots": "noindex, nofollow",
+      "bytes": 9
+    },
+    {
+      "path": "/api/checkout",
+      "status": 503,
+      "type": "application/json",
+      "robots": "noindex, nofollow",
+      "bytes": 91,
+      "api": {
+        "error": "local_preview_only",
+        "message": "No payment or telemetry providers are connected."
+      }
+    },
+    {
+      "path": "/api/tyl-checkout",
+      "status": 503,
+      "type": "application/json",
+      "robots": "noindex, nofollow",
+      "bytes": 91,
+      "api": {
+        "error": "local_preview_only",
+        "message": "No payment or telemetry providers are connected."
+      }
+    },
+    {
+      "path": "/api/tyl-return",
+      "status": 503,
+      "type": "application/json",
+      "robots": "noindex, nofollow",
+      "bytes": 91,
+      "api": {
+        "error": "local_preview_only",
+        "message": "No payment or telemetry providers are connected."
+      }
+    },
+    {
+      "path": "/api/tyl-notify",
+      "status": 503,
+      "type": "application/json",
+      "robots": "noindex, nofollow",
+      "bytes": 91,
+      "api": {
+        "error": "local_preview_only",
+        "message": "No payment or telemetry providers are connected."
+      }
+    },
+    {
+      "path": "/api/tigo",
+      "status": 503,
+      "type": "application/json",
+      "robots": "noindex, nofollow",
+      "bytes": 91,
+      "api": {
+        "error": "local_preview_only",
+        "message": "No payment or telemetry providers are connected."
+      }
+    }
+  ]
+}

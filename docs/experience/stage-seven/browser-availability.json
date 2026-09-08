@@ -1,0 +1,47 @@
+{
+  "SafariInstalled": true,
+  "SafariVersion": "26.6.2",
+  "SafariBuild": "21624.5.1.11.3",
+  "FirefoxInstalled": false,
+  "physicalPhone": "Not available to this review environment; no phone measurement performed.",
+  "attempt": "Safari WebDriver session with existing settings; no remote-automation setting changed",
+  "sessionResponse": {
+    "httpStatus": 500,
+    "value": {
+      "error": "session not created",
+      "message": "Could not create a session: You must enable 'Allow remote automation' in the Developer section of Safari Settings to control Safari via WebDriver.",
+      "stacktrace": ""
+    }
+  },
+  "automationAvailable": false,
+  "nativeReview": {
+    "available": true,
+    "method": "CUA accessibility, native scrolling/clicks and screenshots; no Safari setting change",
+    "browserWindowScreenshot": [
+      1082,
+      768
+    ],
+    "reviewed": [
+      "Sun approach",
+      "selected cell before absorption",
+      "working bay",
+      "Pause control",
+      "Skip with focus at application-details",
+      "application form",
+      "Back to offer with paused state restored"
+    ],
+    "pausedScenePixelComparison": {
+      "twoConsecutiveNativeScreenshots": true,
+      "differenceBounds": [
+        960,
+        712,
+        993,
+        737
+      ],
+      "centralSceneDifference": null,
+      "note": "Only the native click/pointer highlight near the Pause control changed; central rendered composition was identical."
+    },
+    "captures": "safari-native/",
+    "scope": "Limited native desktop smoke, not full regression, console audit or performance measurement. Review tab closed afterward."
+  }
+}

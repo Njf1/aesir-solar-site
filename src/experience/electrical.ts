@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {createEquipmentDetail} from './equipment-detail.ts';
 import {ROOF_Y} from './site-layout.ts';
 import {ELECTRICAL_PATHS,ELECTRICAL_PORTS,ELECTRICAL_ANCHORS,ELECTRICAL_ROUTE_NODES} from './electrical-path.ts';
 type ElectricalTier='mobile'|'desktop';
@@ -207,6 +208,8 @@ export function createElectricalScene(tier: ElectricalTier): ElectricalScene {
   });
   for (const g of geometries) { for (const a of Object.values(g.attributes)) geometryBytes += a.array.byteLength; if (g.index) geometryBytes += g.index.array.byteLength; }
   const stats = {drawCalls, triangles, geometryBytes, textureBytes: 0, instances};
+  const refinement=createEquipmentDetail('inverter');group.add(refinement.group);bounds.union(refinement.bounds);
+  stats.drawCalls+=refinement.stats.drawCalls;stats.triangles+=refinement.stats.triangles;stats.geometryBytes+=refinement.stats.geometryBytes;stats.instances+=refinement.stats.instances;
   let disposed = false;
   return {
     group, overlay, paths: ELECTRICAL_PATHS, ports: ELECTRICAL_PORTS, anchors: ELECTRICAL_ANCHORS, bounds, stats,
@@ -217,7 +220,7 @@ export function createElectricalScene(tier: ElectricalTier): ElectricalScene {
       indicator.emissiveIntensity = .25 + .20 * smooth(p);
     },
     dispose() {
-      if (disposed) return; disposed = true;
+      if (disposed) return; disposed = true;refinement.dispose();
       group.traverse(object => { if (object instanceof THREE.InstancedMesh) object.dispose(); });
       for (const g of geometries) g.dispose(); for (const m of materials) m.dispose();
       group.clear(); group.removeFromParent();

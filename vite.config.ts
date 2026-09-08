@@ -14,6 +14,7 @@ export default defineConfig({
           res.end(JSON.stringify({ error: 'local_preview_only' }));
           return;
         }
+        if(req.url?.match(/^\/(?:index(?:\.html)?)?(?:\?|$)/))req.url=req.url.replace(/^\/(?:index(?:\.html)?)?/, '/experience.html');
         if (req.url?.match(/^\/experience(?:\?|$)/)) req.url = req.url.replace('/experience', '/experience.html');
         next();
       });
@@ -21,6 +22,7 @@ export default defineConfig({
   }],
   build: {
     outDir: '.preview-build', emptyOutDir: true,
+    modulePreload: false, // No eager 3D module download when JavaScript is disabled.
     rollupOptions: { input: 'experience.html' },
     assetsDir: 'experience-assets',
     target: 'es2022',

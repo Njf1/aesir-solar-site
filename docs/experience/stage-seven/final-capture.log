@@ -1,0 +1,5 @@
+{ name: 'laptop', errors: [], warnings: [] }
+{ name: 'desktop', errors: [], warnings: [] }
+{ name: 'mobile', errors: [], warnings: [] }
+{ name: 'intermediate', errors: [], warnings: [] }
+{ name: 'short', errors: [], warnings: [] }

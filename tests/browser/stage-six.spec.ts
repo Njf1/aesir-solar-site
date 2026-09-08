@@ -312,7 +312,7 @@ for(const layout of[
   for(const link of[page.locator('header .apply-link'),action])await expect(link).toHaveAttribute('href','/apply.html');
   await action.focus();await expect(action).toBeFocused();
   expect(await action.evaluate(e=>{const r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return r.height>=44&&r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight&&hit!==null&&e.contains(hit);})).toBe(true);
-  const status=page.getByRole('status');
+  const status=page.locator('#fallback-status');
   await expect(status).toHaveText('Reduced motion: still views. Application details are below.');
   const statusLayout=await status.evaluate(e=>{const r=e.getBoundingClientRect(),css=getComputedStyle(e);return {width:r.width,height:r.height,accessible:!e.closest('[aria-hidden="true"],[inert]')&&css.display!=='none'&&css.visibility!=='hidden'};});
   expect(statusLayout.accessible).toBe(true);expect(statusLayout.width).toBeLessThanOrEqual(2);expect(statusLayout.height).toBeLessThanOrEqual(2);

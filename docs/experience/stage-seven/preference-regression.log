@@ -1,0 +1,25 @@
+
+Running 10 tests using 1 worker
+
+(node:28172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/stage-seven-motion.spec.ts:27:1 › a coalesced preference notification cannot stop motion with still controls hidden (1.3s)
+  ✓   2 tests/browser/stage-six.spec.ts:269:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (908ms)
+(node:28197) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 tests/browser/stage-seven-motion.spec.ts:27:1 › a coalesced preference notification cannot stop motion with still controls hidden (1.2s)
+  ✓   4 tests/browser/stage-six.spec.ts:269:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (922ms)
+(node:28220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 tests/browser/stage-seven-motion.spec.ts:27:1 › a coalesced preference notification cannot stop motion with still controls hidden (1.1s)
+  ✓   6 tests/browser/stage-six.spec.ts:269:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (941ms)
+(node:28252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/browser/stage-seven-motion.spec.ts:27:1 › a coalesced preference notification cannot stop motion with still controls hidden (1.1s)
+  ✓   8 tests/browser/stage-six.spec.ts:269:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (909ms)
+(node:28286) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 tests/browser/stage-seven-motion.spec.ts:27:1 › a coalesced preference notification cannot stop motion with still controls hidden (1.1s)
+  ✓  10 tests/browser/stage-six.spec.ts:269:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (893ms)
+
+  10 passed (12.9s)

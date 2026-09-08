@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import {AperturePaneGeometry} from './aperture-pane.ts';
+import {filterCellFineDetail,configureCellMacroDepth,withLinearOutput} from './render-detail.ts';
 import { PANEL, SELECTED_CELL, CELL_SCALE, cellLayout } from './panel-layout.ts';
 
 /** Original generic crystalline-silicon teaching cutaway, authored 2026-09-08.
@@ -49,7 +51,7 @@ void main() {
   float ring = exp(-pow((r - radius) / .026, 2.));
   float centre = exp(-r * r * 110.);
   float reservoir = exp(-r * r * 12.);
-  float alpha = (event * (centre * .8 + ring * .52) + settled * reservoir);
+  float alpha = (event * (centre * .95 + ring * .68) + settled * reservoir);
   alpha *= .975 + .025 * sin(uTime * .7);
   if (alpha < .003) discard;
   vec3 color = mix(vec3(.82, .91, 1.), vec3(.94, .97, 1.), event);
@@ -95,8 +97,8 @@ export class CellScene {
   private selectedBus!: THREE.InstancedMesh;
   private selectedFingers!: THREE.InstancedMesh;
   private sectionFace!: THREE.Mesh;
-  private glass!: THREE.InstancedMesh;
-  private encapsulant!: THREE.InstancedMesh;
+  private glass!: THREE.Mesh<AperturePaneGeometry>;
+  private encapsulant!: THREE.Mesh<AperturePaneGeometry>;
   private absorptionMaterial!: THREE.ShaderMaterial;
   private frontMaterial!: THREE.ShaderMaterial;
   private rearMaterial!: THREE.ShaderMaterial;
@@ -154,30 +156,30 @@ export class CellScene {
     // rated terminal or an invented single-wire installation schematic.
     this.block('Front collection continuation', contact, 0, .035, -D / 2 - .14, .048, .038, .31);
 
-    // Four contiguous pieces form a rectangular sectional aperture. Nothing
+    // One connected pane forms a rectangular sectional aperture. Nothing
     // floats away from the module. The closed state has no aperture or gap.
     const glassMaterial = this.material(new THREE.MeshPhysicalMaterial({
-      color: 0xc9dbe8, roughness: .16, metalness: .02, clearcoat: .88,
-      clearcoatRoughness: .13, opacity: .13, transparent: true,
+      color: 0xc9dbe8, roughness: .12, metalness: .015, clearcoat: .84,
+      clearcoatRoughness: .13, opacity: .075, transparent: true,
       depthWrite: false, side: THREE.FrontSide,
     }));
     const encapsulantMaterial = this.material(new THREE.MeshStandardMaterial({
       color: 0xbfd4de, roughness: .40, metalness: 0,
-      opacity: .045, transparent: true, depthWrite: false,
+      opacity: .028, transparent: true, depthWrite: false,
     }));
-    this.glass = this.instances('Protective glass with sectional opening', glassMaterial, 4);
-    this.encapsulant = this.instances('Encapsulant with sectional opening', encapsulantMaterial, 4);
+    this.glass = new THREE.Mesh(this.geometry(new AperturePaneGeometry(CX,CZ,GLASS_W,GLASS_D,.575,.45)),glassMaterial);this.glass.name='Protective glass with sectional opening';this.group.add(this.glass);
+    this.encapsulant = new THREE.Mesh(this.geometry(new AperturePaneGeometry(CX,CZ,GLASS_W,GLASS_D,.175,.35)),encapsulantMaterial);this.encapsulant.name='Encapsulant with sectional opening';this.group.add(this.encapsulant);
     this.glass.renderOrder = 3; this.encapsulant.renderOrder = 2;
     this.glass.castShadow = false; this.encapsulant.castShadow = false;
 
     // The event is a local field response, never the old photon recoloured.
     this.absorptionMaterial = this.material(new THREE.ShaderMaterial({
-      vertexShader: fieldVertex, fragmentShader: absorptionFragment,
+      vertexShader: fieldVertex, fragmentShader: withLinearOutput(absorptionFragment),
       uniforms: { uAbsorption: { value: 0 }, uExtraction: { value: 0 }, uTime: { value: 0 } },
       transparent: true, depthWrite: false, depthTest: true,
       blending: THREE.AdditiveBlending, toneMapped: false,
     }));
-    const fieldGeometry = this.geometry(new THREE.PlaneGeometry(3.5, 3.5));
+    const fieldGeometry = this.geometry(new THREE.PlaneGeometry(4.5, 4.5));
     const response = new THREE.Mesh(fieldGeometry, this.absorptionMaterial);
     response.name = 'Local absorption response — illustrative';
     response.rotation.x = -Math.PI / 2;
@@ -189,11 +191,11 @@ export class CellScene {
     this.collection('Front current collection overlay', [
       [-.9, .055, 0], [-.66, .078, -.20], [-.20, .083, -.34],
       [0, .083, -.43], [0, .083, -D * .38], [0, .09, -D / 2 - .30],
-    ], this.frontMaterial, .034);
+    ], this.frontMaterial, .060);
     this.collection('Rear current collection overlay', [
       [-.9, .016, 0], [-.72, -.13, .19], [-.37, -.36, D * .24],
       [.18, -.615, D * .41], [W * .24, -.62, D * .41], [W / 2 - .12, -.62, D * .41],
-    ], this.rearMaterial, .037);
+    ], this.rearMaterial, .045);
 
     // Proxy underside is registered to the existing hero module's junction and
     // both leads, allowing the owner to match the return to the exterior scene.
@@ -208,6 +210,7 @@ export class CellScene {
       const cable = new THREE.Mesh(g, rubber); cable.name = 'Same module underside lead proxy';
       this.group.add(cable);
     }
+    configureCellMacroDepth(this.group);
     this.render(this.state, 0);
     const budget = this.snapshot();
     if (budget.geometryBytes > 250_000 || budget.triangles > 15_000 || budget.baseDrawCalls > 25) {
@@ -233,7 +236,7 @@ export class CellScene {
     this.absorptionMaterial.uniforms.uTime.value = time;
     this.frontMaterial.uniforms.uExtraction.value = this.state.extraction;
     this.frontMaterial.uniforms.uTime.value = time;
-    this.frontMaterial.uniforms.uVisible.value = .48 * smooth(.15, .55, section);
+    this.frontMaterial.uniforms.uVisible.value = .62 * smooth(.15, .55, section);
     this.rearMaterial.uniforms.uExtraction.value = this.state.extraction;
     this.rearMaterial.uniforms.uTime.value = time;
     // Rear channel is a deliberately subdued sectional overlay through the
@@ -243,11 +246,11 @@ export class CellScene {
 
   private sectionGeometry(section: number) {
     // Reveal an aperture over only this cell, with the rest of the full module
-    // intact. Four boxes meet exactly at section=0; tiny zero-area sides do not draw.
+    // intact. The connected pane closes exactly at section=0.
     const holeW = (W + .20) * section;
     const holeD = (D + .28) * section;
-    this.aperture(this.glass, holeW, holeD, .575, .45);
-    this.aperture(this.encapsulant, holeW, holeD, .175, .35);
+    this.glass.geometry.setAperture(holeW,holeD);
+    this.encapsulant.geometry.setAperture(holeW,holeD);
     // Remove a foreground slice rather than floating the cell's layers apart.
     // Origin and the incident target remain inside the exposed silicon surface.
     const edge = D * (.5 - .27 * section);
@@ -269,25 +272,6 @@ export class CellScene {
     }
     this.selectedBus.instanceMatrix.needsUpdate = true;
     this.selectedFingers.instanceMatrix.needsUpdate = true;
-  }
-
-  private aperture(mesh: THREE.InstancedMesh, width: number, depth: number, y: number, thickness: number) {
-    if (width < .000001 || depth < .000001) {
-      // One unbroken pane at the exact closed state: adjacent transparent boxes
-      // would otherwise expose their internal faces as a dark seam at entry.
-      mesh.count = 1;
-      this.set(mesh, 0, CX, y, CZ, GLASS_W, thickness, GLASS_D);
-      for (let i = 1; i < 4; i++) this.set(mesh, i, 0, 0, 0, 0, 0, 0);
-      mesh.instanceMatrix.needsUpdate = true;
-      return;
-    }
-    mesh.count = 4;
-    const x0 = -width / 2, x1 = width / 2, z0 = -depth / 2, z1 = depth / 2;
-    this.set(mesh, 0, CX, y, (NORTH + z0) / 2, GLASS_W, thickness, z0 - NORTH);
-    this.set(mesh, 1, CX, y, (z1 + SOUTH) / 2, GLASS_W, thickness, SOUTH - z1);
-    this.set(mesh, 2, (LEFT + x0) / 2, y, 0, x0 - LEFT, thickness, depth);
-    this.set(mesh, 3, (x1 + RIGHT) / 2, y, 0, RIGHT - x1, thickness, depth);
-    mesh.instanceMatrix.needsUpdate = true;
   }
 
   private siliconMaterial(withContacts: boolean) {
@@ -317,12 +301,13 @@ export class CellScene {
       shader.fragmentShader = shader.fragmentShader.replace('#include <metalnessmap_fragment>', '#include <metalnessmap_fragment>\nmetalnessFactor=mix(metalnessFactor,.64,cellContactMask);');
     };
     material.customProgramCacheKey = () => `aesir-cell-silicon-v1-${withContacts ? 1 : 0}`;
+    filterCellFineDetail(material);
     return material;
   }
 
   private collectionMaterial(color: number, throughSection: boolean) {
     return this.material(new THREE.ShaderMaterial({
-      vertexShader: collectionVertex, fragmentShader: collectionFragment,
+      vertexShader: collectionVertex, fragmentShader: withLinearOutput(collectionFragment),
       uniforms: { uExtraction: { value: 0 }, uVisible: { value: 0 }, uTime: { value: 0 }, uColor: { value: new THREE.Color(color) } },
       transparent: true, depthWrite: false, depthTest: !throughSection,
       blending: THREE.AdditiveBlending, toneMapped: false,

@@ -1,0 +1,12 @@
+0 {"events":[{"matches":true,"t":575.0999999642372}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}
+1 {"events":[{"matches":true,"t":498.0999999642372}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}
+2 {"events":[{"matches":true,"t":527.8000000119209}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":true,"journey":"journey is-enhanced"}
+3 {"events":[{"matches":true,"t":500.5999999642372}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}
+4 {"events":[{"matches":true,"t":529.1000000238419}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":true,"journey":"journey is-enhanced"}
+5 {"events":[{"matches":true,"t":495.80000001192093}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}
+6 {"events":[{"matches":true,"t":486.80000001192093}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}
+7 {"events":[{"matches":true,"t":546.3000000119209}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}
+8 {"events":[{"matches":true,"t":543.3999999761581}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":true,"journey":"journey is-enhanced"}
+9 {"events":[{"matches":true,"t":497}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":true,"journey":"journey is-enhanced"}
+10 {"events":[{"matches":true,"t":499.30000001192093}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":true,"journey":"journey is-enhanced"}
+11 {"events":[{"matches":true,"t":516.1999999880791}],"match":true,"reduced":true,"ready":true,"failed":false,"hidden":false,"journey":"journey is-static"}

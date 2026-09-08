@@ -1,4 +1,6 @@
+import {createInteriorContacts,refineInteriorMaterialResponse} from './interior-contact.ts';
 import * as THREE from 'three';
+import {createChamferGeometry} from './equipment-detail.ts';
 
 /** Original selective work-bay illustration, authored 8 September 2026.
  * Same warehouse metres as commercial.ts: +Y up, south +Z. No campus/shell copy,
@@ -26,10 +28,12 @@ export function createBusinessInterior(tier: InteriorTier) {
   const group = new THREE.Group(); group.name = 'Original selective business interior';
   const geometries = new Set<THREE.BufferGeometry>(), materials = new Set<THREE.Material>();
   const batches = new Map<string, Batch>(), movingHead: MovingPiece[] = [];
+  const movingCartons:{part:MovingPiece;carton:number}[]=[],movingGates:{part:MovingPiece;gate:number;side:number}[]=[];
+  const cartonHomes:number[]=[];let activeCarton=-1,activeGate=-1,gateSide=1;
   const ownG = <T extends THREE.BufferGeometry>(g: T): T => { geometries.add(g); return g; };
   const ownM = <T extends THREE.Material>(m: T): T => { materials.add(m); return m; };
   const standard = (color: number, roughness: number, metalness = 0) => ownM(new THREE.MeshStandardMaterial({ color, roughness, metalness }));
-  const cube = ownG(new THREE.BoxGeometry(1, 1, 1));
+  const cube = ownG(new THREE.BoxGeometry(1, 1, 1)),bevel=ownG(createChamferGeometry(.055));
   const cylinder = ownG(new THREE.CylinderGeometry(1, 1, 1, mobile ? 8 : 12));
   const plane = ownG(new THREE.PlaneGeometry(1, 1));
   const identity = new THREE.Quaternion(), acrossZ = new THREE.Quaternion().setFromAxisAngle(V(1, 0, 0), Math.PI / 2);
@@ -43,10 +47,13 @@ export function createBusinessInterior(tier: InteriorTier) {
     const index = batch.matrices.length;
     batch.matrices.push(new THREE.Matrix4().compose(position, rotation, scale));
     if (moving) movingHead.push({ batch, index, position, scale, rotation });
+    if(activeCarton>=0)movingCartons.push({part:{batch,index,position,scale,rotation},carton:activeCarton});
+    if(activeGate>=0)movingGates.push({part:{batch,index,position,scale,rotation},gate:activeGate,side:gateSide});
   }
   function box(name: string, mat: THREE.Material, x: number, y: number, z: number, sx: number, sy: number, sz: number, rotation = identity, moving = false) {
     instance(name, cube, mat, V(x, y, z), V(sx, sy, sz), rotation, moving);
   }
+  function bevelBox(name:string,mat:THREE.Material,x:number,y:number,z:number,sx:number,sy:number,sz:number,moving=false){instance(name,bevel,mat,V(x,y,z),V(sx,sy,sz),identity,moving);}
   function rod(name: string, mat: THREE.Material, x: number, y: number, z: number, radius: number, length: number, rotation = identity) {
     instance(name, cylinder, mat, V(x, y, z), V(radius, length, radius), rotation);
   }
@@ -110,29 +117,68 @@ export function createBusinessInterior(tier: InteriorTier) {
     box('Machine guard lower rail', steel, -22, 1.08, z, 11.4, .055, .065);
     box('Transparent machine guard', guard, -22, 1.665, z, 11.3, 1.10, .018);
   }
-  for (const z of [12.46, 14.54]) box('Packaging gantry columns', shell, -20.2, 2.0, z, .26, 2.5, .30);
-  box('Packaging gantry bridge', shell, -20.2, 3.25, lineZ, .62, .27, 2.35);
+  for (const z of [12.46, 14.54]) bevelBox('Packaging gantry columns', shell, -20.2, 2.0, z, .26, 2.5, .30);
+  bevelBox('Packaging gantry bridge', shell, -20.2, 3.25, lineZ, .62, .27, 2.35);
   box('Gantry upper insert', steel, -20.52, 3.25, lineZ, .035, .15, 1.8);
-  box('Packaging head', shell, -20.2, 2.35, lineZ, .88, .24, 1.18, identity, true);
+  bevelBox('Packaging head', shell, -20.2, 2.35, lineZ, .88, .24, 1.18, true);
   box('Packaging head lower face', rubber, -20.2, 2.205, lineZ, .80, .045, 1.08, identity, true);
   for (const z of [13.11, 13.89]) box('Head guide slides', silver, -20.2, 2.76, z, .055, .7, .055);
   box('Enclosed conveyor drive', steel, -24.3, .92, 14.36, .72, .44, .40);
   box('Conveyor control pedestal', steel, -24.9, 1.35, 15.18, .07, 1.30, .07);
-  box('Conveyor control enclosure', shell, -24.9, 2.05, 15.18, .25, .60, .56);
+  bevelBox('Conveyor control enclosure', shell, -24.9, 2.05, 15.18, .25, .60, .56);
   box('Machine control recess', rubber, -25.038, 2.10, 15.18, .024, .32, .41);
   box('Machine active indicator', indicator, -25.055, 2.10, 15.18, .015, .065, .19);
   rod('Unlabelled stop control', ochre, -25.06, 1.86, 15.18, .049, .025, new THREE.Quaternion().setFromAxisAngle(V(0,0,1),Math.PI/2));
 
-  function carton(x: number, y: number, z: number, sx: number, sy: number, sz: number) {
+  function carton(x: number, y: number, z: number, sx: number, sy: number, sz: number,onBelt=false) {
+    if(onBelt){activeCarton=cartonHomes.length;cartonHomes.push(x);}
     box('Packed cartons', kraft, x, y, z, sx, sy, sz);
     box('Carton top seam', timber, x, y + sy / 2 + .004, z, sx - .012, .009, .018);
     box('Carton sealing tape', shell, x, y + sy / 2 + .010, z, .09, .011, sz - .01);
     box('Blank dispatch label', shell, x - sx / 2 - .006, y + .05, z, .01, sy * .32, sz * .45);
+    // Folded carton corners and an unprinted sealing strip; no customer labels.
+    for(const side of[-1,1])box('Carton folded edge',timber,x-sx/2-.002,y,z+side*(sz/2-.021),.006,sy-.016,.009);
+    box('Carton tape turned over edge',shell,x-sx/2-.007,y+sy/2-.10,z,.011,.19,.085);
+    activeCarton=-1;
   }
-  carton(-26.5, 1.67, lineZ, 1.02, .70, .79);
-  carton(-22.9, 1.60, lineZ, .91, .56, .74);
-  carton(-20.2, 1.62, lineZ, .88, .60, .76);
-  carton(-17.2, 1.70, lineZ, 1.04, .76, .83);
+  carton(-27.4, 1.69, lineZ, 1.02, .70, .79,true);
+  carton(-23.8, 1.62, lineZ, .91, .56, .74,true);
+  carton(-20.2, 1.64, lineZ, .88, .60, .76,true);
+  carton(-16.6, 1.72, lineZ, 1.04, .76, .83,true);
+
+  // Closed transfer hoods conceal the loop handoff. Paired doors slide clear
+  // before a carton reaches the threshold and close only after its tail passes.
+  // The invisible connection represents an omitted part of this selective bay.
+  const gateXs=[-27.925,-16.075],hoodCentres=[-29.05,-14.95];
+  for(let end=0;end<2;end++){
+    const x=hoodCentres[end],gate=gateXs[end];
+    bevelBox('Transfer hood formed roof',shell,x,2.65,lineZ,2.25,.10,1.88);
+    box('Transfer hood floor',steel,x,1.309,lineZ,2.25,.020,1.88);
+    for(const side of[-1,1]){
+      box('Transfer hood side panels',shell,x,1.985,lineZ+side*.906,2.25,1.25,.055);
+      box('Transfer hood folded bottom edge',silver,x,1.355,lineZ+side*.924,2.19,.04,.028);
+      box('Transfer hood corner seams',rubber,x+(end?1:-1)*1.077,1.99,lineZ+side*.936,.016,1.19,.008);
+      for(const y of[1.47,2.43])rod('Transfer cover fixing heads',silver,x, y,lineZ+side*.94,.020,.012,acrossZ);
+    }
+    box('Transfer hood outer closed panel',shell,x+(end?1:-1)*1.094,1.985,lineZ,.062,1.25,1.84);
+    box('Transfer gate upper guide',steel,gate,2.665,lineZ,.15,.115,3.57);
+    for(const side of[-1,1]){
+      activeGate=end;gateSide=side;
+      bevelBox('Paired transfer gate leaves',shell,gate,1.985,lineZ+side*.435,.055,1.25,.882);
+      box('Transfer gate inner seam',rubber,gate-.031,1.985,lineZ+side*.018,.008,1.17,.013);
+      box('Transfer gate recessed pull',steel,gate-.037,1.97,lineZ+side*.20,.018,.17,.035);
+      activeGate=-1;
+    }
+  }
+
+  // Attached machine details add scale without a separate imported machine.
+  for(const z of[12.30,14.70]){
+    box('Gantry service-cover seam',rubber,-20.344,2.17,z+(z<13.5?.04:-.04),.008,1.55,.009);
+    for(const y of[1.24,2.93])rod('Gantry cover fastener heads',silver,-20.348,y,z+(z<13.5?.045:-.045),.017,.010,new THREE.Quaternion().setFromAxisAngle(V(0,0,1),Math.PI/2));
+  }
+  for(let i=0;i<6;i++)box('Drive housing cooling slots',rubber,-24.43+i*.055,1.08,14.568,.029,.080,.008);
+  box('Drive access cover lip',silver,-24.3,.745,14.57,.55,.023,.019);
+  for(const y of[1.82,2.29])for(const z of[14.97,15.39])rod('Control enclosure screw heads',silver,-25.042,y,z,.012,.009,new THREE.Quaternion().setFromAxisAngle(V(0,0,1),Math.PI/2));
 
   // Fine belt slats visibly move only when equipment is enabled. Geometry is preallocated.
   const slatCount = 42, slats = new THREE.InstancedMesh(cube, steel, slatCount);
@@ -182,13 +228,13 @@ export function createBusinessInterior(tier: InteriorTier) {
   box('Office workstation top', timber, -22.0, 1.10, 19.2, 1.65, .09, 2.75);
   for(const z of [18.05,20.35]){
     box('Office desk support', steel,-22,.71,z,.09,.72,.12);
-    box('Desk feet', steel,-22,.365,z,1.48,.065,.15);
+    box('Desk feet', steel,-22,.3325,z,1.48,.065,.15);
   }
-  box('Workstation pedestal', shell, -21.73,.68,20.1,.87,.70,.43);
+  box('Workstation pedestal', shell, -21.73,.65,20.1,.87,.70,.43);
   for(const y of [.51,.75])box('Drawer pull',steel,-22.18,y,20.1,.025,.028,.24);
   box('Monitor stand base', silver,-21.70,1.18,19.2,.45,.046,.54);
   box('Monitor upright',steel,-21.56,1.45,19.2,.06,.55,.075);
-  box('Monitor cabinet',rubber,-21.58,1.84,19.2,.095,.70,1.15);
+  bevelBox('Monitor cabinet',rubber,-21.58,1.84,19.2,.095,.70,1.15);
   instance('Screen face',plane,screenFace,V(-21.635,1.84,19.2),V(1.065,.607,1),west);
   // Abstract interface only: no numbers, customer data, output or approval telemetry.
   box('Screen upper interface bar',screenInk,-21.647,2.055,19.2,.013,.025,.86);
@@ -201,6 +247,12 @@ export function createBusinessInterior(tier: InteriorTier) {
   for(let r=0;r<3;r++)for(let c=0;c<9;c++)box('Keyboard keys',shell,-22.48+r*.10,1.196,18.82+c*.085,.064,.014,.058);
   box('Mouse pad',rubber,-22.28,1.151,20.00,.38,.012,.30);
   box('Mouse',silver,-22.26,1.183,20.00,.16,.055,.095);
+  box('Mouse central seam',rubber,-22.26,1.212,20,.11,.002,.003);
+  box('Keyboard cable channel',steel,-21.91,1.08,19.19,.60,.034,.055);
+  for(const y of[.50,.74])box('Pedestal drawer joint',rubber,-22.172,y-.075,20.1,.009,.006,.385);
+  for(const z of[18.75,19.65])for(let i=0;i<4;i++)box('Monitor rear ventilation',steel,-21.526,1.73+i*.064,z,.006,.024,.071);
+  box('Monitor lower bezel seam',steel,-21.640,1.532,19.2,.008,.009,.98);
+  box('Monitor articulated mount',silver,-21.51,1.79,19.2,.055,.20,.23);
   // Rounded ergonomic upholstery rather than cuboid placeholder furniture.
   function rounded(w:number,h:number,r:number){const s=new THREE.Shape();s.moveTo(-w/2+r,-h/2);s.lineTo(w/2-r,-h/2);s.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);s.lineTo(w/2,h/2-r);s.quadraticCurveTo(w/2,h/2,w/2-r,h/2);s.lineTo(-w/2+r,h/2);s.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);s.lineTo(-w/2,-h/2+r);s.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);return s;}
   const upholstery = ownG(new THREE.ExtrudeGeometry(rounded(.62,.68,.105),{depth:.09,bevelEnabled:true,bevelSize:.025,bevelThickness:.025,bevelSegments:1,steps:1,curveSegments:mobile?2:4}));
@@ -210,7 +262,7 @@ export function createBusinessInterior(tier: InteriorTier) {
   for(let i=0;i<5;i++){
     const a=i/5*Math.PI*2,dx=Math.cos(a)*.39,dz=Math.sin(a)*.39;
     beam('Chair five-star base',steel,V(-23.25,.45,19.2),V(-23.25+dx,.40,19.2+dz),.045,.045);
-    rod('Chair castors',rubber,-23.25+dx,.375,19.2+dz,.062,.07,acrossZ);
+    rod('Chair castors',rubber,-23.25+dx,.362,19.2+dz,.062,.07,acrossZ);
   }
   for(const z of [18.82,19.58]){box('Chair arm support',steel,-23.24,1.00,z,.055,.32,.055);box('Chair armrest',rubber,-23.21,1.17,z,.39,.045,.08);}
   rod('Desk task-light base',steel,-21.52,1.18,18.15,.12,.035);
@@ -232,38 +284,51 @@ export function createBusinessInterior(tier: InteriorTier) {
   const workLight = new THREE.PointLight(0xffdfa7,0,20,2);workLight.name='Work-bay practical light';workLight.position.set(-24,3.82,11.2);workLight.castShadow=false;group.add(workLight);
   const officeLight = new THREE.PointLight(0xffe8bc,0,9,2);officeLight.name='Desk-side practical light';officeLight.position.set(-22.15,2.67,18.3);officeLight.castShadow=false;group.add(officeLight);
 
-  // Local soft contact shading is original analytic artwork, not a texture or shadow map.
-  const contactMat=ownM(new THREE.ShaderMaterial({transparent:true,depthWrite:false,depthTest:true,
-    vertexShader:'varying vec2 vUv;void main(){vUv=uv;vec4 p=vec4(position,1.);\n#ifdef USE_INSTANCING\np=instanceMatrix*p;\n#endif\ngl_Position=projectionMatrix*modelViewMatrix*p;}',
-    fragmentShader:'varying vec2 vUv;void main(){vec2 q=abs(vUv-.5)*2.;float r=pow(pow(q.x,4.)+pow(q.y,4.),.25);float a=.20*(1.-smoothstep(.44,1.,r));if(a<.003)discard;gl_FragColor=vec4(.045,.059,.058,a);}'
-  }));
-  for(const [x,z,w,d] of [[-22,13.5,15.5,3.2],[-26.1,7.6,7.2,2.25],[-22,19.2,2.4,3.3],[-23.25,19.2,1.4,1.4],[-8.65,13.5,3.6,16.2],[-30.2,17.8,2.6,1.5]])instance('Restrained contact shading',plane,contactMat,V(x,.316,z),V(w,d,1),flat);
-
   let instances=slatCount;
   for(const b of batches.values()){
     const mesh=new THREE.InstancedMesh(b.geometry,b.material,b.matrices.length);b.mesh=mesh;mesh.name=b.name+' — material batch';
+    if(movingHead.some(p=>p.batch===b)||movingCartons.some(p=>p.part.batch===b)||movingGates.some(p=>p.part.batch===b))mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
     b.matrices.forEach((m,i)=>mesh.setMatrixAt(i,m));mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingBox();mesh.computeBoundingSphere();
     mesh.castShadow=false;mesh.receiveShadow=true;group.add(mesh);instances+=mesh.count;
   }
+  const contacts=createInteriorContacts(group);group.add(contacts.group);instances+=contacts.stats.instances;refineInteriorMaterialResponse(group);
   let disposed=false;
   const state:BusinessInteriorState={lighting:0,equipment:0,screen:0};
+  const cartonPositions=new Float64Array(cartonHomes),gateOpenings=new Float64Array(2);
   function render(next:BusinessInteriorState,time:number){
     if(disposed)return;state.lighting=clamp(next.lighting);state.equipment=clamp(next.equipment);state.screen=clamp(next.screen);
     const t=Number.isFinite(time)?time:0,L=ease(state.lighting),E=ease(state.equipment),S=ease(state.screen);
     practical.emissiveIntensity=2.7*L;workLight.intensity=105*L;officeLight.intensity=29*L;
     screenFace.emissiveIntensity=1.05*S;screenInk.emissiveIntensity=2.2*S;screenInk.color.setRGB(.004+.065*S,.009+.09*S,.013+.12*S);indicator.emissiveIntensity=1.7*E;
-    const headTravel=(.5+.5*Math.sin(t*1.15))*.14*E;
+    // Pure, reversible indexing cycle. Seven seconds advance; the remaining
+    // dwell lets the head inspect a carton before the next station advance.
+    // Reusing the supplied frozen ambient time also freezes every mechanism.
+    const activeTime=t*E,cycle=Math.floor(activeTime/10),phase=activeTime/10-cycle;
+    const u=clamp(phase/.72),advance=u*u*u*(u*(u*6-15)+10),travel=(cycle+advance)*3.6;
+    const beltLength=lineEnd-lineStart,centres=cartonPositions;
+    for(let i=0;i<cartonHomes.length;i++)centres[i]=lineStart+((cartonHomes[i]-lineStart+travel)%beltLength+beltLength)%beltLength;
+    const headTravel=phase>.74?Math.sin((phase-.74)/.26*Math.PI)**2*.07*E:0;
     for(const part of movingHead){tempPosition.copy(part.position);tempPosition.y-=headTravel;tempMatrix.compose(tempPosition,part.rotation,part.scale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;}
-    const spacing=(lineEnd-lineStart)/slatCount,offset=((t*.34*E)%spacing+spacing)%spacing;
-    for(let i=0;i<slatCount;i++){tempPosition.set(lineStart+i*spacing+offset,1.331,lineZ);tempMatrix.compose(tempPosition,identity,slatScale);slats.setMatrixAt(i,tempMatrix);}slats.instanceMatrix.needsUpdate=true;
+    for(const{part,carton}of movingCartons){tempPosition.copy(part.position);tempPosition.x+=centres[carton]-cartonHomes[carton];tempMatrix.compose(tempPosition,part.rotation,part.scale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;}
+    for(let i=0;i<gateXs.length;i++){let distance=100;for(const x of centres)distance=Math.min(distance,Math.abs(x-gateXs[i]));gateOpenings[i]=1-ease((distance-.69)/.35);}
+    for(const{part,gate,side}of movingGates){tempPosition.copy(part.position);tempPosition.z+=side*.90*gateOpenings[gate];tempMatrix.compose(tempPosition,part.rotation,part.scale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;}
+    const spacing=beltLength/slatCount,offset=((travel%spacing)+spacing)%spacing;
+    for(let i=0;i<slatCount;i++){tempPosition.set(lineStart+i*spacing+offset,1.331,lineZ);tempMatrix.compose(tempPosition,identity,slatScale);slats.setMatrixAt(i,tempMatrix);}slats.instanceMatrix.needsUpdate=true;contacts.render();
   }
-  render(state,0);slats.computeBoundingBox();slats.boundingBox!.max.x+=(lineEnd-lineStart)/slatCount;slats.computeBoundingSphere();slats.boundingSphere!.radius+=(lineEnd-lineStart)/slatCount;group.updateMatrixWorld(true);
+  render(state,0);
+  for(const batch of batches.values())if(batch.mesh&&[...movingCartons.map(p=>p.part.batch),...movingGates.map(p=>p.part.batch)].includes(batch)){
+    batch.mesh.boundingBox!.union(new THREE.Box3(V(lineStart-.54,1.30,11.70),V(lineEnd+.54,2.66,15.30)));batch.mesh.boundingSphere=new THREE.Sphere();batch.mesh.boundingBox!.getBoundingSphere(batch.mesh.boundingSphere);
+  }
+  slats.computeBoundingBox();slats.boundingBox!.max.x+=(lineEnd-lineStart)/slatCount;slats.computeBoundingSphere();slats.boundingSphere!.radius+=(lineEnd-lineStart)/slatCount;group.updateMatrixWorld(true);
   let drawCalls=0,triangles=0,geometryBytes=0;
   group.traverse(o=>{if(o instanceof THREE.Mesh){drawCalls++;triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3*(o instanceof THREE.InstancedMesh?o.count:1);}if(o instanceof THREE.InstancedMesh)geometryBytes+=o.instanceMatrix.array.byteLength;});
   for(const g of geometries){for(const a of Object.values(g.attributes))geometryBytes+=a.array.byteLength;if(g.index)geometryBytes+=g.index.array.byteLength;}
+  geometryBytes+=contacts.stats.staticBufferBytes;
   const stats={drawCalls,triangles,geometryBytes,instances,textureBytes:0,pointLights:2,shadowLights:0};
   const bounds=new THREE.Box3().setFromObject(group);
-  function dispose(){if(disposed)return;disposed=true;group.traverse(o=>{if(o instanceof THREE.InstancedMesh)o.dispose();});for(const g of geometries)g.dispose();for(const m of materials)m.dispose();group.clear();group.removeFromParent();batches.clear();movingHead.length=0;}
+  function dispose(){if(disposed)return;disposed=true;contacts.dispose();group.traverse(o=>{if(o instanceof THREE.InstancedMesh)o.dispose();});for(const g of geometries)g.dispose();for(const m of materials)m.dispose();group.clear();group.removeFromParent();batches.clear();movingHead.length=0;movingCartons.length=0;movingGates.length=0;}
   if(geometryBytes>350000||triangles>18000||drawCalls>22){dispose();throw new Error('Interior budget exceeded: '+JSON.stringify(stats));}
-  return {group,render,stats,bounds,anchors:INTERIOR_ANCHORS,state,dispose};
+  return {group,render,stats,bounds,anchors:INTERIOR_ANCHORS,state,dispose,
+    motionSnapshot:()=>({cartonCentres:Array.from(cartonPositions),gateOpenings:Array.from(gateOpenings),gateXs:[...gateXs],
+      movingEnvelope:{min:[lineStart-.54,1.30,11.70],max:[lineEnd+.54,2.66,15.30]}})};
 }

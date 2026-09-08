@@ -1,0 +1,90 @@
+{
+  "baseline": "dbb8197",
+  "named_controls": [
+    "company",
+    "contact",
+    "email",
+    "phone",
+    "accreditation",
+    "address",
+    "postcode",
+    "mpan",
+    "inverter",
+    "typetest",
+    "kw",
+    "phases",
+    "storage",
+    "target",
+    "g100",
+    "eps",
+    "notes",
+    "agree",
+    "privacy"
+  ],
+  "all_original_control_attributes_exact": true,
+  "required": [
+    "contact",
+    "email",
+    "phone",
+    "address",
+    "postcode",
+    "inverter",
+    "kw",
+    "agree",
+    "privacy"
+  ],
+  "consents": {
+    "agree": {
+      "required": true,
+      "checked": false,
+      "meaning": "Accept terms and refunds"
+    },
+    "privacy": {
+      "required": true,
+      "checked": false,
+      "meaning": "Understand data use including network-operator sharing"
+    }
+  },
+  "protected_sha256": {
+    "app.js": "ef8723cca3f1807915212a41290924547f56e04898227dc52e3c91322acf6bda",
+    "package.json": "d2274e7281a6edb5b62ed03fe81ab000edd51f580d7817619b894f80f46faf00",
+    "package-lock.json": "f79ac81d85a85d9c3630a65ee987fdec0d46dbe9b532324b98d21b915907f12f",
+    "api/tyl-return.js": "2d4154d0ff517199bf5795a3285d1559a2d4133821b923beec30c88ac27e53c1",
+    "api/tyl-checkout.js": "cc500e596fa0d456dac7099f066b272ce2f8763645e13307149d67b60d0cb5e7",
+    "api/tyl-notify.js": "060b6d51676b9a24168e4803c9fb396f90ce91380bd06ded93d7029720e1d94d",
+    "api/tigo.js": "103cf66f5cb48e43482344c10ea2d6c3d6203afd8ff263c587b6d21732335cf5",
+    "api/checkout.js": "801c8476c8db76ca0dd8b95a82b08452d34cee364f50ca8186cc2e938c51e24e",
+    "lib/tyl.js": "a6722b18a3fb33f60d2073686141fe346557427ff02d0e726a6cb6e437543c9a",
+    "data/constants.js": "1c39ff984483cd05d0fc3a832f097fd987d441ce03d1a1f6c429a5dec6e856be",
+    "data/premier-composites.json": "b3abf30565a4087bc179320210308f348bf10e25854834fc8703405b7686d0be"
+  },
+  "policy_sections_retained": {
+    "terms": 11,
+    "privacy": 8,
+    "refunds": 6
+  },
+  "product_files": [
+    "build.py",
+    "site.css",
+    "site.js",
+    "apply.html",
+    "contact.html",
+    "terms.html",
+    "privacy.html",
+    "refunds.html",
+    "success.html",
+    "simulator.html",
+    "faq.html",
+    "templates/site/apply.html",
+    "templates/site/contact.html",
+    "templates/site/faq.html",
+    "templates/site/privacy.html",
+    "templates/site/refunds.html",
+    "templates/site/shell.html",
+    "templates/site/simulator.html",
+    "templates/site/success.html",
+    "templates/site/terms.html"
+  ],
+  "notes": "experience.html is authoritative for the homepage; build.py generates index.html and supporting pages before the scoped release assembly. The original simulator source remains in recovery history but is not served.",
+  "evidenceScope": "Candidate-era semantic comparison with dbb8197; integrated final parity is rerun by tests/stage-seven-routes.test.mjs and tests/contracts.test.mjs. See review-checks.json for final suite results."
+}

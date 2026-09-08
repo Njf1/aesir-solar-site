@@ -1,3 +1,4 @@
+import {initSuitability} from './suitability';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { framingFor, smooth } from './progress';
@@ -25,6 +26,7 @@ let trigger:ScrollTrigger|undefined,observer:IntersectionObserver|undefined,resi
 let paused=false,onscreen=true,failed=false,disposed=false,ready=false;
 let progress=0,frame=0,lastTime=0,lastMeasure=0;
 let stillProgress=.285;
+let configuredReduced:boolean|undefined;
 const timings:number[]=[];
 function updateCopy(p:number) {
   const opacity=journeyCopy(p,reduced.matches);
@@ -53,7 +55,11 @@ frameLayout();
 function stop(){cancelAnimationFrame(frame);frame=0;lastTime=0;lastMeasure=0;}
 function canAnimate(){return ready&&!disposed&&!failed&&!paused&&!reduced.matches&&!document.hidden&&onscreen;}
 function tick(now:number) {
-  frame=0;if(!canAnimate())return;
+  frame=0;
+  // A simultaneous viewport change can coalesce a media-query notification.
+  // Reconcile the actual preference before the animation loop suspends itself.
+  if(ready&&configuredReduced!==reduced.matches){configureMotion();return;}
+  if(!canAnimate())return;
   const dt=lastTime?(now-lastTime)/1000:0;lastTime=now;scene?.render(dt);
   if(lastMeasure&&timings.length<900)timings.push(now-lastMeasure);lastMeasure=now;
   frame=requestAnimationFrame(tick);
@@ -66,12 +72,12 @@ function fallback(message:string) {
   if(location.hash==='#application-details'||progress>.16)document.querySelector('#application-details')?.scrollIntoView();
 }
 function onProgress(value:number) {
-  if(failed||disposed)return;progress=Math.max(0,Math.min(JOURNEY_END,value));
+  if(failed||disposed)return;if(ready&&configuredReduced!==reduced.matches){configureMotion();return;}progress=Math.max(0,Math.min(JOURNEY_END,value));
   if(paused||reduced.matches)return;
   scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);resume();
 }
 function configureMotion() {
-  if(failed||disposed)return;trigger?.kill();stop();
+  if(failed||disposed)return;configuredReduced=reduced.matches;trigger?.kill();stop();scene?.setFrozen(false);
   if(reduced.matches) {
     journey.classList.remove('is-enhanced');journey.classList.add('is-static');scene?.setProgress(stillProgress);updateCopy(scene?.displayedProgress()??stillProgress);scene?.render(0);
     pauseButton.hidden=true;stillViews.hidden=false;scrollLabel.textContent='EXPLORE THE STILL VIEWS';
@@ -79,13 +85,17 @@ function configureMotion() {
   } else {
     journey.classList.add('is-enhanced');journey.classList.remove('is-static');pauseButton.hidden=false;stillViews.hidden=true;status.textContent='';scrollLabel.textContent='SCROLL TO FOLLOW THE LIGHT';
     trigger=ScrollTrigger.create({trigger:journey,start:'top top',end:'bottom bottom',onUpdate:self=>onProgress(self.progress*JOURNEY_END),onRefresh:self=>onProgress(self.progress*JOURNEY_END)});
-    progress=trigger.progress*JOURNEY_END;scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);scene?.render(0);resume();
+    progress=trigger.progress*JOURNEY_END;scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);scene?.render(0);
+    // Still-view navigation temporarily releases the freeze. Returning to the
+    // scrolling mode must reinstate it before delayed readiness can change a
+    // composition whose control still says Resume.
+    scene?.setFrozen(paused);if(paused)status.textContent='Motion paused. Scroll to the application details, or resume the journey.';resume();
   }
 }
 function togglePause() {
   paused=!paused;pauseButton.setAttribute('aria-pressed',String(paused));pauseButton.innerHTML=paused?'Resume motion <span aria-hidden="true">▷</span>':'Pause motion <span aria-hidden="true">Ⅱ</span>';
-  if(paused){stop();status.textContent='Motion paused. Scroll to the application details, or resume the journey.';}
-  else{status.textContent='';scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);resume();}
+  if(paused){scene?.setFrozen(true);stop();status.textContent='Motion paused. Scroll to the application details, or resume the journey.';}
+  else{scene?.setFrozen(false);status.textContent='';scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);resume();}
 }
 function changeStill(event:Event) {
   const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-still]');if(!button||!reduced.matches||failed)return;
@@ -93,7 +103,7 @@ function changeStill(event:Event) {
   for(const b of stillViews.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b===button));
   scene?.setProgress(stillProgress);updateCopy(scene?.displayedProgress()??stillProgress);scene?.render(0);
 }
-function visibility(){if(document.hidden)stop();else resume();}
+function visibility(){if(document.hidden)stop();else if(ready&&configuredReduced!==reduced.matches)configureMotion();else resume();}
 function destroy() {
   if(disposed)return;disposed=true;stop();trigger?.kill();observer?.disconnect();resizeObserver?.disconnect();scene?.dispose();
   reduced.removeEventListener('change',configureMotion);document.removeEventListener('visibilitychange',visibility);pauseButton.removeEventListener('click',togglePause);stillViews.removeEventListener('click',changeStill);window.removeEventListener('pagehide',onPageHide);window.removeEventListener('pageshow',onPageShow);
@@ -112,12 +122,13 @@ async function init() {
     const contentAnchor=anchor&&!journey.contains(anchor)?anchor:undefined;ready=true;configureMotion();stage.classList.add('is-ready');
     if(contentAnchor)contentAnchor.scrollIntoView();
     observer=new IntersectionObserver(entries=>{onscreen=entries[0].isIntersecting;document.body.classList.toggle('at-details',!onscreen);if(!onscreen)stop();else resume();},{threshold:.01,rootMargin:'-110px 0px 0px 0px'});observer.observe(stage);
-    resizeObserver=new ResizeObserver(()=>{if(!scene||failed)return;frameLayout();scene.resize();if(paused||reduced.matches)scene.render(0);});resizeObserver.observe(host);for(const panel of panels)resizeObserver.observe(panel);
+    resizeObserver=new ResizeObserver(()=>{if(!scene||failed)return;frameLayout();scene.resize();if(configuredReduced!==reduced.matches)configureMotion();else if(paused||reduced.matches)scene.render(0);});resizeObserver.observe(host);for(const panel of panels)resizeObserver.observe(panel);
     pauseButton.addEventListener('click',togglePause);stillViews.addEventListener('click',changeStill);document.addEventListener('visibilitychange',visibility);reduced.addEventListener('change',configureMotion);window.addEventListener('pagehide',onPageHide);window.addEventListener('pageshow',onPageShow);
   } catch(error) {console.error('Experience could not start:',error);fallback('A still moment from the journey. Application details are ready below.');}
   finally {clearTimeout(timeout);}
 }
 if(new URLSearchParams(location.search).has('inspect')) {
-  Object.defineProperty(window,'__experience',{value:{snapshot:()=>({ready,failed,paused,onscreen,reduced:reduced.matches,framing:document.body.dataset.framing,duration:JOURNEY_END,...scene?.snapshot(),copyOpacities:journeyCopy(scene?.displayedProgress()??progress,reduced.matches),frameIntervals:[...timings]}),resetTiming:()=>{timings.length=0;lastMeasure=0;}}});
+  Object.defineProperty(window,'__experience',{value:{snapshot:()=>({ready,failed,paused,onscreen,requestedProgress:progress,reduced:reduced.matches,framing:document.body.dataset.framing,duration:JOURNEY_END,...scene?.snapshot(),copyOpacities:journeyCopy(scene?.displayedProgress()??progress,reduced.matches),frameIntervals:[...timings]}),resetTiming:()=>{timings.length=0;lastMeasure=0;}}});
 }
+initSuitability();
 void init();

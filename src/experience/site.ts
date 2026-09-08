@@ -1,3 +1,4 @@
+import {createCountrysideTexture} from './countryside.ts';
 import * as THREE from 'three';
 import {SITE_BUDGET,assertBudget} from './budgets';
 import {createCommercialSite,type CommercialSite} from './commercial';
@@ -6,19 +7,7 @@ export class SiteScene{
  private geometries:THREE.BufferGeometry[]=[];private materials:THREE.Material[]=[];private textures:THREE.Texture[]=[];private environment?:THREE.WebGLRenderTarget;
  async prepare(mobile:boolean,renderer:THREE.WebGLRenderer){
   this.asset=createCommercialSite(mobile?'mobile':'desktop');this.group.add(this.asset.group);
-  const canvas=document.createElement('canvas');canvas.width=canvas.height=mobile?512:1024;const ctx=canvas.getContext('2d')!;if(mobile)ctx.scale(.5,.5);
-  ctx.fillStyle='#687456';ctx.fillRect(0,0,1024,1024);
-  let seed=731;const rand=()=>{seed=seed*16807%2147483647;return seed/2147483647;};
-  // Original irregular field parcels, kept subordinate to the architecture.
-  const vertices=Array.from({length:13},(_,y)=>Array.from({length:13},(_,x)=>[x*86+(x>0&&x<12?(rand()-.5)*54:0),y*86+(y>0&&y<12?(rand()-.5)*54:0)]));
-  for(let y=0;y<12;y++)for(let x=0;x<12;x++){
-   const ps=[vertices[y][x],vertices[y][x+1],vertices[y+1][x+1],vertices[y+1][x]];
-   ctx.beginPath();ps.forEach(([a,b],i)=>i?ctx.lineTo(a,b):ctx.moveTo(a,b));ctx.closePath();
-   ctx.fillStyle=['#6b7658','#738065','#7b8161','#858369','#637655','#707d61'][Math.floor(rand()*6)];ctx.fill();
-   ctx.strokeStyle='#526349';ctx.lineWidth=1.6;ctx.stroke();
-  }
-  const blend=ctx.createRadialGradient(512,512,65,512,512,145);blend.addColorStop(0,'#687456');blend.addColorStop(1,'#68745600');ctx.fillStyle=blend;ctx.fillRect(0,0,1024,1024);
-  const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=4;this.textures.push(texture);
+  const texture=createCountrysideTexture(mobile);this.textures.push(texture);
   const groundG=new THREE.PlaneGeometry(1500,1500),groundM=new THREE.MeshStandardMaterial({map:texture,roughness:1});this.geometries.push(groundG);this.materials.push(groundM);const ground=new THREE.Mesh(groundG,groundM);ground.rotation.x=-Math.PI/2;ground.position.y=-.52;ground.receiveShadow=true;this.group.add(ground);
   const roadG=new THREE.PlaneGeometry(671,10),roadM=new THREE.MeshStandardMaterial({color:'#393c3a',roughness:1});this.geometries.push(roadG);this.materials.push(roadM);
   for(const x of [-414.5,414.5]){const road=new THREE.Mesh(roadG,roadM);road.rotation.x=-Math.PI/2;road.position.set(x,-.02,66);road.receiveShadow=true;this.group.add(road);}

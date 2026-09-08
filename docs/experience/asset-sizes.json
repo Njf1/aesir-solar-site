@@ -1,23 +1,23 @@
 {
-  "measuredAt": "2026-09-08T20:36:38.286Z",
+  "measuredAt": "2026-09-08T23:01:18.761Z",
   "files": [
     {
-      "file": "business-BlH1hB1y.js",
-      "bytes": 14923,
-      "gzip": 6423,
-      "sha256": "fddcaa4c0badb77cf05890518da4b70d00a80f83aa94359a4b48bff8d5799959"
+      "file": "business-BKrgutPb.js",
+      "bytes": 23551,
+      "gzip": 9576,
+      "sha256": "098621059ab9d1bef511527b68a4d840f7cb5ff9ad994a3ccddbce9d633a7076"
     },
     {
-      "file": "business-journey-BnmYoXLK.js",
-      "bytes": 7519,
-      "gzip": 3575,
-      "sha256": "493bad2f1bc8a0ee4d75a2917ebd12ac30cf9dae33fe4624907f0039c6b4aec8"
+      "file": "business-journey-DRAaQM0A.js",
+      "bytes": 7539,
+      "gzip": 3589,
+      "sha256": "61ee3af6b6127741b0d5f96aab50b638d21b18bb80dc969b57eda1f0db252697"
     },
     {
-      "file": "cell-Bzxvuxui.js",
-      "bytes": 12633,
-      "gzip": 4708,
-      "sha256": "3bb2ae1d39a0f407c9c182a0caf32e6da8ef650cd1e44678707971031339ce69"
+      "file": "cell-DNq5ljno.js",
+      "bytes": 14515,
+      "gzip": 5363,
+      "sha256": "098695b8e7f795803db6ed3b4a28bbbd6a72797a0a278f136d8454a50e3e6cca"
     },
     {
       "file": "earth-clouds-1024-BKjMs3Vz.webp",
@@ -44,34 +44,34 @@
       "sha256": "0d543059f30485c1cf20fa62a506987e7eb5a5e7a43cf929f911cd4fb2eaf9dc"
     },
     {
-      "file": "electrical-HXYY0N7K.js",
-      "bytes": 9683,
-      "gzip": 4288,
-      "sha256": "3a3102902b9b05fd5caa0405bd3a9321301b9120ae118d69628051606720cfb6"
+      "file": "electrical--TSiIwwa.js",
+      "bytes": 9940,
+      "gzip": 4380,
+      "sha256": "0180db590b88c372d1708706882bd7f9b7d4b9c7b79af844fc71dc158200f4b3"
     },
     {
-      "file": "electrical-path-Hh8lSnZn.js",
+      "file": "electrical-path-D80oS81R.js",
       "bytes": 1867,
-      "gzip": 848,
-      "sha256": "531afba64d465b4b0e515b88595a885651fb7140eb57a01f4b9a1177c9bd1970"
+      "gzip": 849,
+      "sha256": "26dd4f90f981685bf59b32b268bf8d537c9f7efb9fd198468eaffa0216cbaa89"
     },
     {
-      "file": "energy-flow-BhHzgrDc.js",
-      "bytes": 1384,
-      "gzip": 785,
-      "sha256": "740699b729fce28400d17b84d680fc20a33859f14fcf427a8679d93f114d130d"
+      "file": "energy-flow-9p4uIM8G.js",
+      "bytes": 1809,
+      "gzip": 931,
+      "sha256": "6e5c844aac0e031cf50741bb20fbe3114b4f4d6f3b6e90d8e248107ff3f5f963"
     },
     {
-      "file": "experience-Dk4yyRWh.css",
-      "bytes": 33818,
-      "gzip": 7550,
-      "sha256": "f21e0b781c58d530e9d4e33b09ec108f66b26bde64865f733c398ee81b7a0a01"
+      "file": "equipment-detail-BZaWaqFV.js",
+      "bytes": 7595,
+      "gzip": 3226,
+      "sha256": "3270764f7d897b0ab8f9c7a6ba647b70b1350c35179cad92480fcaef944e0d13"
     },
     {
-      "file": "experience-mTJMheZB.js",
-      "bytes": 131885,
-      "gzip": 51133,
-      "sha256": "02b6326f54f2f151bfa4293456c54fb47a27b47efcd6c95502dc1c92c1ca53e3"
+      "file": "experience-KYjahhrR.js",
+      "bytes": 134170,
+      "gzip": 52083,
+      "sha256": "518eae396af5023205613738e57dccfd0940f71d968cc823d090adcfe71b6438"
     },
     {
       "file": "experience-poster-2apZrVuk.webp",
@@ -86,16 +86,28 @@
       "sha256": "5ead650dfdf98b4b0546fee4b3eccf86743829f2c7aaea35877bf1069a1e265e"
     },
     {
+      "file": "experience-sSeb8G_9.css",
+      "bytes": 35091,
+      "gzip": 7800,
+      "sha256": "859e304692c1ba15fd3e1d0cf2fd6103b4770b5db430fe906fd11fee11705aa5"
+    },
+    {
       "file": "favicon-NywgcjmD.svg",
       "bytes": 332,
       "gzip": 243,
       "sha256": "98881d0ac23cc0f160c7958dda01a03af6e65d608d9f45cad804e21518d9c7f3"
     },
     {
-      "file": "panel-layout-BXPptB1D.js",
+      "file": "panel-layout-BjpeBAMY.js",
       "bytes": 1242,
-      "gzip": 687,
-      "sha256": "76f37525822910c98c8163e4eca2042180225c062528c794be482e98d358d156"
+      "gzip": 689,
+      "sha256": "056a55021f87c23028eb53b073192e042a92ffda706ae01dcd73021e2d17b42d"
+    },
+    {
+      "file": "region-BNoXSStw.js",
+      "bytes": 5001,
+      "gzip": 2004,
+      "sha256": "7920130904b4029d3f2301ce064073acc3c9da329b8da3c6666176d11721da2a"
     },
     {
       "file": "region-land-FEWFx3vP.json",
@@ -104,56 +116,50 @@
       "sha256": "6433ed75a89c58fccd98000625e17202cff001ec347e240d9cd5e93ec7a72dbf"
     },
     {
-      "file": "region-ykuhfQQI.js",
-      "bytes": 3473,
-      "gzip": 1587,
-      "sha256": "03071093522c3dc5b784761947d871bc5143a956f6f8b3c90c64d31726fe99c3"
+      "file": "scene-DYLAvhkH.js",
+      "bytes": 386728,
+      "gzip": 96152,
+      "sha256": "b957a4e90d3ed7aa2a2e640657ef40fe62392474a9605c5e16b516f34fda2538"
     },
     {
-      "file": "scene-0sWWKTBK.js",
-      "bytes": 378446,
-      "gzip": 93245,
-      "sha256": "2e4e2e7142c4253cf6a15f24f0ded08a6be88d0a876eb519c6a51e5bc756b59b"
+      "file": "site-TaCKMdfE.js",
+      "bytes": 24466,
+      "gzip": 10316,
+      "sha256": "3ea152346f445c08f34cfc8593d35d157211ed7308373cd04c6a6ddfef9d75c5"
     },
     {
-      "file": "site-CWAhKuIy.js",
-      "bytes": 20983,
-      "gzip": 8956,
-      "sha256": "49a1ab8c1216ef01444bac3d37e7deede2f5098ea470562e8af1a8fc53e70bcc"
-    },
-    {
-      "file": "site-layout-DNLUEQrg.js",
+      "file": "site-layout-B7SX7tAm.js",
       "bytes": 132,
-      "gzip": 137,
-      "sha256": "cb7a407c37672b71095ffa5908dd260aaaa9de30600f69bc34d33090377ac4f3"
+      "gzip": 138,
+      "sha256": "5c9a3b2f88b969a80aec7867f1733efb2cecd76e846aad81a3130acccfbcd152"
     },
     {
-      "file": "storage-DRh_X_NB.js",
-      "bytes": 12625,
-      "gzip": 5288,
-      "sha256": "8a71583cf73cde4903c0df774a1ba824fb23875c50d70eba80b7d909ef30a5dd"
+      "file": "storage-Dq_7qxqf.js",
+      "bytes": 10470,
+      "gzip": 4648,
+      "sha256": "beeadf1dad6854b9a3d73d8aa0763781a92e37af3f9b9c98e1dd46e12c6f9f22"
     },
     {
-      "file": "three.core-isatdiS8.js",
-      "bytes": 223308,
-      "gzip": 60552,
-      "sha256": "2468ecc37364f120cbd37b78adbc18f77de13cb8115510c5c740e07d8cc687b1"
+      "file": "three.core-D3aJHFM9.js",
+      "bytes": 223317,
+      "gzip": 60558,
+      "sha256": "96279e98d460543644d454590a67a4ac18660bee1cb208f3be0a3c02319df13e"
     }
   ],
-  "newJavaScriptGzipBytes": 242212,
+  "newJavaScriptGzipBytes": 254502,
   "budgetBytes": 750000,
   "newMediaBytes": 1844085,
   "mediaBudgetBytes": 2000000,
   "incremental": {
-    "businessCodeGzipBytes": 6423,
-    "storageCodeGzipBytes": 5288,
-    "cellCodeGzipBytes": 4708,
-    "electricalCodeGzipBytes": 4288,
-    "flowCodeGzipBytes": 785,
+    "businessCodeGzipBytes": 9576,
+    "storageCodeGzipBytes": 4648,
+    "cellCodeGzipBytes": 5363,
+    "electricalCodeGzipBytes": 4380,
+    "flowCodeGzipBytes": 931,
     "regionRawBytes": 503245,
     "regionGzipBytes": 173539,
-    "regionCodeGzipBytes": 1587,
-    "siteCodeGzipBytes": 8956,
+    "regionCodeGzipBytes": 2004,
+    "siteCodeGzipBytes": 10316,
     "budgets": {
       "businessCodeGzip": 12000,
       "storageCodeGzip": 10000,

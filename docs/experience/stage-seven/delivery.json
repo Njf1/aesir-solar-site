@@ -1,0 +1,89 @@
+{
+  "recordedAt": "2026-09-08T23:08:19.982Z",
+  "experienceJsGzip": 254502,
+  "allBrowserJsGzip": 262670,
+  "mediaAllVariants": 1844085,
+  "experienceCssGzip": 7800,
+  "limits": {
+    "browserJsGzip": 750000,
+    "media": 2000000,
+    "newSupportJsGzip": 3000,
+    "supportCssGzip": 10000
+  },
+  "shared": [
+    {
+      "file": "site.js",
+      "rawBytes": 5041,
+      "gzipBytes": 1801
+    },
+    {
+      "file": "site.css",
+      "rawBytes": 9866,
+      "gzipBytes": 2954
+    },
+    {
+      "file": "app.js",
+      "rawBytes": 19285,
+      "gzipBytes": 6367
+    },
+    {
+      "file": "favicon.svg",
+      "rawBytes": 332,
+      "gzipBytes": 243
+    }
+  ],
+  "html": [
+    {
+      "file": "index.html",
+      "rawBytes": 46133,
+      "gzipBytes": 13287
+    },
+    {
+      "file": "experience.html",
+      "rawBytes": 46133,
+      "gzipBytes": 13287
+    },
+    {
+      "file": "apply.html",
+      "rawBytes": 10167,
+      "gzipBytes": 3427
+    },
+    {
+      "file": "contact.html",
+      "rawBytes": 4383,
+      "gzipBytes": 1832
+    },
+    {
+      "file": "success.html",
+      "rawBytes": 3721,
+      "gzipBytes": 1633
+    },
+    {
+      "file": "terms.html",
+      "rawBytes": 8362,
+      "gzipBytes": 3364
+    },
+    {
+      "file": "privacy.html",
+      "rawBytes": 6911,
+      "gzipBytes": 2921
+    },
+    {
+      "file": "refunds.html",
+      "rawBytes": 6116,
+      "gzipBytes": 2558
+    },
+    {
+      "file": "simulator.html",
+      "rawBytes": 3701,
+      "gzipBytes": 1644
+    },
+    {
+      "file": "faq.html",
+      "rawBytes": 2750,
+      "gzipBytes": 1236
+    }
+  ],
+  "pass": true,
+  "note": "Gzip is file compression accounting. The loopback preview sends uncompressed no-store responses; performance.json reports its actual transferred bodies separately. No supporting page imports the film."
+}
