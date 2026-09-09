@@ -1,0 +1,50 @@
+
+Running 2 tests using 1 worker
+
+(node:48622) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/browser/helpers/mobile-footer.ts:26:2 › webkit: bottom controls glide through an abrupt browser-height expansion (4.8s)
+(node:48675) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/browser/helpers/mobile-footer.ts:26:2 › chromium: bottom controls glide through an abrupt browser-height expansion (3.2s)
+
+
+  1) tests/browser/helpers/mobile-footer.ts:26:2 › webkit: bottom controls glide through an abrupt browser-height expansion 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 15
+    Received:   118.51251220703125
+
+      36 |   const resized=frames.find(f=>f.height===844)!;
+      37 |   const early=frames.filter(f=>f.t>=resized.t&&f.t<=resized.t+300);
+    > 38 |   expect(Math.max(...early.map(f=>f.y-start))).toBeLessThan(15);
+         |                                                ^
+      39 |   const arrived=frames.find(f=>f.y>=end-6)!;
+      40 |   expect(arrived.t-resized.t).toBeGreaterThan(1300);
+      41 |   expect(frames.every(f=>f.bottom<=f.height+1)).toBe(true);await settled(page);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/mobile-footer.ts:38:48
+
+    Error Context: test-results/mobile-footer-webkit-webki-78146-pt-browser-height-expansion/error-context.md
+
+  2) tests/browser/helpers/mobile-footer.ts:26:2 › chromium: bottom controls glide through an abrupt browser-height expansion 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 15
+    Received:   118.51348876953125
+
+      36 |   const resized=frames.find(f=>f.height===844)!;
+      37 |   const early=frames.filter(f=>f.t>=resized.t&&f.t<=resized.t+300);
+    > 38 |   expect(Math.max(...early.map(f=>f.y-start))).toBeLessThan(15);
+         |                                                ^
+      39 |   const arrived=frames.find(f=>f.y>=end-6)!;
+      40 |   expect(arrived.t-resized.t).toBeGreaterThan(1300);
+      41 |   expect(frames.every(f=>f.bottom<=f.height+1)).toBe(true);await settled(page);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/mobile-footer.ts:38:48
+
+    Error Context: test-results/mobile-footer-chromium-bot-45aa1-pt-browser-height-expansion/error-context.md
+
+  2 failed
+    tests/browser/helpers/mobile-footer.ts:26:2 › webkit: bottom controls glide through an abrupt browser-height expansion 
+    tests/browser/helpers/mobile-footer.ts:26:2 › chromium: bottom controls glide through an abrupt browser-height expansion 

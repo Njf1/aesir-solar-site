@@ -27,7 +27,9 @@ export function followViewportFooter(stage:HTMLElement,footer:HTMLElement,allows
     const start=Math.max(0,Math.min(from,next.height-next.size-8));
     if(Math.abs(start-next.top)<.5)return;
     animation=footer.animate([{transform:`translateY(${start}px)`},{transform:`translateY(${next.top}px)`}],{
-      duration:460,easing:'cubic-bezier(.22,.61,.36,1)',fill:'both',
+      // Take time to accelerate as well as settle. The previous short ease-out
+      // front-loaded most of the distance and still felt like a snap on a phone.
+      duration:1800,easing:'cubic-bezier(.42,0,.58,1)',fill:'both',
     });
     const current=animation;current.onfinish=()=>{if(animation===current)settle();};
   }

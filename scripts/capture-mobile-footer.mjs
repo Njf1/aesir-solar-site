@@ -25,7 +25,7 @@ async function sample(name,changes){
   await page.setViewportSize({width:390,height});await cdp?.send('Emulation.setSmallViewportHeightDifferenceOverride',{difference:height-719});
   await page.waitForTimeout(delay);
  }
- await page.waitForTimeout(650);
+ await page.waitForTimeout(2100);
  const frames=await page.evaluate(()=>{window.__footerSampling=false;return window.__footerFrames;});
  rows.push({name,frames});await page.screenshot({path:`${dir}/${name}.png`});
 }

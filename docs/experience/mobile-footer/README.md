@@ -1,5 +1,7 @@
 # Smooth mobile bottom controls
 
+**Current revision:** the user found the initial 460ms treatment too fast. It is now a **1.8-second glide with gentle acceleration and deceleration**. See the [slower-motion follow-up](slower/README.md) for the current timings and verification. The report below retains the evidence for the first iteration.
+
 9 September 2026. Baseline **7c8b1be**, retained as `experience-mobile-footer-before`. The supplied physical-phone recording **18877.mp4** shows the browser bars retracting, the whole page moving with them, then the bottom scroll cue and Pause control jumping down when the dynamic viewport catches up. Full-frame review around 1–4 seconds and quarter-second crops confirm the two distinct movements. [Source metadata](recording-source.json) records the original without publishing the user's other browser tabs.
 
 ## Correction

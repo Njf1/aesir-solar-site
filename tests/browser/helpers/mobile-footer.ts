@@ -6,11 +6,11 @@ async function startSamples(page:Page){
   function sample(){
    if(!(window as any).__sampleFooter)return;
    const f=document.querySelector('.chapter-footer')!.getBoundingClientRect(),s=document.querySelector('#stage')!.getBoundingClientRect();
-   (window as any).__footerSamples.push({y:f.top-s.top,bottom:f.bottom-s.top,height:s.height});requestAnimationFrame(sample);
+   (window as any).__footerSamples.push({t:performance.now(),y:f.top-s.top,bottom:f.bottom-s.top,height:s.height});requestAnimationFrame(sample);
   }sample();
  });
 }
-async function samples(page:Page){return page.evaluate(()=>{(window as any).__sampleFooter=false;return (window as any).__footerSamples as {y:number,bottom:number,height:number}[];});}
+async function samples(page:Page){return page.evaluate(()=>{(window as any).__sampleFooter=false;return (window as any).__footerSamples as {t:number,y:number,bottom:number,height:number}[];});}
 async function settled(page:Page){
  await expect.poll(()=>page.locator('.chapter-footer').evaluate(e=>({
   running:e.getAnimations().filter(a=>a.playState==='running').length,
@@ -25,18 +25,25 @@ export function footerTests(engine:string){
  async function boot(page:Page){await page.goto('/?inspect=1');await page.waitForFunction(()=>(window as any).__experience?.snapshot().ready);await page.waitForTimeout(500);}
  test(`${engine}: bottom controls glide through an abrupt browser-height expansion`,async({page})=>{
   await boot(page);await startSamples(page);
-  await page.setViewportSize({width:390,height:844});await page.waitForTimeout(700);
+  await page.setViewportSize({width:390,height:844});await page.waitForTimeout(2100);
   const frames=await samples(page),start=frames[0].y,end=frames.at(-1)!.y;
   expect(end-start).toBeCloseTo(125,0);
   const intermediate=frames.filter(f=>f.height===844&&f.y>start+2&&f.y<end-2);
   expect(new Set(intermediate.map(f=>Math.round(f.y))).size).toBeGreaterThanOrEqual(4);
   expect(Math.max(...frames.slice(1).map((f,i)=>Math.abs(f.y-frames[i].y)))).toBeLessThan(80);
+  // A technically continuous but front-loaded half-second move still looked
+  // abrupt on the user's phone. Require a gentle start and a visibly long glide.
+  const resized=frames.find(f=>f.height===844)!;
+  const early=frames.filter(f=>f.t>=resized.t&&f.t<=resized.t+300);
+  expect(Math.max(...early.map(f=>f.y-start))).toBeLessThan(15);
+  const arrived=frames.find(f=>f.y>=end-6)!;
+  expect(arrived.t-resized.t).toBeGreaterThan(1300);
   expect(frames.every(f=>f.bottom<=f.height+1)).toBe(true);await settled(page);
  });
  test(`${engine}: rapid toolbar reversal stays contained and leaves no animation running`,async({page})=>{
   await boot(page);await startSamples(page);
   for(const height of [744,794,844,769,819,744,719]){await page.setViewportSize({width:390,height});await page.waitForTimeout(65);}
-  await page.waitForTimeout(650);const frames=await samples(page);
+  await page.waitForTimeout(2100);const frames=await samples(page);
   expect(frames.every(f=>f.y>=0&&f.bottom<=f.height+1)).toBe(true);await settled(page);
   expect(await page.locator('header .apply-link').getAttribute('href')).toBe('/apply.html');
  });
