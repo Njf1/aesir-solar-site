@@ -23,14 +23,15 @@ test('resolution obeys DPR and total-pixel caps',()=>{
   }
 });
 test('untouched operational contracts retain their original bytes through the approved presentation migration',async()=>{
-  const files=execFileSync('git',['ls-tree','-r','--name-only','c61643f'],{encoding:'utf8'}).trim().split('\n').filter(x=>x.startsWith('api/')||x.startsWith('lib/')||x.startsWith('data/')||['app.js','package-lock.json','sim.js','sim.css','vercel.json'].includes(x));
+  const files=execFileSync('git',['ls-tree','-r','--name-only','c61643f'],{encoding:'utf8'}).trim().split('\n').filter(x=>x.startsWith('api/')||x.startsWith('lib/')||x.startsWith('data/')||['app.js','package-lock.json','sim.js','sim.css'].includes(x));
   for(const file of files){const baseline=execFileSync('git',['show',`c61643f:${file}`]);assert.deepEqual(await readFile(file),baseline,file);}
+  const cfg=JSON.parse(await readFile('vercel.json','utf8')),old=JSON.parse(execFileSync('git',['show','c61643f:vercel.json']));assert.equal(cfg.cleanUrls,old.cleanUrls);assert.equal(cfg.trailingSlash,old.trailingSlash);assert.deepEqual(cfg.headers.filter(h=>h.source!=='/api/(.*)'),old.headers.filter(h=>h.source!=='/api/(.*)'));assert.equal(cfg.buildCommand,'npm run build');assert.equal(cfg.outputDirectory,'.release');assert.equal(cfg.headers.find(h=>h.source==='/api/(.*)').headers[0].value,'no-store');
 });
 test('assembled pages, anchors, functions and no-SPA routing survive',async()=>{
   for(const page of ['apply','simulator','faq','contact','terms','privacy','refunds','success'])assert.deepEqual(await readFile(`.release/${page}.html`),await readFile(`${page}.html`));
   const home=await readFile('.release/index.html','utf8');for(const id of ['top','gate','check','realroof','work','price','apply','main'])assert.ok(home.includes(`id="${id}"`),id);
-  for(const file of await readdir('api'))assert.deepEqual(await readFile(`.release/api/${file}`),await readFile(`api/${file}`));
+  for(const file of await readdir('api'))await assert.rejects(readFile(`.release/api/${file}`),{code:'ENOENT'},'server source must not be public static output');
   const cfg=JSON.parse(await readFile('.release/vercel.json','utf8'));assert.equal(cfg.cleanUrls,true);assert.equal(cfg.rewrites,undefined);
-  const html=await readFile('.release/experience.html','utf8');for(const href of ['/apply.html','/index.html#check','/contact.html','#application-details'])assert.ok(html.includes(`href="${href}"`));
+  const html=await readFile('.release/experience.html','utf8');for(const href of ['/apply.html','/suitability.html','/contact.html','#application-details'])assert.ok(html.includes(`href="${href}"`));
   for(const page of ['apply','contact','terms','privacy','refunds'])assert.ok(!(await readFile(`.release/${page}.html`,'utf8')).includes('experience-assets'));
 });

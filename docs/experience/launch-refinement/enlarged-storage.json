@@ -1,0 +1,50 @@
+[
+  {
+    "name": "mobile",
+    "copyBottom": 628.265625,
+    "labels": [
+      {
+        "top": 632.96875,
+        "bottom": 666.96875,
+        "overlap": false
+      },
+      {
+        "top": 674.96875,
+        "bottom": 708.96875,
+        "overlap": false
+      }
+    ]
+  },
+  {
+    "name": "short",
+    "copyBottom": 368.546875,
+    "labels": [
+      {
+        "top": 386,
+        "bottom": 420,
+        "overlap": false
+      },
+      {
+        "top": 386,
+        "bottom": 420,
+        "overlap": false
+      }
+    ]
+  },
+  {
+    "name": "intermediate",
+    "copyBottom": 549.21875,
+    "labels": [
+      {
+        "top": 722,
+        "bottom": 756,
+        "overlap": false
+      },
+      {
+        "top": 722,
+        "bottom": 756,
+        "overlap": false
+      }
+    ]
+  }
+]

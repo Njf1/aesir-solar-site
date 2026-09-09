@@ -1,0 +1,384 @@
+
+> aesir-solar@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ camera and guide retrace identically, including boundaries (5.763958ms)
+✔ resolution obeys DPR and total-pixel caps (0.229792ms)
+✔ untouched operational contracts retain their original bytes through the approved presentation migration (279.289917ms)
+✖ assembled pages, anchors, functions and no-SPA routing survive (12.73625ms)
+✔ all framings reverse the same world camera, target and guide, including origin rebasing (97.763125ms)
+✔ arrival begins and settles with continuous camera and target velocity (0.746875ms)
+✔ camera stays outside the photosphere and Earth during acquisition and arrival (10.894417ms)
+✔ distance-based trail begins at the guide and measures seven units behind it (0.8205ms)
+✔ framing includes short landscape and copy windows remain readable (0.850541ms)
+✔ the acquired guide stays on screen at every intermediate flight position (7.00525ms)
+✔ preserved payment contracts with dummy credentials and no network (30.839334ms)
+✔ the supplied dated record keeps its independent daily total and approximate readings (4.577542ms)
+✔ static output exposes source, date, an accessible chart and a native table without telemetry or unsupported fields (1.573791ms)
+✔ the chart resizes horizontally without shrinking its readable axis labels (0.757834ms)
+✔ numeric zero remains a valid recorded value, distinct from unavailable data (1.330375ms)
+✔ an absent internal hour is shown as missing, never fabricated as zero or padded to a whole day (0.350916ms)
+✔ missing, nonnumeric and impossible daily values render a coherent application fallback (1.830333ms)
+✔ malformed hourly readings are not coerced into valid energy or zero (2.648125ms)
+✔ required location and measurement provenance cannot silently disappear (0.793958ms)
+✔ calendar validation rejects rollover dates and accepts actual Gregorian leap days (1.082083ms)
+✔ a historical record does not expire or change its date as the wall clock advances (1.057833ms)
+✔ source strings are escaped in HTML and SVG rather than becoming executable markup (0.574625ms)
+✔ tiny positive readings are not rounded into a false recorded zero (0.162458ms)
+✔ the HTML transform rereads data, renders success and safely handles malformed or missing files (44.926917ms)
+✔ the build hook leaves every other route and token-free HTML unchanged (0.171459ms)
+✔ unaffected stage-four fields retain exact poses; documented cell and DC refinements use scoped fixtures (62.835084ms)
+✔ new camera joins the settled inverter smoothly and every operation pose reverses exactly (75.040541ms)
+✔ activation and the storage/grid conditions have ordered, mutually consistent phases (4.594625ms)
+✔ the same AC entry connects the working bay and separately converted optional battery branch (1.183042ms)
+✔ the facade opens a real clearance while retaining the inverter mounting wall and reverses exactly (42.582125ms)
+✖ new owners count all owned buffers and release every geometry/material/instance once (5.939375ms)
+✖ lights, equipment, screen, storage level and flow uniforms reconstruct from state and frozen time (3.469208ms)
+✖ all twelve still views expose one HTML statement and the ending has no resurrected photon (1.112ms)
+✖ camera and finite near-plane remain clear of actual campus, interior and service equipment (162.746666ms)
+✔ all exterior raster cells and their UVs register to the actual hero glass (60.82675ms)
+✔ selected cell, neighbours, protective glass and underside junction share exterior coordinates (2.357125ms)
+✔ the teaching aperture reveals only the selected absorber and reverses without moving the stack (2.028125ms)
+✔ connected panes retain their outer bounds and have only real aperture walls at every section (12.374333ms)
+✔ macro detail preserves contact registration, explicit shadow roles and one output conversion (4.33025ms)
+✔ absorption finishes before extraction and the optical guide never travels down the circuit (24.182667ms)
+✔ new chapter states and HTML stills reconstruct identically in reverse (57.880208ms)
+✔ camera and aim are continuous through both scale joins and the original panel stop (0.790083ms)
+✔ incoming optical trail remains attached and keeps its prefix at the new glass path (1.196458ms)
+✔ cell and electrical allocations fit actual buffer budgets and release every owned resource once (16.327208ms)
+✔ electrical paths meet the authored source and distinct inverter ports without geometric cable waves (3.913083ms)
+✔ new near planes do not cut visible cell/campus solids in five framings (155.693292ms)
+✔ the complete inverter cabinet and voltage-versus-time overlay fit the late views (10.149417ms)
+✔ the independent current reveal remains visible while the camera follows DC routing (22.783708ms)
+✔ absorption stays resolved in the central viewing field in all required viewport shapes (7.407291ms)
+✔ geographic layers conceal only bounded joins and restore the same directional state in reverse (5.87825ms)
+✖ moving cartons and contact artwork share one deterministic clock and safe spacing (20.610375ms)
+✔ end-on DC acquisition has an attached soft source face without per-frame geometry allocation (2.696625ms)
+✖ provider routes, helpers, payment script, input data and pinned dependencies retain exact bytes (298.057375ms)
+✔ compiled homepage is byte-identical at index and experience and contains genuine compatibility anchors (2.138708ms)
+✔ all named application controls retain their meaning and both consents remain distinct and unchecked (15.32775ms)
+✔ supporting pages are complete documents without the cinematic runtime or retired simulator runtime (7.506833ms)
+✖ FAQ retirement keeps an explicit native destination in metadata and visible content (4.195875ms)
+✔ direct static success is unverified and provider-neutral even before JavaScript (0.926167ms)
+✖ recorded evidence remains static, dated and separate from the illustrative campus after homepage assembly (1.580041ms)
+✔ the authoritative generator reproduces every supported source page in isolation (343.294375ms)
+✔ repeated assembly removes stale routes/scripts, retains exact contracts and never changes neighbouring/source files (399.173417ms)
+✔ full policy sections and consent distinctions survive with narrowly corrected implementation copy (30.335709ms)
+✔ suitability preserves unknown and zero distinctions and never creates a paid result (26.752208ms)
+✔ the extension preserves every captured old pose at the same scroll unit (47.468125ms)
+✔ new duration adds scroll while old chapters and stills retain their positions (4.755916ms)
+✔ new chapters extend the scroll distance while retaining the accepted first unit (3.015708ms)
+✔ geographic convention and directional sunlight agree across coordinate systems (0.167625ms)
+✔ all chapters reconstruct identical finite shots in reverse and attach the trail head exactly (103.026375ms)
+✔ guide, camera, aim and up stay continuous through rebasing and obscured scale handoffs (0.352875ms)
+✔ camera, aim and guide settle continuously at handoffs without pauses at new interior landmarks (1.810542ms)
+✔ the approach, roof entry and array glide occupy authored scroll landmarks (23.938084ms)
+✔ the exposed guide stays in frame and clear of the Earth and roof at every sampled step (215.347125ms)
+✔ authored geometry leaves the camera-to-guide sightline clear and agrees with the landing anchor (304.561667ms)
+✔ accepted Sun, flight and Earth camera poses retain their physical scroll positions (7.466166ms)
+✔ known landmarks and the illustrative origin land on Britain, with Ireland kept separate (3.577417ms)
+✔ commercial resources fit incremental budgets and each owned object disposes exactly once (15.483834ms)
+✔ shader warmup stops its timer before material disposal after a timeout or context loss (87.037375ms)
+✔ warmup resolves after readiness, rejects compile errors and never starts after disposal (42.329709ms)
+ℹ tests 78
+ℹ suites 0
+ℹ pass 69
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1187.94725
+
+✖ failing tests:
+
+test at tests/contracts.test.mjs:29:1
+✖ assembled pages, anchors, functions and no-SPA routing survive (12.73625ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(html.includes(`href="${href}"`))
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/contracts.test.mjs:34:164)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/stage-five.test.mjs:59:1
+✖ new owners count all owned buffers and release every geometry/material/instance once (5.939375ms)
+  Error: Interior budget exceeded: {"drawCalls":25,"triangles":9656,"geometryBytes":61360,"instances":600,"textureBytes":0,"pointLights":2,"shadowLights":0}
+      at createBusinessInterior (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/interior.ts:339:75)
+      at new BusinessScene (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/business.ts:16:14)
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-five.test.mjs:61:33)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)
+
+test at tests/stage-five.test.mjs:69:1
+✖ lights, equipment, screen, storage level and flow uniforms reconstruct from state and frozen time (3.469208ms)
+  Error: Interior budget exceeded: {"drawCalls":25,"triangles":9656,"geometryBytes":61360,"instances":600,"textureBytes":0,"pointLights":2,"shadowLights":0}
+      at createBusinessInterior (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/interior.ts:339:75)
+      at new BusinessScene (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/business.ts:16:14)
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-five.test.mjs:70:17)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)
+
+test at tests/stage-five.test.mjs:76:1
+✖ all twelve still views expose one HTML statement and the ending has no resurrected photon (1.112ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /does not automatically provide backup/. Input:
+  
+  '<!doctype html>\n' +
+    '<html lang="en-GB">\n' +
+    '<head>\n' +
+    '  <meta charset="UTF-8">\n' +
+    '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
+    '  <meta name="robots" content="noindex, nofollow">\n' +
+    '  <meta name="theme-color" content="#050608">\n' +
+    '  <meta name="description" content="From the Sun to a considered connection. Aesir prepares and submits G99 Form A1-2 applications across Great Britain. £250 + £50 VAT = £300 per application.">\n' +
+    '  <title>Energy begins here — Aesir Solar</title>\n' +
+    '  <link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+    '  <link rel="stylesheet" href="/src/experience/style.css">\n' +
+    '  <link rel="stylesheet" href="/src/experience/editorial.css">\n' +
+    '</head>\n' +
+    '<body>\n' +
+    '  <header class="site-header">\n' +
+    '    <a class="brand" href="/" aria-label="Aesir Solar home"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><span>AESIR<span class="brand-solar">SOLAR</span></span></a>\n' +
+    '    <span class="header-note">ENERGY, CONNECTED.</span>\n' +
+    '    <a class="apply-link" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>\n' +
+    '  </header>\n' +
+    '  <main id="main" tabindex="-1"><span id="top" class="legacy-anchor" tabindex="-1"></span>\n' +
+    '    <section class="journey" id="journey" aria-label="Follow sunlight through a solar cell to useful electrical energy">\n' +
+    '      <div class="stage" id="stage">\n' +
+    '        <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:759px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>\n' +
+    '        <div class="canvas-host" id="canvas-host" aria-hidden="true"></div>\n' +
+    '        <div class="cinema-shade" aria-hidden="true"></div>\n' +
+    '        <a class="skip-link" href="#application-details">Skip to application details <span aria-hidden="true">↓</span></a>\n' +
+    '        <div class="copy-stack" id="copy-stack">\n' +
+    '          <div class="chapter-copy copy-opening" data-copy="0">\n' +
+    '            <p class="eyebrow">A JOURNEY THROUGH SOLAR ENERGY</p>\n' +
+    '            <h1 id="chapter-title">ENERGY<br>BEGINS HERE.</h1>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-sun" data-copy="1" aria-hidden="true">\n' +
+    '            <p class="eyebrow">THE SOURCE</p>\n' +
+    '            <h2>OUR NEAREST<br>STAR.</h2>\n' +
+    '            <p class="chapter-description">A living surface. Light in every direction.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-flight" data-copy="2" aria-hidden="true">\n' +
+    '            <p class="eyebrow">FROM THE SUN</p>\n' +
+    '            <h2>FOLLOW<br>THE LIGHT.</h2>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-earth" data-copy="3" aria-hidden="true">\n' +
+    '            <p class="eyebrow">TO THE PLACES WE WORK</p>\n' +
+    '            <h2>SUNLIGHT<br>REACHES US.</h2>\n' +
+    '\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-britain" data-copy="4" aria-hidden="true">\n' +
+    '            <p class="eyebrow">GREAT BRITAIN</p><h2>CLOSER<br>TO HOME.</h2>\n' +
+    '            <p class="chapter-description">G99 application support<br>across Great Britain.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-building" data-copy="5" aria-hidden="true">\n' +
+    '            <p class="eyebrow">AN ILLUSTRATIVE COMMERCIAL SITE</p><h2>A WORKING<br>ROOF.</h2>\n' +
+    '            <p class="chapter-description">The installation details<br>shape the application.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-panel" data-copy="6" aria-hidden="true">\n' +
+    '            <p class="eyebrow">AT THE SURFACE</p><h2>LIGHT MEETS<br>SILICON.</h2>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-glass" data-copy="7" aria-hidden="true">\n' +
+    '            <p class="eyebrow">THE SAME CELL, ENLARGED</p><h2>BENEATH<br>THE GLASS.</h2>\n' +
+    '            <p class="chapter-description">Through protective glass<br>to the silicon cell.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-cell" data-copy="8" aria-hidden="true">\n' +
+    '            <p class="eyebrow">ABSORPTION AND COLLECTION</p><h2>LIGHT BECOMES<br>POWER.</h2>\n' +
+    '            <p class="chapter-description">The silicon absorbs light and transfers its energy to charge carriers.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-dc" data-copy="9" aria-hidden="true">\n' +
+    '            <p class="eyebrow">COLLECTED AT THE CONTACTS</p><h2>DIRECT<br>CURRENT.</h2>\n' +
+    '            <p class="chapter-description">The array and inverter details<br>shape the application.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-inverter" data-copy="10" aria-hidden="true">\n' +
+    '            <p class="eyebrow">AT THE INVERTER</p><h2>DC BECOMES<br>AC.</h2>\n' +
+    '            <p class="chapter-description">The inverter converts the array’s direct current into alternating current.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-operation-note" data-copy="11" aria-hidden="true"><p class="eyebrow">OPERATION, ILLUSTRATED</p><p class="operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n' +
+    '          <div class="chapter-copy copy-business" data-copy="12" aria-hidden="true"><p class="eyebrow">A WORKING BUSINESS</p><h2>ENERGY,<br>PUT TO WORK.</h2><p class="chapter-description">From rooftop generation to the places your business needs power.</p><p class="still-operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n' +
+    '          <div class="chapter-copy copy-storage" data-copy="13" aria-hidden="true"><p class="eyebrow">OPTIONAL STORAGE · CHARGING</p><h2>KEEP SOME<br>FOR LATER.</h2><p class="chapter-description">Optional storage can shift when stored energy is used.</p></div>\n' +
+    '          <div class="chapter-copy copy-later" data-copy="14" aria-hidden="true"><p class="eyebrow">LATER · STORED ENERGY</p><h2>WHEN IT’S<br>NEEDED.</h2><p class="chapter-description">Stored energy can help supply the business.</p></div>\n' +
+    '          <div class="chapter-copy copy-grid" data-copy="15" aria-hidden="true"><p class="eyebrow">WHEN THE GRID SUPPLIES POWER.</p><h2>PART OF A<br>CONNECTED<br>SYSTEM.</h2><p class="chapter-description">Generation, storage and the grid work within the agreed connection.</p></div>\n' +
+    '          <div class="chapter-copy copy-long" data-copy="16" aria-hidden="true"><h2>A LONG<br>JOURNEY.</h2></div>\n' +
+    '          <div class="chapter-copy copy-connection" data-copy="17" aria-hidden="true"><h2>A CONNECTION<br>WORTH GETTING<br>RIGHT.</h2></div>\n' +
+    '          <div class="chapter-copy copy-payoff" data-copy="18" aria-hidden="true"><svg class="payoff-mark" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><h2>AESIR<span>SOLAR</span></h2><p class="chapter-description">Your G99 application.<br>Prepared. Submitted. Followed through.</p><a class="payoff-action" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a></div>\n' +
+    '        </div>\n' +
+    '        <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>\n' +
+    '        <p class="process-note" id="process-note">Illustrative layers and motion, enlarged.<br>Continuing light and a connected circuit.</p>\n' +
+    '        <div id="inverter-annotations" hidden><span data-inverter-label="dcLabel">DC input</span><span data-inverter-label="acLabel">AC output</span><span data-inverter-label="timeLabel">Voltage ↕ · Time →</span></div>\n' +
+    '        <div id="storage-annotations" hidden><span data-storage-label="batteryLabel">Optional battery</span><span data-storage-label="converterLabel">Storage converter</span></div>\n' +
+    '        <div class="chapter-footer">\n' +
+    '          <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>\n' +
+    '          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span id="chapter-count"></span></div>\n' +
+    '          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button><button type="button" data-still="business" aria-pressed="false">Business</button><button type="button" data-still="storage" aria-pressed="false">Storage</button><button type="button" data-still="connected" aria-pressed="false">Grid</button><button type="button" data-still="aesir" aria-pressed="false">Aesir</button></div>\n' +
+    '          <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>\n' +
+    '        </div>\n' +
+    '        <p class="fallback-status" id="fallback-status" role="status"></p>\n' +
+    '        <noscript><p class="no-script">A still moment from the journey. Application details are below.</p></noscript>\n' +
+    '      </div>\n' +
+    '    </section>\n' +
+    '    <section class="conversion" id="application-details" tabindex="-1" aria-labelledby="conversion-title">\n' +
+    '      <span id="price" class="legacy-anchor" tabindex="-1"></span><span id="apply" class="legacy-anchor" tabindex="-1"></span><span id="gate" class="legacy-anchor" tabindex="-1"></span><div class="bridge-intro"><p class="eyebrow">THE CONNECTION APPLICATION SERVICE / GREAT BRITAIN</p><h2 id="conversion-title">Your G99 application,<br><span>handled.</span></h2></div>\n' +
+    '      <div class="service-grid">\n' +
+    '        <div'... 7173 more characters
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-five.test.mjs:80:232)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<!doctype html>\n<html lang="en-GB">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <meta name="robots" content="noindex, nofollow">\n  <meta name="theme-color" content="#050608">\n  <meta name="description" content="From the Sun to a considered connection. Aesir prepares and submits G99 Form A1-2 applications across Great Britain. £250 + £50 VAT = £300 per application.">\n  <title>Energy begins here — Aesir Solar</title>\n  <link rel="icon" href="/favicon.svg" type="image/svg+xml">\n  <link rel="stylesheet" href="/src/experience/style.css">\n  <link rel="stylesheet" href="/src/experience/editorial.css">\n</head>\n<body>\n  <header class="site-header">\n    <a class="brand" href="/" aria-label="Aesir Solar home"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><span>AESIR<span class="brand-solar">SOLAR</span></span></a>\n    <span class="header-note">ENERGY, CONNECTED.</span>\n    <a class="apply-link" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>\n  </header>\n  <main id="main" tabindex="-1"><span id="top" class="legacy-anchor" tabindex="-1"></span>\n    <section class="journey" id="journey" aria-label="Follow sunlight through a solar cell to useful electrical energy">\n      <div class="stage" id="stage">\n        <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:759px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>\n        <div class="canvas-host" id="canvas-host" aria-hidden="true"></div>\n        <div class="cinema-shade" aria-hidden="true"></div>\n        <a class="skip-link" href="#application-details">Skip to application details <span aria-hidden="true">↓</span></a>\n        <div class="copy-stack" id="copy-stack">\n          <div class="chapter-copy copy-opening" data-copy="0">\n            <p class="eyebrow">A JOURNEY THROUGH SOLAR ENERGY</p>\n            <h1 id="chapter-title">ENERGY<br>BEGINS HERE.</h1>\n          </div>\n          <div class="chapter-copy copy-sun" data-copy="1" aria-hidden="true">\n            <p class="eyebrow">THE SOURCE</p>\n            <h2>OUR NEAREST<br>STAR.</h2>\n            <p class="chapter-description">A living surface. Light in every direction.</p>\n          </div>\n          <div class="chapter-copy copy-flight" data-copy="2" aria-hidden="true">\n            <p class="eyebrow">FROM THE SUN</p>\n            <h2>FOLLOW<br>THE LIGHT.</h2>\n          </div>\n          <div class="chapter-copy copy-earth" data-copy="3" aria-hidden="true">\n            <p class="eyebrow">TO THE PLACES WE WORK</p>\n            <h2>SUNLIGHT<br>REACHES US.</h2>\n\n          </div>\n          <div class="chapter-copy copy-britain" data-copy="4" aria-hidden="true">\n            <p class="eyebrow">GREAT BRITAIN</p><h2>CLOSER<br>TO HOME.</h2>\n            <p class="chapter-description">G99 application support<br>across Great Britain.</p>\n          </div>\n          <div class="chapter-copy copy-building" data-copy="5" aria-hidden="true">\n            <p class="eyebrow">AN ILLUSTRATIVE COMMERCIAL SITE</p><h2>A WORKING<br>ROOF.</h2>\n            <p class="chapter-description">The installation details<br>shape the application.</p>\n          </div>\n          <div class="chapter-copy copy-panel" data-copy="6" aria-hidden="true">\n            <p class="eyebrow">AT THE SURFACE</p><h2>LIGHT MEETS<br>SILICON.</h2>\n          </div>\n          <div class="chapter-copy copy-glass" data-copy="7" aria-hidden="true">\n            <p class="eyebrow">THE SAME CELL, ENLARGED</p><h2>BENEATH<br>THE GLASS.</h2>\n            <p class="chapter-description">Through protective glass<br>to the silicon cell.</p>\n          </div>\n          <div class="chapter-copy copy-cell" data-copy="8" aria-hidden="true">\n            <p class="eyebrow">ABSORPTION AND COLLECTION</p><h2>LIGHT BECOMES<br>POWER.</h2>\n            <p class="chapter-description">The silicon absorbs light and transfers its energy to charge carriers.</p>\n          </div>\n          <div class="chapter-copy copy-dc" data-copy="9" aria-hidden="true">\n            <p class="eyebrow">COLLECTED AT THE CONTACTS</p><h2>DIRECT<br>CURRENT.</h2>\n            <p class="chapter-description">The array and inverter details<br>shape the application.</p>\n          </div>\n          <div class="chapter-copy copy-inverter" data-copy="10" aria-hidden="true">\n            <p class="eyebrow">AT THE INVERTER</p><h2>DC BECOMES<br>AC.</h2>\n            <p class="chapter-description">The inverter converts the array’s direct current into alternating current.</p>\n          </div>\n          <div class="chapter-copy copy-operation-note" data-copy="11" aria-hidden="true"><p class="eyebrow">OPERATION, ILLUSTRATED</p><p class="operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n          <div class="chapter-copy copy-business" data-copy="12" aria-hidden="true"><p class="eyebrow">A WORKING BUSINESS</p><h2>ENERGY,<br>PUT TO WORK.</h2><p class="chapter-description">From rooftop generation to the places your business needs power.</p><p class="still-operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n          <div class="chapter-copy copy-storage" data-copy="13" aria-hidden="true"><p class="eyebrow">OPTIONAL STORAGE · CHARGING</p><h2>KEEP SOME<br>FOR LATER.</h2><p class="chapter-description">Optional storage can shift when stored energy is used.</p></div>\n          <div class="chapter-copy copy-later" data-copy="14" aria-hidden="true"><p class="eyebrow">LATER · STORED ENERGY</p><h2>WHEN IT’S<br>NEEDED.</h2><p class="chapter-description">Stored energy can help supply the business.</p></div>\n          <div class="chapter-copy copy-grid" data-copy="15" aria-hidden="true"><p class="eyebrow">WHEN THE GRID SUPPLIES POWER.</p><h2>PART OF A<br>CONNECTED<br>SYSTEM.</h2><p class="chapter-description">Generation, storage and the grid work within the agreed connection.</p></div>\n          <div class="chapter-copy copy-long" data-copy="16" aria-hidden="true"><h2>A LONG<br>JOURNEY.</h2></div>\n          <div class="chapter-copy copy-connection" data-copy="17" aria-hidden="true"><h2>A CONNECTION<br>WORTH GETTING<br>RIGHT.</h2></div>\n          <div class="chapter-copy copy-payoff" data-copy="18" aria-hidden="true"><svg class="payoff-mark" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><h2>AESIR<span>SOLAR</span></h2><p class="chapter-description">Your G99 application.<br>Prepared. Submitted. Followed through.</p><a class="payoff-action" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a></div>\n        </div>\n        <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>\n        <p class="process-note" id="process-note">Illustrative layers and motion, enlarged.<br>Continuing light and a connected circuit.</p>\n        <div id="inverter-annotations" hidden><span data-inverter-label="dcLabel">DC input</span><span data-inverter-label="acLabel">AC output</span><span data-inverter-label="timeLabel">Voltage ↕ · Time →</span></div>\n        <div id="storage-annotations" hidden><span data-storage-label="batteryLabel">Optional battery</span><span data-storage-label="converterLabel">Storage converter</span></div>\n        <div class="chapter-footer">\n          <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>\n          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span id="chapter-count"></span></div>\n          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button><button type="button" data-still="business" aria-pressed="false">Business</button><button type="button" data-still="storage" aria-pressed="false">Storage</button><button type="button" data-still="connected" aria-pressed="false">Grid</button><button type="button" data-still="aesir" aria-pressed="false">Aesir</button></div>\n          <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>\n        </div>\n        <p class="fallback-status" id="fallback-status" role="status"></p>\n        <noscript><p class="no-script">A still moment from the journey. Application details are below.</p></noscript>\n      </div>\n    </section>\n    <section class="conversion" id="application-details" tabindex="-1" aria-labelledby="conversion-title">\n      <span id="price" class="legacy-anchor" tabindex="-1"></span><span id="apply" class="legacy-anchor" tabindex="-1"></span><span id="gate" class="legacy-anchor" tabindex="-1"></span><div class="bridge-intro"><p class="eyebrow">THE CONNECTION APPLICATION SERVICE / GREAT BRITAIN</p><h2 id="conversion-title">Your G99 application,<br><span>handled.</span></h2></div>\n      <div class="service-grid">\n        <div'... 7173 more characters,
+    expected: /does not automatically provide backup/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/stage-five.test.mjs:85:1
+✖ camera and finite near-plane remain clear of actual campus, interior and service equipment (162.746666ms)
+  Error: Command failed: /usr/local/bin/node scripts/check-stage-five-clearance.mjs --step=0.004 --output=/var/folders/ts/9v6tmcb53yg14gj5trs614ph0000gn/T/aesir-stage-five-clearance-61298.json
+  file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/interior.ts:339
+    if(geometryBytes>350000||triangles>18000||drawCalls>22){dispose();throw new Error('Interior budget exceeded: '+JSON.stringify(stats));}
+                                                                            ^
+  
+  Error: Interior budget exceeded: {"drawCalls":25,"triangles":9656,"geometryBytes":61360,"instances":600,"textureBytes":0,"pointLights":2,"shadowLights":0}
+      at createBusinessInterior (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/interior.ts:339:75)
+      at new BusinessScene (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/business.ts:16:14)
+      at file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/scripts/check-stage-five-clearance.mjs:21:99
+  
+  Node.js v24.15.0
+  
+      at genericNodeError (node:internal/errors:985:15)
+      at wrappedFn (node:internal/errors:539:14)
+      at checkExecSyncError (node:child_process:925:11)
+      at execFileSync (node:child_process:961:15)
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-five.test.mjs:87:2)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12) {
+    status: 1,
+    signal: null,
+    output: [ null, <Buffer >, <Buffer 66 69 6c 65 3a 2f 2f 2f 55 73 65 72 73 2f 6e 69 63 6b 2f 50 72 6f 6a 65 63 74 73 2f 41 65 73 69 72 25 32 30 53 6f 6c 61 72 2f 65 78 70 65 72 69 65 6e ... 787 more bytes> ],
+    pid: 61578,
+    stdout: <Buffer >,
+    stderr: <Buffer 66 69 6c 65 3a 2f 2f 2f 55 73 65 72 73 2f 6e 69 63 6b 2f 50 72 6f 6a 65 63 74 73 2f 41 65 73 69 72 25 32 30 53 6f 6c 61 72 2f 65 78 70 65 72 69 65 6e ... 787 more bytes>
+  }
+
+test at tests/stage-seven-detail.test.mjs:24:1
+✖ moving cartons and contact artwork share one deterministic clock and safe spacing (20.610375ms)
+  Error: Interior budget exceeded: {"drawCalls":25,"triangles":8488,"geometryBytes":54352,"instances":600,"textureBytes":0,"pointLights":2,"shadowLights":0}
+      at createBusinessInterior (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/src/experience/interior.ts:339:75)
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-seven-detail.test.mjs:25:53)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)
+
+test at tests/stage-seven-routes.test.mjs:27:1
+✖ provider routes, helpers, payment script, input data and pinned dependencies retain exact bytes (298.057375ms)
+  AssertionError [ERR_ASSERTION]: package.json
+  + actual - expected
+  ... Skipped lines
+  
+  + Buffer(740) [Uint8Array] [
+  - Buffer(720) [Uint8Array] [
+      123,
+      10,
+      32,
+      32,
+      34,
+  ...
+      34,
+  +   112,
+  +   121,
+  +   116,
+  +   104,
+  +   111,
+  +   110,
+  +   51,
+  +   32,
+  +   98,
+  +   117,
+  +   105,
+  +   108,
+  +   100,
+  +   46,
+  +   112,
+  +   121,
+  +   32,
+  +   38,
+  +   38,
+  +   32,
+      118,
+      105,
+      116,
+      101,
+      32,
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-seven-routes.test.mjs:30:36)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: <Buffer 7b 0a 20 20 22 6e 61 6d 65 22 3a 20 22 61 65 73 69 72 2d 73 6f 6c 61 72 22 2c 0a 20 20 22 76 65 72 73 69 6f 6e 22 3a 20 22 31 2e 30 2e 30 22 2c 0a 20 ... 690 more bytes>,
+    expected: <Buffer 7b 0a 20 20 22 6e 61 6d 65 22 3a 20 22 61 65 73 69 72 2d 73 6f 6c 61 72 22 2c 0a 20 20 22 76 65 72 73 69 6f 6e 22 3a 20 22 31 2e 30 2e 30 22 2c 0a 20 ... 670 more bytes>,
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/stage-seven-routes.test.mjs:70:1
+✖ FAQ retirement keeps an explicit native destination in metadata and visible content (4.195875ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(refresh)
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-seven-routes.test.mjs:72:9)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/stage-seven-routes.test.mjs:84:1
+✖ recorded evidence remains static, dated and separate from the illustrative campus after homepage assembly (1.580041ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(record)
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-seven-routes.test.mjs:85:154)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

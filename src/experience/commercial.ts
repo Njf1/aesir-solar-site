@@ -218,15 +218,18 @@ export function createCommercialSite(quality: CommercialQuality): CommercialSite
     box('parapets', charcoal, x, 11.11, 0, .21, .53, 48.2);
     box('parapet cappings', aluminium, x, 11.39, 0, .32, .055, 48.4);
   }
+  // The old ribs extended to y=1.30 and shared the plinth's exact outer face
+  // through y=1.40. End them above the base instead of fighting for depth.
+  const ribBase=1.46,ribTop=10.0,ribCentre=(ribBase+ribTop)/2,ribHeight=ribTop-ribBase;
   const ribStep = mobile ? 1.05 : .72;
   for (let x = -39.5; x <= 39.5; x += ribStep) {
-    box('cladding ribs', ribs, x, 5.65, -24.055, .045, 8.7, .09);
+    box('cladding ribs', ribs, x, ribCentre, -24.055, .045, ribHeight, .09);
     // The office covers only part of the south facade; the working building stays visible.
     if (x > 13 || x < -38) box('cladding ribs', ribs, x, 5.05, 24.055, .045, 7.1, .09);
   }
   for (let z = -23.5; z <= 23.5; z += ribStep) {
-    const rib=box('cladding ribs', ribs, -40.055, 5.65, z, .09, 8.7, .045);if(z>5&&z<16.5)rib.section=true;
-    if (z < -19 || z > 17) box('cladding ribs', ribs, 40.055, 5.65, z, .09, 8.7, .045);
+    const rib=box('cladding ribs', ribs, -40.055, ribCentre, z, .09, ribHeight, .045);if(z>5&&z<16.5)rib.section=true;
+    if (z < -19 || z > 17) box('cladding ribs', ribs, 40.055, ribCentre, z, .09, ribHeight, .045);
   }
   for (const x of [-37.2, -17, 14, 37.2]) for (const z of [-24.2, 24.2]) cylinder('downpipes', darkMetal, x, 5.4, z, .07, 10.3);
   // Fine roof seams are inset below arrays and remain visible at the service edge.

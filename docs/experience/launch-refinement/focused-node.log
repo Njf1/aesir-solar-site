@@ -1,0 +1,12 @@
+✔ actual corrugation ends above the plinth and the selected facade returns completely (31.356292ms)
+✔ battery explanation holds one composed pose and closes the wall only after camera exit (8.259459ms)
+✔ the carton line is slower, cannot fast-forward with scroll activation, and tapes after collection (14.182958ms)
+✔ compact recorded summary preserves zero and never manufactures a missing sample (0.876042ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.171625

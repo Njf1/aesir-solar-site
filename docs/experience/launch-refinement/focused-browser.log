@@ -1,0 +1,9 @@
+
+Running 2 tests using 1 worker
+
+(node:67412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/stage-five.spec.ts:183:1 › enlarged storage labels fit the viewport and stay separate from the main statement (809ms)
+  ✓  2 tests/browser/stage-two.spec.ts:125:1 › conversion service steps and original form contract remain usable (419ms)
+
+  2 passed (1.8s)

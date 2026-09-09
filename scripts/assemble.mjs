@@ -9,14 +9,14 @@ const root=new URL('../',import.meta.url),release=new URL('.release/',root),stag
 execFileSync('python3',[fileURLToPath(new URL('build.py',root))],{cwd:fileURLToPath(root),stdio:'inherit'});
 for(const location of [release,staging,previous]){try{if((await lstat(location)).isSymbolicLink())throw Error('Generated output must not be a symlink');}catch(e){if(e.code!=='ENOENT')throw e;}}
 await rm(staging,{recursive:true,force:true});await mkdir(staging,{recursive:true});
-const staticFiles=['apply.html','simulator.html','faq.html','contact.html','terms.html','privacy.html','refunds.html','success.html','style.css','site.css','site.js','app.js','favicon.svg','data','api','lib','package.json','package-lock.json'];
+const staticFiles=['solar.html','suitability.html','guide.css','apply.html','simulator.html','faq.html','contact.html','terms.html','privacy.html','refunds.html','success.html','style.css','site.css','site.js','app.js','favicon.svg','data'];
 for(const file of staticFiles)await cp(new URL(file,root),new URL(file,staging),{recursive:true});
 await cp(new URL('.preview-build/',root),staging,{recursive:true});
 await cp(new URL('experience.html',staging),new URL('index.html',staging));
 await writeFile(new URL('robots.txt',staging),'User-agent: *\nDisallow: /\n');
 const manifest=[];async function inventory(dir,prefix=''){for(const e of await readdir(dir,{withFileTypes:true})){const rel=prefix+e.name;if(e.isDirectory())await inventory(new URL(e.name+'/',dir),rel+'/');else manifest.push(rel);}}
 const config=JSON.parse(await readFile(new URL('vercel.json',root),'utf8'));
-// This file is a reviewable proposal only; the checked-in Vercel config remains unchanged.
+// The root Vercel build owns server functions in api/. This output is public static content only; no handler source, helper or package files are copied here.
 config.buildCommand='';config.outputDirectory='.';
 await writeFile(new URL('vercel.json',staging),JSON.stringify(config,null,2)+'\n');
 await inventory(staging);await writeFile(new URL('output-manifest.json',staging),JSON.stringify({owner:'scripts/assemble.mjs',localCandidate:true,files:manifest.sort()},null,2)+'\n');
@@ -35,6 +35,7 @@ const businessCode=sizes.find(x=>/^business-(?!journey).*\.js$/.test(x.file)),st
 const incremental={businessCodeGzipBytes:businessCode?.gzip??0,storageCodeGzipBytes:storageCode?.gzip??0,cellCodeGzipBytes:cellCode?.gzip??0,electricalCodeGzipBytes:electricalCode?.gzip??0,flowCodeGzipBytes:flowCode?.gzip??0,regionRawBytes:region?.bytes??0,regionGzipBytes:region?.gzip??0,regionCodeGzipBytes:regionCode?.gzip??0,siteCodeGzipBytes:siteCode?.gzip??0,budgets:{businessCodeGzip:12000,storageCodeGzip:10000,cellCodeGzip:8000,electricalCodeGzip:8000,flowCodeGzip:2000,regionRaw:550000,regionGzip:180000,regionCodeGzip:10000,siteCodeGzip:20000}};
 const pass=incremental.businessCodeGzipBytes<=12000&&incremental.storageCodeGzipBytes<=10000&&incremental.cellCodeGzipBytes<=8000&&incremental.electricalCodeGzipBytes<=8000&&incremental.flowCodeGzipBytes<=2000&&totalJS<=750000&&mediaBytes<=2000000&&incremental.regionRawBytes<=550000&&incremental.regionGzipBytes<=180000&&incremental.regionCodeGzipBytes<=10000&&incremental.siteCodeGzipBytes<=20000;
 const report={measuredAt:new Date().toISOString(),files:sizes,newJavaScriptGzipBytes:totalJS,budgetBytes:750000,newMediaBytes:mediaBytes,mediaBudgetBytes:2000000,incremental,pass};
+await mkdir(new URL('docs/experience/',root),{recursive:true});
 await writeFile(new URL('docs/experience/asset-sizes.json',root),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({release:'.release',...report,files:undefined},null,2));
 if(!pass)process.exitCode=1;

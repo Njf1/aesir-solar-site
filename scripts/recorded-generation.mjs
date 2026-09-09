@@ -144,12 +144,19 @@ export function renderRecordedGeneration(input){
 </details>`;
 }
 
+export function renderRecordedSummary(input){
+ const result=validateRecordedGeneration(input);
+ if(!result.ok)return '<h3>Recorded example unavailable.</h3><p>The supplied record could not be read. No substitute production is shown.</p><a href="/apply.html">Start your application</a>';
+ const d=result.data;
+ return `<h3>One recorded example.</h3><p>${escape(d.siteName)}, ${escape(d.location)}. <strong>${escape(formatEnergy(d.dailyKwh,true))} kWh</strong> recorded on <time datetime="${d.dateISO}">${escape(d.dateLabel)}</time>.</p><p class="source-line">Supplied ${escape(d.monitoring)} transcription; not independently verified or live. Separate from the illustrated campus.</p><a href="/solar.html#recorded-generation">Read the dated record and approximate hourly chart <span aria-hidden="true">↗</span></a>`;
+}
+
 /** The same HTML hook runs in Vite development and production builds. Preview and
  * assembled delivery serve its already rendered HTML; no browser data request is added. */
 export function recordedGenerationPlugin({dataURL=defaultDataURL}={}){
   return {name:'recorded-generation-static-html',transformIndexHtml:{order:'pre',async handler(html,context){
-    if(!context.filename||path.resolve(context.filename)!==experienceFile||!html.includes(TOKEN))return html;
+    if(!context.filename||path.resolve(context.filename)!==experienceFile||(!html.includes(TOKEN)&&!html.includes('<!-- RECORDED_SUMMARY -->')))return html;
     let input=null;try{input=JSON.parse(await readFile(dataURL,'utf8'));}catch{/* Missing or malformed source keeps the static application route usable. */}
-    return html.replace(TOKEN,renderRecordedGeneration(input));
+    return html.replace(TOKEN,renderRecordedGeneration(input)).replace('<!-- RECORDED_SUMMARY -->',renderRecordedSummary(input));
   }}};
 }

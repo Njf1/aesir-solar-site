@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check application suitability — Aesir Solar</title>
+  <meta name="description" content="Use documented AC equipment ratings and discuss uncertain arrangements before paying.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#050608">
+  <link rel="canonical" href="https://aesirsolar.co.uk/suitability.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/guide.css">
+</head>
+<body class="support-page page-suitability" data-page="suitability">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Aesir Solar home"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><span>AESIR<span class="brand-solar">SOLAR</span></span></a>
+    <nav class="primary-nav" aria-label="Primary"><a href="/solar.html">Solar energy</a><a href="/#application-process">The process</a><a href="/faq.html">Questions</a></nav>
+    <a class="apply-link" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" tabindex="-1" class="page-content guide">
+<div class="editorial guide-editorial">
+<section class="editorial-section suitability-section" id="check" tabindex="-1" aria-labelledby="suitability-title">
+        <div class="section-heading"><p class="eyebrow">START WITH SUITABILITY</p><h2 id="suitability-title">The right route<br>for your installation.</h2><p class="section-lead">Form A1-2 is for particular small-generation arrangements. The roof’s panel capacity alone cannot tell you which application is needed.</p></div>
+        <div class="suitability-layout"><div class="editorial-copy"><h3>Use documented<br>AC capacity.</h3><p>Consider the existing and proposed generation, including any separately connected storage inverter. Use the registered AC current on the highest-loaded phase and the rating of each generating unit—not the panels’ DC kWp or the battery’s kWh capacity.</p><p>Equipment type-testing, export limitation, phase arrangement and any backup operation also matter. A network operator must assess the actual design. This guide does not certify eligibility or grant permission.</p><p>Not sure of a rating? Leave it unknown. Send the postcode, inverter models, type-test references and an outline of existing and proposed equipment to <a href="mailto:hello@aesirsolar.co.uk">hello@aesirsolar.co.uk</a>.</p><p class="source-line">Based on <a href="https://dcode.org.uk/assets/250307ena-erec-g99-issue-2-(2025).pdf">ENA G99 Issue 2, section 6.2.2</a> and <a href="https://connections.nationalgrid.co.uk/g99-connection-procedures">NGED’s connection procedures</a>, reviewed 8 September 2026. Boundary cases and the operator’s current requirements need confirmation.</p><noscript><p>The interactive guide needs JavaScript. <a href="/contact.html">Discuss your installation with Aesir</a>; the service and application remain available.</p></noscript></div>
+        <form id="eligibility-checker" class="suitability-form" aria-label="Indicative suitability guide" onsubmit="return false">
+          <p class="eyebrow">AN INDICATIVE GUIDE</p>
+          <label for="aggregate-current">Aggregate registered AC current, per phase <span>Include existing and proposed units. Amps (A); leave blank if unknown.</span></label><input id="aggregate-current" name="aggregateCurrent" type="number" min="0" step="any" inputmode="decimal" placeholder="Unknown">
+          <label for="unit-current">Largest unit’s registered AC current, per phase <span>Amps (A), from its documentation.</span></label><input id="unit-current" name="unitCurrent" type="number" min="0" step="any" inputmode="decimal" placeholder="Unknown">
+          <label for="type-tested">Are the generating units fully type-tested for this arrangement?</label><select id="type-tested" name="typeTested"><option value="unknown">Not yet confirmed</option><option value="yes">Yes, documented</option><option value="no">No</option></select>
+          <label for="existing-known">Are all existing generation and phase arrangements accounted for?</label><select id="existing-known" name="existingKnown"><option value="unknown">Not yet confirmed</option><option value="yes">Yes</option><option value="no">No</option></select>
+          <label for="export-limiter">Is a fully type-tested G100 export-limitation scheme specified?</label><select id="export-limiter" name="g100"><option value="unknown">Not yet confirmed</option><option value="yes">Yes</option><option value="no">No</option></select>
+          <label for="backup-proposed">Is island / EPS / backup operation proposed?</label><select id="backup-proposed" name="eps"><option value="unknown">Not yet confirmed</option><option value="no">No</option><option value="yes">Yes</option></select>
+          <div class="suitability-result" role="status" aria-live="polite"><h3 id="suitability-result-title">Start with the documented details.</h3><p id="suitability-result-copy">Unknown details need a conversation before a paid application. This guide cannot establish suitability by itself.</p><a href="/contact.html">Discuss suitability with Aesir <span aria-hidden="true">↗</span></a></div>
+        </form></div>
+      </section>
+</div>
+<script type="module" src="/src/experience/suitability-page.ts"></script>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-intro"><span class="footer-name">AESIR SOLAR <span>/ GREAT BRITAIN</span></span><p>Connection applications, prepared and submitted.<br>£250 fee + £50 VAT = £300 total per application.</p></div>
+    <nav aria-label="Further information"><a href="/contact.html">Contact</a><a href="/faq.html">Questions</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refunds.html">Refunds</a></nav>
+    <p class="footer-contact"><a href="mailto:hello@aesirsolar.co.uk">hello@aesirsolar.co.uk</a><a href="#main">Back to top ↑</a></p>
+    <p class="footer-note">Aesir Solar provides an application service. The fee covers an application, not installation or network approval. We are not a network operator or affiliated with or endorsed by the Energy Networks Association.</p>
+  </footer>
+
+</body>
+</html>

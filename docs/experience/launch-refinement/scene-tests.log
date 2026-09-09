@@ -1,0 +1,163 @@
+✔ unaffected stage-four fields retain exact poses; documented cell and DC refinements use scoped fixtures (20.090541ms)
+✔ new camera joins the settled inverter smoothly and every operation pose reverses exactly (47.37825ms)
+✔ activation and the storage/grid conditions have ordered, mutually consistent phases (2.656208ms)
+✔ the same AC entry connects the working bay and separately converted optional battery branch (0.407666ms)
+✔ the facade opens a real clearance while retaining the inverter mounting wall and reverses exactly (25.377417ms)
+✔ new owners count all owned buffers and release every geometry/material/instance once (11.26775ms)
+✔ lights, equipment, screen, storage level and flow uniforms reconstruct from state and frozen time (7.115417ms)
+✖ all twelve still views expose one HTML statement and the ending has no resurrected photon (1.092167ms)
+✔ camera and finite near-plane remain clear of actual campus, interior and service equipment (569.315291ms)
+✔ absorption stays resolved in the central viewing field in all required viewport shapes (3.805ms)
+✔ geographic layers conceal only bounded joins and restore the same directional state in reverse (2.525333ms)
+✖ moving cartons and contact artwork share one deterministic clock and safe spacing (19.004292ms)
+✔ end-on DC acquisition has an attached soft source face without per-frame geometry allocation (1.582666ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 11
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 796.234791
+
+✖ failing tests:
+
+test at tests/stage-five.test.mjs:76:1
+✖ all twelve still views expose one HTML statement and the ending has no resurrected photon (1.092167ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /does not automatically provide backup/. Input:
+  
+  '<!doctype html>\n' +
+    '<html lang="en-GB">\n' +
+    '<head>\n' +
+    '  <meta charset="UTF-8">\n' +
+    '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
+    '  <meta name="robots" content="noindex, nofollow">\n' +
+    '  <meta name="theme-color" content="#050608">\n' +
+    '  <meta name="description" content="From the Sun to a considered connection. Aesir prepares and submits G99 Form A1-2 applications across Great Britain. £250 + £50 VAT = £300 per application.">\n' +
+    '  <title>Energy begins here — Aesir Solar</title>\n' +
+    '  <link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+    '  <link rel="stylesheet" href="/src/experience/style.css">\n' +
+    '  <link rel="stylesheet" href="/src/experience/editorial.css">\n' +
+    '</head>\n' +
+    '<body>\n' +
+    '  <header class="site-header">\n' +
+    '    <a class="brand" href="/" aria-label="Aesir Solar home"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><span>AESIR<span class="brand-solar">SOLAR</span></span></a>\n' +
+    '    <span class="header-note">ENERGY, CONNECTED.</span>\n' +
+    '    <a class="apply-link" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>\n' +
+    '  </header>\n' +
+    '  <main id="main" tabindex="-1"><span id="top" class="legacy-anchor" tabindex="-1"></span>\n' +
+    '    <section class="journey" id="journey" aria-label="Follow sunlight through a solar cell to useful electrical energy">\n' +
+    '      <div class="stage" id="stage">\n' +
+    '        <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:759px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>\n' +
+    '        <div class="canvas-host" id="canvas-host" aria-hidden="true"></div>\n' +
+    '        <div class="cinema-shade" aria-hidden="true"></div>\n' +
+    '        <a class="skip-link" href="#application-details">Skip to application details <span aria-hidden="true">↓</span></a>\n' +
+    '        <div class="copy-stack" id="copy-stack">\n' +
+    '          <div class="chapter-copy copy-opening" data-copy="0">\n' +
+    '            <p class="eyebrow">A JOURNEY THROUGH SOLAR ENERGY</p>\n' +
+    '            <h1 id="chapter-title">ENERGY<br>BEGINS HERE.</h1>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-sun" data-copy="1" aria-hidden="true">\n' +
+    '            <p class="eyebrow">THE SOURCE</p>\n' +
+    '            <h2>OUR NEAREST<br>STAR.</h2>\n' +
+    '            <p class="chapter-description">A living surface. Light in every direction.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-flight" data-copy="2" aria-hidden="true">\n' +
+    '            <p class="eyebrow">FROM THE SUN</p>\n' +
+    '            <h2>FOLLOW<br>THE LIGHT.</h2>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-earth" data-copy="3" aria-hidden="true">\n' +
+    '            <p class="eyebrow">TO THE PLACES WE WORK</p>\n' +
+    '            <h2>SUNLIGHT<br>REACHES US.</h2>\n' +
+    '\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-britain" data-copy="4" aria-hidden="true">\n' +
+    '            <p class="eyebrow">GREAT BRITAIN</p><h2>CLOSER<br>TO HOME.</h2>\n' +
+    '            <p class="chapter-description">G99 application support<br>across Great Britain.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-building" data-copy="5" aria-hidden="true">\n' +
+    '            <p class="eyebrow">AN ILLUSTRATIVE COMMERCIAL SITE</p><h2>A WORKING<br>ROOF.</h2>\n' +
+    '            <p class="chapter-description">The installation details<br>shape the application.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-panel" data-copy="6" aria-hidden="true">\n' +
+    '            <p class="eyebrow">AT THE SURFACE</p><h2>LIGHT MEETS<br>SILICON.</h2>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-glass" data-copy="7" aria-hidden="true">\n' +
+    '            <p class="eyebrow">THE SAME CELL, ENLARGED</p><h2>BENEATH<br>THE GLASS.</h2>\n' +
+    '            <p class="chapter-description">Through protective glass<br>to the silicon cell.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-cell" data-copy="8" aria-hidden="true">\n' +
+    '            <p class="eyebrow">ABSORPTION AND COLLECTION</p><h2>LIGHT BECOMES<br>POWER.</h2>\n' +
+    '            <p class="chapter-description">The silicon absorbs light and transfers its energy to charge carriers.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-dc" data-copy="9" aria-hidden="true">\n' +
+    '            <p class="eyebrow">COLLECTED AT THE CONTACTS</p><h2>DIRECT<br>CURRENT.</h2>\n' +
+    '            <p class="chapter-description">The array and inverter details<br>shape the application.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-inverter" data-copy="10" aria-hidden="true">\n' +
+    '            <p class="eyebrow">AT THE INVERTER</p><h2>DC BECOMES<br>AC.</h2>\n' +
+    '            <p class="chapter-description">The inverter converts the array’s direct current into alternating current.</p>\n' +
+    '          </div>\n' +
+    '          <div class="chapter-copy copy-operation-note" data-copy="11" aria-hidden="true"><p class="eyebrow">OPERATION, ILLUSTRATED</p><p class="operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n' +
+    '          <div class="chapter-copy copy-business" data-copy="12" aria-hidden="true"><p class="eyebrow">A WORKING BUSINESS</p><h2>ENERGY,<br>PUT TO WORK.</h2><p class="chapter-description">From rooftop generation to the places your business needs power.</p><p class="still-operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n' +
+    '          <div class="chapter-copy copy-storage" data-copy="13" aria-hidden="true"><p class="eyebrow">OPTIONAL STORAGE · CHARGING</p><h2>KEEP SOME<br>FOR LATER.</h2><p class="chapter-description">Optional storage can shift when stored energy is used.</p></div>\n' +
+    '          <div class="chapter-copy copy-later" data-copy="14" aria-hidden="true"><p class="eyebrow">LATER · STORED ENERGY</p><h2>WHEN IT’S<br>NEEDED.</h2><p class="chapter-description">Stored energy can help supply the business.</p></div>\n' +
+    '          <div class="chapter-copy copy-grid" data-copy="15" aria-hidden="true"><p class="eyebrow">WHEN THE GRID SUPPLIES POWER.</p><h2>PART OF A<br>CONNECTED<br>SYSTEM.</h2><p class="chapter-description">Generation, storage and the grid work within the agreed connection.</p></div>\n' +
+    '          <div class="chapter-copy copy-long" data-copy="16" aria-hidden="true"><h2>A LONG<br>JOURNEY.</h2></div>\n' +
+    '          <div class="chapter-copy copy-connection" data-copy="17" aria-hidden="true"><h2>A CONNECTION<br>WORTH GETTING<br>RIGHT.</h2></div>\n' +
+    '          <div class="chapter-copy copy-payoff" data-copy="18" aria-hidden="true"><svg class="payoff-mark" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><h2>AESIR<span>SOLAR</span></h2><p class="chapter-description">Your G99 application.<br>Prepared. Submitted. Followed through.</p><a class="payoff-action" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a></div>\n' +
+    '        </div>\n' +
+    '        <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>\n' +
+    '        <p class="process-note" id="process-note">Illustrative layers and motion, enlarged.<br>Continuing light and a connected circuit.</p>\n' +
+    '        <div id="inverter-annotations" hidden><span data-inverter-label="dcLabel">DC input</span><span data-inverter-label="acLabel">AC output</span><span data-inverter-label="timeLabel">Voltage ↕ · Time →</span></div>\n' +
+    '        <div id="storage-annotations" hidden><span data-storage-label="batteryLabel">Optional battery</span><span data-storage-label="converterLabel">Storage converter</span></div>\n' +
+    '        <div class="chapter-footer">\n' +
+    '          <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>\n' +
+    '          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span id="chapter-count"></span></div>\n' +
+    '          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button><button type="button" data-still="business" aria-pressed="false">Business</button><button type="button" data-still="storage" aria-pressed="false">Storage</button><button type="button" data-still="connected" aria-pressed="false">Grid</button><button type="button" data-still="aesir" aria-pressed="false">Aesir</button></div>\n' +
+    '          <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>\n' +
+    '        </div>\n' +
+    '        <p class="fallback-status" id="fallback-status" role="status"></p>\n' +
+    '        <noscript><p class="no-script">A still moment from the journey. Application details are below.</p></noscript>\n' +
+    '      </div>\n' +
+    '    </section>\n' +
+    '    <section class="conversion" id="application-details" tabindex="-1" aria-labelledby="conversion-title">\n' +
+    '      <span id="price" class="legacy-anchor" tabindex="-1"></span><span id="apply" class="legacy-anchor" tabindex="-1"></span><span id="gate" class="legacy-anchor" tabindex="-1"></span><div class="bridge-intro"><p class="eyebrow">THE CONNECTION APPLICATION SERVICE / GREAT BRITAIN</p><h2 id="conversion-title">Your G99 application,<br><span>handled.</span></h2></div>\n' +
+    '      <div class="service-grid">\n' +
+    '        <div'... 6778 more characters
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-five.test.mjs:80:232)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<!doctype html>\n<html lang="en-GB">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <meta name="robots" content="noindex, nofollow">\n  <meta name="theme-color" content="#050608">\n  <meta name="description" content="From the Sun to a considered connection. Aesir prepares and submits G99 Form A1-2 applications across Great Britain. £250 + £50 VAT = £300 per application.">\n  <title>Energy begins here — Aesir Solar</title>\n  <link rel="icon" href="/favicon.svg" type="image/svg+xml">\n  <link rel="stylesheet" href="/src/experience/style.css">\n  <link rel="stylesheet" href="/src/experience/editorial.css">\n</head>\n<body>\n  <header class="site-header">\n    <a class="brand" href="/" aria-label="Aesir Solar home"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><span>AESIR<span class="brand-solar">SOLAR</span></span></a>\n    <span class="header-note">ENERGY, CONNECTED.</span>\n    <a class="apply-link" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a>\n  </header>\n  <main id="main" tabindex="-1"><span id="top" class="legacy-anchor" tabindex="-1"></span>\n    <section class="journey" id="journey" aria-label="Follow sunlight through a solar cell to useful electrical energy">\n      <div class="stage" id="stage">\n        <div class="scene-fallback" aria-hidden="true"><picture><source media="(max-width:759px)" srcset="/experience-poster-mobile.webp"><img src="/experience-poster.webp" alt="" width="1600" height="1000"></picture></div>\n        <div class="canvas-host" id="canvas-host" aria-hidden="true"></div>\n        <div class="cinema-shade" aria-hidden="true"></div>\n        <a class="skip-link" href="#application-details">Skip to application details <span aria-hidden="true">↓</span></a>\n        <div class="copy-stack" id="copy-stack">\n          <div class="chapter-copy copy-opening" data-copy="0">\n            <p class="eyebrow">A JOURNEY THROUGH SOLAR ENERGY</p>\n            <h1 id="chapter-title">ENERGY<br>BEGINS HERE.</h1>\n          </div>\n          <div class="chapter-copy copy-sun" data-copy="1" aria-hidden="true">\n            <p class="eyebrow">THE SOURCE</p>\n            <h2>OUR NEAREST<br>STAR.</h2>\n            <p class="chapter-description">A living surface. Light in every direction.</p>\n          </div>\n          <div class="chapter-copy copy-flight" data-copy="2" aria-hidden="true">\n            <p class="eyebrow">FROM THE SUN</p>\n            <h2>FOLLOW<br>THE LIGHT.</h2>\n          </div>\n          <div class="chapter-copy copy-earth" data-copy="3" aria-hidden="true">\n            <p class="eyebrow">TO THE PLACES WE WORK</p>\n            <h2>SUNLIGHT<br>REACHES US.</h2>\n\n          </div>\n          <div class="chapter-copy copy-britain" data-copy="4" aria-hidden="true">\n            <p class="eyebrow">GREAT BRITAIN</p><h2>CLOSER<br>TO HOME.</h2>\n            <p class="chapter-description">G99 application support<br>across Great Britain.</p>\n          </div>\n          <div class="chapter-copy copy-building" data-copy="5" aria-hidden="true">\n            <p class="eyebrow">AN ILLUSTRATIVE COMMERCIAL SITE</p><h2>A WORKING<br>ROOF.</h2>\n            <p class="chapter-description">The installation details<br>shape the application.</p>\n          </div>\n          <div class="chapter-copy copy-panel" data-copy="6" aria-hidden="true">\n            <p class="eyebrow">AT THE SURFACE</p><h2>LIGHT MEETS<br>SILICON.</h2>\n          </div>\n          <div class="chapter-copy copy-glass" data-copy="7" aria-hidden="true">\n            <p class="eyebrow">THE SAME CELL, ENLARGED</p><h2>BENEATH<br>THE GLASS.</h2>\n            <p class="chapter-description">Through protective glass<br>to the silicon cell.</p>\n          </div>\n          <div class="chapter-copy copy-cell" data-copy="8" aria-hidden="true">\n            <p class="eyebrow">ABSORPTION AND COLLECTION</p><h2>LIGHT BECOMES<br>POWER.</h2>\n            <p class="chapter-description">The silicon absorbs light and transfers its energy to charge carriers.</p>\n          </div>\n          <div class="chapter-copy copy-dc" data-copy="9" aria-hidden="true">\n            <p class="eyebrow">COLLECTED AT THE CONTACTS</p><h2>DIRECT<br>CURRENT.</h2>\n            <p class="chapter-description">The array and inverter details<br>shape the application.</p>\n          </div>\n          <div class="chapter-copy copy-inverter" data-copy="10" aria-hidden="true">\n            <p class="eyebrow">AT THE INVERTER</p><h2>DC BECOMES<br>AC.</h2>\n            <p class="chapter-description">The inverter converts the array’s direct current into alternating current.</p>\n          </div>\n          <div class="chapter-copy copy-operation-note" data-copy="11" aria-hidden="true"><p class="eyebrow">OPERATION, ILLUSTRATED</p><p class="operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n          <div class="chapter-copy copy-business" data-copy="12" aria-hidden="true"><p class="eyebrow">A WORKING BUSINESS</p><h2>ENERGY,<br>PUT TO WORK.</h2><p class="chapter-description">From rooftop generation to the places your business needs power.</p><p class="still-operation-context">Illustration of operation after the required permissions and commissioning.</p></div>\n          <div class="chapter-copy copy-storage" data-copy="13" aria-hidden="true"><p class="eyebrow">OPTIONAL STORAGE · CHARGING</p><h2>KEEP SOME<br>FOR LATER.</h2><p class="chapter-description">Optional storage can shift when stored energy is used.</p></div>\n          <div class="chapter-copy copy-later" data-copy="14" aria-hidden="true"><p class="eyebrow">LATER · STORED ENERGY</p><h2>WHEN IT’S<br>NEEDED.</h2><p class="chapter-description">Stored energy can help supply the business.</p></div>\n          <div class="chapter-copy copy-grid" data-copy="15" aria-hidden="true"><p class="eyebrow">WHEN THE GRID SUPPLIES POWER.</p><h2>PART OF A<br>CONNECTED<br>SYSTEM.</h2><p class="chapter-description">Generation, storage and the grid work within the agreed connection.</p></div>\n          <div class="chapter-copy copy-long" data-copy="16" aria-hidden="true"><h2>A LONG<br>JOURNEY.</h2></div>\n          <div class="chapter-copy copy-connection" data-copy="17" aria-hidden="true"><h2>A CONNECTION<br>WORTH GETTING<br>RIGHT.</h2></div>\n          <div class="chapter-copy copy-payoff" data-copy="18" aria-hidden="true"><svg class="payoff-mark" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 2.5 4 26.5h7.4L17 16.2l5.6 10.3H30L17 2.5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M18.2 9.5 12 21h4.3l-1 6.5L21.6 16h-4.4l1-6.5Z" fill="currentColor"/></svg><h2>AESIR<span>SOLAR</span></h2><p class="chapter-description">Your G99 application.<br>Prepared. Submitted. Followed through.</p><a class="payoff-action" href="/apply.html">Start your application <span aria-hidden="true">↗</span></a></div>\n        </div>\n        <p class="journey-note">A cinematic scientific illustration.<br>Distances and time are compressed.</p>\n        <p class="process-note" id="process-note">Illustrative layers and motion, enlarged.<br>Continuing light and a connected circuit.</p>\n        <div id="inverter-annotations" hidden><span data-inverter-label="dcLabel">DC input</span><span data-inverter-label="acLabel">AC output</span><span data-inverter-label="timeLabel">Voltage ↕ · Time →</span></div>\n        <div id="storage-annotations" hidden><span data-storage-label="batteryLabel">Optional battery</span><span data-storage-label="converterLabel">Storage converter</span></div>\n        <div class="chapter-footer">\n          <div class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">SCROLL TO FOLLOW THE LIGHT</span></div>\n          <div class="chapter-track" aria-hidden="true"><span id="chapter-label">Source</span><div><i id="progress-bar"></i></div><span id="chapter-count"></span></div>\n          <div id="still-views" class="still-views" hidden aria-label="Still views"><button type="button" data-still="sun" aria-pressed="true">Sun</button><button type="button" data-still="earth" aria-pressed="false">Earth</button><button type="button" data-still="britain" aria-pressed="false">Britain</button><button type="button" data-still="roof" aria-pressed="false">Roof</button><button type="button" data-still="panel" aria-pressed="false">Panel</button><button type="button" data-still="cell" aria-pressed="false">Cell</button><button type="button" data-still="dc" aria-pressed="false">DC route</button><button type="button" data-still="inverter" aria-pressed="false">Inverter</button><button type="button" data-still="business" aria-pressed="false">Business</button><button type="button" data-still="storage" aria-pressed="false">Storage</button><button type="button" data-still="connected" aria-pressed="false">Grid</button><button type="button" data-still="aesir" aria-pressed="false">Aesir</button></div>\n          <button type="button" id="pause-motion" hidden aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>\n        </div>\n        <p class="fallback-status" id="fallback-status" role="status"></p>\n        <noscript><p class="no-script">A still moment from the journey. Application details are below.</p></noscript>\n      </div>\n    </section>\n    <section class="conversion" id="application-details" tabindex="-1" aria-labelledby="conversion-title">\n      <span id="price" class="legacy-anchor" tabindex="-1"></span><span id="apply" class="legacy-anchor" tabindex="-1"></span><span id="gate" class="legacy-anchor" tabindex="-1"></span><div class="bridge-intro"><p class="eyebrow">THE CONNECTION APPLICATION SERVICE / GREAT BRITAIN</p><h2 id="conversion-title">Your G99 application,<br><span>handled.</span></h2></div>\n      <div class="service-grid">\n        <div'... 6778 more characters,
+    expected: /does not automatically provide backup/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/stage-seven-detail.test.mjs:24:1
+✖ moving cartons and contact artwork share one deterministic clock and safe spacing (19.004292ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(wraps>=4)
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/stage-seven-detail.test.mjs:33:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

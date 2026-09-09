@@ -28,8 +28,8 @@ export function createBusinessInterior(tier: InteriorTier) {
   const group = new THREE.Group(); group.name = 'Original selective business interior';
   const geometries = new Set<THREE.BufferGeometry>(), materials = new Set<THREE.Material>();
   const batches = new Map<string, Batch>(), movingHead: MovingPiece[] = [];
-  const movingCartons:{part:MovingPiece;carton:number}[]=[],movingGates:{part:MovingPiece;gate:number;side:number}[]=[];
-  const cartonHomes:number[]=[];let activeCarton=-1,activeGate=-1,gateSide=1;
+  const movingCartons:{part:MovingPiece;carton:number;seal:"top"|"end"|null}[]=[],movingGates:{part:MovingPiece;gate:number;side:number}[]=[];
+  const cartonHomes:number[]=[];let activeCarton=-1,activeGate=-1,gateSide=1,activeSeal:"top"|"end"|null=null;
   const ownG = <T extends THREE.BufferGeometry>(g: T): T => { geometries.add(g); return g; };
   const ownM = <T extends THREE.Material>(m: T): T => { materials.add(m); return m; };
   const standard = (color: number, roughness: number, metalness = 0) => ownM(new THREE.MeshStandardMaterial({ color, roughness, metalness }));
@@ -39,7 +39,7 @@ export function createBusinessInterior(tier: InteriorTier) {
   const identity = new THREE.Quaternion(), acrossZ = new THREE.Quaternion().setFromAxisAngle(V(1, 0, 0), Math.PI / 2);
   const west = new THREE.Quaternion().setFromAxisAngle(V(0, 1, 0), -Math.PI / 2);
   const flat = new THREE.Quaternion().setFromAxisAngle(V(1, 0, 0), -Math.PI / 2);
-  const tempMatrix = new THREE.Matrix4(), tempPosition = new THREE.Vector3();
+  const tempMatrix = new THREE.Matrix4(), tempPosition = new THREE.Vector3(),tempScale=new THREE.Vector3();
   function instance(name: string, geometry: THREE.BufferGeometry, material: THREE.Material, position: THREE.Vector3, scale: THREE.Vector3, rotation = identity, moving = false) {
     const key = `${geometry.uuid}/${material.uuid}`;
     let batch = batches.get(key);
@@ -47,7 +47,7 @@ export function createBusinessInterior(tier: InteriorTier) {
     const index = batch.matrices.length;
     batch.matrices.push(new THREE.Matrix4().compose(position, rotation, scale));
     if (moving) movingHead.push({ batch, index, position, scale, rotation });
-    if(activeCarton>=0)movingCartons.push({part:{batch,index,position,scale,rotation},carton:activeCarton});
+    if(activeCarton>=0)movingCartons.push({part:{batch,index,position,scale,rotation},carton:activeCarton,seal:activeSeal});
     if(activeGate>=0)movingGates.push({part:{batch,index,position,scale,rotation},gate:activeGate,side:gateSide});
   }
   function box(name: string, mat: THREE.Material, x: number, y: number, z: number, sx: number, sy: number, sz: number, rotation = identity, moving = false) {
@@ -117,12 +117,21 @@ export function createBusinessInterior(tier: InteriorTier) {
     box('Machine guard lower rail', steel, -22, 1.08, z, 11.4, .055, .065);
     box('Transparent machine guard', guard, -22, 1.665, z, 11.3, 1.10, .018);
   }
-  for (const z of [12.46, 14.54]) bevelBox('Packaging gantry columns', shell, -20.2, 2.0, z, .26, 2.5, .30);
-  bevelBox('Packaging gantry bridge', shell, -20.2, 3.25, lineZ, .62, .27, 2.35);
-  box('Gantry upper insert', steel, -20.52, 3.25, lineZ, .035, .15, 1.8);
-  bevelBox('Packaging head', shell, -20.2, 2.35, lineZ, .88, .24, 1.18, true);
-  box('Packaging head lower face', rubber, -20.2, 2.205, lineZ, .80, .045, 1.08, identity, true);
-  for (const z of [13.11, 13.89]) box('Head guide slides', silver, -20.2, 2.76, z, .055, .7, .055);
+  // A recognisable fixed-height case sealer: side belts guide a standard carton
+  // beneath a tape cassette. There is no unexplained press striking the product.
+  for (const z of [12.70,14.30]) bevelBox('Case sealer uprights',shell,-20.2,1.87,z,.18,1.88,.18);
+  bevelBox('Case sealer cross member',shell,-20.2,2.49,lineZ,.42,.18,1.84);
+  for(const z of[13.04,13.96]){
+    box('Side-belt drive housings',silver,-20.2,1.60,z,2.02,.49,.16);
+    box('Carton guiding side belts',rubber,-20.2,1.65,z+(z<lineZ?.085:-.085),1.92,.32,.055);
+  }
+  box('Tape cassette',steel,-20.2,2.05,lineZ,1.40,.15,.19);
+  for(const x of[-20.79,-19.61])rod('Tape pressure rollers',rubber,x,1.974,lineZ,.035,.12,acrossZ);
+  rod('Tape reel',ochre,-20.53,2.83,lineZ,.26,.095,acrossZ);
+  rod('Tape reel hub',silver,-20.53,2.83,lineZ,.075,.14,acrossZ);
+  beam('Tape reel support',steel,V(-20.2,2.52,lineZ+.10),V(-20.53,2.83,lineZ+.10),.055,.055);
+  beam('Tape feed from reel',timber,V(-20.73,2.68,lineZ),V(-20.92,2.24,lineZ),.055,.009);
+  beam('Tape feed to roller',timber,V(-20.92,2.24,lineZ),V(-20.79,1.99,lineZ),.055,.009);
   box('Enclosed conveyor drive', steel, -24.3, .92, 14.36, .72, .44, .40);
   box('Conveyor control pedestal', steel, -24.9, 1.35, 15.18, .07, 1.30, .07);
   bevelBox('Conveyor control enclosure', shell, -24.9, 2.05, 15.18, .25, .60, .56);
@@ -134,17 +143,14 @@ export function createBusinessInterior(tier: InteriorTier) {
     if(onBelt){activeCarton=cartonHomes.length;cartonHomes.push(x);}
     box('Packed cartons', kraft, x, y, z, sx, sy, sz);
     box('Carton top seam', timber, x, y + sy / 2 + .004, z, sx - .012, .009, .018);
-    box('Carton sealing tape', shell, x, y + sy / 2 + .010, z, .09, .011, sz - .01);
+    activeSeal='top';box('Carton sealing tape', timber, x, y + sy / 2 + .010, z, sx-.012, .007, .085);activeSeal=null;
     box('Blank dispatch label', shell, x - sx / 2 - .006, y + .05, z, .01, sy * .32, sz * .45);
     // Folded carton corners and an unprinted sealing strip; no customer labels.
     for(const side of[-1,1])box('Carton folded edge',timber,x-sx/2-.002,y,z+side*(sz/2-.021),.006,sy-.016,.009);
-    box('Carton tape turned over edge',shell,x-sx/2-.007,y+sy/2-.10,z,.011,.19,.085);
+    activeSeal='end';box('Carton tape turned over edge',timber,x-sx/2-.007,y+sy/2-.10,z,.011,.19,.085);activeSeal=null;
     activeCarton=-1;
   }
-  carton(-27.4, 1.69, lineZ, 1.02, .70, .79,true);
-  carton(-23.8, 1.62, lineZ, .91, .56, .74,true);
-  carton(-20.2, 1.64, lineZ, .88, .60, .76,true);
-  carton(-16.6, 1.72, lineZ, 1.04, .76, .83,true);
+  for(const x of[-27.4,-23.8,-20.2,-16.6])carton(x,1.64,lineZ,.96,.60,.78,true);
 
   // Closed transfer hoods conceal the loop handoff. Paired doors slide clear
   // before a carton reaches the threshold and close only after its tail passes.
@@ -152,30 +158,26 @@ export function createBusinessInterior(tier: InteriorTier) {
   const gateXs=[-27.925,-16.075],hoodCentres=[-29.05,-14.95];
   for(let end=0;end<2;end++){
     const x=hoodCentres[end],gate=gateXs[end];
-    bevelBox('Transfer hood formed roof',shell,x,2.65,lineZ,2.25,.10,1.88);
+    bevelBox('Transfer hood formed roof',shell,x,2.17,lineZ,2.25,.10,1.88);
     box('Transfer hood floor',steel,x,1.309,lineZ,2.25,.020,1.88);
     for(const side of[-1,1]){
-      box('Transfer hood side panels',shell,x,1.985,lineZ+side*.906,2.25,1.25,.055);
+      box('Transfer hood side panels',shell,x,1.725,lineZ+side*.906,2.25,.78,.055);
       box('Transfer hood folded bottom edge',silver,x,1.355,lineZ+side*.924,2.19,.04,.028);
-      box('Transfer hood corner seams',rubber,x+(end?1:-1)*1.077,1.99,lineZ+side*.936,.016,1.19,.008);
-      for(const y of[1.47,2.43])rod('Transfer cover fixing heads',silver,x, y,lineZ+side*.94,.020,.012,acrossZ);
+      box('Transfer hood corner seams',rubber,x+(end?1:-1)*1.077,1.73,lineZ+side*.936,.016,.72,.008);
+      for(const y of[1.47,2.03])rod('Transfer cover fixing heads',silver,x, y,lineZ+side*.94,.020,.012,acrossZ);
     }
-    box('Transfer hood outer closed panel',shell,x+(end?1:-1)*1.094,1.985,lineZ,.062,1.25,1.84);
-    box('Transfer gate upper guide',steel,gate,2.665,lineZ,.15,.115,3.57);
+    box('Transfer hood outer closed panel',shell,x+(end?1:-1)*1.094,1.725,lineZ,.062,.78,1.84);
+    box('Transfer gate upper guide',steel,gate,2.185,lineZ,.15,.115,3.57);
     for(const side of[-1,1]){
       activeGate=end;gateSide=side;
-      bevelBox('Paired transfer gate leaves',shell,gate,1.985,lineZ+side*.435,.055,1.25,.882);
-      box('Transfer gate inner seam',rubber,gate-.031,1.985,lineZ+side*.018,.008,1.17,.013);
-      box('Transfer gate recessed pull',steel,gate-.037,1.97,lineZ+side*.20,.018,.17,.035);
+      bevelBox('Paired transfer gate leaves',shell,gate,1.725,lineZ+side*.435,.055,.78,.882);
+      box('Transfer gate inner seam',rubber,gate-.031,1.725,lineZ+side*.018,.008,.70,.013);
+      box('Transfer gate recessed pull',steel,gate-.037,1.77,lineZ+side*.20,.018,.17,.035);
       activeGate=-1;
     }
   }
 
   // Attached machine details add scale without a separate imported machine.
-  for(const z of[12.30,14.70]){
-    box('Gantry service-cover seam',rubber,-20.344,2.17,z+(z<13.5?.04:-.04),.008,1.55,.009);
-    for(const y of[1.24,2.93])rod('Gantry cover fastener heads',silver,-20.348,y,z+(z<13.5?.045:-.045),.017,.010,new THREE.Quaternion().setFromAxisAngle(V(0,0,1),Math.PI/2));
-  }
   for(let i=0;i<6;i++)box('Drive housing cooling slots',rubber,-24.43+i*.055,1.08,14.568,.029,.080,.008);
   box('Drive access cover lip',silver,-24.3,.745,14.57,.55,.023,.019);
   for(const y of[1.82,2.29])for(const z of[14.97,15.39])rod('Control enclosure screw heads',silver,-25.042,y,z,.012,.009,new THREE.Quaternion().setFromAxisAngle(V(0,0,1),Math.PI/2));
@@ -300,16 +302,23 @@ export function createBusinessInterior(tier: InteriorTier) {
     const t=Number.isFinite(time)?time:0,L=ease(state.lighting),E=ease(state.equipment),S=ease(state.screen);
     practical.emissiveIntensity=2.7*L;workLight.intensity=105*L;officeLight.intensity=29*L;
     screenFace.emissiveIntensity=1.05*S;screenInk.emissiveIntensity=2.2*S;screenInk.color.setRGB(.004+.065*S,.009+.09*S,.013+.12*S);indicator.emissiveIntensity=1.7*E;
-    // Pure, reversible indexing cycle. Seven seconds advance; the remaining
-    // dwell lets the head inspect a carton before the next station advance.
-    // Reusing the supplied frozen ambient time also freezes every mechanism.
-    const activeTime=t*E,cycle=Math.floor(activeTime/10),phase=activeTime/10-cycle;
-    const u=clamp(phase/.72),advance=u*u*u*(u*(u*6-15)+10),travel=(cycle+advance)*3.6;
+    // Twenty-four-second indexing cycle, with a six-second accumulation dwell.
+    // The supplied clock is never multiplied by a scroll reveal: doing that
+    // fast-forwarded cartons as equipment appeared. Scroll controls the practical
+    // emphasis; the already operating packing line keeps its steady slow phase.
+    const cycle=Math.floor(t/24),phase=t/24-cycle;
+    const u=clamp(phase/.75),advance=u*u*u*(u*(u*6-15)+10),travel=(cycle+advance)*3.6;
     const beltLength=lineEnd-lineStart,centres=cartonPositions;
     for(let i=0;i<cartonHomes.length;i++)centres[i]=lineStart+((cartonHomes[i]-lineStart+travel)%beltLength+beltLength)%beltLength;
-    const headTravel=phase>.74?Math.sin((phase-.74)/.26*Math.PI)**2*.07*E:0;
-    for(const part of movingHead){tempPosition.copy(part.position);tempPosition.y-=headTravel;tempMatrix.compose(tempPosition,part.rotation,part.scale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;}
-    for(const{part,carton}of movingCartons){tempPosition.copy(part.position);tempPosition.x+=centres[carton]-cartonHomes[carton];tempMatrix.compose(tempPosition,part.rotation,part.scale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;}
+    for(const{part,carton,seal}of movingCartons){
+      tempPosition.copy(part.position);tempPosition.x+=centres[carton]-cartonHomes[carton];tempScale.copy(part.scale);
+      // The leading edge picks up tape beneath the fixed cassette. Re-entry is
+      // hidden by the transfer hood; the next incoming box is untaped again.
+      const amount=clamp((centres[carton]+.48+20.2)/.96);
+      if(seal==='top'){tempScale.x=Math.max(.00001,part.scale.x*amount);tempPosition.x=centres[carton]+part.scale.x/2-tempScale.x/2;}
+      if(seal==='end')tempScale.multiplyScalar(amount>.995?1:.00001);
+      tempMatrix.compose(tempPosition,part.rotation,tempScale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;
+    }
     for(let i=0;i<gateXs.length;i++){let distance=100;for(const x of centres)distance=Math.min(distance,Math.abs(x-gateXs[i]));gateOpenings[i]=1-ease((distance-.69)/.35);}
     for(const{part,gate,side}of movingGates){tempPosition.copy(part.position);tempPosition.z+=side*.90*gateOpenings[gate];tempMatrix.compose(tempPosition,part.rotation,part.scale);part.batch.mesh!.setMatrixAt(part.index,tempMatrix);part.batch.mesh!.instanceMatrix.needsUpdate=true;}
     const spacing=beltLength/slatCount,offset=((travel%spacing)+spacing)%spacing;

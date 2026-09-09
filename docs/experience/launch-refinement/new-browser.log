@@ -1,0 +1,13 @@
+
+Running 6 tests using 1 worker
+
+(node:68349) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: laptop (411ms)
+  ✓  2 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: desktop (319ms)
+  ✓  3 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: portrait (287ms)
+  ✓  4 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: intermediate (295ms)
+  ✓  5 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: short (295ms)
+  ✓  6 tests/browser/launch-refinement.spec.ts:19:1 › short homepage keeps offer first and sends further detail to complete native pages (787ms)
+
+  6 passed (3.0s)

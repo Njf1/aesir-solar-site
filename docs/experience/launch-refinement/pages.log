@@ -1,0 +1,92 @@
+{
+  name: 'laptop',
+  frames: [
+    { route: '#application-details', overflow: 0 },
+    { route: '#check', overflow: 0 },
+    { route: '#solar-benefits', overflow: 0 },
+    { route: '#recorded-generation', overflow: 0 },
+    { route: '#application-process', overflow: 0 },
+    { route: '#application-faqs', overflow: 0 },
+    { route: 'apply', overflow: 0 },
+    { route: 'solar', overflow: 0 },
+    { route: 'suitability', overflow: 0 },
+    { route: 'faq', overflow: 0 },
+    { route: 'contact', overflow: 0 }
+  ],
+  errors: [],
+  warnings: []
+}
+{
+  name: 'desktop',
+  frames: [
+    { route: '#application-details', overflow: 0 },
+    { route: '#check', overflow: 0 },
+    { route: '#solar-benefits', overflow: 0 },
+    { route: '#recorded-generation', overflow: 0 },
+    { route: '#application-process', overflow: 0 },
+    { route: '#application-faqs', overflow: 0 },
+    { route: 'apply', overflow: 0 },
+    { route: 'solar', overflow: 0 },
+    { route: 'suitability', overflow: 0 },
+    { route: 'faq', overflow: 0 },
+    { route: 'contact', overflow: 0 }
+  ],
+  errors: [],
+  warnings: []
+}
+{
+  name: 'mobile',
+  frames: [
+    { route: '#application-details', overflow: 0 },
+    { route: '#check', overflow: 0 },
+    { route: '#solar-benefits', overflow: 0 },
+    { route: '#recorded-generation', overflow: 0 },
+    { route: '#application-process', overflow: 0 },
+    { route: '#application-faqs', overflow: 0 },
+    { route: 'apply', overflow: 0 },
+    { route: 'solar', overflow: 0 },
+    { route: 'suitability', overflow: 0 },
+    { route: 'faq', overflow: 0 },
+    { route: 'contact', overflow: 0 },
+    { route: 'apply-text200', overflow: 0 }
+  ],
+  errors: [],
+  warnings: []
+}
+{
+  name: 'intermediate',
+  frames: [
+    { route: '#application-details', overflow: 0 },
+    { route: '#check', overflow: 0 },
+    { route: '#solar-benefits', overflow: 0 },
+    { route: '#recorded-generation', overflow: 0 },
+    { route: '#application-process', overflow: 0 },
+    { route: '#application-faqs', overflow: 0 },
+    { route: 'apply', overflow: 0 },
+    { route: 'solar', overflow: 0 },
+    { route: 'suitability', overflow: 0 },
+    { route: 'faq', overflow: 0 },
+    { route: 'contact', overflow: 0 }
+  ],
+  errors: [],
+  warnings: []
+}
+{
+  name: 'short',
+  frames: [
+    { route: '#application-details', overflow: 0 },
+    { route: '#check', overflow: 0 },
+    { route: '#solar-benefits', overflow: 0 },
+    { route: '#recorded-generation', overflow: 0 },
+    { route: '#application-process', overflow: 0 },
+    { route: '#application-faqs', overflow: 0 },
+    { route: 'apply', overflow: 0 },
+    { route: 'solar', overflow: 0 },
+    { route: 'suitability', overflow: 0 },
+    { route: 'faq', overflow: 0 },
+    { route: 'contact', overflow: 0 },
+    { route: 'apply-text200', overflow: 0 }
+  ],
+  errors: [],
+  warnings: []
+}

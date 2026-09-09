@@ -1,3 +1,13 @@
-build.py
-make_artifact.py
+# Source required by the build stays included; generated output and review films do not.
 .git
+node_modules
+.vercel
+.preview-build
+.release
+.release-staging
+.release-previous
+docs
+tests
+test-results
+playwright-report
+make_artifact.py

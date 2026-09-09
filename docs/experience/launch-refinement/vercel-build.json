@@ -1,0 +1,34 @@
+{
+  "functions": [
+    {
+      "path": "functions/api/checkout.func",
+      "runtime": "nodejs24.x",
+      "handler": "api/checkout.js"
+    },
+    {
+      "path": "functions/api/tigo.func",
+      "runtime": "nodejs24.x",
+      "handler": "api/tigo.js"
+    },
+    {
+      "path": "functions/api/tyl-notify.func",
+      "runtime": "nodejs24.x",
+      "handler": "api/tyl-notify.js"
+    },
+    {
+      "path": "functions/api/tyl-checkout.func",
+      "runtime": "nodejs24.x",
+      "handler": "api/tyl-checkout.js"
+    },
+    {
+      "path": "functions/api/tyl-return.func",
+      "runtime": "nodejs24.x",
+      "handler": "api/tyl-return.js"
+    }
+  ],
+  "rawStaticApiFiles": [],
+  "configSha256": "bb351bbbd8cebce75f8c38de59d203c262721ff5d904e6762ca5c525a7d2323d",
+  "functionsCount": 5,
+  "providerEnvironmentConfigured": false,
+  "note": "Local Vercel production build; no deployment or provider request in this record. Empty provider environment confirmed from existing project settings."
+}

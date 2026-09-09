@@ -20,14 +20,15 @@ const tags=(html,name)=>[...html.matchAll(new RegExp(`<${name}\\b[^>]*>`,'gi'))]
 const controls=html=>tags(html,'(?:input|select|textarea)').filter(a=>a.name);
 const normal=html=>html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;|&#160;/g,' ').replace(/\s+/g,' ').trim();
 const names=['company','contact','email','phone','accreditation','address','postcode','mpan','inverter','typetest','kw','phases','storage','target','g100','eps','notes','agree','privacy'];
-const supporting=['apply','success','contact','terms','privacy','refunds','simulator'];
+const supporting=['apply','success','contact','terms','privacy','refunds','simulator','solar','suitability','faq'];
 const aliases=['top','main','gate','check','work','price','apply','realroof'];
 const baseline=file=>execFileSync('git',['show',`${BASE}:${file}`],{cwd:ROOT});
 
 test('provider routes, helpers, payment script, input data and pinned dependencies retain exact bytes',async()=>{
- const retained=[...await files('api'),...await files('lib'),...await files('data'),'app.js','package.json','package-lock.json'];
+ const retained=[...await files('api'),...await files('lib'),...await files('data'),'app.js','package-lock.json'];
  assert.equal((await files('api')).length,5,'Do not silently add a new payment/provider route in this migration');
  for(const file of retained)assert.deepEqual(await readFile(path.join(ROOT,file)),baseline(file),file);
+ const pkg=JSON.parse(await read('package.json')),old=JSON.parse(baseline('package.json'));assert.deepEqual(pkg.dependencies,old.dependencies);assert.deepEqual(pkg.devDependencies,old.devDependencies);assert.deepEqual(pkg.engines,old.engines);assert.equal(pkg.scripts.build,'python3 build.py && vite build && node scripts/assemble.mjs');
  // Known backend defects remain documented, not blessed as success criteria.
  const blockers=await read('docs/experience/backend-blockers.md');assert.match(blockers,/durab/i);assert.match(blockers,/idempoten/i);assert.match(blockers,/amount.*currency|currency.*amount/i);
 });
@@ -59,7 +60,7 @@ test('all named application controls retain their meaning and both consents rema
 test('supporting pages are complete documents without the cinematic runtime or retired simulator runtime',async()=>{
  for(const slug of supporting){
   const html=await read(`.release/${slug}.html`);assert.match(html,/<!doctype html>/i,slug);assert.match(html,/<html\b[^>]*lang=["']en-GB/i,slug);assert.ok(tags(html,'main').some(a=>a.id==='main'),slug);
-  assert.doesNotMatch(html,/<canvas\b|id=["']canvas-host["']|<script\b[^>]*(?:src\/experience\/main\.ts|\/(?:experience|scene|three(?:\.core)?)-[^"']+\.js|(?:^|\/)sim\.js)/i,slug);
+  assert.doesNotMatch(html,/<canvas\b|id=["']canvas-host["']|<script\b[^>]*(?:src\/experience\/main\.ts|\/(?:experience|scene|three(?:\.core)?)-[^/"']+\.js|(?:^|\/)sim\.js)/i,slug);
   assert.ok(tags(html,'a').some(a=>a.href==='/'||a.href==='/index.html'||a.href==='index.html'),`${slug}: home route`);
  }
  const retired=normal(await read('.release/simulator.html'));
@@ -67,11 +68,10 @@ test('supporting pages are complete documents without the cinematic runtime or r
  assert.doesNotMatch(retired,/your (?:annual )?saving is|your payback is|validated against/i);
 });
 
-test('FAQ retirement keeps an explicit native destination in metadata and visible content',async()=>{
- const html=await read('.release/faq.html'),refresh=tags(html,'meta').find(a=>a['http-equiv']?.toLowerCase()==='refresh');
- assert.ok(refresh);assert.match(refresh.content,/url=\/?#application-faqs$/i);
- assert.ok(tags(html,'a').some(a=>a.href==='/#application-faqs'));
- assert.doesNotMatch(html,/<script\b[^>]*src=|FAQPage|45 days|single most common omission/i,'Retired bridge must not publish stale FAQ claims/runtime');
+test('complete FAQ guidance survives on a native supporting page without a cinematic runtime',async()=>{
+ const html=await read('.release/faq.html');assert.ok(!tags(html,'meta').some(a=>a['http-equiv']?.toLowerCase()==='refresh'));
+ for(const phrase of ['paperwork error','one installation','refund','operator asks for changes','own installer'])assert.ok(normal(html).includes(phrase));
+ assert.ok(tags(html,'a').some(a=>a.href==='/refunds.html'));assert.doesNotMatch(html,/<canvas|45 days|single most common omission/i);
 });
 
 test('direct static success is unverified and provider-neutral even before JavaScript',async()=>{
@@ -82,7 +82,7 @@ test('direct static success is unverified and provider-neutral even before JavaS
 });
 
 test('recorded evidence remains static, dated and separate from the illustrative campus after homepage assembly',async()=>{
- const html=await read('.release/index.html'),record=html.match(/<section\b[^>]*id=["']recorded-generation["'][^>]*>([\s\S]*?)<\/section>/i)?.[1];assert.ok(record);
+ const html=await read('.release/solar.html'),record=html.match(/<section\b[^>]*id=["']recorded-generation["'][^>]*>([\s\S]*?)<\/section>/i)?.[1];assert.ok(record);
  assert.match(record,/<time\b[^>]*datetime=["']2026-08-24["']/);assert.match(record,/206\.41/);assert.match(normal(record),/kWh recorded that day/);
  assert.match(record,/Premier Composites/);assert.match(record,/Tigo/);assert.match(record,/historical/);assert.match(record,/approximate/i);assert.match(record,/not independently verified/i);
  assert.match(record,/<svg\b[^>]*role=["']img/);assert.match(record,/<table\b/);assert.doesNotMatch(record,/<!-- RECORDED_GENERATION -->|fetch\(|<canvas/i);
@@ -123,7 +123,7 @@ test('the authoritative generator reproduces every supported source page in isol
 
 test('repeated assembly removes stale routes/scripts, retains exact contracts and never changes neighbouring/source files',async()=>{
  const temp=await isolatedCopy();try{
-  const sourceContracts=[...await files('api',temp),...await files('lib',temp),...await files('data',temp),'app.js','package.json','package-lock.json'];
+  const sourceContracts=[...await files('api',temp),...await files('lib',temp),...await files('data',temp),'app.js','package-lock.json'];
   const before=new Map(await Promise.all(sourceContracts.map(async file=>[file,await readFile(path.join(temp,file))])));
   const release=path.join(temp,'.release');await mkdir(path.join(release,'obsolete-nested'),{recursive:true});
   for(const name of ['obsolete.html','sim.js','sim.css','obsolete-nested/old.js'])await writeFile(path.join(release,name),'STALE');
@@ -135,7 +135,7 @@ test('repeated assembly removes stale routes/scripts, retains exact contracts an
   await writeFile(path.join(release,'stale-after-first-pass.html'),'STALE');
   execFileSync(process.execPath,[path.join(temp,'scripts/assemble.mjs')],{cwd:temp,stdio:'pipe'});
   assert.deepEqual(await manifest(release),first,'same prepared inputs produce identical delivery files on repeated assembly');
-  for(const[file,bytes]of before){assert.deepEqual(await readFile(path.join(temp,file)),bytes,`source:${file}`);assert.deepEqual(await readFile(path.join(release,file)),bytes,`delivery:${file}`);}
+  for(const[file,bytes]of before){assert.deepEqual(await readFile(path.join(temp,file)),bytes,`source:${file}`);if(file.startsWith('api/')||file.startsWith('lib/')||file==='package-lock.json')assert.equal(await exists(path.join(release,file)),false,`not public:${file}`);else assert.deepEqual(await readFile(path.join(release,file)),bytes,`delivery:${file}`);}
   assert.equal(await read('neighbour-sentinel.txt',temp),'PRESERVE');
   const inventory=JSON.parse(await read('.release/output-manifest.json',temp));
   assert.equal(inventory.localCandidate,true);assert.equal(inventory.owner,'scripts/assemble.mjs');

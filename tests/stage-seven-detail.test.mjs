@@ -25,7 +25,7 @@ test('moving cartons and contact artwork share one deterministic clock and safe 
  for(const tier of['mobile','desktop']){const owner=createBusinessInterior(tier);try{
   const contacts=owner.group.getObjectByName('Selective interior support and attached carton contacts'),mat=new T.Matrix4();assert.ok(contacts);
   const attributes=contacts.geometry.attributes.position,matrices=contacts.instanceMatrix;let wraps=0,previous=null;
-  for(let i=0;i<=1600;i++){const time=i*.025;owner.render({lighting:1,equipment:1,screen:1},time);const state=owner.motionSnapshot(),centres=state.cartonCentres;
+  for(let i=0;i<=3840;i++){const time=i*.025;owner.render({lighting:1,equipment:1,screen:1},time);const state=owner.motionSnapshot(),centres=state.cartonCentres;
    for(let c=0;c<4;c++){contacts.getMatrixAt(contacts.count-4+c,mat);assert.ok(Math.abs(mat.elements[12]-centres[c])<2e-6);if(previous&&Math.abs(centres[c]-previous[c])>5){wraps++;assert.ok(centres[c]<-28.6||centres[c]>-15.4,'recirculation stays within covered endpoints');}
     for(let k=c+1;k<4;k++){const d=Math.abs(centres[c]-centres[k]);assert.ok(Math.min(d,14.4-d)>3.5,'products cannot overlap on the indexing belt');}
    }

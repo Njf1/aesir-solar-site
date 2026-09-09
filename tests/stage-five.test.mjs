@@ -77,7 +77,7 @@ test('all twelve still views expose one HTML statement and the ending has no res
  assert.equal(Object.keys(STILL_VIEWS).length,12);
  for(const p of Object.values(STILL_VIEWS)){const copy=journeyCopy(p,true);assert.equal(copy.length,19);assert.equal(copy.filter(n=>n>.5).length,1);}
  for(const p of[4.70,5.09,5.56,6.03])assert.equal(sampleJourney(p).pulseOpacity,0);
- const html=readFileSync(new URL('../experience.html',import.meta.url),'utf8');assert.match(html,/id="chapter-count"><\/span>/);assert.match(html,/Illustration of operation after the required permissions and commissioning/);assert.match(html,/does not automatically provide backup/);assert.match(html,/879 modules are illustrative/);
+ const html=readFileSync(new URL('../experience.html',import.meta.url),'utf8');assert.match(html,/id="chapter-count"><\/span>/);assert.match(html,/Illustration of operation after the required permissions and commissioning/);const explanation=readFileSync(new URL('../solar.html',import.meta.url),'utf8');assert.match(explanation,/does not automatically provide backup/);assert.match(explanation,/879 modules are illustrative/);assert.match(html,/href="\/solar.html"/);
 });
 
 // The full delivery diagnostic uses a 0.0001 step. The regression samples every

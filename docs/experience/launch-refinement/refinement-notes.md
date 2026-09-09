@@ -1,0 +1,11 @@
+# Visible fixes and boundaries
+
+- **Wall flicker:** tall facade ribs began at y=1.30 and shared the plinth's exterior face up to y=1.40. Their new lower edge is y=1.46, creating a real reveal. No blur, larger map or raised DPR hides the geometry error. The repeated cladding pattern remains.
+- **Facade closure:** section exposure reverses over 4.91–4.975 after the camera has exited the west facade. At 5.0 and the final frame all original instance matrices are restored. Reversing reconstructs the opening.
+- **Battery camera:** a monotonic dolly replaces opposing lateral offsets. A fixed pose at 5.07–5.27 prevents the global Catmull-Rom spline from looping between repeated points. Smooth entry/exit and all framing rigs retain geometry-clearance checks.
+- **Packing line:** a fixed-height carton tape sealer replaces the ambiguous moving press. Tape reel/feed, side guides and contact rollers explain the operation. Equal-height cartons receive a longitudinal seam and enter/exit through covered transfers. A 24-second indexing cycle advances 3.6m over 18 seconds with six seconds of accumulation dwell; maximum speed is below 0.38m/s. The clock no longer multiplies elapsed time by scroll activation, which had caused visible acceleration. Scroll emphasizes practical activity; the already operating line keeps a steady phase. Pause freezes supplied time.
+- **Copy:** immediate offer stays first; three short steps and essential questions lead to the existing form. Complete benefit/evidence/scientific detail, full FAQs and the conservative suitability check survive in separate native pages. The daily historical summary is generated from the same validated record, including valid zero and unavailable handling.
+
+No new external media, texture, target, shader effect, shadow map or global-resolution increase. Original generic authored machinery detail stays inside the existing interior limits: 350,000 geometry bytes, 18,000 triangles and 22 base draws. Existing 750,000-byte JS-gzip / 2,000,000-byte media ceilings remain. Source registration, all 23 chapter meanings and 12 stills remain.
+
+Primary content evidence remains the stage-six claim ledger and stage-seven claim-ledger addition. The new machinery is original illustrative geometry; no manufacturer, certification or product-performance claim is added.

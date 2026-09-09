@@ -23,7 +23,7 @@ export default defineConfig({
   build: {
     outDir: '.preview-build', emptyOutDir: true,
     modulePreload: false, // No eager 3D module download when JavaScript is disabled.
-    rollupOptions: { input: 'experience.html' },
+    rollupOptions: { input: ['experience.html','suitability.html'] },
     assetsDir: 'experience-assets',
     target: 'es2022',
   },

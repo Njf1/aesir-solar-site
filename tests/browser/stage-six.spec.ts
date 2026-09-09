@@ -39,6 +39,7 @@ async function follow(page:Page,id:typeof anchors[number]){
  return section;
 }
 async function openHourlyTable(section:Locator){
+ if(!await section.locator('table').count()){await expect(section.locator('a[href="/solar.html#recorded-generation"]')).toBeVisible();return;}
  const details=section.locator('details:has(table)');
  if(await details.count()){
   const first=details.first();if(!await first.evaluate(e=>(e as HTMLDetailsElement).open))await first.locator('summary').click();
@@ -46,6 +47,12 @@ async function openHourlyTable(section:Locator){
  await expect(section.locator('table')).toBeVisible();
 }
 async function checkRecordedSample(page:Page){
+ if(!await page.locator('#recorded-generation svg').count()){
+  await expect(page.locator('#recorded-generation a')).toHaveAttribute('href','/solar.html#recorded-generation');
+  const detail=await page.context().newPage();await detail.setViewportSize(page.viewportSize()!);await isolate(detail);
+  try{await detail.goto('/solar.html#recorded-generation');await checkRecordedSample(detail);await expect(detail.locator('canvas')).toHaveCount(0);}finally{await detail.close();}return;
+ }
+
  const section=page.locator('#recorded-generation');
  await expect(section).toContainText(/24\s+August\s+2026|2026-08-24/);
  await expect(section).toContainText('206.41');await expect(section).toContainText(/kWh/);
@@ -221,7 +228,7 @@ test('payoff application link is focusable only in its visible chapter and has a
 // Replace only the build-time recorded block in an otherwise real assembled page.
 // The fixture is fulfilled on one exact loopback URL; source JSON is never written.
 function recordedFixtureHTML(input:unknown){
- const html=readFileSync(new URL('../../.release/experience.html',import.meta.url),'utf8');
+ const html=readFileSync(new URL('../../.release/solar.html',import.meta.url),'utf8');
  const section=/<section\b[^>]*\bid="recorded-generation"[^>]*>/.exec(html);
  if(!section||section.index===undefined)throw new Error('Built recorded-generation section is missing');
  const start=section.index+section[0].length,after=html.indexOf('<div class="monitoring-meaning"',start);
@@ -229,7 +236,7 @@ function recordedFixtureHTML(input:unknown){
  return html.slice(0,start)+'\n'+renderRecordedGeneration(input)+'\n'+html.slice(after);
 }
 async function serveRecordedFixture(page:Page,fixture:string,input:unknown){
- const url=`${origin}/experience?fixture=${fixture}`,html=recordedFixtureHTML(input);
+ const url=`${origin}/solar.html?fixture=${fixture}`,html=recordedFixtureHTML(input);
  await page.route(candidate=>candidate.href===url,route=>route.fulfill({status:200,contentType:'text/html; charset=utf-8',body:html}));
  await page.goto(url+'#recorded-generation');
 }

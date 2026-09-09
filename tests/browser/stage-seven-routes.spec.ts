@@ -25,7 +25,7 @@ async function noJs(browser:Browser,run:(page:Page,traffic:Awaited<ReturnType<ty
  const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});try{const page=await context.newPage();await run(page,await isolated(page));}finally{await context.close();}
 }
 function clean(traffic:Awaited<ReturnType<typeof isolated>>){expect(traffic.errors).toEqual([]);expect(traffic.unexpected).toEqual([]);}
-async function showChecker(page:Page){await page.goto('/?inspect=1#check');const checker=page.locator(CHECK.root);await expect(checker).toBeInViewport();return checker;}
+async function showChecker(page:Page){await page.goto('/suitability.html#eligibility-checker');const checker=page.locator(CHECK.root);await expect(checker).toBeInViewport();return checker;}
 async function choose(page:Page,name:string,value:'yes'|'no'|'unknown'){
  const select=page.locator(`${CHECK.root} select[name="${name}"]`);
  if(await select.count())await select.selectOption(value);
@@ -76,9 +76,9 @@ test('supporting routes and clean-URL equivalents contain real content without s
  expect(traffic.film()).toEqual([]);expect(traffic.requests.filter(r=>/\/sim\.js(?:\?|$)/.test(r.url))).toEqual([]);expect(traffic.api()).toEqual([]);clean(traffic);
 });
 
-test('the FAQ bridge works without JavaScript and lands in the complete native FAQ',async({browser})=>{
+test('the full FAQ page works without JavaScript and preserves the complete native answers',async({browser})=>{
  await noJs(browser,async(page,traffic)=>{
-  await page.goto('/faq.html');await expect(page).toHaveURL(/\/#application-faqs$/);
+  await page.goto('/faq.html');await expect(page).toHaveURL(/\/faq\.html$/);
   const section=page.locator('#application-faqs');await expect(section.getByRole('heading').first()).toBeInViewport();await expect(section.locator('details')).not.toHaveCount(0);
   await expect(section).toContainText('£300');await expect(section).toContainText(/approval|timing/i);const refund=section.locator('a[href="/refunds.html"]').first();await expect(refund).toHaveCount(1);const refundDetail=refund.locator('xpath=ancestor::details[1]');if(await refundDetail.count()&&!await refundDetail.evaluate(e=>(e as HTMLDetailsElement).open))await refundDetail.locator('summary').click();await expect(refund).toBeVisible();
   expect(traffic.film()).toEqual([]);expect(traffic.api()).toEqual([]);clean(traffic);

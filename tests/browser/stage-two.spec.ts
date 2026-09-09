@@ -124,11 +124,14 @@ test('Earth decode timeout is bounded and late bitmaps are disposed without resu
 
 test('conversion service steps and original form contract remain usable',async({page})=>{
  await page.goto('/experience');await page.locator('.skip-link').click();
- await expect(page.locator('.service-steps li > span')).toHaveText(['01','02','03','04']);
+ await expect(page.locator('.process-steps li > span')).toHaveText(['01','02','03']);
+ await expect(page.locator('.process-steps')).toContainText('contact, site and equipment details');
+ await expect(page.locator('.process-steps')).toContainText('prepares the Form A1-2 application');
+ await expect(page.locator('.process-steps')).toContainText('The operator decides the outcome');
  await expect(page.locator('.price-breakdown')).toContainText('£250 fee + £50 VAT');
  await expect(page.locator('.price')).toContainText('£300');
  await expect(page.locator('.scope-note').first()).toContainText('does not buy a solar installation or guarantee network approval');
- await page.locator('.primary-button').click();await expect(page).toHaveURL(/\/apply\.html$/);
+ await page.locator('.primary-button').first().click();await expect(page).toHaveURL(/\/apply\.html$/);
  const names=await page.locator('#applyForm [name]').evaluateAll(elements=>elements.map(e=>e.getAttribute('name')));
  expect(names).toEqual(expect.arrayContaining(['company','contact','email','phone','accreditation','address','postcode','mpan','inverter','typetest','kw','phases','storage','target','g100','eps','notes','agree','privacy']));
  await expect(page.locator('#agree')).toHaveAttribute('required','');await expect(page.locator('#privacy')).toHaveAttribute('required','');

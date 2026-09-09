@@ -1,0 +1,39 @@
+{
+  "interior": {
+    "desktop": {
+      "drawCalls": 22,
+      "triangles": 9560,
+      "geometryBytes": 61360,
+      "instances": 600,
+      "textureBytes": 0,
+      "pointLights": 2,
+      "shadowLights": 0
+    },
+    "mobile": {
+      "drawCalls": 22,
+      "triangles": 8392,
+      "geometryBytes": 54352,
+      "instances": 600,
+      "textureBytes": 0,
+      "pointLights": 2,
+      "shadowLights": 0
+    },
+    "ceilings": {
+      "geometryBytes": 350000,
+      "triangles": 18000,
+      "drawCalls": 22
+    }
+  },
+  "transfer": {
+    "beforeJsGzip": 254502,
+    "afterJsGzip": 254774,
+    "mediaBytes": 1844085,
+    "ceilings": {
+      "javascriptGzip": 750000,
+      "media": 2000000
+    },
+    "newExternalAssets": 0
+  },
+  "additionalTextures": 0,
+  "additionalRenderTargets": 0
+}
