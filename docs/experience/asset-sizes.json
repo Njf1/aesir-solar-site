@@ -1,11 +1,11 @@
 {
-  "measuredAt": "2026-09-09T18:11:54.765Z",
+  "measuredAt": "2026-09-09T19:24:33.965Z",
   "files": [
     {
-      "file": "business-BQQo3moB.js",
+      "file": "business-Bb6QJ5sz.js",
       "bytes": 23584,
-      "gzip": 9640,
-      "sha256": "d3b81115bab8c369b28e070b33c1455dc85e92e36dd8df37a89fa7d6bc1afebb"
+      "gzip": 9639,
+      "sha256": "98a76677479b5e506df492a9d8adbdf13251d879251d8e0ff57c62a44a626179"
     },
     {
       "file": "business-journey-ClVbJR9_.js",
@@ -14,10 +14,10 @@
       "sha256": "30d6b39e0e671d952c3f7cd862bf60a871a32a753bd3ce0ff134706d455c1ad6"
     },
     {
-      "file": "cell-DvGncbcJ.js",
+      "file": "cell-DKPpQHr8.js",
       "bytes": 14515,
-      "gzip": 5363,
-      "sha256": "5eaf4590f23316e04b1de815ff45819dee1a28854e2d91d7768d1c62ae6101a4"
+      "gzip": 5362,
+      "sha256": "b508f6cff11d347aa5c7ec87587ddf1e08aca73a65d51340194870d5731f5ebb"
     },
     {
       "file": "earth-clouds-1024-BKjMs3Vz.webp",
@@ -56,10 +56,10 @@
       "sha256": "26dd4f90f981685bf59b32b268bf8d537c9f7efb9fd198468eaffa0216cbaa89"
     },
     {
-      "file": "energy-flow-xgA-DJZh.js",
+      "file": "energy-flow-DqSaP81u.js",
       "bytes": 1809,
-      "gzip": 932,
-      "sha256": "07d428dfdf6f2ba25662e97b880f28bbc12d10fd6186f4869a5050dfb6691daa"
+      "gzip": 930,
+      "sha256": "29cebedea865acc248491a5420354a8b1c05ae86e2a2c568c2c0a3ec1c7e539b"
     },
     {
       "file": "equipment-detail-BZaWaqFV.js",
@@ -68,10 +68,10 @@
       "sha256": "3270764f7d897b0ab8f9c7a6ba647b70b1350c35179cad92480fcaef944e0d13"
     },
     {
-      "file": "experience-QOIAgWtc.js",
+      "file": "experience-H1LMbZYr.js",
       "bytes": 133535,
-      "gzip": 51721,
-      "sha256": "c149a1eecb6349b9a95093a94d81ddd0267d4755d2bd2f237d9c63a3670f8d97"
+      "gzip": 51720,
+      "sha256": "99d10e35486f8025c48f2279ade792238f8313e88d0e13979fcd9a9e3ae589b6"
     },
     {
       "file": "experience-cbuE7ehO.css",
@@ -104,10 +104,10 @@
       "sha256": "056a55021f87c23028eb53b073192e042a92ffda706ae01dcd73021e2d17b42d"
     },
     {
-      "file": "region-BqQnQ9ht.js",
+      "file": "region-BZuSHJfx.js",
       "bytes": 5001,
-      "gzip": 2005,
-      "sha256": "bc139e15fe6552d6f0df08a257e0f47e43b25f98452d1c799f7f3e9c8827cbdd"
+      "gzip": 2004,
+      "sha256": "a966d1748ec77ba09eacbfcd620fec2f31648858bab71b645080f2fddac2c76b"
     },
     {
       "file": "region-land-FEWFx3vP.json",
@@ -116,16 +116,16 @@
       "sha256": "6433ed75a89c58fccd98000625e17202cff001ec347e240d9cd5e93ec7a72dbf"
     },
     {
-      "file": "scene-DDmV6ZVW.js",
-      "bytes": 386839,
-      "gzip": 96181,
-      "sha256": "2825e99f4ffeb26957c3ac77d8bfeb3b1334ef32e9aeff3cc5f52998a0d02807"
+      "file": "scene-Bv1eVTb8.js",
+      "bytes": 386984,
+      "gzip": 96250,
+      "sha256": "73e094c654b9df5ef545c456a2e390e61aa5d93eb742939bbdab023938dca088"
     },
     {
-      "file": "site-CnMeFUI2.js",
+      "file": "site-7cW0IMcU.js",
       "bytes": 24476,
-      "gzip": 10329,
-      "sha256": "618f5ed77ab1cd0ff8d885847cd4f4085e52f4b472b635a4b5456f5b22e4b79a"
+      "gzip": 10327,
+      "sha256": "8b62e0105784aedeaba922d479d6a87053ee6dc266775b2b7de2f408b96f5227"
     },
     {
       "file": "site-layout-B7SX7tAm.js",
@@ -164,20 +164,20 @@
       "sha256": "96279e98d460543644d454590a67a4ac18660bee1cb208f3be0a3c02319df13e"
     }
   ],
-  "newJavaScriptGzipBytes": 255664,
+  "newJavaScriptGzipBytes": 255725,
   "budgetBytes": 750000,
   "newMediaBytes": 1844085,
   "mediaBudgetBytes": 2000000,
   "incremental": {
-    "businessCodeGzipBytes": 9640,
+    "businessCodeGzipBytes": 9639,
     "storageCodeGzipBytes": 4648,
-    "cellCodeGzipBytes": 5363,
+    "cellCodeGzipBytes": 5362,
     "electricalCodeGzipBytes": 4380,
-    "flowCodeGzipBytes": 932,
+    "flowCodeGzipBytes": 930,
     "regionRawBytes": 503245,
     "regionGzipBytes": 173539,
-    "regionCodeGzipBytes": 2005,
-    "siteCodeGzipBytes": 10329,
+    "regionCodeGzipBytes": 2004,
+    "siteCodeGzipBytes": 10327,
     "budgets": {
       "businessCodeGzip": 12000,
       "storageCodeGzip": 10000,

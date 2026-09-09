@@ -1,0 +1,2 @@
+{"name":"ipad","quality":{"tier":"mobile","width":820,"height":1180,"pixelRatio":0.9372631297838686,"detail":4,"segments":80},"resources":{"geometries":[79,79],"textures":[8,8],"siteTextureBytes":[524288,524288]},"errors":[],"warnings":[]}
+{"name":"iphone-landscape","quality":{"tier":"mobile","width":844,"height":390,"pixelRatio":1.25,"detail":4,"segments":80},"resources":{"geometries":[79,79],"textures":[8,8],"siteTextureBytes":[524288,524288]},"errors":[],"warnings":[]}

@@ -1,0 +1,33 @@
+✖ touch devices retain the mobile resource budget at tablet and landscape widths (1.650833ms)
+✔ mouse desktop rendering retains its existing budget and low-core fallback (0.09975ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 109.573583
+
+✖ failing tests:
+
+test at tests/contracts.test.mjs:25:1
+✖ touch devices retain the mobile resource budget at tablet and landscape widths (1.650833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'desktop'
+  - 'mobile'
+  
+      at TestContext.<anonymous> (file:///Users/nick/Projects/Aesir%20Solar/experience-stage1/tests/contracts.test.mjs:28:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'desktop',
+    expected: 'mobile',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

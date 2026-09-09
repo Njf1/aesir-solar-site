@@ -22,6 +22,19 @@ test('resolution obeys DPR and total-pixel caps',()=>{
     const q=selectQuality(w,h,dpr,cores);assert.ok(w*h*q.pixelRatio**2<=(q.tier==='mobile'?850000:2000000)+1);assert.ok(q.pixelRatio<=1.5);
   }
 });
+test('touch devices retain the mobile resource budget at tablet and landscape widths',()=>{
+  for(const [w,h] of [[820,1180],[1180,820],[844,390],[1366,1024]]){
+    const q=selectQuality(w,h,3,8,5),rotated=selectQuality(h,w,3,8,5);
+    assert.equal(q.tier,'mobile');assert.equal(rotated.tier,'mobile');
+    assert.ok(w*h*q.pixelRatio**2<=850001);assert.ok(q.pixelRatio<=1.25);
+    assert.equal(q.detail,rotated.detail);assert.equal(q.segments,rotated.segments);assert.equal(q.pixelRatio,rotated.pixelRatio);
+  }
+});
+test('mouse desktop rendering retains its existing budget and low-core fallback',()=>{
+  const q=selectQuality(1600,1000,2,8,0);
+  assert.equal(q.tier,'desktop');assert.equal(q.detail,5);assert.equal(q.segments,128);assert.ok(1600*1000*q.pixelRatio**2<=2000001);
+  assert.equal(selectQuality(1600,1000,2,4,0).tier,'mobile');
+});
 test('untouched operational contracts retain their original bytes through the approved presentation migration',async()=>{
   // app.js now intentionally removes the old-shop/Stripe fallback. Its full
   // form payload and error behaviour are covered by browser contract tests.

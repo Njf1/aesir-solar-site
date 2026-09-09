@@ -69,6 +69,7 @@ export class SolarScene {
   private height = 0;
   private shaderOK = true;
   private disposed = false;
+  private readonly touchPoints = Math.max(navigator.maxTouchPoints??0,Number(matchMedia('(any-pointer: coarse)').matches));
   private quality;
   private pathCentre = new THREE.Vector3();
   private pathTangent = new THREE.Vector3();
@@ -83,7 +84,7 @@ export class SolarScene {
   private trailHeadError = 0;
 
   constructor(private host: HTMLElement, private onFailure: (reason: string) => void, private onAssetReady: () => void = () => {}) {
-    this.quality = selectQuality(host.clientWidth, host.clientHeight, devicePixelRatio, navigator.hardwareConcurrency);
+    this.quality = selectQuality(host.clientWidth, host.clientHeight, devicePixelRatio, navigator.hardwareConcurrency,this.touchPoints);
     this.renderer = new THREE.WebGLRenderer({ alpha: false, antialias: true, powerPreference: 'high-performance' });
     this.renderer.setClearColor(0x050608, 1);
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -274,7 +275,7 @@ export class SolarScene {
   setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();if(value>.88&&this.earthStatus==='ready')void this.loadNext('region');if(value>1.37&&this.regionStatus==='ready')void this.loadNext('site');if(value>2.08&&this.siteStatus==='ready')void this.loadNext('cell');if(value>2.83&&this.cellStatus==='ready')void this.loadNext('electrical');if(value>4.04&&this.electricalStatus==='ready')void this.loadNext('business');if(value>4.70&&this.businessStatus==='ready')void this.loadNext('storage');}
   resize() {
     const width=this.host.clientWidth,height=this.host.clientHeight;
-    const next=selectQuality(width,height,devicePixelRatio,navigator.hardwareConcurrency);
+    const next=selectQuality(width,height,devicePixelRatio,navigator.hardwareConcurrency,this.touchPoints);
     if(width===this.width&&height===this.height&&next.pixelRatio===this.quality.pixelRatio&&next.tier===this.quality.tier)return false;
     this.width=width;this.height=height;
     if(next.tier!==this.quality.tier) {
