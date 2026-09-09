@@ -38,4 +38,6 @@ Reproduce: `COPY_PHASE=after node scripts/capture-mobile-copy.mjs`; optionally s
 
 ## Release
 
-The fix is published through the existing approved GitHub/Vercel path. Final deployment identity and real-domain measurements are recorded in `production/` after readiness is verified. Original `/Users/nick/Projects/Aesir Solar/site` remains untouched.
+Implementation **05250a5** is pushed to GitHub main and the working branch, with `experience-mobile-copy-fixed` retained. Vercel production **dpl_87etKwqF5Wdxo8e22wMx55xXLCN3** (`aesir-solar-8hammtmom-aesir.vercel.app`) reports **Ready** and serves **https://aesirsolar.co.uk/**. The public page's hashed assets match the tested build. The CLI refreshed its expired session for inspection; no provider configuration changed.
+
+[Real-domain measurements](production/measurements.json) independently confirm **0px** title movement during toolbar expansion/retraction and forward/reverse fades, **0px** uncovered canvas and no page errors. [Live frame](production/height-844.png) and [live motion](production/toolbar-and-scroll.webm) were captured with provider/API/submission requests blocked. Original `/Users/nick/Projects/Aesir Solar/site` remains untouched. Later evidence-only commits do not change the implementation.
