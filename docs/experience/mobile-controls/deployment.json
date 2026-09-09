@@ -1,0 +1,12 @@
+{
+  "origin": "https://aesir-solar.vercel.app/",
+  "implementation": "0e1d74d154e83ffdc77cd5d383d84fbbd0875dfa",
+  "deploymentId": "dpl_AGL4pTmn48tCLN6ATjmxiXKVBu6m",
+  "deploymentUrl": "aesir-solar-1cjkxdgjq-aesir.vercel.app",
+  "state": "READY",
+  "rollbackDeploymentId": "dpl_3o7etxrCKtbXbMYo1KMphy7QGDdz",
+  "payloadVerified": true,
+  "publicBrowserConsoleErrors": 0,
+  "publicBrowserConsoleWarnings": 0,
+  "providerRequests": false
+}
