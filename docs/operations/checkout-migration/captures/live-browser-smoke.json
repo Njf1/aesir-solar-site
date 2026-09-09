@@ -1,0 +1,154 @@
+[
+  {
+    "browser": "chromium",
+    "width": 1280,
+    "height": 720,
+    "homepage": {
+      "overflow": false,
+      "ready": true
+    },
+    "application": {
+      "url": "https://aesirsolar.co.uk/apply",
+      "overflow": false,
+      "names": [
+        "company",
+        "contact",
+        "email",
+        "phone",
+        "accreditation",
+        "address",
+        "postcode",
+        "mpan",
+        "inverter",
+        "typetest",
+        "kw",
+        "phases",
+        "storage",
+        "target",
+        "g100",
+        "eps",
+        "notes",
+        "agree",
+        "privacy"
+      ],
+      "canvas": 0
+    },
+    "unverifiedReturn": true,
+    "errors": [],
+    "blocked": []
+  },
+  {
+    "browser": "chromium",
+    "width": 390,
+    "height": 844,
+    "homepage": {
+      "overflow": false,
+      "ready": true
+    },
+    "application": {
+      "url": "https://aesirsolar.co.uk/apply",
+      "overflow": false,
+      "names": [
+        "company",
+        "contact",
+        "email",
+        "phone",
+        "accreditation",
+        "address",
+        "postcode",
+        "mpan",
+        "inverter",
+        "typetest",
+        "kw",
+        "phases",
+        "storage",
+        "target",
+        "g100",
+        "eps",
+        "notes",
+        "agree",
+        "privacy"
+      ],
+      "canvas": 0
+    },
+    "unverifiedReturn": true,
+    "errors": [],
+    "blocked": []
+  },
+  {
+    "browser": "webkit",
+    "width": 1280,
+    "height": 720,
+    "homepage": {
+      "overflow": false,
+      "ready": true
+    },
+    "application": {
+      "url": "https://aesirsolar.co.uk/apply",
+      "overflow": false,
+      "names": [
+        "company",
+        "contact",
+        "email",
+        "phone",
+        "accreditation",
+        "address",
+        "postcode",
+        "mpan",
+        "inverter",
+        "typetest",
+        "kw",
+        "phases",
+        "storage",
+        "target",
+        "g100",
+        "eps",
+        "notes",
+        "agree",
+        "privacy"
+      ],
+      "canvas": 0
+    },
+    "unverifiedReturn": true,
+    "errors": [],
+    "blocked": []
+  },
+  {
+    "browser": "webkit",
+    "width": 390,
+    "height": 844,
+    "homepage": {
+      "overflow": false,
+      "ready": true
+    },
+    "application": {
+      "url": "https://aesirsolar.co.uk/apply",
+      "overflow": false,
+      "names": [
+        "company",
+        "contact",
+        "email",
+        "phone",
+        "accreditation",
+        "address",
+        "postcode",
+        "mpan",
+        "inverter",
+        "typetest",
+        "kw",
+        "phases",
+        "storage",
+        "target",
+        "g100",
+        "eps",
+        "notes",
+        "agree",
+        "privacy"
+      ],
+      "canvas": 0
+    },
+    "unverifiedReturn": true,
+    "errors": [],
+    "blocked": []
+  }
+]

@@ -1,5 +1,7 @@
 # Stripe intake implementation — 9 September 2026
 
+**Current production status:** the user-approved live deployment and `aesirsolar.co.uk` cutover are complete. Start with the [release and operator handover](release-2026-09-09.md). The record below preserves what had and had not happened at each earlier checkpoint; older pending-release statements are superseded by that handover.
+
 ## Current result (local and protected hosted tests; not live)
 
 The new form now selects Stripe exclusively. Its complete original 19 controls and both consents are retained. `api/checkout.js` validates and saves the full application before creating Checkout; metadata contains binding references, not truncated intake. Supabase RPCs enforce one payment/session per application and atomically create one work item. All tables have RLS, no public/authenticated grants, and only server-role RPC access. The operator queue is a security-invoker view.

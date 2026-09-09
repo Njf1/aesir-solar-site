@@ -1,5 +1,7 @@
 # Launch refinement and Vercel frontend release
 
+**Later operational release:** the new site and Stripe intake/payment/work chain are now live on aesirsolar.co.uk with user approval. See the [current release handover](../../operations/checkout-migration/release-2026-09-09.md). The frontend-only scope and provider/domain statements below remain historical.
+
 The user authorized publication of the upgraded experience after the packing-line, battery-camera, facade, wall-seam and content fixes. Work begins at clean `331ebc8` / `experience-stage-seven-delivered`, on `experience/launch-refinement`. The original `/Users/nick/Projects/Aesir Solar/site` remains unchanged at `c61643f`.
 
 Local candidate: **http://127.0.0.1:4173/**. [Review gallery](review.html), [current route/content manifest](route-content-manifest.md), [complete vision register](vision-register.md), [precise refinement notes](refinement-notes.md). **Live production:** https://aesir-solar.vercel.app/. Deployed source: `88c8884`; Vercel deployment `dpl_Er9QBEKjBoaN1x4jfqQNZ12VRTNp`, **READY**. [Deployment record](production/deployment.json) and [public verification](production/verification.json) identify the exact tested release. No custom domain or payment-provider setting was changed.

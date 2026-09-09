@@ -1,0 +1,30 @@
+[
+  {
+    "check": "private readiness: Stripe, database, SMTP; no email",
+    "result": [
+      200,
+      ""
+    ]
+  },
+  {
+    "check": "operations anonymous denied",
+    "result": [
+      401,
+      "{\"error\":\"unauthorized\"}"
+    ]
+  },
+  {
+    "check": "unsigned webhook denied",
+    "result": [
+      400,
+      "{\"error\":\"invalid_signature\",\"contact\":\"/contact.html\"}"
+    ]
+  },
+  {
+    "check": "malformed application rejected before providers",
+    "result": [
+      400,
+      "{\"error\":\"invalid_reference\",\"contact\":\"/contact.html\"}"
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "host": "aesirsolar.co.uk",
+    "type": "A",
+    "answers": [
+      "216.150.1.1"
+    ]
+  },
+  {
+    "host": "aesirsolar.co.uk",
+    "type": "AAAA",
+    "answers": []
+  },
+  {
+    "host": "www.aesirsolar.co.uk",
+    "type": "A",
+    "answers": [
+      "216.150.1.1"
+    ]
+  },
+  {
+    "host": "www.aesirsolar.co.uk",
+    "type": "AAAA",
+    "answers": []
+  },
+  {
+    "host": "aesirsolar.co.uk",
+    "type": "MX",
+    "answers": [
+      "10 mailserver.livemail.co.uk."
+    ]
+  },
+  {
+    "host": "aesirsolar.co.uk",
+    "type": "NS",
+    "answers": [
+      "ns1.livedns.co.uk.",
+      "ns2.livedns.co.uk.",
+      "ns3.livedns.co.uk."
+    ]
+  },
+  {
+    "host": "aesirsolar.co.uk",
+    "type": "TXT",
+    "answers": [
+      "\"v=spf1 mx a include:_spf.livemail.co.uk ~all\""
+    ]
+  }
+]

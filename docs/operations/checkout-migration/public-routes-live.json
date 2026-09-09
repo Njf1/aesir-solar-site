@@ -1,0 +1,121 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/apply",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/apply",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/form-a/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/apply",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/cart/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/apply",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/checkout/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/apply",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/checkout/order-received/1/?key=legacy",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/success?key=legacy&legacy=1",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/checkout/order-pay/1/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/contact?legacy-order=1",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/shop/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/product/begin-your-application/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/my-account/",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/contact?existing-applicant=1",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/faq",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/faq",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/contact",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/privacy",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/privacy",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/terms",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/terms",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/refunds",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/refunds",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "/simulator",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/simulator",
+    "newDesign": true,
+    "legacyWordPress": false
+  },
+  {
+    "path": "https://www.aesirsolar.co.uk/apply?campaign=verify",
+    "status": 200,
+    "final": "https://aesirsolar.co.uk/apply?campaign=verify",
+    "newDesign": true,
+    "legacyWordPress": false
+  }
+]

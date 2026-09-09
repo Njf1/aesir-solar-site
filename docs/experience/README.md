@@ -1,5 +1,7 @@
 # Aesir Solar — current experience
 
+**Current live release:** [aesirsolar.co.uk](https://aesirsolar.co.uk/) now serves this experience with durable Stripe intake, verified payments, private work items and paid-application alerts. See the [release/operator handover](../operations/checkout-migration/release-2026-09-09.md). The frontend-only statements below describe earlier cinematic checkpoints.
+
 Latest controls update: [consistent mobile Skip and discreet image credits](mobile-controls/README.md), from clean `af1a425`. Transparent Skip, vector action arrows and measured copy clearance preserve text enlargement; full NASA attribution now has a native linked destination.
 
 Latest viewport correction: [full-height mobile rendering](mobile-viewport/README.md), from clean `b1ded61`. The stage follows the current browser viewport while travel remains stable through browser-bar changes; rotation, Pause/stills and application focus are covered.

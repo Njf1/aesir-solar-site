@@ -5,3 +5,4 @@
 - [Verified backend blockers and next bounded repair](experience/backend-blockers.md)
 
 - [Real-domain checkout migration and Stripe integration](operations/checkout-migration/README.md)
+- [Live release and paid-application operator handover](operations/checkout-migration/release-2026-09-09.md)

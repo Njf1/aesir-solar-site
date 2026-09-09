@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "server": "Vercel",
+    "robots": [
+      "index, follow"
+    ],
+    "canonical": [
+      "https://aesirsolar.co.uk/"
+    ]
+  },
+  {
+    "path": "/apply",
+    "status": 200,
+    "server": "Vercel",
+    "robots": [
+      "noindex, follow"
+    ],
+    "canonical": [
+      "https://aesirsolar.co.uk/apply"
+    ]
+  },
+  {
+    "path": "/success?legacy=1",
+    "status": 200,
+    "server": "Vercel",
+    "robots": [
+      "noindex, follow"
+    ],
+    "canonical": [
+      "https://aesirsolar.co.uk/success"
+    ]
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "server": "Vercel",
+    "content": "User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /apply\nDisallow: /success\nSitemap: https://aesirsolar.co.uk/sitemap.xml\n"
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "server": "Vercel",
+    "urls": [
+      "https://aesirsolar.co.uk/",
+      "https://aesirsolar.co.uk/solar",
+      "https://aesirsolar.co.uk/suitability",
+      "https://aesirsolar.co.uk/faq",
+      "https://aesirsolar.co.uk/contact",
+      "https://aesirsolar.co.uk/terms",
+      "https://aesirsolar.co.uk/privacy",
+      "https://aesirsolar.co.uk/refunds",
+      "https://aesirsolar.co.uk/simulator"
+    ]
+  }
+]

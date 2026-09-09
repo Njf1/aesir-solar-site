@@ -1,34 +1,16 @@
-# Stripe test chain proved; production release pending
+# Aesir Solar — live Stripe checkout and domain
 
-See [implementation and verification](stripe-implementation.md) for the current state. Durable intake, Stripe test payment verification and one work item passed locally and on a protected Vercel preview. Temporary webhook access has been revoked. Production and `aesirsolar.co.uk` remain unchanged.
+**Released 9 September 2026:** [aesirsolar.co.uk](https://aesirsolar.co.uk/) serves the new site. The user approved Production credentials, £300 Stripe checkout, application alerts and the root/www domain move. Mail DNS and the original WordPress recovery records were preserved.
 
-# Checkout and real-domain consolidation — Stripe
+- **[Current release and operator handover](release-2026-09-09.md)** — what is live, how to handle paid applications, verification and practical limits.
+- [Current route manifest](route-manifest.md) — new and legacy destinations, truthful historical returns and retired WordPress presentation.
+- [Implementation and test history](stripe-implementation.md) — durable intake, genuine Stripe sandbox evidence, one work item, recovery and alerts. Earlier pending-release statements describe their dated phase; the current handover supersedes them.
+- [Public route inventory](public-route-inventory.json), [private recovery manifest](recovery-manifest.json) and [Supabase provisioning record](supabase-provisioning.json).
 
-**Current decision, 9 September 2026:** the user has cancelled the Tyl/Fiserv integration plan and selected the existing **Aesir Solar Stripe account**. The user confirms this account is now exclusively for Aesir Solar. **Aesir Limited remains the legal business receiving the payments.**
+The legal merchant is **Aesir Limited**, displayed as **Aesir Ltd** in Stripe, trading as Aesir Solar. The account is exclusively Solar. The service remains **£250 fee + £50 VAT = £300 per suitable G99 Form A1-2 application**, for preparation, submission and follow-up across Great Britain. Payment does not buy installation or guarantee network approval.
 
-Current handoff: [Stripe account preparation and complete checkout requirements](stripe-migration.md).
+## Historical decisions and recovery
 
-**Final public domain: `aesirsolar.co.uk`.** The user reaffirmed that the new site must move there once everything works. Vercel is the current testing/review address, not a replacement for that domain. Preserve root/www routing, existing email DNS and historical payment records during cutover.
+The user cancelled Tyl/Fiserv in favour of Stripe. [Stripe migration plan](stripe-migration.md), [Tyl preparation](tyl-preparation-checkpoint.md), [gateway inspection](authenticated-inspection.md) and [Commerce Hub comparison](commerce-hub-assessment.md) remain historical evidence, not instructions to enable another provider.
 
-## Earlier account-preparation record (superseded by the implementation above)
-
-- Stripe Dashboard access works. Legal business is displayed as **Aesir Ltd**; Account status shows **no active tasks**. This is not an end-to-end payment or payout certification.
-- Customer-facing Stripe name, support email/URL, website and statement descriptor were updated and saved for Solar after the user confirmed exclusive account use. Test mode is accessible. No keys were created/exported, no new payment sessions or charges were made, and no deployment/DNS change occurred in this account-preparation pass.
-- The repository still contains the old incomplete Stripe `/api/checkout` handler and the local Tyl-only frontend. They have **not** been switched on. The complete form-save/payment/work-item chain still needs implementation and proof.
-- **Provisioned:** separate **Aesir Solar** organisation on the **Free plan**, with `aesir-solar` in London (`eu-west-2`), quoted and confirmed **US$0/month**. The paid AESIR proposal is superseded. Database connection, ACTIVE_HEALTHY status, empty public schema and no security-advisor findings were verified. [Provisioning record](supabase-provisioning.json). Application tables, integration, backup/restore and pause handling remain to be built; the new database is not yet wired to checkout.
-
-## Delivery that must be proved
-
-1. Save all 19 original installation controls, both consents and server-recorded policy evidence against a stable application reference before offering payment.
-2. Open branded Stripe Checkout for exactly **£250 fee + £50 VAT = £300**, quantity one, using server-controlled configuration and retry-safe payment attempts.
-3. Verify the account/environment, saved session/payment identity, amount, currency and paid status. Signed webhooks and server-side retrieval must work even when the browser never returns.
-4. Record payment and create **one actionable Aesir application**, including concurrent/duplicate delivery and delayed/failed payment tests. Never label a query-string-only return paid or received.
-5. Prove the whole flow in test mode, update actual provider copy and all routes, configure production securely, then cut over `aesirsolar.co.uk` with the established route/content preservation requirements. No live money is a fixture.
-
-## Evidence and recovery
-
-- [Real-domain route manifest](route-manifest.md)
-- [Public inventory](public-route-inventory.json) and [private backup manifest](recovery-manifest.json)
-- [Historical Tyl preparation checkpoint](tyl-preparation-checkpoint.md), [gateway inspection](authenticated-inspection.md) and [Commerce Hub comparison](commerce-hub-assessment.md). These remain evidence/recovery material, not instructions to activate Tyl.
-- Recoverable pre-switch implementation: **b5131ee**, branch `experience/checkout-consolidation`; original pre-migration tag `experience-checkout-migration-before` at **606e290**. The original `/Users/nick/Projects/Aesir Solar/site` checkout remains untouched.
-- Existing source baseline: type/build, **117 Node**, **18 focused checkout/route browser** and **10 no-JS legal-page viewport** checks passed at b5131ee. This provider-decision/account-settings pass changes documentation only; those counts are a prior baseline, not a Stripe integration rerun.
+Original pre-migration tag `experience-checkout-migration-before` points to `606e290`. The original `/Users/nick/Projects/Aesir Solar/site` checkout and private WordPress archive are intact. Do not restore old public payment links as a cosmetic rollback: the payment backend, database and domain must be reviewed together.

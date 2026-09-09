@@ -1,5 +1,7 @@
 # Current route and content manifest
 
+**Current routes:** the user-approved real-domain/Stripe release supersedes the provider, external-cart and indexing statements in this earlier frontend record. See the [delivered route manifest](../../operations/checkout-migration/route-manifest.md).
+
 Updated 9 September 2026. Generated pages are owned by `templates/site/` and `build.py`; the homepage is authored in `experience.html`. The original site checkout remains intact. All .html links are canonicalized by Vercel cleanUrls while query strings and browser fragments remain.
 
 | Routes | Current result |
