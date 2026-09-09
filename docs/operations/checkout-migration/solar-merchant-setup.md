@@ -1,3 +1,5 @@
+> Superseded: the user selected Stripe on 9 September 2026. Retained for recovery; do not continue Tyl onboarding. See [current Stripe handoff](stripe-migration.md).
+
 # Aesir Limited — direct Solar payments preparation
 
 9 September 2026. **User-confirmed legal merchant: Aesir Limited**, trading as Aesir Solar. The intended service is one suitable G99 Form A1-2 application across Great Britain: £250 preparation/submission/follow-up fee + £50 VAT = £300 total. The fee does not buy installation or approval.

@@ -1,3 +1,5 @@
+> Superseded: the user selected Stripe on 9 September 2026. Retained for recovery; do not continue Tyl onboarding. See [current Stripe handoff](stripe-migration.md).
+
 # Solar direct checkout — Premier comparison and gateway inspection
 
 9 September 2026. User clarified that the remembered plugin-free Fiserv work was for Premier, supplied its activation summary, and requested the same approach for Solar. **Target: a direct Commerce Hub Checkout integration for Solar, subject to the correct merchant/store and API access.** No merchant settings or production code changed during this review.
