@@ -1,0 +1,70 @@
+
+> aesir-solar@1.0.0 build
+> python3 build.py && vite build && node scripts/assemble.mjs
+
+Built 10 supporting pages and the index compatibility copy; experience.html remains authoritative.
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 59 modules transformed.
+rendering chunks...
+computing gzip size...
+.preview-build/experience-assets/favicon-NywgcjmD.svg                      0.33 kB │ gzip:   0.24 kB
+.preview-build/suitability.html                                            6.86 kB │ gzip:   2.67 kB
+.preview-build/experience.html                                            18.70 kB │ gzip:   5.13 kB
+.preview-build/experience-assets/experience-poster-mobile-DhtopdsF.webp   60.05 kB
+.preview-build/experience-assets/earth-clouds-1024-BKjMs3Vz.webp         101.69 kB
+.preview-build/experience-assets/earth-day-2048-DtZ8Fp4V.webp            137.85 kB
+.preview-build/experience-assets/experience-poster-2apZrVuk.webp         138.05 kB
+.preview-build/experience-assets/earth-clouds-2048-CxNnPLJI.webp         336.23 kB
+.preview-build/experience-assets/region-land-FEWFx3vP.json               503.24 kB │ gzip: 176.90 kB
+.preview-build/experience-assets/earth-day-4096-BO1QlKRh.webp            566.95 kB
+.preview-build/experience-assets/suitability-uiEimiqc.css                 31.27 kB │ gzip:   7.55 kB
+.preview-build/experience-assets/experience-L5rRFiuE.css                  39.16 kB │ gzip:   8.54 kB
+.preview-build/experience-assets/suitability-BgHsVde0.js                   0.05 kB │ gzip:   0.07 kB
+.preview-build/experience-assets/site-layout-B7SX7tAm.js                   0.13 kB │ gzip:   0.13 kB
+.preview-build/experience-assets/energy-flow-BeEB6pav.js                   1.80 kB │ gzip:   0.93 kB
+.preview-build/experience-assets/suitability-DNA50b1D.js                   2.81 kB │ gzip:   1.29 kB
+.preview-build/experience-assets/region-DiCAMg2y.js                        5.00 kB │ gzip:   2.00 kB
+.preview-build/experience-assets/equipment-detail-BuvFLQID.js              7.59 kB │ gzip:   3.24 kB
+.preview-build/experience-assets/electrical-3IKHOK38.js                    9.93 kB │ gzip:   4.40 kB
+.preview-build/experience-assets/storage-BZxzffcO.js                      10.47 kB │ gzip:   4.67 kB
+.preview-build/experience-assets/cell-lsXJIdhn.js                         14.51 kB │ gzip:   5.38 kB
+.preview-build/experience-assets/business-CBwKrJJx.js                     23.57 kB │ gzip:   9.68 kB
+.preview-build/experience-assets/site-Cpqe7uyh.js                         24.47 kB │ gzip:  10.40 kB
+.preview-build/experience-assets/experience-CsseFbE1.js                  144.28 kB │ gzip:  56.54 kB
+.preview-build/experience-assets/three.core-D3aJHFM9.js                  223.31 kB │ gzip:  60.94 kB
+.preview-build/experience-assets/scene-BV9A4vcT.js                       387.21 kB │ gzip:  97.00 kB
+
+✓ built in 150ms
+Built 10 supporting pages and the index compatibility copy; experience.html remains authoritative.
+{
+  "release": ".release",
+  "measuredAt": "2026-09-09T20:23:57.029Z",
+  "newJavaScriptGzipBytes": 254923,
+  "budgetBytes": 750000,
+  "newMediaBytes": 1844085,
+  "mediaBudgetBytes": 2000000,
+  "incremental": {
+    "businessCodeGzipBytes": 9637,
+    "storageCodeGzipBytes": 4649,
+    "cellCodeGzipBytes": 5363,
+    "electricalCodeGzipBytes": 4384,
+    "flowCodeGzipBytes": 931,
+    "regionRawBytes": 503245,
+    "regionGzipBytes": 173539,
+    "regionCodeGzipBytes": 2002,
+    "siteCodeGzipBytes": 10335,
+    "budgets": {
+      "businessCodeGzip": 12000,
+      "storageCodeGzip": 10000,
+      "cellCodeGzip": 8000,
+      "electricalCodeGzip": 8000,
+      "flowCodeGzip": 2000,
+      "regionRaw": 550000,
+      "regionGzip": 180000,
+      "regionCodeGzip": 10000,
+      "siteCodeGzip": 20000
+    }
+  },
+  "pass": true
+}

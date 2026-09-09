@@ -1,0 +1,229 @@
+{
+  "engine": "chromium",
+  "browser": "151.0.7922.34",
+  "origin": "http://127.0.0.1:4173",
+  "method": "Desktop touch emulation; CSS small viewport held at 719px while visible height changes. This does not simulate native browser window translation.",
+  "errors": [],
+  "rows": [
+    {
+      "progress": 0.06,
+      "height": 719,
+      "sun": {
+        "x": 194.5569358178054,
+        "y": 507.6656314699793,
+        "height": 35,
+        "count": 966
+      },
+      "state": {
+        "progress": 0.06010212001143744,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 719,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.8667000000000001
+      }
+    },
+    {
+      "progress": 0.06,
+      "height": 844,
+      "sun": {
+        "x": 194.4793077501881,
+        "y": 596.0729872084274,
+        "height": 42,
+        "count": 1329
+      },
+      "state": {
+        "progress": 0.06010212001143744,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 844,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.8667000000000001
+      }
+    },
+    {
+      "progress": 0.06,
+      "height": 769,
+      "sun": {
+        "x": 194.47683923705722,
+        "y": 543.0572207084468,
+        "height": 38,
+        "count": 1101
+      },
+      "state": {
+        "progress": 0.06010212001143744,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 769,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.8667000000000001
+      }
+    },
+    {
+      "progress": 0.06,
+      "height": 819,
+      "sun": {
+        "x": 194.52964743589743,
+        "y": 578.3453525641025,
+        "height": 40,
+        "count": 1248
+      },
+      "state": {
+        "progress": 0.06010212001143744,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 819,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.8667000000000001
+      }
+    },
+    {
+      "progress": 0.06,
+      "height": 719,
+      "sun": {
+        "x": 194.5569358178054,
+        "y": 507.6656314699793,
+        "height": 35,
+        "count": 966
+      },
+      "state": {
+        "progress": 0.06010212001143744,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 719,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.8667000000000001
+      }
+    },
+    {
+      "progress": 0.15,
+      "height": 719,
+      "sun": {
+        "x": 194.41589198760514,
+        "y": 512.1881363435149,
+        "height": 102,
+        "count": 9036
+      },
+      "state": {
+        "progress": 0.15000694416077776,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 719,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.9000000000000004
+      }
+    },
+    {
+      "progress": 0.15,
+      "height": 844,
+      "sun": {
+        "x": 194.406745257241,
+        "y": 602.9089702552892,
+        "height": 128,
+        "count": 12809
+      },
+      "state": {
+        "progress": 0.15000694416077776,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 844,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.9000000000000004
+      }
+    },
+    {
+      "progress": 0.15,
+      "height": 769,
+      "sun": {
+        "x": 194.43873332080437,
+        "y": 549.2950573200526,
+        "height": 117,
+        "count": 10642
+      },
+      "state": {
+        "progress": 0.15000694416077776,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 769,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.9000000000000004
+      }
+    },
+    {
+      "progress": 0.15,
+      "height": 819,
+      "sun": {
+        "x": 194.42183746168504,
+        "y": 585.0243558942921,
+        "height": 124,
+        "count": 12071
+      },
+      "state": {
+        "progress": 0.15000694416077776,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 819,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.9000000000000004
+      }
+    },
+    {
+      "progress": 0.15,
+      "height": 719,
+      "sun": {
+        "x": 194.41589198760514,
+        "y": 512.1881363435149,
+        "height": 102,
+        "count": 9036
+      },
+      "state": {
+        "progress": 0.15000694416077776,
+        "quality": {
+          "tier": "mobile",
+          "width": 390,
+          "height": 719,
+          "pixelRatio": 1,
+          "detail": 4,
+          "segments": 80
+        },
+        "ambientTime": 0.9000000000000004
+      }
+    }
+  ]
+}

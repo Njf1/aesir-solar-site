@@ -1,0 +1,33 @@
+
+Running 22 tests using 1 worker
+
+(node:4464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/helpers/mobile-footer.ts:26:2 › webkit: bottom controls glide through an abrupt browser-height expansion (3.2s)
+  ✓   2 tests/browser/helpers/mobile-footer.ts:43:2 › webkit: rapid toolbar reversal stays contained and leaves no animation running (3.3s)
+  ✓   3 tests/browser/helpers/mobile-footer.ts:50:2 › webkit: Pause and reduced motion settle controls without a continuing animation (1.2s)
+  ✓   4 tests/browser/helpers/mobile-footer.ts:63:2 › webkit: rotation and enlarged controls reflow directly into the available screen (957ms)
+  ✓   5 tests/browser/helpers/mobile-footer.ts:73:2 › webkit: footer works during delayed loading; Skip and failure release its animation (956ms)
+  ✓   6 tests/browser/helpers/mobile-footer.ts:88:2 › webkit: context loss during the glide disposes the effect and retains application access (791ms)
+(node:4540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/browser/helpers/mobile-footer.ts:26:2 › chromium: bottom controls glide through an abrupt browser-height expansion (3.1s)
+  ✓   8 tests/browser/helpers/mobile-footer.ts:43:2 › chromium: rapid toolbar reversal stays contained and leaves no animation running (3.5s)
+  ✓   9 tests/browser/helpers/mobile-footer.ts:50:2 › chromium: Pause and reduced motion settle controls without a continuing animation (1.2s)
+  ✓  10 tests/browser/helpers/mobile-footer.ts:63:2 › chromium: rotation and enlarged controls reflow directly into the available screen (1.1s)
+  ✓  11 tests/browser/helpers/mobile-footer.ts:73:2 › chromium: footer works during delayed loading; Skip and failure release its animation (997ms)
+  ✓  12 tests/browser/helpers/mobile-footer.ts:88:2 › chromium: context loss during the glide disposes the effect and retains application access (876ms)
+  ✓  13 tests/browser/helpers/scene-anchor.ts:33:35 › chromium: actual Sun pixels stay anchored at 0.06 when browser bars move (1.8s)
+  ✓  14 tests/browser/helpers/scene-anchor.ts:33:35 › chromium: actual Sun pixels stay anchored at 0.15 when browser bars move (1.8s)
+  ✓  15 tests/browser/helpers/scene-anchor.ts:45:2 › chromium: actual projection stays anchored through every scene and repeated reversal (9.9s)
+  ✓  16 tests/browser/helpers/scene-anchor.ts:62:2 › chromium: browser bars cannot switch framing and rotate the authored camera (1.4s)
+  ✓  17 tests/browser/helpers/scene-anchor.ts:75:2 › chromium: still views anchor and context loss disposes the viewport reference (2.7s)
+(node:4719) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  18 tests/browser/helpers/scene-anchor.ts:33:35 › webkit: actual Sun pixels stay anchored at 0.06 when browser bars move (1.9s)
+  ✓  19 tests/browser/helpers/scene-anchor.ts:33:35 › webkit: actual Sun pixels stay anchored at 0.15 when browser bars move (1.6s)
+  ✓  20 tests/browser/helpers/scene-anchor.ts:45:2 › webkit: actual projection stays anchored through every scene and repeated reversal (8.4s)
+  ✓  21 tests/browser/helpers/scene-anchor.ts:62:2 › webkit: browser bars cannot switch framing and rotate the authored camera (1.3s)
+  ✓  22 tests/browser/helpers/scene-anchor.ts:75:2 › webkit: still views anchor and context loss disposes the viewport reference (2.6s)
+
+  22 passed (56.3s)

@@ -1,5 +1,6 @@
 import {initSuitability} from './suitability';
 import {followViewportFooter} from './footer-motion';
+import {createViewportReference} from './viewport';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { framingFor, smooth } from './progress';
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const journey=document.querySelector<HTMLElement>('#journey')!;
 const stage=document.querySelector<HTMLElement>('#stage')!;
 const host=document.querySelector<HTMLElement>('#canvas-host')!;
+const viewportReference=createViewportReference(stage);
 const applicationDetails=document.querySelector<HTMLElement>('#application-details')!;
 const skipLink=document.querySelector<HTMLElement>('.skip-link')!;
 const pauseButton=document.querySelector<HTMLButtonElement>('#pause-motion')!;
@@ -49,7 +51,7 @@ function updateCopy(p:number) {
   if(!reduced.matches)scrollLabel.textContent=p>=5.67?'SCROLL TO APPLICATION DETAILS':p>=2.71?'SCROLL TO FOLLOW THE ENERGY':'SCROLL TO FOLLOW THE LIGHT';
 }
 function frameLayout() {
-  const width=stage.clientWidth,mode=framingFor(width,stage.clientHeight);
+  const width=stage.clientWidth,mode=framingFor(width,viewportReference.height());
   document.body.dataset.framing=mode;
   const expected=mode==='portrait'?Math.max(34,Math.min(54,width*.08)):mode==='short'?Math.max(28,Math.min(48,width*.044)):Math.max(40,Math.min(84,width*.053));
   const font=parseFloat(getComputedStyle(panels[0].querySelector('h1')!).fontSize);
@@ -78,7 +80,7 @@ function tick(now:number) {
 function resume(){if(canAnimate()&&!frame)frame=requestAnimationFrame(tick);}
 function fallback(message:string) {
   if(disposed||failed)return;failed=true;ready=false;stop();trigger?.kill();observer?.disconnect();resizeObserver?.disconnect();scene?.dispose();scene=undefined;
-  footerMotion.dispose();
+  footerMotion.dispose();viewportReference.dispose();
   stage.classList.remove('is-ready');stage.classList.add('is-fallback');journey.classList.remove('is-enhanced');journey.classList.add('is-static');pauseButton.hidden=true;stillViews.hidden=true;status.textContent=message;
   updateCopy(0);document.body.classList.remove('at-details');
   if(location.hash==='#application-details'||progress>.16)document.querySelector('#application-details')?.scrollIntoView();
@@ -140,7 +142,7 @@ function changeStill(event:Event) {
 function visibility(){if(document.hidden){stop();footerMotion.settle();}else if(ready&&configuredReduced!==reduced.matches)configureMotion();else resume();}
 function destroy() {
   if(disposed)return;disposed=true;stop();trigger?.kill();observer?.disconnect();resizeObserver?.disconnect();scene?.dispose();
-  footerMotion.dispose();
+  footerMotion.dispose();viewportReference.dispose();
   reduced.removeEventListener('change',configureMotion);document.removeEventListener('visibilitychange',visibility);pauseButton.removeEventListener('click',togglePause);stillViews.removeEventListener('click',changeStill);window.removeEventListener('pagehide',onPageHide);window.removeEventListener('pageshow',onPageShow);
 }
 function onPageHide(e:PageTransitionEvent){if(e.persisted){stop();footerMotion.settle();}else destroy();}
@@ -149,7 +151,7 @@ async function init() {
   const timeout=window.setTimeout(()=>fallback('A still moment from the journey. Application details are ready below.'),12000);
   try {
     const {SolarScene}=await import('./scene');if(failed||disposed)return;
-    scene=new SolarScene(host,fallback,()=>{if(!ready)return;updateCopy(scene?.displayedProgress()??progress);if(paused||reduced.matches)scene?.render(0);});
+    scene=new SolarScene(host,fallback,()=>{if(!ready)return;updateCopy(scene?.displayedProgress()??progress);if(paused||reduced.matches)scene?.render(0);},viewportReference.height);
     await scene.prepare();if(failed||disposed){scene.dispose();return;}
     let anchorId=location.hash.slice(1);
     try{anchorId=decodeURIComponent(anchorId);}catch{/* An unknown or malformed fragment is not a rendering failure. */}
@@ -166,7 +168,7 @@ async function init() {
       // Changing a drawing buffer clears it. Repaint before this resize is
       // presented, including while paused; never advance the supplied clock.
       else if(resized&&onscreen&&!document.hidden)scene.render(0);
-    });resizeObserver.observe(host);resizeObserver.observe(journey);resizeObserver.observe(skipLink);for(const panel of panels)resizeObserver.observe(panel);
+    });resizeObserver.observe(host);resizeObserver.observe(viewportReference.element);resizeObserver.observe(journey);resizeObserver.observe(skipLink);for(const panel of panels)resizeObserver.observe(panel);
     pauseButton.addEventListener('click',togglePause);stillViews.addEventListener('click',changeStill);document.addEventListener('visibilitychange',visibility);reduced.addEventListener('change',configureMotion);window.addEventListener('pagehide',onPageHide);window.addEventListener('pageshow',onPageShow);
   } catch(error) {console.error('Experience could not start:',error);fallback('A still moment from the journey. Application details are ready below.');}
   finally {clearTimeout(timeout);}

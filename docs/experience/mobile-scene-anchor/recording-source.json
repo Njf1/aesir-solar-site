@@ -1,0 +1,148 @@
+{
+  "file": "18879.mp4",
+  "sha256": "e745b963804cff8ae826a6c7ec4c027fb4047c552c74e1293f4fe130a0b0e559",
+  "dimensions": [
+    1080,
+    2340
+  ],
+  "durationSeconds": 11.505811,
+  "method": "Bright warm Sun pixels in x340:740/y1000:2000, sampled at 30fps; native screen pixels, not CSS pixels. Cropped review images omit other browser tabs.",
+  "frames": [
+    {
+      "seconds": 2.3,
+      "sunCentreY": 1345.53,
+      "samples": 951
+    },
+    {
+      "seconds": 2.3333,
+      "sunCentreY": 1345.68,
+      "samples": 994
+    },
+    {
+      "seconds": 2.3667,
+      "sunCentreY": 1345.78,
+      "samples": 1080
+    },
+    {
+      "seconds": 2.4,
+      "sunCentreY": 1345.62,
+      "samples": 1188
+    },
+    {
+      "seconds": 2.4333,
+      "sunCentreY": 1345.92,
+      "samples": 1289
+    },
+    {
+      "seconds": 2.4667,
+      "sunCentreY": 1346.08,
+      "samples": 1349
+    },
+    {
+      "seconds": 2.5,
+      "sunCentreY": 1346.02,
+      "samples": 1424
+    },
+    {
+      "seconds": 2.5333,
+      "sunCentreY": 1346.06,
+      "samples": 1487
+    },
+    {
+      "seconds": 2.5667,
+      "sunCentreY": 1346.17,
+      "samples": 1528
+    },
+    {
+      "seconds": 2.6,
+      "sunCentreY": 1346.25,
+      "samples": 1583
+    },
+    {
+      "seconds": 2.6333,
+      "sunCentreY": 1346.4,
+      "samples": 1644
+    },
+    {
+      "seconds": 2.6667,
+      "sunCentreY": 1346.28,
+      "samples": 1725
+    },
+    {
+      "seconds": 2.7,
+      "sunCentreY": 1346.49,
+      "samples": 1780
+    },
+    {
+      "seconds": 2.7333,
+      "sunCentreY": 1346.48,
+      "samples": 1838
+    },
+    {
+      "seconds": 2.7667,
+      "sunCentreY": 1346.58,
+      "samples": 1887
+    },
+    {
+      "seconds": 2.8,
+      "sunCentreY": 1346.59,
+      "samples": 1918
+    },
+    {
+      "seconds": 2.8333,
+      "sunCentreY": 1346.55,
+      "samples": 1926
+    },
+    {
+      "seconds": 2.8667,
+      "sunCentreY": 1591.25,
+      "samples": 2774
+    },
+    {
+      "seconds": 2.9,
+      "sunCentreY": 1591.25,
+      "samples": 2774
+    },
+    {
+      "seconds": 2.9333,
+      "sunCentreY": 1591.25,
+      "samples": 2774
+    },
+    {
+      "seconds": 2.9667,
+      "sunCentreY": 1591.25,
+      "samples": 2774
+    },
+    {
+      "seconds": 3.0,
+      "sunCentreY": 1591.25,
+      "samples": 2774
+    },
+    {
+      "seconds": 3.0333,
+      "sunCentreY": 1591.26,
+      "samples": 2764
+    },
+    {
+      "seconds": 3.0667,
+      "sunCentreY": 1591.26,
+      "samples": 2764
+    },
+    {
+      "seconds": 3.1,
+      "sunCentreY": 1591.26,
+      "samples": 2764
+    },
+    {
+      "seconds": 3.1333,
+      "sunCentreY": 1591.26,
+      "samples": 2764
+    },
+    {
+      "seconds": 3.1667,
+      "sunCentreY": 1591.26,
+      "samples": 2764
+    }
+  ],
+  "maxDownwardStep": 244.70000000000005
+}

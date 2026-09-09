@@ -1,0 +1,79 @@
+
+Running 39 tests using 1 worker
+
+(node:92180) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/helpers/scene-anchor.ts:33:35 › webkit: actual Sun pixels stay anchored at 0.06 when browser bars move (2.0s)
+  ✓   2 tests/browser/helpers/scene-anchor.ts:33:35 › webkit: actual Sun pixels stay anchored at 0.15 when browser bars move (1.6s)
+  ✓   3 tests/browser/helpers/scene-anchor.ts:45:2 › webkit: actual projection stays anchored through every scene and repeated reversal (8.2s)
+  ✓   4 tests/browser/helpers/scene-anchor.ts:62:2 › webkit: browser bars cannot switch framing and rotate the authored camera (1.1s)
+  ✓   5 tests/browser/helpers/scene-anchor.ts:74:2 › webkit: still views anchor and context loss disposes the viewport reference (2.5s)
+(node:92317) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 tests/browser/helpers/scene-anchor.ts:33:35 › chromium: actual Sun pixels stay anchored at 0.06 when browser bars move (2.1s)
+  ✓   7 tests/browser/helpers/scene-anchor.ts:33:35 › chromium: actual Sun pixels stay anchored at 0.15 when browser bars move (1.9s)
+  ✓   8 tests/browser/helpers/scene-anchor.ts:45:2 › chromium: actual projection stays anchored through every scene and repeated reversal (10.1s)
+  ✘   9 tests/browser/helpers/scene-anchor.ts:62:2 › chromium: browser bars cannot switch framing and rotate the authored camera (5.8s)
+(node:92436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 tests/browser/helpers/scene-anchor.ts:74:2 › chromium: still views anchor and context loss disposes the viewport reference (2.8s)
+  ✓  11 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 280×653, small viewport −100px (788ms)
+  ✓  12 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 320×568, small viewport −100px (785ms)
+  ✓  13 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 360×800, small viewport −120px (791ms)
+  ✓  14 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 390×780, small viewport −125px (789ms)
+  ✓  15 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 412×915, small viewport −160px (788ms)
+  ✓  16 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 430×932, small viewport −140px (803ms)
+  ✓  17 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 600×600, small viewport −0px (786ms)
+  ✓  18 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 740×900, small viewport −100px (791ms)
+  ✓  19 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 820×1180, small viewport −120px (798ms)
+  ✓  20 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 667×375, small viewport −60px (773ms)
+  ✓  21 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 844×390, small viewport −70px (793ms)
+  ✓  22 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 1000×500, small viewport −80px (785ms)
+  ✓  23 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 1280×720, small viewport −0px (785ms)
+  ✓  24 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 1600×1000, small viewport −0px (793ms)
+  ✓  25 tests/browser/viewport.spec.ts:39:2 › full canvas with collapsed browser bars at 2560×1080, small viewport −0px (808ms)
+  ✓  26 tests/browser/viewport.spec.ts:45:1 › toolbar expansion/collapse preserves distance, direction and paused pixels (1.9s)
+  ✓  27 tests/browser/viewport.spec.ts:59:36 › chapter text stays anchored through mobile toolbar motion from 655px (655ms)
+  ✓  28 tests/browser/viewport.spec.ts:59:36 › chapter text stays anchored through mobile toolbar motion from 719px (657ms)
+  ✓  29 tests/browser/viewport.spec.ts:72:1 › opening and Sun copy fade reversibly without sliding their title or eyebrow (1.8s)
+  ✓  30 tests/browser/viewport.spec.ts:87:1 › still views retain their copy position as the toolbar retracts (1.9s)
+  ✓  31 tests/browser/viewport.spec.ts:101:1 › no-JavaScript opening text remains anchored above a full-height fallback (373ms)
+  ✓  32 tests/browser/viewport.spec.ts:114:1 › rotation keeps the same chapter while camera projection and canvas resize (2.2s)
+  ✓  33 tests/browser/viewport.spec.ts:123:1 › last frame fills the viewport and hands off without an empty pinned tail (1.4s)
+  ✓  34 tests/browser/viewport.spec.ts:131:1 › reduced motion stills fill the dynamic viewport with no long scroll (1.4s)
+  ✓  35 tests/browser/viewport.spec.ts:138:1 › unavailable WebGL preserves a full-height fallback and immediate application (289ms)
+  ✓  36 tests/browser/viewport.spec.ts:147:1 › no-JavaScript picture fills the current viewport when browser bars retract (308ms)
+  ✓  37 tests/browser/viewport.spec.ts:155:1 › pinch zoom retains canvas coverage without resetting the journey (839ms)
+  ✓  38 tests/browser/viewport.spec.ts:164:1 › rotation after Skip keeps the offer focused and rendering suspended (1.0s)
+  ✓  39 tests/browser/viewport.spec.ts:174:2 › high-density mobile screen › the bounded drawing buffer covers the complete CSS viewport (351ms)
+
+
+  1) tests/browser/helpers/scene-anchor.ts:62:2 › chromium: browser bars cannot switch framing and rotate the authored camera 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 0.235
+    Received: 0
+
+    Expected precision:    3
+    Expected difference: < 0.0005
+    Received difference:   0.235
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      28 | export async function anchorMove(page:Page,p:number){
+      29 |  await page.evaluate(p=>{const j=document.querySelector<HTMLElement>('#journey')!,s=document.querySelector<HTMLElement>('#stage')!;scrollTo(0,p/6.08*(j.offsetHeight-s.offsetHeight));},p);
+    > 30 |  await expect.poll(()=>page.evaluate(()=>(window as any).__experience.snapshot().renderedProgress)).toBeCloseTo(p,3);
+         |                                                                                                     ^
+      31 | }
+      32 | export function sceneAnchorTests(engine:string){
+      33 |  for(const progress of [0.06,.15])test(`${engine}: actual Sun pixels stay anchored at ${progress} when browser bars move`,async({page})=>{
+        at anchorMove (/Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/scene-anchor.ts:30:101)
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/scene-anchor.ts:65:3
+
+    Error Context: test-results/scene-anchor-chromium-brow-c0e7a--rotate-the-authored-camera/error-context.md
+
+  1 failed
+    tests/browser/helpers/scene-anchor.ts:62:2 › chromium: browser bars cannot switch framing and rotate the authored camera 
+  38 passed (1.1m)

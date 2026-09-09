@@ -9,6 +9,7 @@ import {CELL_SWITCH,CELL_EXIT} from './timeline';
 import {siteToCell,siteDirectionToCell} from './panel-layout';
 import {ELECTRICAL_PATHS,ELECTRICAL_ANCHORS} from './electrical-path';
 import { selectQuality } from './quality';
+import {anchorViewport} from './viewport';
 import { surfaceVertex, surfaceFragment, glowVertex, coronaFragment, pulseFragment, prominenceVertex, prominenceFragment, trailVertex, trailFragment, cloudTransitionFragment } from './shaders';
 import { EarthScene } from './earth';
 import {filterSolarFineDetail,stablePulseFragment,linearTrailFragment,configureLinearAdditive} from './render-detail';
@@ -67,6 +68,7 @@ export class SolarScene {
   private progress = 0;
   private width = 0;
   private height = 0;
+  private referenceHeight = 0;
   private shaderOK = true;
   private disposed = false;
   private readonly touchPoints = Math.max(navigator.maxTouchPoints??0,Number(matchMedia('(any-pointer: coarse)').matches));
@@ -83,7 +85,7 @@ export class SolarScene {
   setFrozen(frozen:boolean){this.frozenProgress=frozen?this.renderedProgress:null;}
   private trailHeadError = 0;
 
-  constructor(private host: HTMLElement, private onFailure: (reason: string) => void, private onAssetReady: () => void = () => {}) {
+  constructor(private host: HTMLElement, private onFailure: (reason: string) => void, private onAssetReady: () => void = () => {}, private framingHeight:()=>number=()=>host.clientHeight) {
     this.quality = selectQuality(host.clientWidth, host.clientHeight, devicePixelRatio, navigator.hardwareConcurrency,this.touchPoints);
     this.renderer = new THREE.WebGLRenderer({ alpha: false, antialias: true, powerPreference: 'high-performance' });
     this.renderer.setClearColor(0x050608, 1);
@@ -274,28 +276,30 @@ export class SolarScene {
   }
   setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();if(value>.88&&this.earthStatus==='ready')void this.loadNext('region');if(value>1.37&&this.regionStatus==='ready')void this.loadNext('site');if(value>2.08&&this.siteStatus==='ready')void this.loadNext('cell');if(value>2.83&&this.cellStatus==='ready')void this.loadNext('electrical');if(value>4.04&&this.electricalStatus==='ready')void this.loadNext('business');if(value>4.70&&this.businessStatus==='ready')void this.loadNext('storage');}
   resize() {
-    const width=this.host.clientWidth,height=this.host.clientHeight;
+    const width=this.host.clientWidth,height=this.host.clientHeight,referenceHeight=this.framingHeight();
     const next=selectQuality(width,height,devicePixelRatio,navigator.hardwareConcurrency,this.touchPoints);
-    if(width===this.width&&height===this.height&&next.pixelRatio===this.quality.pixelRatio&&next.tier===this.quality.tier)return false;
-    this.width=width;this.height=height;
+    const bufferChanged=width!==this.width||height!==this.height||next.pixelRatio!==this.quality.pixelRatio;
+    if(!bufferChanged&&referenceHeight===this.referenceHeight&&next.tier===this.quality.tier)return false;
+    this.width=width;this.height=height;this.referenceHeight=referenceHeight;
     if(next.tier!==this.quality.tier) {
       for(const material of this.materials)if(material instanceof THREE.ShaderMaterial && material.defines.DETAIL){material.defines.DETAIL=next.detail;material.needsUpdate=true;}
       const old=this.photosphere.geometry;this.geometries=this.geometries.filter(g=>g!==old);old.dispose();
       this.photosphere.geometry=this.geometry(new THREE.SphereGeometry(10,next.segments,Math.round(next.segments*.65)));
     }
-    this.quality=next;this.renderer.setPixelRatio(next.pixelRatio);this.renderer.setSize(this.width,this.height,false);
-    this.camera.aspect=this.width/Math.max(1,this.height);this.camera.updateProjectionMatrix();
+    this.quality=next;if(bufferChanged){this.renderer.setPixelRatio(next.pixelRatio);this.renderer.setSize(this.width,this.height,false);}
+    anchorViewport(this.camera,this.width,this.height,this.referenceHeight);
     return true;
   }
   render(delta:number) {
     if(this.disposed)return;
     this.ambientTime+=Math.min(delta,.05);
     const p=this.frozenProgress??this.displayedProgress();this.renderedProgress=p;
-    const shot=sampleJourney(p,framingFor(this.width,this.height));this.lastShot=shot;const operation=shot.operation,dusk=operation?.dusk??0;
+    const framing=framingFor(this.width,this.referenceHeight);
+    const shot=sampleJourney(p,framing);this.lastShot=shot;const operation=shot.operation,dusk=operation?.dusk??0;
     const offset=shot.scene==='solar'?[0,0,0]:EARTH_POSITION;
     const ground=shot.scene==='region'||shot.scene==='site'||shot.scene==='cell';this.solar.visible=!ground;this.stars.visible=!ground;
     this.scene.background=shot.scene==='site'?this.sky:shot.scene==='region'?this.sea:this.black;
-    this.scene.environment=shot.scene==='site'||shot.scene==='cell'?this.site?.env??null:null;this.scene.environmentRotation.set(shot.scene==='cell'?-Math.atan2(.156434,.987688):0,0,0);this.sunlight.position.copy(shot.scene==='cell'?this.cellSun:SUN_LOCAL).multiplyScalar(210);this.scene.fog=shot.scene==='site'?this.siteFog:null;this.scene.environmentIntensity=shot.scene==='site'?.48:.34;this.siteFog.density=.0018/(framingFor(this.width,this.height)==='portrait'?2.6:1);
+    this.scene.environment=shot.scene==='site'||shot.scene==='cell'?this.site?.env??null:null;this.scene.environmentRotation.set(shot.scene==='cell'?-Math.atan2(.156434,.987688):0,0,0);this.sunlight.position.copy(shot.scene==='cell'?this.cellSun:SUN_LOCAL).multiplyScalar(210);this.scene.fog=shot.scene==='site'?this.siteFog:null;this.scene.environmentIntensity=shot.scene==='site'?.48:.34;this.siteFog.density=.0018/(framing==='portrait'?2.6:1);
     this.sky.set('#bfd1dd').lerp(this.duskSky,dusk);this.siteFog.color.copy(this.sky);this.sunlight.intensity=2.5*(1-.82*dusk);this.hemisphere.intensity=.85*(1-.56*dusk);this.sunlight.position.y*=1-.48*dusk;if(shot.scene==='site')this.scene.environmentIntensity=.48*(1-.57*dusk);
     this.solar.position.set(-offset[0],-offset[1],-offset[2]);
     this.camera.position.set(...shot.camera);this.camera.up.set(...shot.up);this.camera.lookAt(...shot.target);this.camera.updateMatrixWorld();
@@ -379,6 +383,7 @@ export class SolarScene {
   displayedProgress(){if(this.frozenProgress!==null)return this.frozenProgress;let p=this.progress;if(this.earthStatus!=='ready'&&p>.635)p=.635;if(this.regionStatus!=='ready'&&p>1.235)p=1.235;if(this.siteStatus!=='ready'&&p>1.49)p=1.49;if(this.cellStatus!=='ready'&&p>2.34)p=2.34;if(this.electricalStatus!=='ready'&&p>3.05)p=3.05;if(this.businessStatus!=='ready'&&p>4.18)p=4.18;if(this.storageStatus!=='ready'&&p>4.96)p=4.96;return p;}
   snapshot() {
     return {renderedProgress:this.renderedProgress,frozenProgress:this.frozenProgress,shadowCasterKey:this.shadowOperationKey,shadowInvalidations:this.shadowInvalidations,businessStatus:this.businessStatus,storageStatus:this.storageStatus,business:this.business?.snapshot(),storage:this.storage?.stats,readiness:this.readiness,progress:this.progress,ambientTime:this.ambientTime,quality:this.quality,shot:this.lastShot,
+      view:{referenceHeight:this.referenceHeight,projection:this.camera.projectionMatrix.toArray(),worldInverse:this.camera.matrixWorldInverse.toArray()},
       dcFlow:this.dcFlow?{visible:this.dcFlow.mesh.visible,travel:this.dcFlow.mesh.material.uniforms.uTravel.value,opacity:this.dcFlow.mesh.material.uniforms.uOpacity.value}:null,trailHeadError:this.trailHeadError,cellStatus:this.cellStatus,electricalStatus:this.electricalStatus,cell:this.cell?.snapshot(),cellOverlayBytes:this.cellModuleFlow?.geometryBytes??0,electrical:this.electrical?.stats,electricalOverlayBytes:(this.dcFlow?.geometryBytes??0)+(this.acFlow?.geometryBytes??0),regionStatus:this.regionStatus,siteStatus:this.siteStatus,region:this.region?.snapshot(),site:this.site?.snapshot(),earthStatus:this.earthStatus,earth:this.earth?.snapshot(),
       drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,shadowEstimatedBytes:this.sunlight.shadow.map?this.sunlight.shadow.map.width*this.sunlight.shadow.map.height*8:0,
       geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures};

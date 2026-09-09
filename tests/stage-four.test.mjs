@@ -12,6 +12,7 @@ import {createElectricalScene} from '../src/experience/electrical.ts';
 import {ELECTRICAL_PATHS,ELECTRICAL_ANCHORS,ELECTRICAL_PORTS} from '../src/experience/electrical-path.ts';
 import {EnergyFlow} from '../src/experience/energy-flow.ts';
 import {CELL_BUDGET,ELECTRICAL_BUDGET} from '../src/experience/budgets.ts';
+import {anchorViewport} from '../src/experience/viewport.ts';
 const modes=['landscape','portrait','short'],v=a=>new T.Vector3(...a);
 const near=(a,b,e,label)=>assert.ok(a.distanceTo(b)<=e,`${label}: ${a.distanceTo(b)} > ${e}`);
 const approx=(a,b,e,label)=>assert.ok(Math.abs(a-b)<=e,`${label}: ${a} != ${b}`);
@@ -214,10 +215,10 @@ function records(group){group.updateMatrixWorld(true);const result=[];group.trav
  });return result;}
 
 function segmentHitsRect(a,b,rx,ry){let lo=0,hi=1;for(const [coord,limit] of [['x',rx],['y',ry]]){const start=a[coord],d=b[coord]-start;if(Math.abs(d)<1e-14){if(start< -limit||start>limit)return false;}else{let n=(-limit-start)/d,f=(limit-start)/d;if(n>f)[n,f]=[f,n];lo=Math.max(lo,n);hi=Math.min(hi,f);if(lo>hi)return false;}}return true;}
-function planeCuts(record,item,camera,near){const pos=record.geometry.attributes.position,idx=record.geometry.index;const transform=new T.Matrix4().multiplyMatrices(camera.matrixWorldInverse,item.matrix),vertices=[new T.Vector3(),new T.Vector3(),new T.Vector3()],rx=near*tan*camera.aspect,ry=near*tan;let cuts=0;
+function planeCuts(record,item,camera,near){const pos=record.geometry.attributes.position,idx=record.geometry.index;const transform=new T.Matrix4().multiplyMatrices(camera.matrixWorldInverse,item.matrix),vertices=[new T.Vector3(),new T.Vector3(),new T.Vector3()];let cuts=0;
  for(let f=0;f<(idx?idx.count:pos.count);f+=3){for(let j=0;j<3;j++)vertices[j].fromBufferAttribute(pos,idx?idx.getX(f+j):f+j).applyMatrix4(transform);const intersections=[];
   for(let j=0;j<3;j++){const a=vertices[j],b=vertices[(j+1)%3],da=a.z+near,db=b.z+near;if(da*db<0)intersections.push(a.clone().lerp(b,da/(da-db)));else if(Math.abs(da)<1e-10)intersections.push(a.clone());}
-  if(intersections.length>=2&&segmentHitsRect(intersections[0],intersections[1],rx,ry))cuts++;
+  if(intersections.length>=2&&segmentHitsRect(intersections[0].applyMatrix4(camera.projectionMatrix),intersections[1].applyMatrix4(camera.projectionMatrix),1,1))cuts++;
  }return cuts;}
 
 
@@ -237,23 +238,24 @@ function actualSolidContains(record,item,worldPoint){
  }return votes>=2;
 }
 
-test('new near planes do not cut visible cell/campus solids in five framings',()=>withCanvas(()=>{
+test('near planes clear actual cell/campus solids including expanded mobile frustums',()=>withCanvas(()=>{
  const campus=createCommercialSite('desktop'),electrical=createElectricalScene('desktop'),cell=CellScene.prepare(false);
  try{
   electrical.setProgress(1);const exterior=[...records(campus.group),...records(electrical.group)];
-  for(const [mode,aspect]of[['landscape',1.6],['portrait',390/844],['short',2],['portrait',740/900],['landscape',1280/720]]){
+  for(const [mode,aspect,view]of[['landscape',1.6],['portrait',390/844],['short',2],['portrait',740/900],['landscape',1280/720],['portrait',390/719,[390,844,719]],['short',844/330,[844,390,330]]]){
    const camera=new T.PerspectiveCamera(43,aspect,.1,2600);let lastSection=-1,interior=[];
    for(let i=0;i<=915;i++){
     const p=STAGE_THREE_END+(JOURNEY_END-STAGE_THREE_END)*i/915,s=sampleJourney(p,mode),state=conversionState(p),from=v(s.camera),aim=v(s.target);
     const nearPlane=s.scene==='cell'?T.MathUtils.clamp(from.distanceTo(aim)*.002,.012,.08):T.MathUtils.clamp(from.distanceTo(v(s.pulse))*.01,p>STAGE_THREE_END?.0015:.05,3);
     camera.near=nearPlane;camera.position.copy(from);camera.up.set(...s.up);camera.lookAt(aim);camera.updateMatrixWorld();camera.updateProjectionMatrix();
-    const clipRadius=nearPlane*Math.sqrt(1+tan*tan*(1+aspect*aspect));
+    if(view)anchorViewport(camera,...view);
+    const clipRadius=Math.max(...[-1,1].flatMap(x=>[-1,1].map(y=>new T.Vector3(x,y,-1).applyMatrix4(camera.projectionMatrixInverse).length())));
     if(s.scene==='cell'&&state.section!==lastSection){cell.render(state,0);interior=records(cell.group);lastSection=state.section;}
     for(const record of s.scene==='cell'?interior:exterior){if(record.broad.distanceToPoint(from)>clipRadius)continue;for(const item of record.items){
      if(item.box.distanceToPoint(from)>clipRadius)continue;
      assert.ok(!actualSolidContains(record,item,from),`${mode} ${p}: camera inside ${record.name} (transparent=${record.transparent}; transition=${state.transition})`);
      assert.equal(planeCuts(record,item,camera,nearPlane),0,`${mode} ${p}: near plane cuts ${record.name} (transparent=${record.transparent}; transition=${state.transition})`);
-     const nearCentre=new T.Vector3(0,0,-nearPlane).applyMatrix4(camera.matrixWorld);
+     const nearCentre=new T.Vector3(0,0,-1).unproject(camera);
      assert.ok(!actualSolidContains(record,item,nearCentre),`${mode} ${p}: near plane enclosed by ${record.name}`);
     }}
     if(s.pulseOpacity>.01&&state.transition<.98){const head=v(s.pulse).project(camera);assert.ok(Math.abs(head.x)<1&&Math.abs(head.y)<1&&head.z> -1&&head.z<1,`${mode} ${p}: incident photon left the frame`);}

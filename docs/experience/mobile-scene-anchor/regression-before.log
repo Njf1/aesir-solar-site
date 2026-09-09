@@ -1,0 +1,94 @@
+
+Running 4 tests using 1 worker
+
+(node:89131) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/browser/helpers/scene-anchor.ts:30:35 › webkit: actual Sun pixels stay anchored at 0.06 when browser bars move (1.8s)
+(node:89153) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/browser/helpers/scene-anchor.ts:30:35 › webkit: actual Sun pixels stay anchored at 0.15 when browser bars move (1.1s)
+(node:89178) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/browser/helpers/scene-anchor.ts:30:35 › chromium: actual Sun pixels stay anchored at 0.06 when browser bars move (1.6s)
+(node:89391) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/browser/helpers/scene-anchor.ts:30:35 › chromium: actual Sun pixels stay anchored at 0.15 when browser bars move (1.3s)
+
+
+  1) tests/browser/helpers/scene-anchor.ts:30:35 › webkit: actual Sun pixels stay anchored at 0.06 when browser bars move 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 1.5
+    Received:   88.41103063677173
+
+      34 |    await page.setViewportSize({width:390,height});await expect.poll(()=>page.locator('canvas').evaluate(e=>e.clientHeight)).toBe(height);
+      35 |    await page.waitForTimeout(80);const after=await sunPixels(page);
+    > 36 |    expect(Math.abs(after.y-before.y)).toBeLessThan(1.5);expect(Math.abs(after.x-before.x)).toBeLessThan(1.5);
+         |                                       ^
+      37 |    expect(Math.abs(after.height-before.height)).toBeLessThanOrEqual(2);
+      38 |   }
+      39 |   await page.evaluate(()=>(window as any).__experience.resetTiming());await page.waitForTimeout(120);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/scene-anchor.ts:36:39
+
+    Error Context: test-results/scene-anchor-webkit-webkit-38c01-0-06-when-browser-bars-move/error-context.md
+
+  2) tests/browser/helpers/scene-anchor.ts:30:35 › webkit: actual Sun pixels stay anchored at 0.15 when browser bars move 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 1.5
+    Received:   90.73842514330522
+
+      34 |    await page.setViewportSize({width:390,height});await expect.poll(()=>page.locator('canvas').evaluate(e=>e.clientHeight)).toBe(height);
+      35 |    await page.waitForTimeout(80);const after=await sunPixels(page);
+    > 36 |    expect(Math.abs(after.y-before.y)).toBeLessThan(1.5);expect(Math.abs(after.x-before.x)).toBeLessThan(1.5);
+         |                                       ^
+      37 |    expect(Math.abs(after.height-before.height)).toBeLessThanOrEqual(2);
+      38 |   }
+      39 |   await page.evaluate(()=>(window as any).__experience.resetTiming());await page.waitForTimeout(120);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/scene-anchor.ts:36:39
+
+    Error Context: test-results/scene-anchor-webkit-webkit-1180b-0-15-when-browser-bars-move/error-context.md
+
+  3) tests/browser/helpers/scene-anchor.ts:30:35 › chromium: actual Sun pixels stay anchored at 0.06 when browser bars move 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 1.5
+    Received:   88.40735573844813
+
+      34 |    await page.setViewportSize({width:390,height});await expect.poll(()=>page.locator('canvas').evaluate(e=>e.clientHeight)).toBe(height);
+      35 |    await page.waitForTimeout(80);const after=await sunPixels(page);
+    > 36 |    expect(Math.abs(after.y-before.y)).toBeLessThan(1.5);expect(Math.abs(after.x-before.x)).toBeLessThan(1.5);
+         |                                       ^
+      37 |    expect(Math.abs(after.height-before.height)).toBeLessThanOrEqual(2);
+      38 |   }
+      39 |   await page.evaluate(()=>(window as any).__experience.resetTiming());await page.waitForTimeout(120);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/scene-anchor.ts:36:39
+
+    Error Context: test-results/scene-anchor-chromium-actu-01ff8-0-06-when-browser-bars-move/error-context.md
+
+  4) tests/browser/helpers/scene-anchor.ts:30:35 › chromium: actual Sun pixels stay anchored at 0.15 when browser bars move 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 1.5
+    Received:   90.72083391177432
+
+      34 |    await page.setViewportSize({width:390,height});await expect.poll(()=>page.locator('canvas').evaluate(e=>e.clientHeight)).toBe(height);
+      35 |    await page.waitForTimeout(80);const after=await sunPixels(page);
+    > 36 |    expect(Math.abs(after.y-before.y)).toBeLessThan(1.5);expect(Math.abs(after.x-before.x)).toBeLessThan(1.5);
+         |                                       ^
+      37 |    expect(Math.abs(after.height-before.height)).toBeLessThanOrEqual(2);
+      38 |   }
+      39 |   await page.evaluate(()=>(window as any).__experience.resetTiming());await page.waitForTimeout(120);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/helpers/scene-anchor.ts:36:39
+
+    Error Context: test-results/scene-anchor-chromium-actu-8773a-0-15-when-browser-bars-move/error-context.md
+
+  4 failed
+    tests/browser/helpers/scene-anchor.ts:30:35 › webkit: actual Sun pixels stay anchored at 0.06 when browser bars move 
+    tests/browser/helpers/scene-anchor.ts:30:35 › webkit: actual Sun pixels stay anchored at 0.15 when browser bars move 
+    tests/browser/helpers/scene-anchor.ts:30:35 › chromium: actual Sun pixels stay anchored at 0.06 when browser bars move 
+    tests/browser/helpers/scene-anchor.ts:30:35 › chromium: actual Sun pixels stay anchored at 0.15 when browser bars move 
