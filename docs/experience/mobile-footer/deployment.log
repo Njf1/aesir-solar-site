@@ -1,0 +1,34 @@
+Vercel CLI 58.0.0 (Node.js 24.15.0)
+Fetching deployment "aesirsolar.co.uk" in aesir
+> Fetched deployment "aesir-solar-cq64tf3jw-aesir.vercel.app" in aesir [1s]
+
+General
+
+id		dpl_81gi11VcBix1ZE9achoBt8pdEJnA
+name	aesir-solar
+target	production
+status	● Ready
+url		https://aesir-solar-cq64tf3jw-aesir.vercel.app
+created	Wed Sep 09 2026 18:13:42 GMT+0100 (Western European Summer Time) [2m ago]
+
+
+Aliases
+
+╶ https://aesirsolar.co.uk
+    ╶ https://aesir-solar.vercel.app
+    ╶ https://www.aesirsolar.co.uk
+    ╶ https://aesir-solar-aesir.vercel.app
+    ╶ https://aesir-solar-git-main-aesir.vercel.app
+    
+
+Builds
+
+┌ .        [0ms]
+    ├── λ api/application-status (7KB) [iad1]
+    ├── λ api/checkout (7.48KB) [iad1]
+    ├── λ api/operations (305.23KB) [iad1]
+    ├── λ api/stripe-webhook (304.28KB) [iad1]
+    ├── λ api/tigo (4.63KB) [iad1]
+    └── 3 output items hidden
+    
+

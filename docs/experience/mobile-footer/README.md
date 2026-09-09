@@ -38,4 +38,6 @@ Reproduce: `FOOTER_PHASE=after node scripts/capture-mobile-footer.mjs`, optional
 
 ## Release
 
-Implementation is prepared for the existing GitHub/Vercel production route under the user's standing approval. Live verification and the final recoverable commit will be recorded here after deployment. Stripe, Supabase, mail, DNS and the separate Fasthosts retirement decision are unchanged.
+Implementation **1fa15e8** is pushed to GitHub main and the working branch, with `experience-mobile-footer-fixed` retained. Production **dpl_81gi11VcBix1ZE9achoBt8pdEJnA** (`aesir-solar-cq64tf3jw-aesir.vercel.app`) reports **Ready**, with `https://aesirsolar.co.uk/` and the existing www/Vercel aliases. [Deployment record](deployment.log). The public HTML serves the exact tested `experience-DPCqTsMQ.js` and `experience-cbuE7ehO.css` assets.
+
+[Live measurements](production/measurements.json) and [live recording](production/toolbar-and-scroll.webm) confirm the opening glide (largest sampled step **13.05px**, 25 distinct rounded positions), Sun glide (**13.43px**), **0px canvas gap** and **0px control overrun**, with no page errors. These live checks also block API/provider/submission traffic. Evidence-only commits after 1fa15e8 do not change the implementation. Stripe, Supabase, mail, DNS and the separate Fasthosts retirement decision are unchanged; the original site checkout remains untouched.
