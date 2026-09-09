@@ -67,7 +67,7 @@ function tick(now:number) {
 function resume(){if(canAnimate()&&!frame)frame=requestAnimationFrame(tick);}
 function fallback(message:string) {
   if(disposed||failed)return;failed=true;ready=false;stop();trigger?.kill();observer?.disconnect();resizeObserver?.disconnect();scene?.dispose();scene=undefined;
-  stage.classList.remove('is-ready');journey.classList.remove('is-enhanced');journey.classList.add('is-static');pauseButton.hidden=true;stillViews.hidden=true;status.textContent=message;
+  stage.classList.remove('is-ready');stage.classList.add('is-fallback');journey.classList.remove('is-enhanced');journey.classList.add('is-static');pauseButton.hidden=true;stillViews.hidden=true;status.textContent=message;
   updateCopy(0);document.body.classList.remove('at-details');
   if(location.hash==='#application-details'||progress>.16)document.querySelector('#application-details')?.scrollIntoView();
 }

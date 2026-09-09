@@ -1,0 +1,35 @@
+{
+  "baseline": "f84af020761c269f54d9affc642fb9d87131f688",
+  "sourceSHA256": {
+    "src/experience/main.ts": "4b1cb109861b6a2d275a40f96dbe04035ef44cd6c4ab2f5071f97990b9ae9f9d",
+    "src/experience/style.css": "30ba2469956ed900429401b2a751e4c452da44312c882e597b6812e8aa519d8e",
+    "experience.html": "e79c2a8feecc9e74013a1748008729a16f07e56ca4e173fd56fa2d714580d51a",
+    "index.html": "e79c2a8feecc9e74013a1748008729a16f07e56ca4e173fd56fa2d714580d51a",
+    "app.js": "ef8723cca3f1807915212a41290924547f56e04898227dc52e3c91322acf6bda",
+    "apply.html": "cb9160095dd87e5d391a0c6347f768c9adde15d50311281ae8b13bf21f86f75a",
+    "api/checkout.js": "801c8476c8db76ca0dd8b95a82b08452d34cee364f50ca8186cc2e938c51e24e",
+    "package.json": "1f87b35bf9f03577f9ab991afb503b68306a5ac6746459b8dc85357cfeb50225",
+    "package-lock.json": "f79ac81d85a85d9c3630a65ee987fdec0d46dbe9b532324b98d21b915907f12f"
+  },
+  "nodePassed": 82,
+  "typecheck": "passed",
+  "build": "passed",
+  "browser": {
+    "passed": 126,
+    "fullSuite": true,
+    "duration": "4.5 minutes",
+    "newStartupChecks": 8
+  },
+  "unchangedContracts": [
+    "app.js",
+    "apply.html",
+    "api/*",
+    "package.json",
+    "package-lock.json"
+  ],
+  "delivery": {
+    "javaScriptGzip": 254773,
+    "homeCSSGzip": 8099,
+    "mediaBytes": 1844085
+  }
+}

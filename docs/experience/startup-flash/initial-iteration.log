@@ -1,0 +1,47 @@
+
+Running 8 tests using 1 worker
+
+(node:18002) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 1280×720 (1.9s)
+  ✓  2 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 1600×1000 (1.3s)
+  ✓  3 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 390×844 (1.3s)
+  ✓  4 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 740×900 (1.3s)
+  ✓  5 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 1000×500 (1.3s)
+  ✓  6 tests/browser/startup.spec.ts:50:1 › failed renderer reveals the deliberate still only after failure (254ms)
+  ✘  7 tests/browser/startup.spec.ts:58:1 › no JavaScript keeps the composed still and immediate application (5.2s)
+(node:18544) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  8 tests/browser/startup.spec.ts:67:1 › reload and returning from the application preserve the distant opening (660ms)
+
+
+  1) tests/browser/startup.spec.ts:58:1 › no JavaScript keeps the composed still and immediate application 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.scene-fallback img')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('.scene-fallback img') with timeout 5000ms
+      - waiting for locator('.scene-fallback img')
+        14 × locator resolved to <img alt="" width="1600" height="1000" src="/experience-assets/experience-poster-2apZrVuk.webp"/>
+           - unexpected value "hidden"
+
+
+      59 |  const page=await browser.newPage({javaScriptEnabled:false,viewport:{width:390,height:844}});
+      60 |  await page.goto('http://127.0.0.1:4173/');
+    > 61 |  await expect(page.locator('.scene-fallback img')).toBeVisible();
+         |                                                    ^
+      62 |  await expect(page.locator('header .apply-link')).toHaveAttribute('href','/apply.html');
+      63 |  await page.locator('.skip-link').click();await expect(page.locator('#application-details')).toBeInViewport();
+      64 |  await page.close();
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/startup.spec.ts:61:52
+
+    Error Context: test-results/startup-no-JavaScript-keep-bc8f4-l-and-immediate-application/error-context.md
+
+  1 failed
+    tests/browser/startup.spec.ts:58:1 › no JavaScript keeps the composed still and immediate application 
+  7 passed (14.7s)

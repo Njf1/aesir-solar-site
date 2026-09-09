@@ -1,5 +1,7 @@
 # Aesir Solar — current experience
 
+Latest focused update: [homepage startup flash repair](startup-flash/README.md), based on clean `f84af02`. The close-up fallback no longer appears before the distant opening; the accepted film and application contracts are preserved.
+
 The current work is the [launch refinement](launch-refinement/README.md), extending reviewed `331ebc8` / `experience-stage-seven-delivered` on `experience/launch-refinement`. It refines the packing line, battery camera, facade closure and cladding junction, and shortens the homepage while preserving detailed information on supporting routes.
 
 The [current route/content manifest](launch-refinement/route-content-manifest.md) and [complete vision register](launch-refinement/vision-register.md) describe source ownership and remaining evidence. The original `/Users/nick/Projects/Aesir Solar/site` checkout stays untouched. Local preview: http://127.0.0.1:4173/.
