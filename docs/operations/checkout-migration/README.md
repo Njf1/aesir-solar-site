@@ -4,6 +4,8 @@ Inspected **9 September 2026**, including authorized Fasthosts/WordPress/SSH acc
 
 Latest: [authenticated inspection, private recovery and direct Tyl preparation](authenticated-inspection.md). User explicitly prefers the direct Tyl route without renewing AG. Direct code exists, but the Vercel payment configuration is empty.
 
+**Latest decision:** user clarified the plugin-free work was Premier's Commerce Hub implementation and wants that approach for Solar. [Gateway confirmation and code comparison](commerce-hub-assessment.md) records the findings, reuse requirements and the remaining merchant-identity/API access question. Gateway login is now working; the old Solar-saved store has Premier callback defaults.
+
 ## What is broken
 
 The new Vercel application still deliberately falls back to the old WordPress cart. Vercel has no payment environment variables configured. The actual `aesirsolar.co.uk` domain continues to serve the older WordPress site on Fasthosts. A visual reskin of the Vercel application did not replace the real-domain checkout.
@@ -40,9 +42,9 @@ The old page is the merchant's WooCommerce billing page **before** Tyl. It is no
 
 Fasthosts, WordPress admin and temporary SSH/SFTP access are working. Existing merchant configuration was found securely; no need to send its secrets in chat. The old site and database now have private recovery archives, with structural checks recorded in [recovery-manifest.json](recovery-manifest.json).
 
-**Fiserv gateway sign-in remains pending.** The user has signed into the Tyl sales portal, which shows Premier Composites stores. Its own Virtual Terminal link opens a separate gateway login; the store number saved on Aesir is prefilled there. Confirm the intended merchant/store, direct hosted-payment configuration, account-supported result verification, return/notification settings, hosted-page branding and separate sandbox access. Do not enable production payments merely by copying the recovered live credentials into Vercel.
+**Gateway inspection is complete; the intended Solar merchant and API access remain unconfirmed.** The signed-in gateway matches the old Solar store configuration but has Premier callback defaults; the Tyl sales portal lists Premier stores. The Fiserv developer portal is a separate login for Commerce Hub API credentials. The user has been asked which registered business will sell the Solar service. See the [current assessment](commerce-hub-assessment.md). Do not reuse Premier's merchant configuration or install recovered live secrets into Vercel by assumption.
 
-A new local protocol helper is prepared and tested but not wired into handlers. It does not implement durable intake, atomic settlement or an Aesir work queue. Full details and limits are in [authenticated-inspection.md](authenticated-inspection.md).
+A Classic Connect protocol helper is prepared and tested but not wired into handlers; it is not the selected Commerce Hub implementation. It does not implement durable intake, atomic settlement or an Aesir work queue. Full details and limits are in [authenticated-inspection.md](authenticated-inspection.md).
 
 ## Remaining acceptance and cutover
 

@@ -1,5 +1,7 @@
 # Authenticated hosting and Tyl inspection
 
+**Follow-up:** [Commerce Hub assessment](commerce-hub-assessment.md) supersedes the pending gateway-login status below and records the user's clarified integration preference.
+
 9 September 2026. User authorized Fasthosts access and clarified that the intended solution is a direct Tyl connection without renewing the paid AG gateway plugin.
 
 ## Diagnosis
