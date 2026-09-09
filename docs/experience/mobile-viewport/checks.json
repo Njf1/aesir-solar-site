@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-09-09T07:50:12.956705+00:00",
+  "baseline": "b1ded613319913e4229c63261e22301607bc281b",
+  "typecheck": "passed",
+  "build": "passed",
+  "node": {
+    "passed": 82
+  },
+  "browser": {
+    "passed": 150,
+    "fullSuite": true,
+    "newViewportChecks": 24,
+    "durationMinutes": 4.8
+  },
+  "sourceSHA256": {
+    "src/experience/main.ts": "459be4895c7ddd25e621427eb7b368f57538a7f88d0b3ba4d0e6e1a55314059b",
+    "src/experience/scene.ts": "a7e0460c36fecc8a2c1b73cf7e3c9828d7dd931ab22abbf252b9299fcb3df137",
+    "src/experience/style.css": "0b0cf952f7acfb804a0720cd72e7841da9c4478c53115f954b40c654656eb276",
+    "tests/browser/viewport.spec.ts": "97ffb2d56028a21795e7c4fdc6e3128d9e45e8456b54a02098241d2a94b2cbf0",
+    "experience.html": "e79c2a8feecc9e74013a1748008729a16f07e56ca4e173fd56fa2d714580d51a",
+    "apply.html": "cb9160095dd87e5d391a0c6347f768c9adde15d50311281ae8b13bf21f86f75a",
+    "app.js": "ef8723cca3f1807915212a41290924547f56e04898227dc52e3c91322acf6bda",
+    "package.json": "1f87b35bf9f03577f9ab991afb503b68306a5ac6746459b8dc85357cfeb50225",
+    "package-lock.json": "f79ac81d85a85d9c3630a65ee987fdec0d46dbe9b532324b98d21b915907f12f"
+  },
+  "delivery": {
+    "javascriptGzipBytes": 255039,
+    "homeCSSGzipBytes": 8172,
+    "mediaBytes": 1844085
+  },
+  "beforeGapCSSPixels": [
+    125,
+    160
+  ],
+  "afterGapCSSPixels": [
+    0,
+    0
+  ],
+  "physicalPhoneRetested": false
+}

@@ -1,5 +1,7 @@
 # Aesir Solar — current experience
 
+Latest viewport correction: [full-height mobile rendering](mobile-viewport/README.md), from clean `b1ded61`. The stage follows the current browser viewport while travel remains stable through browser-bar changes; rotation, Pause/stills and application focus are covered.
+
 Latest focused update: [homepage startup flash repair](startup-flash/README.md), based on clean `f84af02`. The close-up fallback no longer appears before the distant opening; the accepted film and application contracts are preserved.
 
 The current work is the [launch refinement](launch-refinement/README.md), extending reviewed `331ebc8` / `experience-stage-seven-delivered` on `experience/launch-refinement`. It refines the packing line, battery camera, facade closure and cladding junction, and shortens the homepage while preserving detailed information on supporting routes.

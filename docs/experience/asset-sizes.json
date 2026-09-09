@@ -1,12 +1,6 @@
 {
-  "measuredAt": "2026-09-09T02:28:27.937Z",
+  "measuredAt": "2026-09-09T07:38:39.111Z",
   "files": [
-    {
-      "file": "business-HrGW6gsz.js",
-      "bytes": 23584,
-      "gzip": 9639,
-      "sha256": "f0e330c3069de65a9ea968f80339b7ac3dc827285c50cf32d937c3f5d7f13e3a"
-    },
     {
       "file": "business-journey-ClVbJR9_.js",
       "bytes": 7662,
@@ -14,10 +8,16 @@
       "sha256": "30d6b39e0e671d952c3f7cd862bf60a871a32a753bd3ce0ff134706d455c1ad6"
     },
     {
-      "file": "cell-BKKkCy1P.js",
+      "file": "business-rGWZODHQ.js",
+      "bytes": 23584,
+      "gzip": 9640,
+      "sha256": "cb6ba320a32c59ac749a203644489c07777cb1a1a84eb07092d35b9a3cd92eb1"
+    },
+    {
+      "file": "cell-Obhgq-rH.js",
       "bytes": 14515,
       "gzip": 5362,
-      "sha256": "1164cfd4e1f216555543bb7657139ccceeb38cedcd1a38b51e5c33579ed01a95"
+      "sha256": "dfa8e4a1386297ed46336d8ebbdbc20303060362b8e2b3bcbce707bfa84685c1"
     },
     {
       "file": "earth-clouds-1024-BKjMs3Vz.webp",
@@ -56,10 +56,10 @@
       "sha256": "26dd4f90f981685bf59b32b268bf8d537c9f7efb9fd198468eaffa0216cbaa89"
     },
     {
-      "file": "energy-flow-DaHjuyji.js",
+      "file": "energy-flow-C8VUhYuQ.js",
       "bytes": 1809,
-      "gzip": 930,
-      "sha256": "bc86113607468df31475cbe8e16bbba9b3a03d5a2d318431ce725f44d0fa8cb0"
+      "gzip": 932,
+      "sha256": "d58db1decd4cdc8331e0eff66482abc4b8597bd58673df51f093e443d8b23309"
     },
     {
       "file": "equipment-detail-BZaWaqFV.js",
@@ -68,16 +68,16 @@
       "sha256": "3270764f7d897b0ab8f9c7a6ba647b70b1350c35179cad92480fcaef944e0d13"
     },
     {
-      "file": "experience-CoraZ-Gd.js",
-      "bytes": 131458,
-      "gzip": 50868,
-      "sha256": "62c03b4b077760e3d5695e5f29b1469c1d583da6bca1ea2ddb7d1c5c0cfd1b72"
+      "file": "experience-BNBbCY1n.js",
+      "bytes": 132067,
+      "gzip": 51096,
+      "sha256": "a4146f258cd23aacd6125716df4c52dd5e2ce607622d0c54bd68d0ca9f48a0e7"
     },
     {
-      "file": "experience-D_L5LKse.css",
-      "bytes": 36822,
-      "gzip": 8099,
-      "sha256": "a2451923430e87641ea7792a485e1cb89f00902068582486e3328cb63f9dcadc"
+      "file": "experience-DhKxWiIL.css",
+      "bytes": 36981,
+      "gzip": 8172,
+      "sha256": "9574d4669e082b6990e0a12bee39ca2db98e4d00f666b52dcd04898c8dd701af"
     },
     {
       "file": "experience-poster-2apZrVuk.webp",
@@ -104,10 +104,10 @@
       "sha256": "056a55021f87c23028eb53b073192e042a92ffda706ae01dcd73021e2d17b42d"
     },
     {
-      "file": "region-D3uW9dtA.js",
+      "file": "region-B4RWGcUc.js",
       "bytes": 5001,
-      "gzip": 2002,
-      "sha256": "104b42d7f70179f3da5a2de96304bd314dea94bd559f927a541fbf228acfef91"
+      "gzip": 2004,
+      "sha256": "b58357e57b73501c993bde2dbe1ac3a9878902fa04bb465875dad864d56e674e"
     },
     {
       "file": "region-land-FEWFx3vP.json",
@@ -116,16 +116,16 @@
       "sha256": "6433ed75a89c58fccd98000625e17202cff001ec347e240d9cd5e93ec7a72dbf"
     },
     {
-      "file": "scene-LLtcSVyT.js",
-      "bytes": 386728,
-      "gzip": 96152,
-      "sha256": "743ddc403c1d95ba60379636b2448202d3e7ae5fee768c00ce4b74128e075de2"
+      "file": "scene-CU6_GsCG.js",
+      "bytes": 386839,
+      "gzip": 96184,
+      "sha256": "15b8a6eabdfcd89d3f9a201b1b9a864491b66abd3bb9a2d45ec1f88ffe5b71cb"
     },
     {
-      "file": "site-BnqzNcsU.js",
+      "file": "site-CwsdmFXS.js",
       "bytes": 24476,
-      "gzip": 10327,
-      "sha256": "b92d18dbefe8baefcba116ceda1b69e06bc447a90d8ac173c9531c0d7bdc2cb6"
+      "gzip": 10328,
+      "sha256": "c4dce6704967b76f3273a0a790c40fce881a1b184b342f505dd1f4b7516e579e"
     },
     {
       "file": "site-layout-B7SX7tAm.js",
@@ -164,20 +164,20 @@
       "sha256": "96279e98d460543644d454590a67a4ac18660bee1cb208f3be0a3c02319df13e"
     }
   ],
-  "newJavaScriptGzipBytes": 254773,
+  "newJavaScriptGzipBytes": 255039,
   "budgetBytes": 750000,
   "newMediaBytes": 1844085,
   "mediaBudgetBytes": 2000000,
   "incremental": {
-    "businessCodeGzipBytes": 9639,
+    "businessCodeGzipBytes": 9640,
     "storageCodeGzipBytes": 4648,
     "cellCodeGzipBytes": 5362,
     "electricalCodeGzipBytes": 4380,
-    "flowCodeGzipBytes": 930,
+    "flowCodeGzipBytes": 932,
     "regionRawBytes": 503245,
     "regionGzipBytes": 173539,
-    "regionCodeGzipBytes": 2002,
-    "siteCodeGzipBytes": 10327,
+    "regionCodeGzipBytes": 2004,
+    "siteCodeGzipBytes": 10328,
     "budgets": {
       "businessCodeGzip": 12000,
       "storageCodeGzip": 10000,

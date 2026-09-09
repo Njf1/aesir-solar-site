@@ -1,0 +1,30 @@
+
+Running 23 tests using 1 worker
+
+(node:13389) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 280×653, small viewport −100px (874ms)
+  ✓   2 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 320×568, small viewport −100px (803ms)
+  ✓   3 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 360×800, small viewport −120px (718ms)
+  ✓   4 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 390×780, small viewport −125px (805ms)
+  ✓   5 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 412×915, small viewport −160px (849ms)
+  ✓   6 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 430×932, small viewport −140px (843ms)
+  ✓   7 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 600×600, small viewport −0px (801ms)
+  ✓   8 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 740×900, small viewport −100px (802ms)
+  ✓   9 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 820×1180, small viewport −120px (809ms)
+  ✓  10 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 667×375, small viewport −60px (838ms)
+  ✓  11 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 844×390, small viewport −70px (818ms)
+  ✓  12 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 1000×500, small viewport −80px (838ms)
+  ✓  13 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 1280×720, small viewport −0px (819ms)
+  ✓  14 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 1600×1000, small viewport −0px (705ms)
+  ✓  15 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 2560×1080, small viewport −0px (692ms)
+  ✓  16 tests/browser/viewport.spec.ts:44:1 › toolbar expansion/collapse preserves distance, direction and paused pixels (1.2s)
+  ✓  17 tests/browser/viewport.spec.ts:58:1 › rotation keeps the same chapter while camera projection and canvas resize (2.0s)
+  ✓  18 tests/browser/viewport.spec.ts:67:1 › last frame fills the viewport and hands off without an empty pinned tail (1.3s)
+  ✓  19 tests/browser/viewport.spec.ts:75:1 › reduced motion stills fill the dynamic viewport with no long scroll (1.3s)
+  ✓  20 tests/browser/viewport.spec.ts:82:1 › unavailable WebGL preserves a full-height fallback and immediate application (238ms)
+  ✓  21 tests/browser/viewport.spec.ts:91:1 › no-JavaScript picture fills the current viewport when browser bars retract (302ms)
+  ✓  22 tests/browser/viewport.spec.ts:99:1 › pinch zoom retains canvas coverage without resetting the journey (805ms)
+  ✓  23 tests/browser/viewport.spec.ts:108:1 › rotation after Skip keeps the offer focused and rendering suspended (953ms)
+
+  23 passed (20.9s)

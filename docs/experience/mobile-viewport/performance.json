@@ -1,0 +1,1868 @@
+{
+  "recordedAt": "2026-09-09T07:46:44.251Z",
+  "hardware": {
+    "model": "Mac16,13",
+    "cpu": "Apple M4",
+    "cores": 10,
+    "memoryGiB": 16,
+    "platform": "darwin",
+    "release": "25.6.0",
+    "arch": "arm64",
+    "browser": "151.0.7922.34",
+    "node": "v24.15.0"
+  },
+  "delivery": {
+    "javascriptGzip": 255039,
+    "javascriptDelta": 266,
+    "media": 1844085,
+    "mediaDelta": 0,
+    "cssGzip": 15335,
+    "cssGzipDelta": 73,
+    "documentBytes": 17744,
+    "documentGzip": 5225,
+    "pass": true
+  },
+  "views": [
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "requestedDpr": 3,
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "scenes": [
+        {
+          "label": "Sun",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.699999999999818,
+          "p99": 17.700000000000273,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 10,
+            "triangles": 11802,
+            "geometries": 21,
+            "textures": 2,
+            "ambientTime": 5.048900000000002,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {},
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": null
+          }
+        },
+        {
+          "label": "Earth",
+          "frames": 239,
+          "p50": 16.699999999999818,
+          "p95": 17.600000000000364,
+          "p99": 17.700000000000728,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 8,
+            "triangles": 31370,
+            "geometries": 26,
+            "textures": 2,
+            "ambientTime": 9.349000000000014,
+            "onscreen": true,
+            "shadowEstimatedBytes": 0,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              }
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": null
+          }
+        },
+        {
+          "label": "Panel",
+          "frames": 239,
+          "p50": 16.700000000000728,
+          "p95": 17.600000000000364,
+          "p99": 17.700000000000728,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 37,
+            "triangles": 91446,
+            "geometries": 38,
+            "textures": 8,
+            "ambientTime": 13.765699999999962,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 0,
+                "absorption": 0,
+                "extraction": 0,
+                "incident": 0
+              }
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": null
+          }
+        },
+        {
+          "label": "Cell",
+          "frames": 239,
+          "p50": 16.69999999999891,
+          "p95": 17.700000000000728,
+          "p99": 17.700000000000728,
+          "max": 17.80000000000291,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 19,
+            "triangles": 3960,
+            "geometries": 46,
+            "textures": 8,
+            "ambientTime": 18.066499999999905,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 0.5702851626479662,
+                "extraction": 0,
+                "incident": 0.42971483735203375
+              }
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": null
+          }
+        },
+        {
+          "label": "Inverter",
+          "frames": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.700000000000728,
+          "p99": 17.700000000000728,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 56,
+            "triangles": 99449,
+            "geometries": 62,
+            "textures": 8,
+            "ambientTime": 22.383099999999864,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": true,
+              "travel": 1,
+              "opacity": 0.8
+            }
+          }
+        },
+        {
+          "label": "Business",
+          "frames": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.599999999998545,
+          "p99": 17.700000000000728,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 64,
+            "triangles": 104534,
+            "geometries": 70,
+            "textures": 8,
+            "ambientTime": 26.815599999999808,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 0.783096158288658
+              }
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "label": "Storage",
+          "frames": 239,
+          "p50": 16.69999999999709,
+          "p95": 17.599999999998545,
+          "p99": 17.700000000000728,
+          "max": 17.700000000000728,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 64,
+            "triangles": 106132,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 31.132999999999775,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "label": "Brand",
+          "frames": 240,
+          "p50": 16.69999999999709,
+          "p95": 17.600000000002183,
+          "p99": 17.700000000004366,
+          "max": 17.700000000004366,
+          "over33": 0,
+          "state": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 96,
+            "triangles": 112152,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 35.43299999999998,
+            "onscreen": true,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        }
+      ],
+      "editorial": [
+        {
+          "id": "application-details",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 96,
+            "triangles": 112152,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 35.466399999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "id": "solar-benefits",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 96,
+            "triangles": 112152,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 35.466399999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "id": "recorded-generation",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 96,
+            "triangles": 112152,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 35.466399999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "id": "application-process",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 96,
+            "triangles": 112152,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 35.466399999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "id": "application-faqs",
+          "onscreen": false,
+          "frozen": true,
+          "renderFrameSamples": 0,
+          "resources": {
+            "quality": {
+              "tier": "mobile",
+              "width": 390,
+              "height": 844,
+              "pixelRatio": 1.25,
+              "detail": 4,
+              "segments": 80
+            },
+            "drawCalls": 96,
+            "triangles": 112152,
+            "geometries": 79,
+            "textures": 8,
+            "ambientTime": 35.466399999999986,
+            "onscreen": false,
+            "shadowEstimatedBytes": 8388608,
+            "readiness": {
+              "region": {
+                "requestedAt": 5213.900000035763,
+                "status": "ready",
+                "totalMs": 63.89999997615814
+              },
+              "site": {
+                "requestedAt": 9496.5,
+                "status": "ready",
+                "totalMs": 91
+              },
+              "cell": {
+                "requestedAt": 9587.5,
+                "status": "ready",
+                "totalMs": 80.5
+              },
+              "electrical": {
+                "requestedAt": 18229.600000023842,
+                "status": "ready",
+                "totalMs": 33.80000001192093
+              },
+              "business": {
+                "requestedAt": 22563.100000023842,
+                "status": "ready",
+                "importAndBuildMs": 21.30000001192093,
+                "compileMs": 47.69999998807907,
+                "totalMs": 69
+              },
+              "storage": {
+                "requestedAt": 26995.600000023842,
+                "status": "ready",
+                "importAndBuildMs": 22.80000001192093,
+                "compileMs": 22.19999998807907,
+                "totalMs": 45
+              }
+            },
+            "site": {
+              "drawCalls": 41,
+              "triangles": 91332,
+              "instances": 8074,
+              "instancedMeshes": 38,
+              "panelCount": 879,
+              "panelAreaM2": 2270.678508,
+              "arrayCoverage": 0.591322528125,
+              "textureBytes": 524288,
+              "textureBytesWithMipmaps": 699051,
+              "geometryBytes": 534728,
+              "extraTextureBytes": 1048576,
+              "environmentEstimatedBytes": 2359296
+            },
+            "cell": {
+              "variant": "mobile",
+              "geometryBytes": 37524,
+              "triangles": 3802,
+              "drawCalls": 18,
+              "baseDrawCalls": 18,
+              "instances": 156,
+              "textureBytes": 0,
+              "textureBytesWithMipmaps": 0,
+              "selectedCell": {
+                "row": 11,
+                "col": 3,
+                "width": 8.475,
+                "length": 4.318750000000001
+              },
+              "absorptionPoint": [
+                -0.9,
+                0,
+                0
+              ],
+              "frontCollection": [
+                0,
+                0.09,
+                -2.4593750000000005
+              ],
+              "rearCollection": [
+                4.1175,
+                -0.62,
+                1.7706875000000004
+              ],
+              "junction": [
+                -4.387499999999999,
+                -3.1,
+                -11.465625000000014
+              ],
+              "state": {
+                "section": 1,
+                "absorption": 1,
+                "extraction": 1,
+                "incident": 0
+              }
+            },
+            "electrical": {
+              "drawCalls": 15,
+              "triangles": 6110,
+              "geometryBytes": 110640,
+              "textureBytes": 0,
+              "instances": 267
+            },
+            "business": {
+              "drawCalls": 24,
+              "triangles": 9508,
+              "geometryBytes": 75640,
+              "instances": 600,
+              "textureBytes": 0,
+              "pointLights": 2,
+              "shadowLights": 0,
+              "state": {
+                "lighting": 1,
+                "equipment": 1,
+                "screen": 1
+              }
+            },
+            "storage": {
+              "drawCalls": 16,
+              "triangles": 6404,
+              "geometryBytes": 62936,
+              "textureBytes": 0,
+              "instances": 239
+            },
+            "earth": {
+              "variant": "mobile",
+              "decodedImageBytes": 10485760,
+              "textureBytesWithMipmaps": 13981013
+            },
+            "dcFlow": {
+              "visible": false,
+              "travel": 1,
+              "opacity": 0
+            }
+          }
+        }
+      ],
+      "openingObservedReadyMs": 132,
+      "openingTransfer": {
+        "requests": 12,
+        "encodedBodyBytes": 871054,
+        "transferBytes": 874654,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 17744,
+            "transferBytes": 18044
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-BNBbCY1n.js",
+            "encodedBodyBytes": 132067,
+            "transferBytes": 132367
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-DhKxWiIL.css",
+            "encodedBodyBytes": 36981,
+            "transferBytes": 37281
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+            "encodedBodyBytes": 60052,
+            "transferBytes": 60352
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/suitability-DNA50b1D.js",
+            "encodedBodyBytes": 2819,
+            "transferBytes": 3119
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-D3aJHFM9.js",
+            "encodedBodyBytes": 223317,
+            "transferBytes": 223617
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BjpeBAMY.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-ClVbJR9_.js",
+            "encodedBodyBytes": 7662,
+            "transferBytes": 7962
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-B7SX7tAm.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-D80oS81R.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-CU6_GsCG.js",
+            "encodedBodyBytes": 386839,
+            "transferBytes": 387139
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          }
+        ]
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "completeTransfer": {
+        "requests": 23,
+        "encodedBodyBytes": 1711235,
+        "transferBytes": 1718135,
+        "requestsByURL": [
+          {
+            "url": "http://127.0.0.1:4173/experience?inspect=1",
+            "encodedBodyBytes": 17744,
+            "transferBytes": 18044
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-BNBbCY1n.js",
+            "encodedBodyBytes": 132067,
+            "transferBytes": 132367
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-DhKxWiIL.css",
+            "encodedBodyBytes": 36981,
+            "transferBytes": 37281
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+            "encodedBodyBytes": 60052,
+            "transferBytes": 60352
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/suitability-DNA50b1D.js",
+            "encodedBodyBytes": 2819,
+            "transferBytes": 3119
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/three.core-D3aJHFM9.js",
+            "encodedBodyBytes": 223317,
+            "transferBytes": 223617
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/panel-layout-BjpeBAMY.js",
+            "encodedBodyBytes": 1242,
+            "transferBytes": 1542
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-journey-ClVbJR9_.js",
+            "encodedBodyBytes": 7662,
+            "transferBytes": 7962
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-layout-B7SX7tAm.js",
+            "encodedBodyBytes": 132,
+            "transferBytes": 432
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical-path-D80oS81R.js",
+            "encodedBodyBytes": 1867,
+            "transferBytes": 2167
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/scene-CU6_GsCG.js",
+            "encodedBodyBytes": 386839,
+            "transferBytes": 387139
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/favicon-NywgcjmD.svg",
+            "encodedBodyBytes": 332,
+            "transferBytes": 632
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-day-2048-DtZ8Fp4V.webp",
+            "encodedBodyBytes": 137856,
+            "transferBytes": 138156
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/earth-clouds-1024-BKjMs3Vz.webp",
+            "encodedBodyBytes": 101690,
+            "transferBytes": 101990
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-B4RWGcUc.js",
+            "encodedBodyBytes": 5001,
+            "transferBytes": 5301
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/region-land-FEWFx3vP.json",
+            "encodedBodyBytes": 503245,
+            "transferBytes": 503545
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/site-CwsdmFXS.js",
+            "encodedBodyBytes": 24476,
+            "transferBytes": 24776
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/energy-flow-C8VUhYuQ.js",
+            "encodedBodyBytes": 1809,
+            "transferBytes": 2109
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/cell-Obhgq-rH.js",
+            "encodedBodyBytes": 14515,
+            "transferBytes": 14815
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/electrical--TSiIwwa.js",
+            "encodedBodyBytes": 9940,
+            "transferBytes": 10240
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/equipment-detail-BZaWaqFV.js",
+            "encodedBodyBytes": 7595,
+            "transferBytes": 7895
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/business-rGWZODHQ.js",
+            "encodedBodyBytes": 23584,
+            "transferBytes": 23884
+          },
+          {
+            "url": "http://127.0.0.1:4173/experience-assets/storage-Dq_7qxqf.js",
+            "encodedBodyBytes": 10470,
+            "transferBytes": 10770
+          }
+        ]
+      },
+      "reversal": {
+        "geometries": [
+          79,
+          79
+        ],
+        "textures": [
+          8,
+          8
+        ],
+        "requests": [
+          23,
+          23
+        ],
+        "singleCanvas": true
+      }
+    }
+  ]
+}

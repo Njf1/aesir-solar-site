@@ -273,8 +273,10 @@ export class SolarScene {
   }
   setProgress(value:number){this.progress=value;if(value>.16)this.prefetchEarth();if(value>.88&&this.earthStatus==='ready')void this.loadNext('region');if(value>1.37&&this.regionStatus==='ready')void this.loadNext('site');if(value>2.08&&this.siteStatus==='ready')void this.loadNext('cell');if(value>2.83&&this.cellStatus==='ready')void this.loadNext('electrical');if(value>4.04&&this.electricalStatus==='ready')void this.loadNext('business');if(value>4.70&&this.businessStatus==='ready')void this.loadNext('storage');}
   resize() {
-    this.width=this.host.clientWidth;this.height=this.host.clientHeight;
-    const next=selectQuality(this.width,this.height,devicePixelRatio,navigator.hardwareConcurrency);
+    const width=this.host.clientWidth,height=this.host.clientHeight;
+    const next=selectQuality(width,height,devicePixelRatio,navigator.hardwareConcurrency);
+    if(width===this.width&&height===this.height&&next.pixelRatio===this.quality.pixelRatio&&next.tier===this.quality.tier)return false;
+    this.width=width;this.height=height;
     if(next.tier!==this.quality.tier) {
       for(const material of this.materials)if(material instanceof THREE.ShaderMaterial && material.defines.DETAIL){material.defines.DETAIL=next.detail;material.needsUpdate=true;}
       const old=this.photosphere.geometry;this.geometries=this.geometries.filter(g=>g!==old);old.dispose();
@@ -282,6 +284,7 @@ export class SolarScene {
     }
     this.quality=next;this.renderer.setPixelRatio(next.pixelRatio);this.renderer.setSize(this.width,this.height,false);
     this.camera.aspect=this.width/Math.max(1,this.height);this.camera.updateProjectionMatrix();
+    return true;
   }
   render(delta:number) {
     if(this.disposed)return;

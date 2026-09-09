@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const journey=document.querySelector<HTMLElement>('#journey')!;
 const stage=document.querySelector<HTMLElement>('#stage')!;
 const host=document.querySelector<HTMLElement>('#canvas-host')!;
+const applicationDetails=document.querySelector<HTMLElement>('#application-details')!;
 const pauseButton=document.querySelector<HTMLButtonElement>('#pause-motion')!;
 const stillViews=document.querySelector<HTMLElement>('#still-views')!;
 const status=document.querySelector<HTMLElement>('#fallback-status')!;
@@ -16,15 +17,16 @@ const panels=Array.from(document.querySelectorAll<HTMLElement>('[data-copy]'));
 const note=document.querySelector<HTMLElement>('.journey-note')!;
 const processNote=document.querySelector<HTMLElement>('#process-note')!;
 const scrollLabel=document.querySelector<HTMLElement>('#scroll-label')!;
-journey.style.setProperty('--journey-height',`${(1+SCROLL_VIEWPORTS_PER_UNIT*JOURNEY_END)*100}svh`);
+journey.style.setProperty('--journey-travel',String(SCROLL_VIEWPORTS_PER_UNIT*JOURNEY_END*100));
 journey.dataset.duration=String(JOURNEY_END);
 const chapterLabel=document.querySelector<HTMLElement>('#chapter-label')!;
 document.querySelector('#chapter-count')!.textContent=String(CHAPTERS.length);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let scene:import('./scene').SolarScene|undefined;
 let trigger:ScrollTrigger|undefined,observer:IntersectionObserver|undefined,resizeObserver:ResizeObserver|undefined;
-let paused=false,onscreen=true,failed=false,disposed=false,ready=false;
+let paused=false,onscreen=true,detailsVisible=false,failed=false,disposed=false,ready=false;
 let progress=0,frame=0,lastTime=0,lastMeasure=0;
+let measuredTravel=0,restoringViewport=false;
 let stillProgress=.285;
 let configuredReduced:boolean|undefined;
 const timings:number[]=[];
@@ -72,9 +74,26 @@ function fallback(message:string) {
   if(location.hash==='#application-details'||progress>.16)document.querySelector('#application-details')?.scrollIntoView();
 }
 function onProgress(value:number) {
+  if(restoringViewport)return;
+  // ScrollTrigger can refresh before ResizeObserver on a rotation. Do not let
+  // that temporary new distance overwrite the position we are about to restore.
+  if(ready&&trigger&&!reduced.matches&&Math.abs(journeyTravel()-measuredTravel)>=1)return;
   if(failed||disposed)return;if(ready&&configuredReduced!==reduced.matches){configureMotion();return;}progress=Math.max(0,Math.min(JOURNEY_END,value));
   if(paused||reduced.matches)return;
   scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);resume();
+}
+function journeyTravel(){return Math.max(1,journey.offsetHeight-stage.offsetHeight);}
+function reconcileTravel() {
+  if(!trigger||reduced.matches)return;
+  const next=journeyTravel();if(Math.abs(next-measuredTravel)<1)return;
+  // Browser-bar motion leaves the small viewport/travel unchanged. A genuine
+  // resize or rotation remeasures it, preserving the visitor's place in the film.
+  const keepPosition=onscreen&&scrollY>=trigger.start-1&&scrollY<=trigger.start+measuredTravel+1;
+  const keepDetails=detailsVisible&&document.activeElement===applicationDetails;
+  const held=progress;measuredTravel=next;restoringViewport=true;
+  try{trigger.refresh();if(keepDetails)applicationDetails.scrollIntoView();else if(keepPosition)window.scrollTo(0,trigger.start+held/JOURNEY_END*next);trigger.update();}
+  finally{restoringViewport=false;}
+  onProgress(keepPosition?held:trigger.progress*JOURNEY_END);
 }
 function configureMotion() {
   if(failed||disposed)return;configuredReduced=reduced.matches;trigger?.kill();stop();scene?.setFrozen(false);
@@ -84,7 +103,10 @@ function configureMotion() {
     status.textContent='Reduced motion: still views. Application details are below.';
   } else {
     journey.classList.add('is-enhanced');journey.classList.remove('is-static');pauseButton.hidden=false;stillViews.hidden=true;status.textContent='';scrollLabel.textContent='SCROLL TO FOLLOW THE LIGHT';
-    trigger=ScrollTrigger.create({trigger:journey,start:'top top',end:'bottom bottom',onUpdate:self=>onProgress(self.progress*JOURNEY_END),onRefresh:self=>onProgress(self.progress*JOURNEY_END)});
+    // Measure the sticky travel itself. ScrollTrigger's viewport may use 100vh
+    // (the large viewport), which differs from the visible stage under mobile UI.
+    measuredTravel=journeyTravel();
+    trigger=ScrollTrigger.create({trigger:journey,start:'top top',end:()=>`+=${journeyTravel()}`,onUpdate:self=>onProgress(self.progress*JOURNEY_END),onRefresh:self=>onProgress(self.progress*JOURNEY_END)});
     progress=trigger.progress*JOURNEY_END;scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);scene?.render(0);
     // Still-view navigation temporarily releases the freeze. Returning to the
     // scrolling mode must reinstate it before delayed readiness can change a
@@ -121,8 +143,17 @@ async function init() {
     const anchor=document.getElementById(anchorId);
     const contentAnchor=anchor&&!journey.contains(anchor)?anchor:undefined;ready=true;configureMotion();stage.classList.add('is-ready');
     if(contentAnchor)contentAnchor.scrollIntoView();
-    observer=new IntersectionObserver(entries=>{onscreen=entries[0].isIntersecting;document.body.classList.toggle('at-details',!onscreen);if(!onscreen)stop();else resume();},{threshold:.01,rootMargin:'-110px 0px 0px 0px'});observer.observe(stage);
-    resizeObserver=new ResizeObserver(()=>{if(!scene||failed)return;frameLayout();scene.resize();if(configuredReduced!==reduced.matches)configureMotion();else if(paused||reduced.matches)scene.render(0);});resizeObserver.observe(host);for(const panel of panels)resizeObserver.observe(panel);
+    observer=new IntersectionObserver(entries=>{for(const entry of entries){
+      if(entry.target===applicationDetails){detailsVisible=entry.isIntersecting;continue;}
+      onscreen=entry.isIntersecting;document.body.classList.toggle('at-details',!onscreen);if(!onscreen)stop();else resume();
+    }},{threshold:.01,rootMargin:'-110px 0px 0px 0px'});observer.observe(stage);observer.observe(applicationDetails);
+    resizeObserver=new ResizeObserver(()=>{
+      if(!scene||failed)return;frameLayout();const resized=scene.resize();reconcileTravel();
+      if(configuredReduced!==reduced.matches)configureMotion();
+      // Changing a drawing buffer clears it. Repaint before this resize is
+      // presented, including while paused; never advance the supplied clock.
+      else if(resized&&onscreen&&!document.hidden)scene.render(0);
+    });resizeObserver.observe(host);resizeObserver.observe(journey);for(const panel of panels)resizeObserver.observe(panel);
     pauseButton.addEventListener('click',togglePause);stillViews.addEventListener('click',changeStill);document.addEventListener('visibilitychange',visibility);reduced.addEventListener('change',configureMotion);window.addEventListener('pagehide',onPageHide);window.addEventListener('pageshow',onPageShow);
   } catch(error) {console.error('Experience could not start:',error);fallback('A still moment from the journey. Application details are ready below.');}
   finally {clearTimeout(timeout);}

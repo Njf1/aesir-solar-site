@@ -1,0 +1,26 @@
+{
+  "before": {
+    "time": 0.06670000000000002,
+    "p": 0.31489170889197793,
+    "quality": {
+      "tier": "mobile",
+      "width": 390,
+      "height": 655,
+      "pixelRatio": 1.25,
+      "detail": 4,
+      "segments": 80
+    }
+  },
+  "after": {
+    "time": 0.06670000000000002,
+    "p": 0.31489170889197793,
+    "quality": {
+      "tier": "mobile",
+      "width": 390,
+      "height": 780,
+      "pixelRatio": 1.25,
+      "detail": 4,
+      "segments": 80
+    }
+  }
+}
