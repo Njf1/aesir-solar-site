@@ -3,6 +3,7 @@
 **Released 9 September 2026:** [aesirsolar.co.uk](https://aesirsolar.co.uk/) serves the new site. The user approved Production credentials, £300 Stripe checkout, application alerts and the root/www domain move. Mail DNS and the original WordPress recovery records were preserved.
 
 - **[Current release and operator handover](release-2026-09-09.md)** — what is live, how to handle paid applications, verification and practical limits.
+- **[Fasthosts hosting retirement](fasthosts-retirement.md)** — website moved; the bundled hello mailbox must move before WordPress/package deletion.
 - [Current route manifest](route-manifest.md) — new and legacy destinations, truthful historical returns and retired WordPress presentation.
 - [Implementation and test history](stripe-implementation.md) — durable intake, genuine Stripe sandbox evidence, one work item, recovery and alerts. Earlier pending-release statements describe their dated phase; the current handover supersedes them.
 - [Public route inventory](public-route-inventory.json), [private recovery manifest](recovery-manifest.json) and [Supabase provisioning record](supabase-provisioning.json).
