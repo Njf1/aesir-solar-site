@@ -1,5 +1,7 @@
 # Aesir Solar — current experience
 
+Latest visual correction: [stable mobile title and chapter copy](mobile-copy/README.md). Browser-bar changes no longer shift the headings inside the page; fades stay in place while the canvas retains full dynamic height.
+
 **Current live release:** [aesirsolar.co.uk](https://aesirsolar.co.uk/) now serves this experience with durable Stripe intake, verified payments, private work items and paid-application alerts. See the [release/operator handover](../operations/checkout-migration/release-2026-09-09.md). The frontend-only statements below describe earlier cinematic checkpoints.
 
 Latest controls update: [consistent mobile Skip and discreet image credits](mobile-controls/README.md), from clean `af1a425`. Transparent Skip, vector action arrows and measured copy clearance preserve text enlargement; full NASA attribution now has a native linked destination.

@@ -1,0 +1,10 @@
+{
+  "path": "/Users/nick/Downloads/18875.mp4",
+  "sha256": "3f38b0d1970523e4f4f3c4b41a18b0fbf42e80423475c88ca97af669e4043d03",
+  "bytes": 20907062,
+  "durationSeconds": 18.567056,
+  "width": 1080,
+  "height": 2340,
+  "fps": 60,
+  "analysis": "Read-only local video review; quarter-second samples around 12\u201317 seconds show browser controls returning/retracting followed by copy repositioning. Original recording kept outside repository because browser UI shows other open tabs."
+}

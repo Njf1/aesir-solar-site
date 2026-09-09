@@ -35,7 +35,7 @@ function updateCopy(p:number) {
   const opacity=journeyCopy(p,reduced.matches);
   for(let i=0;i<panels.length;i++) {
     panels[i].style.opacity=String(opacity[i]);panels[i].style.visibility=opacity[i]>.005?'visible':'hidden';
-    panels[i].style.transform=`translateY(${(1-opacity[i])*10}px)`;
+    // Fade in place: the camera carries the motion, including on mobile reversal.
     panels[i].setAttribute('aria-hidden',String(opacity[i]<.15));panels[i].inert=opacity[i]<.15;
   }
   stage.style.setProperty('--read-shade',String(Math.max(...opacity.slice(5))));stage.style.setProperty('--visible-copy',String(Math.max(...opacity)));

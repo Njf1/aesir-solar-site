@@ -1,4 +1,5 @@
 import {test,expect,type Page} from '@playwright/test';
+import {STILL_VIEWS} from '../../src/experience/timeline';
 test.use({isMobile:true,hasTouch:true,deviceScaleFactor:1});
 test.beforeEach(async({page})=>{
  await page.route('**/*',r=>{const u=new URL(r.request().url());return u.origin==='http://127.0.0.1:4173'&&!u.pathname.startsWith('/api/')?r.continue():r.abort();});
@@ -53,6 +54,61 @@ test('toolbar expansion/collapse preserves distance, direction and paused pixels
  }
  await page.evaluate(()=>(window as any).__experience.resetTiming());await page.waitForTimeout(150);expect((await snap(page)).frameIntervals).toEqual([]);
  await page.locator('#pause-motion').click();await move(page,.295);await fillsViewport(page);
+});
+
+for(const smallHeight of [655,719])test(`chapter text stays anchored through mobile toolbar motion from ${smallHeight}px`,async({page})=>{
+ const cdp=await boot(page,390,smallHeight);
+ const positions=()=>page.locator('[data-copy]').evaluateAll(nodes=>nodes.map(e=>e.getBoundingClientRect().top));
+ const before=await positions();
+ for(const extra of [25,50,75,100,125,100,75,50,25,0]){
+  await page.setViewportSize({width:390,height:smallHeight+extra});
+  await cdp.send('Emulation.setSmallViewportHeightDifferenceOverride',{difference:extra});
+  await fillsViewport(page);
+  const after=await positions();
+  after.forEach((top,i)=>expect(Math.abs(top-before[i])).toBeLessThanOrEqual(1));
+ }
+});
+
+test('opening and Sun copy fade reversibly without sliding their title or eyebrow',async({page})=>{
+ await boot(page,390,844,125);
+ for(const [selector,points] of [['.copy-opening',[.06,.11,.135,.15,.135,.11,.06]],['.copy-sun',[.215,.285,.305,.32,.305,.285,.215]]] as const){
+  const tops:number[][]=[],opacities:number[]=[];
+  for(const p of points){
+   await move(page,p);
+   tops.push(await page.locator(selector).evaluate(e=>[e.querySelector('.eyebrow')!,e.querySelector('h1,h2')!].map(n=>n.getBoundingClientRect().top)));
+   opacities.push(Number(await page.locator(selector).evaluate(e=>getComputedStyle(e).opacity)));
+  }
+  for(const row of tops)row.forEach((top,i)=>expect(Math.abs(top-tops[0][i])).toBeLessThanOrEqual(1));
+  expect(opacities[0]).toBeGreaterThan(.99);expect(opacities[3]).toBeLessThan(.1);
+  expect(opacities.at(-1)).toBeCloseTo(opacities[0],2);
+ }
+});
+
+test('still views retain their copy position as the toolbar retracts',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});const cdp=await boot(page,390,719);
+ for(const name of ['sun','cell','business','aesir'] as const){
+  await page.locator(`[data-still="${name}"]`).click();
+  // A chapter may need its cached owner to become ready before its still/copy is shown.
+  await expect.poll(async()=>(await snap(page)).renderedProgress).toBe(STILL_VIEWS[name]);
+  const visible=()=>page.locator('[data-copy]').evaluateAll(nodes=>nodes.filter(e=>Number(getComputedStyle(e).opacity)>.99).map(e=>e.getBoundingClientRect().top));
+  await expect.poll(visible).toHaveLength(1);const before=await visible();
+  await page.setViewportSize({width:390,height:844});await cdp.send('Emulation.setSmallViewportHeightDifferenceOverride',{difference:125});
+  await fillsViewport(page);expect(await visible()).toEqual(before);
+  await page.setViewportSize({width:390,height:719});await cdp.send('Emulation.setSmallViewportHeightDifferenceOverride',{difference:0});
+ }
+});
+
+test('no-JavaScript opening text remains anchored above a full-height fallback',async({browser})=>{
+ const context=await browser.newContext({javaScriptEnabled:false,isMobile:true,viewport:{width:390,height:719}}),page=await context.newPage();
+ try{
+  await page.route('**/*',r=>new URL(r.request().url()).origin==='http://127.0.0.1:4173'?r.continue():r.abort());
+  await page.goto('http://127.0.0.1:4173/');const cdp=await context.newCDPSession(page);
+  const before=await page.locator('h1').boundingBox();
+  await page.setViewportSize({width:390,height:844});await cdp.send('Emulation.setSmallViewportHeightDifferenceOverride',{difference:125});
+  await expect.poll(()=>page.locator('#stage').evaluate(e=>e.clientHeight)).toBe(844);
+  const after=await page.locator('h1').boundingBox();expect(Math.abs(after!.y-before!.y)).toBeLessThanOrEqual(1);
+  await page.locator('.skip-link').click();await expect(page.locator('#application-details')).toBeInViewport();
+ }finally{await context.close();}
 });
 
 test('rotation keeps the same chapter while camera projection and canvas resize',async({page})=>{

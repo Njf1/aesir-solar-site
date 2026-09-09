@@ -1,0 +1,476 @@
+{
+  "browser": "151.0.7922.34",
+  "origin": "http://127.0.0.1:4173",
+  "method": "Desktop Chromium mobile emulation; toolbar height uses CDP small-viewport override",
+  "errors": [],
+  "rows": [
+    {
+      "name": "bars-open",
+      "height": 719,
+      "copy": {
+        "top": 158.171875,
+        "bottom": 262.890625
+      },
+      "eyebrow": {
+        "top": 158.171875,
+        "bottom": 174.171875
+      },
+      "title": {
+        "top": 192.171875,
+        "bottom": 262.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-744",
+      "height": 744,
+      "copy": {
+        "top": 163.671875,
+        "bottom": 268.390625
+      },
+      "eyebrow": {
+        "top": 163.671875,
+        "bottom": 179.671875
+      },
+      "title": {
+        "top": 197.671875,
+        "bottom": 268.390625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 744
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-769",
+      "height": 769,
+      "copy": {
+        "top": 169.171875,
+        "bottom": 273.890625
+      },
+      "eyebrow": {
+        "top": 169.171875,
+        "bottom": 185.171875
+      },
+      "title": {
+        "top": 203.171875,
+        "bottom": 273.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 769
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-794",
+      "height": 794,
+      "copy": {
+        "top": 174.671875,
+        "bottom": 279.390625
+      },
+      "eyebrow": {
+        "top": 174.671875,
+        "bottom": 190.671875
+      },
+      "title": {
+        "top": 208.671875,
+        "bottom": 279.390625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 794
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-819",
+      "height": 819,
+      "copy": {
+        "top": 180.171875,
+        "bottom": 284.890625
+      },
+      "eyebrow": {
+        "top": 180.171875,
+        "bottom": 196.171875
+      },
+      "title": {
+        "top": 214.171875,
+        "bottom": 284.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 819
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-844",
+      "height": 844,
+      "copy": {
+        "top": 185.671875,
+        "bottom": 290.390625
+      },
+      "eyebrow": {
+        "top": 185.671875,
+        "bottom": 201.671875
+      },
+      "title": {
+        "top": 219.671875,
+        "bottom": 290.390625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 844
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-819-reverse",
+      "height": 819,
+      "copy": {
+        "top": 180.171875,
+        "bottom": 284.890625
+      },
+      "eyebrow": {
+        "top": 180.171875,
+        "bottom": 196.171875
+      },
+      "title": {
+        "top": 214.171875,
+        "bottom": 284.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 819
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-794-reverse",
+      "height": 794,
+      "copy": {
+        "top": 174.671875,
+        "bottom": 279.390625
+      },
+      "eyebrow": {
+        "top": 174.671875,
+        "bottom": 190.671875
+      },
+      "title": {
+        "top": 208.671875,
+        "bottom": 279.390625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 794
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-769-reverse",
+      "height": 769,
+      "copy": {
+        "top": 169.171875,
+        "bottom": 273.890625
+      },
+      "eyebrow": {
+        "top": 169.171875,
+        "bottom": 185.171875
+      },
+      "title": {
+        "top": 203.171875,
+        "bottom": 273.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 769
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-744-reverse",
+      "height": 744,
+      "copy": {
+        "top": 163.671875,
+        "bottom": 268.390625
+      },
+      "eyebrow": {
+        "top": 163.671875,
+        "bottom": 179.671875
+      },
+      "title": {
+        "top": 197.671875,
+        "bottom": 268.390625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 744
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "height-719",
+      "height": 719,
+      "copy": {
+        "top": 158.171875,
+        "bottom": 262.890625
+      },
+      "eyebrow": {
+        "top": 158.171875,
+        "bottom": 174.171875
+      },
+      "title": {
+        "top": 192.171875,
+        "bottom": 262.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "1",
+      "progress": 0
+    },
+    {
+      "name": "progress-0.06",
+      "height": 719,
+      "copy": {
+        "top": 158.171875,
+        "bottom": 262.890625
+      },
+      "eyebrow": {
+        "top": 158.171875,
+        "bottom": 174.171875
+      },
+      "title": {
+        "top": 192.171875,
+        "bottom": 262.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "1",
+      "progress": 0.06010212001143744
+    },
+    {
+      "name": "progress-0.11",
+      "height": 719,
+      "copy": {
+        "top": 158.91561889648438,
+        "bottom": 263.6343688964844
+      },
+      "eyebrow": {
+        "top": 158.91561889648438,
+        "bottom": 174.91561889648438
+      },
+      "title": {
+        "top": 192.91561889648438,
+        "bottom": 263.6343688964844
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "0.925625",
+      "progress": 0.11002164944242475
+    },
+    {
+      "name": "progress-0.135",
+      "height": 719,
+      "copy": {
+        "top": 164.43594360351562,
+        "bottom": 269.1546936035156
+      },
+      "eyebrow": {
+        "top": 164.43594360351562,
+        "bottom": 180.43594360351562
+      },
+      "title": {
+        "top": 198.43594360351562,
+        "bottom": 269.1546936035156
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "0.373592",
+      "progress": 0.13510559209182632
+    },
+    {
+      "name": "progress-0.15",
+      "height": 719,
+      "copy": {
+        "top": 167.43209838867188,
+        "bottom": 272.1508483886719
+      },
+      "eyebrow": {
+        "top": 167.43209838867188,
+        "bottom": 183.43209838867188
+      },
+      "title": {
+        "top": 201.43209838867188,
+        "bottom": 272.1508483886719
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "0.0739777",
+      "progress": 0.15000694416077776
+    },
+    {
+      "name": "progress-0.135-reverse",
+      "height": 719,
+      "copy": {
+        "top": 164.43594360351562,
+        "bottom": 269.1546936035156
+      },
+      "eyebrow": {
+        "top": 164.43594360351562,
+        "bottom": 180.43594360351562
+      },
+      "title": {
+        "top": 198.43594360351562,
+        "bottom": 269.1546936035156
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "0.373592",
+      "progress": 0.13510559209182632
+    },
+    {
+      "name": "progress-0.11-reverse",
+      "height": 719,
+      "copy": {
+        "top": 158.91561889648438,
+        "bottom": 263.6343688964844
+      },
+      "eyebrow": {
+        "top": 158.91561889648438,
+        "bottom": 174.91561889648438
+      },
+      "title": {
+        "top": 192.91561889648438,
+        "bottom": 263.6343688964844
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "0.925625",
+      "progress": 0.11002164944242475
+    },
+    {
+      "name": "progress-0.06-reverse",
+      "height": 719,
+      "copy": {
+        "top": 158.171875,
+        "bottom": 262.890625
+      },
+      "eyebrow": {
+        "top": 158.171875,
+        "bottom": 174.171875
+      },
+      "title": {
+        "top": 192.171875,
+        "bottom": 262.890625
+      },
+      "skip": {
+        "top": 93,
+        "bottom": 137
+      },
+      "canvas": {
+        "top": 0,
+        "bottom": 719
+      },
+      "opacity": "1",
+      "progress": 0.06010212001143744
+    }
+  ]
+}
