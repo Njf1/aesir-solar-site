@@ -19,4 +19,6 @@ Tests ran on the same **Apple M4 MacBook Air,16GB**, Chromium151.0.7922.34 and d
 
 JavaScript: **255,664B gzip** (+9B from the previous fix); CSS **8,426B gzip**, media **1,844,085B**, unchanged. Same single bounded compositor effect; no added rendering loop, geometry, texture, listener or dependency. Original site checkout untouched.
 
-Release verification will be recorded after the existing authorised GitHub/Vercel deployment.
+Implementation **44caca7** and `experience-mobile-footer-slow-fixed` are pushed to GitHub main and the working branch. Vercel production **dpl_D62pCyY4oBeFG2n2dW1w244sCawq** (`aesir-solar-6fsyme4i4-aesir.vercel.app`) is **Ready**, with the existing `aesirsolar.co.uk` aliases. [Deployment record](deployment.log).
+
+The public homepage serves the tested `experience-QOIAgWtc.js` and unchanged `experience-cbuE7ehO.css`. [Live measurements](production/measurements.json) confirm **7.01px** of travel in the first300ms, **1534ms** to within6px of the final position, a largest sampled step of **2.12px**, no canvas gap/control overrun and no page errors. [Live motion](production/toolbar-and-scroll.webm) includes the slower opening/Sun transitions and reversal. Provider calls remained blocked. Later evidence-only commits do not change these assets.
