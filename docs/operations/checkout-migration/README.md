@@ -4,6 +4,8 @@ Inspected **9 September 2026**, including authorized Fasthosts/WordPress/SSH acc
 
 Latest: [authenticated inspection, private recovery and direct Tyl preparation](authenticated-inspection.md). User explicitly prefers the direct Tyl route without renewing AG. Direct code exists, but the Vercel payment configuration is empty.
 
+**Merchant confirmed by the user: Aesir Limited, trading as Aesir Solar.** [Direct Solar client and merchant setup](solar-merchant-setup.md) is the current implementation/access handoff. The existing Tyl account belongs to Premier; Aesir Limited's own account/store approval and credentials are still unconfirmed.
+
 **Latest decision:** user clarified the plugin-free work was Premier's Commerce Hub implementation and wants that approach for Solar. [Gateway confirmation and code comparison](commerce-hub-assessment.md) records the findings, reuse requirements and the remaining merchant-identity/API access question. Gateway login is now working; the old Solar-saved store has Premier callback defaults.
 
 ## What is broken
@@ -42,16 +44,16 @@ The old page is the merchant's WooCommerce billing page **before** Tyl. It is no
 
 Fasthosts, WordPress admin and temporary SSH/SFTP access are working. Existing merchant configuration was found securely; no need to send its secrets in chat. The old site and database now have private recovery archives, with structural checks recorded in [recovery-manifest.json](recovery-manifest.json).
 
-**Gateway inspection is complete; the intended Solar merchant and API access remain unconfirmed.** The signed-in gateway matches the old Solar store configuration but has Premier callback defaults; the Tyl sales portal lists Premier stores. The Fiserv developer portal is a separate login for Commerce Hub API credentials. The user has been asked which registered business will sell the Solar service. See the [current assessment](commerce-hub-assessment.md). Do not reuse Premier's merchant configuration or install recovered live secrets into Vercel by assumption.
+**Gateway inspection is complete; Aesir Limited is the confirmed intended merchant, but its account/API access remains unconfirmed.** The signed-in gateway matches the old Solar store configuration but has Premier callback defaults; the Tyl sales portal lists Premier stores. The Fiserv developer portal is a separate login for Commerce Hub API credentials. The outstanding question is whether Aesir Limited already has a Tyl account. See the [current assessment](commerce-hub-assessment.md). Do not reuse Premier's merchant configuration or install recovered live secrets into Vercel by assumption.
 
-A Classic Connect protocol helper is prepared and tested but not wired into handlers; it is not the selected Commerce Hub implementation. It does not implement durable intake, atomic settlement or an Aesir work queue. Full details and limits are in [authenticated-inspection.md](authenticated-inspection.md).
+The direct Commerce Hub client is now implemented locally and tested; it is not wired into public handlers or durable storage. The earlier Classic Connect helper remains unwired and is not the selected implementation. It does not implement durable intake, atomic settlement or an Aesir work queue. Full details and limits are in [authenticated-inspection.md](authenticated-inspection.md).
 
 ## Remaining acceptance and cutover
 
 1. Private file/database exports are complete and structurally verified. Test restoration in isolation before cutover; preserve historical orders, refunds and any existing applicant records.
 2. Select and implement the durable intake/payment route with all original answers and server-recorded consents. Server controls amount/currency/quantity and application suitability handling. Unknown cases must not become certified eligibility.
-3. Verify signed notifications against the expected stored transaction, including reference, amount, currency and final status; test duplicates, out-of-order notifications, retries, declined/pending/cancelled outcomes and return-before-notification. A browser return/query string is not proof. Create exactly one actionable work item.
-4. Reuse the existing Tyl merchant, style all merchant-owned pages consistently, and apply the supported branding on the Tyl-hosted page. Keep card data on Tyl. Test through the account's documented test environment with no live charges.
+3. Treat notifications as prompts to query the stored checkout directly from Tyl, then verify reference, store, amount, currency and status; test duplicates, out-of-order notifications, retries, declined/pending/cancelled outcomes and return-before-notification. A browser return/query string is not proof. Atomically create exactly one actionable work item.
+4. Use a Tyl merchant/store approved for Aesir Limited, style all merchant-owned pages consistently, and apply the supported branding on the Tyl-hosted page. Keep card data on Tyl. Test through that account's documented test environment with no live charges; do not repurpose Premier's store.
 5. Implement the [route migration manifest](route-manifest.md) on the new real-domain deployment. Establish callback routing before retiring any WooCommerce paths. Preserve email DNS and administrative/transaction access privately.
 6. Verify every route, legacy link, form, policy and payment state; check navigation/Back/responsiveness and complete end-to-end test orders in isolation. Only then perform the authorized public cutover and verify live read-only routes. No real customer order/payment is a test.
 
@@ -68,8 +70,9 @@ Accessed 9 September 2026:
 ## Verification and recovery
 
 - `npm run build`, `npm run typecheck`: passed.
-- `npm test`: **90/90 Node checks** (84 existing plus six new protocol checks); rerun after the authenticated-inspection preparation.
-- Focused application/route browser regression: **18/18** (four new checkout cases plus fourteen existing route/form/access cases). This is **not** a full cinematic-suite rerun.
+- `npm test`: **117/117 Node checks**, including 27 new Commerce Hub/configuration/merchant-identity checks. Rerun after the final client and generated-page changes; all provider cases use local fixtures.
+- Focused application/route browser regression: **18/18**, rerun after these changes (four checkout cases plus fourteen route/form/access cases). This is **not** a full cinematic-suite rerun or provider sandbox proof.
+- New legal-page review: [`merchant-review/report.json`](merchant-review/report.json), ten Chromium/WebKit viewport cases with JavaScript disabled. Terms/footer and privacy show Aesir Limited at all five sizes, with no horizontal overflow, external requests or cinematic downloads. Narrow WebKit and desktop Chromium captures were visually inspected.
 - Additional local visual review: see [`local-browser-review.json`](local-browser-review.json). Chromium and WebKit at 1280×720, 1600×1000, 390×844, 740×900 and 1000×500. All traffic local/mocked; no physical-phone certification.
 - Review hardware: Apple M4 MacBook Air, 16 GB. Chrome for Testing **151.0.7922.34**, Playwright WebKit **26.6**. Ten viewport captures/checks passed. The narrow WebKit and desktop Chromium error/help compositions were also visually inspected; labels, consents, fee and contact remain legible.
 - No scene, camera, renderer, texture, motion-control or supporting layout changes. Cinematic delivery remains **255,082 B JS gzip / 1,844,085 B media**.

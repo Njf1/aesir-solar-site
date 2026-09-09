@@ -43,7 +43,7 @@ This is not a fresh complete Premier test run or live settlement audit. The hist
 
 ## Provider access and remaining decision
 
-Need the registered business that sells the Solar application service: Premier Composites trading as Aesir Solar, or a separate Aesir company. Asked the user to confirm. Do not repurpose the Premier store on assumption.
+The user subsequently confirmed **Aesir Limited** as the legal seller. Its Tyl account/store status is still unknown. Do not repurpose Premier's store. See [the current Solar merchant/client handoff](solar-merchant-setup.md).
 
 Current NatWest guidance says API credentials are requested through the Fiserv developer portal by the main account holder or an authorized contact, using the email on the merchant account. Select the **Checkouts API** for the intended Solar store. Request/confirm separate test and production credentials and supported response schemas. No guaranteed onboarding timescale is inferred.
 

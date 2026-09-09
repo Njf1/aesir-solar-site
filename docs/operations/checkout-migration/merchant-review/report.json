@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-09-09T10:46:30.683Z",
+  "scope": "Terms/footer and privacy identity; desktop viewport emulation, not physical phones. No provider traffic.",
+  "checks": [
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 1280,
+      "height": 720,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 1600,
+      "height": 1000,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 390,
+      "height": 844,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 740,
+      "height": 900,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 1000,
+      "height": 500,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 1280,
+      "height": 720,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 1600,
+      "height": 1000,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 390,
+      "height": 844,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 740,
+      "height": 900,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 1000,
+      "height": 500,
+      "javascript": false,
+      "terms": true,
+      "privacy": true,
+      "horizontalOverflow": false,
+      "cinematicDownloads": 0,
+      "externalRequests": 0
+    }
+  ]
+}

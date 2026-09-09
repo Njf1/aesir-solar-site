@@ -26,9 +26,9 @@ const baseline=file=>execFileSync('git',['show',`${BASE}:${file}`],{cwd:ROOT});
 
 test('untouched provider routes, helpers, input data and pinned dependencies retain exact bytes',async()=>{
  // app.js intentionally removes the old checkout fallback. The new, currently
- // unwired protocol helper has separate cryptographic fixture tests; every old
+ // unwired protocol clients have separate cryptographic fixture tests; every old
  // handler/helper remains byte-protected until its explicit replacement.
- const retained=[...await files('api'),...(await files('lib')).filter(file=>file!=='lib/tyl-protocol.js'),...await files('data'),'package-lock.json'];
+ const retained=[...await files('api'),...(await files('lib')).filter(file=>!['lib/tyl-protocol.js','lib/commerce-hub.js'].includes(file)),...await files('data'),'package-lock.json'];
  assert.equal((await files('api')).length,5,'Do not silently add a new payment/provider route in this migration');
  for(const file of retained)assert.deepEqual(await readFile(path.join(ROOT,file)),baseline(file),file);
  const pkg=JSON.parse(await read('package.json')),old=JSON.parse(baseline('package.json'));assert.deepEqual(pkg.dependencies,old.dependencies);assert.deepEqual(pkg.devDependencies,old.devDependencies);assert.deepEqual(pkg.engines,old.engines);assert.equal(pkg.scripts.build,'python3 build.py && vite build && node scripts/assemble.mjs');
