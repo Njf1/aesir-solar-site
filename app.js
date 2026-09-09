@@ -409,6 +409,11 @@
             note.firstChild.textContent = 'The previous Stripe payment session has expired and cannot be paid. Your entries remain here. You can submit again to open a new payment session. ';
             return;
           }
+          if (r.body && r.body.error === 'checkout_rate_limited') {
+            payFailed();
+            note.firstChild.textContent = 'Too many new payment attempts have been started recently. Your entries remain here. Please wait before trying again, or contact Aesir Solar for help. ';
+            return;
+          }
           if (r.body && r.body.error === 'suitability_review') {
             payFailed();
             note.firstChild.textContent = 'This arrangement needs a suitability review before payment. Your entries remain here. Please contact Aesir Solar with the installation details. ';

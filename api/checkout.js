@@ -1,11 +1,12 @@
-import {configuration,services,identity,validateApplication,digest,POLICY_VERSION,checkMerchant,sessionPayload,sessionMatches,verifyPayment,jsonBody,postOnly,respondError,PaymentError} from '../lib/solar-payments.js';
+import {configuration,services,identity,validateApplication,digest,POLICY_VERSION,checkMerchant,sessionPayload,sessionMatches,verifyPayment,jsonBody,postOnly,respondError,PaymentError,rateIdentity} from '../lib/solar-payments.js';
 export default async function handler(req,res){
  if(!postOnly(req,res))return;
  try{
   const cfg=configuration();if(req.headers.origin!==cfg.origin)throw new PaymentError('invalid_origin',403);
   const body=jsonBody(req),{id,tokenHash}=identity(body),details=validateApplication(body),svc=services(cfg);
   await checkMerchant(svc,cfg);
-  const app=await svc.rpc('solar_prepare',{p_id:id,p_token_hash:tokenHash,p_payload_hash:digest(JSON.stringify(details)),p_details:details,p_policy_version:POLICY_VERSION,p_livemode:cfg.livemode,p_origin:cfg.origin});
+  const rate=cfg.livemode?rateIdentity(req,cfg):null;
+  const app=await svc.rpc(rate?'solar_prepare_limited':'solar_prepare',{p_id:id,p_token_hash:tokenHash,p_payload_hash:digest(JSON.stringify(details)),p_details:details,p_policy_version:POLICY_VERSION,p_livemode:cfg.livemode,p_origin:cfg.origin,...(rate?{p_ip_hash:rate.ip,p_email_hash:rate.email(details.email)}:{})});
   if(app.status==='paid')return res.status(200).json({id,status:'paid',url:`${app.checkout_origin}/success.html?application=${id}`});
   let session;
   if(app.session_id){

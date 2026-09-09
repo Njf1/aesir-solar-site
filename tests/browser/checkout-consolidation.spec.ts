@@ -126,3 +126,14 @@ test('cancellation restores details but leaves both consents for fresh confirmat
   await expect(page.locator('[name="agree"]')).not.toBeChecked();
   await expect(page.locator('[name="privacy"]')).not.toBeChecked();
 });
+
+test('checkout rate limits preserve entries and focus a useful contact explanation',async({page})=>{
+ const traffic=await prepare(page);
+ await page.route(ENDPOINT,route=>route.fulfill({status:429,contentType:'application/json',body:JSON.stringify({error:'checkout_rate_limited'})}));
+ await page.locator('#submitBtn').click();
+ await expect(page.locator('#formNote')).toContainText('Too many new payment attempts');
+ await expect(page.locator('#formNote')).toBeFocused();
+ await expect(page.locator('#formNote a')).toHaveAttribute('href','mailto:hello@aesirsolar.co.uk');
+ for(const[name,value]of Object.entries(values))await expect(page.locator(`[name="${name}"]`)).toHaveValue(value);
+ expect(traffic.escaped).toEqual([]);
+});
