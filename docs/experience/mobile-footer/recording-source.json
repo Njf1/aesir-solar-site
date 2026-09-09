@@ -1,0 +1,12 @@
+{
+  "file": "/Users/nick/Downloads/18877.mp4",
+  "bytes": 6470773,
+  "sha256": "b04b17e684a78cf5a8cbfc798d4008e77e45552e0f879839d30357a74e4766fc",
+  "durationSeconds": 14.058722,
+  "resolution": [
+    1080,
+    2340
+  ],
+  "fps": 60,
+  "review": "Quarter-second bottom-control crops plus full frames at 1.0\u20134.0 seconds; toolbar retraction followed by a delayed viewport expansion. Original kept outside the repository because other browser tabs are visible."
+}

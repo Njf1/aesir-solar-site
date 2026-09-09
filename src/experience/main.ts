@@ -1,4 +1,5 @@
 import {initSuitability} from './suitability';
+import {followViewportFooter} from './footer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { framingFor, smooth } from './progress';
@@ -58,6 +59,10 @@ function frameLayout() {
   stage.style.setProperty('--copy-safe-top',`${mode==='portrait'?skipLink.offsetTop+skipLink.offsetHeight+12:0}px`);
 }
 frameLayout();
+// The mobile browser can update 100dvh in one late step after retracting its
+// bars. Ease the footer independently, including before the scene is ready.
+const footerMotion=followViewportFooter(stage,document.querySelector<HTMLElement>('.chapter-footer')!,
+  ()=>!reduced.matches&&!paused&&!document.hidden&&onscreen&&!disposed);
 function stop(){cancelAnimationFrame(frame);frame=0;lastTime=0;lastMeasure=0;}
 function canAnimate(){return ready&&!disposed&&!failed&&!paused&&!reduced.matches&&!document.hidden&&onscreen;}
 function tick(now:number) {
@@ -73,6 +78,7 @@ function tick(now:number) {
 function resume(){if(canAnimate()&&!frame)frame=requestAnimationFrame(tick);}
 function fallback(message:string) {
   if(disposed||failed)return;failed=true;ready=false;stop();trigger?.kill();observer?.disconnect();resizeObserver?.disconnect();scene?.dispose();scene=undefined;
+  footerMotion.dispose();
   stage.classList.remove('is-ready');stage.classList.add('is-fallback');journey.classList.remove('is-enhanced');journey.classList.add('is-static');pauseButton.hidden=true;stillViews.hidden=true;status.textContent=message;
   updateCopy(0);document.body.classList.remove('at-details');
   if(location.hash==='#application-details'||progress>.16)document.querySelector('#application-details')?.scrollIntoView();
@@ -102,6 +108,7 @@ function reconcileTravel() {
 function configureMotion() {
   if(failed||disposed)return;configuredReduced=reduced.matches;trigger?.kill();stop();scene?.setFrozen(false);
   if(reduced.matches) {
+    footerMotion.settle();
     journey.classList.remove('is-enhanced');journey.classList.add('is-static');scene?.setProgress(stillProgress);updateCopy(scene?.displayedProgress()??stillProgress);scene?.render(0);
     pauseButton.hidden=true;stillViews.hidden=false;scrollLabel.textContent='EXPLORE THE STILL VIEWS';
     status.textContent='Reduced motion: still views. Application details are below.';
@@ -122,6 +129,7 @@ function togglePause() {
   paused=!paused;pauseButton.setAttribute('aria-pressed',String(paused));pauseButton.innerHTML=paused?'Resume motion <span aria-hidden="true">▷</span>':'Pause motion <span aria-hidden="true">Ⅱ</span>';
   if(paused){scene?.setFrozen(true);stop();status.textContent='Motion paused. Scroll to the application details, or resume the journey.';}
   else{scene?.setFrozen(false);status.textContent='';scene?.setProgress(progress);updateCopy(scene?.displayedProgress()??progress);resume();}
+  if(paused)footerMotion.settle();
 }
 function changeStill(event:Event) {
   const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-still]');if(!button||!reduced.matches||failed)return;
@@ -129,12 +137,13 @@ function changeStill(event:Event) {
   for(const b of stillViews.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b===button));
   scene?.setProgress(stillProgress);updateCopy(scene?.displayedProgress()??stillProgress);scene?.render(0);
 }
-function visibility(){if(document.hidden)stop();else if(ready&&configuredReduced!==reduced.matches)configureMotion();else resume();}
+function visibility(){if(document.hidden){stop();footerMotion.settle();}else if(ready&&configuredReduced!==reduced.matches)configureMotion();else resume();}
 function destroy() {
   if(disposed)return;disposed=true;stop();trigger?.kill();observer?.disconnect();resizeObserver?.disconnect();scene?.dispose();
+  footerMotion.dispose();
   reduced.removeEventListener('change',configureMotion);document.removeEventListener('visibilitychange',visibility);pauseButton.removeEventListener('click',togglePause);stillViews.removeEventListener('click',changeStill);window.removeEventListener('pagehide',onPageHide);window.removeEventListener('pageshow',onPageShow);
 }
-function onPageHide(e:PageTransitionEvent){if(e.persisted)stop();else destroy();}
+function onPageHide(e:PageTransitionEvent){if(e.persisted){stop();footerMotion.settle();}else destroy();}
 function onPageShow(e:PageTransitionEvent){if(e.persisted){ScrollTrigger.refresh();resume();}}
 async function init() {
   const timeout=window.setTimeout(()=>fallback('A still moment from the journey. Application details are ready below.'),12000);
@@ -149,7 +158,7 @@ async function init() {
     if(contentAnchor)contentAnchor.scrollIntoView();
     observer=new IntersectionObserver(entries=>{for(const entry of entries){
       if(entry.target===applicationDetails){detailsVisible=entry.isIntersecting;continue;}
-      onscreen=entry.isIntersecting;document.body.classList.toggle('at-details',!onscreen);if(!onscreen)stop();else resume();
+      onscreen=entry.isIntersecting;document.body.classList.toggle('at-details',!onscreen);if(!onscreen){stop();footerMotion.settle();}else resume();
     }},{threshold:.01,rootMargin:'-110px 0px 0px 0px'});observer.observe(stage);observer.observe(applicationDetails);
     resizeObserver=new ResizeObserver(()=>{
       if(!scene||failed)return;frameLayout();const resized=scene.resize();reconcileTravel();
