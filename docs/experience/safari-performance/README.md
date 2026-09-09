@@ -45,6 +45,14 @@ The recordings **do not demonstrate a frame-rate improvement** on this fast desk
 
 Evidence: [before measurements](before-webkit/measurements.json), [after measurements](after-webkit/measurements.json), [tablet before motion](before-webkit/ipad-motion.webm), [tablet after motion](after-webkit/ipad-motion.webm), [landscape phone after motion](after-webkit/iphone-landscape-motion.webm), [Sun](after-webkit/ipad-sun.jpg), [Earth](after-webkit/ipad-earth.jpg), [panel](after-webkit/ipad-panel.jpg), [cell](after-webkit/iphone-landscape-cell.jpg), [final campus](after-webkit/iphone-landscape-brand.jpg). The motion captures include eight settled views, rotation and the entire film in reverse and forward.
 
+## Release
+
+Implementation **7076d9e** is pushed to GitHub `main` and `experience/checkout-consolidation`, with `experience-safari-performance-fixed` retained. Production **dpl_2EaC1grU7HxVrBSVEzAJJfZVwjEd** (`aesir-solar-dgu3tbt5q-aesir.vercel.app`) is Ready and serves `https://aesirsolar.co.uk/` plus the existing www/Vercel aliases. [Deployment log](deployment.log).
+
+The [public verification](production/verification.json) compares SHA-256 hashes of the served entry JavaScript, scene JavaScript and homepage CSS against the tested build: `experience-H1LMbZYr.js`, `scene-Bv1eVTb8.js` and `experience-cbuE7ehO.css`. Tablet and portrait-phone WebKit contexts select mobile graphics, load mobile Earth imagery, retain that tier when rotated, focus the application section after Skip and stop rendering offscreen. No page errors or console warnings occurred; all API/provider/non-GET requests were blocked. [Live tablet](production/tablet-earth.jpg), [live phone](production/phone-earth.jpg). Reproduce with `node scripts/verify-touch-release.mjs`.
+
+Evidence-only commits after 7076d9e do not alter the served implementation. The remaining next check is on the user's actual iPad/iPhone, including the exact device/Safari version and a recording of any surviving hitch. Lower resource use is proven; universal Safari smoothness is not claimed.
+
 ## Supporting references
 
 Accessed 9 September 2026: [WebKit's desktop-class iPad browsing explanation](https://webkit.org/blog/9674/new-webkit-features-in-safari-13/) and [WebKit's feature-detection recommendation](https://bugs.webkit.org/show_bug.cgi?id=212937) support detecting capabilities rather than treating a desktop user-agent as proof of desktop hardware. [MDN WebGL best practices](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices) supports explicit pixel/VRAM budgets and smaller backbuffers. These explain the approach; they do not diagnose this user's physical devices.

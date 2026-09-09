@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-09T19:37:22.471Z",
+  "origin": "https://aesirsolar.co.uk",
+  "method": "Desktop WebKit touch emulation, controlled eight-core report; no physical-device or payment test.",
+  "assets": [
+    {
+      "file": "experience-H1LMbZYr.js",
+      "sha256": "99d10e35486f8025c48f2279ade792238f8313e88d0e13979fcd9a9e3ae589b6"
+    },
+    {
+      "file": "experience-cbuE7ehO.css",
+      "sha256": "202f7113266bbca73445eef334447f741382aadf6d3ebc727b59fcc1a6053cb8"
+    },
+    {
+      "file": "scene-Bv1eVTb8.js",
+      "sha256": "73e094c654b9df5ef545c456a2e390e61aa5d93eb742939bbdab023938dca088"
+    }
+  ],
+  "views": [
+    {
+      "name": "tablet",
+      "errors": [],
+      "warnings": [],
+      "initialQuality": {
+        "tier": "mobile",
+        "width": 820,
+        "height": 1180,
+        "pixelRatio": 0.9372631297838686,
+        "detail": 4,
+        "segments": 80
+      },
+      "earth": {
+        "variant": "mobile",
+        "decodedImageBytes": 10485760,
+        "textureBytesWithMipmaps": 13981013
+      },
+      "rotatedQuality": {
+        "tier": "mobile",
+        "width": 1180,
+        "height": 820,
+        "pixelRatio": 0.9372631297838686,
+        "detail": 4,
+        "segments": 80
+      },
+      "offscreenFrames": 0
+    },
+    {
+      "name": "phone",
+      "errors": [],
+      "warnings": [],
+      "initialQuality": {
+        "tier": "mobile",
+        "width": 390,
+        "height": 844,
+        "pixelRatio": 1.25,
+        "detail": 4,
+        "segments": 80
+      },
+      "earth": {
+        "variant": "mobile",
+        "decodedImageBytes": 10485760,
+        "textureBytesWithMipmaps": 13981013
+      },
+      "rotatedQuality": {
+        "tier": "mobile",
+        "width": 844,
+        "height": 390,
+        "pixelRatio": 1.25,
+        "detail": 4,
+        "segments": 80
+      },
+      "offscreenFrames": 0
+    }
+  ],
+  "browser": "26.6"
+}
