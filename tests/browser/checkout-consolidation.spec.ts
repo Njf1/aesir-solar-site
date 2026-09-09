@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 
 const ORIGIN = 'http://127.0.0.1:4173';
-const ENDPOINT = ORIGIN + '/api/tyl-checkout';
+const ENDPOINT = ORIGIN + '/api/checkout';
 const values = {contact:'Local Test',email:'test@example.invalid',phone:'0000000000',address:'1 Fixture Street',postcode:'SW1A 1AA',inverter:'TEST ONLY',kw:'5'};
 
 async function prepare(page: Page) {
@@ -36,15 +36,15 @@ async function expectContainedFailure(page: Page) {
   expect(await page.locator('canvas').count()).toBe(0);
 }
 
-test('missing Tyl setup stays in the new application with entries, contact and a truthful outcome',async({page}) => {
+test('missing Stripe/storage setup stays in the new application with entries, contact and a truthful outcome',async({page}) => {
   const traffic = await prepare(page);
   await page.locator('#submitBtn').click();
   await expectContainedFailure(page);
-  expect(traffic.requests).toEqual(['/api/tyl-checkout']);
+  expect(traffic.requests).toEqual(['/api/checkout']);
   expect(traffic.escaped).toEqual([]); expect(traffic.errors).toEqual([]);
 });
 
-test('network, malformed JSON and invalid handoff responses never switch to Stripe or the old cart',async({page}) => {
+test('network, malformed JSON and invalid handoff responses never switch to Tyl or the old cart',async({page}) => {
   for (const mode of ['network','html','empty','invalid-fields']) {
     const traffic = await prepare(page);
     let attempts = 0;
@@ -91,4 +91,38 @@ test('payment help and retained form entries fit narrow, intermediate and short 
     expect(traffic.escaped).toEqual([]);expect(traffic.errors).toEqual([]);
     await page.unroute('**/*');
   }
+});
+
+
+test('verified test return reports a test result while failed or unsigned returns stay unverified', async({page}) => {
+  const id='f0000000-0000-4000-8000-000000000002';
+  await page.addInitScript((id)=>localStorage.setItem('aesir.checkout',JSON.stringify({applicationId:id,accessToken:'a'.repeat(64)})),id);
+  await page.route('**/api/application-status',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({id,status:'paid',testMode:true})}));
+  await page.goto('/success.html?application='+id);
+  await expect(page.locator('#payment-heading')).toHaveText('Test payment verified.');
+  await expect(page.locator('#payment-status')).toContainText('No real money was taken');
+  await expect(page.locator('#payment-caution')).toBeHidden();
+  await page.goto('/success.html?application=f0000000-0000-4000-8000-000000000003');
+  await expect(page.locator('#payment-heading')).toContainText('not verified');
+});
+
+test('retry retains the same private reference and full application after a network failure',async({page})=>{
+  await prepare(page);const payloads:any[]=[];
+  await page.route(ENDPOINT,route=>{payloads.push(route.request().postDataJSON());return route.fulfill({status:503,contentType:'application/json',body:'{}'});});
+  await page.locator('#submitBtn').click();await expectContainedFailure(page);
+  await page.locator('#submitBtn').click();await expectContainedFailure(page);
+  expect(payloads.length).toBe(2);expect(payloads[0].applicationId).toBe(payloads[1].applicationId);expect(payloads[0].accessToken).toBe(payloads[1].accessToken);
+});
+
+
+test('cancellation restores details but leaves both consents for fresh confirmation',async({page})=>{
+  await page.addInitScript(()=>{
+    localStorage.setItem('aesir.application',JSON.stringify({contact:'Restored Test',notes:'Complete retained note',g100:true,agree:'on',privacy:'on'}));
+  });
+  await page.goto('/apply.html?cancelled=1');
+  await expect(page.locator('[name="contact"]')).toHaveValue('Restored Test');
+  await expect(page.locator('[name="notes"]')).toHaveValue('Complete retained note');
+  await expect(page.locator('[name="g100"]')).toBeChecked();
+  await expect(page.locator('[name="agree"]')).not.toBeChecked();
+  await expect(page.locator('[name="privacy"]')).not.toBeChecked();
 });

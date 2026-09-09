@@ -110,12 +110,12 @@ test('existing prefill keys keep their meanings and payment submission sends the
  await form.locator('[name="agree"]').check();await form.locator('[name="privacy"]').check();
  let submitted:any,hosted:any;
  // Registered after the generic guard: Playwright's newest matching route wins.
- await page.route(`${ORIGIN}/api/tyl-checkout`,async route=>{submitted=route.request().postDataJSON();await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({action:`${ORIGIN}/__test__/hosted-payment`,fields:{fixture:'only'},orderId:'LOCAL-TEST',amount:'300.00',net:'250.00'})});});
- await page.route(`${ORIGIN}/__test__/hosted-payment`,async route=>{hosted={method:route.request().method(),body:route.request().postData()};await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><h1>Intercepted local payment fixture</h1>'});});
+ await page.route(`${ORIGIN}/api/checkout`,async route=>{submitted=route.request().postDataJSON();await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({url:'https://checkout.stripe.com/c/pay/fixture',id:'LOCAL-TEST'})});});
+ await page.route('https://checkout.stripe.com/c/pay/fixture',async route=>{hosted={method:route.request().method(),body:route.request().postData()};await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><h1>Intercepted local payment fixture</h1>'});});
  await form.locator('#submitBtn').click();await expect(page.getByRole('heading',{name:'Intercepted local payment fixture'})).toBeVisible();
  for(const[name,value]of Object.entries(values))expect(submitted[name],name).toBe(value);
  expect(submitted.phases).toBe('3');expect(submitted.g100).toBe(true);expect(submitted.eps).toBe(false);expect(submitted.acceptedTerms).toBe(true);expect(submitted.acceptedPrivacy).toBe(true);expect(submitted.amountGBP).toBe('300.00');expect(Number.isFinite(Date.parse(submitted.submittedAt))).toBe(true);
- expect(hosted).toEqual({method:'POST',body:'fixture=only'});expect(traffic.api().map(r=>new URL(r.url).pathname)).toEqual(['/api/tyl-checkout']);clean(traffic);
+ expect(hosted).toEqual({method:'GET',body:null});expect(submitted.applicationId).toMatch(/^[a-f0-9-]{36}$/);expect(submitted.accessToken).toMatch(/^[a-f0-9]{64}$/);expect(traffic.api().map(r=>new URL(r.url).pathname)).toEqual(['/api/checkout']);clean(traffic);
 });
 
 test('payment return query variants survive and never announce an unverified charge, receipt or received application',async({page})=>{

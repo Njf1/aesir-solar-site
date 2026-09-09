@@ -285,7 +285,7 @@
   })();
 
   /* ============================================================
-     APPLICATION FORM → Tyl hosted payment
+     APPLICATION FORM → saved intake → Stripe hosted payment
      A browser draft is not durable intake. The server must establish the
      application/payment record before this candidate is released.
      ============================================================ */
@@ -293,6 +293,17 @@
   if (form) {
     var note = document.getElementById('formNote');
     var btn = document.getElementById('submitBtn');
+
+    if (new URLSearchParams(location.search).get('cancelled') === '1') {
+      try {
+        var saved = JSON.parse(localStorage.getItem('aesir.application') || 'null');
+        if (saved) Array.prototype.forEach.call(form.elements, function (el) {
+          if (!el.name || el.name === 'agree' || el.name === 'privacy' || !(el.name in saved)) return;
+          if (el.type === 'checkbox') el.checked = saved[el.name] === true;
+          else el.value = String(saved[el.name]);
+        });
+      } catch(e) {}
+    }
 
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
@@ -326,7 +337,7 @@
       }
 
       note.classList.remove('err');
-      note.textContent = 'Preparing secure payment with Tyl by NatWest…';
+      note.textContent = 'Saving your application and preparing secure payment…';
       btn.disabled = true;
 
       /* collect */
@@ -344,19 +355,20 @@
       // Never send applicants to the retired shop or switch payment providers
       // after an error. Keep their entries and explain an uncertain outcome.
 
-      function postForm(action, fields) {
-        var f = document.createElement('form');
-        f.method = 'POST';
-        f.action = action;
-        f.style.display = 'none';
-        Object.keys(fields).forEach(function (k) {
-          var i = document.createElement('input');
-          i.type = 'hidden'; i.name = k; i.value = fields[k];
-          f.appendChild(i);
-        });
-        document.body.appendChild(f);
-        f.submit();
-      }
+      // Keep the same reference for retries. Never silently turn an uncertain
+      // payment into a second application when the visitor edits or refreshes.
+      var attempt;
+      try {
+        attempt = JSON.parse(localStorage.getItem('aesir.checkout') || 'null');
+        if (attempt && attempt.completed === true) attempt = null;
+        if (!attempt) {
+          var bytes = crypto.getRandomValues(new Uint8Array(32));
+          attempt = {applicationId: crypto.randomUUID(), accessToken: Array.from(bytes).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('')};
+          localStorage.setItem('aesir.checkout', JSON.stringify(attempt));
+        }
+        data.applicationId = attempt.applicationId;
+        data.accessToken = attempt.accessToken;
+      } catch (e) { payFailed(); return; }
 
       function payFailed() {
         note.textContent =
@@ -375,7 +387,7 @@
 
       var controller = new AbortController();
       var timeout = setTimeout(function () { controller.abort(); }, 15000);
-      fetch('/api/tyl-checkout', {
+      fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -383,11 +395,23 @@
       })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
         .then(function (r) {
-          if (r.ok && r.body && typeof r.body.action === 'string' &&
-              r.body.fields && typeof r.body.fields === 'object' &&
-              !Array.isArray(r.body.fields) && Object.keys(r.body.fields).length) {
-            try { localStorage.setItem('aesir.orderId', r.body.orderId); } catch (e) {}
-            postForm(r.body.action, r.body.fields);
+          if (r.ok && r.body && typeof r.body.url === 'string') {
+            var destination = new URL(r.body.url, location.origin);
+            if ((destination.protocol === 'https:' && destination.hostname === 'checkout.stripe.com') ||
+                (destination.origin === location.origin && destination.pathname === '/success.html')) {
+              location.assign(destination.href);
+              return;
+            }
+          }
+          if (r.body && r.body.error === 'payment_session_expired') {
+            try { localStorage.removeItem('aesir.checkout'); } catch(e) {}
+            payFailed();
+            note.firstChild.textContent = 'The previous Stripe payment session has expired and cannot be paid. Your entries remain here. You can submit again to open a new payment session. ';
+            return;
+          }
+          if (r.body && r.body.error === 'suitability_review') {
+            payFailed();
+            note.firstChild.textContent = 'This arrangement needs a suitability review before payment. Your entries remain here. Please contact Aesir Solar with the installation details. ';
             return;
           }
           payFailed();

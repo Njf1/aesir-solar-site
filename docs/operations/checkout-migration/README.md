@@ -1,3 +1,7 @@
+# Implementation in progress
+
+See [Stripe implementation and verification](stripe-implementation.md) for the latest local code, installed private schema, passing checks and the outstanding server-key/end-to-end blocker. Nothing from this payment migration has been deployed.
+
 # Checkout and real-domain consolidation — Stripe
 
 **Current decision, 9 September 2026:** the user has cancelled the Tyl/Fiserv integration plan and selected the existing **Aesir Solar Stripe account**. The user confirms this account is now exclusively for Aesir Solar. **Aesir Limited remains the legal business receiving the payments.**

@@ -1,3 +1,5 @@
+> **Update:** the following account-decision notes are historical. [Current implementation status](stripe-implementation.md) records the new private schema and local Stripe flow.
+
 # Stripe — Aesir Solar account and implementation handoff
 
 9 September 2026. The user explicitly abandoned Tyl/Fiserv in favour of Stripe, signed into the existing account, corrected its name to **Aesir Solar**, and confirmed the account is now **exclusively for Solar**. Aesir Limited is the user-confirmed legal recipient. The final website must use **aesirsolar.co.uk** after full verification.

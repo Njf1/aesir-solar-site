@@ -92,4 +92,33 @@
       reference.hidden = false;
     }
   }
+  var paymentStatus = document.getElementById('payment-status');
+  if (paymentStatus) {
+    var attempt;
+    try { attempt = JSON.parse(localStorage.getItem('aesir.checkout') || 'null'); } catch (e) {}
+    var requestedId = query.get('application');
+    if (attempt && (!requestedId || requestedId === attempt.applicationId)) {
+      var polls = 0;
+      function checkPayment() {
+        fetch('/api/application-status', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(attempt)})
+          .then(function(r) { if(!r.ok) throw new Error('unavailable'); return r.json(); })
+          .then(function(result) {
+            if (result.status === 'paid') {
+              attempt.completed = true;
+              try { localStorage.setItem('aesir.checkout', JSON.stringify(attempt)); } catch(e) {}
+              var verifiedReference = document.getElementById('verified-reference');
+              if (verifiedReference) { verifiedReference.textContent = 'Application reference: ' + result.id; verifiedReference.hidden = false; }
+              document.getElementById('another-application').hidden = false;
+              document.getElementById('payment-heading').textContent = result.testMode ? 'Test payment verified.' : 'Your application is ready for Aesir.';
+              paymentStatus.textContent = result.testMode ? 'This was a Stripe test payment. No real money was taken. The test application is saved in the test work queue.' : 'Your £300 payment has been verified and your complete application is saved for preparation and follow-up. This is not network approval.';
+              document.getElementById('payment-caution').hidden = true;
+            } else {
+              paymentStatus.textContent = result.status === 'expired' ? 'This payment session has expired. Please contact us with your reference before starting another payment.' : 'Your application details are saved. Payment has not yet been verified. Please wait, or contact us before attempting another payment.';
+              if (++polls < 5) setTimeout(checkPayment, 3000);
+            }
+          }).catch(function() { paymentStatus.textContent = 'We cannot verify payment at the moment. Please keep your reference and contact us before attempting another payment.'; });
+      }
+      checkPayment();
+    }
+  }
 })();

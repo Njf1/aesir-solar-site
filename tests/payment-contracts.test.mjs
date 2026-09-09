@@ -15,9 +15,11 @@ test('preserved payment contracts with dummy credentials and no network',async()
   Object.assign(process.env,{TYL_STORE_ID:'dummy-store',TYL_SHARED_SECRET:'dummy-secret-not-a-credential',TYL_GATEWAY_URL:'https://gateway.example.invalid',STRIPE_SECRET_KEY:'dummy-stripe-not-a-credential'});delete process.env.STRIPE_TAX_RATE_ID;
   globalThis.fetch=async(url,options)=>{assert.equal(url,'https://api.stripe.com/v1/checkout/sessions');sent=new URLSearchParams(options.body);return {ok:true,json:async()=>({url:'https://checkout.example.invalid',id:'dummy-session'})};};
   let res=response();await tyl(request(dummy),res);assert.equal(res.code,200);assert.equal(res.body.fields.chargetotal,'300.00');assert.equal(res.body.fields.currency,'826');assert.equal(res.body.net,'250.00');assert.equal(res.headers['Cache-Control'],'no-store');assert.ok(res.body.fields.hashExtended);assert.equal(res.body.fields.customParam_kw,'5');
-  res=response();await stripe(request(dummy),res);assert.equal(res.code,200);assert.equal(sent.get('line_items[0][quantity]'),'1');assert.equal(sent.get('line_items[0][price_data][unit_amount]'),'30000');assert.equal(sent.get('line_items[0][price_data][currency]'),'gbp');assert.equal(sent.get('metadata[accepted_terms]'),'yes');
-  process.env.STRIPE_TAX_RATE_ID='txr_dummy';await stripe(request(dummy),response());assert.equal(sent.get('line_items[0][price_data][unit_amount]'),'25000');assert.equal(sent.get('line_items[0][tax_rates][0]'),'txr_dummy');
-  for(const fn of [tyl,stripe]){res=response();await fn(request({email:'invalid'}),res);assert.equal(res.code,400);res=response();await fn(request({},'GET'),res);assert.equal(res.code,405);}
+  // Stripe intentionally replaces its old metadata-only, email-only contract.
+  // The durable intake/signature/amount guarantees are exercised in stripe-intake.
+  res=response();await stripe(request(dummy),res);assert.equal(res.code,503);
+  res=response();await stripe(request({},'GET'),res);assert.equal(res.code,405);
+  res=response();await tyl(request({email:'invalid'}),res);assert.equal(res.code,400);
   const ts='2026:09:08-12:00:00';
   for(const [approval_code,status,path] of [['Y:dummy','APPROVED','/success?order=dummy-order'],['?:dummy','WAITING','/apply?payment=pending'],['N:dummy','DECLINED','/apply?payment=declined&reason=']]){
    const body={approval_code,status,chargetotal:'300.00',currency:'826',storename:'dummy-store',txndatetime:ts,oid:'dummy-order'};body.response_hash=responseHash(body,process.env.TYL_SHARED_SECRET);res=response();await returned({...request(body),query:{ts}},res);assert.equal(res.code,303);assert.equal(res.location,path);

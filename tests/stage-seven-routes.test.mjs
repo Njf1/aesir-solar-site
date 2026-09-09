@@ -28,8 +28,8 @@ test('untouched provider routes, helpers, input data and pinned dependencies ret
  // app.js intentionally removes the old checkout fallback. The new, currently
  // unwired protocol clients have separate cryptographic fixture tests; every old
  // handler/helper remains byte-protected until its explicit replacement.
- const retained=[...await files('api'),...(await files('lib')).filter(file=>!['lib/tyl-protocol.js','lib/commerce-hub.js'].includes(file)),...await files('data'),'package-lock.json'];
- assert.equal((await files('api')).length,5,'Do not silently add a new payment/provider route in this migration');
+ const retained=[...(await files('api')).filter(file=>!['api/checkout.js','api/application-status.js','api/stripe-webhook.js'].includes(file)),...(await files('lib')).filter(file=>!['lib/tyl-protocol.js','lib/commerce-hub.js','lib/solar-payments.js'].includes(file)),...await files('data'),'package-lock.json'];
+ assert.equal((await files('api')).length,7,'Only the authorised Stripe status/webhook routes are added');
  for(const file of retained)assert.deepEqual(await readFile(path.join(ROOT,file)),baseline(file),file);
  const pkg=JSON.parse(await read('package.json')),old=JSON.parse(baseline('package.json'));assert.deepEqual(pkg.dependencies,old.dependencies);assert.deepEqual(pkg.devDependencies,old.devDependencies);assert.deepEqual(pkg.engines,old.engines);assert.equal(pkg.scripts.build,'python3 build.py && vite build && node scripts/assemble.mjs');
  // Known backend defects remain documented, not blessed as success criteria.
@@ -159,7 +159,7 @@ test('full policy sections and consent distinctions survive with narrowly correc
   assert.doesNotMatch(candidate,/class=["']todo["']|to be inserted|Company no\. —/i);
  }
  const privacy=normal(await read('privacy.html')),refunds=normal(await read('refunds.html'));
- assert.match(privacy,/not automatically restored/);assert.match(privacy,/Tyl/);assert.match(privacy,/does not send your details to another payment provider/);assert.doesNotMatch(privacy,/Stripe|WooCommerce/);
+ assert.match(privacy,/not automatically restored/);assert.match(privacy,/Stripe/);assert.match(privacy,/does not send your details to another payment provider/);assert.doesNotMatch(privacy,/Tyl|WooCommerce/);
  assert.doesNotMatch(privacy,/nothing is lost if the page reloads/);assert.match(refunds,/do not record a separate request/);assert.match(refunds,/statutory rights are unaffected/i);
 });
 

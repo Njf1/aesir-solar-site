@@ -30,7 +30,8 @@
       <h2>Who we share it with</h2>
       <ul>
         <li><strong>Your Distribution Network Operator or Independent Distribution Network Operator.</strong> This is unavoidable and is the purpose of the service — the application cannot be made without it.</li>
-        <li><strong>Payment services.</strong> Payments use Tyl by NatWest. Contact and order information is used to prepare the payment; card details are entered on Tyl’s hosted payment page. An unsuccessful payment handoff does not send your details to another payment provider.</li>
+        <li><strong>Payment services.</strong> Payments use Stripe. Contact and order information is used to prepare the payment; card details are entered on Stripe’s hosted payment page. An unsuccessful payment handoff does not send your details to another payment provider.</li>
+        <li><strong>Hosting and application records.</strong> Vercel serves the website and server endpoints. Supabase stores the complete application and payment reference in our private Solar database, hosted in London. These services process information to deliver the application service.</li>
         <li><strong>Our professional advisers</strong> — accountants and, if ever needed, lawyers.</li>
       </ul>
       <p>We do not sell your data, and we do not share it for anyone else's marketing.</p>
@@ -52,8 +53,8 @@
 
       <h2>Cookies</h2>
       <p>These pages do not set advertising or analytics cookies. When you submit the application form,
-      its answers are written to your browser’s local storage and sent to the payment-start endpoint.
-      Existing eligibility prefill values, a payment reference and a cart timestamp may also be stored
+      its answers are written to your browser’s local storage and sent to our server, which saves the complete application before opening Stripe Checkout.
+      Existing eligibility prefill values, a private payment-status access token and application reference may also be stored
       in that browser. The full application is not automatically restored after a reload. A browser copy
       does not confirm that we have received or saved an application. Clearing your browser data removes
       these local values.</p>
@@ -61,6 +62,5 @@
       cookies to keep your order and session together.</p>
 
       <h2>Where your data is held</h2>
-      <p>Within the UK and European Economic Area. If that ever changes we will update this policy and
-      ensure an appropriate safeguard is in place.</p>
+      <p>The application database is hosted in London. Our hosting and payment providers may process information in other countries under their applicable data-protection safeguards. Card details remain with Stripe; they are not stored in our application database.</p>
     </div>
