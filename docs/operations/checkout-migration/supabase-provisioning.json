@@ -1,0 +1,45 @@
+{
+  "checkedOn": "2026-09-09",
+  "organization": {
+    "name": "Aesir Solar",
+    "id": "ovpkjjrmzazrxgjyvehl",
+    "plan": "free"
+  },
+  "project": {
+    "name": "aesir-solar",
+    "id": "gkxwaeoknypueqbcqhtl",
+    "region": "eu-west-2",
+    "regionLabel": "London",
+    "status": "ACTIVE_HEALTHY",
+    "postgresVersion": "17.6",
+    "computeShownInDashboard": "nano"
+  },
+  "cost": {
+    "amount": 0,
+    "currency": "USD",
+    "recurrence": "monthly",
+    "source": "Supabase get_cost for the new organisation, plus verified Free plan"
+  },
+  "verification": {
+    "databaseQuerySucceeded": true,
+    "publicTableCount": 0,
+    "securityAdvisories": [],
+    "dashboardProjectAndFreePlanConfirmed": true
+  },
+  "limits": [
+    "Free project quota applies across owner/admin memberships.",
+    "Low activity can cause pausing after seven days.",
+    "Automatic backups are not included."
+  ],
+  "notImplemented": [
+    "Application tables and private access policies",
+    "Durable intake and saved consents",
+    "Stripe session creation and verified payment processing",
+    "One actionable work item per paid application",
+    "Backup/restore and availability handling",
+    "Final aesirsolar.co.uk cutover"
+  ],
+  "changedElsewhere": false,
+  "keysExported": false,
+  "paymentOrDnsChanges": false
+}
