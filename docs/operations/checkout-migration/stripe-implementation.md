@@ -1,12 +1,12 @@
 # Stripe intake implementation — 9 September 2026
 
-## Current result (local, not live)
+## Current result (local and protected hosted tests; not live)
 
 The new form now selects Stripe exclusively. Its complete original 19 controls and both consents are retained. `api/checkout.js` validates and saves the full application before creating Checkout; metadata contains binding references, not truncated intake. Supabase RPCs enforce one payment/session per application and atomically create one work item. All tables have RLS, no public/authenticated grants, and only server-role RPC access. The operator queue is a security-invoker view.
 
 The dedicated Free London project `gkxwaeoknypueqbcqhtl` has the schema installed. Migration-owner assertions proved full-note retention, wrong-amount rejection, token conflict rejection, three repeated confirmations producing one job, public privilege denial and complete fixture rollback. MCP execute_sql is read-only (`supabase_read_only_user`); verification used an explicit migration-owner DO block, not extra public grants. Security advisor returned no findings.
 
-Stripe TEST credentials were privately read from the authorised Aesir Solar account and verified with `/v1/account`: `acct_1S0LTfL9cBVV8DnX`. A test-only 20% exclusive VAT rate was created (`txr_1UDjvsL9cBVV8DnXutt3AZIz`). No live secret, payment, webhook or deployment was configured. Secrets remain outside Git and static delivery.
+Stripe TEST credentials were privately read from the authorised Aesir Solar account and verified with `/v1/account`: `acct_1S0LTfL9cBVV8DnX`. A test-only 20% exclusive VAT rate was created (`txr_1UDjvsL9cBVV8DnXutt3AZIz`). No live secret, real payment, production webhook or production deployment was configured. Secrets remain outside Git and static delivery.
 
 **Integration access resolved:** direct clipboard paste into the private setup form obtained the complete server key without displaying it. The server REST API returned 200; the public key returned PostgreSQL 42501 permission denied. No user action is now needed on the earlier Reveal prompt.
 
@@ -17,7 +17,15 @@ Actual Stripe TEST evidence:
 - Stripe CLI 1.43.2 forwarded genuine test completion events to localhost. Its event payload version was 2025-07-30.basil; independent Session/PaymentIntent reads used pinned 2024-06-20.
 - Encrypted backup of two applications, two work items and three event records passed AES-GCM read-back verification, then restored with constraints into temporary PostgreSQL tables with exact record equality. Temporary tables were dropped; live tables were not overwritten. This is a manual backup/restore proof, not automatic or off-machine disaster recovery.
 
-No real funds moved. A protected Vercel Preview deployment is being prepared with server-only TEST settings; production credentials, DNS and the live checkout remain unchanged.
+No real funds moved. Protected Vercel TEST verification completed; production credentials, DNS and the live checkout remain unchanged.
+
+### Hosted proof and temporary-access cleanup
+
+Deployment `dpl_6SfdNt87BVxgaL3c8FHSPggFa5Nq` ran source `c171d32` with Preview-only test credentials. Synthetic application `31303ba7-bdbd-43f2-82a1-280defc77913` was saved through its API before Checkout. A documented test Visa completed £300 (£250 + £50 VAT). Vercel request logs recorded the genuine Stripe webhook at HTTP 200. The database contained one paid test application and one ready work item. Three concurrent signed replays each returned 200 without extra work items/events; modifying the raw body returned 400. See [machine-readable evidence](hosted-test-evidence.json).
+
+The user explicitly approved a temporary project-wide automation bypass. After testing it was revoked, the same token returned HTTP 401, and existing SSO protection was unchanged. Test endpoint `we_1UDkVML9cBVV8DnXzYqfdQW4` is disabled; its Preview signing environment variable was removed. The stable preview is rebuilt with checkout failing closed after this test window. No production alias or domain changed.
+
+Eight actual verified-return layouts passed in installed Chromium and Playwright WebKit at 1280×720, 390×844, 740×900 and 1000×500, without horizontal overflow or page errors. Representative [narrow WebKit capture](captures/webkit-verified-390.png) and [desktop Chromium capture](captures/chromium-verified-1280.png) were visually reviewed. These are desktop browser tests on Apple M4 MacBook Air, 16 GB; not physical-phone or Safari certification.
 
 ## Behaviour and contracts
 
@@ -41,8 +49,8 @@ Free-plan inactivity pausing and lack of automatic backups remain material. An o
 ## Remaining end-to-end release work
 
 1. Completed: private server key, REST access and public-key permission denial.
-2. Local actual test Checkout/cancellation/decline/3DS/webhook-only fulfilment and concurrent replay proved. Repeat signed delivery on Vercel; test expired/uncertain requests and recovery beyond the local happy path.
-3. Configure a protected test deployment and its webhook; inspect application, Checkout and return views. Finish expiry/new-application lifecycle and recovery/backup verification.
+2. Local actual test Checkout/cancellation/decline/3DS/webhook-only fulfilment and concurrent replay proved. Hosted signed delivery, repeat delivery and tamper handling also proved. Broaden expired/uncertain requests and recovery beyond these paths before launch.
+3. Protected test deployment/webhook and responsive return inspection completed, followed by access revocation. Finish wider expiry/edit/retry lifecycle, operational recovery and off-machine backup custody.
 4. Use live-only credentials/webhook after these checks, keeping test and live records explicit. A sandbox success is not settlement/payout proof. No real payment is authorised as a test here.
 5. Migrate to `aesirsolar.co.uk` only when ready, preserving mail DNS, old order recovery and compatible historical return URLs.
 
@@ -50,8 +58,8 @@ Free-plan inactivity pausing and lack of automatic backups remain material. An o
 
 - Type check and full build: passed.
 - Full Node run: **128/128** (117 prior plus 11 focused Stripe tests).
-- Focused browser run: **20/20** (route/form suite and checkout suite). Earlier run was 17/18 before correcting the intentionally changed Tyl handoff fixture.
+- Focused browser run: **21/21** (route/form suite and checkout suite). Earlier run was 17/18 before correcting the intentionally changed Tyl handoff fixture.
 - Database owner verification: passed; fixtures rolled back; security advisor clean.
-- Browser mocks are isolated from providers. None of these results is a live or sandbox end-to-end payment result.
+- Browser mocks are isolated from providers. The automated mock suites are separate from the genuine sandbox results above; neither is live settlement proof.
 
 Sources checked 9 September 2026: Stripe [Checkout Session API](https://docs.stripe.com/api/checkout/sessions/create?api-version=2024-06-20), [idempotent requests](https://docs.stripe.com/api/idempotent_requests), [webhook signatures](https://docs.stripe.com/webhooks/signature); Supabase [roles](https://supabase.com/docs/guides/database/postgres/roles), [privileged function exposure](https://supabase.com/docs/guides/observability/advisors?queryGroups=lint&lint=0028_anon_security_definer_function_executable); NGED [G99 procedures](https://connections.nationalgrid.co.uk/g99-connection-procedures) and [fast-track routes](https://connections.nationalgrid.co.uk/get-connected/solar-and-wind/fast-track-g99), read alongside the existing stage-seven ENA claim ledger. General G99 17/50 kW thresholds are not substituted for the A1-2 SGI conditions.

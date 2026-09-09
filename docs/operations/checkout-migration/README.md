@@ -1,6 +1,6 @@
-# Implementation in progress
+# Stripe test chain proved; production release pending
 
-See [Stripe implementation and verification](stripe-implementation.md) for the latest local code, installed private schema, passing checks and the outstanding server-key/end-to-end blocker. Nothing from this payment migration has been deployed.
+See [implementation and verification](stripe-implementation.md) for the current state. Durable intake, Stripe test payment verification and one work item passed locally and on a protected Vercel preview. Temporary webhook access has been revoked. Production and `aesirsolar.co.uk` remain unchanged.
 
 # Checkout and real-domain consolidation — Stripe
 
@@ -10,7 +10,7 @@ Current handoff: [Stripe account preparation and complete checkout requirements]
 
 **Final public domain: `aesirsolar.co.uk`.** The user reaffirmed that the new site must move there once everything works. Vercel is the current testing/review address, not a replacement for that domain. Preserve root/www routing, existing email DNS and historical payment records during cutover.
 
-## Actual state
+## Earlier account-preparation record (superseded by the implementation above)
 
 - Stripe Dashboard access works. Legal business is displayed as **Aesir Ltd**; Account status shows **no active tasks**. This is not an end-to-end payment or payout certification.
 - Customer-facing Stripe name, support email/URL, website and statement descriptor were updated and saved for Solar after the user confirmed exclusive account use. Test mode is accessible. No keys were created/exported, no new payment sessions or charges were made, and no deployment/DNS change occurred in this account-preparation pass.
