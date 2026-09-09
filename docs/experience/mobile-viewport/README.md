@@ -45,3 +45,9 @@ Matched phone captures show the old 125/160 px gaps reduced to **0 px**. [Before
 [Isolated performance record](performance.json): 390×844, requested DPR 3 on the M4 MacBook, renderer capped at 1.25. All eight heavy scenes measured 16.7 ms median / 17.6–17.7 ms p95 rAF intervals, with no console errors or warnings. Resources remain at 79 geometries / 8 textures / 23 requests through three full reversals; offscreen rendering suspends. Observed opening readiness was 132 ms on loopback with a fresh browser context and warmed host; this is not mobile-network or cold-phone performance.
 
 Compiled JavaScript is 255,039 B gzip (+266 B); homepage CSS is 8,172 B gzip (+73 B). Media/geographic JSON stays 1,844,085 B. There are no added scene assets, textures, geometry owners or render targets. The drawing buffer covers the enlarged visible viewport under the existing DPR/pixel caps; no transfer or resource ceiling was raised.
+
+## Live verification
+
+Implementation `cc87c91` is pushed to GitHub main and the working branch, with `experience-viewport-fix-delivered` retained. Production deployment `dpl_JBB79R5SSMGdaF7RuEd2M8GMVZHA` is READY at **https://aesir-solar.vercel.app/**. [Deployment record](deployment.json).
+
+[Live viewport captures](production/observations.json) confirm zero uncovered pixels below the canvas at both 390×780 / 125 px browser-UI difference and 412×915 / 160 px difference, through the Sun, Earth, panel/cell, business and final frame. [Live phone close-up](production/phone-0.315.png). [Public route/scene checks](production-routes/verification.json) passed on desktop and phone-sized views, with no console errors or warnings and the original application controls/consents present. No form was submitted.

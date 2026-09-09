@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-09-09T07:53:59.768205+00:00",
+  "implementation": "cc87c9118bf5fc4610d2b10c6e02dacd413fdf2c",
+  "production": "https://aesir-solar.vercel.app/",
+  "deploymentID": "dpl_JBB79R5SSMGdaF7RuEd2M8GMVZHA",
+  "deploymentURL": "https://aesir-solar-e7u70pgj8-aesir.vercel.app",
+  "state": "READY",
+  "rollbackDeployment": "dpl_4UgMm9CMihN4edUA7TwMexmxTSsw",
+  "viewportEvidence": "production/observations.json",
+  "routesEvidence": "production-routes/verification.json",
+  "providerConfigurationChanges": false,
+  "realSubmissions": false
+}
