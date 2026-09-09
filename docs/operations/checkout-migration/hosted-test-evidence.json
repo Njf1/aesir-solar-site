@@ -26,9 +26,16 @@
     "revokedTokenHttpStatus": 401,
     "ssoProtectionUnchanged": true,
     "previewWebhookSecretRemoved": true,
-    "productionChanged": false
+    "productionChanged": false,
+    "finalProtectedDeployment": "dpl_28wdjDfM4M7VoBHykBvC1JpHBKW8",
+    "testAlias": "https://aesir-solar-checkout-test.vercel.app",
+    "localListenerAndCredentialBridgeStopped": true
   },
   "deployment": "dpl_6SfdNt87BVxgaL3c8FHSPggFa5Nq",
   "date": "2026-09-09",
-  "sourceCommit": "c171d32"
+  "sourceCommit": "c171d32",
+  "finalFocusedBrowserChecks": {
+    "passed": 21,
+    "failed": 0
+  }
 }
