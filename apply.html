@@ -84,6 +84,13 @@
 
           <fieldset>
             <legend>Before you pay</legend>
+            <p class="hint">Confirm these points from your installer’s documentation. If any answer is uncertain, <a href="/contact.html">ask us before paying</a>. These checks do not confirm network approval.</p>
+            <div class="grid2" id="application-screening">
+              <p class="f"><label for="screen-existing">Existing premises; all existing generation is included</label><select id="screen-existing" data-screen="existing"><option value="">Please choose</option><option value="yes">Confirmed from the design</option><option value="unknown">Not confirmed / need help</option></select></p>
+              <p class="f"><label for="screen-units">Every generating unit’s intrinsic design capacity is at most 32 A per phase</label><select id="screen-units" data-screen="units"><option value="">Please choose</option><option value="yes">Confirmed from the documentation</option><option value="unknown">Not confirmed / outside this limit</option></select></p>
+              <p class="f"><label for="screen-tested">All new and existing generation/storage inverters are appropriately type tested</label><select id="screen-tested" data-screen="tested"><option value="">Please choose</option><option value="yes">Confirmed; references available</option><option value="unknown">Not confirmed / need help</option></select></p>
+              <p class="f"><label for="screen-phase">Per-phase AC ratings are documented; G100 limits export to 32 A per phase where total output exceeds 32 A</label><select id="screen-phase" data-screen="phase"><option value="">Please choose</option><option value="yes">Confirmed; balanced phase arrangement</option><option value="unknown">Not confirmed / unbalanced phases / need help</option></select></p>
+            </div>
             <div class="checks stack">
               <label class="chk"><input type="checkbox" id="agree" name="agree" required><span>I've read and accept the <a href="terms.html">terms of service</a> and <a href="refunds.html">refund policy</a>. <b aria-hidden="true">*</b></span></label>
               <label class="chk"><input type="checkbox" id="privacy" name="privacy" required><span>I understand how my data will be used, as set out in the <a href="privacy.html">privacy policy</a>, including sharing it with the relevant network operator to make this application. <b aria-hidden="true">*</b></span></label>

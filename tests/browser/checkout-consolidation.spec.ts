@@ -18,6 +18,7 @@ async function prepare(page: Page) {
   });
   await page.goto('/apply.html?campaign=checkout-review');
   for (const [name,value] of Object.entries(values)) await page.locator(`[name="${name}"]`).fill(value);
+  for(const key of ['existing','units','tested','phase'])await page.locator('#screen-'+key).selectOption('yes');
   await page.locator('[name="agree"]').check();
   await page.locator('[name="privacy"]').check();
   return {requests,escaped,errors};
@@ -137,3 +138,5 @@ test('checkout rate limits preserve entries and focus a useful contact explanati
  for(const[name,value]of Object.entries(values))await expect(page.locator(`[name="${name}"]`)).toHaveValue(value);
  expect(traffic.escaped).toEqual([]);
 });
+
+ test('uncertain suitability never starts payment and retains all original fields',async({page})=>{const traffic=await prepare(page);await page.locator('#screen-units').selectOption('unknown');await page.locator('#submitBtn').click();await expect(page.locator('#formNote')).toContainText('suitability');await expect(page.locator('#screen-units')).toBeFocused();expect(traffic.requests).toEqual([]);});

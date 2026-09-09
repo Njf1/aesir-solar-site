@@ -107,6 +107,7 @@ test('existing prefill keys keep their meanings and payment submission sends the
  await expect(form.locator('[name="kw"]')).toHaveValue('5.00');await expect(form.locator('[name="phases"]')).toHaveValue('3');await expect(form.locator('[name="g100"]')).toBeChecked();await expect(form.locator('[name="eps"]')).not.toBeChecked();
  const values={company:'Offline Test Ltd',contact:'Test Applicant',email:'test@example.invalid',phone:'0000000000',accreditation:'TEST-ONLY',address:'1 Test Street',postcode:'SW1A 1AA',mpan:'1012345678345',inverter:'Dummy inverter',typetest:'DUMMY/00000',kw:'5.00',storage:'4.2',target:'2027-01-14',notes:'Offline fixture only — do not create an application'};
  for(const[name,value]of Object.entries(values))await form.locator(`[name="${name}"]`).fill(value);
+ for(const key of ['existing','units','tested','phase'])await form.locator('#screen-'+key).selectOption('yes');
  await form.locator('[name="agree"]').check();await form.locator('[name="privacy"]').check();
  let submitted:any,hosted:any;
  // Registered after the generic guard: Playwright's newest matching route wins.
@@ -114,7 +115,7 @@ test('existing prefill keys keep their meanings and payment submission sends the
  await page.route('https://checkout.stripe.com/c/pay/fixture',async route=>{hosted={method:route.request().method(),body:route.request().postData()};await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><h1>Intercepted local payment fixture</h1>'});});
  await form.locator('#submitBtn').click();await expect(page.getByRole('heading',{name:'Intercepted local payment fixture'})).toBeVisible();
  for(const[name,value]of Object.entries(values))expect(submitted[name],name).toBe(value);
- expect(submitted.phases).toBe('3');expect(submitted.g100).toBe(true);expect(submitted.eps).toBe(false);expect(submitted.acceptedTerms).toBe(true);expect(submitted.acceptedPrivacy).toBe(true);expect(submitted.amountGBP).toBe('300.00');expect(Number.isFinite(Date.parse(submitted.submittedAt))).toBe(true);
+ expect(submitted.screening).toEqual({existing:'yes',units:'yes',tested:'yes',phase:'yes'});expect(submitted.phases).toBe('3');expect(submitted.g100).toBe(true);expect(submitted.eps).toBe(false);expect(submitted.acceptedTerms).toBe(true);expect(submitted.acceptedPrivacy).toBe(true);expect(submitted.amountGBP).toBe('300.00');expect(Number.isFinite(Date.parse(submitted.submittedAt))).toBe(true);
  expect(hosted).toEqual({method:'GET',body:null});expect(submitted.applicationId).toMatch(/^[a-f0-9-]{36}$/);expect(submitted.accessToken).toMatch(/^[a-f0-9]{64}$/);expect(traffic.api().map(r=>new URL(r.url).pathname)).toEqual(['/api/checkout']);clean(traffic);
 });
 

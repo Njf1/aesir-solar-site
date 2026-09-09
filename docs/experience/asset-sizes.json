@@ -1,5 +1,5 @@
 {
-  "measuredAt": "2026-09-09T12:43:37.994Z",
+  "measuredAt": "2026-09-09T14:32:02.648Z",
   "files": [
     {
       "file": "business-journey-ClVbJR9_.js",
@@ -140,22 +140,22 @@
       "sha256": "beeadf1dad6854b9a3d73d8aa0763781a92e37af3f9b9c98e1dd46e12c6f9f22"
     },
     {
-      "file": "suitability-3CoVNSE6.js",
+      "file": "suitability-BgHsVde0.js",
       "bytes": 50,
       "gzip": 70,
       "sha256": "9df234cd83c83ce6015899d4805dab01f8d27f470bb208b4209ac1dfa7b5fb2d"
-    },
-    {
-      "file": "suitability-BHZc_QzC.css",
-      "bytes": 30866,
-      "gzip": 7288,
-      "sha256": "01a60d3e233285555f5df30d6b5bbd15c9935c2a1f11818484962bd59f787441"
     },
     {
       "file": "suitability-DNA50b1D.js",
       "bytes": 2819,
       "gzip": 1291,
       "sha256": "e38ee3e37fc02c12fbad76584c494e5d27e9b80873b1c3f3daa75645db2a2bc7"
+    },
+    {
+      "file": "suitability-uiEimiqc.css",
+      "bytes": 31273,
+      "gzip": 7498,
+      "sha256": "a23a623b2e0d72163d6a887bc8de530f0d769f6c4d30af73f387e2322b026214"
     },
     {
       "file": "three.core-D3aJHFM9.js",

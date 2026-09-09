@@ -1,4 +1,5 @@
 import {configuration,services,verifySignature,retrieveApplication,verifyPayment,respondError,PaymentError,checkMerchant} from '../lib/solar-payments.js';
+import {deliverAlerts} from '../lib/solar-alerts.js';
 export const config={api:{bodyParser:false}};
 export default async function handler(req,res){
  res.setHeader('Cache-Control','no-store');
@@ -17,6 +18,9 @@ export default async function handler(req,res){
   const app=await retrieveApplication(svc,session.metadata.solar_application_id);
   const result=await verifyPayment(svc,cfg,app,session.id,event.id);
   if(result.status!=='paid')throw new PaymentError('payment_not_confirmed');
+  // The database trigger already saved the alert. Mail failure must not undo or
+  // misreport a verified payment; the scheduled worker will retry delivery.
+  try{await deliverAlerts(svc,cfg,{applicationId:app.id});}catch{console.warn('Solar alert queued for retry');}
   return res.status(200).json({received:true});
  }catch(error){return respondError(res,error);}
 }

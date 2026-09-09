@@ -58,5 +58,69 @@
   ],
   "buildCommand": "npm run build",
   "outputDirectory": ".release",
-  "framework": null
+  "framework": null,
+  "functions": {
+    "api/operations.js": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/operations",
+      "schedule": "*/10 * * * *"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/form-a",
+      "destination": "/apply",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/apply",
+      "permanent": true
+    },
+    {
+      "source": "/checkout",
+      "has": [
+        {
+          "type": "query",
+          "key": "key"
+        }
+      ],
+      "destination": "/success?legacy=1",
+      "permanent": false
+    },
+    {
+      "source": "/checkout/order-received/:path*",
+      "destination": "/success?legacy=1",
+      "permanent": false
+    },
+    {
+      "source": "/checkout/order-pay/:path*",
+      "destination": "/contact?legacy-order=1",
+      "permanent": false
+    },
+    {
+      "source": "/checkout",
+      "destination": "/apply",
+      "permanent": true
+    },
+    {
+      "source": "/shop",
+      "destination": "/#application-details",
+      "permanent": true
+    },
+    {
+      "source": "/product/begin-your-application",
+      "destination": "/#application-details",
+      "permanent": true
+    },
+    {
+      "source": "/my-account/:path*",
+      "destination": "/contact?existing-applicant=1",
+      "permanent": true
+    }
+  ]
 }

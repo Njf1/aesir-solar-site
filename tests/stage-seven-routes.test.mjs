@@ -28,10 +28,10 @@ test('untouched provider routes, helpers, input data and pinned dependencies ret
  // app.js intentionally removes the old checkout fallback. The new, currently
  // unwired protocol clients have separate cryptographic fixture tests; every old
  // handler/helper remains byte-protected until its explicit replacement.
- const retained=[...(await files('api')).filter(file=>!['api/checkout.js','api/application-status.js','api/stripe-webhook.js'].includes(file)),...(await files('lib')).filter(file=>!['lib/tyl-protocol.js','lib/commerce-hub.js','lib/solar-payments.js','lib/solar-recovery.js'].includes(file)),...await files('data'),'package-lock.json'];
- assert.equal((await files('api')).length,7,'Only the authorised Stripe status/webhook routes are added');
+ const retained=[...(await files('api')).filter(file=>!['api/checkout.js','api/application-status.js','api/stripe-webhook.js','api/operations.js'].includes(file)),...(await files('lib')).filter(file=>!['lib/tyl-protocol.js','lib/commerce-hub.js','lib/solar-payments.js','lib/solar-recovery.js','lib/solar-alerts.js'].includes(file)),...await files('data')];
+ assert.equal((await files('api')).length,8,'Only the authorised Stripe and private operations routes are added');
  for(const file of retained)assert.deepEqual(await readFile(path.join(ROOT,file)),baseline(file),file);
- const pkg=JSON.parse(await read('package.json')),old=JSON.parse(baseline('package.json'));assert.deepEqual(pkg.dependencies,old.dependencies);assert.deepEqual(pkg.devDependencies,old.devDependencies);assert.deepEqual(pkg.engines,old.engines);assert.equal(pkg.scripts.build,'python3 build.py && vite build && node scripts/assemble.mjs');
+ const pkg=JSON.parse(await read('package.json')),old=JSON.parse(baseline('package.json'));assert.deepEqual({...pkg.dependencies,nodemailer:undefined},{...old.dependencies,nodemailer:undefined});assert.equal(pkg.dependencies.nodemailer,'10.0.1');const lock=JSON.parse(await read('package-lock.json')),oldLock=JSON.parse(baseline('package-lock.json'));for(const [name,entry]of Object.entries(oldLock.packages)){if(name)assert.deepEqual(lock.packages[name],entry,name);}assert.ok(lock.packages['node_modules/nodemailer']);assert.deepEqual(pkg.devDependencies,old.devDependencies);assert.deepEqual(pkg.engines,old.engines);assert.equal(pkg.scripts.build,'python3 build.py && vite build && node scripts/assemble.mjs');
  // Known backend defects remain documented, not blessed as success criteria.
  const blockers=await read('docs/experience/backend-blockers.md');assert.match(blockers,/durab/i);assert.match(blockers,/idempoten/i);assert.match(blockers,/amount.*currency|currency.*amount/i);
 });
@@ -182,3 +182,5 @@ test('suitability preserves unknown and zero distinctions and never creates a pa
  // can waive export limitation at aggregate <=32 A. The UI must remain tentative.
  const single=assessSuitability({...base,aggregateCurrent:21.74,unitCurrent:21.74});assert.doesNotMatch(single.title+single.copy,/SGI.?2/);assert.match(single.copy,/intrinsic|documentation|documents/);
 });
+
+test('WordPress entry links migrate explicitly without swallowing APIs or claiming old payments succeeded',async()=>{const v=JSON.parse(await read('vercel.json')),routes=v.redirects;for(const source of ['/form-a','/cart','/checkout'])assert.ok(routes.some(r=>r.source===source&&r.destination==='/apply'));assert.ok(routes.some(r=>r.source==='/checkout/order-received/:path*'&&r.destination==='/success?legacy=1'));assert.ok(routes.some(r=>r.source==='/checkout/order-pay/:path*'&&r.destination.startsWith('/contact')));assert.ok(routes.some(r=>r.source==='/product/begin-your-application'&&r.destination==='/#application-details'));assert.ok(!routes.some(r=>r.source.startsWith('/api')||r.source==='/:path*'));assert.equal(v.crons.length,1);assert.equal(v.crons[0].path,'/api/operations');});

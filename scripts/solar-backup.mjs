@@ -13,7 +13,7 @@ const url=process.env.SUPABASE_URL,key=process.env.SUPABASE_SECRET_KEY;
 if(url!=='https://gkxwaeoknypueqbcqhtl.supabase.co'||!key?.startsWith('sb_secret_'))throw new Error('Solar database not configured');
 const response=await fetch(url+'/rest/v1/rpc/solar_backup',{method:'POST',headers:{apikey:key,'Content-Type':'application/json'},body:'{}',signal:AbortSignal.timeout(30000)});
 if(!response.ok)throw new Error('Backup snapshot unavailable');
-const snapshot=await response.json();if(snapshot.schema_version!==1)throw new Error('Unknown backup schema');
+const snapshot=await response.json();if(![1,2].includes(snapshot.schema_version))throw new Error('Unknown backup schema');
 const plain=Buffer.from(JSON.stringify(snapshot)),keyFile=path.join(target,'backup.key');
 let encryptionKey;try{encryptionKey=await readFile(keyFile);}catch(e){if(e.code!=='ENOENT')throw e;encryptionKey=randomBytes(32);await writeFile(keyFile,encryptionKey,{mode:0o600,flag:'wx'});}
 if(encryptionKey.length!==32)throw new Error('Invalid backup encryption key');

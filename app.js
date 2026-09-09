@@ -336,12 +336,25 @@
         return;
       }
 
+      var screening = {}, unknownScreen = null;
+      Array.prototype.forEach.call(form.querySelectorAll('[data-screen]'), function (el) {
+        screening[el.dataset.screen] = el.value;
+        el.setAttribute('aria-invalid', el.value === 'yes' ? 'false' : 'true');
+        if (el.value !== 'yes' && !unknownScreen) unknownScreen = el;
+      });
+      if (unknownScreen) {
+        note.textContent = 'Please confirm the documented suitability points before payment. If a point is uncertain or outside this route, contact Aesir Solar for a review. ';
+        var help = document.createElement('a'); help.href = '/contact.html'; help.textContent = 'Discuss suitability'; note.appendChild(help);
+        note.classList.add('err'); unknownScreen.focus(); return;
+      }
+
       note.classList.remove('err');
       note.textContent = 'Saving your application and preparing secure payment…';
       btn.disabled = true;
 
       /* collect */
       var data = {};
+      data.screening = screening;
       new FormData(form).forEach(function (v, k) { data[k] = v; });
       data.g100 = !!(document.getElementById('fg100') || {}).checked;
       data.eps = !!(document.getElementById('feps') || {}).checked;

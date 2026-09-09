@@ -1,8 +1,8 @@
-import {configuration,services,identity,validateApplication,digest,POLICY_VERSION,checkMerchant,sessionPayload,sessionMatches,verifyPayment,jsonBody,postOnly,respondError,PaymentError,rateIdentity} from '../lib/solar-payments.js';
+import {configuration,services,identity,validateApplication,digest,POLICY_VERSION,checkMerchant,sessionPayload,sessionMatches,verifyPayment,jsonBody,postOnly,respondError,PaymentError,rateIdentity,requestOrigin} from '../lib/solar-payments.js';
 export default async function handler(req,res){
  if(!postOnly(req,res))return;
  try{
-  const cfg=configuration();if(req.headers.origin!==cfg.origin)throw new PaymentError('invalid_origin',403);
+  const cfg=configuration();cfg.origin=requestOrigin(req,cfg);
   const body=jsonBody(req),{id,tokenHash}=identity(body),details=validateApplication(body),svc=services(cfg);
   await checkMerchant(svc,cfg);
   const rate=cfg.livemode?rateIdentity(req,cfg):null;

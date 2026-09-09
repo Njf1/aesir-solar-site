@@ -1,8 +1,8 @@
-import {configuration,services,identity,retrieveApplication,verifyPayment,jsonBody,postOnly,respondError,PaymentError,checkMerchant} from '../lib/solar-payments.js';
+import {configuration,services,identity,retrieveApplication,verifyPayment,jsonBody,postOnly,respondError,PaymentError,checkMerchant,requestOrigin} from '../lib/solar-payments.js';
 export default async function handler(req,res){
  if(!postOnly(req,res))return;
  try{
-  const cfg=configuration();if(req.headers.origin!==cfg.origin)throw new PaymentError('invalid_origin',403);
+  const cfg=configuration();requestOrigin(req,cfg);
   const {id,tokenHash}=identity(jsonBody(req)),svc=services(cfg),app=await retrieveApplication(svc,id);
   if(app.livemode!==cfg.livemode)throw new PaymentError('application_not_found',404);
   if(app.token_hash!==tokenHash)throw new PaymentError('application_not_found',404);
