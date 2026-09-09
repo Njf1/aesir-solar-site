@@ -1,0 +1,129 @@
+[
+  {
+    "id": 608,
+    "title": "Untitled Snippet",
+    "status": "publish",
+    "length": 521,
+    "paymentMatch": false,
+    "hooks": [
+      "woocommerce_checkout_fields"
+    ],
+    "urlHosts": []
+  },
+  {
+    "id": 601,
+    "title": "Untitled Snippet",
+    "status": "publish",
+    "length": 631,
+    "paymentMatch": false,
+    "hooks": [],
+    "urlHosts": []
+  },
+  {
+    "id": 600,
+    "title": "Untitled Snippet",
+    "status": "publish",
+    "length": 805,
+    "paymentMatch": false,
+    "hooks": [
+      "woocommerce_product_add_to_cart_text",
+      "woocommerce_product_single_add_to_cart_text"
+    ],
+    "urlHosts": []
+  },
+  {
+    "id": 530,
+    "title": "Untitled Snippet",
+    "status": "publish",
+    "length": 295,
+    "paymentMatch": false,
+    "hooks": [],
+    "urlHosts": []
+  },
+  {
+    "id": 525,
+    "title": "Untitled Snippet",
+    "status": "publish",
+    "length": 263,
+    "paymentMatch": false,
+    "hooks": [
+      "single_product_archive_thumbnail_size"
+    ],
+    "urlHosts": []
+  },
+  {
+    "id": 455,
+    "title": "Untitled Snippet",
+    "status": "trash",
+    "length": 1298,
+    "paymentMatch": false,
+    "hooks": [
+      "woocommerce_add_to_cart"
+    ],
+    "urlHosts": []
+  },
+  {
+    "id": 454,
+    "title": "Untitled Snippet",
+    "status": "trash",
+    "length": 122,
+    "paymentMatch": false,
+    "hooks": [
+      "woocommerce_enable_order_notes_field"
+    ],
+    "urlHosts": []
+  },
+  {
+    "id": 453,
+    "title": "Untitled Snippet",
+    "status": "trash",
+    "length": 825,
+    "paymentMatch": false,
+    "hooks": [],
+    "urlHosts": [],
+    "reviewNote": "Manual inspection: page-scroll JavaScript only. The initial broad text search matched the substring tyl in style; no payment integration."
+  },
+  {
+    "id": 448,
+    "title": "Freeze page/ Checkout allowed to scroll",
+    "status": "publish",
+    "length": 648,
+    "paymentMatch": false,
+    "hooks": [],
+    "urlHosts": []
+  },
+  {
+    "id": 415,
+    "title": "Untitled Snippet",
+    "status": "publish",
+    "length": 66,
+    "paymentMatch": false,
+    "hooks": [],
+    "urlHosts": []
+  },
+  {
+    "id": 413,
+    "title": "Display a message after the 1st paragraph of posts",
+    "status": "draft",
+    "length": 59,
+    "paymentMatch": false,
+    "hooks": [],
+    "urlHosts": []
+  },
+  {
+    "id": 414,
+    "title": "Completely Disable Comments",
+    "status": "draft",
+    "length": 1239,
+    "paymentMatch": false,
+    "hooks": [
+      "admin_init",
+      "comments_open",
+      "pings_open",
+      "comments_array",
+      "admin_menu",
+      "init"
+    ],
+    "urlHosts": []
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "created": "2026-09-09",
+  "location": "Private recovery folder outside all Git repositories; excluded from site build and Vercel deployment.",
+  "scope": "Full WordPress files except regenerable cache, litespeed, upgrade and provider-restore directories; transactional SQL export.",
+  "restorationTest": "Archives verified for readability and structure. No database restore or live-site restore performed.",
+  "exports": [
+    {
+      "kind": "database",
+      "bytes": 1425955,
+      "sha256": "4fb18d1bcc58130ab8d01990aa90d1bb8173ed6c28450af5a6759234528c5f5a",
+      "elapsed_seconds": 3.2,
+      "checks": {
+        "complete_dump": true,
+        "create_table_count": 67,
+        "hpos_orders": true
+      }
+    },
+    {
+      "kind": "files",
+      "bytes": 273181820,
+      "sha256": "7e8174ed5800531aa2a9d882f34f01374a2b0e5984b324e307de078655efc75c",
+      "elapsed_seconds": 99.58,
+      "checks": {
+        "wp_config": true,
+        "woocommerce": true,
+        "themes": true,
+        "members": 34245
+      }
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # Checkout and real-domain consolidation — work in progress
 
-Inspected **9 September 2026**. This is a local migration checkpoint, **not a deployed fix or a working transaction certification**.
+Inspected **9 September 2026**, including authorized Fasthosts/WordPress/SSH access. This is a local migration checkpoint, **not a deployed fix or a working transaction certification**.
+
+Latest: [authenticated inspection, private recovery and direct Tyl preparation](authenticated-inspection.md). User explicitly prefers the direct Tyl route without renewing AG. Direct code exists, but the Vercel payment configuration is empty.
 
 ## What is broken
 
@@ -22,7 +24,7 @@ Three practical contracts must be completed:
 - Public DNS points to `109.228.34.97` / `2a00:da00:100f:f000::200`, with Fasthosts `livedns.co.uk` nameservers. Mail uses `mailserver.livemail.co.uk`; website cutover must preserve mail records and other unrelated DNS.
 - Vercel currently has only `aesir-solar.vercel.app` assigned. Root/www real-domain assignment has not been changed.
 
-The old page is the merchant's WooCommerce billing page **before** Tyl. It is not evidence that Tyl itself requires that old design. Public inspection identifies the gateway family; its installed version, credentials, mode, webhook settings and actual order-processing behavior still require authenticated inspection.
+The old page is the merchant's WooCommerce billing page **before** Tyl. It is not evidence that Tyl itself requires that old design. Authenticated inspection identifies AG 1.7.10, live sale settings, saved merchant credentials and the historical callback implementation. A separate direct Tyl integration was not found in WordPress custom code. Tyl account configuration and sandbox access remain to be checked.
 
 ## Local implementation prepared
 
@@ -32,21 +34,19 @@ The old page is the merchant's WooCommerce billing page **before** Tyl. It is no
 - Terms/privacy payment-route wording now describes the Tyl-only candidate; fee, refund terms and other policy sections remain unchanged.
 - Old byte fixtures were relaxed only for intentionally changed `app.js`. Existing server handlers/helpers/data/dependency bytes remain protected. **Their existing operational defects remain unresolved.**
 
-**Do not deploy this frontend change by itself.** With the current empty production configuration it would stop the unwanted fallback but would not provide a functioning replacement payment route. No code, DNS, settings or credentials were changed on production in this task.
+**Do not deploy this frontend change by itself.** With the current empty production configuration it would stop the unwanted fallback but would not provide a functioning replacement payment route. No production code, DNS or payment configuration was changed. Authorized temporary SSH credentials were generated for inspection and private backups.
 
-## Access needed to complete the work
+## Access status
 
-Requested signed-in browser access to:
+Fasthosts, WordPress admin and temporary SSH/SFTP access are working. Existing merchant configuration was found securely; no need to send its secrets in chat. The old site and database now have private recovery archives, with structural checks recorded in [recovery-manifest.json](recovery-manifest.json).
 
-1. **WordPress admin for aesirsolar.co.uk** — inspect the installed AG Tyl gateway version/settings (without copying secrets into chat), checkout setup, stored application/order fields, callbacks, refund handling and backup capability.
-2. **Fasthosts** — inspect web hosting, backups, DNS and a safe private origin/admin arrangement. Retiring old public pages must not destroy transaction history or break merchant notifications.
-3. **Tyl merchant administration** — establish whether the account uses Classic Connect, confirm configured return/notification paths and hosted-page branding, and obtain/use a separate test environment through an approved secret channel. The merchant account must remain the existing one.
+**Fiserv gateway sign-in remains pending.** The user has signed into the Tyl sales portal, which shows Premier Composites stores. Its own Virtual Terminal link opens a separate gateway login; the store number saved on Aesir is prefilled there. Confirm the intended merchant/store, direct hosted-payment configuration, account-supported result verification, return/notification settings, hosted-page branding and separate sandbox access. Do not enable production payments merely by copying the recovered live credentials into Vercel.
 
-Authenticated access has not yet been supplied. Do not choose an arbitrary new database or change merchant/API product merely because the new frontend is on Vercel. Reusing WooCommerce as the order/payment back office behind the new customer experience is a candidate to assess after inspection; it is not implemented or presumed verified.
+A new local protocol helper is prepared and tested but not wired into handlers. It does not implement durable intake, atomic settlement or an Aesir work queue. Full details and limits are in [authenticated-inspection.md](authenticated-inspection.md).
 
 ## Remaining acceptance and cutover
 
-1. Back up old files/database/settings and verify a restore path; preserve historical orders, refunds and any existing applicant records.
+1. Private file/database exports are complete and structurally verified. Test restoration in isolation before cutover; preserve historical orders, refunds and any existing applicant records.
 2. Select and implement the durable intake/payment route with all original answers and server-recorded consents. Server controls amount/currency/quantity and application suitability handling. Unknown cases must not become certified eligibility.
 3. Verify signed notifications against the expected stored transaction, including reference, amount, currency and final status; test duplicates, out-of-order notifications, retries, declined/pending/cancelled outcomes and return-before-notification. A browser return/query string is not proof. Create exactly one actionable work item.
 4. Reuse the existing Tyl merchant, style all merchant-owned pages consistently, and apply the supported branding on the Tyl-hosted page. Keep card data on Tyl. Test through the account's documented test environment with no live charges.
@@ -66,7 +66,7 @@ Accessed 9 September 2026:
 ## Verification and recovery
 
 - `npm run build`, `npm run typecheck`: passed.
-- `npm test`: **84/84 Node checks**.
+- `npm test`: **90/90 Node checks** (84 existing plus six new protocol checks); rerun after the authenticated-inspection preparation.
 - Focused application/route browser regression: **18/18** (four new checkout cases plus fourteen existing route/form/access cases). This is **not** a full cinematic-suite rerun.
 - Additional local visual review: see [`local-browser-review.json`](local-browser-review.json). Chromium and WebKit at 1280×720, 1600×1000, 390×844, 740×900 and 1000×500. All traffic local/mocked; no physical-phone certification.
 - Review hardware: Apple M4 MacBook Air, 16 GB. Chrome for Testing **151.0.7922.34**, Playwright WebKit **26.6**. Ten viewport captures/checks passed. The narrow WebKit and desktop Chromium error/help compositions were also visually inspected; labels, consents, fee and contact remain legible.
