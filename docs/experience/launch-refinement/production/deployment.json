@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-09-09T00:12:42.911806+00:00",
+  "sourceCommit": "88c8884141c728ff8758253fcd943f881639dce2",
+  "deploymentId": "dpl_Er9QBEKjBoaN1x4jfqQNZ12VRTNp",
+  "deploymentURL": "https://aesir-solar-mvcdg2b7d-aesir.vercel.app",
+  "productionAlias": "https://aesir-solar.vercel.app/",
+  "readyState": "READY",
+  "target": "production",
+  "rollbackDeployment": "dpl_FDWdfALkrgQV7BFPVchafM1hYxZw",
+  "method": "Vercel CLI prebuilt production build, pinned source commit metadata",
+  "providerConfigurationChanged": false,
+  "realApplicationsOrPayments": 0,
+  "customDomainChanged": false,
+  "indexing": "noindex retained pending operational readiness",
+  "verification": "production/verification.json"
+}

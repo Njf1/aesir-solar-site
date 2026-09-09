@@ -2,7 +2,7 @@
 
 Final checks: type checking and build passed; **82 Node tests / 118 browser checks passed**, full suites. Generator parity passed. All five scene and page captures, and the two new forward/reverse recordings, reported no browser errors or warnings. Deliberate failure tests are separately isolated.
 
-Host: Apple M4 MacBook Air 16GB (Mac16,13), Chrome for Testing 151.0.7922.34 with ANGLE Metal. These are desktop/phone-sized viewport runs; no physical-phone certification or broad Safari/Firefox claim.
+Host: Apple M4 MacBook Air 16GB (Mac16,13), Chrome for Testing 151.0.7922.34 with ANGLE Metal. These are desktop/phone-sized viewport runs; no physical-phone certification or broad Safari/Firefox claim. A separate native Safari 26.6.2 public smoke review passed the sampled scenes, Pause, Skip, application and Back; its limits and captures are recorded under production/safari/.
 
 The five viewports were 1280×720, 1600×1000, 390×844, 740×900, 1000×500. Eight scenes (Sun, Earth, panel, cell, inverter, business, storage, brand) each retained a **16.7ms median** frame interval; p95 ranged **17.8–18.7ms**. Opening readiness was **118–132ms** on loopback; lazy owner first-use readiness **34.2–95.2ms**. These measure rAF cadence and local loading, not GPU execution or internet/phone speed.
 

@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-09-09T00:17:45.012553+00:00",
+  "browser": "Safari 26.6.2",
+  "hardware": "Apple M4 MacBook Air 16GB",
+  "viewportEvidence": "Native Safari window screenshot; not a mobile-device or complete browser suite",
+  "url": "https://aesir-solar.vercel.app/",
+  "checked": [
+    "Sun approach",
+    "lazy scene holds and readiness on large forward scroll",
+    "revised moving packing line",
+    "Pause sampled twice",
+    "steady battery framing",
+    "final restored facade",
+    "Skip/focus on offer",
+    "original application form without submission",
+    "Back to #application-details"
+  ],
+  "limits": [
+    "No Safari console/performance audit",
+    "No Safari WebDriver settings changed",
+    "No physical phone",
+    "No complete Firefox coverage",
+    "No submission, payment or messages"
+  ],
+  "pauseComparison": {
+    "method": "FFmpeg SSIM on equal central crops of two temporally separated paused screenshots, excluding browser chrome and bottom pointer/control area",
+    "ssim": 1.0,
+    "crop": "width .90, height .72, x .04, y .14 of the native capture"
+  }
+}
