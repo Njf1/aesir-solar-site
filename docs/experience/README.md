@@ -1,5 +1,7 @@
 # Aesir Solar — current experience
 
+Latest controls update: [consistent mobile Skip and discreet image credits](mobile-controls/README.md), from clean `af1a425`. Transparent Skip, vector action arrows and measured copy clearance preserve text enlargement; full NASA attribution now has a native linked destination.
+
 Latest viewport correction: [full-height mobile rendering](mobile-viewport/README.md), from clean `b1ded61`. The stage follows the current browser viewport while travel remains stable through browser-bar changes; rotation, Pause/stills and application focus are covered.
 
 Latest focused update: [homepage startup flash repair](startup-flash/README.md), based on clean `f84af02`. The close-up fallback no longer appears before the distant opening; the accepted film and application contracts are preserved.

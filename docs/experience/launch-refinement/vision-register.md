@@ -8,6 +8,7 @@ The film retains **23 chapters, 12 still alternatives, 6.08 units and 34.048 use
 
 - `/` immediately presents the application offer after the film, then three practical steps, a suitability route, four concise questions and links to more information.
 - `/solar.html` owns the generation/import relationship, economics, equipment/warranty distinctions, sustainability, optional storage/resilience, monitoring, full dated record/chart/table and the scientific explanation.
+- `/solar.html#image-credits` retains the NASA surface/cloud and voluntary Natural Earth acknowledgements, now reached through a discreet homepage footer link. The [mobile-control refinement](../mobile-controls/README.md) also covers transparent Skip, vector arrows, enlarged text and control/copy separation.
 - `/suitability.html` owns the conservative documented-AC checker and its contact-only results.
 - `/faq.html` owns complete service/refusal/change/error/refund and storage questions. `/contact.html` retains direct email and applicant-support context.
 - `/apply.html` keeps all 19 named fields, both consents and the unchanged provider controller. Original API contracts survive as Vercel functions, not public static source files.

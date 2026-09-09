@@ -6,7 +6,7 @@ Updated 9 September 2026. Generated pages are owned by `templates/site/` and `bu
 | --- | --- |
 | `/`, `/index`, `/index.html`, `/experience`, `/experience.html` | Cinematic homepage, immediate `#application-details` offer, compact process/suitability/FAQ/evidence links. |
 | `/apply`, `/apply.html` | Same 19 named controls, both required consents, original validation, prefill/cancellation context, £300 and provider selection. No film download. |
-| `/solar`, `/solar.html` | Complete supporting solar explanation, claims/sources and dated Tigo transcription with accessible hourly chart/table. No film download. |
+| `/solar`, `/solar.html` | Complete supporting solar explanation, claims/sources and dated Tigo transcription with accessible hourly chart/table. `#image-credits` retains the full Earth/cloud/coastline acknowledgement, linked discreetly from the homepage footer. No film download. |
 | `/suitability`, `/suitability.html` | Documented-AC guide, conservative client checker, contact-only outcomes; not certification or server enforcement. Small standalone enhancement; no film. |
 | `/faq`, `/faq.html` | Complete native FAQ page, replacing the prior automatic homepage redirect. |
 | `/contact`, `/contact.html` | Direct supplied email, useful enquiry fields and help for existing applicants. |

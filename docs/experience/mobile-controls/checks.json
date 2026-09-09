@@ -1,0 +1,33 @@
+{
+  "baseline": "af1a425",
+  "typecheck": "passed",
+  "build": "passed",
+  "generatedPages": "in-sync",
+  "nodeTests": {
+    "passed": 82,
+    "failed": 0
+  },
+  "fullBrowserSuite": {
+    "passed": 170,
+    "failed": 0,
+    "chromium": 160,
+    "webkit": 10
+  },
+  "focusedChecks": {
+    "passed": 22,
+    "failed": 0
+  },
+  "delivery": {
+    "javascriptGzipBytes": 255082,
+    "mediaBytes": 1844085,
+    "homepageCssGzipBytes": 8382,
+    "budgetsPass": true
+  },
+  "hardware": "Apple M4 MacBook Air 16GB",
+  "browserEngines": [
+    "Chromium 151.0.7922.34",
+    "Playwright WebKit 26.6"
+  ],
+  "physicalPhonesTested": false,
+  "providersIsolated": true
+}

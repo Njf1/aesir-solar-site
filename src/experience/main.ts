@@ -9,6 +9,7 @@ const journey=document.querySelector<HTMLElement>('#journey')!;
 const stage=document.querySelector<HTMLElement>('#stage')!;
 const host=document.querySelector<HTMLElement>('#canvas-host')!;
 const applicationDetails=document.querySelector<HTMLElement>('#application-details')!;
+const skipLink=document.querySelector<HTMLElement>('.skip-link')!;
 const pauseButton=document.querySelector<HTMLButtonElement>('#pause-motion')!;
 const stillViews=document.querySelector<HTMLElement>('#still-views')!;
 const status=document.querySelector<HTMLElement>('#fallback-status')!;
@@ -52,6 +53,9 @@ function frameLayout() {
   const expected=mode==='portrait'?Math.max(34,Math.min(54,width*.08)):mode==='short'?Math.max(28,Math.min(48,width*.044)):Math.max(40,Math.min(84,width*.053));
   const font=parseFloat(getComputedStyle(panels[0].querySelector('h1')!).fontSize);
   document.body.dataset.largeType=String(font>expected*1.4);
+  // Reserve the real control height, including browser/user text enlargement.
+  // This is layout-only: resizing must not change the authored camera position.
+  stage.style.setProperty('--copy-safe-top',`${mode==='portrait'?skipLink.offsetTop+skipLink.offsetHeight+12:0}px`);
 }
 frameLayout();
 function stop(){cancelAnimationFrame(frame);frame=0;lastTime=0;lastMeasure=0;}
@@ -153,7 +157,7 @@ async function init() {
       // Changing a drawing buffer clears it. Repaint before this resize is
       // presented, including while paused; never advance the supplied clock.
       else if(resized&&onscreen&&!document.hidden)scene.render(0);
-    });resizeObserver.observe(host);resizeObserver.observe(journey);for(const panel of panels)resizeObserver.observe(panel);
+    });resizeObserver.observe(host);resizeObserver.observe(journey);resizeObserver.observe(skipLink);for(const panel of panels)resizeObserver.observe(panel);
     pauseButton.addEventListener('click',togglePause);stillViews.addEventListener('click',changeStill);document.addEventListener('visibilitychange',visibility);reduced.addEventListener('change',configureMotion);window.addEventListener('pagehide',onPageHide);window.addEventListener('pageshow',onPageShow);
   } catch(error) {console.error('Experience could not start:',error);fallback('A still moment from the journey. Application details are ready below.');}
   finally {clearTimeout(timeout);}

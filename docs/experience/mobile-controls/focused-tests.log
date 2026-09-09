@@ -1,0 +1,31 @@
+
+Running 22 tests using 1 worker
+
+(node:34942) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 375×667 (994ms)
+  ✓   2 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 390×844 (712ms)
+  ✓   3 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 740×900 (633ms)
+  ✓   4 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 1000×500 (801ms)
+  ✓   5 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 1280×720 (865ms)
+  ✓   6 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 1600×1000 (711ms)
+  ✓   7 tests/browser/helpers/mobile-controls.ts:37:73 › webkit mobile controls › explicit 200% text remains enlarged and clear of Skip at 390px (618ms)
+  ✓   8 tests/browser/helpers/mobile-controls.ts:37:73 › webkit mobile controls › explicit 200% text remains enlarged and clear of Skip at 1280px (767ms)
+  ✓   9 tests/browser/helpers/mobile-controls.ts:48:2 › webkit mobile controls › Skip works before the scene loads and keeps the correct destination (363ms)
+  ✓  10 tests/browser/helpers/mobile-controls.ts:58:2 › webkit mobile controls › image credits are a native, attributed destination without JavaScript or 3D (371ms)
+(node:35000) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 375×667 (1.1s)
+  ✓  12 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 390×844 (858ms)
+  ✓  13 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 740×900 (880ms)
+  ✓  14 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 1000×500 (882ms)
+  ✓  15 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 1280×720 (888ms)
+  ✓  16 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 1600×1000 (873ms)
+  ✓  17 tests/browser/helpers/mobile-controls.ts:37:73 › chromium mobile controls › explicit 200% text remains enlarged and clear of Skip at 390px (760ms)
+  ✓  18 tests/browser/helpers/mobile-controls.ts:37:73 › chromium mobile controls › explicit 200% text remains enlarged and clear of Skip at 1280px (800ms)
+  ✓  19 tests/browser/helpers/mobile-controls.ts:48:2 › chromium mobile controls › Skip works before the scene loads and keeps the correct destination (366ms)
+  ✓  20 tests/browser/helpers/mobile-controls.ts:58:2 › chromium mobile controls › image credits are a native, attributed destination without JavaScript or 3D (392ms)
+  ✓  21 tests/browser/stage-six.spec.ts:276:2 › 640×360 DPR2 zoom-equivalent short viewport › keeps the operating caption readable and all twelve still labels, payoff and status accessible (1.1s)
+  ✓  22 tests/browser/stage-three.spec.ts:90:1 › new scene copy remains separate from controls with enlarged text (1.2s)
+
+  22 passed (18.3s)

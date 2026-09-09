@@ -1,0 +1,234 @@
+
+> aesir-solar@1.0.0 test:browser
+> playwright test
+
+
+Running 168 tests using 1 worker
+
+(node:31380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 tests/browser/experience.spec.ts:5:1 › opening, reverse, pause, resize, skip and browser Back preserve access (2.2s)
+  ✓    2 tests/browser/experience.spec.ts:17:1 › CTA works before readiness and skip remains at details when bundle finishes (282ms)
+  ✓    3 tests/browser/experience.spec.ts:25:1 › no JavaScript retains service, price, links and short layout (285ms)
+  ✓    4 tests/browser/experience.spec.ts:31:1 › reduced motion freezes ambient time and removes extended scroll (522ms)
+  ✓    5 tests/browser/experience.spec.ts:36:1 › WebGL unavailable uses composed fallback and working links (238ms)
+  ✓    6 tests/browser/experience.spec.ts:41:1 › context loss stays in fallback when motion preference changes (205ms)
+  ✓    7 tests/browser/experience.spec.ts:47:1 › failed scene bundle leaves usable HTML (219ms)
+  ✓    8 tests/browser/experience.spec.ts:51:1 › offscreen stops the renderer and native keyboard reaches conversion (803ms)
+  ✓    9 tests/browser/experience.spec.ts:55:1 › all preserved clean and html routes resolve; APIs are local stubs, never HTML (104ms)
+  ✓   10 tests/browser/experience.spec.ts:60:1 › hidden-page lifecycle stops ambient work and resumes on visibility (620ms)
+  ✓   11 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: laptop (278ms)
+  ✓   12 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: desktop (244ms)
+  ✓   13 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: portrait (246ms)
+  ✓   14 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: intermediate (269ms)
+  ✓   15 tests/browser/launch-refinement.spec.ts:3:38 › supporting guidance remains readable at enlarged text: short (273ms)
+  ✓   16 tests/browser/launch-refinement.spec.ts:19:1 › short homepage keeps offer first and sends further detail to complete native pages (656ms)
+  ✓   17 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 375×667 (801ms)
+  ✓   18 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 390×844 (769ms)
+  ✓   19 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 740×900 (770ms)
+  ✓   20 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 1000×500 (786ms)
+  ✓   21 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 1280×720 (785ms)
+  ✓   22 tests/browser/helpers/mobile-controls.ts:27:96 › chromium mobile controls › quiet Skip, clear copy and reverse navigation at 1600×1000 (785ms)
+  ✓   23 tests/browser/helpers/mobile-controls.ts:37:2 › chromium mobile controls › explicit 200% text remains enlarged, readable and clear of Skip (680ms)
+  ✓   24 tests/browser/helpers/mobile-controls.ts:48:2 › chromium mobile controls › Skip works before the scene loads and keeps the correct destination (298ms)
+  ✓   25 tests/browser/helpers/mobile-controls.ts:58:2 › chromium mobile controls › image credits are a native, attributed destination without JavaScript or 3D (291ms)
+  ✓   26 tests/browser/stage-five.spec.ts:43:2 › delayed business holds its exact earlier pose and copy, then resumes without another scroll (1.2s)
+  ✓   27 tests/browser/stage-five.spec.ts:64:2 › failed business import preserves the service and cannot restart after preferences change (570ms)
+  ✓   28 tests/browser/stage-five.spec.ts:73:2 › business import deadline removes the scene and late completion cannot resurrect it (9.0s)
+  ✓   29 tests/browser/stage-five.spec.ts:84:2 › rapid keyboard Skip remains at the application after late business completion (1.4s)
+  ✓   30 tests/browser/stage-five.spec.ts:96:2 › a delayed business still refreshes its selected scene and copy without another click (1.8s)
+  ✓   31 tests/browser/stage-five.spec.ts:107:57 › business pending GPU readiness cancels cleanly on timeout (8.9s)
+  ✓   32 tests/browser/stage-five.spec.ts:107:57 › business pending GPU readiness cancels cleanly on context loss (926ms)
+  ✓   33 tests/browser/stage-five.spec.ts:121:2 › context loss in the ready business view leaves the application accessible (652ms)
+  ✓   34 tests/browser/stage-five.spec.ts:43:2 › delayed storage holds its exact earlier pose and copy, then resumes without another scroll (1.2s)
+  ✓   35 tests/browser/stage-five.spec.ts:64:2 › failed storage import preserves the service and cannot restart after preferences change (670ms)
+  ✓   36 tests/browser/stage-five.spec.ts:73:2 › storage import deadline removes the scene and late completion cannot resurrect it (9.0s)
+  ✓   37 tests/browser/stage-five.spec.ts:84:2 › rapid keyboard Skip remains at the application after late storage completion (1.4s)
+  ✓   38 tests/browser/stage-five.spec.ts:96:2 › a delayed storage still refreshes its selected scene and copy without another click (1.8s)
+  ✓   39 tests/browser/stage-five.spec.ts:107:57 › storage pending GPU readiness cancels cleanly on timeout (9.0s)
+  ✓   40 tests/browser/stage-five.spec.ts:107:57 › storage pending GPU readiness cancels cleanly on context loss (1.1s)
+  ✓   41 tests/browser/stage-five.spec.ts:121:2 › context loss in the ready storage view leaves the application accessible (717ms)
+  ✓   42 tests/browser/stage-five.spec.ts:130:2 › desktop: four new stills preserve readable HTML, selection, frozen time and old still access (2.1s)
+  ✓   43 tests/browser/stage-five.spec.ts:146:2 › desktop: complete warmed reversal reuses new owners, buffers, textures and requests (27.2s)
+  ✓   44 tests/browser/stage-five.spec.ts:130:2 › portrait: four new stills preserve readable HTML, selection, frozen time and old still access (893ms)
+  ✓   45 tests/browser/stage-five.spec.ts:146:2 › portrait: complete warmed reversal reuses new owners, buffers, textures and requests (27.4s)
+  ✓   46 tests/browser/stage-five.spec.ts:173:1 › inverter labels clear before business entry and restore when reversing to the inverter (1.3s)
+  ✓   47 tests/browser/stage-five.spec.ts:183:1 › enlarged storage labels fit the viewport and stay separate from the main statement (634ms)
+  ✓   48 tests/browser/stage-five.spec.ts:191:1 › portrait still controls remain clear of the status message and retain real hit targets (193ms)
+  ✓   49 tests/browser/stage-five.spec.ts:197:1 › application navigation and browser Back return to a usable ending (1.2s)
+  ✓   50 tests/browser/stage-five.spec.ts:206:1 › cached shadows refresh for first storage readiness, visibility reversal and then remain settled (2.0s)
+  ✓   51 tests/browser/stage-five.spec.ts:220:107 › portrait: scientific still notes clear the expanded controls (671ms)
+  ✓   52 tests/browser/stage-five.spec.ts:220:107 › short: scientific still notes clear the expanded controls (832ms)
+  ✓   53 tests/browser/stage-four-warnings.spec.ts:11:2 › desktop: first site entry and repeated entries produce no console warnings (2.6s)
+  ✓   54 tests/browser/stage-four-warnings.spec.ts:11:2 › portrait: first site entry and repeated entries produce no console warnings (2.5s)
+  ✓   55 tests/browser/stage-four.spec.ts:16:2 › delayed cell holds the actual earlier scene and resumes the same scroll (561ms)
+  ✓   56 tests/browser/stage-four.spec.ts:31:2 › failed cell preserves usable application access and cannot restart (445ms)
+  ✓   57 tests/browser/stage-four.spec.ts:39:2 › cell deadline disposes the scene and late module completion cannot resurrect it (8.8s)
+  ✓   58 tests/browser/stage-four.spec.ts:16:2 › delayed electrical holds the actual earlier scene and resumes the same scroll (561ms)
+  ✓   59 tests/browser/stage-four.spec.ts:31:2 › failed electrical preserves usable application access and cannot restart (525ms)
+  ✓   60 tests/browser/stage-four.spec.ts:39:2 › electrical deadline disposes the scene and late module completion cannot resurrect it (8.9s)
+  ✓   61 tests/browser/stage-four.spec.ts:50:1 › all eight reduced-motion stills have matching HTML, distinct selection and no advancing ambient clock (1.1s)
+  ✓   62 tests/browser/stage-four.spec.ts:62:1 › a delayed selected cell still refreshes its scene and copy when ready without another click (553ms)
+  ✓   63 tests/browser/stage-four.spec.ts:70:1 › repeated scale, cell and circuit reversals restore states without allocating more GPU resources (12.7s)
+  ✓   64 tests/browser/stage-four.spec.ts:86:2 › rapid keyboard skip remains at the application after late cell completion (990ms)
+  ✓   65 tests/browser/stage-four.spec.ts:96:48 › cell pending GPU readiness cancels cleanly on timeout (9.0s)
+  ✓   66 tests/browser/stage-four.spec.ts:96:48 › cell pending GPU readiness cancels cleanly on context loss (1.1s)
+  ✓   67 tests/browser/stage-four.spec.ts:86:2 › rapid keyboard skip remains at the application after late electrical completion (1.1s)
+  ✓   68 tests/browser/stage-four.spec.ts:96:48 › electrical pending GPU readiness cancels cleanly on timeout (9.0s)
+  ✓   69 tests/browser/stage-four.spec.ts:96:48 › electrical pending GPU readiness cancels cleanly on context loss (960ms)
+  ✓   70 tests/browser/stage-four.spec.ts:114:1 › context loss after inverter reveal removes its DOM labels as well as the canvas (656ms)
+  ✓   71 tests/browser/stage-four.spec.ts:124:1 › inverter labels stay separate from copy in enlarged text and reduced-motion stills (1.4s)
+  ✓   72 tests/browser/stage-seven-motion.spec.ts:6:50 › pointer Pause freezes composition and copy through delayed cell readiness (1.1s)
+  ✓   73 tests/browser/stage-seven-motion.spec.ts:6:50 › keyboard Pause freezes composition and copy through delayed cell readiness (1.1s)
+  ✓   74 tests/browser/stage-seven-motion.spec.ts:16:1 › paused contact-to-DC handoff holds the actual view until resumed (1.1s)
+  ✓   75 tests/browser/stage-seven-motion.spec.ts:21:1 › Pause survives a reduced-motion round trip and delayed cell readiness (1.0s)
+  ✓   76 tests/browser/stage-seven-motion.spec.ts:44:1 › orientation changes obey pixel caps while cached owners remain bounded and reverseable (2.8s)
+  ✓   77 tests/browser/stage-seven-motion.spec.ts:50:1 › a coalesced preference notification cannot stop motion with still controls hidden (1.0s)
+  ✓   78 tests/browser/stage-seven-routes.spec.ts:42:1 › homepage route forms preserve queries and serve the same experience without a navigation redirect (525ms)
+  ✓   79 tests/browser/stage-seven-routes.spec.ts:52:1 › every legacy fragment is a native no-JS destination with focus and browser Back (690ms)
+  ✓   80 tests/browser/stage-seven-routes.spec.ts:69:1 › supporting routes and clean-URL equivalents contain real content without starting the film (755ms)
+  ✓   81 tests/browser/stage-seven-routes.spec.ts:79:1 › the full FAQ page works without JavaScript and preserves the complete native answers (179ms)
+  ✓   82 tests/browser/stage-seven-routes.spec.ts:88:1 › all nineteen form names, units, options and separate unchecked consent meanings survive the reskin (179ms)
+  ✓   83 tests/browser/stage-seven-routes.spec.ts:103:1 › existing prefill keys keep their meanings and payment submission sends the full dummy contract only to a local fixture (367ms)
+  ✓   84 tests/browser/stage-seven-routes.spec.ts:121:1 › payment return query variants survive and never announce an unverified charge, receipt or received application (515ms)
+  ✓   85 tests/browser/stage-seven-routes.spec.ts:132:1 › no JavaScript leaves a deliberate non-submitting application path and a truthful unverified success page (206ms)
+  ✓   86 tests/browser/stage-seven-routes.spec.ts:144:1 › checker starts unknown and every result leads only to suitability contact (262ms)
+  ✓   87 tests/browser/stage-seven-routes.spec.ts:164:1 › marketing, retirement and contact reading never request payment or live telemetry (402ms)
+  ✓   88 tests/browser/stage-seven-routes.spec.ts:171:1 › unknown local routes remain genuine 404s and provider paths cannot become marketing HTML (9ms)
+  ✓   89 tests/browser/stage-seven-routes.spec.ts:180:1 › failed or delayed application-controller loading keeps a non-submitting email fallback and preserves return context (226ms)
+  ✓   90 tests/browser/stage-seven-routes.spec.ts:200:1 › untrusted return references are text and ordinary support headings keep the application link (424ms)
+  ✓   91 tests/browser/stage-seven-routes.spec.ts:211:1 › enlarged application text reflows paired controls and keeps the selected supply readable (278ms)
+  ✓   92 tests/browser/stage-six.spec.ts:87:1 › new section links use native hash navigation, keyboard focus and usable browser Back (637ms)
+  ✓   93 tests/browser/stage-six.spec.ts:103:1 › a recorded-generation deep link survives delayed scene startup and leaves Apply immediately available (301ms)
+  ✓   94 tests/browser/stage-six.spec.ts:117:1 › recorded generation remains dated and attributed, with matching approximate hourly table and accessible SVG (459ms)
+  ✓   95 tests/browser/stage-six.spec.ts:122:1 › all application actions preserve the existing form, consents and browser return without submitting (563ms)
+  ✓   96 tests/browser/stage-six.spec.ts:140:1 › FAQ uses native details and retains fee, uncertainty, support and policy destinations (522ms)
+  ✓   97 tests/browser/stage-six.spec.ts:153:1 › reading every new section suspends rendered work and returning to the journey resumes it (1.4s)
+  ✓   98 tests/browser/stage-six.spec.ts:165:1 › reduced motion keeps all twelve stills and makes the complete HTML continuation independently readable (995ms)
+  ✓   99 tests/browser/stage-six.spec.ts:175:1 › no JavaScript preserves new anchors, historical proof, native FAQ and the existing application destination (662ms)
+  ✓  100 tests/browser/stage-six.spec.ts:186:1 › failed scene startup retains the new content, recorded proof and application access (547ms)
+  ✓  101 tests/browser/stage-six.spec.ts:193:109 › desktop: 200% text preserves new section reading, actions and table without horizontal page overflow (690ms)
+  ✓  102 tests/browser/stage-six.spec.ts:193:109 › portrait: 200% text preserves new section reading, actions and table without horizontal page overflow (634ms)
+  ✓  103 tests/browser/stage-six.spec.ts:214:1 › payoff application link is focusable only in its visible chapter and has a real hit target (1.9s)
+  ✓  104 tests/browser/stage-six.spec.ts:246:2 › recorded generation static data fixtures › a valid recorded zero remains 0.00 with zero bars and readings, rather than unavailable or missing (203ms)
+  ✓  105 tests/browser/stage-six.spec.ts:260:2 › recorded generation static data fixtures › a malformed record shows unavailable without a chart or invented total and keeps the real application link working (203ms)
+  ✓  106 tests/browser/stage-six.spec.ts:276:2 › 390px portrait with all text doubled › keeps the operating caption readable and all twelve still labels, payoff and status accessible (942ms)
+  ✘  107 tests/browser/stage-six.spec.ts:276:2 › 640×360 DPR2 zoom-equivalent short viewport › keeps the operating caption readable and all twelve still labels, payoff and status accessible (887ms)
+(node:32821) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  108 tests/browser/stage-six.spec.ts:332:1 › malformed percent fragments do not turn an otherwise ready journey into a rendering failure (403ms)
+  ✓  109 tests/browser/stage-three.spec.ts:18:2 › delayed region assets hold a truthful earlier view then resume without another scroll (703ms)
+  ✓  110 tests/browser/stage-three.spec.ts:18:2 › delayed site assets hold a truthful earlier view then resume without another scroll (670ms)
+  ✓  111 tests/browser/stage-three.spec.ts:36:1 › reversing both cloud handoffs reuses warmed resources and exactly restores the authored shots (6.9s)
+  ✓  112 tests/browser/stage-three.spec.ts:48:1 › all five reduced-motion stills have matching readable HTML and no advancing ambient time (799ms)
+  ✓  113 tests/browser/stage-three.spec.ts:63:2 › failed region assets preserve the service and cannot restart after preferences change (419ms)
+  ✓  114 tests/browser/stage-three.spec.ts:63:2 › failed site assets preserve the service and cannot restart after preferences change (444ms)
+  ✓  115 tests/browser/stage-three.spec.ts:73:1 › rapid keyboard skip stays at the application while regional loading finishes offscreen (1.1s)
+  ✓  116 tests/browser/stage-three.spec.ts:82:2 › region loading is bounded and late completion cannot resurrect disposed resources (8.8s)
+  ✓  117 tests/browser/stage-three.spec.ts:82:2 › site loading is bounded and late completion cannot resurrect disposed resources (8.9s)
+  ✘  118 tests/browser/stage-three.spec.ts:90:1 › new scene copy remains separate from controls with enlarged text (558ms)
+(node:33241) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  119 tests/browser/stage-three.spec.ts:101:2 › pending GPU shader readiness cancels cleanly on timeout (8.8s)
+  ✓  120 tests/browser/stage-three.spec.ts:101:2 › pending GPU shader readiness cancels cleanly on context loss (946ms)
+  ✓  121 tests/browser/stage-two.spec.ts:19:1 › Sun, flight and Earth copy follow the rendered reversible path (3.0s)
+  ✓  122 tests/browser/stage-two.spec.ts:43:1 › Earth is lazy, a delayed load holds a truthful shot, then resumes without another scroll (671ms)
+  ✓  123 tests/browser/stage-two.spec.ts:60:1 › reduced motion switches Sun and Earth stills after delayed decoding without ambient motion (883ms)
+  ✓  124 tests/browser/stage-two.spec.ts:89:1 › failed Earth assets leave a composed fallback and cannot restart after preference changes (368ms)
+  ✓  125 tests/browser/stage-two.spec.ts:103:1 › Earth decode timeout is bounded and late bitmaps are disposed without resurrecting the scene (8.4s)
+  ✓  126 tests/browser/stage-two.spec.ts:125:1 › conversion service steps and original form contract remain usable (457ms)
+  ✓  127 tests/browser/stage-two.spec.ts:142:1 › enlarged text reflows without clipping the statement or its supporting sentence (1.1s)
+  ✓  128 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 1280×720 (1.3s)
+  ✓  129 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 1600×1000 (1.3s)
+  ✓  130 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 390×844 (1.3s)
+  ✓  131 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 740×900 (1.3s)
+  ✓  132 tests/browser/startup.spec.ts:11:2 › first paint waits for the distant Sun at 1000×500 (1.3s)
+  ✓  133 tests/browser/startup.spec.ts:50:1 › failed renderer reveals the deliberate still only after failure (319ms)
+  ✓  134 tests/browser/startup.spec.ts:58:1 › no JavaScript keeps the composed still and immediate application (322ms)
+  ✓  135 tests/browser/startup.spec.ts:67:1 › reload and returning from the application preserve the distant opening (595ms)
+  ✓  136 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 280×653, small viewport −100px (796ms)
+  ✓  137 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 320×568, small viewport −100px (846ms)
+  ✓  138 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 360×800, small viewport −120px (845ms)
+  ✓  139 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 390×780, small viewport −125px (834ms)
+  ✓  140 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 412×915, small viewport −160px (838ms)
+  ✓  141 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 430×932, small viewport −140px (826ms)
+  ✓  142 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 600×600, small viewport −0px (828ms)
+  ✓  143 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 740×900, small viewport −100px (751ms)
+  ✓  144 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 820×1180, small viewport −120px (826ms)
+  ✓  145 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 667×375, small viewport −60px (706ms)
+  ✓  146 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 844×390, small viewport −70px (855ms)
+  ✓  147 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 1000×500, small viewport −80px (844ms)
+  ✓  148 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 1280×720, small viewport −0px (734ms)
+  ✓  149 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 1600×1000, small viewport −0px (866ms)
+  ✓  150 tests/browser/viewport.spec.ts:38:2 › full canvas with collapsed browser bars at 2560×1080, small viewport −0px (826ms)
+  ✓  151 tests/browser/viewport.spec.ts:44:1 › toolbar expansion/collapse preserves distance, direction and paused pixels (1.2s)
+  ✓  152 tests/browser/viewport.spec.ts:58:1 › rotation keeps the same chapter while camera projection and canvas resize (2.0s)
+  ✓  153 tests/browser/viewport.spec.ts:67:1 › last frame fills the viewport and hands off without an empty pinned tail (1.4s)
+  ✓  154 tests/browser/viewport.spec.ts:75:1 › reduced motion stills fill the dynamic viewport with no long scroll (1.4s)
+  ✓  155 tests/browser/viewport.spec.ts:82:1 › unavailable WebGL preserves a full-height fallback and immediate application (314ms)
+  ✓  156 tests/browser/viewport.spec.ts:91:1 › no-JavaScript picture fills the current viewport when browser bars retract (344ms)
+  ✓  157 tests/browser/viewport.spec.ts:99:1 › pinch zoom retains canvas coverage without resetting the journey (851ms)
+  ✓  158 tests/browser/viewport.spec.ts:108:1 › rotation after Skip keeps the offer focused and rendering suspended (992ms)
+  ✓  159 tests/browser/viewport.spec.ts:118:2 › high-density mobile screen › the bounded drawing buffer covers the complete CSS viewport (392ms)
+(node:33579) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  160 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 375×667 (1.0s)
+  ✓  161 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 390×844 (702ms)
+  ✓  162 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 740×900 (631ms)
+  ✓  163 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 1000×500 (773ms)
+  ✓  164 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 1280×720 (2.0s)
+  ✓  165 tests/browser/helpers/mobile-controls.ts:27:96 › webkit mobile controls › quiet Skip, clear copy and reverse navigation at 1600×1000 (900ms)
+  ✓  166 tests/browser/helpers/mobile-controls.ts:37:2 › webkit mobile controls › explicit 200% text remains enlarged, readable and clear of Skip (586ms)
+  ✓  167 tests/browser/helpers/mobile-controls.ts:48:2 › webkit mobile controls › Skip works before the scene loads and keeps the correct destination (339ms)
+  ✓  168 tests/browser/helpers/mobile-controls.ts:58:2 › webkit mobile controls › image credits are a native, attributed destination without JavaScript or 3D (364ms)
+
+
+  1) tests/browser/stage-six.spec.ts:276:2 › 640×360 DPR2 zoom-equivalent short viewport › keeps the operating caption readable and all twelve still labels, payoff and status accessible 
+
+    Error: payoff copy must not cover still controls
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Sun",
+    +   "Earth",
+    +   "Britain",
+    + ]
+
+      316 |    const r=e.getBoundingClientRect();return [...document.querySelectorAll('#still-views button')].filter(b=>{const c=b.getBoundingClientRect();return r.left<c.right&&r.right>c.left&&r.top<c.bottom&&r.bottom>c.top;}).map(b=>b.textContent);
+      317 |   });
+    > 318 |   expect(overlaps,'payoff copy must not cover still controls').toEqual([]);
+          |                                                                ^
+      319 |   for(const link of[page.locator('header .apply-link'),action])await expect(link).toHaveAttribute('href','/apply.html');
+      320 |   await action.focus();await expect(action).toBeFocused();
+      321 |   expect(await action.evaluate(e=>{const r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return r.height>=44&&r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight&&hit!==null&&e.contains(hit);})).toBe(true);
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/stage-six.spec.ts:318:64
+
+    Error Context: test-results/stage-six-640×360-DPR2-zoo-cd95b-ayoff-and-status-accessible/error-context.md
+
+  2) tests/browser/stage-three.spec.ts:90:1 › new scene copy remains separate from controls with enlarged text 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 630
+    Received:   640.25
+
+      94 |   await move(page,p);if(p>1.49)await allReady(page);else await page.waitForFunction(()=>(window as any).__experience.snapshot().regionStatus==='ready');
+      95 |   const layout=await page.evaluate(()=>{const panel=[...document.querySelectorAll<HTMLElement>('[data-copy]')].find(e=>parseFloat(e.style.opacity)>.15)!;return{bottom:Math.max(...[...panel.children].map(e=>e.getBoundingClientRect().bottom)),footer:document.querySelector('.chapter-footer')!.getBoundingClientRect().top,width:document.documentElement.scrollWidth,viewport:innerWidth};});
+    > 96 |   expect(layout.bottom).toBeLessThan(layout.footer);expect(layout.width).toBe(layout.viewport);
+         |                         ^
+      97 |  }
+      98 | });
+      99 |
+        at /Users/nick/Projects/Aesir Solar/experience-stage1/tests/browser/stage-three.spec.ts:96:25
+
+    Error Context: test-results/stage-three-new-scene-copy-d5937-controls-with-enlarged-text/error-context.md
+
+  2 failed
+    tests/browser/stage-six.spec.ts:276:2 › 640×360 DPR2 zoom-equivalent short viewport › keeps the operating caption readable and all twelve still labels, payoff and status accessible 
+    tests/browser/stage-three.spec.ts:90:1 › new scene copy remains separate from controls with enlarged text 
+  166 passed (5.2m)
