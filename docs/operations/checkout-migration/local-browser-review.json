@@ -1,0 +1,166 @@
+{
+  "at": "2026-09-09T09:23:59.175Z",
+  "scope": "Local dummy form; simulated unavailable initializer. No payment, application or external request.",
+  "views": [
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 1280,
+      "height": 720,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/chromium-1280x720-payment-unavailable.png"
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 1600,
+      "height": 1000,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/chromium-1600x1000-payment-unavailable.png"
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/chromium-390x844-payment-unavailable.png"
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 740,
+      "height": 900,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/chromium-740x900-payment-unavailable.png"
+    },
+    {
+      "browser": "chromium",
+      "version": "151.0.7922.34",
+      "width": 1000,
+      "height": 500,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/chromium-1000x500-payment-unavailable.png"
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 1280,
+      "height": 720,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/webkit-1280x720-payment-unavailable.png"
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 1600,
+      "height": 1000,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/webkit-1600x1000-payment-unavailable.png"
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/webkit-390x844-payment-unavailable.png"
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 740,
+      "height": 900,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/webkit-740x900-payment-unavailable.png"
+    },
+    {
+      "browser": "webkit",
+      "version": "26.6",
+      "width": 1000,
+      "height": 500,
+      "overflow": false,
+      "focused": "formNote",
+      "note": "We couldn’t open secure payment. Your entries remain on this page. This is not confirmation that an application or payment has been received. If you already attempted payment, contact us before trying again. Contact Aesir Solar",
+      "canSubmit": true,
+      "api": [
+        "/api/tyl-checkout"
+      ],
+      "external": [],
+      "errors": [],
+      "capture": "docs/operations/checkout-migration/webkit-1000x500-payment-unavailable.png"
+    }
+  ]
+}

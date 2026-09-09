@@ -2,6 +2,8 @@
 
 Updated 9 September 2026. This retains every intention from stage seven. The user has now authorized a Vercel frontend release after the specific visual/content fixes. That authorization does not establish a reliable paid-application pipeline. The current handoff and deployment evidence are in [README](README.md); prior stage-seven observations remain historical.
 
+**Checkout follow-up, 9 September:** the user has now requested complete real-domain/Tyl consolidation. Public inspection confirmed the new site's fallback into the old WooCommerce checkout and the separate Fasthosts domain. A local Tyl-only frontend correction is prepared and tested; durable intake, verified payment/work creation and domain cutover remain pending authenticated access. This work is not deployed. See the [current checkout handoff](../../operations/checkout-migration/README.md) and [real-domain route manifest](../../operations/checkout-migration/route-manifest.md). Older references below to an unchanged provider controller describe the released frontend, not this new local migration branch.
+
 The film retains **23 chapters, 12 still alternatives, 6.08 units and 34.048 useful viewport heights**. The latest changes refine the packing line, hold the battery composition, restore the facade and remove coplanar cladding/plinth overlap. Lower-page material moves to complete supporting pages; it is not silently discarded.
 
 ## Current content locations

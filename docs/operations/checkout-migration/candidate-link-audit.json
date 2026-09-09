@@ -1,0 +1,67 @@
+{
+  "at": "2026-09-09T09:26:58.224Z",
+  "scope": "Static merchant navigation links in the assembled new candidate; external primary sources and mail links are permitted. Does not audit private WordPress routes.",
+  "pages": [
+    {
+      "page": "apply.html",
+      "links": 20,
+      "legacy": []
+    },
+    {
+      "page": "contact.html",
+      "links": 16,
+      "legacy": []
+    },
+    {
+      "page": "experience.html",
+      "links": 29,
+      "legacy": []
+    },
+    {
+      "page": "faq.html",
+      "links": 22,
+      "legacy": []
+    },
+    {
+      "page": "index.html",
+      "links": 29,
+      "legacy": []
+    },
+    {
+      "page": "privacy.html",
+      "links": 15,
+      "legacy": []
+    },
+    {
+      "page": "refunds.html",
+      "links": 14,
+      "legacy": []
+    },
+    {
+      "page": "simulator.html",
+      "links": 16,
+      "legacy": []
+    },
+    {
+      "page": "solar.html",
+      "links": 32,
+      "legacy": []
+    },
+    {
+      "page": "success.html",
+      "links": 16,
+      "legacy": []
+    },
+    {
+      "page": "suitability.html",
+      "links": 18,
+      "legacy": []
+    },
+    {
+      "page": "terms.html",
+      "links": 15,
+      "legacy": []
+    }
+  ],
+  "legacyLinks": []
+}

@@ -23,7 +23,9 @@ test('resolution obeys DPR and total-pixel caps',()=>{
   }
 });
 test('untouched operational contracts retain their original bytes through the approved presentation migration',async()=>{
-  const files=execFileSync('git',['ls-tree','-r','--name-only','c61643f'],{encoding:'utf8'}).trim().split('\n').filter(x=>x.startsWith('api/')||x.startsWith('lib/')||x.startsWith('data/')||['app.js','package-lock.json','sim.js','sim.css'].includes(x));
+  // app.js now intentionally removes the old-shop/Stripe fallback. Its full
+  // form payload and error behaviour are covered by browser contract tests.
+  const files=execFileSync('git',['ls-tree','-r','--name-only','c61643f'],{encoding:'utf8'}).trim().split('\n').filter(x=>x.startsWith('api/')||x.startsWith('lib/')||x.startsWith('data/')||['package-lock.json','sim.js','sim.css'].includes(x));
   for(const file of files){const baseline=execFileSync('git',['show',`c61643f:${file}`]);assert.deepEqual(await readFile(file),baseline,file);}
   const cfg=JSON.parse(await readFile('vercel.json','utf8')),old=JSON.parse(execFileSync('git',['show','c61643f:vercel.json']));assert.equal(cfg.cleanUrls,old.cleanUrls);assert.equal(cfg.trailingSlash,old.trailingSlash);assert.deepEqual(cfg.headers.filter(h=>h.source!=='/api/(.*)'),old.headers.filter(h=>h.source!=='/api/(.*)'));assert.equal(cfg.buildCommand,'npm run build');assert.equal(cfg.outputDirectory,'.release');assert.equal(cfg.headers.find(h=>h.source==='/api/(.*)').headers[0].value,'no-store');
 });

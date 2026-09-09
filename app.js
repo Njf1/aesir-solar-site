@@ -9,30 +9,6 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- where the paid application lives (existing WooCommerce + Tyl rail) ----
-     WooCommerce increments quantity on every ?add-to-cart hit, so a customer who
-     goes back and resubmits would be billed twice. We only add once per 30-minute
-     window and otherwise send them to the existing cart.
-     The permanent fix is "Sold individually" on product 308 in WooCommerce. */
-  var CART_URL   = 'https://aesirsolar.co.uk/cart/';
-  var ADD_TO_CART = CART_URL + '?add-to-cart=308';
-  var ADD_TTL_MS = 30 * 60 * 1000;
-
-  function checkoutUrl() {
-    try {
-      var last = parseInt(localStorage.getItem('aesir.addedAt') || '0', 10);
-      if (last && (Date.now() - last) < ADD_TTL_MS) return CART_URL;
-      localStorage.setItem('aesir.addedAt', String(Date.now()));
-    } catch (e) {}
-    return ADD_TO_CART;
-  }
-
-  /* ---- optional: POST the technical details somewhere before payment ----
-     Set this to a webhook/endpoint URL and the form will send the answers
-     there. Left empty, the details are stored locally and handed to the
-     checkout page so nothing is lost. */
-  var FORM_ENDPOINT = '';
-
   /* ============ year ============ */
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
@@ -309,7 +285,9 @@
   })();
 
   /* ============================================================
-     APPLICATION FORM → existing checkout
+     APPLICATION FORM → Tyl hosted payment
+     A browser draft is not durable intake. The server must establish the
+     application/payment record before this candidate is released.
      ============================================================ */
   var form = document.getElementById('applyForm');
   if (form) {
@@ -348,7 +326,7 @@
       }
 
       note.classList.remove('err');
-      note.textContent = 'Saving your details and opening secure payment…';
+      note.textContent = 'Preparing secure payment with Tyl by NatWest…';
       btn.disabled = true;
 
       /* collect */
@@ -363,11 +341,8 @@
 
       try { localStorage.setItem('aesir.application', JSON.stringify(data)); } catch (e) {}
 
-      /* Payment routes, in order of preference:
-           1. Tyl by NatWest  — settles direct to the company account
-           2. Stripe          — built and dormant, ready if Tyl stalls
-           3. the old checkout — so nobody trying to pay is ever stranded  */
-      function fallbackCheckout() { window.location.href = checkoutUrl(); }
+      // Never send applicants to the retired shop or switch payment providers
+      // after an error. Keep their entries and explain an uncertain outcome.
 
       function postForm(action, fields) {
         var f = document.createElement('form');
@@ -385,42 +360,40 @@
 
       function payFailed() {
         note.textContent =
-          'We couldn\u2019t open the payment page. Please try again, or email ' +
-          'hello@aesirsolar.co.uk and we\u2019ll take it from there.';
+          'We couldn\u2019t open secure payment. Your entries remain on this page. ' +
+          'This is not confirmation that an application or payment has been received. ' +
+          'If you already attempted payment, contact us before trying again. ';
+        var contact = document.createElement('a');
+        contact.href = 'mailto:hello@aesirsolar.co.uk';
+        contact.textContent = 'Contact Aesir Solar';
+        note.appendChild(contact);
         note.classList.add('err');
         btn.disabled = false;
+        note.setAttribute('tabindex', '-1');
+        note.focus();
       }
 
-      function tryStripe() {
-        return fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        })
-          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
-          .then(function (r) {
-            if (r.ok && r.body && r.body.url) { window.location.href = r.body.url; return; }
-            if (r.body && r.body.error === 'stripe_not_configured') { fallbackCheckout(); return; }
-            payFailed();
-          })
-          .catch(fallbackCheckout);
-      }
-
+      var controller = new AbortController();
+      var timeout = setTimeout(function () { controller.abort(); }, 15000);
       fetch('/api/tyl-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
+        signal: controller.signal
       })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
         .then(function (r) {
-          if (r.ok && r.body && r.body.action && r.body.fields) {
+          if (r.ok && r.body && typeof r.body.action === 'string' &&
+              r.body.fields && typeof r.body.fields === 'object' &&
+              !Array.isArray(r.body.fields) && Object.keys(r.body.fields).length) {
             try { localStorage.setItem('aesir.orderId', r.body.orderId); } catch (e) {}
             postForm(r.body.action, r.body.fields);
             return;
           }
-          return tryStripe();
+          payFailed();
         })
-        .catch(function () { return tryStripe(); });
+        .catch(payFailed)
+        .finally(function () { clearTimeout(timeout); });
     });
   }
 })();

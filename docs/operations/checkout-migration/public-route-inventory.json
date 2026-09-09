@@ -1,0 +1,91 @@
+{
+  "pages": [
+    {
+      "id": 294,
+      "slug": "my-account",
+      "link": "https://aesirsolar.co.uk/my-account/",
+      "title": {
+        "rendered": "My account"
+      }
+    },
+    {
+      "id": 293,
+      "slug": "checkout",
+      "link": "https://aesirsolar.co.uk/checkout/",
+      "title": {
+        "rendered": "Checkout"
+      }
+    },
+    {
+      "id": 292,
+      "slug": "cart",
+      "link": "https://aesirsolar.co.uk/cart/",
+      "title": {
+        "rendered": "Cart"
+      }
+    },
+    {
+      "id": 291,
+      "slug": "shop",
+      "link": "https://aesirsolar.co.uk/shop/",
+      "title": {
+        "rendered": "Shop"
+      }
+    },
+    {
+      "id": 265,
+      "slug": "form-a",
+      "link": "https://aesirsolar.co.uk/form-a/",
+      "title": {
+        "rendered": "Form A"
+      }
+    },
+    {
+      "id": 10,
+      "slug": "home",
+      "link": "https://aesirsolar.co.uk/",
+      "title": {
+        "rendered": "Home"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "sample-page",
+      "link": "https://aesirsolar.co.uk/sample-page/",
+      "title": {
+        "rendered": "Sample Page"
+      }
+    }
+  ],
+  "products": {
+    "id": 308,
+    "name": "Secure Your G99 Compliance &#8211; Without the Hassle",
+    "slug": "begin-your-application",
+    "permalink": "https://aesirsolar.co.uk/product/begin-your-application/",
+    "prices": {
+      "price": "25000",
+      "regular_price": "25000",
+      "sale_price": "25000",
+      "price_range": null,
+      "currency_code": "GBP",
+      "currency_symbol": "£",
+      "currency_minor_unit": 2,
+      "currency_decimal_separator": ".",
+      "currency_thousand_separator": ",",
+      "currency_prefix": "£",
+      "currency_suffix": ""
+    },
+    "is_purchasable": true,
+    "sold_individually": false,
+    "type": "simple"
+  },
+  "sitemaps": [
+    "https://aesirsolar.co.uk/wp-sitemap-posts-post-1.xml",
+    "https://aesirsolar.co.uk/wp-sitemap-posts-page-1.xml",
+    "https://aesirsolar.co.uk/wp-sitemap-posts-product-1.xml",
+    "https://aesirsolar.co.uk/wp-sitemap-posts-metform-form-1.xml",
+    "https://aesirsolar.co.uk/wp-sitemap-taxonomies-category-1.xml",
+    "https://aesirsolar.co.uk/wp-sitemap-taxonomies-product_cat-1.xml",
+    "https://aesirsolar.co.uk/wp-sitemap-users-1.xml"
+  ]
+}

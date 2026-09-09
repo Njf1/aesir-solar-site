@@ -1,0 +1,50 @@
+{
+  "url": "https://aesirsolar.co.uk/cart/",
+  "title": "Cart – Aesir Solar",
+  "paymentMethods": [
+    {
+      "value": "ag_tyl_checkout",
+      "label": "Tyl By NatWest Checkout \n\nUse the payment processor of Tyl By NatWest and checkout with your debit/credit card."
+    }
+  ],
+  "totals": [
+    "Product\tSubtotal\nSecure Your G99 Compliance - Without the Hassle  × 1\t£300.00 (incl. VAT)\nSubtotal\t£300.00 (incl. VAT)\nTotal\t£300.00 (includes £50.00 VAT)",
+    "Subtotal\t£300.00 (incl. VAT)",
+    "Total\t£300.00 (includes £50.00 VAT)"
+  ],
+  "pluginScripts": [
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.2.3",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/address-i18n.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/cart.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.9-wc.11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/utils/custom-place-order-button.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/checkout.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/metform/public/assets/lib/cute-alert/cute-alert.js?ver=4.2.0",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.0.1",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.2.3",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.2.3",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.2.3",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.29.2",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.29.2",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.29.2",
+    "https://aesirsolar.co.uk/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.29.2"
+  ],
+  "formActions": [
+    {
+      "action": "https://aesirsolar.co.uk/checkout/",
+      "method": "post"
+    }
+  ],
+  "buttons": [
+    "Place order"
+  ],
+  "blocked": [],
+  "scope": "Anonymous isolated cart: one public product added; no personal data, checkout POST, order, charge or provider traffic."
+}

@@ -24,8 +24,10 @@ const supporting=['apply','success','contact','terms','privacy','refunds','simul
 const aliases=['top','main','gate','check','work','price','apply','realroof'];
 const baseline=file=>execFileSync('git',['show',`${BASE}:${file}`],{cwd:ROOT});
 
-test('provider routes, helpers, payment script, input data and pinned dependencies retain exact bytes',async()=>{
- const retained=[...await files('api'),...await files('lib'),...await files('data'),'app.js','package-lock.json'];
+test('untouched provider routes, helpers, input data and pinned dependencies retain exact bytes',async()=>{
+ // The requested checkout consolidation intentionally changes app.js only;
+ // mocked browser checks protect the form payload and Tyl-only handoff.
+ const retained=[...await files('api'),...await files('lib'),...await files('data'),'package-lock.json'];
  assert.equal((await files('api')).length,5,'Do not silently add a new payment/provider route in this migration');
  for(const file of retained)assert.deepEqual(await readFile(path.join(ROOT,file)),baseline(file),file);
  const pkg=JSON.parse(await read('package.json')),old=JSON.parse(baseline('package.json'));assert.deepEqual(pkg.dependencies,old.dependencies);assert.deepEqual(pkg.devDependencies,old.devDependencies);assert.deepEqual(pkg.engines,old.engines);assert.equal(pkg.scripts.build,'python3 build.py && vite build && node scripts/assemble.mjs');
@@ -156,7 +158,7 @@ test('full policy sections and consent distinctions survive with narrowly correc
   assert.doesNotMatch(candidate,/class=["']todo["']|to be inserted|Company no\. —/i);
  }
  const privacy=normal(await read('privacy.html')),refunds=normal(await read('refunds.html'));
- assert.match(privacy,/not automatically restored/);assert.match(privacy,/Tyl/);assert.match(privacy,/Stripe/);assert.match(privacy,/WooCommerce/);
+ assert.match(privacy,/not automatically restored/);assert.match(privacy,/Tyl/);assert.match(privacy,/does not send your details to another payment provider/);assert.doesNotMatch(privacy,/Stripe|WooCommerce/);
  assert.doesNotMatch(privacy,/nothing is lost if the page reloads/);assert.match(refunds,/do not record a separate request/);assert.match(refunds,/statutory rights are unaffected/i);
 });
 

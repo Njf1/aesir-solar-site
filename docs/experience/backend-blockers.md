@@ -1,5 +1,7 @@
 # Existing application/payment blockers — verified 8 September 2026
 
+> **9 September checkout investigation:** production still sends applicants from Vercel to the old Fasthosts WordPress cart because Vercel has no Tyl/Stripe configuration. The real domain is not assigned to Vercel. The local `experience/checkout-consolidation` branch removes the fallback and prepares truthful failure handling; it is not deployed and does not repair durable intake or payment verification. The current request explicitly authorizes completing the Tyl/domain migration, superseding the older visual-only provider freeze below. Authenticated WordPress/Fasthosts/Tyl inspection is pending. See the [current evidence, local checks and remaining work](../operations/checkout-migration/README.md).
+
 The visual preview can help visitors understand why to apply. The existing application flow still cannot prove that a complete application, a verified £300 payment and one actionable Aesir work item belong together. The preview does not repair that chain, and public homepage cutover remains blocked until it is proven.
 
 | This should look like… | What happens now | What is broken between the two |
