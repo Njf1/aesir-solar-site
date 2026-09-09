@@ -1,0 +1,24 @@
+[
+  {
+    "name": "laptop",
+    "loading": {
+      "src": "https://aesir-solar.vercel.app/experience-assets/experience-poster-2apZrVuk.webp",
+      "width": 1600,
+      "height": 1000,
+      "visibility": "hidden",
+      "canvasVisible": "0"
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "loading": {
+      "src": "https://aesir-solar.vercel.app/experience-assets/experience-poster-mobile-DhtopdsF.webp",
+      "width": 487,
+      "height": 1055,
+      "visibility": "hidden",
+      "canvasVisible": "0"
+    },
+    "errors": []
+  }
+]

@@ -24,3 +24,9 @@ Delivery: 254,773 B JavaScript gzip (previous 254,774), 8,099 B homepage CSS gzi
 ## Release boundary
 
 The user authorizes GitHub push and redeployment to the existing https://aesir-solar.vercel.app/ production alias. Search indexing remains disabled. No real application/payment, provider configuration change or message is part of testing. Existing durable intake/payment/fulfilment and telemetry limitations remain separate, as recorded in the [current handoff](../launch-refinement/README.md) and [backend blockers](../backend-blockers.md).
+
+## Live result
+
+Implementation `54ac2a0` is pushed to GitHub main and the working branch, with `experience-startup-fix-delivered` retained. Vercel production deployment `dpl_39Qnb2CVMsDiRhEhx1wpTbbP8SFA` is READY at **https://aesir-solar.vercel.app/**. [Deployment record](deployment.json).
+
+[Live startup recordings and observations](production/observations.json) confirm the placeholder remains hidden before readiness at 1280×720 and 390×844, then the correct distant opening renders. Ordinary reload and browser Back both return to progress zero. Reload readiness in those warmed desktop-browser contexts was 369 / 325 ms; this is not cold-network or physical-phone performance. [Public route and scene verification](production-routes/verification.json) passes the 14 intended routes, expected missing-route/helper 404s, safe checkout GET rejection, key scenes, Skip and the original 19-control/two-consent form. No browser errors or warnings were observed. No form was submitted.

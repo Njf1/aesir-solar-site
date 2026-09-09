@@ -1,0 +1,203 @@
+{
+  "recordedAt": "2026-09-09T02:35:57.792Z",
+  "origin": "https://aesir-solar.vercel.app",
+  "routes": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "pathname": "/index.html",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "pathname": "/experience",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/experience",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "pathname": "/experience.html",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/experience",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Energy begins here — Aesir Solar"
+    },
+    {
+      "pathname": "/apply.html?cancelled=1",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/apply?cancelled=1",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Start your G99 application — Aesir Solar"
+    },
+    {
+      "pathname": "/faq.html",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/faq",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Application questions — Aesir Solar"
+    },
+    {
+      "pathname": "/solar.html#recorded-generation",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/solar",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Solar at work — Aesir Solar"
+    },
+    {
+      "pathname": "/suitability.html",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/suitability",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Check application suitability — Aesir Solar"
+    },
+    {
+      "pathname": "/contact",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/contact",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Contact Aesir Solar — Aesir Solar"
+    },
+    {
+      "pathname": "/simulator.html",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/simulator",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Solar planning — Aesir Solar"
+    },
+    {
+      "pathname": "/terms",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/terms",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Terms of service — Aesir Solar"
+    },
+    {
+      "pathname": "/privacy.html",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/privacy",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Privacy policy — Aesir Solar"
+    },
+    {
+      "pathname": "/refunds",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/refunds",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Refund policy — Aesir Solar"
+    },
+    {
+      "pathname": "/success.html?session_id=unverified-review",
+      "status": 200,
+      "finalURL": "https://aesir-solar.vercel.app/success?session_id=unverified-review",
+      "contentType": "text/html; charset=utf-8",
+      "noindex": true,
+      "title": "Check your payment and application — Aesir Solar"
+    },
+    {
+      "pathname": "/not-a-real-route",
+      "status": 404,
+      "finalURL": "https://aesir-solar.vercel.app/not-a-real-route",
+      "contentType": "text/plain; charset=utf-8",
+      "noindex": false
+    },
+    {
+      "pathname": "/lib/tyl.js",
+      "status": 404,
+      "finalURL": "https://aesir-solar.vercel.app/lib/tyl.js",
+      "contentType": "text/plain; charset=utf-8",
+      "noindex": false
+    }
+  ],
+  "views": [
+    {
+      "name": "laptop",
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "frames": [
+        {
+          "p": 0,
+          "draws": 21,
+          "overflow": 0
+        },
+        {
+          "p": 4.6,
+          "section": 1,
+          "draws": 67,
+          "overflow": 0
+        },
+        {
+          "p": 5.07,
+          "section": 0,
+          "draws": 77,
+          "overflow": 0
+        },
+        {
+          "p": 6.03,
+          "section": 0,
+          "draws": 96,
+          "overflow": 0
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "errors": [],
+      "warnings": [],
+      "blocked": [],
+      "frames": [
+        {
+          "p": 0,
+          "draws": 21,
+          "overflow": 0
+        },
+        {
+          "p": 4.6,
+          "section": 1,
+          "draws": 65,
+          "overflow": 0
+        },
+        {
+          "p": 5.07,
+          "section": 0,
+          "draws": 64,
+          "overflow": 0
+        },
+        {
+          "p": 6.03,
+          "section": 0,
+          "draws": 96,
+          "overflow": 0
+        }
+      ]
+    }
+  ],
+  "scope": "Read-only production verification. No form submission, payment, provider or telemetry request.",
+  "api": {
+    "status": 405,
+    "allow": "POST",
+    "cache": "no-store",
+    "body": "{\"error\":\"Method not allowed\"}"
+  }
+}
