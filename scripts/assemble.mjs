@@ -3,6 +3,7 @@ import {fileURLToPath} from 'node:url';
 import { cp, mkdir, readdir, readFile, writeFile, rm, rename, lstat } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
+import {releaseMetadata,publicRobots,publicSitemap} from './release-metadata.mjs';
 // Generated candidate only. Stage from an allowlist, then atomically replace the
 // known output directory. Source, original checkout and neighbouring paths survive.
 const root=new URL('../',import.meta.url),release=new URL('.release/',root),staging=new URL('.release-staging/',root),previous=new URL('.release-previous/',root);
@@ -13,13 +14,20 @@ const staticFiles=['solar.html','suitability.html','guide.css','apply.html','sim
 for(const file of staticFiles)await cp(new URL(file,root),new URL(file,staging),{recursive:true});
 await cp(new URL('.preview-build/',root),staging,{recursive:true});
 await cp(new URL('experience.html',staging),new URL('index.html',staging));
-await writeFile(new URL('robots.txt',staging),'User-agent: *\nDisallow: /\n');
+const publicRelease=process.env.VERCEL_ENV==='production';
+if(publicRelease){
+ for(const name of (await readdir(staging)).filter(x=>x.endsWith('.html'))){
+  const file=new URL(name,staging);await writeFile(file,releaseMetadata(await readFile(file,'utf8'),name.slice(0,-5),true));
+ }
+ await writeFile(new URL('sitemap.xml',staging),publicSitemap);
+}
+await writeFile(new URL('robots.txt',staging),publicRelease?publicRobots:'User-agent: *\nDisallow: /\n');
 const manifest=[];async function inventory(dir,prefix=''){for(const e of await readdir(dir,{withFileTypes:true})){const rel=prefix+e.name;if(e.isDirectory())await inventory(new URL(e.name+'/',dir),rel+'/');else manifest.push(rel);}}
 const config=JSON.parse(await readFile(new URL('vercel.json',root),'utf8'));
 // The root Vercel build owns server functions in api/. This output is public static content only; no handler source, helper or package files are copied here.
 config.buildCommand='';config.outputDirectory='.';
 await writeFile(new URL('vercel.json',staging),JSON.stringify(config,null,2)+'\n');
-await inventory(staging);await writeFile(new URL('output-manifest.json',staging),JSON.stringify({owner:'scripts/assemble.mjs',localCandidate:true,files:manifest.sort()},null,2)+'\n');
+await inventory(staging);await writeFile(new URL('output-manifest.json',staging),JSON.stringify({owner:'scripts/assemble.mjs',localCandidate:!publicRelease,files:manifest.sort()},null,2)+'\n');
 await rm(previous,{recursive:true,force:true});
 try{await rename(release,previous);}catch(e){if(e.code!=='ENOENT')throw e;}
 try{await rename(staging,release);}catch(e){try{await rename(previous,release);}catch{}throw e;}
